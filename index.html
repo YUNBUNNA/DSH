@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.7/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.7/css/theme.css" />
+  <link rel="stylesheet" href="assets/plugins/bootstrap-icons/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-prime">
+  <header>
+    <nav class="navbar py-0 fixed-top bg-prime border-bottom">
+      <div class="container d-flex align-items-center py-2">
+        <a href="" class="navbar-brand">
+          <img src="assets/img/logo2.png" alt="" class="img-fluid object-fit-cover" style="width: 90px; height: 40px;">
+        </a>
+        <ul class="navbar-nav flex-row align-items-center">
+          <li class="nav-item">
+            <a href="" class="nav-link px-3 py-2 ff">
+              <i class="bi bi-telephone fs-5"></i> +855 96 123 4567
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link px-3 py-2 ff">
+              <i class="bi bi-envelope fs-5"></i> Dsh@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="container-fluid border-bottom"></div>
+      <div class="container d-flex align-items-center justify-content-between">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item px-3 py-2">
+            <a href="" class="nav-link">ទំព័រដើម</a>
+          </li>
+          <li class="nav-item sport px-3 py-2 position-relative">
+            <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
+            <div class="dropdown position-absolute shadow-xs">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
+                <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
+                <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
+                <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
+                <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
+                <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item px-3 py-2">
+            <a href="" class="nav-link">ការហ្វឹកហាត់</a>
+          </li>
+          <li class="nav-item px-3 py-2">
+            <a href="" class="nav-link">ទំនិញ</a>
+          </li>
+          <li class="nav-item px-3 py-2">
+            <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
+          </li>
+          <li class="nav-item blog px-3 py-2 position-relative">
+            <a class="nav-link" href="#">
+              អត្ថបទ <i class="bi bi-chevron-down icon"></i>
+            </a>
+            <div class="dropdown position-absolute shadow-xs">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
+                <li><a class="dropdown-item py-2 d-block" href="#">កីឡា</a></li>
+                <li><a class="dropdown-item py-2 d-block" href="#">សុខភាព</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item px-3 py-2">
+            <a href="" class="nav-link">អំពីយើង</a>
+          </li>
+          <li class="nav-item px-3 py-2">
+            <a href="" class="nav-link">ទំនាក់ទំនង</a>
+          </li>
+          <li class="nav-item other px-3 py-2 position-relative">
+            <a class="nav-link" href="#">
+              ផ្សេងៗ <i class="bi bi-chevron-down icon"></i>
+            </a>
+            <div class="dropdown position-absolute shadow-xs">
+              <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
+                <li><a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a></li>
+                <li><a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a></li>
+                <li><a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a></li>
+                <li><a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-row align-items-center gap-4">
+          <li class="nav-item">
+            <a class="main-btn text-prime" id="theme-toggle">
+              <i class="theme-icon bi bi-sun fs-4"></i>
+              <i class="theme-icon bi bi-moon fs-4"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link position-relative">
+              <i class="bi bi-cart2 text-prime fs-4"></i>
+              <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                style="width: 15px; height: 15px;">
+                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item blog position-relative">
+            <a href="" class="nav-link position-relative">
+              <i class="bi bi-bell text-prime fs-4"></i>
+              <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                style="width: 15px; height: 15px;">
+                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+              </span>
+            </a>
+            <div class="dropdown position-absolute shadow-xs" style="left: -50px;">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">
+                    កីឡា
+                  </a>
+                </li>
+                <li><a class="dropdown-item py-2 d-block" href="#">សុខភាព</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item py-2 pe-3">
+            <a href="" class="nav-link d-block">
+              <i class="bi bi-person-circle text-prime fs-4"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="pt-10">
+    <section class="sign-up vh-100">
+      <div class="container-fluid h-100 p-0">
+        <div class="row h-100 m-0 align-items-center">
+          <div class="col-lg-5 p-0 h-100">
+            <div class="card bg-prime h-100 border-0 rounded-0">
+              <img src="assets/img/6.png" alt="" class="img-fluid my-auto w-100">
+              <div class="card-img-overlay">
+                <h1 class="text-main fst-italic">DSH</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-lg-5">
+            <div class="card border-0 bg-prime">
+              <div class="card-body text-prime">
+                <h1 class="text-center mb-4 text-main">ចុះឈ្មោះប្រើប្រាស់</h1>
+                <h4 class="text-center text-second mb-5">បង្កើតគណនីថ្មីដើម្បីចាប់ផ្តើមដំណើរសុខភាព</h4>
+                <form>
+                  <div class="mb-3 position-relative">
+                    <label for="name" class="form-label fs-title">ឈ្មោះពេញ</label>
+                    <input type="text" class="form-control bg-prime fs-text text-second ps-7" id="name"
+                      placeholder="បញ្ចូលឈ្មោះពេញរបស់អ្នក">
+                    <i class="bi bi-person position-absolute text-gold icon-input"></i>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label for="email" class="form-label fs-title">អ៊ីមែល</label>
+                    <input type="email" class="form-control bg-prime fs-text text-second ps-7" id="email"
+                      placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក">
+                    <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label for="password" class="form-label fs-title">ពាក្យសម្ងាត់</label>
+                    <input type="password" class="form-control bg-prime fs-text text-second ps-7" id="password"
+                      placeholder="បញ្ចូលពាក្យសម្ងាត់">
+                    <i class="bi bi-lock position-absolute text-gold icon-input"></i>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label for="password" class="form-label fs-title">បញ្ជាក់ពាក្យសម្ងាត់</label>
+                    <input type="password" class="form-control bg-prime fs-text text-second ps-7" id="passwords"
+                      placeholder="បញ្ជាក់ពាក្យសម្ងាត់">
+                    <i class="bi bi-lock position-absolute text-gold icon-input"></i>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label fs-text text-prime bg-prime" for="flexCheckDefault">
+                        ខ្ញុំយល់ព្រមនឹង <a href="" class="text-decoration-none text-main">លក្ខខណ្ឌ</a> របស់គេហទំព័រ
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-gold w-100 fs-btn fw-bold">បង្កើតគណនី</button>
+                  <p class="fs-text text-center mt-3 text-prime">មានគណនីរួចហើយ? <a href=""
+                      class="text-decoration-none text-main">ចូលគណនី</a></p>
+                  <a href="" class="fs-text d-block text-center text-decoration-none text-second">
+                    <i class="bi bi-arrow-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+    </section>
+    <section class="log-in vh-100">
+      <div class="container-fluid h-100 p-0">
+        <div class="row h-100 m-0 align-items-center">
+          <div class="col-lg-5 p-0 h-100 position-relative">
+            <div class="card bg-prime h-100 border-0 rounded-0">
+              <img src="assets/img/5.png" alt="" class="img-fluid my-auto w-100 w-25">
+            </div>
+            <div class="card-img-overlay">
+              <img src="assets/img/logo_web_main.png" alt="" class="position-absolute img-fluid"
+                style="width: 120px; top: -3%;">
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-lg-5">
+            <div class="card border-0 bg-prime">
+              <div class="card-body text-prime">
+                <h1 class="text-center mb-4 text-main">ចូលគណនី</h1>
+                <h4 class="text-center text-second mb-5">សូមស្វាគមន៍មកកាន់ DSH</h4>
+                <form>
+
+                  <div class="mb-3 position-relative">
+                    <label for="emaill" class="form-label fs-title">អ៊ីមែល</label>
+                    <input type="email" class="form-control bg-prime fs-text text-second ps-7" id="emaill"
+                      placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក">
+                    <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label for="pass" class="form-label fs-title">ពាក្យសម្ងាត់</label>
+                    <input type="password" class="form-control bg-prime fs-text text-second ps-7" id="pass"
+                      placeholder="បញ្ចូលពាក្យសម្ងាត់">
+                    <i class="bi bi-lock position-absolute text-gold icon-input"></i>
+                  </div>
+                  <div class="mb-3 d-flex">
+                    <div class="form-check">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="flexCheck">
+                      <label class="form-check-label fs-text text-prime bg-prime" for="flexCheck">
+                        ចងចាំគណនីខ្ញុំ
+                      </label>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <a href="#" class="ms-auto text-decoration-none text-main" data-bs-toggle="modal"
+                      data-bs-target="#forgotPasswordModal">ភ្លេចពាក្យសម្ងាត់?</a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="forgotPasswordModal" tabindex="-1 "
+                      aria-labelledby="forgotPasswordModalLabel" aria-hidden="true" data-bs-backdrop="static"
+                      data-bs-keyboard="false">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content bg-prime border-0 rounded-1">
+                          <div class="modal-header border-0 pb-0">
+                            <h2 class="modal-title text-main mx-auto" id="forgotPasswordModalLabel">ភ្លេចពាក្យសម្ងាត់?
+                            </h2>
+                          </div>
+                          <div class="modal-body text-second">
+                            <div class="container">
+                              <div class="row">
+                                <h4 class="mb-5 text-center">សូមបញ្ចូលអ៊ីមែលដែលបានចុះឈ្មោះដើម្បីកំណត់ពាក្យសម្ងាត់ឡើងវិញ
+                                </h4>
+                                <div class="col-2"></div>
+                                <div class="col-lg-8 pb-2">
+                                  <form id="forgotPasswordForm">
+                                    <div class="mb-3 position-relative">
+                                      <label for="resetEmail" class="form-label fs-title text-prime">អ៊ីមែល</label>
+                                      <input type="email" class="form-control bg-prime fs-text text-second ps-7"
+                                        id="resetEmail" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក">
+                                      <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
+                                    </div>
+                                    <button type="button" class="btn btn-gold w-100 fs-btn fw-bold mb-3"
+                                      data-bs-toggle="modal" data-bs-target="#otp" data-bs-dismiss="modal">
+                                      ផ្ញើ
+                                    </button>
+                                    <a href="" class="fs-text d-block text-center text-decoration-none text-second"
+                                      data-bs-dismiss="modal">
+                                      <i class="bi bi-arrow-left"></i> ត្រឡប់ទៅវិញ</a>
+                                  </form>
+                                </div>
+                                <div class="col-2"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- OTP Modal -->
+                    <div class="modal fade" id="otp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                      aria-labelledby="otpLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content bg-prime border-0 rounded-3 shadow">
+
+                          <!-- Header -->
+                          <div class="modal-header border-0 pb-1">
+                            <h2 class="modal-title text-main mx-auto" id="otpLabel">កូដផ្ទៀងផ្ទាត់</h2>
+                          </div>
+
+                          <!-- Body -->
+                          <div class="modal-body text-second">
+                            <div class="container">
+                              <div class="row">
+                                <h4 class="mb-4 text-center">
+                                  យើងបានផ្ញើលេខកូដ OTP 6 ខ្ទង់ទៅអ៊ីមែលរបស់អ្នក សូមបញ្ចូលខាងក្រោម
+                                </h4>
+                                <div class="col-2"></div>
+                                <div class="col-lg-8 pb-2 text-center">
+                                  <form id="otpForm">
+                                    <div class="d-flex justify-content-center gap-3 mb-4">
+                                      <input type="text" maxlength="1" placeholder="9"
+                                        class="form-control otp-input bg-transparent" />
+                                      <input type="text" maxlength="1" placeholder="1"
+                                        class="form-control otp-input bg-transparent" />
+                                      <input type="text" maxlength="1" placeholder="4"
+                                        class="form-control otp-input bg-transparent" />
+                                      <input type="text" maxlength="1" placeholder="7"
+                                        class="form-control otp-input bg-transparent" />
+                                      <input type="text" maxlength="1" placeholder="3"
+                                        class="form-control otp-input bg-transparent" />
+                                      <input type="text" maxlength="1" placeholder="5"
+                                        class="form-control otp-input bg-transparent" />
+                                    </div>
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-gold w-100 fs-btn fw-bold mb-3"
+                                      data-bs-toggle="modal" data-bs-target="#resetPw">
+                                      បញ្ជាក់
+                                    </button>
+                                    <a href="#" class="fs-text d-block text-center text-decoration-none text-second"
+                                      data-bs-dismiss="modal" data-bs-target="#forgotPasswordModal"
+                                      data-bs-toggle="modal">
+                                      <i class="bi bi-arrow-left"></i> ត្រឡប់ទៅអុីមែលវិញ
+                                    </a>
+                                  </form>
+                                </div>
+                                <div class="col-2"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal បង្កើតពាក្យសម្ងាត់ថ្មី -->
+                    <div class="modal fade" id="resetPw" data-bs-backdrop="static" data-bs-keyboard="false"
+                      tabindex="-1" aria-labelledby="resetPass" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content bg-prime border-0 rounded-3 shadow">
+
+                          <!-- Header -->
+                          <div class="modal-header border-0 pb-0">
+                            <h2 class="modal-title text-main mx-auto" id="resetPass">បង្កើតពាក្យសម្ងាត់ថ្មី</h2>
+                          </div>
+
+                          <!-- Body -->
+                          <div class="modal-body text-second">
+                            <div class="container">
+                              <div class="row">
+                                <h4 class="mb-4 text-center">សូមបញ្ចូលពាក្យសម្ងាត់ថ្មីរបស់អ្នក</h4>
+
+                                <div class="col-2"></div>
+                                <div class="col-lg-8 pb-2">
+                                  <form id="resetPwForm">
+                                    <!-- ពាក្យសម្ងាត់ថ្មី -->
+                                    <div class="mb-3 position-relative">
+                                      <label for="newPassword"
+                                        class="form-label fs-title text-prime">ពាក្យសម្ងាត់ថ្មី</label>
+                                      <input type="password" class="form-control bg-prime fs-text text-second ps-7"
+                                        id="newPassword" placeholder="បញ្ចូលពាក្យសម្ងាត់ថ្មី">
+                                      <i class="bi bi-lock-fill position-absolute text-gold icon-input"></i>
+                                    </div>
+
+                                    <!-- បញ្ជាក់ពាក្យសម្ងាត់ថ្មី -->
+                                    <div class="mb-3 position-relative">
+                                      <label for="confirmPassword"
+                                        class="form-label fs-title text-prime">បញ្ជាក់ពាក្យសម្ងាត់</label>
+                                      <input type="password" class="form-control bg-prime fs-text text-second ps-7"
+                                        id="confirmPassword" placeholder="បញ្ជាក់ពាក្យសម្ងាត់">
+                                      <i class="bi bi-shield-lock-fill position-absolute text-gold icon-input"></i>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-gold w-100 fs-btn fw-bold mb-3">
+                                      រក្សាទុកពាក្យសម្ងាត់
+                                    </button>
+
+                                    <a href="#" class="fs-text d-block text-center text-decoration-none text-second"
+                                      data-bs-dismiss="modal">
+                                      <i class="bi bi-arrow-left"></i> ត្រឡប់ទៅទំព័រចូល
+                                    </a>
+                                  </form>
+                                </div>
+                                <div class="col-2"></div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <button type="submit" class="btn btn-gold w-100 fs-btn fw-bold">ចូលគណនី</button>
+                  <p class="fs-text text-center mt-3 text-prime">មិនមានគណនីទេ? <a href=""
+                      class="text-decoration-none text-main">ចុះឈ្មោះ</a></p>
+                  <a href="" class="fs-text d-block text-center text-decoration-none text-second">
+                    <i class="bi bi-arrow-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Tabs</title>
+  <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.7/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.7/css/theme.css" />
+  <link rel="stylesheet" href="assets/plugins/bootstrap-icons/bootstrap-icons.css" />
+  <style>
+    /* Sidebar styles */
+    #sidebar {
+      width: 250px;
+      min-height: 100vh;
+      transition: transform 0.4s ease;
+      transform: translateX(0);
+      position: relative;
+      z-index: 1000;
+      flex-shrink: 0;
+    }
+
+    /* Hidden sidebar */
+    #sidebar.collapsed {
+      transform: translateX(-100%);
+    }
+
+    /* Main content adjustment */
+    .main-content {
+      transition: margin-left 0.4s ease;
+      flex: 1;
+      min-width: 0;
+      margin-left: 0;
+    }
+
+    .main-content.expanded {
+      margin-left: -250px;
+    }
+
+    /* Wrapper adjustments */
+    .wrapper {
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+    }
+
+    /* When sidebar is collapsed, wrapper adjusts */
+    .wrapper.sidebar-collapsed {
+      justify-content: flex-start;
+    }
+
+    /* Ensure container-fluid takes full width */
+    .container-fluid {
+      width: 100% !important;
+      max-width: none !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper d-flex">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="bg-dark text-white p-3">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <div class="sidebar-logo">
+          <a href="#" class="text-white text-decoration-none fw-bold fs-4">DSH</a>
+        </div>
+      </div>
+
+      <ul id="sidebar-nav" class="nav flex-column nav-pills">
+        <li class="nav-item mb-2">
+          <a href="#tab-profile" class="nav-link text-white d-flex align-items-center active" data-bs-toggle="tab">
+            <i class="bi bi-person me-2"></i><span>Profile</span>
+          </a>
+        </li>
+        <li class="nav-item mb-2">
+          <a href="#tab-users" class="nav-link text-white d-flex align-items-center" data-bs-toggle="tab">
+            <i class="bi bi-people me-2"></i><span>Users</span>
+          </a>
+        </li>
+
+        <!-- Dropdown About -->
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#about" role="button"
+            aria-expanded="false" aria-controls="about">
+            <i class="bi bi-info-circle me-2"></i><span>About</span>
+            <i class="bi bi-chevron-down ms-auto icon"></i>
+          </a>
+          <ul id="about" class="collapse list-unstyled ps-4 mt-2" data-bs-parent="#sidebar-nav">
+            <li class="nav-item mb-2">
+              <a href="#tab-team" class="nav-link text-white" data-bs-toggle="tab">
+                <i class="bi bi-person me-2"></i>Team
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#tab-settings" class="nav-link text-white" data-bs-toggle="tab">
+                <i class="bi bi-gear me-2"></i>Settings
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item mb-2">
+          <a href="#tab-home" class="nav-link text-white d-flex align-items-center" data-bs-toggle="tab">
+            <i class="bi bi-house me-2"></i><span>Home</span>
+          </a>
+        </li>
+
+        <!-- Dropdown About -->
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#page" role="button"
+            aria-expanded="false" aria-controls="about">
+            <i class="bi bi-info-circle me-2"></i><span>Page</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="page" class="collapse list-unstyled ps-4 mt-2" data-bs-parent="#sidebar-nav">
+            <li class="nav-item mb-2">
+              <a href="#tab-page1" class="nav-link text-white" data-bs-toggle="tab">
+                <i class="bi bi-person me-2"></i> Page 1
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#tab-page2" class="nav-link text-white" data-bs-toggle="tab">
+                <i class="bi bi-gear me-2"></i>Page 2
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1 main-content">
+      <!-- Navbar -->
+      <nav class="navbar border-bottom">
+        <div class="container-fluid">
+          <button type="button" id="toggle-btn" class="btn text-dark fs-4">
+            <i class="bi bi-list"></i>
+          </button>
+          <a class="navbar-brand" href="#">Dashboard</a>
+        </div>
+      </nav>
+
+      <!-- Tab Content -->
+      <main class="p-4">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tab-profile">
+            <h1>Profile</h1>
+            <p>This is your profile content.</p>
+          </div>
+          <div class="tab-pane fade" id="tab-users">
+            <h1>Users</h1>
+            <p>Manage your users here.</p>
+          </div>
+          <div class="tab-pane fade" id="tab-home">
+            <h1>Home</h1>
+            <p>Welcome to the home page.</p>
+          </div>
+          <div class="tab-pane fade" id="tab-team">
+            <h1>Team</h1>
+            <p>Meet your awesome team here.</p>
+          </div>
+          <div class="tab-pane fade" id="tab-settings">
+            <h1>Settings</h1>
+            <p>Adjust your preferences and settings.</p>
+          </div>
+          <div class="tab-pane fade" id="tab-page1">
+            <h1>Page1</h1>
+            <p>Adjust your preferences and settings.</p>
+          </div>
+          <div class="tab-pane fade" id="tab-page2">
+            <h1>Page2</h1>
+            <p>Adjust your preferences and settings.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Toggle sidebar functionality
+    document
+      .getElementById("toggle-btn")
+      .addEventListener("click", function () {
+        const sidebar = document.getElementById("sidebar");
+        const mainContent = document.querySelector(".main-content");
+        const wrapper = document.querySelector(".wrapper");
+
+        sidebar.classList.toggle("collapsed");
+        mainContent.classList.toggle("expanded");
+        wrapper.classList.toggle("sidebar-collapsed");
+      });
+  </script>
+</body>
+
+</html>
