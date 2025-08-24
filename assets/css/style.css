@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   /* Backgrounds */
   --bg-prime: #fff; 
@@ -15,6 +14,7 @@
   --btn-second: #e0f2fe; 
 
   --fs-title: 20px;
+  --fs-nav: 18px;
   --fs-text: 16px;
   --fs-btn: 15px;
 }
@@ -34,6 +34,12 @@
   --btn-second: #374151; 
 }
 
+body {
+  font-family: 'Noto Serif Khmer', sans-serif;
+}
+.ff {
+  font-family: Poppins;
+}
 /* Background utilities */
 .bg-prime {
   background-color: var(--bg-prime) !important;
@@ -64,6 +70,9 @@
 .fs-title {
   font-size: var(--fs-title) !important;
 }
+.fs-nav{
+  font-size: var(--fs-nav) !important;
+}
 .fs-text {
   font-size: var(--fs-text) !important;
 }
@@ -87,12 +96,6 @@
 }
 .border-bottom{
   border-bottom: 1px solid rgba(128, 128, 128, 0.418) !important;
-}
-body {
-  font-family: "Noto Serif Khmer", "Poppins";
-}
-.ff {
-  font-family: Poppins;
 }
 .btn-gold {
   background: linear-gradient(to bottom, #f7d78c, #f4c965);
@@ -163,10 +166,10 @@ body {
 }
 .nav-link {
   color: var(--text-prime) !important;
+  font-size: var(--fs-nav) !important;
 }
 .dropdown-item {
   color: var(--text-prime) !important;
-  font-size: 16px !important;
 }
 .dropdown-item:hover {
   color: var(--text-main) !important;
