@@ -262,4 +262,6 @@ body {
   box-shadow: 0 0 5px rgba(246, 207, 120, 0.6);
   outline: none;
 }
- 
+.shadow-xs{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 
