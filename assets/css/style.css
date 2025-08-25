@@ -264,3 +264,19 @@ body {
 .shadow-xs{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 } 
+.offcanvas.offcanvas-start {
+  width: 300px; /* change this value */
+}
+
+.nav .nav-link {
+  transition: .4s ease;
+  border-left: 5px solid transparent;
+  border-radius: 0;
+}
+
+.nav .nav-link.active,
+.nav .nav-link:hover {
+  color: var(--btn-prime) !important;
+  background-color: var(--btn-second) !important;
+  border-left: 5px solid var(--btn-prime) !important;
+}
