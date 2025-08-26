@@ -3,6 +3,7 @@
   /* Backgrounds */
   --bg-prime: #fff; 
   --bg-second: #f3f4f6; 
+  --bg-third: #f5f7fb;
 
   /* Text */
   --text-prime: #000; 
@@ -23,6 +24,7 @@
   /* Backgrounds */
   --bg-prime: #1e293b; 
   --bg-second: #0f172a; 
+  --bg-third: #334155;
 
   /* Text */
   --text-prime: #f9fafb; 
@@ -45,6 +47,9 @@ body {
 }
 .bg-second {
   background-color: var(--bg-second) !important;
+}
+.bg-third{
+  background-color: var(--bg-third) !important;
 }
 
 /* Text utilities */
