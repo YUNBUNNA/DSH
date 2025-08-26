@@ -20,3 +20,25 @@ toggleButton.addEventListener("click", () => {
     localStorage.setItem("theme", "dark");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute("data-countto"));
+      const duration = parseInt(counter.getAttribute("data-duration"));
+      let start = 0;
+      const stepTime = 20; // update every 20ms
+      const step = target / (duration / stepTime);
+      const updateCounter = () => {
+        start += step;
+        if (start < target) {
+          counter.textContent = Math.floor(start);
+          setTimeout(updateCounter, stepTime);
+        } else {
+          counter.textContent = target;
+        }
+      };
+
+      updateCounter();
+    });
+  });

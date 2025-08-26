@@ -9,6 +9,24 @@
   <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.7/css/theme.css" />
   <link rel="stylesheet" href="assets/plugins/bootstrap-icons/bootstrap-icons.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .download {
+      width: 150px;
+    }
+
+    #app {
+      color: var(--text-main);
+      font-size: 39px;
+      font-weight: bold;
+      animation: textclip 2s linear infinite;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-prime">
@@ -154,16 +172,123 @@
 
   <!-- main -->
   <main>
-    <section class="pt-15">
+    <!-- hero-banner -->
+    <section class="pt-15 vh-100 hero-banner">
       <div class="container">
-        <h1>Hello</h1>
+        <div class="row justify-content-center align-items-center h-100 g-4 flex-column-reverse flex-lg-row">
+          <div class="col-lg-6">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body">
+                <a href="" class="btn btn-gold fw-bold mb-4"><i class="bi bi-award"></i>
+                  វេទិកាកីឡាឈានមុខគេ</a>
+                <!-- <h1 class="card-title display-4 fw-bold text-main" style="line-height: 90px;">ចូលរួមជាមួយសហគមន៍កីឡា
+                  និងសុខភាព</h1> -->
+                <div id="app"></div>
+                <p class="card-text mt-3 mb-4 text-prime" style="font-size: 20px;">
+                  ចូលរួមជាមួយយើងដើម្បីបង្កើតជីវិតដ៏មានសុខភាពល្អ ជាមួយនឹងកម្មវិធីហ្វឹកហាត់ ការណែនាំអាហារ
+                  និងការទំទង់ពីសហគមន៍</p>
+                <a href="" class="btn btn-lg btn-gold me-2 fw-bold"
+                  style="border: 2px solid #d8b75c;">ចុះឈ្មោះឥឡូវនេះ</a>
+                <a href="" class="btn btn-lg fw-bold text-prime" style="border: 2px solid #58A8E6;">ចូលគណនី</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 bg-transparent">
+              <img src="assets/img/landing.png" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- what is dsh section -->
+    <section class="what-is-dsh py-10" style="background-color: #9da1a9;">
+      <div class="container">
+        <div class="text-center">
+          <h4 class="display-5 fw-bold" style="color: var(--text-main);">តើ Digital Sports <span
+              style="color: #d8b75c;">&</span> Health គឺជាអ្វី?</h4>
+          <p class="mt-5 fs-4 text-prime">ការយល់ដឹងអំពីស្តីពីសហគមន៍កីឡា និងសុខភាព</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- star section -->
+    <section class="star bg-gold">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 rounded-2">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="card border-0 bg-transparent">
+                  <div class="card-body text-center">
+                    <div class="d-flex display-5 justify-content-center align-items-center">
+                      <h1 class="counter card-title display-5 ff" data-countto="3720" data-duration="2000">0</h1>
+                      <span>+</span>
+                    </div>
+                    <h4 class="card-text mt-1">អតិថិជន</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card border-0 bg-transparent">
+                  <div class="card-body text-center">
+                    <div class="d-flex display-6 justify-content-center align-items-center">
+                      <h1 class="counter card-title display-5 ff" data-countto="7" data-duration="2000">0</h1>
+                      <span class="ms-1">ឆ្នាំ</span>
+                    </div>
+                    <h4 class="card-text mt-1">បទពិសោធន៏</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card border-0 bg-transparent">
+                  <div class="card-body text-center">
+                    <div class="d-flex display-5 justify-content-center align-items-center">
+                      <h1 class="counter card-title display-5 ff" data-countto="150" data-duration="2000">0</h1>
+                      <span>+</span>
+                    </div>
+                    <h4 class="card-text mt-1">អ្នកបណ្តុះបណ្តាល</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card border-0 bg-transparent">
+                  <div class="card-body text-center">
+                    <div class="d-flex display-5 justify-content-center align-items-center">
+                      <h1 class="counter card-title display-5 ff" data-countto="98" data-duration="2000">0</h1>
+                      <span class="fs-2 fw-bold">%</span>
+                    </div>
+                    <h4 class="card-text mt-1">សម្រេចបាន​គោលដៅ</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 
   <script src="assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script>
+    var app = document.getElementById('app');
+
+    var typewriter = new Typewriter(app, {
+      loop: true
+    });
+
+    typewriter.typeString('សូមស្វាគមន៍មកកាន់គេហទំព័រ DSH')
+      .pauseFor(2500)
+      .deleteAll()
+      .typeString('ចូលរួមសហគមន៍កីឡា និង សុខភាព')
+      .pauseFor(2500)
+      .start();
+  </script>
 </body>
 
 </html>

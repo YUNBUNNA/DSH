@@ -96,7 +96,8 @@ body {
 .border-bottom{
   border-bottom: 1px solid rgba(128, 128, 128, 0.418) !important;
 }
-.btn-gold {
+
+.btn-gold, .bg-gold {
   background: linear-gradient(to bottom, #f7d78c, #f4c965);
   border: 1px solid #d8b75c;
   color: black;
