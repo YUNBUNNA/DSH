@@ -78,3 +78,32 @@ document.addEventListener("DOMContentLoaded", () => {
     onScroll(); // initial check
   }
 });
+
+ var swiper2 = new Swiper(".mySlider", {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: { delay: 3000, disableOnInteraction: false, },
+    pagination: { el: ".swiper-pagination-1", clickable: true, },
+    breakpoints: {
+      640: { slidesPerView: 1, spaceBetween: 20 },
+      768: { slidesPerView: 2, spaceBetween: 30 },
+      1024: { slidesPerView: 3, spaceBetween: 20 },
+    },
+  });
+  var swiper3 = new Swiper(".mySlide", {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination-2",
+      clickable: true,
+    },
+    breakpoints: {
+      640: { slidesPerView: 1, spaceBetween: 20 },
+      768: { slidesPerView: 2, spaceBetween: 30 },
+      1024: { slidesPerView: 2, spaceBetween: 20 },
+    },
+  });

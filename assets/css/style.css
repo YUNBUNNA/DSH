@@ -286,3 +286,9 @@ body {
   background-color: var(--btn-second) !important;
   border-left: 5px solid var(--btn-prime) !important;
 }
+.article-hover .card-title{
+  transition: .2s ease;
+}
+.article-hover:hover .card-title{
+    color: var(--text-main) !important;
+}
