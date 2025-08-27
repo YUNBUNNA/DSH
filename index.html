@@ -14,6 +14,21 @@
       width: 150px;
     }
 
+    .accordion-button:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    .accordion-button.collapsed {
+      background-color: var(--bg-prime);
+      color: var(--text-prime);
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: linear-gradient(to bottom, #f7d78c, #f4c965);
+    }
+
+
     #app {
       color: var(--text-main);
       font-size: 39px;
@@ -32,8 +47,8 @@
 <body class="bg-prime">
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
-      <div class="container-fluid" style="background-color: #58A8E6;">
-        <div class="container d-flex align-items-center justify-content-between">
+      <div class="container-fluid d-none d-lg-flex" style="background-color: #58A8E6;">
+        <div class="container d-flex align-items-center justify-content-between p-0">
           <a href="" class="navbar-brand">
             <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
               style="width: 90px; height: 40px" />
@@ -54,7 +69,116 @@
       </div>
       <div class="container-fluid border-bottom"></div>
       <div class="container d-flex align-items-center justify-content-between">
-        <ul class="navbar-nav flex-row">
+        <button class="navbar-toggler border-0 shadow-none d-block d-xl-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+              style="width: 90px; height: 40px;">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul id="off" class="nav flex-column justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">ទំព័រដើម</a>
+              </li>
+
+              <!-- ផ្នែកកីឡា -->
+              <li class="nav-item">
+                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#sport"
+                  role="button" aria-expanded="false" aria-controls="sport">
+                  ផ្នែកកីឡា <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="sport" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link text-prime">បាល់ទាត់</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">រត់ប្រណាំង</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">បាល់បោះ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">ជិះកង់</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">បាល់ទះ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">ការ៉ាតេ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">ហែលទឹក</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">វាយសី</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">ការហ្វឹកហាត់</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ទំនិញ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ព្រឹត្តិការណ៏</a>
+              </li>
+
+              <!-- អត្ថបទ -->
+              <li class="nav-item">
+                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#blog"
+                  role="button" aria-expanded="false" aria-controls="blog">
+                  អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="blog" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link text-prime">កីឡា</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">សុខភាព</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">អំពីយើង</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ទំនាក់ទំនង</a>
+              </li>
+
+              <!-- ផ្សេងៗ -->
+              <li class="nav-item">
+                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#other"
+                  role="button" aria-expanded="false" aria-controls="other">
+                  ផ្សេងៗ <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="other" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                  <li class="nav-item mb-2">
+                    <a href="#" class="nav-link text-prime">គ្រូបង្វឹក</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">សកម្មភាព</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="navbar-nav flex-row d-none d-xl-flex">
           <li class="nav-item pe-3 py-1">
             <a href="" class="nav-link">ទំព័រដើម</a>
           </li>
@@ -160,7 +284,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item py-1">
+          <li class="nav-item py-1 profile">
             <a href="" class="nav-link d-block">
               <i class="bi bi-person-circle text-prime fs-4"></i>
             </a>
@@ -173,16 +297,14 @@
   <!-- main -->
   <main>
     <!-- hero-banner -->
-    <section class="pt-15 vh-100 hero-banner">
+    <section class="pt-15 hero-banner mb-lg-10">
       <div class="container">
-        <div class="row justify-content-center align-items-center h-100 g-4 flex-column-reverse flex-lg-row">
+        <div class="row justify-content-center align-items-center h-100 g-4">
           <div class="col-lg-6">
             <div class="card border-0 bg-transparent">
               <div class="card-body">
-                <a href="" class="btn btn-gold fw-bold mb-4"><i class="bi bi-award"></i>
+                <a href="" style="background-color: #22c373;" class="btn mb-4 text-white"><i class="bi bi-award"></i>
                   វេទិកាកីឡាឈានមុខគេ</a>
-                <!-- <h1 class="card-title display-4 fw-bold text-main" style="line-height: 90px;">ចូលរួមជាមួយសហគមន៍កីឡា
-                  និងសុខភាព</h1> -->
                 <div id="app"></div>
                 <p class="card-text mt-3 mb-4 text-prime" style="font-size: 20px;">
                   ចូលរួមជាមួយយើងដើម្បីបង្កើតជីវិតដ៏មានសុខភាពល្អ ជាមួយនឹងកម្មវិធីហ្វឹកហាត់ ការណែនាំអាហារ
@@ -203,18 +325,53 @@
     </section>
 
     <!-- what is dsh section -->
-    <section class="what-is-dsh py-10" style="background-color: #9da1a9;">
+    <section class="what-is-ds pb-5">
       <div class="container">
-        <div class="text-center">
-          <h4 class="display-5 fw-bold" style="color: var(--text-main);">តើ Digital Sports <span
-              style="color: #d8b75c;">&</span> Health គឺជាអ្វី?</h4>
-          <p class="mt-5 fs-4 text-prime">ការយល់ដឹងអំពីស្តីពីសហគមន៍កីឡា និងសុខភាព</p>
+        <div class="text-center mb-8">
+          <h4 class="display-6 fw-bold text-main">តើ Digital Sports <span style="color: #d8b75c;">&</span> Health
+            គឺជាអ្វី?</h4>
+          <p class="mt-3 fs-5 text-prime">DSH គឺជាគេហទំព័រអំពីសហគមន៍កីឡា និងសុខភាព​ ដែលផ្តល់អត្ថប្រយោជន៍ដូចជា</p>
+        </div>
+        <div class="row g-4 justify-content-between">
+          <div class="col-lg-4">
+            <div class="card bg-transparent border-0 rounded-3">
+              <div class="card-body text-center p-5 text-prime">
+                <i class="d-block bi bi-people rounded-circle fs-2 fw-bold bg-gold text-center align-content-center mx-auto mb-3 text-dark"
+                  style="width: 80px; height: 80px;"></i>
+                <h3>សហគមន៍</h3>
+                <p class="card-text mt-1">សហគមន៍មួយដែលផ្តល់ការគាំទ្រ និងលើកទឹកចិត្តសមាជិកទាំងអស់ក្នុងការហាត់ប្រាណ
+                  និងថែរក្សាសុខភាព។ </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card bg-transparent border-0 rounded-3">
+              <div class="card-body text-center p-5 text-prime">
+                <i class="d-block bi bi-heart-pulse rounded-circle fs-2 fw-bold text-center align-content-center mx-auto mb-3 text-white"
+                  style="width: 80px; height: 80px; background-color: #58A8E6;"></i>
+                <h3>សុខភាព</h3>
+                <p class="card-text mt-1">យើងផ្តោតលើការធ្វើឱ្យជីវិតមានសុខភាពល្អតាមរយៈការហាត់ប្រាណ ការញុំាអាហារល្អ
+                  និងការថែរក្សាផ្លូវចិត្ត។</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card bg-transparent border-0 rounded-3">
+              <div class="card-body text-center p-5 text-prime">
+                <i class="d-block bi bi-trophy rounded-circle fs-2 fw-bold text-center align-content-center mx-auto mb-3 text-white"
+                  style="width: 80px; height: 80px; background-color: #22c373;"></i>
+                <h3>លទ្ធផល</h3>
+                <p class="card-text mt-1">តាមរយៈកម្មវិធីនានា យើងជួយសមាជិកឱ្យសម្រេចបាននូវគោលដៅសុខភាព និងកីឡារបស់ពួកគេ។
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- star section -->
-    <section class="star bg-gold">
+    <section class="star bg-gold py-8">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-12 rounded-2">
@@ -223,7 +380,7 @@
                 <div class="card border-0 bg-transparent">
                   <div class="card-body text-center">
                     <div class="d-flex display-5 justify-content-center align-items-center">
-                      <h1 class="counter card-title display-5 ff" data-countto="3720" data-duration="2000">0</h1>
+                      <h1 class="counter card-title display-5 ff" data-countto="6720" data-duration="2000">0</h1>
                       <span>+</span>
                     </div>
                     <h4 class="card-text mt-1">អតិថិជន</h4>
@@ -269,6 +426,204 @@
       </div>
     </section>
 
+    <!-- important section -->
+    <section class="important py-10">
+      <div class="container">
+        <div class="text-center mb-8">
+          <h4 class="display-6 fw-bold text-main">ហេតុអ្វីវាសំខាន់?</h4>
+          <p class="mt-3 fs-5 text-prime">ការហាត់ប្រាណ និងថែរក្សាសុខភាពមានសារៈសំខាន់យ៉ាងណា</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card border-0 d-flex align-items-start ps-5 bg-transparent">
+              <div class="card-body d-flex justify-content-center align-items-start">
+                <div class="me-3 rounded-circle d-flex justify-content-center align-items-center"
+                  style="width: 65px; height: 65px; font-size: 2rem; background-color: #d8b75c;">
+                  <i class="bi bi-shield"></i>
+                </div>
+                <div>
+                  <h5 class="card-title fw-bold text-prime">ការពារជំងឺ</h5>
+                  <p class="card-text text-prime">ការហាត់ប្រាណជាប្រចាំជួយការពារពីជំងឺបេះដូង ទឹកនោមផ្អែម
+                    និងជំងឺផ្សេងៗទៀត។</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 d-flex align-items-start ps-5 bg-transparent">
+              <div class="card-body d-flex justify-content-center align-items-start">
+                <div class="me-3 rounded-circle d-flex justify-content-center align-items-center"
+                  style="width: 65px; height: 65px; font-size: 2rem; background-color: #d8b75c;">
+                  <i class="bi bi-person-hearts"></i>
+                </div>
+                <div>
+                  <h5 class="card-title fw-bold text-prime">សុខភាពផ្លូវចិត្ត</h5>
+                  <p class="card-text text-prime">កីឡាជួយកាត់បន្ថយភាពតានតឹង និងធ្វើឱ្យមានអារម្មណ៍ល្អប្រសើរ។</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 d-flex align-items-start ps-5 bg-transparent">
+              <div class="card-body d-flex justify-content-center align-items-start">
+                <div class="me-3 rounded-circle d-flex justify-content-center align-items-center"
+                  style="width: 65px; height: 65px; font-size: 2rem; background-color: #58A8E6;">
+                  <i class="bi bi-people text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title fw-bold text-prime">ទំនាក់ទំនងសង្គម</h5>
+                  <p class="card-text text-prime">ការចូលរួមកីឡាជាក្រុមជួយបង្កើតមិត្តភាព និងទំនាក់ទំនងល្អ។</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 d-flex align-items-start ps-5 bg-transparent">
+              <div class="card-body d-flex justify-content-center align-items-start">
+                <div class="me-3 rounded-circle d-flex justify-content-center align-items-center"
+                  style="width: 65px; height: 65px; font-size: 2rem; background-color: #22c373;">
+                  <i class="bi bi-clock text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title fw-bold text-prime">អាយុវែង</h5>
+                  <p class="card-text text-prime">ការមានសុខភាពល្អជួយឱ្យមានជីវិតវែង និងគុណភាពជីវិតប្រសើរ។</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-8 bg-third">
+      <div class="container">
+        <div class="text-center mb-8">
+          <h4 class="display-6 fw-bold text-main">សំណួរញឹកញាប់</h4>
+          <p class="mt-3 fs-5 text-prime">ចម្លើយសំណួរដែលសួរញឹកញាប់</p>
+        </div>
+          <div class="accordion mx-auto shadow-xs bg-prime" style="width: 1000px;" id="faqAccordion">
+            <div class="accordion-item bg-prime">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                  style="font-size: 20px;">
+                  តើការចូលរួម DSH មានថ្លៃដែរទេ?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-prime fs-text">
+                  ការចូលរួមសហគមន៍ DSH គឺឥតគិតថ្លៃសម្រាប់សកម្មភាពមូលដ្ឋាន។ ប៉ុន្តែសម្រាប់វគ្គបណ្តុះបណ្តាលពិសេស
+                  និងការណែនាំផ្ទាល់ខ្លួន អាចមានថ្លៃសេវាតាមកម្រិត។
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-prime">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2">
+                  តើខ្ញុំត្រូវមានបទពិសោធន៍មុនដែរទេ?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-prime fs-text">
+                  មិនចាំបាច់ទេ! DSH ស្វាគមន៍អ្នកចូលរួមគ្រប់កម្រិតពីអ្នកចាប់ផ្តើមដំបូងរហូតដល់អ្នកជំនាញ។
+                  យើងមានកម្មវិធីសម្រាប់មនុស្សគ្រប់កម្រិត។
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-prime">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq3">
+                  តើមានកីឡាអ្វីខ្លះ?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-prime fs-text">
+                  យើងមានកីឡាជាច្រើនដូចជា៖ វាយកូនបាល់, ហត់ប្រាណ, រត់, ម៉ាសាស, វាយបាល់ទះ, កីឡាជាក់ទឹក,
+                  និងសកម្មភាពរាងកាយផ្សេងៗទៀត។
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-prime">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq4">
+                  តើពេលវេលាសកម្មភាពដូចម្តេច?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-prime fs-text">
+                  យើងមានសកម្មភាពពេលព្រឹក ថ្ងៃ និងល្ងាច ដើម្បីសម្របតាមកាលវិភាគរបស់សមាជិក។
+                  សកម្មភាពភាគច្រើនធ្វើឡើងនៅចុងសប្តាហ៍ និងល្ងាចថ្ងៃធ្វើការ។
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-prime">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq5">
+                  តើធ្វើដូចម្តេចដើម្បីចូលរួម?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-prime fs-text">
+                  សូមចុចប៊ូតុង "ចាប់ផ្តើម" ខាងលើ ឬទាក់ទងយើងតាមរយៈទូរស័ព្ទ ឬ Facebook page របស់យើង។
+                  យើងនឹងណែនាំអ្នកតាមដំណាក់កាលបន្ទាប់។
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!--  -->
+    <section class="pt-10 pb-5">
+      <div class="container">
+        <div class="text-center mb-8">
+          <h4 class="display-6 fw-bold text-main">រួមគ្នាកសាងអនាគតដ៏មានសុខភាពល្អ</h4>
+          <p class="mt-3 fs-5 text-prime">ចូលរួមជាមួយយើងថ្ងៃនេះ និងចាប់ផ្តើមដំណើរឆ្ពោះទៅរកជីវិតដ៏មានសុខភាពល្អ</p>
+          <a href="" class="btn btn-lg btn-gold me-2 fw-bold" style="border: 2px solid #d8b75c;">ចុះឈ្មោះឥឡូវនេះ</a>
+          <a href="" class="btn btn-lg fw-bold text-prime" style="border: 2px solid #58A8E6;">ចូលគណនី</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section class="py-5 bg-gold">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <div class="card border-0 bg-transparent">
+              <img src="assets/img/download.svg" alt="" class="img-fluid object-fit-cover w-75 mx-auto">
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="card border-0 bg-transparent">
+              <div class="card-body text-center">
+                <h2 class="card-title">ទាញយកកម្មវិធី <span class="ff">HDS</span> ឥឡូវ​នេះ!!</h2>
+                <p class="card-text fs-text py-2">ដើម្បីទទួលបានបទពិសោធន៍ហាត់ប្រាណថ្មី និងភាពងាយស្រួលជាមួយកម្មវិធីសុខភាព
+                  និងហាត់ប្រាណរបស់យើង។ ទាញយកកម្មវិធីនៅលើ App Store ឬ Play Store
+                  ដើម្បីចូលប្រើប្រាស់វគ្គហាត់ប្រាណដែលអ្នកចូលចិត្តយ៉ាងឆាប់រហ័ស ទទួលបានព័ត៌មានថ្មីៗ
+                  និងការជំរុញលើការហាត់ប្រាណរបស់អ្នក និងសេវាកម្មផ្សេងៗដែលមានផ្តល់ជូនដោយមានទំនុកចិត្តខ្ពស់។</p>
+                <div class="d-flex justify-content-center gap-3">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
+                    alt="" class="img-fluid object-fit-cover" style="width: 150px;">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png"
+                    alt="" class="img-fluid object-fit-cover" style="width: 150px;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
 

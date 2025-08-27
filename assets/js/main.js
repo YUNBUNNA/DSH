@@ -21,24 +21,60 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
+// Animated Counter
 document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".counter");
-    counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute("data-countto"));
-      const duration = parseInt(counter.getAttribute("data-duration"));
-      let start = 0;
-      const stepTime = 20; // update every 20ms
-      const step = target / (duration / stepTime);
-      const updateCounter = () => {
-        start += step;
-        if (start < target) {
-          counter.textContent = Math.floor(start);
-          setTimeout(updateCounter, stepTime);
-        } else {
-          counter.textContent = target;
-        }
-      };
+  const counters = document.querySelectorAll(".counter");
 
-      updateCounter();
-    });
-  });
+  const animateCount = (el) => {
+    const target = parseInt(el.getAttribute("data-countto"), 10) || 0;
+    const duration = parseInt(el.getAttribute("data-duration"), 10) || 2000;
+    const startValue = parseInt(el.textContent, 10) || 0;
+    const startTime = performance.now();
+
+    const tick = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const value = Math.floor(startValue + (target - startValue) * progress);
+      el.textContent = value;
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        el.textContent = target;
+      }
+    };
+
+    requestAnimationFrame(tick);
+  };
+
+  // IntersectionObserver if supported
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          obs.unobserve(entry.target); // run once
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => io.observe(c));
+  } else {
+    // fallback for old browsers: simple scroll check
+    const isInView = el => {
+      const r = el.getBoundingClientRect();
+      return r.top < window.innerHeight && r.bottom > 0;
+    };
+
+    const onScroll = () => {
+      counters.forEach(el => {
+        if (!el.dataset.countStarted && isInView(el)) {
+          animateCount(el);
+          el.dataset.countStarted = "true";
+        }
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll(); // initial check
+  }
+});
