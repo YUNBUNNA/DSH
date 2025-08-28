@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Football Training</title>
     <!-- link bootstrap -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
     <!-- link theme -->
@@ -18,6 +18,51 @@
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+<style>
+    /* :root {
+        --primary-color: #4f46e5;
+        --secondary-color: #06b6d4;
+        --accent-color: #f59e0b;
+        --success-color: #10b981;
+        --danger-color: #ef4444;
+        --dark-color: #1f2937;
+        --light-color: #f8fafc;
+        --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    } */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .pricing-card {
+        background: white;
+        border-radius: 24px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border: 2px solid transparent;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        border-color: var(--text-main);
+    }
+
+    .popular-card {
+        /* transform: scale(1.05); */
+        border-color: var(--text-main);
+        box-shadow: 0 20px 40px -12px rgba(79, 70, 229, 0.3);
+    }
+
+    .w-90 {
+        width: 90%;
+    }
+</style>
 
 <body class="bg-prime">
 
@@ -161,7 +206,168 @@
             </div>
         </nav>
     </header>
+    <main>
+        <!-- pricing -->
+        <section class="py-20">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fs-1 fw-bold text-black mb-4 py-8 text-main">ចូលជាសមាជិក</h2>
+                </div>
+                <div class="row g-5">
+                    <!-- Essential Plan -->
+                    <div class="col-lg-4">
+                        <div class="pricing-card  rounded-5 ">
+                            <div class="card py-3 rounded-5 border-0">
+                                <div class="card-body ">
+                                    <h2 class="fs-3 text-center fw-bold">កាតសមាជិក BASIC</h2>
+                                    <p class=" text-center">សម្រាប់អ្នកចាប់ផ្តើម</p>
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; ">15
+                                        / ខែ
+                                    </h1>
+                                    <div class="text-center">
+                                        <button class="btn btn-outline-primary w-90 mt-2 mb-2  ">
+                                            ទិញឥឡូវនេះ
+                                        </button>
+                                    </div>
 
+                                    <!-- <p class=" text-center">Per month</p> -->
+                                    <ul class="features-list" type="none">
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ចូលហាត់បាន 3 ដង / សប្ដាហ៍
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                           កម្មវិធីហាត់បឋម
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាសសប្បាយរីករាយ
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            មានឧបករណ៍មូលដ្ឋាន
+                                        </li>
+                                        <!-- <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាស VIP
+
+                                        </li> -->
+                                        <!-- <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                             បរិយាកាសល្អ
+                                        </li> -->
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Premium Plan -->
+                    <div class="col-lg-4">
+                        <div class="pricing-card popular-card rounded-5 ">
+                            <div class="card py-3  rounded-5 border-0">
+                                <div class="card-body">
+                                    <h2 class=" fw-bold  text-center">កាតសមាជិក PRIME</h2>
+                                    <p class=" text-center">សម្រាប់អ្នកចង់ពង្រឹងសុខភាព</p>
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;">$30
+                                        / ខែ
+                                    </h1>
+                                    <div class="text-center">
+                                        <button class="btn btn-gold w-90 mt-2 mb-2">
+                                            ទិញឥឡូវនេះ
+                                        </button>
+                                    </div>
+                                    <!-- <p class=" text-center">Per month</p> -->
+                                    <ul class="features-list" type="none">
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ចូលហាត់បាន រាល់ថ្ងៃ ដោយគ្មានកំណត់
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            មាន គ្រូបង្វឹកផ្ទាល់ខ្លួន
+
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                           ឧបករណ៍ទំនើបពេញលេញ
+
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាស VIP សម្រាប់ Elite Training
+
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                           ការណែនាំផ្នែកអាហារូបត្ថម្ភការគ្រប់គ្រងរាងកាយ
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                           ឱកាសចូលរួមក្នុង Professional Trials
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Professional Plan -->
+                    <div class="col-lg-4">
+                        <div class="pricing-card   rounded-5 ">
+                            <div class="card py-3  rounded-5 border-0">
+                                <div class="card-body">
+                                    <h2 class=" fw-bold fs-3 text-center"> កាតសមាជិក STANDARD </h2>
+                                    <p class=" text-center">សម្រាប់អ្នកហាត់ទៀងទាត់</p>
+                                    <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; ">$25
+                                        / ខែ
+                                    </h1>
+                                    <div class="text-center">
+                                        <button class="btn btn-outline-primary w-90 mt-2 mb-2  ">
+                                            ទិញឥឡូវនេះ
+                                        </button>
+                                    </div>
+                                    <!-- <p class=" text-center">Per month</p> -->
+                                    <ul class="features-list" type="none">
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ចូលហាត់បានរាល់ថ្ងៃ
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            មានគ្រូបង្វឹកណែនាំ
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ឧបករណ៍ទំនើប
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាសល្អ
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ឧបករណ៍ថ្មី & ទំនើប
+
+                                        </li>
+                                        <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាស VIP
+
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- link bootstrap js -->
     <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
     <!-- link swiper js -->
