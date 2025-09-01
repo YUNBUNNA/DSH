@@ -1,23 +1,42 @@
 const toggleButton = document.getElementById("theme-toggle");
+const accordionButtons = document.querySelectorAll(".accordion-button");
 
 document.documentElement.classList.add("no-transition");
 
 const savedTheme = localStorage.getItem("theme") || "light";
 document.documentElement.classList.add(savedTheme + "-mode");
 
+// Set initial accordion icon based on saved theme
+accordionButtons.forEach((btn) => {
+  btn.style.setProperty(
+    "--accordion-icon",
+    savedTheme === "dark"
+      ? "url(/assets/img/white.svg)"
+      : "url(/assets/img/black.svg)"
+  );
+});
+
 window.addEventListener("load", () => {
   document.documentElement.classList.remove("no-transition");
 });
 
 toggleButton.addEventListener("click", () => {
-  if (document.documentElement.classList.contains("dark-mode")) {
+  const isDark = document.documentElement.classList.contains("dark-mode");
+
+  if (isDark) {
     document.documentElement.classList.remove("dark-mode");
     document.documentElement.classList.add("light-mode");
     localStorage.setItem("theme", "light");
+    accordionButtons.forEach((btn) => {
+      btn.style.setProperty("--accordion-icon", "url(/assets/img/black.svg)");
+    });
   } else {
     document.documentElement.classList.remove("light-mode");
     document.documentElement.classList.add("dark-mode");
     localStorage.setItem("theme", "dark");
+    accordionButtons.forEach((btn) => {
+      btn.style.setProperty("--accordion-icon", "url(/assets/img/white.svg)");
+    });
   }
 });
 
