@@ -292,3 +292,32 @@ body {
 .article-hover:hover .card-title{
     color: var(--text-main) !important;
 }
+/* Product Detail */
+    .myDetail .swiper-slide {
+      cursor: pointer;
+    }
+
+    .myDetail .swiper-slide-thumb-active {
+      border: 2px solid var(--text-second);
+    }
+
+    .myDetail {
+      height: 400px;
+    }
+
+    .myDetail .swiper-slide img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .myDetail2 {
+      height: 600px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 30px;
+      font-weight: bolder;
+      color: var(--text-prime);
+    }
