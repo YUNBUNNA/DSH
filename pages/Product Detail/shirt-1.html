@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="../../assets/plugins/aos/css/aos.css">
     <!-- link css custom -->
     <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+          .toast {
+      display: block !important;
+      opacity: 0;
+      transform: translateX(100vw);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    </style>
 </head>
 
 <body class="bg-prime">
@@ -24,7 +37,7 @@
     <!-- header -->
     <header>
         <nav class="navbar py-0 fixed-top bg-prime">
-            <div class="container-fluid" style="background-color: #58A8E6;">
+            <div class="container-fluid bg-nav">
                 <div class="container d-flex align-items-center justify-content-between">
                     <a href="" class="navbar-brand">
                         <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
@@ -163,7 +176,7 @@
     </header>
     <main>
         <!-- Detail Products -->
-    <section class="vh-100 pt-17">
+    <section class="vh-100 pt-15">
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-6">
@@ -235,7 +248,7 @@
                   <div class="toast-container position-fixed end-0" style="top: 10%;">
                     <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                       <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                        <img src="../../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
                           alt="...">
                         <small class="ms-auto">ឥឡូវនេះ</small>
                         <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
@@ -251,7 +264,7 @@
                   <div class="toast-container position-fixed end-0" style="top: 22%;">
                     <div id="favoriteToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                       <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                        <img src="../../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
                           alt="...">
                         <small class="ms-auto">ឥឡូវនេះ</small>
                         <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i

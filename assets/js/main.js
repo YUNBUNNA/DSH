@@ -67,25 +67,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // IntersectionObserver if supported
   if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCount(entry.target);
-          obs.unobserve(entry.target); // run once
-        }
-      });
-    }, { threshold: 0.5 });
+    const io = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            obs.unobserve(entry.target); // run once
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-    counters.forEach(c => io.observe(c));
+    counters.forEach((c) => io.observe(c));
   } else {
     // fallback for old browsers: simple scroll check
-    const isInView = el => {
+    const isInView = (el) => {
       const r = el.getBoundingClientRect();
       return r.top < window.innerHeight && r.bottom > 0;
     };
 
     const onScroll = () => {
-      counters.forEach(el => {
+      counters.forEach((el) => {
         if (!el.dataset.countStarted && isInView(el)) {
           animateCount(el);
           el.dataset.countStarted = "true";
@@ -98,52 +101,63 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
- var swiper2 = new Swiper(".mySlider", {
-    slidesPerView: 1,
-    loop: true,
-    autoplay: { delay: 3000, disableOnInteraction: false, },
-    pagination: { el: ".swiper-pagination-1", clickable: true, },
-    breakpoints: {
-      640: { slidesPerView: 1, spaceBetween: 20 },
-      768: { slidesPerView: 2, spaceBetween: 30 },
-      1024: { slidesPerView: 3, spaceBetween: 20 },
-    },
-  });
-  var swiper3 = new Swiper(".mySlide", {
-    slidesPerView: 1,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination-2",
-      clickable: true,
-    },
-    breakpoints: {
-      640: { slidesPerView: 1, spaceBetween: 20 },
-      768: { slidesPerView: 2, spaceBetween: 30 },
-      1024: { slidesPerView: 2, spaceBetween: 20 },
-    },
-  });
+var swiper2 = new Swiper(".mySlider", {
+  slidesPerView: 1,
+  loop: true,
+  autoplay: { delay: 3000, disableOnInteraction: false },
+  pagination: { el: ".swiper-pagination-1", clickable: true },
+  breakpoints: {
+    640: { slidesPerView: 1, spaceBetween: 20 },
+    768: { slidesPerView: 2, spaceBetween: 30 },
+    1024: { slidesPerView: 3, spaceBetween: 20 },
+  },
+});
+var swiper3 = new Swiper(".mySlide", {
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination-2",
+    clickable: true,
+  },
+  breakpoints: {
+    640: { slidesPerView: 1, spaceBetween: 20 },
+    768: { slidesPerView: 2, spaceBetween: 30 },
+    1024: { slidesPerView: 2, spaceBetween: 20 },
+  },
+});
 
-  // Product Detail
-  var swiper4 = new Swiper(".myDetail", {
-    direction: "vertical",
-    spaceBetween: 6,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
+// Product Detail
+var swiper4 = new Swiper(".myDetail", {
+  direction: "vertical",
+  spaceBetween: 6,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
 
-  var swiper5 = new Swiper(".myDetail2", {
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper4,
-    },
-  });
-  
+var swiper5 = new Swiper(".myDetail2", {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper4,
+  },
+});
+
+// Add to Cart
+document.getElementById("addCartBtn").addEventListener("click", () => {
+  const toast = new bootstrap.Toast(document.getElementById("cartToast"));
+  toast.show();
+});
+
+// Add to Favorites
+document.getElementById("favoriteBtn").addEventListener("click", () => {
+  const toast = new bootstrap.Toast(document.getElementById("favoriteToast"));
+  toast.show();
+});
