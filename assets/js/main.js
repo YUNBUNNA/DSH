@@ -107,3 +107,24 @@ document.addEventListener("DOMContentLoaded", () => {
       1024: { slidesPerView: 2, spaceBetween: 20 },
     },
   });
+
+  // Product Detail
+  var swiper4 = new Swiper(".myDetail", {
+    direction: "vertical",
+    spaceBetween: 6,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  var swiper5 = new Swiper(".myDetail2", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper4,
+    },
+  });
+  
