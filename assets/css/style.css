@@ -321,3 +321,28 @@ body {
       font-weight: bolder;
       color: var(--text-prime);
     }
+
+    .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.accordion-button.collapsed {
+  background-color: var(--bg-prime);
+  color: var(--text-prime);
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(to bottom, #f7d78c, #f4c965);
+}
+
+.accordion-button::after {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: var(--accordion-icon);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+}
