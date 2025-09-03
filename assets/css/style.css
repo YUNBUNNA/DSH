@@ -365,3 +365,37 @@ body {
   background-repeat: no-repeat;
   margin-left: auto;
 }
+
+.bg-mask {
+  mask-image: linear-gradient(to right, transparent, #000 5% 95%, transparent);
+}
+
+.marquee-container {
+  width: 100%;
+  display: flex;
+}
+
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  /* animation: marquee 50s linear infinite; */
+}
+
+.marquee-inner img {
+  width: 120px;
+  height: 80px;
+  margin: 0 2rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

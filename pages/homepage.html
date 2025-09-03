@@ -305,6 +305,22 @@
         </div>
       </div>
     </section>
+    <!-- Brand -->
+    <section class="brand mt-2">
+      <div class="container-fluid overflow-hidden position-relative bg-mask">
+        <div class="marquee-container">
+          <div id="marquee-inner" class="marquee-inner">
+            <img src="../assets/img/logo-brand/logo1.png" alt="" class="img-fluid">
+            <img src="../assets/img/logo-brand/logo2.png" alt="" class="img-fluid">
+            <img src="../assets/img/logo-brand/logo3.png" alt="" class="img-fluid">
+            <img src="../assets/img/logo-brand/logo4.png" alt="" class="img-fluid">
+            <img src="../assets/img/logo-brand/logo5.png" alt="" class="img-fluid">
+            <img src="../assets/img/logo-brand/logo6.png" alt="" class="img-fluid">
+            <img src="../assets/img/logo-brand/logo8.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Achievement -->
     <section class="py-5">
       <div class="container">
@@ -621,6 +637,30 @@
   <script src="../assets/plugins/aos/js/aos.js"></script>
   <!-- link js custom -->
   <script src="../assets/js/main.js"></script>
+  // Marquee
+  <script>
+    window.onload = function () {
+      const marqueeInner = document.getElementById("marquee-inner");
+      const container = document.querySelector(".marquee-container");
+
+      while (marqueeInner.scrollWidth < container.offsetWidth * 2) {
+        marqueeInner.innerHTML += marqueeInner.innerHTML;
+      }
+
+      let x = 0;
+      const speed = 0.8; 
+
+      function animate() {
+        x -= speed;
+        if (Math.abs(x) >= marqueeInner.scrollWidth / 2) {
+          x = 0; 
+        }
+        marqueeInner.style.transform = `translateX(${x}px)`;
+        requestAnimationFrame(animate);
+      }
+      animate();
+    };
+  </script>
   <script>
     var swiper = new Swiper(".mySwiper", {
       loop: true,
