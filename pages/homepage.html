@@ -31,6 +31,19 @@
       justify-content: center;
       align-items: center;
     }
+
+    /* Internal style  */
+    .toast {
+      display: block !important;
+      opacity: 0;
+      transform: translateX(100vw);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
   </style>
 </head>
 
@@ -701,68 +714,153 @@
         <div class="row g-4 mt-3">
           <!-- Card 1 -->
           <div class="col-md-6 col-lg-4">
-            <a href="" class="text-decoration-none">
-              <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
-                <div class="card-img w-100" style="height: 200px;">
-                  <img
-                    src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
-                    alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
-                </div>
-                <div class="card-body">
-                  <div class="d-flex">
-                    <p class="fs-6 text-main">ការហ្វឹកហាត់</p>
-                    <i class="bi bi-heart ms-auto text-second"></i>
-                    <i class="bi bi-bookmark text-second ms-2"></i>
-                  </div>
-                  <h5 class="card-title text-prime mb-2">១០ គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h5>
-                  <p class="card-text text-second fs-text mb-3">រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ</p>
-                  <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
-                </div>
+            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
+              <div class="card-img w-100" style="height: 200px;">
+                <img
+                  src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
+                  alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
               </div>
-            </a>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  <p class="fs-6 text-main mb-0">ការហ្វឹកហាត់</p>
+                  <button type="button" class="btn text-second ms-auto p-0 pe-2" id="favoriteBtn1"><i
+                      class="bi bi-heart"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 10%;">
+                    <div id="favoriteToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
+                            class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn text-second p-0" id="addCartBtn1"><i
+                      class="bi bi-bookmark"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 22%;">
+                    <div id="cartToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
+                            class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="card-title text-prime mb-2">១០ គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h5>
+                <p class="card-text text-second fs-text mb-3">រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ</p>
+                <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </div>
           </div>
           <!-- Card 2 -->
           <div class="col-md-6 col-lg-4">
-            <a href="" class="text-decoration-none">
-              <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
-                <div class="card-img w-100" style="height: 200px;">
-                  <img src="https://fitfuel-slideshow.vercel.app/assets/hero-2-C_ldFfDg.jpg" alt=""
-                    class="img-fluid object-fit-cover w-100 h-100 card-img-top">
-                </div>
-                <div class="card-body">
-                  <div class="d-flex">
-                    <p class="fs-6 text-main">អាហារ</p>
-                    <i class="bi bi-heart ms-auto text-second"></i>
-                    <i class="bi bi-bookmark text-second ms-2"></i>
-                  </div>
-                  <h5 class="card-title text-prime mb-2">អាហារសុខភាពសម្រាប់អ្នកកីឡា</h5>
-                  <p class="card-text text-second fs-text mb-3">ផែនការអាហារដើម្បីបង្កើនការអនុវត្តកីឡា</p>
-                  <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
-                </div>
+            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
+              <div class="card-img w-100" style="height: 200px;">
+                <img
+                  src="https://fitfuel-slideshow.vercel.app/assets/hero-2-C_ldFfDg.jpg"
+                  alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
               </div>
-            </a>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  <p class="fs-6 text-main mb-0">អាហារ</p>
+                  <button type="button" class="btn text-second ms-auto p-0 pe-2" id="favoriteBtn2"><i
+                      class="bi bi-heart"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 10%;">
+                    <div id="favoriteToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
+                            class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn text-second p-0" id="addCartBtn2"><i
+                      class="bi bi-bookmark"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 22%;">
+                    <div id="cartToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
+                            class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="card-title text-prime mb-2">អាហារសុខភាពសម្រាប់អ្នកកីឡា</h5>
+                <p class="card-text text-second fs-text mb-3">ផែនការអាហារដើម្បីបង្កើនការអនុវត្តកីឡា</p>
+                <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </div>
           </div>
           <!-- Card 3 -->
           <div class="col-md-6 col-lg-4">
-            <a href="" class="text-decoration-none">
-              <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
-                <div class="card-img w-100" style="height: 200px;">
-                  <img
-                    src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
-                    alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
-                </div>
-                <div class="card-body">
-                  <div class="d-flex">
-                    <p class="fs-6 text-main">សុខភាពចិត្ត</p>
-                    <i class="bi bi-heart ms-auto text-second"></i>
-                    <i class="bi bi-bookmark text-second ms-2"></i>
-                  </div>
-                  <h5 class="card-title text-prime mb-2">ការគ្រប់គ្រងកង្វល់ តាមរយៈកីឡា</h5>
-                  <p class="card-text text-second fs-text mb-3">របៀបប្រើកីឡាដើម្បីកាត់បន្ថយកង្វល់</p>
-                  <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
-                </div>
+            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
+              <div class="card-img w-100" style="height: 200px;">
+                <img
+                  src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
+                  alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
               </div>
-            </a>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  <p class="fs-6 text-main mb-0">សុខភាពចិត្ត</p>
+                  <button type="button" class="btn text-second ms-auto p-0 pe-2" id="favoriteBtn3"><i
+                      class="bi bi-heart"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 10%;">
+                    <div id="favoriteToast3" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
+                            class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn text-second p-0" id="addCartBtn3"><i
+                      class="bi bi-bookmark"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 22%;">
+                    <div id="cartToast3" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
+                            class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="card-title text-prime mb-2">ការគ្រប់គ្រងកង្វល់ តាមរយៈកីឡា</h5>
+                <p class="card-text text-second fs-text mb-3">របៀបប្រើកីឡាដើម្បីកាត់បន្ថយកង្វល់</p>
+                <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -777,7 +875,7 @@
   <script src="../assets/plugins/aos/js/aos.js"></script>
   <!-- link js custom -->
   <script src="../assets/js/main.js"></script>
-  // Marquee
+  <!-- Marquee -->
   <script>
     window.onload = function () {
       const marqueeInner = document.getElementById("marquee-inner");
@@ -810,6 +908,24 @@
       },
     });
   </script>
+  <!-- Many Toast -->
+  <script>
+    function showToast(id) {
+      const toastEl = document.getElementById(id);
+      const toast = new bootstrap.Toast(toastEl, { delay: 2000, autohide: true }); // 2000ms = 2s
+      toast.show();
+    }
+
+    document.getElementById("favoriteBtn1").addEventListener("click", () => showToast("favoriteToast1"));
+    document.getElementById("addCartBtn1").addEventListener("click", () => showToast("cartToast1"));
+
+    document.getElementById("favoriteBtn2").addEventListener("click", () => showToast("favoriteToast2"));
+    document.getElementById("addCartBtn2").addEventListener("click", () => showToast("cartToast2"));
+
+    document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
+    document.getElementById("addCartBtn3").addEventListener("click", () => showToast("cartToast3"));
+  </script>
+
 
 </body>
 
