@@ -1,427 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- link bootstrap -->
-    <link rel="stylesheet" href="../../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+    <link
+      rel="stylesheet"
+      href="../../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css"
+    />
     <!-- link theme -->
-    <link rel="stylesheet" href="../../../assets/plugins/bootstrap-5.3.7/css/theme.css">
+    <link
+      rel="stylesheet"
+      href="../../../assets/plugins/bootstrap-5.3.7/css/theme.css"
+    />
     <!-- link icons -->
-    <link rel="stylesheet" href="../../../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="../../../assets/plugins/bootstrap-icons/bootstrap-icons.css"
+    />
     <!-- link swiper -->
-    <link rel="stylesheet" href="../../../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+    <link
+      rel="stylesheet"
+      href="../../../assets/plugins/swiper-js/css/swiper-bundle.min.css"
+    />
     <!-- link aos -->
-    <link rel="stylesheet" href="../../../assets/plugins/aos/css/aos.css">
+    <link rel="stylesheet" href="../../../assets/plugins/aos/css/aos.css" />
     <!-- link css custom -->
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
     <style>
-    .list-with-disc {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
+      .list-with-disc {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+      }
 
-    .list-with-disc .list-group-item {
-      display: list-item;
-      list-style-position: inside;
-      border-radius: 0;
-      border: none;
-      border-bottom: 1px solid var(--text-second) !important;
-    }
+      .list-with-disc .list-group-item {
+        display: list-item;
+        list-style-position: inside;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid var(--text-second) !important;
+      }
 
-    .list-with-disc .list-group-item::marker {
-      color: var(--text-main);
-    }
+      .list-with-disc .list-group-item::marker {
+        color: var(--text-main);
+      }
 
-    .border-full{
-      border: 1px solid var(--text-second);
-    }
+      .border-full {
+        border: 1px solid var(--text-second);
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-prime">
-
+  <body class="bg-prime">
     <!-- header -->
     <header>
-        <nav class="navbar py-0 fixed-top bg-prime">
-            <div class="container-fluid bg-nav">
-                <div class="container d-flex align-items-center justify-content-between">
-                    <a href="" class="navbar-brand">
-                        <img src="../../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
-                            style="width: 90px; height: 40px" />
-                    </a>
-                    <ul class="navbar-nav flex-row align-items-center">
-                        <li class="nav-item">
-                            <a href="" class="px-4 ff text-white text-decoration-none">
-                                <i class="bi bi-telephone fs-5"></i> +855 96 123 4567
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="ff text-white text-decoration-none">
-                                <i class="bi bi-envelope fs-5"></i> Dsh@gmail.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="container-fluid border-bottom"></div>
-            <div class="container d-flex align-items-center justify-content-between">
-                <ul class="navbar-nav flex-row">
-                    <li class="nav-item pe-3 py-1">
-                        <a href="" class="nav-link">ទំព័រដើម</a>
-                    </li>
-                    <li class="nav-item sport px-3 py-1 position-relative">
-                        <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
-                        <div class="dropdown position-absolute shadow-xs">
-                            <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
-                                <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
-                                <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
-                                <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
-                                <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
-                                <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ការហ្វឹកហាត់</a>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ទំនិញ</a>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
-                    </li>
-                    <li class="nav-item blog px-3 py-1 position-relative">
-                        <a class="nav-link" href="#">
-                            អត្ថបទ <i class="bi bi-chevron-down icon"></i>
-                        </a>
-                        <div class="dropdown position-absolute shadow-xs">
-                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">អំពីយើង</a>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ទំនាក់ទំនង</a>
-                    </li>
-                    <li class="nav-item other px-3 py-1 position-relative">
-                        <a class="nav-link" href="#">
-                            ផ្សេងៗ <i class="bi bi-chevron-down icon"></i>
-                        </a>
-                        <div class="dropdown position-absolute shadow-xs">
-                            <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+      <nav class="navbar py-0 fixed-top bg-prime">
+        <div class="container-fluid bg-nav">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <a href="" class="navbar-brand">
+              <img
+                src="../../../assets/img/logo2.png"
+                alt=""
+                class="img-fluid object-fit-cover"
+                style="width: 90px; height: 40px"
+              />
+            </a>
+            <ul class="navbar-nav flex-row align-items-center">
+              <li class="nav-item">
+                <a href="" class="px-4 ff text-white text-decoration-none">
+                  <i class="bi bi-telephone fs-5"></i> +855 96 123 4567
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="ff text-white text-decoration-none">
+                  <i class="bi bi-envelope fs-5"></i> Dsh@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container-fluid border-bottom"></div>
+        <div
+          class="container d-flex align-items-center justify-content-between"
+        >
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item pe-3 py-1">
+              <a href="" class="nav-link">ទំព័រដើម</a>
+            </li>
+            <li class="nav-item sport px-3 py-1 position-relative">
+              <a href="" class="nav-link"
+                >ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i
+              ></a>
+              <div class="dropdown position-absolute shadow-xs">
+                <ul
+                  class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0"
+                >
+                  <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
+                  <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
+                  <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
+                  <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
+                  <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
+                  <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
+                  <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
+                  <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
                 </ul>
-                <ul class="navbar-nav flex-row align-items-center gap-4">
-                    <li class="nav-item">
-                        <a class="main-btn text-prime" id="theme-toggle">
-                            <i class="theme-icon bi bi-sun fs-4"></i>
-                            <i class="theme-icon bi bi-moon fs-4"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link position-relative">
-                            <i class="bi bi-cart2 text-prime fs-4"></i>
-                            <span class="position-absolute bg-danger border-0 rounded-circle start-50"
-                                style="width: 15px; height: 15px">
-                                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item blog position-relative z-3">
-                        <a href="" class="nav-link position-relative">
-                            <i class="bi bi-bell text-prime fs-4"></i>
-                            <span class="position-absolute bg-danger border-0 rounded-circle start-50"
-                                style="width: 15px; height: 15px">
-                                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
-                            </span>
-                        </a>
-                        <div class="dropdown position-absolute shadow-xs" style="left: -50px">
-                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#"> កីឡា </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item py-1">
-                        <a href="" class="nav-link d-block">
-                            <i class="bi bi-person-circle text-prime fs-4"></i>
-                        </a>
-                    </li>
+              </div>
+            </li>
+            <li class="nav-item px-3 py-1">
+              <a href="" class="nav-link">ការហ្វឹកហាត់</a>
+            </li>
+            <li class="nav-item px-3 py-1">
+              <a href="" class="nav-link">ទំនិញ</a>
+            </li>
+            <li class="nav-item px-3 py-1">
+              <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
+            </li>
+            <li class="nav-item blog px-3 py-1 position-relative">
+              <a class="nav-link" href="#">
+                អត្ថបទ <i class="bi bi-chevron-down icon"></i>
+              </a>
+              <div class="dropdown position-absolute shadow-xs">
+                <ul
+                  class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text"
+                >
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                  </li>
                 </ul>
-            </div>
-        </nav>
+              </div>
+            </li>
+            <li class="nav-item px-3 py-1">
+              <a href="" class="nav-link">អំពីយើង</a>
+            </li>
+            <li class="nav-item px-3 py-1">
+              <a href="" class="nav-link">ទំនាក់ទំនង</a>
+            </li>
+            <li class="nav-item other px-3 py-1 position-relative">
+              <a class="nav-link" href="#">
+                ផ្សេងៗ <i class="bi bi-chevron-down icon"></i>
+              </a>
+              <div class="dropdown position-absolute shadow-xs">
+                <ul
+                  class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100"
+                >
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="#"
+                      >គ្រូបង្វឹក</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="#"
+                      >អាហារូបត្ថម្ភ</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="#"
+                      >សំណួរ & ចម្លើយ</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav flex-row align-items-center gap-4">
+            <li class="nav-item">
+              <a class="main-btn text-prime" id="theme-toggle">
+                <i class="theme-icon bi bi-sun fs-4"></i>
+                <i class="theme-icon bi bi-moon fs-4"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link position-relative">
+                <i class="bi bi-cart2 text-prime fs-4"></i>
+                <span
+                  class="position-absolute bg-danger border-0 rounded-circle start-50"
+                  style="width: 15px; height: 15px"
+                >
+                  <span
+                    class="text-white fs-8 d-flex justify-content-center align-items-center"
+                    >3</span
+                  >
+                </span>
+              </a>
+            </li>
+            <li class="nav-item blog position-relative z-3">
+              <a href="" class="nav-link position-relative">
+                <i class="bi bi-bell text-prime fs-4"></i>
+                <span
+                  class="position-absolute bg-danger border-0 rounded-circle start-50"
+                  style="width: 15px; height: 15px"
+                >
+                  <span
+                    class="text-white fs-8 d-flex justify-content-center align-items-center"
+                    >3</span
+                  >
+                </span>
+              </a>
+              <div
+                class="dropdown position-absolute shadow-xs"
+                style="left: -50px"
+              >
+                <ul
+                  class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100"
+                >
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="#"> កីឡា </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item py-1">
+              <a href="" class="nav-link d-block">
+                <i class="bi bi-person-circle text-prime fs-4"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
-    <!-- Food Detail -->
-    <section class="pt-10 pb-2">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb fs-5 ms-4 mb-5">
-          <li class="breadcrumb-item"><a href="#" class="text-decoration-none">អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ</a></li>
-          <li class="breadcrumb-item active" aria-current="page">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</li>
-        </ol>
-      </nav>
-      <div class="container">
-        <div class="row g-4">
-          <!-- Image Column -->
-          <div class="col-xl-5">
-            <div class="card border-0 bg-transparent">
-              <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
-                alt="សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ" class="img-fluid rounded">
-              <div class="card-body mt-3">
-                <div class="d-flex justify-content-evenly text-prime">
-                  <h5 class="card-text text-prime"><i class="bi bi-clock me-1 text-main"></i> <span class="ff">10</span>
-                    នាទី</h5>
-                  <h5 class="card-text text-prime"><span class="ff">420</span> កាឡូរី</h5>
-                  <h5 class="card-text text-prime"><span class="ff">30g</span> ប្រូតេអ៊ីន</h5>
+      <!-- Food Detail -->
+      <section class="pt-20 py-10 pb-2">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb fs-5 ms-4 mb-5">
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none"
+                >អាហារសម្រាប់អ្នកហាត់ប្រាណ</a
+              >
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <span class="ff">Shrimp Stir-Fry</span> ជាមួយបន្លែពណ៌
+            </li>
+          </ol>
+        </nav>
+        <div class="container">
+          <div class="row g-4">
+            <!-- Image Column -->
+            <div class="col-xl-5">
+              <div class="card border-0 bg-transparent">
+                <img
+                  src="https://i.ytimg.com/vi/tuSrSAiTF-Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB04wjWV4mPDDuXTIMZO4sFDbusJg"
+                  alt="សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ"
+                  class="img-fluid rounded"
+                />
+                <div class="card-body mt-3">
+                  <div class="d-flex justify-content-evenly text-prime">
+                    <h5 class="card-text text-prime">
+                      <i class="bi bi-clock me-1 text-main"></i>
+                      <span class="ff">15</span> នាទី
+                    </h5>
+                    <h5 class="card-text text-prime">
+                      <span class="ff">280</span> កាឡូរី
+                    </h5>
+                    <h5 class="card-text text-prime">
+                      <span class="ff">20g</span> ប្រូតេអ៊ីន
+                    </h5>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Content Column -->
-          <div class="col-xl-7 px-4">
-            <div class="card border-0 bg-transparent">
-              <h1 class="card-title text-main fw-bold text-center">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h1>
-              <!-- Tabs -->
-              <div class="mt-4">
-                <ul class="nav nav-pills mb-4 justify-content-center gap-3" id="foodTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link link-hover active" id="ingredients-tab" data-bs-toggle="pill"
-                      data-bs-target="#ingredients" type="button" role="tab">
-                      គ្រឿងផ្សំ
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link link-hover" id="nutrition-tab" data-bs-toggle="pill"
-                      data-bs-target="#nutrition" type="button" role="tab">
-                      អាហារូបត្ថម្ភ
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link link-hover" id="benefits-tab" data-bs-toggle="pill"
-                      data-bs-target="#benefits" type="button" role="tab">
-                      ផលប្រយោជន៍
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link link-hover" id="directions-tab" data-bs-toggle="pill"
-                      data-bs-target="#directions" type="button" role="tab">
-                      របៀបធ្វើ
-                    </button>
-                  </li>
-                </ul>
-                <div class="tab-content" id="foodTabContent">
-                  <!-- Ingredients -->
-                  <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
-                    <h4 class="text-main mb-3">
-                      <i class="bi bi-list-check me-2"></i>គ្រឿងផ្សំ
-                    </h4>
-                    <ul class="list-group mb-3  list-with-disc">
-                      <li class="list-group-item bg-prime text-prime">
-                        ហ្វីលេសាម៉ុង <span class="ff">1</span> ដុំ (ប្រហែល <span class="ff">6</span> អោន)
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ស្ពៃក្ដោបចម្រុះ <span class="ff">4</span> ពែង
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ដំឡូងបារាំងខ្ចី <span class="ff">1/2</span> ពែង ចិតជាម៉ាស
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ខ្ទឹមបារាំងក្រហម <span class="ff">1/4</span> ពែង ចិតស្រទាប់
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        អូលីវក្រហម <span class="ff">1/4</span> ពែង
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ហ្វេតាឈីស <span class="ff">1/4</span> ពែង
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ផ្កាគារី <span class="ff">2</span> ស្លាបព្រា (ស្រេចចិត្ត)
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ជីរនានាខ្ចី <span class="ff">1/4</span> ពែង ចិតកាត់
-                      </li>
-                    </ul>
-
-                    <h4 class="text-main mt-3">
-                      <i class="bi bi-droplet-half me-2"></i>សម្រាប់ទឹកជ្រលក់ខ្លឹម
-                    </h4>
-                    <ul class="list-group list-with-disc">
-                      <li class="list-group-item bg-prime text-prime">
-                        ប្រេងអូលីវ <span class="ff">3</span> ស្លាបព្រា
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ទឹកក្រូចឆ្មារ <span class="ff">2</span> ស្លាបព្រា
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ម៉ាស់តាដីជូន Dijon <span class="ff">1</span> ស្លាបព្រាកាហ្វេ
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ខ្ទឹមសក្កុល <span class="ff">1</span> កំណើតតូច ច្របាច់
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        រមៀតក្ដោប <span class="ff">1/2</span> ស្លាបព្រាកាហ្វេ
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        អំបិល និងម្រេច តាមចំណង់ចិត្ត
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Nutrition -->
-                  <div class="tab-pane fade" id="nutrition" role="tabpanel">
-                    <h4 class="text-main mb-3">
-                      <i class="bi bi-bar-chart-line me-2"></i>អាហារូបត្ថម្ភក្នុង ១ ចាន
-                    </h4>
-                    <div class="row g-3">
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">420</div>
-                          <small>កាឡូរី</small>
+            <!-- Content Column -->
+            <div class="col-xl-7 px-4">
+              <div class="card border-0 bg-transparent">
+                <h1 class="card-title text-main fw-bold text-center">
+                  <span class="ff">Shrimp Stir-Fry</span> ជាមួយបន្លែពណ៌
+                </h1>
+                <!-- Tabs -->
+                <div class="mt-4">
+                  <ul
+                    class="nav nav-pills mb-4 justify-content-center gap-3"
+                    id="foodTab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link link-hover active"
+                        id="ingredients-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#ingredients"
+                        type="button"
+                        role="tab"
+                      >
+                        គ្រឿងផ្សំ
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link link-hover"
+                        id="nutrition-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#nutrition"
+                        type="button"
+                        role="tab"
+                      >
+                        អាហារូបត្ថម្ភ
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link link-hover"
+                        id="benefits-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#benefits"
+                        type="button"
+                        role="tab"
+                      >
+                        ផលប្រយោជន៍
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link link-hover"
+                        id="directions-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#directions"
+                        type="button"
+                        role="tab"
+                      >
+                        របៀបធ្វើ
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="foodTabContent">
+                    <!-- Ingredients -->
+                    <div
+                      class="tab-pane fade show active"
+                      id="ingredients"
+                      role="tabpanel"
+                    >
+                      <h4 class="text-main mb-3">
+                        <i class="bi bi-list-check me-2"></i>គ្រឿងផ្សំ
+                      </h4>
+                      <ul class="list-group mb-3 list-with-disc">
+                        <li class="list-group-item bg-prime text-prime">
+                          បង្គា <span class="ff">150g</span>
+                        </li>
+                        <li class="list-group-item bg-prime text-prime">
+                          ប៉េងប៉ោះ <span class="ff">1</span> ផ្លែ
+                        </li>
+                        <li class="list-group-item bg-prime text-prime">
+                          ការ៉ុត <span class="ff">1</span>ផ្លែ
+                        </li>
+                        <li class="list-group-item bg-prime text-prime">
+                          ប៉េងប៉ោះបារាំង <span class="ff">2</span>ផ្លែ
+                        </li>
+                        <li class="list-group-item bg-prime text-prime">
+                          អូលីវអ៊ិល<span class="ff">1/4</span> ពែង
+                        </li>
+                        <li class="list-group-item bg-prime text-prime">
+                          ខ្ទឹមស <span class="ff">1</span> ផ្លែ
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Nutrition -->
+                    <div class="tab-pane fade" id="nutrition" role="tabpanel">
+                      <h4 class="text-main mb-3">
+                        <i class="bi bi-bar-chart-line me-2"></i
+                        >អាហារូបត្ថម្ភក្នុង ១ ចាន
+                      </h4>
+                      <div class="row g-3">
+                        <div class="col-6 col-md-4">
+                          <div
+                            class="card border-full bg-transparent text-prime text-center p-2"
+                          >
+                            <div class="fs-4 text-main ff">280</div>
+                            <small>កាឡូរី</small>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div
+                            class="card border-full bg-transparent text-prime text-center p-2"
+                          >
+                            <div class="fs-4 text-main ff">20g</div>
+                            <small>ប្រូតេអ៊ីន</small>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div
+                            class="card border-full bg-transparent text-prime text-center p-2"
+                          >
+                            <div class="fs-4 text-main ff">0g</div>
+                            <small>កាបូអ៊ីដ្រាត</small>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div
+                            class="card border-full bg-transparent text-prime text-center p-2"
+                          >
+                            <div class="fs-4 text-main ff">0g</div>
+                            <small>ខ្លាញ់</small>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div
+                            class="card border-full bg-transparent text-prime text-center p-2"
+                          >
+                            <div class="fs-4 text-main ff">10g</div>
+                            <small>ស្ករ</small>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                          <div
+                            class="card border-full bg-transparent text-prime text-center p-2"
+                          >
+                            <div class="fs-4 text-main ff">0mg</div>
+                            <small>សូដ្យូម</small>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">30g</div>
-                          <small>ប្រូតេអ៊ីន</small>
+                      <h4 class="text-main mt-3">ប្រភពជីវជាតិ:</h4>
+                      <ul class="list-group mb-3 list-with-disc p-0">
+                        <li class="list-group-item bg-prime text-prime">
+                          ប្រូតេអុីន
+                        </li>
+                        <li class="list-group-item bg-prime text-prime">
+                          វីតាមីន <span class="ff">B12</span>
+                        </li>
+                        <li class="list-group-item bg-prime text-prime">
+                          វីតាមីន <span class="ff">c</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Benefits -->
+                    <div class="tab-pane fade" id="benefits" role="tabpanel">
+                      <h4 class="text-main mb-3">
+                        <i class="bi bi-heart-fill me-2"></i
+                        >ផលប្រយោជន៍អាហារូបត្ថម្ភ
+                      </h4>
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <div
+                            class="card bg-transparent border-full text-prime p-3 text-center"
+                          >
+                            <i
+                              class="bi bi-heart-pulse fs-3 text-main mb-2"
+                            ></i>
+                            <h5>សុខភាពបេះដូង</h5>
+                            <p>
+                              បង្គា មានជាតិ
+                              <span class="ff">Omega-3</span> ជួយថែរក្សាបេះដូង
+                              និងសរសៃឈាម
+                              បន្លែពណ៌សម្បូរទៅដោយជាតិប្រឆាំងអុកស៊ីតកម្ម
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">12g</div>
-                          <small>កាបូអ៊ីដ្រាត</small>
+                        <div class="col-md-6">
+                          <div
+                            class="card bg-transparent border-full text-prime p-3 text-center"
+                          >
+                            <i
+                              class="bi bi-lightning-charge fs-3 text-main mb-2"
+                            ></i>
+                            <h5>អាហារូបត្ថម្ភខួរក្បាល</h5>
+                            <p>
+                              បង្គាជួយផ្តល់ថាមពល
+                              និងសារធាតុអ៊ីយ៉ូតសម្រាប់ប្រព័ន្ធអ័រម៉ូន
+                              បន្លែពណ៌ផ្តល់វីតាមីន C
+                              និងជាតិដែកសម្រាប់កម្លាំងរាងកាយ
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">32g</div>
-                          <small>ខ្លាញ់</small>
+                        <div class="col-md-6">
+                          <div
+                            class="card bg-transparent border-full text-prime p-3 text-center"
+                          >
+                            <i class="bi bi-droplet fs-3 text-main mb-2"></i>
+                            <h5>ការគ្រប់គ្រងទំងន់</h5>
+                            <p>
+                              បន្លែមានជាតិទឹកច្រើន ជួយរក្សាសំណើម
+                              ជួយសម្រួលប្រព័ន្ធរំលាយអាហារ និងការបញ្ចេញជាតិពុល
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">5g</div>
-                          <small>ស្ករ</small>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">850mg</div>
-                          <small>សូដ្យូម</small>
+                        <div class="col-md-6">
+                          <div
+                            class="card bg-transparent border-full text-prime p-3 text-center"
+                          >
+                            <i
+                              class="bi bi-shield-check fs-3 text-main mb-2"
+                            ></i>
+                            <h5>ប្រព័ន្ធការពារ</h5>
+                            <p>
+                              បន្លែពណ៌ក្រហម ខៀវ លឿង និងទឹកក្រូច
+                              មានអង់ទីអុកស៊ីដង់ខ្ពស់
+                              ជួយការពារកោសិកាពីការចាស់មុនវ័យ និងការរលាក
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <h4 class="text-main mt-3">
-                      ប្រភពជីវជាតិ:
-                    </h4>
-                    <ul class="list-group mb-3 list-with-disc p-0">
-                      <li class="list-group-item bg-prime text-prime">
-                        សាច់សាឡ្មុន: ប្រូតេអ៊ីន និងជាតិខ្លាញ់អូមេហ្គា <span class="ff">3</span>
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ប្រេងអូលីវ: ជាតិខ្លាញ់ល្អ និង វីតាមីន <span class="ff">E</span>
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ស្ពៃក្ដោប: សរសៃអាហារ វីតាមីន និងរ៉ែ
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ហ្វេតាឈីស: កាល់ស្យូម និង ប្រូតេអ៊ីន
-                      </li>
-                    </ul>
-
-                  </div>
-                  <!-- Benefits -->
-                  <div class="tab-pane fade" id="benefits" role="tabpanel">
-                    <h4 class="text-main mb-3">
-                      <i class="bi bi-heart-fill me-2"></i>ផលប្រយោជន៍អាហារូបត្ថម្ភ
-                    </h4>
-                    <div class="row g-3">
-                      <div class="col-md-6">
-                        <div class="card bg-transparent border-full text-prime p-3 text-center">
-                          <i class="bi bi-heart-pulse fs-3 text-main mb-2"></i>
-                          <h5>សុខភាពបេះដូង</h5>
-                          <p>ជាតិខ្លាញ់អូមេហ្គា ៣ ពីសាឡ្មុន អាចជួយកាត់បន្ថយហន្តារ៉ាយ និងថែទាំសុខភាពបេះដូង</p>
-                        </div>
+                    <!-- Directions -->
+                    <div class="tab-pane fade" id="directions" role="tabpanel">
+                      <h4 class="text-main mb-3">
+                        <i class="bi bi-journal-check me-2"></i>របៀបធ្វើ
+                      </h4>
+                      <ol class="list-group">
+                        <li class="list-group-item bg-transparent text-prime">
+                          <span
+                            class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
+                            style="width: 25px; height: 25px"
+                            >1</span
+                          >
+                          ចៀនខ្ទឹមសឲ្យមានក្លិនឆ្ងាញ់ រយះពេល
+                          <span class="ff">3</span>នាទី
+                        </li>
+                        <li class="list-group-item bg-transparent text-prime">
+                          <span
+                            class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
+                            style="width: 25px; height: 25px"
+                            >2</span
+                          >
+                          ដាក់បង្គាឲ្យឆ្អិនពណ៌ផ្កាឈូក។
+                        </li>
+                        <li class="list-group-item bg-transparent text-prime">
+                          <span
+                            class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
+                            style="width: 25px; height: 25px"
+                            >3</span
+                          >
+                          បន្ថែមបន្លែចែកកាត់។
+                        </li>
+                        <li class="list-group-item bg-transparent text-prime">
+                          <span
+                            class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
+                            style="width: 25px; height: 25px"
+                            >4</span
+                          >
+                          ចៀនរហូតទន់​ រយះពេល <span>4</span>នាទី ហើយទទួលទាន់ក្តៅ។
+                        </li>
+                        <li class="list-group-item bg-transparent text-prime">
+                          <span
+                            class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
+                            style="width: 25px; height: 25px"
+                            >5</span
+                          >
+                          អាចហូបបានភ្លាមៗ!
+                        </li>
+                      </ol>
+                      <div class="alert bg-gold mt-3">
+                        <i class="bi bi-lightbulb"></i>
+                        <strong>ព័ត៌មានបន្ថែម:</strong>
+                        អ្នកអាចបន្ថែមគ្រឿងផ្សំផ្សេងទៀតដូចជា បង្គារ
+                        តាមចំណង់ចិត្ត។
                       </div>
-                      <div class="col-md-6">
-                        <div class="card bg-transparent border-full text-prime p-3 text-center">
-                          <i class="bi bi-lightning-charge fs-3 text-main mb-2"></i>
-                          <h5>អាហារូបត្ថម្ភខួរក្បាល</h5>
-                          <p>ជាតិខ្លាញ់អូមេហ្គា ៣ ពីសាឡ្មុន ជួយពង្រឹងសមត្ថភាពចងចាំ និងការគិតគូរ</p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card bg-transparent border-full text-prime p-3 text-center">
-                          <i class="bi bi-droplet fs-3 text-main mb-2"></i>
-                          <h5>ការគ្រប់គ្រងទំងន់</h5>
-                          <p>ប្រូតេអ៊ីនខ្ពស់ ជួយអោយអ្នកឆ្អែតរយៈពេលយូរ និងកាត់បន្ថយការចង់ញ៉ាំ</p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card bg-transparent border-full text-prime p-3 text-center">
-                          <i class="bi bi-shield-check fs-3 text-main mb-2"></i>
-                          <h5>ប្រព័ន្ធការពារ</h5>
-                          <p>វីតាមីន និងរ៉ែ ពីបន្លែ និងសាឡ្មុន ជួយពង្រឹងប្រព័ន្ធការពាររាងកាយ</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Directions -->
-                  <div class="tab-pane fade" id="directions" role="tabpanel">
-                    <h4 class="text-main mb-3">
-                      <i class="bi bi-journal-check me-2"></i>របៀបធ្វើ
-                    </h4>
-                    <ol class="list-group">
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">1</span> យកក្រដាសទទេជូតហ្វីលេសាម៉ុងអោយស្ងួត
-                        រួចចាក់អំបិលនិងម្រេចទៅលើសាម៉ុងពីរខាង។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">2</span> ដាក់ប្រេងអូលីវ <span class="ff">1</span> ស្លាបព្រាក្នុងខ្ទះឆ្អិនអាហារ លើភ្លើងកម្ដៅមធ្យម។
-                      </li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">3</span> ដាក់សាម៉ុងចំហៀងស្បែកឡើងលើ ហើយឆាប្រហែល <span class="ff">4-5</span> នាទី រហូតដល់មានពណ៌មាស។
-                      </li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">4</span> បើកសាម៉ុងចំហៀងមកវិញ ហើយឆាបន្ត <span class="ff">3-4</span> នាទីទៀត រហូតដល់ឆ្អិនល្អ។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">5</span> យកចេញពីភ្លើង ទុកអោយត្រជាក់ <span class="ff">2</span> នាទី មុននឹងយកទៅរលាស់ជាដុំៗ។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">6</span> ក្នុងចានធំខ្លះ លាយស្ពៃក្ដោប ដំឡូងបារាំងខ្ចី ខ្ទឹមបារាំងក្រហម អូលីវ
-                        និងផ្កាគារីចូលគ្នា។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">7</span> ក្នុងចានតូចខ្លះ លាយគ្រឿងទាំងអស់សម្រាប់ទឹកជ្រលក់ខ្លឹមអោយចូលគ្នា។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">8</span> ចាក់ទឹកជ្រលក់ខ្លឹមទៅលើសាឡាត់ ហើយកូរអោយសព្វ។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">9</span> ចាក់សាឡាត់ទៅក្នុងចាន <span class="ff">2</span> ចាន ដាក់សាម៉ុងដែលរលាស់ហើយ និងហ្វេតាឈីសពីលើ។
-                      </li>
-                      <li class="list-group-item bg-transparent text-prime"> <span class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2" style="width: 25px; height: 25px;">10</span> អាចហូបបានភ្លាមៗ!</li>
-                    </ol>
-                    <div class="alert bg-gold mt-3">
-                      <i class="bi bi-lightbulb"></i> <strong>ព័ត៌មានបន្ថែម:</strong>
-                      អ្នកអាចបន្ថែមគ្រឿងផ្សំផ្សេងទៀតដូចជា ត្រសក់ ឬ ស្លឹកភ្លូក្លូវ តាមចំណង់ចិត្ត។
                     </div>
                   </div>
                 </div>
@@ -429,8 +563,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </main>
 
     <!-- link bootstrap js -->
@@ -441,7 +574,5 @@
     <script src="../../../assets/plugins/aos/js/aos.js"></script>
     <!-- link js custom -->
     <script src="../../../assets/js/main.js"></script>
-
-</body>
-
+  </body>
 </html>
