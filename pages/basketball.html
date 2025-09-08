@@ -30,6 +30,7 @@
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
         opacity: 0.3;
     }
+
     .floating-card {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
@@ -57,14 +58,17 @@
         overflow: hidden;
         border-radius: 20px;
     }
+
     .hero-image img {
         width: 100%;
         height: auto;
         transition: transform 0.6s ease;
     }
+
     .hero-image:hover img {
         transform: scale(1.05);
     }
+
     .img-bottom-shadow {
         position: relative;
         display: inline-block;
@@ -77,6 +81,7 @@
         border-radius: 8px;
         /* optional */
     }
+
     .img-bottom-shadow::after {
         content: "";
         position: absolute;
@@ -92,6 +97,7 @@
     .bounce-img {
         animation: bounce 2s ease-in-out infinite;
     }
+
     .curved {
         /* position: relative; */
         background: #2c3e50;
@@ -106,6 +112,7 @@
         height: auto;
         animation: zoomInOut 4s ease-in-out infinite;
     }
+
     @keyframes zoomInOut {
         0% {
             transform: scale(0.9);
@@ -130,6 +137,7 @@
             transform: translateY(-10px);
         }
     }
+
     .rule-list {
         list-style: none;
         padding: 0;
@@ -141,12 +149,14 @@
         position: relative;
         /* color: #666; */
     }
+
     .rule-list li::before {
         content: "🏀";
         position: absolute;
         left: 0;
         top: 8px;
     }
+
     /* តារាង */
     .court-diagram {
         border-radius: 20px;
@@ -190,6 +200,7 @@
         top: 0;
         transform: translateX(-50%);
     }
+
     .center-circle {
         width: 80px;
         height: 80px;
@@ -211,11 +222,13 @@
         left: 20px;
         border-bottom: none;
     }
+
     .three-point-line.right {
         right: 20px;
         left: auto;
         transform: scaleX(-1);
     }
+
     .hoop {
         width: 20px;
         height: 20px;
@@ -226,14 +239,17 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
     .hoop.bottom {
         bottom: 30px;
         top: auto;
     }
+
     .interactive-element {
         cursor: pointer;
         transition: all 0.3s ease;
     }
+
     .interactive-element:hover {
         transform: scale(1.1);
     }
@@ -382,7 +398,6 @@
         </nav>
     </header>
     <main>
-        <!-- hero-banner -->
         <!-- Hero Section -->
         <section class="bg-prime pt-18 pb-10  d-flex align-items-center">
             <div class="container">
@@ -398,9 +413,9 @@
                                 </p>
 
                                 <div class="fade-in-up ">
-                                    <a href="#pricing" class="btn btn-gold text-white btn-lg me-3">ចាប់ផ្តើម</a>
+                                    <a href="#pricing" class="btn btn-gold  btn-lg me-3">ចាប់ផ្តើម</a>
                                     <a href="#rules"
-                                        class="btn btn-outline-secondary btn-lg text-prime">ស្វែងយល់បន្ថែម</a>
+                                        class="btn btn-lg border-2 border-blue">ស្វែងយល់បន្ថែម</a>
                                 </div>
                             </div>
                         </div>
@@ -647,51 +662,49 @@
         </section>
         <section class="py-10  bg-third">
             <div class="container">
-                <div class="text-center my-5">
-                    <h2 class="fw-bold text-main"> ប្រយោជន៍នៃការលេងបាល់បោះ
-                    </h2>
-                    <p class="text-prime lead ">សុខភាពកាយ និងចិត្តល្អប្រសើរដោយការលេងបាល់បោះ</p>
-                </div>
-                 <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="card bg-prime border-0  h-100  hover-lift">
-                        <div class="card-body text-center">
-                            <i class="bi bi-heart-pulse-fill text-danger fs-1 mb-3"></i>
-                            <h5 class="card-title text-main fw-bold">សុខភាពបេះដូងល្អ</h5>
-                            <p class="card-text text-prime lead" style="font-size: 18px;">
-                                ការលេងបាល់បោះជួយបង្កើនសុខភាពបេះដូង
-                                និងប្រព័ន្ធឈាម។ វាជួយកាត់បន្ថយហានិភ័យនៃជំងឺបេះដូង និងជំងឺរាតត្បាតផ្សេងៗ។</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card bg-prime border-0  h-100  hover-lift">
-                        <div class="card-body text-center">
-                            <i class="bi bi-people-fill text-success fs-1 mb-3 "></i>
-                            <h5 class="card-title
-                                text-main fw-bold">ការសហការគ្នា និងការទំនាក់ទំនងសង្គម</h5>
-                            <p class="card-text text-prime lead" style="font-size: 18px;">
-                                បាល់បោះជាកីឡាក្រុមដែលលើកកម្ពស់ការសហការគ្នា
-                                និងការទំនាក់ទំនងសង្គម។ វាជួយអ្នកអភិវឌ្ឍជំនាញការទំនាក់ទំនង និងការធ្វើការជាក្រុម។</p>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="display-6 fw-bold text-main text-center">ប្រយោជន៍នៃការលេងបាល់បោះ</h3>
+                <h4 class="my-4 text-center fw-normal text-second">សុខភាពកាយ និងចិត្តល្អប្រសើរដោយការលេងបាល់បោះ</h4>
 
-                <div class="col-lg-4">
-                    <div class="card bg-prime border-0  h-100 hover-lift">
-                        <div class="card-body text-center">
-                            <i class="bi bi-lightbulb text-warning fs-1 mb-3"></i>
-                            <h5 class="card-title text-main fw-bold">ការកែលម្អសមត្ថភាពផ្លូវចិត្ត</h5>
-                            <p class="card-text text-prime lead" style="font-size: 18px;">
-                                ការលេងបាល់បោះជួយកែលម្អសមត្ថភាពផ្លូវចិត្ត
-                                ដូចជាការផ្តោតអារម្មណ៍ ការគិតយ៉ាងយុត្តិធម៌ និងការដោះស្រាយបញ្ហា។ វាជួយកាត់បន្ថយស្ត្រេស
-                                និងបង្កើនសុខភាពផ្លូវចិត្តទូទៅ។</p>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  h-100  hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-heart-pulse-fill text-danger fs-1 mb-3"></i>
+                                <h5 class="card-title text-main fw-bold">សុខភាពបេះដូងល្អ</h5>
+                                <p class="card-text text-prime lead" style="font-size: 18px;">
+                                    ការលេងបាល់បោះជួយបង្កើនសុខភាពបេះដូង
+                                    និងប្រព័ន្ធឈាម។ វាជួយកាត់បន្ថយហានិភ័យនៃជំងឺបេះដូង និងជំងឺរាតត្បាតផ្សេងៗ។</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  h-100  hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-people-fill text-success fs-1 mb-3 "></i>
+                                <h5 class="card-title
+                                text-main fw-bold">ការសហការគ្នា និងការទំនាក់ទំនងសង្គម</h5>
+                                <p class="card-text text-prime lead" style="font-size: 18px;">
+                                    បាល់បោះជាកីឡាក្រុមដែលលើកកម្ពស់ការសហការគ្នា
+                                    និងការទំនាក់ទំនងសង្គម។ វាជួយអ្នកអភិវឌ្ឍជំនាញការទំនាក់ទំនង និងការធ្វើការជាក្រុម។</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  h-100 hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-lightbulb text-warning fs-1 mb-3"></i>
+                                <h5 class="card-title text-main fw-bold">ការកែលម្អសមត្ថភាពផ្លូវចិត្ត</h5>
+                                <p class="card-text text-prime lead" style="font-size: 18px;">
+                                    ការលេងបាល់បោះជួយកែលម្អសមត្ថភាពផ្លូវចិត្ត
+                                    ដូចជាការផ្តោតអារម្មណ៍ ការគិតយ៉ាងយុត្តិធម៌ និងការដោះស្រាយបញ្ហា។ វាជួយកាត់បន្ថយស្ត្រេស
+                                    និងបង្កើនសុខភាពផ្លូវចិត្តទូទៅ។</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-           
+
         </section>
         <!-- pricing -->
         <section class="py-8 bg-third">
@@ -706,9 +719,11 @@
                         <div class=" h-100 ">
                             <div class="card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs">
                                 <div class="card-body ">
-                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក <span class="ff">BASIC</span> </h2>
+                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក <span
+                                            class="ff">BASIC</span> </h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចាប់ផ្តើម</p>
-                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; "><span class="ff">15</span>
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; "><span
+                                            class="ff">15</span>
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -744,9 +759,11 @@
                         <div class="pricing-card popular-card rounded-5 ">
                             <div class="card py-3  rounded-5 border-0 bg-prime">
                                 <div class="card-body">
-                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក <span class="ff">PRIME</span></h2>
+                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក <span class="ff">PRIME</span>
+                                    </h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចង់ពង្រឹងសុខភាព</p>
-                                    <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;"><span class="ff"></span>$30
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;"><span
+                                            class="ff"></span>$30
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -794,9 +811,11 @@
                         <div class="  rounded-5">
                             <div class=" pricing-card  card py-3  rounded-5 border-0 bg-prime  ">
                                 <div class="card-body">
-                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក <span class="ff">STANDARD</span> </h2>
+                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក <span
+                                            class="ff">STANDARD</span> </h2>
                                     <p class=" text-center text-prime lead">សម្រាប់អ្នកហាត់ទៀងទាត់</p>
-                                    <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; "><span class="ff">$25</span>
+                                    <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; "><span
+                                            class="ff">$25</span>
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -858,10 +877,10 @@
                                     style="height: 120%;"></div>
                                 <div class="card-icon position-absolute end-0 top-0">
                                     <div class="card-body d-flex flex-column pt-2">
-                                        <i class="text-gold bi bi-instagram fs-4"></i>
-                                        <i class="text-gold bi bi-facebook fs-4"></i>
-                                        <i class="text-gold bi bi-linkedin fs-4"></i>
-                                        <i class="text-gold bi bi-twitter-x fs-4"></i>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="https://www.linkedin.com/" target="_blank"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="https://twitter.com/" target="_blank"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
                                     </div>
                                 </div>
                                 <div class="detail position-absolute start-0 top-0">
@@ -907,10 +926,10 @@
                                     style="height: 120%;"></div>
                                 <div class="card-icon position-absolute end-0 top-0">
                                     <div class="card-body d-flex flex-column pt-2">
-                                        <i class="text-gold bi bi-instagram fs-4"></i>
-                                        <i class="text-gold bi bi-facebook fs-4"></i>
-                                        <i class="text-gold bi bi-linkedin fs-4"></i>
-                                        <i class="text-gold bi bi-twitter-x fs-4"></i>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="https://www.linkedin.com/" target="_blank"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="https://twitter.com/" target="_blank"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
                                     </div>
                                 </div>
                                 <div class="detail position-absolute start-0 top-0">
@@ -955,10 +974,10 @@
                                     style="height: 120%;"></div>
                                 <div class="card-icon position-absolute end-0 top-0">
                                     <div class="card-body d-flex flex-column pt-2">
-                                        <i class="text-gold bi bi-instagram fs-4"></i>
-                                        <i class="text-gold bi bi-facebook fs-4"></i>
-                                        <i class="text-gold bi bi-linkedin fs-4"></i>
-                                        <i class="text-gold bi bi-twitter-x fs-4"></i>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="https://www.linkedin.com/" target="_blank"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="https://twitter.com/" target="_blank"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
                                     </div>
                                 </div>
                                 <div class="detail position-absolute start-0 top-0">
@@ -1136,12 +1155,13 @@
                         </div>
                     </div>
                     <div class="col-lg-5">
-                       <div class="card bg-third border-0">
-                         <!-- Lottie Animation -->
-                        <dotlottie-wc src="../assets/img/sports/Rocket research.json" style="width: 350px; height: 300px ; margin: auto;" loop
-                            autoplay speed="1" mode="forward">
-                        </dotlottie-wc>
-                       </div>
+                        <div class="card bg-third border-0">
+                            <!-- Lottie Animation -->
+                            <dotlottie-wc src="../assets/img/sports/Rocket research.json"
+                                style="width: 350px; height: 300px ; margin: auto;" loop autoplay speed="1"
+                                mode="forward">
+                            </dotlottie-wc>
+                        </div>
                     </div>
                 </div>
             </div>
