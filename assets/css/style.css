@@ -14,6 +14,8 @@
   --btn-prime: #2563eb;
   --btn-second: #e0f2fe;
 
+  --box-shadow-prime: rgba(0, 0, 0, 0.1);
+
   --fs-title: 20px;
   --fs-nav: 18px;
   --fs-text: 16px;
@@ -34,6 +36,8 @@
   /* Buttons */
   --btn-prime: #3b82f6;
   --btn-second: #374151;
+
+  --box-shadow-prime: rgba(255, 255, 255, 0.1);
 }
 body {
   font-family: "Noto Serif Khmer", sans-serif;
@@ -440,4 +444,30 @@ body {
 
 .tran-y {
   transform: translateY(-50%);
+}
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px var(--box-shadow-prime);
+}
+
+.pricing-card {
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  height: 100% !important;
+}
+
+.pricing-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px -12px var(--box-shadow-prime);
+  border-color: var(--text-main);
+}
+
+.popular-card {
+  border-color: var(--text-main);
+  box-shadow: 0 20px 40px -12px rgba(79, 70, 229, 0.3);
 }
