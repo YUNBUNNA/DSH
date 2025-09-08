@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Swimming Training</title>
     <!-- link bootstrap -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
     <!-- link theme -->
@@ -18,9 +18,189 @@
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+<style>
+    .pricing-card {
+        /* background: white; */
+        border-radius: 24px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        /* position: relative; */
+        overflow: hidden;
+        height: 100% !important;
+        /* border: 2px solid transparent; */
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        border-color: var(--text-main);
+    }
+
+    .popular-card {
+        /* transform: scale(1.05); */
+        border-color: var(--text-main);
+        box-shadow: 0 20px 40px -12px rgba(79, 70, 229, 0.3);
+    }
+
+    .w-90 {
+        width: 90%;
+    }
+
+    /* Hero Section */
+
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.3;
+    }
+
+
+
+    .floating-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 24px;
+        padding: 2rem;
+        box-shadow: var(--shadow-large);
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .hero-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.6s ease;
+    }
+
+    .hero-image:hover img {
+        transform: scale(1.05);
+    }
+
+    .card-Rules {
+        border-radius: 12px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: 90%;
+    }
+
+    .card-Rules:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .img-bottom-shadow {
+        position: relative;
+        display: inline-block;
+    }
+
+    .img-bottom-shadow img {
+        display: block;
+        width: 300px;
+        height: auto;
+        border-radius: 8px;
+        /* optional */
+    }
+
+    .img-bottom-shadow::after {
+        content: "";
+        position: absolute;
+        left: 10%;
+        bottom: -10px;
+        /* distance below image */
+        width: 80%;
+        height: 20px;
+        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, transparent 80%);
+        filter: blur(4px);
+    }
+
+    .bounce-img {
+        animation: bounce 2s ease-in-out infinite;
+    }
+
+    .curved {
+        /* position: relative; */
+        background: #2c3e50;
+        height: 50vh;
+        border-bottom-left-radius: 50% 25%;
+        border-bottom-right-radius: 50% 25%;
+        z-index: 1;
+    }
+
+    .zoom-img {
+        width: 300px;
+        height: auto;
+        animation: zoomInOut 4s ease-in-out infinite;
+    }
+
+    /* Coaches Section */
+
+
+    @keyframes zoomInOut {
+        0% {
+            transform: scale(0.9);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(0.9);
+        }
+    }
+
+    @keyframes bounce {
+
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .pro-couch {
+        width: 75px;
+        height: 22px;
+        background-color: #f9a551;
+        border-radius: 10px;
+        color: #ffeedd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 
 <body class="bg-prime">
 
+    <!-- header -->
     <header>
         <nav class="navbar py-0 fixed-top bg-prime">
             <div class="container-fluid" style="background-color: #58A8E6;">
@@ -160,7 +340,858 @@
             </div>
         </nav>
     </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-prime pt-18 pb-10  d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="card bg-prime  border-0">
+                            <div class="card-body">
+                                <h1 class="card-title text-prime fade-in-up">
+                                ស្វាគមន៍មកកាន់ <span class="text-warning">Cambodia</span><br>
+                                Swimming Academy 
+                            </h1>
+                            <p class="card-text text-prime mb-4 fade-in-up lead">
+                                កម្មវិធីបង្វឹកហែលទឹកអាជីពដែលត្រូវបានរចនាឡើងសម្រាប់កម្រិតជំនាញទាំងអស់។ ចូលរួមជាមួយអ្នកហែលទឹករាប់ពាន់នាក់ដែលបានផ្លាស់ប្តូរជំនាញហែលទឹករបស់ពួកគេជាមួយនឹងការបង្វឹករបស់យើង។
+                            </p>
+                            <div class="fade-in-up ">
+                                <a href="#pricing" class="btn btn-prime text-white btn-lg me-3">ចាប់ផ្តើម</a>
+                                <a href="#rules" class="btn btn-outline-secondary btn-lg text-prime">ស្វែងយល់បន្ថែម</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="floating-card fade-in-up stagger-3">
+                            <div class="hero-image">
+                                <img src="https://media.istockphoto.com/id/140469717/photo/competitive-swimming.jpg?s=612x612&w=0&k=20&c=C6FNSXOQZUkv-Cslx-DecP2-mFrZOle-XfNwQSe4sbw="
+                                    alt="Football Team" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Achievement -->
+        <section class="py-5 pb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- <div class="col-lg-4">
+                        <div class="card border-0 bg-prime ">
+                            <img src="../assets/img/sports/football/FIFA.png" alt=""
+                                class="img-fluid object-fit-cover bg-prime position-relative bounce-img"
+                                style="top:-10px; left: 50px; width: 70%; height: 70%;">
+                        </div>
+                    </div> -->
+                    <div class="col-lg-12 bg-gold rounded-2">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card border-0 bg-transparent">
+                                    <div class="card-body text-center">
+                                        <div class="d-flex display-5 justify-content-center align-items-center">
+                                            <h1 class="counter card-title display-5 ff" data-countto="200"
+                                                data-duration="2000">0</h1>
+                                            <span>+</span>
+                                        </div>
+                                        <h3 class="card-text">អតិថិជន</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card border-0 bg-transparent">
+                                    <div class="card-body text-center">
+                                        <div class="d-flex display-6 justify-content-center align-items-center">
+                                            <h1 class="counter card-title display-5 ff" data-countto="7"
+                                                data-duration="2000">0</h1>
+                                            <span class="ms-1">ឆ្នាំ</span>
+                                        </div>
+                                        <h3 class="card-text">បទពិសោធន៏</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card border-0 bg-transparent">
+                                    <div class="card-body text-center">
+                                        <div class="d-flex display-5 justify-content-center align-items-center">
+                                            <h1 class="counter card-title display-5 ff" data-countto="50"
+                                                data-duration="2000">0</h1>
+                                            <span>+</span>
+                                        </div>
+                                        <h3 class="card-text">អ្នកបណ្តុះបណ្តាល</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Rules -->
+        <section class="py-3">
+            <div class="container">
+                <div class=" mb-2">
+                    <div class="text-center my-5">
+                        <h2 class="fw-bold text-main"> ច្បាប់បាល់ទាត់ <span class="text-prime ff">Master the
+                                Rules</span>
+                        </h2>
+                        <p class=" lead text-prime mt-3" style="font-size: 20px;">
+                            ម៉ូឌុលបណ្តុះបណ្តាលដ៏ទូលំទូលាយ ដែលបង្កើតឡើងសម្រាប់អ្នកចូលចិត្តបាល់ទាត់
+                            ដើម្បីបន្ថែមការយល់ដឹងពីច្បាប់សកល <span class="ff">(FIFA Laws of the Game)</span>។
+                            ពង្រឹងជំនាញរបស់អ្នកពីកម្រិតអ្នកចូលរួម ទៅកាន់កម្រិត <span class="ff">Professional</span>
+                            តាមរយៈការសិក្សា ១៧ ច្បាប់សំខាន់ៗ — ពីទីលាន, បាល់, អ្នកលេង, ទៅដល់ Offside និង Penalty។
+                        </p>
+                        <!-- <p class="text-muted">
+                            A complete training module designed to elevate your football skills and knowledge,
+                            helping you <span class="ff">Master the Rules</span> and play with confidence at a
+                            professional level.
+                        </p> -->
+                    </div>
+
+                    <div class="row g-4 mt-4">
+                        <!-- Rule 1 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                <div class="card-body">
+                                    <div class="card-number">1</div>
+                                    <h5 class="card-title text-prime mb-3 fw-bold"> ទីលាន</h5>
+                                    <p class="card-text text-prime ">
+                                        ទីលានមានរាងចតុកោណកែង, ប្រវែង <span class="ff">100–110m</span>, ទទឹង <span
+                                            class="ff">64–75m</span>;
+                                        មានបន្ទាត់កំណត់, តំបន់ទោស, និងគូទ្វារ <span class="ff">7.32×2.44m</span>។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 2 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                <div class="card-body">
+                                    <div class="card-number">2</div>
+                                    <h5 class="card-title text-prime mb-3 fw-bold"> បាល់</h5>
+                                    <p class="card-text text-prime">
+                                        បាល់មានទំហំ <span class="ff">68–70cm</span>, ទំងន់ <span
+                                            class="ff">410–450g</span> (Size 5),
+                                        ត្រូវធ្វើពីសម្ភារៈសុវត្ថិភាព និងរក្សាសម្ពាធខ្យល់សមរម្យ។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 3 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                <div class="card-body">
+                                    <div class="card-number">3</div>
+                                    <h5 class="card-title text-prime mb-3 fw-bold"> អ្នកលេង</h5>
+                                    <p class="card-text text-prime">
+                                        ក្រុមមួយមាន <span class="ff">11</span> នាក់ (រួមទាំងអ្នកចាំទី); ត្រូវមានយ៉ាងតិច
+                                        <span class="ff">7</span> នាក់
+                                        ដើម្បីបន្តការប្រកួតបាន។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 4 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                <div class="card-body">
+                                    <div class="card-number">4</div>
+                                    <h5 class="card-title text-prime mb-3 fw-bold"> សម្ភារៈ</h5>
+                                    <p class="card-text text-prime">
+                                        អាវ, ខោ, ខោទ្រនាប់, shin guards, និងស្បែកជើង; អ្នកចាំទីពាក់អាវពណ៌ខុសពីអ្នកលេង។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 5 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                <div class="card-body">
+                                    <div class="card-number">5</div>
+                                    <h5 class="card-title text-prime mb-3 fw-bold"> Referee</h5>
+                                    <p class="card-text text-prime">
+                                        ជាអ្នកសម្រេចចិត្តចុងក្រោយ, គ្រប់គ្រងការប្រកួត, អនុវត្តច្បាប់,
+                                        និងថែរក្សាសុវត្ថិភាពអ្នកលេង។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 6 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                <div class="card-body">
+                                    <div class="card-number">6</div>
+                                    <h5 class="card-title text-prime mb-3 fw-bold"> Officials</h5>
+                                    <p class="card-text text-prime">
+                                        អ្នកជំនួយការទី ១ & ២, អ្នកជំនួយទី ៤, និង VAR; ជួយសម្រេចចិត្តបាល់ចេញ, Offside,
+                                        និងហេតុការណ៍សំខាន់ៗ។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 7 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                <div class="card-body">
+                                    <div class="card-number">7</div>
+                                    <h5 class="card-title text-prime mb-3 fw-bold"> រយៈពេល</h5>
+                                    <p class="card-text text-prime">
+                                        ការប្រកួតមាន <span class="ff">90 នាទី (45'×2)</span>, សម្រាកពាក់កណ្ដាល <span
+                                            class="ff">15'</span>;
+                                        បន្ថែមម៉ោងបើមានពន្យាពេល។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rule 8 -->
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                <div class="card-body">
+                                    <div class="card-number">8</div>
+                                    <h5 class="card-title text-prime mb-3 fw-bold"> Start & Restart</h5>
+                                    <p class="card-text text-prime">
+                                        ការចាប់ផ្តើមដោយ Kick-off, បន្តដោយ drop-ball, throw-in, free kick, penalty kick,
+                                        corner kick។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item bg-prime border-0">
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <div class="row g-4 ">
+                                        <!-- Rule 9 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">9</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> Ball In/Out</h5>
+                                                    <p class="card-text text-prime">
+                                                        បាល់ចេញពីការលេង នៅពេលវាចេញពេញលើបន្ទាត់ <span class="ff">goal
+                                                            line</span> ឬ
+                                                        <span class="ff">touch line</span> ទោះតាមដី ឬអាកាស។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rule 10 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">10</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> លទ្ធផល</h5>
+                                                    <p class="card-text text-prime">
+                                                        គ្រាប់បាល់ត្រូវបានរាប់ នៅពេលបាល់ចូលពេញលើ <span class="ff">goal
+                                                            line</span> រវាងស៊ុម និងសន្ទះ។
+                                                        ប្រសិនបើស្មើគ្នា អាចមាន <span class="ff">Extra Time</span> ឬ
+                                                        <span class="ff">Penalty Shootout</span>។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rule 11 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">11</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> Offside</h5>
+                                                    <p class="card-text text-prime">
+                                                        អ្នកលេងស្ថិតនៅ <span class="ff">offside position</span>
+                                                        ប្រសិនបើនៅជិតគូប្រជែងជាង
+                                                        បាល់ និងអ្នកលេងទី ២ ចុងក្រោយ នៅពេលបាល់ត្រូវបញ្ជូន។
+                                                        ក្លាយជាបទល្មើស
+                                                        ប្រសិនបើពាក់ព័ន្ធក្នុងការលេង។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rule 12 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">12</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> Fouls & Misconduct
+                                                    </h5>
+                                                    <p class="card-text text-prime">
+                                                        បទល្មើសមានដូចជា៖ កាត់ជើង, Push, ទាញអាវ, Handball។
+                                                        អាចទទួល <span class="ff">Yellow Card</span> ឬ <span
+                                                            class="ff">Red Card</span>
+                                                        ប្រសិនបើជាបទពិបាក។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rule 13 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">13</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> Free Kick</h5>
+                                                    <p class="card-text text-prime">
+                                                        មាន <span class="ff">Direct</span> និង <span
+                                                            class="ff">Indirect</span>;
+                                                        ក្រុមប្រឆាំងត្រូវឈរចម្ងាយយ៉ាងតិច <span class="ff">9.15m</span>
+                                                        ពីទីបាល់។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rule 14 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">14</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> Penalty Kick</h5>
+                                                    <p class="card-text text-prime">
+                                                        បាល់ចាក់ពីចំណុច <span class="ff">11m</span>;
+                                                        <span class="ff">Goalkeeper</span> ត្រូវឈរលើបន្ទាត់ Goal line
+                                                        រហូតដល់បាល់ត្រូវចាក់។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rule 15 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">15</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> Throw-in</h5>
+                                                    <p class="card-text text-prime">
+                                                        បាល់ចេញតាម <span class="ff">touchline</span>
+                                                        ត្រូវចោលចូលវិញដោយពីរដៃពីក្រោយក្បាល,
+                                                        ជើងទាំងពីរត្រូវដី។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rule 16 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">16</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> Goal Kick</h5>
+                                                    <p class="card-text text-prime">
+                                                        ចាប់ផ្តើមពី <span class="ff">goal area</span>;
+                                                        បាល់ក្លាយជាការលេងនៅពេលវាត្រូវបានគប់ចេញ
+                                                        និងចេញពីតំបន់ទោស។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Rule 17 -->
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="card card-Rules bg-third border-0 text-prime mb-4">
+                                                <div class="card-body">
+                                                    <div class="card-number">17</div>
+                                                    <h5 class="card-title text-prime mb-3 fw-bold"> Corner Kick</h5>
+                                                    <p class="card-text text-prime">
+                                                        បាល់ចេញតាម <span class="ff">goal line</span>
+                                                        ដោយចុងក្រោយប៉ះអ្នកការពារ → Corner Kick។
+                                                        ចាប់ផ្តើមពី <span class="ff">corner arc</span>;
+                                                        ក្រុមប្រឆាំងឈរចម្ងាយ ≥9.15m។
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-gold fs-text mt-10 translate-middle-y" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Coaches Section -->
+        <section class="coaches-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="card-title text-main fw-bold mb-3">គ្រូបង្វឹករបស់យើង</h2>
+                    <p class="card-text text-prime lead ">ក្រុមគ្រូបង្វឹកដ៏ពូកែ និងមានបទពិសោធន៍យូរអង្វែង</p>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div
+                                class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                                <div class="position-relative overflow-hidden rounded-2 img-hover">
+                                    <img src="https://media.istockphoto.com/id/802464782/photo/portrait-of-smiling-trainer-and-swimmers.jpg?s=612x612&w=0&k=20&c=NnWMUKX2U7Nw6QnTnHYXqViEKZfu0n20Op-tl7Xad1s="
+                                        alt="" class="img-fluid w-100 h-100 rounded-2">
+                                    <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                        style="height: 120%;">
+                                    </div>
+                                    <div class="card-icon position-absolute end-0 top-0">
+                                        <div class="card-body d-flex flex-column pt-2">
+                                            <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="detail position-absolute start-0 top-0">
+                                        <div class="card-body pt-8">
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-person"></i>
+                                                    គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-clock"></i>
+                                                    បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-file-earmark"></i>
+                                                    វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-geo-alt"></i>
+                                                    ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                        <div class="card-body d-flex gap-2">
+                                            <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                                ផ្ញើសារ</a>
+                                            <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                    class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="text-center card-title">ចាន់ ពិសី</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div
+                                class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                                <div class="position-relative overflow-hidden rounded-2 img-hover">
+                                    
+                                    <img src="https://media.istockphoto.com/id/676140344/photo/portrait-of-swim-coach-holding-stopwatch-at-poolside.jpg?s=1024x1024&w=is&k=20&c=RlXviKxzaL_AUEskdw63a4lj9gdPV0BmpZkQ8vTuwOw="
+                                        alt="" class="img-fluid w-100 h-100 rounded-2">
+                                    <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                        style="height: 120%;">
+                                    </div>
+                                    <div class="card-icon position-absolute end-0 top-0">
+                                        <div class="card-body d-flex flex-column pt-2">
+
+                                            <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="detail position-absolute start-0 top-0">
+                                        <div class="card-body pt-8">
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-person"></i>
+                                                    គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-clock"></i>
+                                                    បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-file-earmark"></i>
+                                                    វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-geo-alt"></i>
+                                                    ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                        <div class="card-body d-flex gap-2">
+                                            <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                                ផ្ញើសារ</a>
+                                            <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                    class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="text-center card-title">យឹម សំអុល</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="">
+                            <div
+                                class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                                <div class="position-relative overflow-hidden rounded-2 img-hover">
+                                    <img src="https://media.istockphoto.com/id/875314502/photo/swim-coach-with-stopwatch.jpg?s=170667a&w=0&k=20&c=KQPDNaZ9r9MPD3bAqilaCrczs2ddw-CcQ29FvViN4VA="
+                                        alt="" class="img-fluid w-100 h-100 rounded-2">
+                                    <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                        style="height: 120%;">
+                                    </div>
+                                    <div class="card-icon position-absolute end-0 top-0">
+                                        <div class="card-body d-flex flex-column pt-2">
+                                            <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                            <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="detail position-absolute start-0 top-0">
+                                        <div class="card-body pt-8">
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-person"></i>
+                                                    គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-clock"></i>
+                                                    បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-file-earmark"></i>
+                                                    វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                            <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                        class="me-2 text-primary bi bi-geo-alt"></i>
+                                                    ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                        <div class="card-body d-flex gap-2">
+                                            <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                                ផ្ញើសារ</a>
+                                            <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                    class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="text-center card-title">ហេង វណ្ណៈ</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Feedback -->
+        <section class="py-5 bg-third py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h2 class="text-center mb-6 text-main">មតិអតិថិជន</h2>
+                        <div class="swiper mySlide pb-6" style="height: 280px;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- pricing -->
+        <section class="py-8 bg-third">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fs-1 fw-bold  mb-4 py-2 text-main">ចូលជាសមាជិក</h2>
+                </div>
+                <div class="row g-5">
+                    <!-- Essential Plan -->
+
+                    <div class="col-lg-4">
+                        <div class=" h-100 ">
+                            <div class="card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs">
+                                <div class="card-body ">
+                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក BASIC</h2>
+                                    <p class=" text-center text-prime lead ">សម្រាប់អ្នកចាប់ផ្តើម</p>
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; ">15
+                                        / ខែ
+                                    </h1>
+                                    <div class="text-center">
+                                        <button class="btn btn-outline-primary w-90 mt-2 mb-2 ">
+                                            ទិញឥឡូវនេះ
+                                        </button>
+                                    </div>
+
+                                    <!-- <p class=" text-center">Per month</p> -->
+                                    <ul class="features-list" type="none">
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ចូលហាត់បាន 3 ដង / សប្ដាហ៍
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            កម្មវិធីហាត់បឋម
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាសសប្បាយរីករាយ
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            មានឧបករណ៍មូលដ្ឋាន
+                                        </li>
+                                        <!-- <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាស VIP
+
+                                        </li> -->
+                                        <!-- <li class="border-bottom py-2 ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                             បរិយាកាសល្អ
+                                        </li> -->
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Premium Plan -->
+                    <div class="col-lg-4">
+                        <div class="pricing-card popular-card rounded-5 ">
+                            <div class="card py-3  rounded-5 border-0 bg-prime">
+                                <div class="card-body">
+                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក PRIME</h2>
+                                    <p class=" text-center text-prime lead ">សម្រាប់អ្នកចង់ពង្រឹងសុខភាព</p>
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;">$30
+                                        / ខែ
+                                    </h1>
+                                    <div class="text-center">
+                                        <button class="btn btn-gold w-90 mt-2 mb-2">
+                                            ទិញឥឡូវនេះ
+                                        </button>
+                                    </div>
+                                    <!-- <p class=" text-center">Per month</p> -->
+                                    <ul class="features-list" type="none">
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ចូលហាត់បាន រាល់ថ្ងៃ ដោយគ្មានកំណត់
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            មាន គ្រូបង្វឹកផ្ទាល់ខ្លួន
+
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ឧបករណ៍ទំនើបពេញលេញ
+
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាស VIP សម្រាប់ Elite Training
+
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ការណែនាំផ្នែកអាហារូបត្ថម្ភការគ្រប់គ្រងរាងកាយ
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ឱកាសចូលរួមក្នុង Professional Trials
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Professional Plan -->
+                    <div class="col-lg-4">
+                        <div class="  rounded-5">
+                            <div class=" pricing-card  card py-3  rounded-5 border-0 bg-prime  ">
+                                <div class="card-body">
+                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក STANDARD </h2>
+                                    <p class=" text-center text-prime lead">សម្រាប់អ្នកហាត់ទៀងទាត់</p>
+                                    <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; ">$25
+                                        / ខែ
+                                    </h1>
+                                    <div class="text-center">
+                                        <button class="btn btn-outline-primary w-90 mt-2 mb-2  ">
+                                            ទិញឥឡូវនេះ
+                                        </button>
+                                    </div>
+                                    <!-- <p class=" text-center">Per month</p> -->
+                                    <ul class="features-list" type="none">
+                                        <li class="border-bottom py-2 text-prime ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ចូលហាត់បានរាល់ថ្ងៃ
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            មានគ្រូបង្វឹកណែនាំ
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ឧបករណ៍ទំនើប
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាសល្អ
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            ឧបករណ៍ថ្មី & ទំនើប
+
+                                        </li>
+                                        <li class="border-bottom py-2 text-prime    ">
+                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
+                                            បរិយាកាស VIP
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- link bootstrap js -->
     <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
     <!-- link swiper js -->

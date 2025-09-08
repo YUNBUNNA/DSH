@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <style>
-
     .pricing-card {
         /* background: white; */
         border-radius: 24px;
@@ -47,10 +46,58 @@
         width: 90%;
     }
 
-    .herobanner {
-        /* background: linear-gradient(135deg, #f4c965 0%, #3b82f6 50%, #374151 100%); */
-        /* background: radial-gradient(circle, #f4c965, #3b82f6, #374151); */
-        background: linear-gradient(135deg, #f4c965, #3b82f6, #374151);
+    /* Hero Section */
+
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.3;
+    }
+
+
+
+    .floating-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 24px;
+        padding: 2rem;
+        box-shadow: var(--shadow-large);
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .hero-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.6s ease;
+    }
+
+    .hero-image:hover img {
+        transform: scale(1.05);
     }
 
     .card-Rules {
@@ -111,52 +158,9 @@
         animation: zoomInOut 4s ease-in-out infinite;
     }
 
-    .coach-card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-    }
+    /* Coaches Section */
+    
 
-    .coach-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-        color: white;
-        padding: 2rem;
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-    }
-
-    .coach-card:hover .coach-overlay {
-        transform: translateY(0);
-    }
-
-    .card-number {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #22c55e, #16a34a);
-        border-radius: 15px;
-        color: white;
-        font-weight: 800;
-        font-size: 1.2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        /* box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3); */
-    }
-    .font{
-        position: absolute;
-        /* bottom: 0; */
-        left: 0;
-        /* right: 0; */
-        top: 100px;
-
-        
-    }
     @keyframes zoomInOut {
         0% {
             transform: scale(0.9);
@@ -180,6 +184,17 @@
         50% {
             transform: translateY(-10px);
         }
+    }
+
+    .pro-couch {
+        width: 75px;
+        height: 22px;
+        background-color: #f9a551;
+        border-radius: 10px;
+        color: #ffeedd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 
@@ -325,54 +340,59 @@
             </div>
         </nav>
     </header>
-     <main>
-        <!-- hero-banner -->
-        <section class="pb-5 pt-15">
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-prime pt-18 pb-10  d-flex align-items-center">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="card border-0 bg-prime mt-10">
+                        <div class="card bg-prime  border-0">
                             <div class="card-body">
-                                <h1 class="text-prime"> ស្វាគមន៍មកកាន់ <span
-                                        class="text-warning ff display-3">Cambodia</span>
-                                    <br> <span class="ff ">Football Academy</span>
+                                <h1 class="card-title text-prime fade-in-up">
+                                    ស្វាគមន៍មកកាន់ <span class="text-warning">Cambodia</span><br>
+                                    Football Academy
                                 </h1>
-                                <p class="text-prime mt-3 mb-4 text-prime lead " style="font-size: 20px;">
+                                <p class="card-text text-prime mb-4 fade-in-up lead">
                                     កម្មវិធីបង្វឹកបាល់ទាត់អាជីពដែលត្រូវបានរចនាឡើងសម្រាប់កម្រិតជំនាញទាំងអស់។
                                     ចូលរួមជាមួយអ្នកលេងរាប់ពាន់នាក់ដែលបានផ្លាស់ប្តូរការលេងរបស់ពួកគេជាមួយនឹងការបង្វឹករបស់យើង។
                                 </p>
-                                <!-- <a href="#" class="btn btn-primary">Get Started</a> -->
+                                <div class="fade-in-up ">
+                                    <a href="#pricing" class="btn btn-prime text-white btn-lg me-3">ចាប់ផ្តើម</a>
+                                    <a href="#rules"
+                                        class="btn btn-outline-secondary btn-lg text-prime">ស្វែងយល់បន្ថែម</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="card bg-prime border-0 img-bottom-shadow">
-                            <img src="../assets/img/sports/football/Team-1.png" alt=""
-                                class="img-fluid rounded-2  w-75 h-100 m-auto zoom-img">
+                        <div class="floating-card fade-in-up stagger-3">
+                            <div class="hero-image">
+                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop"
+                                    alt="Football Team" class="img-fluid">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- Achievement -->
-        <section class="py-3">
+        <section class="py-5 pb-5">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4">
+                    <!-- <div class="col-lg-4">
                         <div class="card border-0 bg-prime ">
                             <img src="../assets/img/sports/football/FIFA.png" alt=""
                                 class="img-fluid object-fit-cover bg-prime position-relative bounce-img"
                                 style="top:-10px; left: 50px; width: 70%; height: 70%;">
                         </div>
-                    </div>
-                    <div class="col-lg-8 bg-gold rounded-2">
+                    </div> -->
+                    <div class="col-lg-12 bg-gold rounded-2">
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="card border-0 bg-transparent">
                                     <div class="card-body text-center">
                                         <div class="d-flex display-5 justify-content-center align-items-center">
-                                            <h1 class="counter card-title display-5 ff" data-countto="3720"
+                                            <h1 class="counter card-title display-5 ff" data-countto="200"
                                                 data-duration="2000">0</h1>
                                             <span>+</span>
                                         </div>
@@ -396,7 +416,7 @@
                                 <div class="card border-0 bg-transparent">
                                     <div class="card-body text-center">
                                         <div class="d-flex display-5 justify-content-center align-items-center">
-                                            <h1 class="counter card-title display-5 ff" data-countto="150"
+                                            <h1 class="counter card-title display-5 ff" data-countto="50"
                                                 data-duration="2000">0</h1>
                                             <span>+</span>
                                         </div>
@@ -415,7 +435,8 @@
             <div class="container">
                 <div class=" mb-2">
                     <div class="text-center my-5">
-                        <h2 class="fw-bold text-main"> ច្បាប់បាល់ទាត់ <span class="text-prime ff">Master the Rules</span>
+                        <h2 class="fw-bold text-main"> ច្បាប់បាល់ទាត់ <span class="text-prime ff">Master the
+                                Rules</span>
                         </h2>
                         <p class=" lead text-prime mt-3" style="font-size: 20px;">
                             ម៉ូឌុលបណ្តុះបណ្តាលដ៏ទូលំទូលាយ ដែលបង្កើតឡើងសម្រាប់អ្នកចូលចិត្តបាល់ទាត់
@@ -703,268 +724,12 @@
                                 aria-controls="flush-collapseOne">
                                 មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
                             </a>
-                            <!-- <button class="accordion-button collapsed  " type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                <a href="#"
-                                    class="btn btn-gold fs-text position-absolute top-100 end-50 mt-10 translate-middle-y"
-                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                    aria-expanded="false" aria-controls="flush-collapseOne">
-                                    មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </button> -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Coaches Section -->
-        <section id="coaches" class="py-10 ">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fs-1 fw-bold  mb-4 py-2 text-main">ជួបគ្រូបង្វឹកជំនាញរបស់យើង</h2>
-                    <p class="lead text-prime">រៀនពីអ្នកល្អបំផុតក្នុងអាជីវកម្ម</p>
-                </div>
-                <div class="row g-4">
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="coach-card card-hover">
-                            <div>
-                                <img src="../assets/img/sports/football/caoch-1.jpg" alt=""
-                                    style="height: 300px; width: 100%; position: relative;">
-                                <!-- <h4 class="khmer-font position-absolute top-0 start-0 " style="z-index: 50;">លោក ដេវីដ
-                                    រ៉ូឌ្រីហ្គេស</h4> -->
-                                <div class="coach-overlay">
-                                    <h4 class="text-white lead">លោក ដេវីដ រ៉ូឌ្រីហ្គេស</h4>
-                                    <p class="mb-2"><i class="fas fa-medal me-2"></i>បណ្ណាល័យ UEFA Pro</p>
-                                    <p class="mb-2"><i class="fas fa-futbol me-2"></i>បទពិសោធន៍ ១៥ ឆ្នាំ</p>
-                                    <p class="small khmer-font">អតីតអ្នកលេងអាជីពដែលមានជំនាញក្នុងការបង្វឹកយុទ្ធសាស្រ្ត
-                                        និងការអភិវឌ្ឍយុវជន។</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="coach-card card-hover">
-                            <div>
-                                <img src="../assets/img/sports/football/caoch-1.jpg" alt=""
-                                    style="height: 300px; width: 100%; position: relative;">
-                                <div class="coach-overlay">
-                                    <h4 class="khmer-font">លោក ដេវីដ រ៉ូឌ្រីហ្គេស</h4>
-                                    <p class="mb-2"><i class="fas fa-medal me-2"></i>បណ្ណាល័យ UEFA Pro</p>
-                                    <p class="mb-2"><i class="fas fa-futbol me-2"></i>បទពិសោធន៍ ១៥ ឆ្នាំ</p>
-                                    <p class="small khmer-font">អតីតអ្នកលេងអាជីពដែលមានជំនាញក្នុងការបង្វឹកយុទ្ធសាស្រ្ត
-                                        និងការអភិវឌ្ឍយុវជន។</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="coach-card card-hover">
-                            <div>
-                                <img src="../assets/img/sports/football/caoch-1.jpg" alt=""
-                                    style="height: 300px; width: 100%; position: relative;">
-                                <div class="coach-overlay">
-                                    <h4 class="khmer-font">លោក ដេវីដ រ៉ូឌ្រីហ្គេស</h4>
-                                    <p class="mb-2"><i class="fas fa-medal me-2"></i>បណ្ណាល័យ UEFA Pro</p>
-                                    <p class="mb-2"><i class="fas fa-futbol me-2"></i>បទពិសោធន៍ ១៥ ឆ្នាំ</p>
-                                    <p class="small khmer-font">អតីតអ្នកលេងអាជីពដែលមានជំនាញក្នុងការបង្វឹកយុទ្ធសាស្រ្ត
-                                        និងការអភិវឌ្ឍយុវជន។</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="coach-card card-hover">
-                            <div>
-                                <img src="../assets/img/sports/football/caoch-1.jpg" alt=""
-                                    style="height: 300px; width: 100%; position: relative;">
-                                <div class="coach-overlay">
-                                    <h4 class="khmer-font">លោក ដេវីដ រ៉ូឌ្រីហ្គេស</h4>
-                                    <p class="mb-2"><i class="fas fa-medal me-2"></i>បណ្ណាល័យ UEFA Pro</p>
-                                    <p class="mb-2"><i class="fas fa-futbol me-2"></i>បទពិសោធន៍ ១៥ ឆ្នាំ</p>
-                                    <p class="small khmer-font">អតីតអ្នកលេងអាជីពដែលមានជំនាញក្នុងការបង្វឹកយុទ្ធសាស្រ្ត
-                                        និងការអភិវឌ្ឍយុវជន។</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="col-md-6 col-lg-4">
-                        <div class="coach-card card-hover">
-                            <div
-                                style="height: 300px; background: linear-gradient(45deg, #f093fb, #f5576c); position: relative;">
-                                <div class="coach-overlay">
-                                    <h4 class="khmer-font">កញ្ញា សារ៉ា ថុមសុន</h4>
-                                    <p class="mb-2"><i class="fas fa-medal me-2"></i>បញ្ជាក់ទទួលស្គាល់ FIFA</p>
-                                    <p class="mb-2"><i class="fas fa-futbol me-2"></i>បទពិសោធន៍ ១២ ឆ្នាំ</p>
-                                    <p class="small khmer-font">ជំនាញពិសេសលើជំនាញបច្ចេកទេស
-                                        និងកម្មវិធីអភិវឌ្ឍបាល់ទាត់ស្រី។</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4">
-                        <div class="coach-card card-hover">
-                            <div
-                                style="height: 300px; background: linear-gradient(45deg, #4facfe, #00f2fe); position: relative;">
-                                <div class="coach-overlay">
-                                    <h4 class="khmer-font">លោក ម៉ាកូ ស៊ីលវ៉ា</h4>
-                                    <p class="mb-2"><i class="fas fa-medal me-2"></i>បទពិសោធន៍ La Liga</p>
-                                    <p class="mb-2"><i class="fas fa-futbol me-2"></i>បទពិសោធន៍ ២០ ឆ្នាំ</p>
-                                    <p class="small khmer-font">អតីតគ្រូបង្វឹក La Liga ជំនាញលើយុទ្ធសាស្រ្តកម្រិតខ្ពស់
-                                        និងការរៀបចំអាជីព។</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </section>
-        <!-- Feedback -->
-        <section class="py-5 bg-third py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <h2 class="text-center mb-6 text-main">មតិអតិថិជន</h2>
-                        <div class="swiper mySlide pb-6" style="height: 280px;">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                                            alt="" class="img-fluid rounded-circle mx-auto"
-                                            style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                                            alt="" class="img-fluid rounded-circle mx-auto"
-                                            style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                                            alt="" class="img-fluid rounded-circle mx-auto"
-                                            style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                                            alt="" class="img-fluid rounded-circle mx-auto"
-                                            style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                                            alt="" class="img-fluid rounded-circle mx-auto"
-                                            style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                                            alt="" class="img-fluid rounded-circle mx-auto"
-                                            style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination swiper-pagination-2"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- pricing -->
+         <!-- pricing -->
         <section class="py-8 bg-third">
             <div class="container">
                 <div class="text-center mb-5">
@@ -1124,7 +889,322 @@
                 </div>
             </div>
         </section>
+        <!-- Coaches Section -->
+        <section class="coaches-section py-10">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="card-title text-main fw-bold mb-3">គ្រូបង្វឹករបស់យើង</h2>
+                    <p class="card-text text-prime lead ">ក្រុមគ្រូបង្វឹកដ៏ពូកែ និងមានបទពិសោធន៍យូរអង្វែង</p>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-lg-4">
+
+                        <div
+                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                            <div class="position-relative overflow-hidden rounded-2 img-hover">
+                                <img src="https://media.istockphoto.com/id/1271284931/photo/portrait-of-male-footballer-coaching-mixed-age-players.jpg?s=612x612&w=0&k=20&c=ToMayM4rQgfvhCjeNHutJWbUt9yW5kEHRl5yOu7ZJog="
+                                    alt="" class="img-fluid w-100 h-100 rounded-2">
+                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                    style="height: 120%;">
+                                </div>
+                                <div class="card-icon position-absolute end-0 top-0">
+                                    <div class="card-body d-flex flex-column pt-2">
+                                        <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
+                                    </div>
+                                </div>
+                                <div class="detail position-absolute start-0 top-0">
+                                    <div class="card-body pt-8">
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-person"></i>
+                                                គ្រូបង្វឹក:</strong> ផ្នែកបាល់ទាត់</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-clock"></i>
+                                                បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-file-earmark"></i>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-geo-alt"></i>
+                                                ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                    </div>
+                                </div>
+                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                    <div class="card-body d-flex gap-2">
+                                        <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                            ផ្ញើសារ</a>
+                                        <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="text-center card-title">សុខា ចាន់ដា</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div
+                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                            <div class="position-relative overflow-hidden rounded-2 img-hover">
+
+                                <img src="https://media.istockphoto.com/id/1273373052/photo/soccer-player-on-football-field.jpg?s=612x612&w=is&k=20&c=jX5ZA13UGmPywyR7vAX990eBgNzFkLHcfebpZGeGJjk="
+                                    alt="" class="img-fluid w-100 h-100 rounded-2">
+                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                    style="height: 120%;">
+                                </div>
+                                <div class="card-icon position-absolute end-0 top-0">
+                                    <div class="card-body d-flex flex-column pt-2">
+
+                                        <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
+                                    </div>
+                                </div>
+                                <div class="detail position-absolute start-0 top-0">
+                                    <div class="card-body pt-8">
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-person"></i>
+                                                គ្រូបង្វឹក:</strong> ផ្នែកបាល់ទាត់</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-clock"></i>
+                                                បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-file-earmark"></i>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-geo-alt"></i>
+                                                ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                    </div>
+                                </div>
+                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                    <div class="card-body d-flex gap-2">
+                                        <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                            ផ្ញើសារ</a>
+                                        <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="text-center card-title">សែន រិទ្ធី</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div
+                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                            <div class="position-relative overflow-hidden rounded-2 img-hover">
+                                <img src="https://media.istockphoto.com/id/1248213662/photo/portrait-of-mature-male-footballer-on-field-with-ball.jpg?s=612x612&w=0&k=20&c=Hz1GBjBjS7BcJpUMwCLgOtLtWyMBCQvViKwGNNxQfZk="
+                                    alt="" class="img-fluid w-100 h-100 rounded-2">
+                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                    style="height: 120%;">
+                                </div>
+                                <div class="card-icon position-absolute end-0 top-0">
+                                    <div class="card-body d-flex flex-column pt-2">
+                                        <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
+                                    </div>
+                                </div>
+                                <div class="detail position-absolute start-0 top-0">
+                                    <div class="card-body pt-8">
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-person"></i>
+                                                គ្រូបង្វឹក:</strong> ផ្នែកបាល់ទាត់</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-clock"></i>
+                                                បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-file-earmark"></i>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-geo-alt"></i>
+                                                ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                    </div>
+                                </div>
+
+                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                    <div class="card-body d-flex gap-2">
+                                        <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                            ផ្ញើសារ</a>
+                                        <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="text-center card-title">សុខ វុទ្ធី</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Feedback -->
+        <section class="py-5 bg-third py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h2 class="text-center mb-6 text-main">មតិអតិថិជន</h2>
+                        <div class="swiper mySlide pb-6" style="height: 280px;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាយ ចេមមី</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-2"></div>
+                        </div>
+                    </div>
+                   <div class="col-lg-5">
+                       <div class="card bg-third border-0">
+                         <!-- Lottie Animation -->
+                        <dotlottie-wc src="../assets/img/sports/Football team players.json" style="width: 350px; height: 300px ; margin: auto;" loop
+                            autoplay speed="1" mode="forward">
+                        </dotlottie-wc>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
     </main>
+    <!-- Load dotlottie-wc -->
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
+    <!-- link bootstrap js -->
     <!-- link bootstrap js -->
     <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
     <!-- link swiper js -->
