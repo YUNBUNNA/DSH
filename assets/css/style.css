@@ -51,8 +51,8 @@ body {
 .bg-third {
   background-color: var(--bg-third) !important;
 }
-.bg-nav{
-  background-color: #58A8E6;
+.bg-nav {
+  background-color: #58a8e6;
 }
 
 /* Text utilities */
@@ -436,4 +436,8 @@ body {
 .img-hover:hover .card-btn {
   transform: translateY(0);
   opacity: 1;
+}
+
+.tran-y {
+  transform: translateY(-50%);
 }
