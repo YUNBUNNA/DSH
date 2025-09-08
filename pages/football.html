@@ -19,36 +19,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <style>
-    .pricing-card {
-        /* background: white; */
-        border-radius: 24px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        /* position: relative; */
-        overflow: hidden;
-        height: 100% !important;
-        /* border: 2px solid transparent; */
-    }
-
-    .pricing-card:hover {
-        transform: translateY(-12px) scale(1.02);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        border-color: var(--text-main);
-    }
-
-    .popular-card {
-        /* transform: scale(1.05); */
-        border-color: var(--text-main);
-        box-shadow: 0 20px 40px -12px rgba(79, 70, 229, 0.3);
-    }
-
-    .w-90 {
-        width: 90%;
-    }
-
     /* Hero Section */
-
-
     .hero-section::before {
         content: '';
         position: absolute;
@@ -59,9 +30,6 @@
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
         opacity: 0.3;
     }
-
-
-
     .floating-card {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
@@ -71,7 +39,6 @@
         box-shadow: var(--shadow-large);
         animation: float 6s ease-in-out infinite;
     }
-
     @keyframes float {
 
         0%,
@@ -83,23 +50,19 @@
             transform: translateY(-20px);
         }
     }
-
     .hero-image {
         position: relative;
         overflow: hidden;
         border-radius: 20px;
     }
-
     .hero-image img {
         width: 100%;
         height: auto;
         transition: transform 0.6s ease;
     }
-
     .hero-image:hover img {
         transform: scale(1.05);
     }
-
     .card-Rules {
         border-radius: 12px;
         padding: 10px;
@@ -107,13 +70,10 @@
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         height: 90%;
     }
-
     .card-Rules:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
-
-
     .img-bottom-shadow {
         position: relative;
         display: inline-block;
@@ -126,7 +86,6 @@
         border-radius: 8px;
         /* optional */
     }
-
     .img-bottom-shadow::after {
         content: "";
         position: absolute;
@@ -138,29 +97,21 @@
         background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, transparent 80%);
         filter: blur(4px);
     }
-
     .bounce-img {
         animation: bounce 2s ease-in-out infinite;
     }
-
     .curved {
-        /* position: relative; */
         background: #2c3e50;
         height: 50vh;
         border-bottom-left-radius: 50% 25%;
         border-bottom-right-radius: 50% 25%;
         z-index: 1;
     }
-
     .zoom-img {
         width: 300px;
         height: auto;
         animation: zoomInOut 4s ease-in-out infinite;
     }
-
-    /* Coaches Section */
-    
-
     @keyframes zoomInOut {
         0% {
             transform: scale(0.9);
@@ -185,7 +136,6 @@
             transform: translateY(-10px);
         }
     }
-
     .pro-couch {
         width: 75px;
         height: 22px;
