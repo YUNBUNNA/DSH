@@ -132,6 +132,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.text-green {
+      color: #2ecc71 !important;
+    }
+
 .navbar {
   z-index: 1000;
 }
@@ -470,4 +474,8 @@ body {
 .popular-card {
   border-color: var(--text-main);
   box-shadow: 0 20px 40px -12px rgba(79, 70, 229, 0.3);
+}
+
+.border-blue {
+  border: 2px solid #58A8E6 !important;
 }
