@@ -19,36 +19,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <style>
-    .pricing-card {
-        /* background: white; */
-        border-radius: 24px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        /* position: relative; */
-        overflow: hidden;
-        height: 100% !important;
-        /* border: 2px solid transparent; */
-    }
-
-    .pricing-card:hover {
-        transform: translateY(-12px) scale(1.02);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        border-color: var(--text-main);
-    }
-
-    .popular-card {
-        /* transform: scale(1.05); */
-        border-color: var(--text-main);
-        box-shadow: 0 20px 40px -12px rgba(79, 70, 229, 0.3);
-    }
-
-    .w-90 {
-        width: 90%;
-    }
-
     /* Hero Section */
-
-
     .hero-section::before {
         content: '';
         position: absolute;
@@ -59,9 +30,6 @@
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
         opacity: 0.3;
     }
-
-
-
     .floating-card {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
@@ -89,19 +57,14 @@
         overflow: hidden;
         border-radius: 20px;
     }
-
     .hero-image img {
         width: 100%;
         height: auto;
         transition: transform 0.6s ease;
     }
-
     .hero-image:hover img {
         transform: scale(1.05);
     }
-
-
-
     .img-bottom-shadow {
         position: relative;
         display: inline-block;
@@ -114,7 +77,6 @@
         border-radius: 8px;
         /* optional */
     }
-
     .img-bottom-shadow::after {
         content: "";
         position: absolute;
@@ -130,7 +92,6 @@
     .bounce-img {
         animation: bounce 2s ease-in-out infinite;
     }
-
     .curved {
         /* position: relative; */
         background: #2c3e50;
@@ -145,13 +106,6 @@
         height: auto;
         animation: zoomInOut 4s ease-in-out infinite;
     }
-
-    /* Coaches Section */
-    
-    .key {
-        animation: zoomInOut 2s ease-in-out infinite;
-    }
-
     @keyframes zoomInOut {
         0% {
             transform: scale(0.9);
@@ -176,17 +130,6 @@
             transform: translateY(-10px);
         }
     }
-
-    /* .pro-couch {
-        width: 75px;
-        height: 22px;
-        background-color: #f9a551;
-        border-radius: 10px;
-        color: #ffeedd;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
     .rule-list {
         list-style: none;
         padding: 0;
@@ -198,26 +141,14 @@
         position: relative;
         /* color: #666; */
     }
-
     .rule-list li::before {
         content: "🏀";
         position: absolute;
         left: 0;
         top: 8px;
     }
-
-    .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .hover-lift:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
     /* តារាង */
     .court-diagram {
-        /* background: rgba(255, 255, 255, 0.95); */
         border-radius: 20px;
         padding: 30px;
         margin: 40px 0;
@@ -259,7 +190,6 @@
         top: 0;
         transform: translateX(-50%);
     }
-
     .center-circle {
         width: 80px;
         height: 80px;
@@ -281,13 +211,11 @@
         left: 20px;
         border-bottom: none;
     }
-
     .three-point-line.right {
         right: 20px;
         left: auto;
         transform: scaleX(-1);
     }
-
     .hoop {
         width: 20px;
         height: 20px;
@@ -298,17 +226,14 @@
         left: 50%;
         transform: translateX(-50%);
     }
-
     .hoop.bottom {
         bottom: 30px;
         top: auto;
     }
-
     .interactive-element {
         cursor: pointer;
         transition: all 0.3s ease;
     }
-
     .interactive-element:hover {
         transform: scale(1.1);
     }
@@ -473,7 +398,7 @@
                                 </p>
 
                                 <div class="fade-in-up ">
-                                    <a href="#pricing" class="btn btn-prime text-white btn-lg me-3">ចាប់ផ្តើម</a>
+                                    <a href="#pricing" class="btn btn-gold text-white btn-lg me-3">ចាប់ផ្តើម</a>
                                     <a href="#rules"
                                         class="btn btn-outline-secondary btn-lg text-prime">ស្វែងយល់បន្ថែម</a>
                                 </div>
@@ -596,7 +521,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="card bg-prime border-0 shadow-lg py-5 px-2  rounded-5 hover-lift h-100">
+                            <div class="card bg-prime border-0  py-5 px-2  rounded-5 hover-lift h-100">
                                 <div class="card-body ">
                                     <h5 class="card-title text-main fw-bold text-center ">គោលដៅនៃការលេងបាល់បោះ</h5>
                                     <p class="card-text text-prime lead "
@@ -613,7 +538,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="card bg-prime border-0 shadow-lg py-5 px-2  rounded-5 hover-lift">
+                            <div class="card bg-prime border-0  py-5 px-2  rounded-5 hover-lift">
                                 <div class="card-body ">
                                     <h5 class="card-title text-main fw-bold text-center ">សមាសភាពក្រុម</h5>
                                     <p class="card-text text-prime lead "
@@ -631,7 +556,7 @@
 
                         </div>
                         <div class="col-lg-4">
-                            <div class="card bg-prime border-0 shadow-lg py-5 px-2 rounded-5 hover-lift h-100">
+                            <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift h-100">
 
                                 <div class="card-body ">
                                     <h5 class="card-title text-main fw-bold text-center ">រយៈពេលការប្រកួត</h5>
@@ -649,7 +574,7 @@
 
                         </div>
                         <div class="col-lg-4">
-                            <div class="card bg-prime border-0 shadow-lg py-5 px-2 rounded-5 hover-lift">
+                            <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift">
                                 <div class="card-body ">
                                     <h5 class="card-title text-main fw-bold text-center ">វិធានកាន់បាល់</h5>
                                     <p class="card-text text-prime lead "
@@ -666,7 +591,7 @@
 
                         </div>
                         <div class="col-lg-4">
-                            <div class="card bg-prime border-0 shadow-lg py-5 px-2 h-100 rounded-5 hover-lift ">
+                            <div class="card bg-prime border-0  py-5 px-2 h-100 rounded-5 hover-lift ">
                                 <div class="card-body ">
                                     <h5 class="card-title text-main fw-bold text-center ">កំហុស និងការបាញ់សេរី</h5>
                                     <p class="card-text text-prime lead "
@@ -683,7 +608,7 @@
 
                         </div>
                         <div class="col-lg-4 ">
-                            <div class="card bg-prime border-0 shadow-lg py-5 px-2 rounded-5 hover-lift">
+                            <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift">
                                 <div class="card-body ">
                                     <h5 class="card-title text-main fw-bold text-center ">ការចាប់ផ្តើម</h5>
                                     <p class="card-text text-prime lead "
@@ -707,7 +632,7 @@
         <section class="py-8">
             <div class="container">
                 <div class="bg-prime ">
-                    <h3 class="text-center text-main mb-5 fw-bold">ប្លង់ទីលានបាល់បោះ</h3>
+                    <h3 class="text-center text-main mb-5 fw-bold  ">ប្លង់ទីលានបាល់បោះ</h3>
                     <div class="court-visual">
                         <div class="court-line center-line"></div>
                         <div class="center-circle"></div>
@@ -727,10 +652,9 @@
                     </h2>
                     <p class="text-prime lead ">សុខភាពកាយ និងចិត្តល្អប្រសើរដោយការលេងបាល់បោះ</p>
                 </div>
-            </div>
-            <div class="row g-4">
+                 <div class="row g-4">
                 <div class="col-lg-4">
-                    <div class="card bg-prime border-0  h-100 ">
+                    <div class="card bg-prime border-0  h-100  hover-lift">
                         <div class="card-body text-center">
                             <i class="bi bi-heart-pulse-fill text-danger fs-1 mb-3"></i>
                             <h5 class="card-title text-main fw-bold">សុខភាពបេះដូងល្អ</h5>
@@ -741,9 +665,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card bg-prime border-0  h-100 ">
+                    <div class="card bg-prime border-0  h-100  hover-lift">
                         <div class="card-body text-center">
-                            <i class="bi bi-people-fill text-success fs-1 mb-3"></i>
+                            <i class="bi bi-people-fill text-success fs-1 mb-3 "></i>
                             <h5 class="card-title
                                 text-main fw-bold">ការសហការគ្នា និងការទំនាក់ទំនងសង្គម</h5>
                             <p class="card-text text-prime lead" style="font-size: 18px;">
@@ -766,6 +690,8 @@
                     </div>
                 </div>
             </div>
+            </div>
+           
         </section>
         <!-- pricing -->
         <section class="py-8 bg-third">
@@ -780,9 +706,9 @@
                         <div class=" h-100 ">
                             <div class="card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs">
                                 <div class="card-body ">
-                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក BASIC</h2>
+                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក <span class="ff">BASIC</span> </h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចាប់ផ្តើម</p>
-                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; ">15
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; "><span class="ff">15</span>
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -790,8 +716,6 @@
                                             ទិញឥឡូវនេះ
                                         </button>
                                     </div>
-
-                                    <!-- <p class=" text-center">Per month</p> -->
                                     <ul class="features-list" type="none">
                                         <li class="border-bottom py-2 text-prime">
                                             <i class="bi bi-check-circle-fill text-success me-3"></i>
@@ -809,15 +733,6 @@
                                             <i class="bi bi-check-circle-fill text-success me-3"></i>
                                             ការប្រើប្រាស់កីឡដ្ឋានស្តង់ដារ
                                         </li>
-                                        <!-- <li class="border-bottom py-2 text-prime">
-                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
-                                            បរិយាកាស VIP
-
-                                        </li> -->
-                                        <!-- <li class="border-bottom py-2 ">
-                                            <i class="bi bi-check-circle-fill text-success me-3"></i>
-                                             បរិយាកាសល្អ
-                                        </li> -->
                                     </ul>
 
                                 </div>
@@ -829,9 +744,9 @@
                         <div class="pricing-card popular-card rounded-5 ">
                             <div class="card py-3  rounded-5 border-0 bg-prime">
                                 <div class="card-body">
-                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក PRIME</h2>
+                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក <span class="ff">PRIME</span></h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចង់ពង្រឹងសុខភាព</p>
-                                    <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;">$30
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;"><span class="ff"></span>$30
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -839,7 +754,6 @@
                                             ទិញឥឡូវនេះ
                                         </button>
                                     </div>
-                                    <!-- <p class=" text-center">Per month</p> -->
                                     <ul class="features-list" type="none">
                                         <li class="border-bottom py-2 text-prime">
                                             <i class="bi bi-check-circle-fill text-success me-3"></i>
@@ -880,9 +794,9 @@
                         <div class="  rounded-5">
                             <div class=" pricing-card  card py-3  rounded-5 border-0 bg-prime  ">
                                 <div class="card-body">
-                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក STANDARD </h2>
+                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក <span class="ff">STANDARD</span> </h2>
                                     <p class=" text-center text-prime lead">សម្រាប់អ្នកហាត់ទៀងទាត់</p>
-                                    <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; ">$25
+                                    <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; "><span class="ff">$25</span>
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -890,7 +804,6 @@
                                             ទិញឥឡូវនេះ
                                         </button>
                                     </div>
-                                    <!-- <p class=" text-center">Per month</p> -->
                                     <ul class="features-list" type="none">
                                         <li class="border-bottom py-2 text-prime ">
                                             <i class="bi bi-check-circle-fill text-success me-3"></i>
