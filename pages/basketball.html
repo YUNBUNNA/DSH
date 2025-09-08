@@ -30,6 +30,7 @@
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="60" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
         opacity: 0.3;
     }
+
     .floating-card {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
@@ -57,14 +58,17 @@
         overflow: hidden;
         border-radius: 20px;
     }
+
     .hero-image img {
         width: 100%;
         height: auto;
         transition: transform 0.6s ease;
     }
+
     .hero-image:hover img {
         transform: scale(1.05);
     }
+
     .img-bottom-shadow {
         position: relative;
         display: inline-block;
@@ -77,6 +81,7 @@
         border-radius: 8px;
         /* optional */
     }
+
     .img-bottom-shadow::after {
         content: "";
         position: absolute;
@@ -92,6 +97,7 @@
     .bounce-img {
         animation: bounce 2s ease-in-out infinite;
     }
+
     .curved {
         /* position: relative; */
         background: #2c3e50;
@@ -106,6 +112,7 @@
         height: auto;
         animation: zoomInOut 4s ease-in-out infinite;
     }
+
     @keyframes zoomInOut {
         0% {
             transform: scale(0.9);
@@ -130,6 +137,7 @@
             transform: translateY(-10px);
         }
     }
+
     .rule-list {
         list-style: none;
         padding: 0;
@@ -141,12 +149,14 @@
         position: relative;
         /* color: #666; */
     }
+
     .rule-list li::before {
         content: "🏀";
         position: absolute;
         left: 0;
         top: 8px;
     }
+
     /* តារាង */
     .court-diagram {
         border-radius: 20px;
@@ -190,6 +200,7 @@
         top: 0;
         transform: translateX(-50%);
     }
+
     .center-circle {
         width: 80px;
         height: 80px;
@@ -211,11 +222,13 @@
         left: 20px;
         border-bottom: none;
     }
+
     .three-point-line.right {
         right: 20px;
         left: auto;
         transform: scaleX(-1);
     }
+
     .hoop {
         width: 20px;
         height: 20px;
@@ -226,14 +239,17 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
     .hoop.bottom {
         bottom: 30px;
         top: auto;
     }
+
     .interactive-element {
         cursor: pointer;
         transition: all 0.3s ease;
     }
+
     .interactive-element:hover {
         transform: scale(1.1);
     }
@@ -382,7 +398,6 @@
         </nav>
     </header>
     <main>
-        <!-- hero-banner -->
         <!-- Hero Section -->
         <section class="bg-prime pt-18 pb-10  d-flex align-items-center">
             <div class="container">
@@ -390,17 +405,17 @@
                     <div class="col-lg-6">
                         <div class="card bg-prime  border-0">
                             <div class="card-body">
-                                <h1 class="card-title text-prime ">បាល់បោះ</h1>
-                                <h2 class="card-text  text-warning">កីឡាដ៏មានភាពរំភើប និងពេញនិយម</h2>
-                                <p class="card-text text-prime mb-4 fade-in-up lead">
+                                <h1 class="card-title text-main mb-3">បាល់បោះ</h1>
+                                <h2 class="card-text text-prime">កីឡាដ៏មានភាពរំភើប និងពេញនិយម</h2>
+                                <p class="card-text text-second mb-4 fade-in-up lead">
                                     ចូលរួមជាមួយយើងក្នុងការលេងបាល់បោះ ជាកីឡាដែលបង្កើតភាពរាក់ទាក់
                                     និងជំនាញ។ ពីកម្រិតដំបូងរហូតដល់កម្រិតវិជ្ជាជីវៈ យើងមានកម្មវិធីសម្រាប់អ្នកគ្រប់រូប។
                                 </p>
 
                                 <div class="fade-in-up ">
-                                    <a href="#pricing" class="btn btn-gold text-white btn-lg me-3">ចាប់ផ្តើម</a>
+                                    <a href="#pricing" class="btn btn-gold px-5 btn-lg me-3">ចាប់ផ្តើម</a>
                                     <a href="#rules"
-                                        class="btn btn-outline-secondary btn-lg text-prime">ស្វែងយល់បន្ថែម</a>
+                                        class="btn btn-outline-secondary px-5 btn-lg text-prime">ស្វែងយល់បន្ថែម</a>
                                 </div>
                             </div>
                         </div>
@@ -420,56 +435,52 @@
         <!-- Achievement -->
         <section class="star bg-gold py-8">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12 rounded-2">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="card border-0 bg-transparent">
-                                    <div class="card-body text-center">
-                                        <div class="d-flex display-5 justify-content-center align-items-center">
-                                            <h1 class="counter card-title display-5 ff" data-countto="6720"
-                                                data-duration="2000">0</h1>
-                                            <span>+</span>
-                                        </div>
-                                        <h4 class="card-text mt-1">អតិថិជន</h4>
-                                    </div>
+                <div class="row g-4">
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body text-center">
+                                <div class="d-flex display-5 justify-content-center align-items-center">
+                                    <h1 class="counter card-title display-5 ff" data-countto="6720"
+                                        data-duration="2000">0</h1>
+                                    <span>+</span>
                                 </div>
+                                <h4 class="card-text mt-1">អតិថិជន</h4>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="card border-0 bg-transparent">
-                                    <div class="card-body text-center">
-                                        <div class="d-flex display-6 justify-content-center align-items-center">
-                                            <h1 class="counter card-title display-5 ff" data-countto="7"
-                                                data-duration="2000">0</h1>
-                                            <span class="ms-1">ឆ្នាំ</span>
-                                        </div>
-                                        <h4 class="card-text mt-1">បទពិសោធន៏</h4>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body text-center">
+                                <div class="d-flex display-6 justify-content-center align-items-center">
+                                    <h1 class="counter card-title display-5 ff" data-countto="7" data-duration="2000">0
+                                    </h1>
+                                    <span class="ms-1">ឆ្នាំ</span>
                                 </div>
+                                <h4 class="card-text mt-1">បទពិសោធន៏</h4>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="card border-0 bg-transparent">
-                                    <div class="card-body text-center">
-                                        <div class="d-flex display-5 justify-content-center align-items-center">
-                                            <h1 class="counter card-title display-5 ff" data-countto="150"
-                                                data-duration="2000">0</h1>
-                                            <span>+</span>
-                                        </div>
-                                        <h4 class="card-text mt-1">អ្នកបណ្តុះបណ្តាល</h4>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body text-center">
+                                <div class="d-flex display-5 justify-content-center align-items-center">
+                                    <h1 class="counter card-title display-5 ff" data-countto="150" data-duration="2000">
+                                        0</h1>
+                                    <span>+</span>
                                 </div>
+                                <h4 class="card-text mt-1">អ្នកបណ្តុះបណ្តាល</h4>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="card border-0 bg-transparent">
-                                    <div class="card-body text-center">
-                                        <div class="d-flex display-5 justify-content-center align-items-center">
-                                            <h1 class="counter card-title display-5 ff" data-countto="98"
-                                                data-duration="2000">0</h1>
-                                            <span class="fs-2 fw-bold">%</span>
-                                        </div>
-                                        <h4 class="card-text mt-1">សម្រេចបាន​គោលដៅ</h4>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body text-center">
+                                <div class="d-flex display-5 justify-content-center align-items-center">
+                                    <h1 class="counter card-title display-5 ff" data-countto="98" data-duration="2000">0
+                                    </h1>
+                                    <span class="fs-2 fw-bold">%</span>
                                 </div>
+                                <h4 class="card-text mt-1">សម្រេចបាន​គោលដៅ</h4>
                             </div>
                         </div>
                     </div>
@@ -477,155 +488,146 @@
             </div>
         </section>
         <!-- Rules -->
-        <section class="py-10  bg-third" id="rules">
+        <section class="py-8 bg-third" id="rules">
             <div class="container ">
-                <div class=" mb-2">
-                    <div class="text-center my-5">
-                        <h2 class="fw-bold text-main"> ច្បាប់នែការលេងបាល់ទះ
-                        </h2>
-                        <p class="text-prime lead ">ចំណេះដឹងទាំងអស់ដែលអ្នកត្រូវការដើម្បីលេងបាល់បោះ</p>
+                <div class="text-center">
+                    <h1 class="display-5 fw-bold text-main text-center">ច្បាប់នែការលេងបាល់ទះ</h1>
+                    <h4 class="my-4 text-center fw-normal text-second">ចំណេះដឹងទាំងអស់ដែលអ្នកត្រូវការដើម្បីលេងបាល់បោះ</h4>
+                </div>
+                <div class="row g-4  ">
+                    <div class="col-lg-3">
+                        <div class="card text-center bg-prime border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title text-green ff fw-bold"><span class="ff">5</span></h3>
+                                <p class="card-text text-prime lead">អ្នកលេងក្នុងមួយក្រុម</p>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="row g-4  ">
-                        <div class="col-lg-3">
-                            <div class="card text-center bg-prime border-0 shadow-sm">
-                                <div class="card-body">
-                                    <h3 class="card-title text-success fw-bold">5</h3>
-                                    <p class="card-text text-prime lead">អ្នកលេងក្នុងមួយក្រុម</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="card text-center bg-prime border-0 shadow-sm">
-                                <div class="card-body">
-                                    <h3 class="card-title text-success fw-bold">4</h3>
-                                    <p class="card-text text-prime lead">តង់</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="card text-center bg-prime border-0 shadow-sm">
-                                <div class="card-body">
-                                    <h3 class="card-title text-success fw-bold">12</h3>
-                                    <p class="card-text text-prime lead">នាទីក្នុងមួយតង់</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="card text-center bg-prime border-0 shadow-sm">
-                                <div class="card-body">
-                                    <h3 class="card-title text-success fw-bold">24</h3>
-                                    <p class="card-text text-prime lead">វិនាទីការពារ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card bg-prime border-0  py-5 px-2  rounded-5 hover-lift h-100">
-                                <div class="card-body ">
-                                    <h5 class="card-title text-main fw-bold text-center ">គោលដៅនៃការលេងបាល់បោះ</h5>
-                                    <p class="card-text text-prime lead "
-                                        style="font-size: 15px;  text-align: justify;">
-                                        គោលដៅនៃការលេងបាល់បោះគឺដើម្បីដាក់បាល់
-                                        ទៅក្នុងរបងនៃក្រុមប្រឆាំង។ ក្រុមដែលបានពិន្ទុច្រើនជាងនៅចុងបញ្ចប់នៃហ្គេម
-                                        គឺជាក្រុមឈ្នះ។</p>
-                                    <ul class="rule-list text-prime">
-                                        <li>ការបោះពីក្នុងវង់ធំ: ២ពិន្ទុ</li>
-                                        <li>ការបោះពីក្រៅវង់បីពិន្ទុ: ៣ពិន្ទុ</li>
-                                        <li>ការបោះដោយសេរី: ១ពិន្ទុ</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card bg-prime border-0  py-5 px-2  rounded-5 hover-lift">
-                                <div class="card-body ">
-                                    <h5 class="card-title text-main fw-bold text-center ">សមាសភាពក្រុម</h5>
-                                    <p class="card-text text-prime lead "
-                                        style="font-size: 15px;  text-align: justify;">
-                                        ក្រុមនីមួយៗមានអ្នកលេង ៥ នាក់នៅលើទីលានក្នុងមួយពេល</p>
-                                    <ul class="rule-list text-prime">
-                                        <li>អ្នកបញ្ជាការ (Point Guard)</li>
-                                        <li>អ្នកបាញ់ (Shooting Guard)</li>
-                                        <li>អ្នកលេងមុខតូច (Small Forward)</li>
-                                        <li>អ្នកលេងមុខធំ (Power Forward)</li>
-                                        <li>អ្នកកណ្តាល (Center)</li>
-                                    </ul>
-                                </div>
+                    <div class="col-lg-3">
+                        <div class="card text-center bg-prime border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title text-green ff fw-bold">4</h3>
+                                <p class="card-text text-prime lead">តង់</p>
                             </div>
 
                         </div>
-                        <div class="col-lg-4">
-                            <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift h-100">
-
-                                <div class="card-body ">
-                                    <h5 class="card-title text-main fw-bold text-center ">រយៈពេលការប្រកួត</h5>
-                                    <p class="card-text text-prime lead "
-                                        style="font-size: 15px;  text-align: justify;">
-                                        ក្រុមនីមួយៗមានអ្នកលេង ៥ នាក់នៅលើទីលានក្នុងមួយពេល</p>
-                                    <ul class="rule-list text-prime">
-                                        <li>NBA: ១២នាទីក្នុងមួយត្រីមាស</li>
-                                        <li>សកលវិទ្យាល័យ: ពីរដង ២០នាទី</li>
-                                        <li>វិទ្យាល័យ: ៨នាទីក្នុងមួយត្រីមាស</li>
-                                        <li>ពេលបន្ថែម: ៥នាទី (ប្រសិនបើស្មើ)</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card text-center bg-prime border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title text-green ff fw-bold">12</h3>
+                                <p class="card-text text-prime lead">នាទីក្នុងមួយតង់</p>
                             </div>
-
                         </div>
-                        <div class="col-lg-4">
-                            <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift">
-                                <div class="card-body ">
-                                    <h5 class="card-title text-main fw-bold text-center ">វិធានកាន់បាល់</h5>
-                                    <p class="card-text text-prime lead "
-                                        style="font-size: 15px;  text-align: justify;">
-                                        ក្រុមត្រូវតែរុញបាល់ទៅមុខ និងប៉ុនប៉ងបាញ់ក្នុងរយៈពេលកំណត់</p>
-                                    <ul class="rule-list text-prime">
-                                        <li>២៤វិនាទីសម្រាប់ការបាញ់ (NBA)</li>
-                                        <li>៨វិនាទីដើម្បីឆ្លងកន្លះទីលាន</li>
-                                        <li>៣វិនាទីក្នុងតំបន់មាស</li>
-                                        <li>៥វិនាទីដើម្បីបញ្ជូលបាល់</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card text-center bg-prime border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="card-title text-green ff fw-bold">24</h3>
+                                <p class="card-text text-prime lead">វិនាទីការពារ</p>
                             </div>
-
                         </div>
-                        <div class="col-lg-4">
-                            <div class="card bg-prime border-0  py-5 px-2 h-100 rounded-5 hover-lift ">
-                                <div class="card-body ">
-                                    <h5 class="card-title text-main fw-bold text-center ">កំហុស និងការបាញ់សេរី</h5>
-                                    <p class="card-text text-prime lead "
-                                        style="font-size: 15px;  text-align: justify;">
-                                        អ្នកលេងត្រូវបានពិន័យចំពោះការប៉ះពាល់រាងកាយខុសច្បាប់។</p>
-                                    <ul class="rule-list text-prime">
-                                        <li>កំហុសផ្ទាល់ខ្លួន: ៦កំហុស = បណ្តេញចេញ</li>
-                                        <li>កំហុសក្រុម: បាញ់សេរីបន្ទាប់ពី ៧កំហុស</li>
-                                        <li>កំហុសបច្ចេកទេស: អាកប្បកិរិយាមិនល្អ</li>
-                                        <li>កំហុសធ្ងន់ធ្ងរ: ការប៉ះទង្គិចហួសហេតុ</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  py-5 px-2  rounded-5 hover-lift h-100">
+                            <div class="card-body ">
+                                <h4 class="card-title text-main fw-bold text-center ">គោលដៅនៃការលេងបាល់បោះ</h4>
+                                <h6 class="card-text text-prime fw-normal lh-base">
+                                    គោលដៅនៃការលេងបាល់បោះគឺដើម្បីដាក់បាល់
+                                    ទៅក្នុងរបងនៃក្រុមប្រឆាំង។ ក្រុមដែលបានពិន្ទុច្រើនជាងនៅចុងបញ្ចប់នៃហ្គេម
+                                    គឺជាក្រុមឈ្នះ។</h6>
+                                <ul class="rule-list text-second">
+                                    <li><strong class="text-prime">ការបោះពីក្នុងវង់ធំ :</strong> <span class="ff">2</span> ពិន្ទុ</li>
+                                    <li>ការបោះពីក្រៅវង់បីពិន្ទុ: ៣ពិន្ទុ</li>
+                                    <li>ការបោះដោយសេរី: ១ពិន្ទុ</li>
+                                </ul>
                             </div>
-
                         </div>
-                        <div class="col-lg-4 ">
-                            <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift">
-                                <div class="card-body ">
-                                    <h5 class="card-title text-main fw-bold text-center ">ការចាប់ផ្តើម</h5>
-                                    <p class="card-text text-prime lead "
-                                        style="font-size: 15px;  text-align: justify;">
-                                        ការប្រកួតចាប់ផ្តើមដោយការលោតចាប់បាល់នៅកណ្តាលទីលាន</p>
-                                    <ul class="rule-list text-prime">
-                                        <li>ការលោតចាប់បាល់រវាងអ្នកលេងពីរនាក់</li>
-                                        <li>ការកាន់បាល់ឆ្លាស់គ្នាបន្ទាប់</li>
-                                        <li>ប្តូរផ្នែកបន្ទាប់ពីពាក់កណ្តា</li>
-                                        <li>ក្រុមឈ្នះបាញ់មុនក្នុងពេលបន្ថែម</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  py-5 px-2  rounded-5 hover-lift">
+                            <div class="card-body ">
+                                <h5 class="card-title text-main fw-bold text-center ">សមាសភាពក្រុម</h5>
+                                <p class="card-text text-prime lead " style="font-size: 15px;  text-align: justify;">
+                                    ក្រុមនីមួយៗមានអ្នកលេង ៥ នាក់នៅលើទីលានក្នុងមួយពេល</p>
+                                <ul class="rule-list text-prime">
+                                    <li>អ្នកបញ្ជាការ (Point Guard)</li>
+                                    <li>អ្នកបាញ់ (Shooting Guard)</li>
+                                    <li>អ្នកលេងមុខតូច (Small Forward)</li>
+                                    <li>អ្នកលេងមុខធំ (Power Forward)</li>
+                                    <li>អ្នកកណ្តាល (Center)</li>
+                                </ul>
                             </div>
-
                         </div>
 
                     </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift h-100">
+
+                            <div class="card-body ">
+                                <h5 class="card-title text-main fw-bold text-center ">រយៈពេលការប្រកួត</h5>
+                                <p class="card-text text-prime lead " style="font-size: 15px;  text-align: justify;">
+                                    ក្រុមនីមួយៗមានអ្នកលេង ៥ នាក់នៅលើទីលានក្នុងមួយពេល</p>
+                                <ul class="rule-list text-prime">
+                                    <li>NBA: ១២នាទីក្នុងមួយត្រីមាស</li>
+                                    <li>សកលវិទ្យាល័យ: ពីរដង ២០នាទី</li>
+                                    <li>វិទ្យាល័យ: ៨នាទីក្នុងមួយត្រីមាស</li>
+                                    <li>ពេលបន្ថែម: ៥នាទី (ប្រសិនបើស្មើ)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift">
+                            <div class="card-body ">
+                                <h5 class="card-title text-main fw-bold text-center ">វិធានកាន់បាល់</h5>
+                                <p class="card-text text-prime lead " style="font-size: 15px;  text-align: justify;">
+                                    ក្រុមត្រូវតែរុញបាល់ទៅមុខ និងប៉ុនប៉ងបាញ់ក្នុងរយៈពេលកំណត់</p>
+                                <ul class="rule-list text-prime">
+                                    <li>២៤វិនាទីសម្រាប់ការបាញ់ (NBA)</li>
+                                    <li>៨វិនាទីដើម្បីឆ្លងកន្លះទីលាន</li>
+                                    <li>៣វិនាទីក្នុងតំបន់មាស</li>
+                                    <li>៥វិនាទីដើម្បីបញ្ជូលបាល់</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  py-5 px-2 h-100 rounded-5 hover-lift ">
+                            <div class="card-body ">
+                                <h5 class="card-title text-main fw-bold text-center ">កំហុស និងការបាញ់សេរី</h5>
+                                <p class="card-text text-prime lead " style="font-size: 15px;  text-align: justify;">
+                                    អ្នកលេងត្រូវបានពិន័យចំពោះការប៉ះពាល់រាងកាយខុសច្បាប់។</p>
+                                <ul class="rule-list text-prime">
+                                    <li>កំហុសផ្ទាល់ខ្លួន: ៦កំហុស = បណ្តេញចេញ</li>
+                                    <li>កំហុសក្រុម: បាញ់សេរីបន្ទាប់ពី ៧កំហុស</li>
+                                    <li>កំហុសបច្ចេកទេស: អាកប្បកិរិយាមិនល្អ</li>
+                                    <li>កំហុសធ្ងន់ធ្ងរ: ការប៉ះទង្គិចហួសហេតុ</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 ">
+                        <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift">
+                            <div class="card-body ">
+                                <h5 class="card-title text-main fw-bold text-center ">ការចាប់ផ្តើម</h5>
+                                <p class="card-text text-prime lead " style="font-size: 15px;  text-align: justify;">
+                                    ការប្រកួតចាប់ផ្តើមដោយការលោតចាប់បាល់នៅកណ្តាលទីលាន</p>
+                                <ul class="rule-list text-prime">
+                                    <li>ការលោតចាប់បាល់រវាងអ្នកលេងពីរនាក់</li>
+                                    <li>ការកាន់បាល់ឆ្លាស់គ្នាបន្ទាប់</li>
+                                    <li>ប្តូរផ្នែកបន្ទាប់ពីពាក់កណ្តា</li>
+                                    <li>ក្រុមឈ្នះបាញ់មុនក្នុងពេលបន្ថែម</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -652,46 +654,46 @@
                     </h2>
                     <p class="text-prime lead ">សុខភាពកាយ និងចិត្តល្អប្រសើរដោយការលេងបាល់បោះ</p>
                 </div>
-                 <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="card bg-prime border-0  h-100  hover-lift">
-                        <div class="card-body text-center">
-                            <i class="bi bi-heart-pulse-fill text-danger fs-1 mb-3"></i>
-                            <h5 class="card-title text-main fw-bold">សុខភាពបេះដូងល្អ</h5>
-                            <p class="card-text text-prime lead" style="font-size: 18px;">
-                                ការលេងបាល់បោះជួយបង្កើនសុខភាពបេះដូង
-                                និងប្រព័ន្ធឈាម។ វាជួយកាត់បន្ថយហានិភ័យនៃជំងឺបេះដូង និងជំងឺរាតត្បាតផ្សេងៗ។</p>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  h-100  hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-heart-pulse-fill text-danger fs-1 mb-3"></i>
+                                <h5 class="card-title text-main fw-bold">សុខភាពបេះដូងល្អ</h5>
+                                <p class="card-text text-prime lead" style="font-size: 18px;">
+                                    ការលេងបាល់បោះជួយបង្កើនសុខភាពបេះដូង
+                                    និងប្រព័ន្ធឈាម។ វាជួយកាត់បន្ថយហានិភ័យនៃជំងឺបេះដូង និងជំងឺរាតត្បាតផ្សេងៗ។</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card bg-prime border-0  h-100  hover-lift">
-                        <div class="card-body text-center">
-                            <i class="bi bi-people-fill text-success fs-1 mb-3 "></i>
-                            <h5 class="card-title
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  h-100  hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-people-fill text-success fs-1 mb-3 "></i>
+                                <h5 class="card-title
                                 text-main fw-bold">ការសហការគ្នា និងការទំនាក់ទំនងសង្គម</h5>
-                            <p class="card-text text-prime lead" style="font-size: 18px;">
-                                បាល់បោះជាកីឡាក្រុមដែលលើកកម្ពស់ការសហការគ្នា
-                                និងការទំនាក់ទំនងសង្គម។ វាជួយអ្នកអភិវឌ្ឍជំនាញការទំនាក់ទំនង និងការធ្វើការជាក្រុម។</p>
+                                <p class="card-text text-prime lead" style="font-size: 18px;">
+                                    បាល់បោះជាកីឡាក្រុមដែលលើកកម្ពស់ការសហការគ្នា
+                                    និងការទំនាក់ទំនងសង្គម។ វាជួយអ្នកអភិវឌ្ឍជំនាញការទំនាក់ទំនង និងការធ្វើការជាក្រុម។</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4">
-                    <div class="card bg-prime border-0  h-100 hover-lift">
-                        <div class="card-body text-center">
-                            <i class="bi bi-lightbulb text-warning fs-1 mb-3"></i>
-                            <h5 class="card-title text-main fw-bold">ការកែលម្អសមត្ថភាពផ្លូវចិត្ត</h5>
-                            <p class="card-text text-prime lead" style="font-size: 18px;">
-                                ការលេងបាល់បោះជួយកែលម្អសមត្ថភាពផ្លូវចិត្ត
-                                ដូចជាការផ្តោតអារម្មណ៍ ការគិតយ៉ាងយុត្តិធម៌ និងការដោះស្រាយបញ្ហា។ វាជួយកាត់បន្ថយស្ត្រេស
-                                និងបង្កើនសុខភាពផ្លូវចិត្តទូទៅ។</p>
+                    <div class="col-lg-4">
+                        <div class="card bg-prime border-0  h-100 hover-lift">
+                            <div class="card-body text-center">
+                                <i class="bi bi-lightbulb text-warning fs-1 mb-3"></i>
+                                <h5 class="card-title text-main fw-bold">ការកែលម្អសមត្ថភាពផ្លូវចិត្ត</h5>
+                                <p class="card-text text-prime lead" style="font-size: 18px;">
+                                    ការលេងបាល់បោះជួយកែលម្អសមត្ថភាពផ្លូវចិត្ត
+                                    ដូចជាការផ្តោតអារម្មណ៍ ការគិតយ៉ាងយុត្តិធម៌ និងការដោះស្រាយបញ្ហា។ វាជួយកាត់បន្ថយស្ត្រេស
+                                    និងបង្កើនសុខភាពផ្លូវចិត្តទូទៅ។</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-           
+
         </section>
         <!-- pricing -->
         <section class="py-8 bg-third">
@@ -706,9 +708,11 @@
                         <div class=" h-100 ">
                             <div class="card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs">
                                 <div class="card-body ">
-                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក <span class="ff">BASIC</span> </h2>
+                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក <span
+                                            class="ff">BASIC</span> </h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចាប់ផ្តើម</p>
-                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; "><span class="ff">15</span>
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; "><span
+                                            class="ff">15</span>
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -744,9 +748,11 @@
                         <div class="pricing-card popular-card rounded-5 ">
                             <div class="card py-3  rounded-5 border-0 bg-prime">
                                 <div class="card-body">
-                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក <span class="ff">PRIME</span></h2>
+                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក <span class="ff">PRIME</span>
+                                    </h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចង់ពង្រឹងសុខភាព</p>
-                                    <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;"><span class="ff"></span>$30
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;"><span
+                                            class="ff"></span>$30
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -794,9 +800,11 @@
                         <div class="  rounded-5">
                             <div class=" pricing-card  card py-3  rounded-5 border-0 bg-prime  ">
                                 <div class="card-body">
-                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក <span class="ff">STANDARD</span> </h2>
+                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក <span
+                                            class="ff">STANDARD</span> </h2>
                                     <p class=" text-center text-prime lead">សម្រាប់អ្នកហាត់ទៀងទាត់</p>
-                                    <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; "><span class="ff">$25</span>
+                                    <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; "><span
+                                            class="ff">$25</span>
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
@@ -1136,12 +1144,13 @@
                         </div>
                     </div>
                     <div class="col-lg-5">
-                       <div class="card bg-third border-0">
-                         <!-- Lottie Animation -->
-                        <dotlottie-wc src="../assets/img/sports/Rocket research.json" style="width: 350px; height: 300px ; margin: auto;" loop
-                            autoplay speed="1" mode="forward">
-                        </dotlottie-wc>
-                       </div>
+                        <div class="card bg-third border-0">
+                            <!-- Lottie Animation -->
+                            <dotlottie-wc src="../assets/img/sports/Rocket research.json"
+                                style="width: 350px; height: 300px ; margin: auto;" loop autoplay speed="1"
+                                mode="forward">
+                            </dotlottie-wc>
+                        </div>
                     </div>
                 </div>
             </div>

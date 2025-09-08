@@ -132,6 +132,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.text-green {
+      color: #2ecc71 !important;
+    }
+
 .navbar {
   z-index: 1000;
 }
