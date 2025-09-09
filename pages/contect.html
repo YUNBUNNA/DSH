@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- Load dotlottie-wc -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
     <!-- link bootstrap -->
     <link
       rel="stylesheet"
@@ -29,7 +31,15 @@
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <style>
-      
+      .email:hover, .call:hover {
+        color: var(--text-main) !important;
+      }
+      /* .info .card{
+        transition: all 0.3s ease-in-out;
+      }
+      .info .card:hover{
+        transform: translateY(-10px);
+      } */
     </style>
   </head>
 
@@ -175,122 +185,123 @@
         </nav>
     </header>
     
-    <main>
-
-
-        
-      <section style="margin-top: 150px;">
-         <h5​ class="display-5 position-relative text-prime text-main mt-5 fw-bold" style="margin-left: 450px;"
-              >ទំនាក់ទំនងពួកយើង</h5​
-            >
-          <p class="text-center mt-5 text-prime fs-text">បើសិនជាលោកអ្នកមានបង្ហាញ់អ្វីបន្ថៃមអាច់ទំនាក់ទំនងមកពួកយើងដូចខាងក្រោម</p>
+    <main style="margin-top: 110px;">
+        <!-- <section class="hero-banner">
+          <div class="img bg-danger" style="width: 100%; height: 400px;"></div>
+        </section> -->
+        <section class="bg-third py-7">
         <div class="container">
-          
-        <div class="row">
-          <div class="col-6 mt-5">
-            
-            
-            <div class="row mt-1">
-              <div class="col-6">
-                <div class="mb-3">
-                  <input
-                    type="first name"
-                    class="form-control bg-prime fs-text text-second ps-1"
-                    id="first name"
-                    placeholder="នាមត្រកូល"
-                  />
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="mb-3">
-                  <input
-                    type="last name"
-                    class="form-control bg-prime fs-text text-second ps-1"
-                    id="last name"
-                    placeholder="នាមខ្លួន"
-                  />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-3 position-relative">
-                  <input
-                    type="Email"
-                    class="form-control bg-prime fs-text text-second ps-1"
-                    id="email"
-                    placeholder="អុីមែល"
-                  />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-3 position-relative">
-                  <input
-                    type="phone number"
-                    class="form-control bg-prime fs-text text-second ps-1"
-                    id="phone number"
-                    placeholder="លេខទូរស័ព្ទ"
-                  />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="mb-3">
-                  <textarea
-                    class="form-control ​​ps-1"
-                    id="message"
-                    rows="4"
-                    placeholder="សូមផ្ងើរសារ"
-                  ></textarea>
-                </div>
-              </div>
+            <div class="py-0 text-center">
+                <h1 class="display-5 fw-bold text-main text-center">ផ្ញើសារមកកាន់យើងខ្ញុំ</h1>
+                <h5 class="my-4 text-center fw-normal text-second">បំពេញទម្រង់ខាងក្រោម ហើយយើងនឹងឆ្លើយតបទៅអ្នកវិញឱ្យបានឆាប់តាមដែលអាចធ្វើទៅបាន។</h5>
             </div>
-              <h4 class="fs-text text-main fw-bold">សេវាកម្ម</h4>
-              <div class="row">
-                <div class="col-3">
-                             <div class="form-check">
-                        <input type="checkbox" class="form-check-input">
-            <label for="" class="text-prime">គ្រូបង្វឹក</label>
-
-         </div>
-         <div class="form-check mt-2">
-                        <input type="checkbox" class="form-check-input">
-            <label for="" class="text-prime">ចូលរួមថ្នាក់</label>
-
-         </div>
-         <div class="form-check mt-2">
-                        <input type="checkbox" class="form-check-input">
-            <label for="" class="text-prime">សេវាអត់គិតថ្លៃ</label>
-
-         </div>
+            <div class="row mt-10 bg-prime shadow-xs rounded-4 py-5">
+                <div class="col-lg-6">
+                    <form action="" class="p-4">
+                        <div class="row">
+                            <div class="col-lg-6 mb-3 position-relative">
+                                <label for="firstname" class="form-label fs-title">នាមខ្លួន</label>
+                                <input type="text" class="form-control bg-prime text-prime fs-text ps-7" id="firstname"
+                                placeholder="នាមខ្លួនរបស់អ្នក">
+                                <i class="bi bi-person position-absolute text-gold icon-input ms-2"></i>
+                            </div>
+                            <div class="col-lg-6 mb-3 position-relative">
+                                <label for="lastname" class="form-label fs-title">នាមត្រកូល</label>
+                                <input type="text" class="form-control bg-prime text-prime fs-text ps-7" id="lastname"
+                                placeholder="នាមត្រកូលរបស់អ្នក">
+                                <i class="bi bi-person position-absolute text-gold icon-input ms-2"></i>
+                            </div>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="emaill" class="form-label fs-title">អ៊ីមែល</label>
+                            <input type="email" class="form-control bg-prime text-prime fs-text ps-7" id="emaill"
+                            placeholder="អ៊ីមែលរបស់អ្នក">
+                            <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <label for="message" class="form-label fs-title">សារ</label>
+                            <textarea class="form-control bg-prime text-prime fs-text ps-2" id="message" rows="2" placeholder="សាររបស់អ្នក..."></textarea>
+                            <!-- <i class="bi bi-pencil-square position-absolute text-gold icon-input"></i> -->
+                        </div>
+                        <button class="btn btn-gold px-6 mt-3" type="button">ផ្ញើសារ</button>
+                    </form>
                 </div>
-             
-              </div>
-              <div class="row">
-                <div class="col-12 mt-2">
-                  <button​  class="btn btn-gold fw-bold" style="width: 100%;">ផ្ងើរទៅ</button​>
-                </div>
-              </div>
-              
+            <div class="col-lg-6">
+                <!-- Lottie Animation -->
+                <dotlottie-wc src="../assets/img/contact us.json" style="width: 100%; height: 100%" loop autoplay speed="1"
+                    mode="forward">
+                </dotlottie-wc>
+            </div>
           </div>
-          <div class="col-6 mt-2 ">
-            <h2 class="ms-5 fs-title mt-5 text-main fw-bold" >ផ្ងើរសារមកកាន់ពួកយើង</h2>
-            <p class="ms-5 mt-5 fs-text text-prime">និយាយជាមួយក្រុមរបស់ពួកយើង</p>
-            <h3 class="ms-5 fs-text  text-prime"><a href="#" class="text-prime ff"><i class="bi bi-chat-quote"></i> ចាប់ផ្តើមការជជែកផ្ទាល់</a></h3>
-            <h3 class="ms-5  fs-text text-prime"><a href="#" class="text-prime ff"><i class="bi bi-envelope-open"></i> ដោយការផ្ងើរផ្ទាល់</a></h3>
-            <h3 class="ms-5 fs-text text-prime"><a href="#" class="text-prime ff"><i class="bi bi-x-lg"></i> ផ្ងើរសារមកយើងតាម x</a></h3>
-            <h3 class="ms-5 mt-5 fs-title text-main fw-bold">លេខទំនាក់ទំនង</h3>
-            <p class="ms-5 fs-text text-prime ">ទំនាក់ទំនងពួកយើង ថ្ងៃច័ន្ទ​​ ដល់​ ថ្ងៃសុក្រ</p>
-            <h3 class="ms-5 fs-text text-prime"><i class="bi bi-telephone-outbound-fill"></i> +(855) 972048049</h3>
-            <h3 class="mt-5 ​ ms-5 fs-title text-main fw-bold">ទីតាំងពួកយើង</h3>
-            <p class="ms-5 fs-text text-prime">បើសិនជាទំនាក់ទំនងពួកខ្ញុំអត់ចូលអាចមកដល់ទីតាំងបោះយើងផ្ទាល់</p>
-            <h3  class="ms-5 fs-text"><a href="#" class="text-prime"><i class="bi bi-geo-alt"></i> 100 smith street,toul kork,phnompenh</a>​</h3>
         </div>
-      </div>
-      </section>
-   
-
-    
-
-        
-      
+        </section>
+        <section class="info py-10 bg-third">
+            <div class="container">
+                <div class="py-5">
+                    <h1 class="display-5 fw-bold text-main text-center">ព័ត៌មានទំនាក់ទំនង</h1>
+                    <h5 class="my-4 text-center fw-normal text-second">ប្រសិនបើលោកអ្នកមានចម្ងល់បន្ថែម, សូមទំនាក់ទំនងមកកាន់យើងខ្ញុំតាមរយៈព័ត៌មានខាងក្រោម</h5>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card bg-prime shadow-xs border-0 rounded-4">
+                            <i class="bi bi-envelope text-main text-center mt-4" style="font-size: 28px;"></i>
+                            <div class="card-body text-center mb-7">
+                                <h5 class="card-title fw-normal text-prime">
+                                    អ៊ីមែលរបស់ពួកយើង
+                                </h5>
+                                <p class="card-text fs-6 text-second">ទំនាក់ទំនងតាមរយៈអ៊ីមែល</p>
+                                <a href="#" class="email text-decoration-none text-prime ff" style="font-size: 16px;"> Dsh@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card bg-prime shadow-xs border-0 rounded-4">
+                            <i class="bi bi-telephone text-main text-center mt-4" style="font-size: 28px;"></i>
+                            <div class="card-body text-center mb-7">
+                                <h5 class="card-title fw-normal text-prime">
+                                    ទំនាក់ទំនងតាមរយៈទូរស័ព្ទ
+                                </h5>
+                                <p class="card-text fs-6 text-second">និយាយជាមួយក្រុមការងារ</p>
+                                <a href="#" class="call text-decoration-none text-prime ff" style="font-size: 16px;">+855 96 123 4567</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card bg-prime shadow-xs border-0 rounded-4">
+                            <i class="bi bi-geo-alt text-main text-center mt-4" style="font-size: 28px;"></i>
+                            <div class="card-body text-center mb-4">
+                                <h5 class="card-title fw-normal text-prime">
+                                    ទីតាំងរបស់ពួកយើង
+                                </h5>
+                                <p class="card-text fs-6 text-second">
+                                    មកកាន់ទីតាំងរបស់ពួកយើងផ្ទាល់
+                                </p>
+                                <a href="https://maps.app.goo.gl/ycSHCpcmQ5ZJgFd78" class="call text-decoration-none text-prime" style="font-size: 16px;">ផ្ទះលេខ ៨៦បេ ផ្លូវ ៣១៣ សង្កាត់បឹងកក់ ២ ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card bg-prime shadow-xs border-0 rounded-4">
+                            <i class="bi bi-clock text-main text-center mt-4" style="font-size: 28px;"></i>
+                            <div class="card-body text-center mb-4">
+                                <h5 class="card-title fw-normal text-prime">
+                                    ម៉ោងធ្វើការ
+                                </h5>
+                                <p class="card-text fs-6 text-second">
+                                    ពួកយើងនៅទីនេះដើម្បីជួយអ្នក
+                                </p>
+                                <a href="#" class="call text-decoration-none text-prime ff" style="font-size: 16px;">Mon-Fri:8AM-4PM,<br> Sat-Sun: 8AM-3PM</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <div class="container-fluid p-0">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.320473447673!2d104.891257!3d11.572268600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519e0c9b2109%3A0x8b8d35d80b920ffc!2sANT%20Technology%20Training%20School!5e1!3m2!1sen!2skh!4v1757404584528!5m2!1sen!2skh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
     </main>
 
     <!-- link bootstrap js -->
@@ -301,8 +312,5 @@
     <script src="../assets/plugins/aos/js/aos.js"></script>
     <!-- link js custom -->
     <script src="../assets/js/main.js"></script>
-    <script>
-  AOS.init();
-</script>
   </body>
 </html>
