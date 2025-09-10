@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ចុះឈ្មោះម៉ារ៉ាតុង 3Km</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --prime-color: #2c3e50;
+            --gold-color: #f39c12;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+
+        .event-info {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .btn-gold {
+            background-color: var(--gold-color);
+            border-color: var(--gold-color);
+            color: white;
+            width: 100%;
+            padding: 12px;
+            font-weight: bold;
+        }
+
+        .btn-gold:hover {
+            background-color: #e67e22;
+            border-color: #e67e22;
+            color: white;
+        }
+
+        .form-label {
+            color: var(--prime-color);
+            font-weight: 500;
+        }
+
+        .text-prime {
+            color: var(--prime-color);
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <div class="form-container">
+            <!-- Event Info -->
+            <div class="event-info">
+                <img src="https://i.pinimg.com/736x/f5/b3/1e/f5b31e6d5dd90713a4e9482a6f791247.jpg" 
+                     alt="Marathon" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                <h2 class="text-prime mt-3 mb-2">ម៉ារ៉ាតុង 3Km</h2>
+                <p class="mb-1"><i class="bi bi-calendar me-2"></i>ថ្ងៃសុក្រ ខែមករា ឆ្នាំ 2025, 5:00 PM</p>
+                <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>កោះពេជ្រ, ភ្នំពេញ</p>
+                <p class="mb-0"><span class="badge bg-success fs-6">FREE</span></p>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="registrationForm">
+                <h4 class="text-prime mb-4">ចុះឈ្មោះឥឡូវនេះ</h4>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">នាមត្រកូល *</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">នាមខ្លួន *</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">អ៊ីម៉ែល *</label>
+                    <input type="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">លេខទូរសព្ទ *</label>
+                    <input type="tel" class="form-control" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">អាយុ *</label>
+                        <input type="number" class="form-control" min="16" max="80" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">ភេទ *</label>
+                        <select class="form-select" required>
+                            <option value="">ជ្រើសរើស</option>
+                            <option value="male">ប្រុស</option>
+                            <option value="female">ស្រី</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="agree" required>
+                        <label class="form-check-label" for="agree">
+                            ខ្ញុំយល់ព្រម និងទទួលរងហានិភ័យក្នុងការចូលរួម
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-gold">
+                    បញ្ជាក់ការចុះឈ្មោះ
+                </button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message">
+                <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+                <h4 class="text-success mt-3">ការចុះឈ្មោះបានជោគជ័យ!</h4>
+                <p>អរគុណសម្រាប់ការចុះឈ្មោះ។ យើងនឹងទាក់ទងអ្នកឆាប់ៗនេះ។</p>
+                <button class="btn btn-outline-primary" onclick="resetForm()">ចុះឈ្មោះម្តងទៀត</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.innerHTML = 'កំពុងដំណើរការ...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                this.style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+            }, 1500);
+        });
+
+        function resetForm() {
+            document.getElementById('registrationForm').reset();
+            document.getElementById('registrationForm').style.display = 'block';
+            document.getElementById('successMessage').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
