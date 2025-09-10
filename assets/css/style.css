@@ -133,8 +133,8 @@ body {
 }
 
 .text-green {
-      color: #2ecc71 !important;
-    }
+  color: #2ecc71 !important;
+}
 
 .navbar {
   z-index: 1000;
@@ -477,9 +477,22 @@ body {
 }
 
 .border-blue {
-  border: 2px solid #58A8E6 !important;
+  border: 2px solid #58a8e6 !important;
 }
 
 button:focus {
-            border: none !important;
-        }
+  border: none !important;
+}
+
+#topbar {
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+  max-height: 80px;
+  opacity: 1;
+}
+
+#topbar.hide {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+}

@@ -150,6 +150,16 @@ var swiper5 = new Swiper(".myDetail2", {
   },
 });
 
+// nav-bar
+window.addEventListener("scroll", function () {
+  const topbar = document.getElementById("topbar");
+  if (window.scrollY > 0) {
+    topbar.classList.add("hide");
+  } else {
+    topbar.classList.remove("hide");
+  }
+});
+
 // Add to Cart
 document.getElementById("addCartBtn").addEventListener("click", () => {
   const toast = new bootstrap.Toast(document.getElementById("cartToast"));
