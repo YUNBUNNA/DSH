@@ -17,6 +17,21 @@
     <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        /* Internal style  */
+        .toast {
+            display: block !important;
+            opacity: 0;
+            transform: translateX(100vw);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 </head>
 
 <body class="bg-prime">
@@ -163,166 +178,938 @@
 
     <!-- main -->
     <main>
-        <!-- hero-banner -->
-        <section class="hero-banner pt-15">
-            <div class="contiainer">
 
+        <!-- hero-banner -->
+        <section class="hero-banner pt-20 ">
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+                <h1 class="display-4 fw-bold text-main mb-3">
+                    ស្វាគមន៍មកកាន់ព្រឹត្តិការណ៍កីឡា</h1>
+                <p class="text-black fs-5 mb-4 text-prime">រីករាយជាមួយព្រឹត្តិការណ៍កីឡាដ៏អស្ចារ្យ
+                    និងចូលរួមជាមួយយើងសម្រាប់បទពិសោធន៍ថ្មីៗ!</p>
+                <a href="#pills-កីឡាល្បីៗ" class="btn border-blue px-4 py-2 fw-bold shadow mb-5">ស្វែងរកកីឡា</a>
+            </div>
+        </section>
+
+        <!-- Brand -->
+        <section class="brand py-5">
+            <div class="container-fluid overflow-hidden position-relative bg-mask">
+                <div class="marquee-container">
+                    <div id="marquee-inner" class="marquee-inner">
+                        <img src="../assets/img/logo-brand/logo1.png" alt="" class="img-fluid">
+                        <img src="../assets/img/logo-brand/logo2.png" alt="" class="img-fluid">
+                        <img src="../assets/img/logo-brand/logo3.png" alt="" class="img-fluid">
+                        <img src="../assets/img/logo-brand/logo4.png" alt="" class="img-fluid">
+                        <img src="../assets/img/logo-brand/logo5.png" alt="" class="img-fluid">
+                        <img src="../assets/img/logo-brand/logo6.png" alt="" class="img-fluid">
+                        <img src="../assets/img/logo-brand/logo8.png" alt="" class="img-fluid">
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- all sports -->
-        <section class="bg-third py-5">
-            <div class="container">
-                <h5 class="fw-bold text-main mb-6" style="font-size: 28px;">កីឡាល្បីៗ</h5>
-                <div class="row g-4">
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
+        <section class="bg-prime bg-third py-4">
+            <div class="container d-flex flex-column mt-5">
+                <h2 id="tab-title" class="text-center text-main mb-3 fw-bold">កីឡាល្បីៗ</h2>
+                <ul class="nav nav-pills mb-3 mx-auto gap-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link link-hover active px-4" id="pills-កីឡាល្បីៗ-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-កីឡាល្បីៗ" type="button" role="tab" aria-controls="pills-កីឡាល្បីៗ"
+                            aria-selected="true" data-title="កីឡាល្បីៗ">កីឡាល្បីៗ</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link link-hover px-4" id="pills-រត់-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-រត់" type="button" role="tab" aria-controls="pills-រត់"
+                            aria-selected="false" data-title="រត់">រត់</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link link-hover px-4" id="pills-ហែលទឺក-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-ហែលទឺក" type="button" role="tab" aria-controls="pills-ហែលទឺក"
+                            aria-selected="false" data-title="ហែលទឺក">ហែលទឺក</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link link-hover px-4" id="pills-វាយសី-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-វាយសី" type="button" role="tab" aria-controls="pills-វាយសី"
+                            aria-selected="false" data-title="វាយសី">វាយសី</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-កីឡាល្បីៗ" role="tabpanel"
+                        aria-labelledby="pills-កីឡាល្បីៗ-tab" tabindex="0">
+                        <div class="container py-5">
+                            <div class="row g-3">
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span
+                                                        class="ff">5Km</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn1"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast1" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/swimming-competition-ads-design-template-74b3b8ed823faffa2a27af1b8aeaff1f_screen.jpg?ts=1698141693"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ហែលទឹករយចម្ងាយ <span
+                                                        class="ff">100m</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn2"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast2" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃចន្ទ
+                                                ខែមីនា​​ ឆ្នាំ​<span class="ff">2025, 3:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                សៀមរាម,
+                                                កម្ពុជា</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-success fw-bold card-text">FREE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://thumbs.dreamstime.com/b/tennis-tournament-poster-template-racket-ball-sample-text-separate-layer-vector-illustration-225506184.jpg?w=576"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">វាយសី</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn3"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast3" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃពុធ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 1:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                ស្ទឹងជ័យ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$5.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://img.freepik.com/free-vector/2021-sporting-event-poster_52683-40154.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span
+                                                        class="ff">5Km</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn4"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast4" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$250.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://img.pikbest.com/origin/06/65/24/91FpIkbEsTwuB.jpg!w700wp"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">បាល់ទាត់</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn5"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast5" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃពុធ
+                                                ខែមេសា​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                តាកែវ,
+                                                កម្ពុជា</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://img.pikbest.com/templates/20240729/basketball-tournament-flyer-and-social-media-instagram-banner-template_10687148.jpg!w700wp"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">បាល់បោះ</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn6"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast6" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://img.freepik.com/premium-vector/badminton-ads-promotional-poster-design_1033790-11277.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">វាយសី</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn7"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast7" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://img.pikbest.com/templates/2022/11/29025419/see-the-hero-sports-poster-on-fashionable-and-dynamic-field-of-volleyball-game_706268.jpg!w700wp"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">បាល់ទះ</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn8"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast8" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-success fw-bold card-text">FREE</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
+                    <div class="tab-pane fade" id="pills-រត់" role="tabpanel" aria-labelledby="pills-រត់-tab"
+                        tabindex="0">
+                        <div class="container py-5">
+                            <div class="row g-3">
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span
+                                                        class="ff">5Km</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn9"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast9" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://i.pinimg.com/736x/f5/b3/1e/f5b31e6d5dd90713a4e9482a6f791247.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span
+                                                        class="ff">10Km</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn10"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast10" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://i.pinimg.com/736x/f5/b3/1e/f5b31e6d5dd90713a4e9482a6f791247.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span
+                                                        class="ff">3Km</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn11"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast11" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-success fw-bold card-text">FREE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://i.pinimg.com/564x/32/23/14/322314e988e9f0eb2bdd8535e1184806.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span
+                                                        class="ff">21Km</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn12"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast12" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃសុក្រ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 5:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                កោះពេជ្រ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$10.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
+                    <div class="tab-pane fade" id="pills-ហែលទឺក" role="tabpanel" aria-labelledby="pills-ហែលទឺក-tab"
+                        tabindex="0">
+                        <div class="container py-5">
+                            <div class="row g-3">
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/swimming-competition-ads-design-template-74b3b8ed823faffa2a27af1b8aeaff1f_screen.jpg?ts=1698141693"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ហែលទឹករយចម្ងាយ <span
+                                                        class="ff">100m</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn13"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast13" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃចន្ទ
+                                                ខែមីនា​​ ឆ្នាំ​<span class="ff">2025, 3:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                សៀមរាម,
+                                                កម្ពុជា</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-success fw-bold card-text">FREE</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/swimming-tournament-design-template-d2321d52749820d3f2e693443c299d7d_screen.jpg?ts=1619454422"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ហែលទឹករយចម្ងាយ <span
+                                                        class="ff">100m</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn14"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast14" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃចន្ទ
+                                                ខែមីនា​​ ឆ្នាំ​<span class="ff">2025, 3:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                សៀមរាម,
+                                                កម្ពុជា</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-success fw-bold card-text">FREE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/swimming-competition-design-template-4341da846e60334b12b719f42eac131d_screen.jpg?ts=1698141696"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ហែលទឹករយចម្ងាយ <span
+                                                        class="ff">100m</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn15"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast15" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃចន្ទ
+                                                ខែមីនា​​ ឆ្នាំ​<span class="ff">2025, 3:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                សៀមរាម,
+                                                កម្ពុជា</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-success fw-bold card-text">FREE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHihy5ADCnJ-QZK5ILMC2ewzDGD0DABoOCqQ&s "
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">ហែលទឹករយចម្ងាយ <span
+                                                        class="ff">100m</span></h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn16"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast16" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃចន្ទ
+                                                ខែមីនា​​ ឆ្នាំ​<span class="ff">2025, 3:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                សៀមរាម,
+                                                កម្ពុជា</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-success fw-bold card-text">FREE</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
+                    <div class="tab-pane fade" id="pills-វាយសី" role="tabpanel" aria-labelledby="pills-វាយសី-tab"
+                        tabindex="0">
+                        <div class="container py-5">
+                            <div class="row g-3">
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://img.freepik.com/premium-vector/badminton-tournament-flyer-design-template_9245-797.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">វាយសី</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn17"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast17" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃពុធ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 1:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                ស្ទឹងជ័យ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$5.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://www.shutterstock.com/shutterstock/photos/2355986291/display_1500/stock-vector-badminton-tournament-flyer-design-template-2355986291.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">វាយសី</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn18"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast18" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃពុធ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 1:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                ស្ទឹងជ័យ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$5.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://img.freepik.com/premium-vector/badminton-tournament-poster-design-badminton-background-design-shuttlecock-vector-illustration_799802-66.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">វាយសី</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn19"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast19" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃពុធ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 1:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                ស្ទឹងជ័យ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$5.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
+                                <div class="col-lg-3">
+                                    <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
+                                        <img src="https://i.pinimg.com/564x/c0/9e/c7/c09ec79c93d024be30f3b85f368561cf.jpg"
+                                            alt="" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between mt-2 mb-3">
+                                                <h5 class="card-title text-prime fs-title fw-bold">វាយសី</h5>
+                                                <button type="button" class="btn text-second ms-auto p-0 pe-2"
+                                                    id="favoriteBtn20"><i class="bi bi-heart"></i></button>
+                                                <div class="toast-container position-fixed end-0" style="top: 15%;">
+                                                    <div id="favoriteToast20" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px;"
+                                                                alt="...">
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close"><i
+                                                                    class="bi bi-x-lg text-white"></i></button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-prime fs-text mb-1"><i
+                                                    class="bi bi-clock me-2 "></i>ថ្ងៃពុធ
+                                                ខែ​មករា​​ ឆ្នាំ​<span class="ff">2025, 1:00 PM</span>
+                                            </p>
+                                            <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i>
+                                                ស្ទឹងជ័យ,
+                                                ភ្នំពេញ</p>
+                                            <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
+                                                <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
+                                                <p class="ff text-danger fw-bold card-text">$5.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -330,262 +1117,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- football -->
-        <section class="bg-third pt-8 pb-5">
-            <div class="container">
-                <h5 class="fw-bold text-main mb-6" style="font-size: 28px;">កីឡាល្បីៗ</h5>
-                <div class="row g-4">
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- running -->
-        <section class="bg-third pt-8 pb-5">
-            <div class="container">
-                <h5 class="fw-bold text-main mb-6" style="font-size: 28px;">កីឡាល្បីៗ</h5>
-                <div class="row g-4">
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- running -->
-        <section class="bg-third pt-8 pb-5">
-            <div class="container">
-                <h5 class="fw-bold text-main mb-6" style="font-size: 28px;">កីឡាល្បីៗ</h5>
-                <div class="row g-4">
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 bg-prime shadow-sm shadow-xs overflow-hidden">
-                            <img src="https://assets.visme.co/templates/banners/thumbnails/i_Charity-Run-Event-Poster_full.jpg"
-                                alt="" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between mt-2 mb-3">
-                                    <h5 class="card-title text-prime fs-title fw-bold">ម៉ារ៉ាតុង <span class="ff">5Km</span></h5>
-                                    <i class="bi bi-suit-heart text-second"></i>
-                                </div>
-                                <p class="card-text text-prime fs-text mb-1"><i class="bi bi-clock me-2 "></i>ថ្ងៃ សុក្រ ខែ​ មករា​​ ឆ្នាំ​ <span class="ff">2025, 5:00 PM</span>
-                                </p>
-                                <p class="card-text fs-text text-prime"><i class="bi bi-geo-alt me-2"></i> កោះពេជ្រ, ភ្នំពេញ</p>
-                                <div class="d-flex justify-content-between align-items-center  mt-4 mb-2">
-                                    <a href="" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</a>
-                                    <p class="ff text-danger fw-bold card-text">$15.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
 
@@ -609,6 +1140,61 @@
                 tabTitle.textContent = e.target.getAttribute('data-title');
             });
         });
+    </script>
+
+    <!-- Marquee -->
+    <script>
+        window.onload = function () {
+            const marqueeInner = document.getElementById("marquee-inner");
+            const container = document.querySelector(".marquee-container");
+
+            while (marqueeInner.scrollWidth < container.offsetWidth * 2) {
+                marqueeInner.innerHTML += marqueeInner.innerHTML;
+            }
+
+            let x = 0;
+            const speed = 0.8;
+
+            function animate() {
+                x -= speed;
+                if (Math.abs(x) >= marqueeInner.scrollWidth / 2) {
+                    x = 0;
+                }
+                marqueeInner.style.transform = `translateX(${x}px)`;
+                requestAnimationFrame(animate);
+            }
+            animate();
+        };
+    </script>
+
+    <!-- Many Toast -->
+    <script>
+        function showToast(id) {
+            const toastEl = document.getElementById(id);
+            const toast = new bootstrap.Toast(toastEl, { delay: 2000, autohide: true }); // 2000ms = 2s
+            toast.show();
+        }
+
+        document.getElementById("favoriteBtn1").addEventListener("click", () => showToast("favoriteToast1"));
+        document.getElementById("favoriteBtn2").addEventListener("click", () => showToast("favoriteToast2"));
+        document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
+        document.getElementById("favoriteBtn4").addEventListener("click", () => showToast("favoriteToast4"));
+        document.getElementById("favoriteBtn5").addEventListener("click", () => showToast("favoriteToast5"));
+        document.getElementById("favoriteBtn6").addEventListener("click", () => showToast("favoriteToast6"));
+        document.getElementById("favoriteBtn7").addEventListener("click", () => showToast("favoriteToast7"));
+        document.getElementById("favoriteBtn8").addEventListener("click", () => showToast("favoriteToast8"));
+        document.getElementById("favoriteBtn9").addEventListener("click", () => showToast("favoriteToast9"));
+        document.getElementById("favoriteBtn10").addEventListener("click", () => showToast("favoriteToast10"));
+        document.getElementById("favoriteBtn11").addEventListener("click", () => showToast("favoriteToast11"));
+        document.getElementById("favoriteBtn12").addEventListener("click", () => showToast("favoriteToast12"));
+        document.getElementById("favoriteBtn13").addEventListener("click", () => showToast("favoriteToast13"));
+        document.getElementById("favoriteBtn14").addEventListener("click", () => showToast("favoriteToast14"));
+        document.getElementById("favoriteBtn15").addEventListener("click", () => showToast("favoriteToast15"));
+        document.getElementById("favoriteBtn16").addEventListener("click", () => showToast("favoriteToast16"));
+        document.getElementById("favoriteBtn17").addEventListener("click", () => showToast("favoriteToast17"));
+        document.getElementById("favoriteBtn18").addEventListener("click", () => showToast("favoriteToast18"));
+        document.getElementById("favoriteBtn19").addEventListener("click", () => showToast("favoriteToast19"));
+        document.getElementById("favoriteBtn20").addEventListener("click", () => showToast("favoriteToast20"));
     </script>
 
 </body>

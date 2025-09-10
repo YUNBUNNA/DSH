@@ -479,3 +479,7 @@ body {
 .border-blue {
   border: 2px solid #58A8E6 !important;
 }
+
+button:focus {
+            border: none !important;
+        }
