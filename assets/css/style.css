@@ -480,9 +480,21 @@ body {
   border: 2px solid #58a8e6 !important;
 }
 
-button:focus {
-  border: none !important;
+button {
+  border: none !important;       /* remove border */
+  outline: none !important;      /* remove default browser outline */
+  box-shadow: none !important;   /* remove Bootstrap focus shadow */
+  padding: 0 !important;         /* ensure icon doesn't move */
+  background: transparent !important; /* optional if you want fully transparent */
 }
+
+button:focus, button:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;         /* prevents slight movement */
+}
+
 
 #topbar {
   overflow: hidden;
