@@ -40,13 +40,6 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
-// AOS animation
-AOS.init({
-  duration: 1000, 
-  once: true,
-});
-
-
 // Animated Counter
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
@@ -106,6 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll(); // initial check
   }
+});
+
+// AOS animation
+AOS.init({
+  duration: 1000, 
+  once: true,
 });
 
 var swiper2 = new Swiper(".mySlider", {
