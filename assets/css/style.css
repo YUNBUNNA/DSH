@@ -350,17 +350,17 @@ body {
 }
 
 .accordion-button:focus {
-  box-shadow: none;
-  outline: none;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .accordion-button.collapsed {
-  background-color: var(--bg-prime);
-  color: var(--text-prime);
+  background-color: var(--bg-prime) !important;
+  color: var(--text-prime) !important;
 }
 
 .accordion-button:not(.collapsed) {
-  background: linear-gradient(to bottom, #f7d78c, #f4c965);
+  background: linear-gradient(to bottom, #f7d78c, #f4c965) !important;
 }
 
 .accordion-button::after {
@@ -368,7 +368,7 @@ body {
   display: inline-block;
   width: 1rem;
   height: 1rem;
-  background-image: var(--accordion-icon);
+  background-image: var(--accordion-icon) !important;
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -480,19 +480,19 @@ body {
   border: 2px solid #58a8e6 !important;
 }
 
-button {
-  border: none !important;       /* remove border */
-  outline: none !important;      /* remove default browser outline */
-  box-shadow: none !important;   /* remove Bootstrap focus shadow */
-  padding: 0 !important;         /* ensure icon doesn't move */
-  background: transparent !important; /* optional if you want fully transparent */
+button-icon {
+  border: none !important;       
+  outline: none !important;      
+  box-shadow: none !important;   
+  padding: 0 !important;         
+  background: transparent !important; 
 }
 
-button:focus, button:active {
+button-icon:focus, button-icon:active {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  padding: 0 !important;         /* prevents slight movement */
+  padding: 0 !important;        
 }
 
 
