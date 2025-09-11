@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="../assets/js/main.js">
 </head>
 <style>
     /* Hero Section */
@@ -68,6 +70,7 @@
     .hero-image:hover img {
         transform: scale(1.05);
     }
+
     /* rule */
     .rule-list {
         list-style: none;
@@ -334,8 +337,8 @@
         <section class="bg-prime pt-18 pb-10  d-flex align-items-center">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="card bg-prime  border-0">
+                    <div class="col-6">
+                        <div class="card bg-prime  border-0 ">
                             <div class="card-body">
                                 <h1 class="card-title text-main mb-3">បាល់បោះ</h1>
                                 <h2 class="card-text text-prime">កីឡាដ៏មានភាពរំភើប និងពេញនិយម</h2>
@@ -346,13 +349,14 @@
 
                                 <div class="fade-in-up ">
                                     <a href="#pricing" class="btn btn-gold  btn-lg me-3">ចាប់ផ្តើម</a>
-                                    <a href="#rules" class="btn btn-lg border-2 border-blue">ស្វែងយល់បន្ថែម</a>
+                                    <a href="#rules"
+                                        class="btn btn-lg border-2 border-blue text-prime">ស្វែងយល់បន្ថែម</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                        <div class="floating-card fade-in-up stagger-3">
+                        <div class="floating-card fade-in-up stagger-3" data-aos="zoom-in">
                             <div class="hero-image">
                                 <img src="https://finnsbeachclub.com/wp-content/uploads/2024/09/basketball-court-ball-and-sports-match-or-competi-2023-11-27-04-58-17-utc.jpg"
                                     alt="Football Team" class="img-fluid">
@@ -580,18 +584,33 @@
         </section>
         <section class="py-8">
             <div class="container">
-                <div class="bg-prime ">
-                    <h2 class=" fw-bold text-main text-center">ប្លង់ទីលានបាល់បោះ</h2>
-                    <div class="court-visual">
-                        <div class="court-line center-line"></div>
-                        <div class="center-circle"></div>
-                        <div class="three-point-line"></div>
-                        <div class="three-point-line right"></div>
-                        <div class="hoop interactive-element" onclick="animateHoop(this)"></div>
-                        <div class="hoop bottom interactive-element" onclick="animateHoop(this)"></div>
-                    </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="bg-prime ">
+                            <h2 class=" fw-bold text-main text-center">ប្លង់ទីលានបាល់បោះ</h2>
+                            <div class="court-visual">
+                                <div class="court-line center-line"></div>
+                                <div class="center-circle"></div>
+                                <div class="three-point-line"></div>
+                                <div class="three-point-line right"></div>
+                                <div class="hoop interactive-element" onclick="animateHoop(this)"></div>
+                                <div class="hoop bottom interactive-element" onclick="animateHoop(this)"></div>
+                            </div>
 
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card bg-prime border-0  mt-8">
+                            <!-- Lottie Animation -->
+                            <dotlottie-wc src="../assets/img/sports/Basket ball playing animation.json"
+                                style="width: 350px; height: 300px ; margin: auto;" loop autoplay speed="1"
+                                mode="forward">
+                            </dotlottie-wc>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </section>
         <!-- ប្រយោជន៍នៃការលេងបាល់បោះ -->
@@ -966,37 +985,36 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide shadow-xs rounded-2">
                                     <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                        <img src="https://i.pinimg.com/1200x/d7/e1/d1/d7e1d1917386edde47fe6fbc14142644.jpg"
                                             alt="" class="img-fluid rounded-circle mx-auto"
                                             style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
+                                            <h5>ម៉ៃខល ជូដាន់</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                វគ្គហាត់ប្រាណល្អណាស់! ជំនាញបាញ់បាល់
+                                                និងគ្រប់គ្រងបាល់របស់ខ្ញុំកាន់តែប្រសើរ។</p>
                                             <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <p class="fs-6 mt-2 fw-bold">១០ មីនា ២០២៥</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide shadow-xs rounded-2">
                                     <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                        <img src="https://i.pinimg.com/736x/96/19/e7/9619e7202b8e395729d1f96e541e329a.jpg"
                                             alt="" class="img-fluid rounded-circle mx-auto"
                                             style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
+                                            <h5>ឡាប៊់រ៉េន ជេមស៍</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ខ្ញុំចូលចិត្តសហគមន៍នេះណាស់! កីឡាករអ្នកបង្វឹកមានជំនាញ និងបរិក្ខារល្អ។</p>
                                             <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <p class="fs-6 mt-2 fw-bold">១៥ មីនា ២០២៥</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -1008,16 +1026,55 @@
                                 </div>
                                 <div class="swiper-slide shadow-xs rounded-2">
                                     <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                                        <img src="https://i.pinimg.com/736x/96/19/e7/9619e7202b8e395729d1f96e541e329a.jpg "
                                             alt="" class="img-fluid rounded-circle mx-auto"
                                             style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
+                                            <h5>ឡាប៊់រ៉េន ជេមស៍</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ខ្ញុំចូលចិត្តសហគមន៍នេះណាស់! កីឡាករអ្នកបង្វឹកមានជំនាញ និងបរិក្ខារល្អ។</p>
                                             <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <p class="fs-6 mt-2 fw-bold">១៥ មីនា ២០២៥</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/736x/96/19/e7/9619e7202b8e395729d1f96e541e329a.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ស្ទីហ្វិន គូរី</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ក្លឹបនេះមានបរិក្ខារល្អ និងការបង្វឹកដែលស្មោះត្រង់។ ខ្ញុំរំភើបណាស់។</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">២០ មីនា ២០២៥</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="https://i.pinimg.com/736x/96/19/e7/9619e7202b8e395729d1f96e541e329a.jpg"
+                                            alt="" class="img-fluid rounded-circle mx-auto"
+                                            style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ខ្រីស្ទៀន រ៉ូណាល់ដូ</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ជំនាញរបស់គ្រូបង្វឹកកំពុងអភិវឌ្ឍខ្ញុំ។ ខ្ញុំសប្បាយចិត្តក្នុងការហាត់។</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">២៥ មីនា ២០២៥</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -1033,58 +1090,16 @@
                                             alt="" class="img-fluid rounded-circle mx-auto"
                                             style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
+                                            <h5>កាវី លេនណា</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                វគ្គហាត់នេះមានអត្ថប្រយោជន៍ខ្ពស់! ខ្ញុំរៀនច្រើនអំពីការកាត់បាល់
+                                                និងការពារបាល់។</p>
                                             <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <p class="fs-6 mt-2 fw-bold">៣០ មីនា ២០២៥</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                                            alt="" class="img-fluid rounded-circle mx-auto"
-                                            style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                                            alt="" class="img-fluid rounded-circle mx-auto"
-                                            style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
-                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
-                                                និងបរិក្ខារទំនើប!</p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
                                             </div>
                                         </div>
@@ -1094,15 +1109,7 @@
                             <div class="swiper-pagination swiper-pagination-2"></div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="card bg-third border-0">
-                            <!-- Lottie Animation -->
-                            <dotlottie-wc src="../assets/img/sports/Basket ball playing animation.json"
-                                style="width: 350px; height: 300px ; margin: auto;" loop autoplay speed="1"
-                                mode="forward">
-                            </dotlottie-wc>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -1122,6 +1129,9 @@
 
 
 </body>
+<script>
+  AOS.init();
+</script>
 <script>
     function animateHoop(hoop) {
         hoop.style.animation = 'none';
