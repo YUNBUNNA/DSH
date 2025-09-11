@@ -178,11 +178,7 @@
             </div>
         </nav>
     </header>
-    
     <main style="margin-top: 110px;">
-        <!-- <section class="hero-banner">
-          <div class="img bg-danger" style="width: 100%; height: 400px;"></div>
-        </section> -->
         <section class="bg-third py-7">
         <div class="container">
             <div class="py-0 text-center">
@@ -191,7 +187,7 @@
             </div>
             <div class="row mt-10 bg-prime shadow-xs rounded-4 py-5">
                 <div class="col-lg-6">
-                    <form action="" class="p-4">
+                    <form action="" class="p-4" data-aos="zoom-in">
                         <div class="row">
                             <div class="col-lg-6 mb-3 position-relative">
                                 <label for="firstname" class="form-label fs-title">នាមខ្លួន</label>
@@ -222,13 +218,14 @@
                 </div>
             <div class="col-lg-6">
                 <!-- Lottie Animation -->
-                <dotlottie-wc src="../assets/img/contact us.json" style="width: 100%; height: 100%" loop autoplay speed="1"
+                <dotlottie-wc src="../assets/img/contact us.json" data-aos="zoom-in" style="width: 100%; height: 100%" loop autoplay speed="1"
                     mode="forward">
                 </dotlottie-wc>
             </div>
           </div>
         </div>
         </section>
+        
         <section class="info py-10 bg-third">
             <div class="container">
                 <div class="py-5">
@@ -237,7 +234,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="card bg-prime shadow-xs border-0 rounded-4 hover-lift">
+                        <div class="card bg-prime shadow-xs border-0 rounded-4 hover-lift" data-aos="zoom-in">
                             <i class="bi bi-envelope text-main text-center mt-4" style="font-size: 28px;"></i>
                             <div class="card-body text-center mb-7">
                                 <h5 class="card-title fw-normal text-prime">
@@ -249,7 +246,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="card bg-prime shadow-xs border-0 rounded-4 hover-lift">
+                        <div class="card bg-prime shadow-xs border-0 rounded-4 hover-lift" data-aos="zoom-in">
                             <i class="bi bi-telephone text-main text-center mt-4" style="font-size: 28px;"></i>
                             <div class="card-body text-center mb-7">
                                 <h5 class="card-title fw-normal text-prime">
@@ -261,7 +258,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="card bg-prime shadow-xs border-0 rounded-4 hover-lift">
+                        <div class="card bg-prime shadow-xs border-0 rounded-4 hover-lift" data-aos="zoom-in">
                             <i class="bi bi-geo-alt text-main text-center mt-4" style="font-size: 28px;"></i>
                             <div class="card-body text-center mb-4">
                                 <h5 class="card-title fw-normal text-prime">
@@ -275,7 +272,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="card bg-prime shadow-xs border-0 rounded-4 hover-lift">
+                        <div class="card bg-prime shadow-xs border-0 rounded-4 hover-lift" data-aos="zoom-in">
                             <i class="bi bi-clock text-main text-center mt-4" style="font-size: 28px;"></i>
                             <div class="card-body text-center mb-4">
                                 <h5 class="card-title fw-normal text-prime">
@@ -291,97 +288,94 @@
                 </div>
             </div>
         </section>
+    <!-- FAQ Section -->
         <section class="faq-section py-8 bg-third">
-      <div class="container">
-        <div class="text-center mb-8">
-          <h4 class="display-6 fw-bold text-main">សំណួរញឹកញាប់</h4>
-          <p class="mt-3 fs-5 text-prime">ចម្លើយសំណួរដែលសួរញឹកញាប់</p>
-        </div>
-        <div class="accordion mx-auto shadow-xs bg-prime" id="faqAccordion">
-          <div class="accordion-item bg-prime">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
-                style="font-size: 20px;">
-                តើការចូលរួម DSH មានថ្លៃដែរទេ?
-              </button>
-            </h2>
-            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-              <div class="accordion-body text-prime fs-text">
-                ការចូលរួមសហគមន៍ DSH គឺឥតគិតថ្លៃសម្រាប់សកម្មភាពមូលដ្ឋាន។ ប៉ុន្តែសម្រាប់វគ្គបណ្តុះបណ្តាលពិសេស
-                និងការណែនាំផ្ទាល់ខ្លួន អាចមានថ្លៃសេវាតាមកម្រិត។
-              </div>
-            </div>
-          </div>
+            <div class="container">
+                <div class="text-center mb-8">
+                    <h4 class="display-6 fw-bold text-main">សំណួរញឹកញាប់</h4>
+                    <p class="mt-3 fs-5 text-prime">ចម្លើយសំណួរដែលសួរញឹកញាប់</p>
+                </div>
+                <div class="accordion mx-auto shadow-xs bg-prime" id="faqAccordion">
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                                style="font-size: 20px;">
+                                តើមាន Support 24 ម៉ោងក្នងមួយសប្តាហ៏ ដែរឬទេ?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title">
+                                បាទ/ចាស! ខាងយើងមិនមាន Support 24 ម៉ោងក្នងមួយសប្តាហ៏ ទេ។ ប៉ុន្តែ យើងមានអ្នក Support ពីម៉ោង 8AM-4PM ចំពោះថ្ងៃ ចន្ទ-សុក្រ និង ម៉ោង 8AM-3PM ចំពោះថ្ងៃ សៅរ៏-អាទិត្យ ។
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="accordion-item bg-prime">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq2">
-                តើខ្ញុំត្រូវមានបទពិសោធន៍មុនដែរទេ?
-              </button>
-            </h2>
-            <div id="faq2" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
-              <div class="accordion-body text-prime fs-text">
-                មិនចាំបាច់ទេ! DSH ស្វាគមន៍អ្នកចូលរួមគ្រប់កម្រិតពីអ្នកចាប់ផ្តើមដំបូងរហូតដល់អ្នកជំនាញ។
-                យើងមានកម្មវិធីសម្រាប់មនុស្សគ្រប់កម្រិត។
-              </div>
-            </div>
-          </div>
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                ប្រសិនបើខ្ញុំមានបញ្ហាប្រើប្រាស់គេហទំព័រ តើត្រូវធ្វើដូចម្តេច?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title">
+                                អ្នកអាចផ្ញើសារទៅកាន់ Technical Support តាមអ៊ីមែល dsh@gmail.com ឬទូរស័ព្ទផ្ទាល់។
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="accordion-item bg-prime">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq3">
-                តើមានកីឡាអ្វីខ្លះ?
-              </button>
-            </h2>
-            <div id="faq3" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
-              <div class="accordion-body text-prime fs-text">
-                យើងមានកីឡាជាច្រើនដូចជា៖ វាយកូនបាល់, ហត់ប្រាណ, រត់, ម៉ាសាស, វាយបាល់ទះ, កីឡាជាក់ទឹក,
-                និងសកម្មភាពរាងកាយផ្សេងៗទៀត។
-              </div>
-            </div>
-          </div>
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                តើមានអ្នកប្រឹក្សាផ្នែកកីឡា និងសុខភាពអាចទាក់ទងផ្ទាល់ទេ?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title">
+                                បាទ/ចាស មាន! អ្នកអាចចុះឈ្មោះតាម Form ទំនាក់ទំនង ឬក៏ទាក់ទងផ្ទាល់តាមទូរស័ព្ទ ដើម្បីកក់ពេលជួបប្រឹក្សា។
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="accordion-item bg-prime">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq4">
-                តើពេលវេលាសកម្មភាពដូចម្តេច?
-              </button>
-            </h2>
-            <div id="faq4" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
-              <div class="accordion-body text-prime fs-text">
-                យើងមានសកម្មភាពពេលព្រឹក ថ្ងៃ និងល្ងាច ដើម្បីសម្របតាមកាលវិភាគរបស់សមាជិក។
-                សកម្មភាពភាគច្រើនធ្វើឡើងនៅចុងសប្តាហ៍ និងល្ងាចថ្ងៃធ្វើការ។
-              </div>
-            </div>
-          </div>
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                តើពេលវេលាសកម្មភាពដូចម្តេច?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title">
+                                យើងមានសកម្មភាពពេលព្រឹក ថ្ងៃ និងល្ងាច ដើម្បីសម្របតាមកាលវិភាគរបស់សមាជិក។
+                                សកម្មភាពភាគច្រើនធ្វើឡើងនៅចុងសប្តាហ៍ និងល្ងាចថ្ងៃធ្វើការ។
+                            </div>
+                        </div>
+                    </div>
 
-          <div class="accordion-item bg-prime">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
-                data-bs-target="#faq5">
-                តើធ្វើដូចម្តេចដើម្បីចូលរួម?
-              </button>
-            </h2>
-            <div id="faq5" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
-              <div class="accordion-body text-prime fs-text">
-                សូមចុចប៊ូតុង "ចាប់ផ្តើម" ខាងលើ ឬទាក់ទងយើងតាមរយៈទូរស័ព្ទ ឬ Facebook page របស់យើង។
-                យើងនឹងណែនាំអ្នកតាមដំណាក់កាលបន្ទាប់។
-              </div>
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-5 fs-title" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+                                តើធ្វើដូចម្តេចដើម្បីចូលរួម?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title">
+                                សូមចុចប៊ូតុង "ចាប់ផ្តើម" ខាងលើ ឬទាក់ទងយើងតាមរយៈទូរស័ព្ទ ឬ Facebook page របស់យើង។
+                                យើងនឹងណែនាំអ្នកតាមដំណាក់កាលបន្ទាប់។
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
         <section class="map">
             <div class="container-fluid p-0">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3374.320473447673!2d104.891257!3d11.572268600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519e0c9b2109%3A0x8b8d35d80b920ffc!2sANT%20Technology%20Training%20School!5e1!3m2!1sen!2skh!4v1757404584528!5m2!1sen!2skh" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
-
     <!-- link bootstrap js -->
     <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
     <!-- link swiper js -->
