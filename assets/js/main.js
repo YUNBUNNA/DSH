@@ -40,6 +40,13 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
+// AOS animation
+AOS.init({
+  duration: 1000, 
+  once: true,
+});
+
+
 // Animated Counter
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
