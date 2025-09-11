@@ -1,3 +1,9 @@
+// AOS Animation
+AOS.init({
+  duration: 1000, 
+  once: true,
+});
+
 const toggleButton = document.getElementById("theme-toggle");
 const accordionButtons = document.querySelectorAll(".accordion-button");
 
@@ -171,3 +177,4 @@ document.getElementById("favoriteBtn").addEventListener("click", () => {
   const toast = new bootstrap.Toast(document.getElementById("favoriteToast"));
   toast.show();
 });
+
