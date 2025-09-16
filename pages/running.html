@@ -203,11 +203,11 @@
     <!-- header -->
     <header>
         <nav class="navbar py-0 fixed-top bg-prime">
-            <div class="container-fluid" style="background-color: #58A8E6;">
-                <div class="container d-flex align-items-center justify-content-between">
+            <div class="container-fluid d-none d-lg-flex bg-nav">
+                <div class="container d-flex align-items-center justify-content-between p-0">
                     <a href="" class="navbar-brand">
                         <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
-                            style="width: 90px; height: 40px" />
+                            style="width: 85px; height: 45px" />
                     </a>
                     <ul class="navbar-nav flex-row align-items-center">
                         <li class="nav-item">
@@ -223,9 +223,118 @@
                     </ul>
                 </div>
             </div>
-            <div class="container-fluid border-bottom"></div>
-            <div class="container d-flex align-items-center justify-content-between">
-                <ul class="navbar-nav flex-row">
+            <div class="container d-flex align-items-center justify-content-between p-0">
+                <button class="navbar-toggler border-0 shadow-none d-block d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                        <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+                            style="width: 90px; height: 40px;">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul id="off" class="nav flex-column justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">ទំព័រដើម</a>
+                            </li>
+
+                            <!-- ផ្នែកកីឡា -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
+                                    href="#sport" role="button" aria-expanded="false" aria-controls="sport">
+                                    ផ្នែកកីឡា <i class="bi bi-chevron-down ms-auto"></i>
+                                </a>
+                                <ul id="sport" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                                    <li class="nav-item mb-2">
+                                        <a href="#" class="nav-link text-prime">បាល់ទាត់</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">រត់ប្រណាំង</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">បាល់បោះ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">ជិះកង់</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">បាល់ទះ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">ការ៉ាតេ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">ហែលទឹក</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">វាយសី</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ការហ្វឹកហាត់</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ទំនិញ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ព្រឹត្តិការណ៏</a>
+                            </li>
+
+                            <!-- អត្ថបទ -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
+                                    href="#blog" role="button" aria-expanded="false" aria-controls="blog">
+                                    អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
+                                </a>
+                                <ul id="blog" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                                    <li class="nav-item mb-2">
+                                        <a href="#" class="nav-link text-prime">កីឡា</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">សុខភាព</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">អំពីយើង</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ទំនាក់ទំនង</a>
+                            </li>
+
+                            <!-- ផ្សេងៗ -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
+                                    href="#other" role="button" aria-expanded="false" aria-controls="other">
+                                    ផ្សេងៗ <i class="bi bi-chevron-down ms-auto"></i>
+                                </a>
+                                <ul id="other" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                                    <li class="nav-item mb-2">
+                                        <a href="#" class="nav-link text-prime">គ្រូបង្វឹក</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">សកម្មភាព</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="navbar-nav flex-row d-none d-xl-flex">
                     <li class="nav-item pe-3 py-1">
                         <a href="" class="nav-link">ទំព័រដើម</a>
                     </li>
@@ -331,7 +440,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item py-1">
+                    <li class="nav-item py-1 profile">
                         <a href="" class="nav-link d-block">
                             <i class="bi bi-person-circle text-prime fs-4"></i>
                         </a>
@@ -548,7 +657,7 @@
                         <div class="accordion-item bg-prime border-0">
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
+                                <div class="accordion-body p-0 m-0 mt-4">
                                     <div class="row g-4 ">
                                         <!-- Rule 9 -->
                                         <div class="col-lg-3 col-md-4 col-sm-6">
@@ -626,13 +735,14 @@
                 <div class="text-center mb-5">
                     <h2 class="fs-1 fw-bold py-2 text-main">ចូលជាសមាជិក</h2>
                     <p class="lead text-prime mt-3" style="font-size: 20px;">
-                        ជាសមាជិក អ្នកនឹងទទួលបានផែនការហាត់ប្រាណផ្ទាល់ខ្លួន, ការបណ្តុះបណ្តាលជាក្រុម និងពេលវេលាហាត់ដ៏មានគុណភាព។ 
-                ជ្រើសរើសផែនការដែលសមស្របសម្រាប់អ្នក និងចាប់ផ្តើមរត់ឥឡូវនេះ!
+                        ជាសមាជិក អ្នកនឹងទទួលបានផែនការហាត់ប្រាណផ្ទាល់ខ្លួន, ការបណ្តុះបណ្តាលជាក្រុម
+                        និងពេលវេលាហាត់ដ៏មានគុណភាព។
+                        ជ្រើសរើសផែនការដែលសមស្របសម្រាប់អ្នក និងចាប់ផ្តើមរត់ឥឡូវនេះ!
                     </p>
                 </div>
-                <div class="row g-5">
+                <div class="row g-5 justify-content-center">
                     <!-- Essential Plan -->
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class=" h-100 ">
                             <div class="card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs h-100">
                                 <div class="card-body ">
@@ -669,7 +779,7 @@
                         </div>
                     </div>
                     <!-- Premium Plan -->
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="pricing-card popular-card rounded-5 ">
                             <div class="card py-3  rounded-5 border-0 bg-prime h-100">
                                 <div class="card-body">
@@ -708,7 +818,7 @@
                         </div>
                     </div>
                     <!-- Professional Plan -->
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="  rounded-5">
                             <div class=" card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs h-100 ">
                                 <div class="card-body">
@@ -740,15 +850,11 @@
                                         <li class="border-bottom py-2 text-prime mb-2"><i
                                                 class="bi bi-x-circle-fill text-danger me-2"></i>មិនរួមការបណ្តុះបណ្តាលជាបុគ្គលឯកជន
                                         </li>
-
-
                                     </ul>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -762,154 +868,158 @@
 
                 <div class="row mt-3">
                     <div class="col-lg-4">
-                        <a href="">
-                            <div
-                                class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
-                                <div class="position-relative overflow-hidden rounded-2 img-hover">
-                                    <img src="https://media.istockphoto.com/id/2039725007/photo/portrait-of-a-young-woman-with-crossed-arms-on-a-running-track.jpg?s=612x612&w=0&k=20&c=Z00KVPoWYsbqycLKm0HccZpp0Xn3ZdK1em_pWuDmmS8="
-                                        alt="" class="img-fluid w-100 h-100 rounded-2">
-                                    <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
-                                        style="height: 120%;">
-                                    </div>
-                                    <div class="card-icon position-absolute end-0 top-0">
-                                        <div class="card-body d-flex flex-column pt-2">
-                                            <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="detail position-absolute start-0 top-0">
-                                        <div class="card-body pt-8">
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-person"></i>
-                                                    គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-clock"></i>
-                                                    បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-file-earmark"></i>
-                                                    វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-geo-alt"></i>
-                                                    ទីតាំង:</strong> ភ្នំពេញ</h6>
-                                        </div>
-                                    </div>
-                                    <div class="card-btn position-absolute bottom-0" style="left: 20%;">
-                                        <div class="card-body d-flex gap-2">
-                                            <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
-                                                ផ្ញើសារ</a>
-                                            <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
-                                                    class="bi bi-arrow-right"></i></a>
-                                        </div>
+
+                        <div
+                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                            <div class="position-relative overflow-hidden rounded-2 img-hover">
+                                <img src="https://media.istockphoto.com/id/2039725007/photo/portrait-of-a-young-woman-with-crossed-arms-on-a-running-track.jpg?s=612x612&w=0&k=20&c=Z00KVPoWYsbqycLKm0HccZpp0Xn3ZdK1em_pWuDmmS8="
+                                    alt="" class="img-fluid w-100 h-100 rounded-2">
+                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                    style="height: 120%;">
+                                </div>
+                                <div class="card-icon position-absolute end-0 top-0">
+                                    <div class="card-body d-flex flex-column pt-2">
+                                        <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <h4 class="text-center card-title">ចាន់ ពិសី</h4>
+                                <div class="detail position-absolute start-0 top-0">
+                                    <div class="card-body pt-8">
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-person"></i>
+                                                គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-clock"></i>
+                                                បទពិសោធន៍:</strong>8 ឆ្នាំក្នុងបណ្តុះកីឡាករជាតិ</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-file-earmark"></i>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">IAAF Certified Coach</span>
+                                        </h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-geo-alt"></i>
+                                                ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                    </div>
+                                </div>
+                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                    <div class="card-body d-flex gap-2">
+                                        <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                            ផ្ញើសារ</a>
+                                        <a href="../pages/sports-coach-detail/running/running-coach-detail.html"
+                                            class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </a>
+                            <div class="card-body">
+                                <h4 class="text-center card-title">ចាន់ ពិសី</h4>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-lg-4">
-                        <a href="">
-                            <div
-                                class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
-                                <div class="position-relative overflow-hidden rounded-2 img-hover">
 
-                                    <img src="https://media.istockphoto.com/id/1132487577/photo/daily-outdoor-training-concept.jpg?s=612x612&w=0&k=20&c=j0GExt-e1vCq-ClzJ2Pml5gmbxs9QceFoFc1Qx821Oc="
-                                        alt="" class="img-fluid w-100 h-100 rounded-2">
-                                    <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
-                                        style="height: 120%;">
-                                    </div>
-                                    <div class="card-icon position-absolute end-0 top-0">
-                                        <div class="card-body d-flex flex-column pt-2">
+                        <div
+                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                            <div class="position-relative overflow-hidden rounded-2 img-hover">
 
-                                            <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="detail position-absolute start-0 top-0">
-                                        <div class="card-body pt-8">
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-person"></i>
-                                                    គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-clock"></i>
-                                                    បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-file-earmark"></i>
-                                                    វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-geo-alt"></i>
-                                                    ទីតាំង:</strong> ភ្នំពេញ</h6>
-                                        </div>
-                                    </div>
-                                    <div class="card-btn position-absolute bottom-0" style="left: 20%;">
-                                        <div class="card-body d-flex gap-2">
-                                            <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
-                                                ផ្ញើសារ</a>
-                                            <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
-                                                    class="bi bi-arrow-right"></i></a>
-                                        </div>
+                                <img src="https://media.istockphoto.com/id/1132487577/photo/daily-outdoor-training-concept.jpg?s=612x612&w=0&k=20&c=j0GExt-e1vCq-ClzJ2Pml5gmbxs9QceFoFc1Qx821Oc="
+                                    alt="" class="img-fluid w-100 h-100 rounded-2">
+                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                    style="height: 120%;">
+                                </div>
+                                <div class="card-icon position-absolute end-0 top-0">
+                                    <div class="card-body d-flex flex-column pt-2">
+
+                                        <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <h4 class="text-center card-title">យឹម សំអុល</h4>
+                                <div class="detail position-absolute start-0 top-0">
+                                    <div class="card-body pt-8">
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-person"></i>
+                                                គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-clock"></i>
+                                                បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្លឹបរត់</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-file-earmark"></i>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">IAAF Level 1</span></h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-geo-alt"></i>
+                                                ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                    </div>
+                                </div>
+                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                    <div class="card-body d-flex gap-2">
+                                        <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                            ផ្ញើសារ</a>
+                                        <a href="../pages/sports-coach-detail/running/running-coach-detail.html"
+                                            class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </a>
+                            <div class="card-body">
+                                <h4 class="text-center card-title">យឹម សំអុល</h4>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-lg-4">
-                        <a href="">
-                            <div
-                                class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
-                                <div class="position-relative overflow-hidden rounded-2 img-hover">
-                                    <img src="https://media.istockphoto.com/id/875314502/photo/swim-coach-with-stopwatch.jpg?s=170667a&w=0&k=20&c=KQPDNaZ9r9MPD3bAqilaCrczs2ddw-CcQ29FvViN4VA="
-                                        alt="" class="img-fluid w-100 h-100 rounded-2">
-                                    <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
-                                        style="height: 120%;">
-                                    </div>
-                                    <div class="card-icon position-absolute end-0 top-0">
-                                        <div class="card-body d-flex flex-column pt-2">
-                                            <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
-                                            <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="detail position-absolute start-0 top-0">
-                                        <div class="card-body pt-8">
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-person"></i>
-                                                    គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-clock"></i>
-                                                    បទពិសោធន៍:</strong> 5 ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-file-earmark"></i>
-                                                    វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
-                                            <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                        class="me-2 text-primary bi bi-geo-alt"></i>
-                                                    ទីតាំង:</strong> ភ្នំពេញ</h6>
-                                        </div>
-                                    </div>
 
-                                    <div class="card-btn position-absolute bottom-0" style="left: 20%;">
-                                        <div class="card-body d-flex gap-2">
-                                            <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
-                                                ផ្ញើសារ</a>
-                                            <a href="" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
-                                                    class="bi bi-arrow-right"></i></a>
-                                        </div>
+                        <div
+                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
+                            <div class="position-relative overflow-hidden rounded-2 img-hover">
+                                <img src="https://media.istockphoto.com/id/875314502/photo/swim-coach-with-stopwatch.jpg?s=170667a&w=0&k=20&c=KQPDNaZ9r9MPD3bAqilaCrczs2ddw-CcQ29FvViN4VA="
+                                    alt="" class="img-fluid w-100 h-100 rounded-2">
+                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
+                                    style="height: 120%;">
+                                </div>
+                                <div class="card-icon position-absolute end-0 top-0">
+                                    <div class="card-body d-flex flex-column pt-2">
+                                        <a href="#"><i class="text-gold bi bi-instagram fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-facebook fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-linkedin fs-4"></i></a>
+                                        <a href="#"><i class="text-gold bi bi-twitter-x fs-4"></i></a>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <h4 class="text-center card-title">ហេង វណ្ណៈ</h4>
+                                <div class="detail position-absolute start-0 top-0">
+                                    <div class="card-body pt-8">
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-person"></i>
+                                                គ្រូបង្វឹក:</strong> ផ្នែកហែលទឹក</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-clock"></i>
+                                                បទពិសោធន៍:</strong> 10 ឆ្នាំក្នុងបណ្តុះកីឡាករអាយុក្មេង</h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-file-earmark"></i>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">IAAF Level 2</span></h6>
+                                        <h6 class="fw-normal fs-5 text-light"><strong><i
+                                                    class="me-2 text-primary bi bi-geo-alt"></i>
+                                                ទីតាំង:</strong> ភ្នំពេញ</h6>
+                                    </div>
+                                </div>
+
+                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
+                                    <div class="card-body d-flex gap-2">
+                                        <a href="" class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
+                                            ផ្ញើសារ</a>
+                                        <a href="../pages/sports-coach-detail/running/running-coach-detail.html"
+                                            class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </a>
+                            <div class="card-body">
+                                <h4 class="text-center card-title">ហេង វណ្ណៈ</h4>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -918,16 +1028,8 @@
         <section class="py-5 bg-third py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5">
-                        <div class="card bg-third border-0">
-                            <!-- Lottie Animation -->
-                            <dotlottie-wc src="../assets/img/sports/Swimming.json"
-                                style="width: 350px; height: 300px ; margin: auto; margin-top: 50px ;" loop autoplay
-                                speed="1" mode="forward">
-                            </dotlottie-wc>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
+
+                    <div class="col-12">
                         <h2 class="text-center mb-6 text-main">មតិអតិថិជន</h2>
                         <div class="swiper mySlide pb-6" style="height: 280px;">
                             <div class="swiper-wrapper">
@@ -938,17 +1040,19 @@
                                             style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
                                             <h5>ស្រី ចន្ទា</h5>
-                                    <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                        កម្មវិធីរត់នៅទីនេះពិតជាល្អណាស់ មានគ្រូបង្វឹកជំនាញ និងផែនការហាត់ត្រឹមត្រូវ។ ខ្ញុំមានការរីកចម្រើនយ៉ាងច្បាស់ក្នុងសមត្ថភាពរត់របស់ខ្ញុំ។
-                                    </p>
-                                    <div class="d-flex p-0">
-                                        <p class="fs-6 mt-2 fw-bold">15 ឧសភា 2024</p>
-                                        <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                        <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                        <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                        <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                        <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                    </div>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                កម្មវិធីរត់នៅទីនេះពិតជាល្អណាស់ មានគ្រូបង្វឹកជំនាញ
+                                                និងផែនការហាត់ត្រឹមត្រូវ។
+                                                ខ្ញុំមានការរីកចម្រើនយ៉ាងច្បាស់ក្នុងសមត្ថភាពរត់របស់ខ្ញុំ។
+                                            </p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 ឧសភា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -960,9 +1064,10 @@
                                         <div class="card-body pb-0">
                                             <h5>សុខ ពិសី</h5>
                                             <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                        ខ្ញុំមានបទពិសោធន៍ល្អណាស់ក្នុងកម្មវិធីរត់។ ផ្លូវហាត់ស្អាត និងមានសុវត្ថិភាព
-                                        គ្រូបង្វឹកអត់ធ្មត់ និងផ្តល់ការណែនាំល្អ!
-                                    </p>
+                                                ខ្ញុំមានបទពិសោធន៍ល្អណាស់ក្នុងកម្មវិធីរត់។ ផ្លូវហាត់ស្អាត
+                                                និងមានសុវត្ថិភាព
+                                                គ្រូបង្វឹកអត់ធ្មត់ និងផ្តល់ការណែនាំល្អ!
+                                            </p>
                                             <div class="d-flex p-0">
                                                 <p class="fs-6 mt-2 fw-bold">10 កុម្ភៈ 2024</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
@@ -981,10 +1086,11 @@
                                             style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
                                             <h5>ម៉េង ស្រីពៅ</h5>
-                                           <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                        ក្លឹបរត់មានផ្លូវហាត់ទំនើប និងមានគ្រប់គ្រាន់។ ខ្ញុំមានភាពជឿជាក់ក្នុងការរត់
-                                        ព្រោះមានគ្រូបង្វឹកដែលមានជំនាញខ្ពស់។
-                                    </p>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ក្លឹបរត់មានផ្លូវហាត់ទំនើប និងមានគ្រប់គ្រាន់។
+                                                ខ្ញុំមានភាពជឿជាក់ក្នុងការរត់
+                                                ព្រោះមានគ្រូបង្វឹកដែលមានជំនាញខ្ពស់។
+                                            </p>
                                             <div class="d-flex p-0">
                                                 <p class="fs-6 mt-2 fw-bold">05 មីនា 2024</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>

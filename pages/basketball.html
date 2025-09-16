@@ -51,7 +51,7 @@
         }
 
         50% {
-            transform: translateY(-20px);
+            transform: translateY(-15px);
         }
     }
 
@@ -195,11 +195,11 @@
     <!-- header -->
     <header>
         <nav class="navbar py-0 fixed-top bg-prime">
-            <div class="container-fluid" style="background-color: #58A8E6;">
-                <div class="container d-flex align-items-center justify-content-between">
+            <div class="container-fluid d-none d-lg-flex bg-nav">
+                <div class="container d-flex align-items-center justify-content-between p-0">
                     <a href="" class="navbar-brand">
                         <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
-                            style="width: 90px; height: 40px" />
+                            style="width: 85px; height: 45px" />
                     </a>
                     <ul class="navbar-nav flex-row align-items-center">
                         <li class="nav-item">
@@ -215,9 +215,118 @@
                     </ul>
                 </div>
             </div>
-            <div class="container-fluid border-bottom"></div>
-            <div class="container d-flex align-items-center justify-content-between">
-                <ul class="navbar-nav flex-row">
+            <div class="container d-flex align-items-center justify-content-between p-0">
+                <button class="navbar-toggler border-0 shadow-none d-block d-xl-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                        <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+                            style="width: 90px; height: 40px;">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul id="off" class="nav flex-column justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">ទំព័រដើម</a>
+                            </li>
+
+                            <!-- ផ្នែកកីឡា -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
+                                    href="#sport" role="button" aria-expanded="false" aria-controls="sport">
+                                    ផ្នែកកីឡា <i class="bi bi-chevron-down ms-auto"></i>
+                                </a>
+                                <ul id="sport" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                                    <li class="nav-item mb-2">
+                                        <a href="#" class="nav-link text-prime">បាល់ទាត់</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">រត់ប្រណាំង</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">បាល់បោះ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">ជិះកង់</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">បាល់ទះ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">ការ៉ាតេ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">ហែលទឹក</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">វាយសី</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ការហ្វឹកហាត់</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ទំនិញ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ព្រឹត្តិការណ៏</a>
+                            </li>
+
+                            <!-- អត្ថបទ -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
+                                    href="#blog" role="button" aria-expanded="false" aria-controls="blog">
+                                    អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
+                                </a>
+                                <ul id="blog" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                                    <li class="nav-item mb-2">
+                                        <a href="#" class="nav-link text-prime">កីឡា</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">សុខភាព</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">អំពីយើង</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ទំនាក់ទំនង</a>
+                            </li>
+
+                            <!-- ផ្សេងៗ -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
+                                    href="#other" role="button" aria-expanded="false" aria-controls="other">
+                                    ផ្សេងៗ <i class="bi bi-chevron-down ms-auto"></i>
+                                </a>
+                                <ul id="other" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                                    <li class="nav-item mb-2">
+                                        <a href="#" class="nav-link text-prime">គ្រូបង្វឹក</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">សកម្មភាព</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="navbar-nav flex-row d-none d-xl-flex">
                     <li class="nav-item pe-3 py-1">
                         <a href="" class="nav-link">ទំព័រដើម</a>
                     </li>
@@ -323,7 +432,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item py-1">
+                    <li class="nav-item py-1 profile">
                         <a href="" class="nav-link d-block">
                             <i class="bi bi-person-circle text-prime fs-4"></i>
                         </a>
@@ -337,7 +446,7 @@
         <section class="bg-prime pt-18 pb-10  d-flex align-items-center">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-6">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
                         <div class="card bg-prime  border-0 ">
                             <div class="card-body">
                                 <h1 class="card-title text-main mb-3">បាល់បោះ</h1>
@@ -356,7 +465,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                        <div class="floating-card fade-in-up stagger-3" data-aos="zoom-in">
+                        <div class="floating-card fade-in-up bg-prime border-0" data-aos="zoom-in">
                             <div class="hero-image">
                                 <img src="https://finnsbeachclub.com/wp-content/uploads/2024/09/basketball-court-ball-and-sports-match-or-competi-2023-11-27-04-58-17-utc.jpg"
                                     alt="Football Team" class="img-fluid">
@@ -374,8 +483,8 @@
                         <div class="card border-0 bg-transparent">
                             <div class="card-body text-center">
                                 <div class="d-flex display-5 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="150"
-                                        data-duration="20000">0</h1>
+                                    <h1 class="counter card-title display-5 ff" data-countto="150" data-duration="2000">
+                                        0</h1>
                                     <span>+</span>
                                 </div>
                                 <h4 class="card-text mt-1">អតិថិជន</h4>
@@ -429,7 +538,7 @@
                     <p class="my-4 text-center text-prime lead ">ចំណេះដឹងទាំងអស់ដែលអ្នកត្រូវការដើម្បីលេងបាល់បោះ</p>
                 </div>
                 <div class="row g-4  ">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card text-center bg-prime border-0 shadow-sm">
                             <div class="card-body">
                                 <h3 class="card-title text-green ff fw-bold"><span class="ff">5</span></h3>
@@ -438,7 +547,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card text-center bg-prime border-0 shadow-sm">
                             <div class="card-body">
                                 <h3 class="card-title text-green ff fw-bold">4</h3>
@@ -447,7 +556,7 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card text-center bg-prime border-0 shadow-sm">
                             <div class="card-body">
                                 <h3 class="card-title text-green ff fw-bold">12</h3>
@@ -455,7 +564,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card text-center bg-prime border-0 shadow-sm">
                             <div class="card-body">
                                 <h3 class="card-title text-green ff fw-bold">24</h3>
@@ -463,11 +572,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card bg-prime border-0  py-5 px-2  rounded-5 hover-lift h-100">
                             <div class="card-body ">
                                 <h4 class="card-title text-main fw-bold text-center ">គោលដៅនៃការលេងបាល់បោះ</h4>
-                                <h6 class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
+                                <h6 class="card-text text-prime  lead fs-nav" style="line-height: 30px;">
                                     គោលដៅនៃការលេងបាល់បោះគឺដើម្បីដាក់បាល់
                                     ទៅក្នុងរបងនៃក្រុមប្រឆាំង។ ក្រុមដែលបានពិន្ទុច្រើនជាងនៅចុងបញ្ចប់នៃហ្គេម
                                     គឺជាក្រុមឈ្នះ។</h6>
@@ -484,7 +593,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card bg-prime border-0  py-5 px-2  rounded-5 hover-lift">
                             <div class="card-body ">
                                 <h4 class="card-title text-main fw-bold text-center ">សមាសភាពក្រុម</h4>
@@ -503,7 +612,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift h-100">
 
                             <div class="card-body ">
@@ -520,7 +629,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift">
                             <div class="card-body ">
                                 <h4 class="card-title text-main fw-bold text-center ">វិធានកាន់បាល់</h4>
@@ -540,7 +649,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card bg-prime border-0  py-5 px-2 h-100 rounded-5 hover-lift ">
                             <div class="card-body ">
                                 <h4 class="card-title text-main fw-bold text-center ">កំហុស និងការបាញ់សេរី</h4>
@@ -561,7 +670,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4 ">
+                    <div class="col-lg-4 col-md-6 col-sm-12 ">
                         <div class="card bg-prime border-0  py-5 px-2 rounded-5 hover-lift">
                             <div class="card-body ">
                                 <h4 class="card-title text-main fw-bold text-center ">ការចាប់ផ្តើម</h4>
@@ -665,9 +774,9 @@
                 <div class="text-center mb-5">
                     <h2 class="fs-1 fw-bold  mb-4 py-2 text-main">ចូលជាសមាជិក</h2>
                 </div>
-                <div class="row g-5">
+                <div class="row g-5 justify-content-center">
                     <!-- Essential Plan -->
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class=" h-100 ">
                             <div class="card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs">
                                 <div class="card-body ">
@@ -707,7 +816,7 @@
                         </div>
                     </div>
                     <!-- Premium Plan -->
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="pricing-card popular-card rounded-5 ">
                             <div class="card py-3  rounded-5 border-0 bg-prime">
                                 <div class="card-body">
@@ -755,7 +864,7 @@
                         </div>
                     </div>
                     <!-- Professional Plan -->
-                    <div class="col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="  rounded-5">
                             <div class=" pricing-card  card py-3  rounded-5 border-0 bg-prime  ">
                                 <div class="card-body">
@@ -812,7 +921,7 @@
             <div class="container">
                 <div class="position-relative text-center py-3">
                     <h2 class=" fw-bold text-main text-center">គ្រូបង្វឹក</h2>
-                    <p class="my-4 text-center text-prime lead ">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</p>
+                    <!-- <p class="my-4 text-center text-prime lead ">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</p> -->
 
                 </div>
                 <div class="row mt-3">
@@ -840,13 +949,13 @@
                                     <div class="card-body pt-8">
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-person"></i> គ្រូបង្វឹក:</strong>
-                                            ផ្នែកបាល់ទាត់</h6>
+                                            ផ្នែកបាល់បោះ</h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-clock"></i> បទពិសោធន៍:</strong> 5
-                                            ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
+                                            ឆ្នាំក្នុងបង្វឹកក្រុមសាលារៀន</h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-file-earmark"></i>
-                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">FIBA Level 1</span></h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-geo-alt"></i> ទីតាំង:</strong>
                                             ភ្នំពេញ</h6>
@@ -856,8 +965,9 @@
                                     <div class="card-body d-flex gap-2">
                                         <button class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
                                             ផ្ញើសារ</button>
-                                        <button class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
-                                                class="bi bi-arrow-right"></i></button>
+                                        <a href="../pages/sports-coach-detail/basketball/basketball-coach-detail.html"
+                                            class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -866,8 +976,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="col-lg-4">
                         <div
                             class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
@@ -893,24 +1001,25 @@
                                     <div class="card-body pt-8">
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-person"></i> គ្រូបង្វឹក:</strong>
-                                            ផ្នែកបាល់ទាត់</h6>
+                                            ផ្នែកបាល់បោះ</h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-clock"></i> បទពិសោធន៍:</strong> 5
+                                                    class="me-2 text-primary bi bi-clock"></i> បទពិសោធន៍:</strong> 8
                                             ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-file-earmark"></i>
-                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">FIBA Level 2</span></h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-geo-alt"></i> ទីតាំង:</strong>
-                                            ភ្នំពេញ</h6>
+                                            សៀមរាប</h6>
                                     </div>
                                 </div>
                                 <div class="card-btn position-absolute bottom-0" style="left: 20%;">
                                     <div class="card-body d-flex gap-2">
                                         <button class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
                                             ផ្ញើសារ</button>
-                                        <button class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
-                                                class="bi bi-arrow-right"></i></button>
+                                        <a href="../pages/sports-coach-detail/basketball/basketball-coach-detail.html"
+                                            class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -919,8 +1028,6 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="col-lg-4">
                         <div
                             class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
@@ -945,13 +1052,13 @@
                                     <div class="card-body pt-8">
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-person"></i> គ្រូបង្វឹក:</strong>
-                                            ផ្នែកបាល់ទាត់</h6>
+                                            ផ្នែកបាល់បោះ</h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-clock"></i> បទពិសោធន៍:</strong> 5
-                                            ឆ្នាំក្នុងបង្វឹកក្រុមជាតិ</h6>
+                                                    class="me-2 text-primary bi bi-clock"></i> បទពិសោធន៍:</strong>
+                                            6ឆ្នាំក្នុងបង្វឹកក្រុមសាលារៀន</h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-file-earmark"></i>
-                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">AFC Level 1 & 2</span></h6>
+                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">FIBA Level 1 & 2</span></h6>
                                         <h6 class="fw-normal fs-5 text-light"><strong><i
                                                     class="me-2 text-primary bi bi-geo-alt"></i> ទីតាំង:</strong>
                                             ភ្នំពេញ</h6>
@@ -961,8 +1068,9 @@
                                     <div class="card-body d-flex gap-2">
                                         <button class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
                                             ផ្ញើសារ</button>
-                                        <button class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
-                                                class="bi bi-arrow-right"></i></button>
+                                        <a href="../pages/sports-coach-detail/basketball/basketball-coach-detail.html"
+                                            class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                                class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -979,7 +1087,7 @@
         <section class="py-5 bg-third py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-12">
                         <h2 class="text-center mb-6 text-main">មតិអតិថិជន</h2>
                         <div class="swiper mySlide pb-6" style="height: 280px;">
                             <div class="swiper-wrapper">
@@ -1130,7 +1238,7 @@
 
 </body>
 <script>
-  AOS.init();
+    AOS.init();
 </script>
 <script>
     function animateHoop(hoop) {
