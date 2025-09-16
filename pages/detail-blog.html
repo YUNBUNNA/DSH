@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>១០ គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម - Sports Health Blog</title>
+    <title>Document</title>
     <!-- link bootstrap -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
     <!-- link theme -->
@@ -17,90 +17,9 @@
     <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
-
-    <style>
-        .blog-content {
-            line-height: 1.8;
-        }
-
-        .blog-header {
-            background: linear-gradient(135deg, #58A8E6 0%, #4A90E2 100%);
-        }
-
-        .tip-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .tip-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .author-info {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 20px;
-        }
-
-        .share-buttons .btn {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .share-buttons .btn:hover {
-            transform: scale(1.1);
-        }
-
-        .reading-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 4px;
-            background: linear-gradient(90deg, #58A8E6, #4A90E2);
-            z-index: 9999;
-            transition: width 0.3s ease;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: #58A8E6;
-            color: white;
-            border-radius: 50%;
-            border: none;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 5px 15px rgba(88, 168, 230, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        .back-to-top:hover {
-            background: #4A90E2;
-            transform: translateY(-3px);
-        }
-
-        .related-articles {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 20px;
-            padding: 30px;
-        }
-    </style>
 </head>
 
 <body class="bg-prime">
-    <!-- Reading Progress Bar -->
-    <div class="reading-progress" id="reading-progress"></div>
 
     <!-- header -->
     <header>
@@ -176,6 +95,27 @@
                     <li class="nav-item px-3 py-1">
                         <a href="" class="nav-link">ទំនាក់ទំនង</a>
                     </li>
+                    <li class="nav-item other px-3 py-1 position-relative">
+                        <a class="nav-link" href="#">
+                            ផ្សេងៗ <i class="bi bi-chevron-down icon"></i>
+                        </a>
+                        <div class="dropdown position-absolute shadow-xs">
+                            <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
                 <ul class="navbar-nav flex-row align-items-center gap-4">
                     <li class="nav-item">
@@ -193,7 +133,26 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item blog position-relative z-3">
+                        <a href="" class="nav-link position-relative">
+                            <i class="bi bi-bell text-prime fs-4"></i>
+                            <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                                style="width: 15px; height: 15px">
+                                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+                            </span>
+                        </a>
+                        <div class="dropdown position-absolute shadow-xs" style="left: -50px">
+                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#"> កីឡា </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item py-1">
                         <a href="" class="nav-link d-block">
                             <i class="bi bi-person-circle text-prime fs-4"></i>
                         </a>
@@ -203,68 +162,61 @@
         </nav>
     </header>
 
-    <!-- main -->
     <main>
-        <!-- Blog Header Section -->
-        <section class="blog-header text-white py-5 mt-14">
+        <section class="pt-20 pb-5 bg-third">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row gy-4 align-items-center">
                     <div class="col-lg-8">
-                        <nav aria-label="breadcrumb" class="mb-3">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#" class="text-white-50">ទំព័រដើម</a></li>
-                                <li class="breadcrumb-item"><a href="#" class="text-white-50">អត្ថបទ</a></li>
-                                <li class="breadcrumb-item active text-white">ការហ្វឹកហាត់</li>
-                            </ol>
-                        </nav>
-                        <h1 class="display-4 fw-bold mb-3">១០ គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h1>
-                        <p class="lead mb-4">រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ និងមានប្រសិទ្ធភាព</p>
-                        <div class="d-flex align-items-center">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face"
-                                class="rounded-circle me-3" width="50" height="50" alt="Author">
-                            <div>
-                                <p class="mb-0 fw-semibold">លោក សុភ័ណ្ណ វីរៈ</p>
-                                <small class="text-white-50">គ្រូបង្វឹកកីឡា • ថ្ងៃទី១០ ខែមេសា ២០២៤</small>
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body">
+                                <h1 class="display-4 fw-bold card-title text-main" style="line-height: 80px;">១០
+                                    គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h1>
+                                <p class="card-text text-prime my-4" style="font-size: 22px;">
+                                    រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ និងមានប្រសិទ្ធភាព</p>
+                                <div class="d-flex align-items-center">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face"
+                                        class="rounded-circle me-3" width="50" height="50" alt="Author">
+                                    <div>
+                                        <p class="mb-0 text-prime">លោក សុភ័ណ្ណ វីរៈ</p>
+                                        <small class="text-prime">គ្រូបង្វឹកកីឡា • ថ្ងៃទី១០ ខែមេសា ២០២៤</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <img src="https://cdn.pixabay.com/photo/2015/07/02/10/22/training-828726_1280.jpg"
-                            class="img-fluid rounded shadow-lg" alt="Training">
+                        <div class="card">
+                            <img src="https://cdn.pixabay.com/photo/2015/07/02/10/22/training-828726_1280.jpg"
+                                class="img-fluid rounded shadow-lg" alt="Training">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Blog Content -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
+        <section>
+            <div class="container py-5">
+                <div class="row gy-4">
                     <div class="col-lg-8">
                         <article class="blog-content">
-                            <!-- Introduction -->
                             <div class="mb-5">
-                                <p class="lead text-second">
+                                <p class="text-prime text-second" style="font-size: 19px;">
                                     ការចាប់ផ្តើមដំណើរហ្វឹកហាត់គឺជាជំហានដំបូងដ៏សំខាន់សម្រាប់ការកសាងសុខភាពល្អ។
                                     ប្រសិនបើអ្នកជាអ្នកចាប់ផ្តើមថ្មី គន្លឹះទាំង១០នេះនឹងជួយឱ្យអ្នកមានការផ្តើមដ៏ត្រឹមត្រូវ
                                     និងជៀសវាងការរងរបួសដែលអាចកើតមាន។
                                 </p>
                             </div>
-
-                            <!-- Tips Section -->
                             <div class="mb-5">
-                                <h2 class="h3 text-prime mb-4 fw-bold">គន្លឹះទាំង១០ សម្រាប់អ្នកចាប់ផ្តើម</h2>
+                                <h3 class="text-prime mb-4 fw-bold">គន្លឹះទាំង១០ សម្រាប់អ្នកចាប់ផ្តើម</h3>
 
-                                <!-- Tip 1 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>1</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">ចាប់ផ្តើមយឺតៗ</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">ចាប់ផ្តើមយឺតៗ</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 កុំប្រញាប់ប្រញាល់នៅថ្ងៃដំបូង។ ចាប់ផ្តើមដោយសកម្មភាពស្រាល ៥-១០
                                                 នាទីក្នុងមួយថ្ងៃ
                                                 រួចបន្តបង្កើនទម្ងន់និងរយៈពេលជាបណ្តើរៗ។
@@ -274,211 +226,198 @@
                                     </div>
                                 </div>
 
-                                <!-- Tip 2 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>2</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">កំណត់គោលដៅច្បាស់លាស់</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">កំណត់គោលដៅច្បាស់លាស់</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 កំណត់គោលដៅដែលអាចធ្វើទៅបាន និងវាស់វែងបាន។ ឧទាហរណ៍៖ "ខ្ញុំចង់រត់បាន ៣០
-                                                នាទី"
-                                                ជាជាងគោលដៅដូចជា "ខ្ញុំចង់មានសុខភាពល្អ"។
+                                                នាទី" ជាជាងគោលដៅដូចជា "ខ្ញុំចង់មានសុខភាពល្អ"។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tip 3 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>3</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">ផ្អែកលើទម្លាប់ប្រចាំថ្ងៃ</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">ផ្អែកលើទម្លាប់ប្រចាំថ្ងៃ</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 ធ្វើកាយវិការណាជាទម្លាប់ប្រចាំថ្ងៃ។ កំណត់ពេលវេលាថេរមួយ
-                                                ហើយធ្វើឱ្យវាក្លាយជាផ្នែកមួយ
-                                                នៃកម្មវិធីប្រចាំថ្ងៃរបស់អ្នក។ ភាពជាប់លាប់គឺជាកូនសោរនៃភាពជោគជ័យ។
+                                                ហើយធ្វើឱ្យវាក្លាយជាផ្នែកមួយ នៃកម្មវិធីប្រចាំថ្ងៃរបស់អ្នក។
+                                                ភាពជាប់លាប់គឺជាកូនសោរនៃភាពជោគជ័យ។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tip 4 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>4</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">ស្វែងរកសកម្មភាពដែលអ្នកចូលចិត្ត</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">ស្វែងរកសកម្មភាពដែលអ្នកចូលចិត្ត</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 ធ្វើកាយវិការណាដែលអ្នកពិតជាចូលចិត្ត។ អ្នកខ្លះចូលចិត្តរត់
-                                                អ្នកខ្លះចូលចិត្តនម យុទ្ធសិល្ប៍
-                                                ឬកីឡាជាមួយបណ្តុំ។ រកសកម្មភាពដែលធ្វើឱ្យអ្នកសប្បាយចិត្ត។
+                                                អ្នកខ្លះចូលចិត្តនម យុទ្ធសិល្ប៍ ឬកីឡាជាមួយបណ្តុំ។
+                                                រកសកម្មភាពដែលធ្វើឱ្យអ្នកសប្បាយចិត្ត។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tip 5 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>5</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">ធ្វើការកម្ដៅបដិខណ្ឌសមស្រប</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">ធ្វើការកម្ដៅបដិខណ្ឌសមស្រប</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 កុំភ្លេចធ្វើការកម្ដៅរាងកាយមុនការហាត់ប្រាណ
-                                                និងការធ្វើឱ្យត្រជាក់បន្ទាប់ពីហាត់រួច។
-                                                ការកម្ដៅជួយឱ្យសាច់ដុំត្រៀមខ្លួន និងការត្រជាក់ជួយឱ្យស្ទុះ។
+                                                និងការធ្វើឱ្យត្រជាក់បន្ទាប់ពីហាត់រួច។ ការកម្ដៅជួយឱ្យសាច់ដុំត្រៀមខ្លួន
+                                                និងការត្រជាក់ជួយឱ្យស្ទុះ។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tip 6 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>6</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">ស្តាប់សម្លេងរបស់រាងកាយ</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">ស្តាប់សម្លេងរបស់រាងកាយ</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 រៀនសម្គាល់រវាងការឈឺចុកចាប់ធម្មតា និងរបួសពិត។
-                                                ប្រសិនបើអ្នកមានការឈឺចាប់មិនធម្មតា
-                                                សូមឈប់សម្រាក។ ការសម្រាកក៏សំខាន់ដូចការហាត់ប្រាណដែរ។
+                                                ប្រសិនបើអ្នកមានការឈឺចាប់មិនធម្មតា សូមឈប់សម្រាក។
+                                                ការសម្រាកក៏សំខាន់ដូចការហាត់ប្រាណដែរ។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tip 7 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>7</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">ផឹកទឹកឱ្យបានគ្រប់គ្រាន់</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">ផឹកទឹកឱ្យបានគ្រប់គ្រាន់</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 រក្សាកម្រិតទឹកក្នុងរាងកាយ។ ផឹកទឹក ២-៣ កែវមុនការហាត់ប្រាណ
-                                                និងបន្តផឹកកំឡុងពេលហាត់។
-                                                កុំរង់ចាំរហូតដល់អ្នកស្មាវហើយទើបផឹក។
+                                                និងបន្តផឹកកំឡុងពេលហាត់។ កុំរង់ចាំរហូតដល់អ្នកស្មាវហើយទើបផឹក។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tip 8 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>8</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">ព្យាយាមជាមួយបណ្តុំ</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">ព្យាយាមជាមួយបណ្តុំ</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 ស្វែងរកមិត្តផ្កាយក្នុងការហាត់ប្រាណ ឬចូលរួមក្រុមហាត់ប្រាណ។
-                                                ការមានគាំទ្រពីអ្នកដទៃ
-                                                នឹងជួយលើកទឹកចិត្ត និងធ្វើឱ្យការហាត់ប្រាណកាន់តែសប្បាយ។
+                                                ការមានគាំទ្រពីអ្នកដទៃ នឹងជួយលើកទឹកចិត្ត
+                                                និងធ្វើឱ្យការហាត់ប្រាណកាន់តែសប្បាយ។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tip 9 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>9</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">កត់ត្រាវឌ្ឍនភាព</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">កត់ត្រាវឌ្ឍនភាព</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 កត់ត្រាសកម្មភាពហាត់ប្រាណប្រចាំថ្ងៃរបស់អ្នក។ អ្នកអាចប្រើកម្មវិធីទូរស័ព្ទ
-                                                ឬសៀវភៅ
-                                                កត់ត្រាធម្មតា។ ការឃើញវឌ្ឍនភាពនឹងលើកទឹកចិត្តអ្នកបន្តទៀត។
+                                                ឬសៀវភៅ កត់ត្រាធម្មតា។ ការឃើញវឌ្ឍនភាពនឹងលើកទឹកចិត្តអ្នកបន្តទៀត។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Tip 10 -->
-                                <div class="tip-card bg-prime rounded-3 p-4 mb-4 shadow-sm">
+                                <div class="bg-prime rounded-3 p-4 mb-4 shadow-xs">
                                     <div class="d-flex align-items-start">
-                                        <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3"
+                                        <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center me-3"
                                             style="width: 40px; height: 40px; flex-shrink: 0;">
                                             <strong>10</strong>
                                         </div>
                                         <div>
-                                            <h4 class="text-prime mb-2">ឱ្យតម្លៃខ្លួនឯង</h4>
-                                            <p class="text-second mb-0">
+                                            <h4 class="card-text mb-2 text-prime">ឱ្យតម្លៃខ្លួនឯង</h4>
+                                            <p class="card-title mb-0 text-second">
                                                 រៀបចំរង្វាន់តូចៗសម្រាប់ខ្លួនឯង នៅពេលសម្រេចបាននូវគោលដៅតូចៗ។
                                                 ការលើកទឹកចិត្តខ្លួនឯងគឺជាកត្តាសំខាន់ក្នុងការរក្សាបាននូវទម្លាប់ល្អ។
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Conclusion -->
-                            <div class="mb-5">
-                                <h3 class="text-prime mb-3 fw-bold">សកម្មភាពបន្ទាប់</h3>
-                                <p class="text-second">
-                                    គន្លឹះទាំងនេះគឺជាមូលដ្ឋានសម្រាប់អ្នកចាប់ផ្តើមថ្មី។ ចាប់ផ្តើមដោយជ្រើសរើសគន្លឹះ២-៣មុនៗ
-                                    ហើយបន្តអនុវត្តរហូតដល់វាក្លាយជាទម្លាប់។ រួចបន្តបន្ថែមគន្លឹះផ្សេងទៀត។
-                                </p>
-                                <p class="text-second mb-4">
-                                    ចូរចាំថា ការផ្លាស់ប្តូរជាវិជ្ជមានមិនកើតឡើងភ្លាម។ ត្រូវការពេលវេលា និងការអត់ធ្មត់។
-                                    ការសំខាន់គឺការរក្សាបាននូវភាពជាប់លាប់ និងមិនបោះបង់ចោល។
-                                </p>
-                                <div class="alert alert-info border-0 bg-light">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-lightbulb-fill text-warning fs-4 me-3"></i>
-                                        <div>
-                                            <strong class="text-prime">ជំនួយបន្ថែម:</strong>
-                                            <p class="mb-0">
-                                                ប្រសិនបើអ្នកមានសំណួរឬចង់បានការណែនាំបន្ថែម សូមពិគ្រោះជាមួយអ្នកជំនាញ
-                                                ឬគ្រូបង្វឹក។ ការចាប់ផ្តើមត្រឹមត្រូវនឹងជួយឱ្យអ្នកទទួលបានលទ្ធផលល្អ
-                                                និងមានសុវត្ថិភាព。
-                                            </p>
+                                <div class="mb-5">
+                                    <h3 class="text-prime mb-3 fw-bold">សកម្មភាពបន្ទាប់</h3>
+                                    <p class="text-second">
+                                        គន្លឹះទាំងនេះគឺជាមូលដ្ឋានសម្រាប់អ្នកចាប់ផ្តើមថ្មី។
+                                        ចាប់ផ្តើមដោយជ្រើសរើសគន្លឹះ២-៣មុនៗ
+                                        ហើយបន្តអនុវត្តរហូតដល់វាក្លាយជាទម្លាប់។ រួចបន្តបន្ថែមគន្លឹះផ្សេងទៀត។
+                                    </p>
+                                    <p class="text-second mb-4">
+                                        ចូរចាំថា ការផ្លាស់ប្តូរជាវិជ្ជមានមិនកើតឡើងភ្លាម។ ត្រូវការពេលវេលា និងការអត់ធ្មត់។
+                                        ការសំខាន់គឺការរក្សាបាននូវភាពជាប់លាប់ និងមិនបោះបង់ចោល។
+                                    </p>
+                                    <div class="bg-third p-4 rounded-3 shadow-xs">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-lightbulb-fill text-warning fs-4 me-3"></i>
+                                            <div>
+                                                <strong class="text-prime"
+                                                    style="font-size: 20px;">ជំនួយបន្ថែម:</strong>
+                                                <p class="mb-0 text-prime">
+                                                    ប្រសិនបើអ្នកមានសំណួរឬចង់បានការណែនាំបន្ថែម សូមពិគ្រោះជាមួយអ្នកជំនាញ
+                                                    ឬគ្រូបង្វឹក។ ការចាប់ផ្តើមត្រឹមត្រូវនឹងជួយឱ្យអ្នកទទួលបានលទ្ធផលល្អ
+                                                    និងមានសុវត្ថិភាព。
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End of Blog Content -->
                         </article>
                     </div>
-                    <!-- Sidebar -->
                     <div class="col-lg-4">
                         <aside>
-                            <div class="author-info mb-4">
+                            <div class="bg-third p-4 rounded-3 shadow-xs mb-4">
                                 <div class="d-flex align-items-center mb-3">
                                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
                                         class="rounded-circle me-3" width="60" height="60" alt="Author">
                                     <div>
-                                        <h5 class="mb-0">លោក សុភ័ណ្ណ វីរៈ</h5>
-                                        <small class="text-muted">គ្រូបង្វឹកកីឡា</small>
+                                        <h5 class="mb-0 text-prime">លោក សុភ័ណ្ណ វីរៈ</h5>
+                                        <small class="text-muted text-prime">គ្រូបង្វឹកកីឡា</small>
                                     </div>
                                 </div>
-                                <p class="mb-0">មានបទពិសោធន៍ជាង ១០ ឆ្នាំក្នុងការបង្វឹកកីឡា និងផ្តល់អនុសាសន៍សុខភាព។</p>
+                                <p class="mb-0 text-prime">មានបទពិសោធន៍ជាង ១០ ឆ្នាំក្នុងការបង្វឹកកីឡា និងផ្តល់អនុសាសន៍សុខភាព។</p>
                             </div>
-                            <div class="related-articles">
+                            <div class="bg-third p-4 rounded-3 shadow-xs">
                                 <h5 class="fw-bold mb-3 text-prime">អត្ថបទពាក់ព័ន្ធ</h5>
                                 <ul class="list-unstyled mb-0">
                                     <li class="mb-2"><a href="#"
@@ -497,38 +436,16 @@
             </div>
         </section>
     </main>
-    <!-- Scripts -->
+
+    <!-- link bootstrap js -->
     <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <!-- link swiper js -->
     <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+    <!-- link aos js -->
     <script src="../assets/plugins/aos/js/aos.js"></script>
-    <script>
-        // Reading Progress Bar
-        window.addEventListener('scroll', function () {
-            const progress = document.getElementById('reading-progress');
-            const totalHeight = document.body.scrollHeight - window.innerHeight;
-            const progressHeight = (window.scrollY / totalHeight) * 100;
-            progress.style.width = progressHeight + '%';
-        });
-        // Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 300) {
-                backToTop.style.display = 'flex';
-            } else {
-                backToTop.style.display = 'none';
-            }
-        });
-        backToTop.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        themeToggle.addEventListener('click', function () {
-            body.classList.toggle('bg-dark');
-            body.classList.toggle('bg-prime');
-        });
-    </script>
+    <!-- link js custom -->
+    <script src="../assets/js/main.js"></script>
+
 </body>
 
 </html>

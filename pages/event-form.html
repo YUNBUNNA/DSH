@@ -1,170 +1,247 @@
 <!DOCTYPE html>
-<html lang="km">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ចុះឈ្មោះម៉ារ៉ាតុង 3Km</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --prime-color: #2c3e50;
-            --gold-color: #f39c12;
-        }
-
-        body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            max-width: 600px;
-        }
-
-        .form-container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-
-        .event-info {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-
-        .btn-gold {
-            background-color: var(--gold-color);
-            border-color: var(--gold-color);
-            color: white;
-            width: 100%;
-            padding: 12px;
-            font-weight: bold;
-        }
-
-        .btn-gold:hover {
-            background-color: #e67e22;
-            border-color: #e67e22;
-            color: white;
-        }
-
-        .form-label {
-            color: var(--prime-color);
-            font-weight: 500;
-        }
-
-        .text-prime {
-            color: var(--prime-color);
-        }
-
-        .success-message {
-            display: none;
-            text-align: center;
-            padding: 30px;
-        }
-    </style>
+    <title>Document</title>
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+    <!-- link theme -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
+    <!-- link icons -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+    <!-- link swiper -->
+    <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+    <!-- link aos -->
+    <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
+    <!-- link css custom -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
-    <div class="container py-4">
-        <div class="form-container">
-            <!-- Event Info -->
-            <div class="event-info">
-                <img src="https://i.pinimg.com/736x/f5/b3/1e/f5b31e6d5dd90713a4e9482a6f791247.jpg" 
-                     alt="Marathon" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
-                <h2 class="text-prime mt-3 mb-2">ម៉ារ៉ាតុង 3Km</h2>
-                <p class="mb-1"><i class="bi bi-calendar me-2"></i>ថ្ងៃសុក្រ ខែមករា ឆ្នាំ 2025, 5:00 PM</p>
-                <p class="mb-1"><i class="bi bi-geo-alt me-2"></i>កោះពេជ្រ, ភ្នំពេញ</p>
-                <p class="mb-0"><span class="badge bg-success fs-6">FREE</span></p>
+
+<body class="bg-prime">
+
+    <!-- header -->
+    <header>
+        <nav class="navbar py-0 fixed-top bg-prime">
+            <div class="container-fluid" style="background-color: #58A8E6;">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <a href="" class="navbar-brand">
+                        <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
+                            style="width: 90px; height: 40px" />
+                    </a>
+                    <ul class="navbar-nav flex-row align-items-center">
+                        <li class="nav-item">
+                            <a href="" class="px-4 ff text-white text-decoration-none">
+                                <i class="bi bi-telephone fs-5"></i> +855 96 123 4567
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="ff text-white text-decoration-none">
+                                <i class="bi bi-envelope fs-5"></i> Dsh@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid border-bottom"></div>
+            <div class="container d-flex align-items-center justify-content-between">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item pe-3 py-1">
+                        <a href="" class="nav-link">ទំព័រដើម</a>
+                    </li>
+                    <li class="nav-item sport px-3 py-1 position-relative">
+                        <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
+                        <div class="dropdown position-absolute shadow-xs">
+                            <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
+                                <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
+                                <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
+                                <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
+                                <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
+                                <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
+                                <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
+                                <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
+                                <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item px-3 py-1">
+                        <a href="" class="nav-link">ការហ្វឹកហាត់</a>
+                    </li>
+                    <li class="nav-item px-3 py-1">
+                        <a href="" class="nav-link">ទំនិញ</a>
+                    </li>
+                    <li class="nav-item px-3 py-1">
+                        <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
+                    </li>
+                    <li class="nav-item blog px-3 py-1 position-relative">
+                        <a class="nav-link" href="#">
+                            អត្ថបទ <i class="bi bi-chevron-down icon"></i>
+                        </a>
+                        <div class="dropdown position-absolute shadow-xs">
+                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item px-3 py-1">
+                        <a href="" class="nav-link">អំពីយើង</a>
+                    </li>
+                    <li class="nav-item px-3 py-1">
+                        <a href="" class="nav-link">ទំនាក់ទំនង</a>
+                    </li>
+                    <li class="nav-item other px-3 py-1 position-relative">
+                        <a class="nav-link" href="#">
+                            ផ្សេងៗ <i class="bi bi-chevron-down icon"></i>
+                        </a>
+                        <div class="dropdown position-absolute shadow-xs">
+                            <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav flex-row align-items-center gap-4">
+                    <li class="nav-item">
+                        <a class="main-btn text-prime" id="theme-toggle">
+                            <i class="theme-icon bi bi-sun fs-4"></i>
+                            <i class="theme-icon bi bi-moon fs-4"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link position-relative">
+                            <i class="bi bi-cart2 text-prime fs-4"></i>
+                            <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                                style="width: 15px; height: 15px">
+                                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item blog position-relative z-3">
+                        <a href="" class="nav-link position-relative">
+                            <i class="bi bi-bell text-prime fs-4"></i>
+                            <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                                style="width: 15px; height: 15px">
+                                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+                            </span>
+                        </a>
+                        <div class="dropdown position-absolute shadow-xs" style="left: -50px">
+                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#"> កីឡា </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item py-1">
+                        <a href="" class="nav-link d-block">
+                            <i class="bi bi-person-circle text-prime fs-4"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <section class="pt-20 bg-third">
+        <div class="container shadow-xs rounded-3 p-4 bg-prime" style="max-width: 800px;">
+            <div class="form-header text-center">
+                <h1 class="display-4 fw-bold text-main">ការចុះឈ្មោះព្រឹត្តិការណ៍កីឡា</h1>
+                <p class="lead text-prime mt-4">សូមចុះឈ្មោះសម្រាប់ព្រឹត្តិការណ៍ប្រកួតកីឡាខាងមុខនេះ!</p>
             </div>
 
-            <!-- Registration Form -->
-            <form id="registrationForm">
-                <h4 class="text-prime mb-4">ចុះឈ្មោះឥឡូវនេះ</h4>
-                
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">នាមត្រកូល *</label>
-                        <input type="text" class="form-control" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">នាមខ្លួន *</label>
-                        <input type="text" class="form-control" required>
-                    </div>
-                </div>
-
+            <form id="registration-form">
+                <!-- Personal Information Section -->
                 <div class="mb-3">
-                    <label class="form-label">អ៊ីម៉ែល *</label>
-                    <input type="email" class="form-control" required>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">លេខទូរសព្ទ *</label>
-                    <input type="tel" class="form-control" required>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">អាយុ *</label>
-                        <input type="number" class="form-control" min="16" max="80" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label class="form-label">ភេទ *</label>
-                        <select class="form-select" required>
-                            <option value="">ជ្រើសរើស</option>
-                            <option value="male">ប្រុស</option>
-                            <option value="female">ស្រី</option>
-                        </select>
+                    <h3 class="h5 fw-bold text-prime">ព័ត៌មានផ្ទាល់ខ្លួន</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">ឈ្មោះ</label>
+                            <input type="text" class="form-control px-2" id="firstName" placeholder="John" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">ត្រកូល</label>
+                            <input type="text" class="form-control px-2" id="lastName" placeholder="Doe" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">អ៊ីម៉ែល</label>
+                            <input type="email" class="form-control px-2" id="email" placeholder="john.doe@example.com"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
+                            <input type="tel" class="form-control px-2" id="phone" placeholder="123-456-7890">
+                        </div>
                     </div>
                 </div>
 
+                <!-- Event Selection Section -->
                 <div class="mb-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="agree" required>
-                        <label class="form-check-label" for="agree">
-                            ខ្ញុំយល់ព្រម និងទទួលរងហានិភ័យក្នុងការចូលរួម
-                        </label>
-                    </div>
+                    <h3 class="h5 fw-bold text-prime">ការជ្រើសរើសព្រឹត្តិការណ៍</h3>
+                    <label for="eventSelect" class="form-label">ជ្រើសរើសព្រឹត្តិការណ៍របស់អ្នក</label>
+                    <select class="form-select form-control" id="eventSelect" required>
+                        <option selected disabled value="">ជ្រើសរើសព្រឹត្តិការណ៍...</option>
+                        <option value="basketball">ការប្រកួតបាល់បោះ</option>
+                        <option value="soccer">ពានរង្វាន់បាល់ទាត់</option>
+                        <option value="volleyball">ជើងឯកបាល់ទះ</option>
+                        <option value="swimming">ការប្រកួតហែលទឹក</option>
+                    </select>
                 </div>
 
-                <button type="submit" class="btn btn-gold">
-                    បញ្ជាក់ការចុះឈ្មោះ
-                </button>
+                <!-- Team Information Section (for team-based events) -->
+                <div class="mb-4" id="team-info-section" style="display: none;">
+                    <h3 class="h5 fw-bold text-secondary">ព័ត៌មានក្រុម</h3>
+                    <label for="teamName" class="form-label">ឈ្មោះក្រុម</label>
+                    <input type="text" class="form-control" id="teamName" placeholder="ឧ. ក្រុម Mavericks">
+                </div>
+
+                <!-- Waiver & Confirmation Section -->
+                <div class="mb-4 form-check">
+                    <input class="form-check-input" type="checkbox" id="waiverCheck" required>
+                    <label class="form-check-label text-prime" for="waiverCheck">
+                        ខ្ញុំយល់ព្រមនឹង <a href="#" data-bs-toggle="modal" data-bs-target="#waiverModal">លក្ខខណ្ឌ</a>
+                        និងការលើកលែងការទទួលខុសត្រូវ។
+                    </label>
+                </div>
+
+                <!-- Final Registration Button with Price -->
+                <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
+                    <button type="submit" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</button>
+                    <p class="text-danger fw-bold mb-0">$15.00</p>
+                </div>
             </form>
-
-            <!-- Success Message -->
-            <div id="successMessage" class="success-message">
-                <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
-                <h4 class="text-success mt-3">ការចុះឈ្មោះបានជោគជ័យ!</h4>
-                <p>អរគុណសម្រាប់ការចុះឈ្មោះ។ យើងនឹងទាក់ទងអ្នកឆាប់ៗនេះ។</p>
-                <button class="btn btn-outline-primary" onclick="resetForm()">ចុះឈ្មោះម្តងទៀត</button>
-            </div>
         </div>
-    </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.innerHTML = 'កំពុងដំណើរការ...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                this.style.display = 'none';
-                document.getElementById('successMessage').style.display = 'block';
-            }, 1500);
-        });
+    <!-- link bootstrap js -->
+    <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <!-- link swiper js -->
+    <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+    <!-- link aos js -->
+    <script src="../assets/plugins/aos/js/aos.js"></script>
+    <!-- link js custom -->
+    <script src="../assets/js/main.js"></script>
 
-        function resetForm() {
-            document.getElementById('registrationForm').reset();
-            document.getElementById('registrationForm').style.display = 'block';
-            document.getElementById('successMessage').style.display = 'none';
-        }
-    </script>
 </body>
+
 </html>
