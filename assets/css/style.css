@@ -157,6 +157,12 @@ body {
 .other:hover .dropdown {
   height: 160px;
 }
+.noti:hover .dropdown {
+  height: 325px;
+}
+.profile:hover .dropdown {
+  height: 192px;
+}
 .nav-item {
   cursor: pointer;
 }
@@ -236,6 +242,7 @@ body {
 .form-control {
   padding: 8px 0;
   border: 2px solid #e9b94aa6;
+  background-color: var(--bg-prime);
   outline: none;
   border-radius: 6px;
   transition: box-shadow 0.3s ease-in-out;
@@ -296,7 +303,6 @@ body {
 .nav .nav-link:hover {
   color: var(--btn-prime) !important;
   background-color: var(--btn-second) !important;
-  border-left: 5px solid var(--btn-prime) !important;
 }
 
 .nav .nav-link.link-hover.active,
@@ -313,6 +319,14 @@ body {
 .article-hover:hover .card-title {
   color: var(--text-main) !important;
 }
+
+.scale-hover {
+  transition: 0.5s ease-in-out;
+}
+.article-hover:hover .scale-hover {
+  transform: scale(1.1);
+}
+
 /* Product Detail */
 .myDetail .swiper-slide {
   cursor: pointer;
@@ -508,4 +522,24 @@ body {
   max-height: 0;
   opacity: 0;
   padding: 0;
+}
+
+.img-main {
+  transition: 0.5s ease;
+}
+
+.img-cover {
+  opacity: 0;
+  transition: 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-img:hover .img-main {
+  opacity: 0;
+}
+
+.card-img:hover .img-cover {
+  opacity: 1;
 }

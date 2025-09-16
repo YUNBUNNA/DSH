@@ -2,23 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- link bootstrap -->
-    <link rel="stylesheet" href="../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
-    <!-- link theme -->
-    <link rel="stylesheet" href="../../assets/plugins/bootstrap-5.3.7/css/theme.css">
-    <!-- link icons -->
-    <link rel="stylesheet" href="../../assets/plugins/bootstrap-icons/bootstrap-icons.css">
-    <!-- link swiper -->
-    <link rel="stylesheet" href="../../assets/plugins/swiper-js/css/swiper-bundle.min.css">
-    <!-- link aos -->
-    <link rel="stylesheet" href="../../assets/plugins/aos/css/aos.css">
-    <!-- link css custom -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <style>
-          .toast {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+  <!-- link theme -->
+  <link rel="stylesheet" href="../../assets/plugins/bootstrap-5.3.7/css/theme.css">
+  <!-- link icons -->
+  <link rel="stylesheet" href="../../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+  <!-- link swiper -->
+  <link rel="stylesheet" href="../../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+  <!-- link aos -->
+  <link rel="stylesheet" href="../../assets/plugins/aos/css/aos.css">
+  <!-- link css custom -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    .toast {
       display: block !important;
       opacity: 0;
       transform: translateX(100vw);
@@ -29,154 +29,358 @@
       opacity: 1;
       transform: translateX(0);
     }
-    </style>
+  </style>
 </head>
 
 <body class="bg-prime">
 
-    <!-- header -->
-    <header>
-        <nav class="navbar py-0 fixed-top bg-prime">
-            <div class="container-fluid bg-nav">
-                <div class="container d-flex align-items-center justify-content-between">
-                    <a href="" class="navbar-brand">
-                        <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
-                            style="width: 90px; height: 40px" />
-                    </a>
-                    <ul class="navbar-nav flex-row align-items-center">
-                        <li class="nav-item">
-                            <a href="" class="px-4 ff text-white text-decoration-none">
-                                <i class="bi bi-telephone fs-5"></i> +855 96 123 4567
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="ff text-white text-decoration-none">
-                                <i class="bi bi-envelope fs-5"></i> Dsh@gmail.com
-                            </a>
-                        </li>
-                    </ul>
+  <!-- header -->
+  <header>
+    <nav class="navbar py-0 fixed-top bg-prime">
+      <div class="container-fluid d-none d-lg-flex bg-nav p-0">
+        <div class="container d-flex align-items-center justify-content-between">
+          <a href="" class="navbar-brand px-0">
+            <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
+              style="width: 90px; height: 40px" />
+          </a>
+          <ul class="navbar-nav flex-row align-items-center">
+            <li class="nav-item">
+              <a href="" class="px-4 ff text-white text-decoration-none">
+                <i class="bi bi-telephone fs-5"></i> +855 96 123 4567
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="ff text-white text-decoration-none">
+                <i class="bi bi-envelope fs-5 me-1"></i> Dsh@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container d-flex justify-content-between text-prime">
+        <button
+          class="navbar-toggler d-flex gap-3 align-items-center p-0 border-0 shadow-none d-block d-xl-none text-prime"
+          type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation">
+          <i class="bi bi-list fs-3"></i>
+          <a href="">
+            <img src="../../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
+              style="width: 80px; height: 40px;">
+          </a>
+        </button>
+        <div class="offcanvas offcanvas-start bg-prime" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header py-2 bg-nav">
+            <img src="../../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+              style="width: 80px; height: 40px;">
+            <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="bi bi-x-lg text-white fs-4"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <ul id="off" class="nav flex-column">
+              <li class="nav-item py-1">
+                <a class="nav-link active text-prime" href="#">ទំព័រដើម</a>
+              </li>
+
+              <!-- ផ្នែកកីឡា -->
+              <li class="nav-item py-1">
+                <a class="nav-link text-prime d-flex align-items-center" data-bs-toggle="collapse" href="#sport"
+                  role="button" aria-expanded="false" aria-controls="sport">
+                  ផ្នែកកីឡា <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="sport" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">បាល់ទាត់</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">រត់ប្រណាំង</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">បាល់បោះ</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">ជិះកង់</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">បាល់ទះ</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">ការ៉ាតេ</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">ហែលទឹក</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">វាយសី</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item py-1">
+                <a class="nav-link" href="#">ការហ្វឹកហាត់</a>
+              </li>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="#">ទំនិញ</a>
+              </li>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="#">ព្រឹត្តិការណ៏</a>
+              </li>
+
+              <!-- អត្ថបទ -->
+              <li class="nav-item py-1">
+                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#blog"
+                  role="button" aria-expanded="false" aria-controls="blog">
+                  អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="blog" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">កីឡា</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">សុខភាព</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item py-1">
+                <a class="nav-link" href="#">អំពីយើង</a>
+              </li>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="#">ទំនាក់ទំនង</a>
+              </li>
+
+              <!-- ផ្សេងៗ -->
+              <li class="nav-item py-1">
+                <a class="nav-link text-prime d-flex align-items-center" data-bs-toggle="collapse" href="#other"
+                  role="button" aria-expanded="false" aria-controls="other">
+                  ផ្សេងៗ <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="other" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">គ្រូបង្វឹក</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">សកម្មភាព</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="navbar-nav flex-row d-none d-xl-flex">
+          <li class="nav-item ps-1 pe-3 py-1">
+            <a href="" class="nav-link">ទំព័រដើម</a>
+          </li>
+          <li class="nav-item sport px-3 py-1 position-relative">
+            <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
+            <div class="dropdown position-absolute shadow-xs">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
+                <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
+                <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
+                <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
+                <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
+                <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item px-3 py-1">
+            <a href="" class="nav-link">ការហ្វឹកហាត់</a>
+          </li>
+          <li class="nav-item px-3 py-1">
+            <a href="" class="nav-link">ទំនិញ</a>
+          </li>
+          <li class="nav-item px-3 py-1">
+            <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
+          </li>
+          <li class="nav-item blog px-3 py-1 position-relative">
+            <a class="nav-link" href="#">
+              អត្ថបទ <i class="bi bi-chevron-down icon"></i>
+            </a>
+            <div class="dropdown position-absolute shadow-xs">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item px-3 py-1">
+            <a href="" class="nav-link">អំពីយើង</a>
+          </li>
+          <li class="nav-item px-3 py-1">
+            <a href="" class="nav-link">ទំនាក់ទំនង</a>
+          </li>
+          <li class="nav-item other px-3 py-1 position-relative">
+            <a class="nav-link" href="#">
+              ផ្សេងៗ <i class="bi bi-chevron-down icon"></i>
+            </a>
+            <div class="dropdown position-absolute shadow-xs">
+              <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav flex-row align-items-center gap-4">
+          <li class="nav-item">
+            <a class="main-btn text-prime" id="theme-toggle">
+              <i class="theme-icon bi bi-sun fs-4"></i>
+              <i class="theme-icon bi bi-moon fs-4"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link position-relative">
+              <i class="bi bi-cart2 text-prime fs-4"></i>
+              <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                style="width: 15px; height: 15px">
+                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item d-block d-lg-none">
+             <a href="../notification-page.html" class="nav-link position-relative">
+              <i class="bi bi-bell text-prime fs-4"></i>
+              <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                style="width: 15px; height: 15px">
+                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item noti position-relative z-3 d-none d-lg-block">
+            <a href="#" class="nav-link position-relative">
+              <i class="bi bi-bell text-prime fs-4"></i>
+              <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                style="width: 15px; height: 15px">
+                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+              </span>
+            </a>
+            <div class="dropdown position-absolute shadow-xs" style="left: -250px">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                <div class="card border-0 border-bottom rounded-0 bg-transparent p-0">
+                  <div class="card-body pb-0">
+                    <div class="d-flex">
+                      <p class="text-prime fs-5">ការជូនដំណឺង</p>
+                      <i class="bi bi-three-dots text-prime fs-4 me-4 ms-auto"></i>
+                      <i class="bi bi-search text-prime fs-5"></i>
+                    </div>
+                  </div>
                 </div>
+                <li>
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
+                      <img
+                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
+                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                    </div>
+                    <div>
+                      <small class="text-second">កីឡា</small>
+                      <p class="m-0 fw-bold">ការប្រកួតបាល់ទាត់នៅចុងសប្តាហ៍នេះ!</p>
+                      <small class="ff text-second">15m</small>
+                    </div>
+                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
+                      <img
+                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
+                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                    </div>
+                    <div>
+                      <small class="text-second">សម្លៀកបំពាក់</small>
+                      <p class="m-0 fw-bold">បញ្ចុះតម្លៃ 30% លើអាវកីឡា!</p>
+                      <small class="ff text-second">2h</small>
+                    </div>
+                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
+                      <img
+                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
+                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                    </div>
+                    <div>
+                      <small class="text-muted">អត្ថបទថ្មី</small>
+                      <p class="m-0 fw-bold">របៀបហាត់ប្រាណឲ្យមានប្រសិទ្ធភាព</p>
+                      <small class="ff text-second">11h</small>
+                    </div>
+                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="container-fluid border-bottom"></div>
-            <div class="container d-flex align-items-center justify-content-between">
-                <ul class="navbar-nav flex-row">
-                    <li class="nav-item pe-3 py-1">
-                        <a href="" class="nav-link">ទំព័រដើម</a>
-                    </li>
-                    <li class="nav-item sport px-3 py-1 position-relative">
-                        <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
-                        <div class="dropdown position-absolute shadow-xs">
-                            <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
-                                <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
-                                <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
-                                <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
-                                <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
-                                <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ការហ្វឹកហាត់</a>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ទំនិញ</a>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
-                    </li>
-                    <li class="nav-item blog px-3 py-1 position-relative">
-                        <a class="nav-link" href="#">
-                            អត្ថបទ <i class="bi bi-chevron-down icon"></i>
-                        </a>
-                        <div class="dropdown position-absolute shadow-xs">
-                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">អំពីយើង</a>
-                    </li>
-                    <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ទំនាក់ទំនង</a>
-                    </li>
-                    <li class="nav-item other px-3 py-1 position-relative">
-                        <a class="nav-link" href="#">
-                            ផ្សេងៗ <i class="bi bi-chevron-down icon"></i>
-                        </a>
-                        <div class="dropdown position-absolute shadow-xs">
-                            <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav flex-row align-items-center gap-4">
-                    <li class="nav-item">
-                        <a class="main-btn text-prime" id="theme-toggle">
-                            <i class="theme-icon bi bi-sun fs-4"></i>
-                            <i class="theme-icon bi bi-moon fs-4"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link position-relative">
-                            <i class="bi bi-cart2 text-prime fs-4"></i>
-                            <span class="position-absolute bg-danger border-0 rounded-circle start-50"
-                                style="width: 15px; height: 15px">
-                                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item blog position-relative z-3">
-                        <a href="" class="nav-link position-relative">
-                            <i class="bi bi-bell text-prime fs-4"></i>
-                            <span class="position-absolute bg-danger border-0 rounded-circle start-50"
-                                style="width: 15px; height: 15px">
-                                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
-                            </span>
-                        </a>
-                        <div class="dropdown position-absolute shadow-xs" style="left: -50px">
-                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#"> កីឡា </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item py-1">
-                        <a href="" class="nav-link d-block">
-                            <i class="bi bi-person-circle text-prime fs-4"></i>
-                        </a>
-                    </li>
-                </ul>
+          </li>
+          <li class="nav-item profile position-relative">
+            <a href="" class="nav-link">
+              <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+            </a>
+            <div class="dropdown position-absolute shadow-xs" style="left: -60px;">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                <div class="card border-0 border-bottom rounded-0 bg-prime p-0">
+                  <div class="card-body">
+                    <div class="d-flex align-items-end gap-3">
+                      <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                        class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;" alt="">
+                      <h6 class="fs-text text-prime">ឡាយ ចេមមី</h6>
+                    </div>
+                  </div>
+                </div>
+                <li>
+                  <a class="dropdown-item py-2 d-block m-0" href="profile-user.html#tab-profile"><i
+                      class="bi bi-person me-1"></i> គណនី</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="profile-user.html#tab-change-password"><i
+                      class="bi bi-gear me-2"></i>ការកំណត់</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#"><i class="bi bi-speedometer2 me-2"></i>ផ្ទាំងគ្រប់គ្រង
+                    <span class="ms-5 opacity-0">a</span></a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a>
+                </li>
+              </ul>
             </div>
-        </nav>
-    </header>
-    <main>
-        <!-- Detail Products -->
-    <section class="vh-100 pt-15">
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Detail Products -->
+    <section class="vh-100 pt-15 product-detail">
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-6">
@@ -191,9 +395,7 @@
                     <img src="../../assets/img/shop/shirt/shirt-1-hover.webp" class="img-fluid" />
                   </div>
                   <div class="swiper-slide bg-second">
-                    <img
-                      src="../../assets/img/shop/shirt/shirt-1-start.webp"
-                      class="img-fluid" />
+                    <img src="../../assets/img/shop/shirt/shirt-1-start.webp" class="img-fluid" />
                   </div>
                 </div>
               </div>
@@ -207,9 +409,7 @@
                     <img src="../../assets/img/shop/shirt/shirt-1-hover.webp" class="img-fluid" />
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="../../assets/img/shop/shirt/shirt-1-start.webp"
-                      class="img-fluid" />
+                    <img src="../../assets/img/shop/shirt/shirt-1-start.webp" class="img-fluid" />
                   </div>
                 </div>
                 <!-- Navigation -->
@@ -334,17 +534,17 @@
           </div>
         </div>
       </div>
-    </section>  
-    </main>
+    </section>
+  </main>
 
-    <!-- link bootstrap js -->
-    <script src="../../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-    <!-- link swiper js -->
-    <script src="../../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
-    <!-- link aos js -->
-    <script src="../../assets/plugins/aos/js/aos.js"></script>
-    <!-- link js custom -->
-    <script src="../../assets/js/main.js"></script>
+  <!-- link bootstrap js -->
+  <script src="../../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <!-- link swiper js -->
+  <script src="../../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+  <!-- link aos js -->
+  <script src="../../assets/plugins/aos/js/aos.js"></script>
+  <!-- link js custom -->
+  <script src="../../assets/js/main.js"></script>
 
 </body>
 

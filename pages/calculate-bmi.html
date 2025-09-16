@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+    <!-- link theme -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
+    <!-- link icons -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+    <!-- link swiper -->
+    <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+    <!-- link aos -->
+    <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
+    <!-- link css custom -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-third">
+
+    <!-- BMI -->
+    <section class="bg-third">
+      <div class="container">
+        <h1 class="text-main fw-bold display-5 text-center mb-4">ការគណនា <span class="ff">BMI</span></h1>
+        <h4 class="text-second text-center mb-5">ពិនិត្យមើលសន្ទស្សន៍ម៉ាស់រាងកាយរបស់អ្នក <span class="ff">(Body Mass
+            Index)</span></h4>
+        <div class="row g-4 align-content-stretch">
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-xs bg-prime h-100">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h2 class="text-main fw-bold mb-3 text-center">គណនា <span class="ff">BMI</span></h2>
+                <h5 class="fw-normal text-second mb-3 text-center">បញ្ចូលទម្ងន់ និងកម្ពស់របស់អ្នក</h5>
+                <form action="" class="px-3">
+                  <div class="mb-3 position-relative">
+                    <label class="form-label fs-title mb-2">ទម្ងន់ (គីឡូក្រាម)</label>
+                    <input type="number" class="form-control bg-prime fs-text text-second ps-7 pe-2"
+                      placeholder="ឧទាហរណ៍ 65">
+                    <i class="bi bi-person-arms-up fs-5 position-absolute text-gold icon-input"></i>
+                  </div>
+                  <div class="mb-3 position-relative">
+                    <label class="form-label fs-title mb-2">កម្ពស់ (ម៉ែត្រ)</label>
+                    <input type="number" class="form-control bg-prime fs-text text-second ps-7 pe-2"
+                      placeholder="ឧទាហរណ៍ 1.70">
+                    <i class="bi bi-person-arms-up fs-5 position-absolute text-gold icon-input"></i>
+                  </div>
+                </form>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                  <!-- Calculate button -->
+                  <button class="btn btn-gold fs-nav px-5" type="button" id="calcBtn">
+                    គណនា <span class="ff">BMI</span>
+                  </button>
+                  <!-- Clear button -->
+                  <button class="btn btn-gold fs-nav px-5" type="button" id="clearBtn">
+                    កំណត់ឡើងវិញ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 shadow-xs bg-prime h-100">
+              <div class="card-body">
+                <h2 class="text-main fw-bold text-center mb-3">លទ្ធផល <span class="ff">BMI</span></h2>
+                <h5 class="fw-normal text-second text-center mb-3">ការបកស្រាយលទ្ធផល និងការណែនាំ</h5>
+                <!-- BMI Input Message -->
+                <div class="collapse" id="bmi-input">
+                  <div class="card border-0 d-flex flex-column justify-content-center align-items-center"
+                    style="min-height:200px;">
+                    <i class="bi bi-calculator fs-1 text-main mb-3"></i>
+                    <h5 class="text-second text-center">
+                      បញ្ចូលទម្ងន់ និងកម្ពស់ដើម្បីមើលលទ្ធផល <span class="ff">BMI</span>
+                    </h5>
+                  </div>
+
+                </div>
+
+                <!-- BMI Result -->
+                <div class="collapse show" id="bmi-result" data-bs-parent="">
+                  <div class="card-body">
+                    <div class="bg-second rounded-3 p-2">
+                      <h3 class="text-center">
+                        <i class="bi bi-suit-heart me-2 text-green"></i> <span class="ff">22.5</span>
+                      </h3>
+                      <h4 class="text-main text-center">ធម្មតា</h4>
+                      <h5 class="text-second text-center">អ្នកមានសុខភាពល្អ</h5>
+                    </div>
+                  </div>
+                  <ul class="">
+                    <h5 class="mb-3">ការណែនាំសម្រាប់អ្នក:</h5>
+                    <li>
+                      <p>ពិនិត្យសុខភាពទៀងទាត់</p>
+                    </li>
+                    <li>
+                      <p>ហ្វឹកហាត់ទៀងទាត់ ៣-៤ ដងក្នុងមួយសប្តាហ៍</p>
+                    </li>
+                    <li>
+                      <p>បរិភោគអាហារមានតុល្យភាព</p>
+                    </li>
+                    <li>
+                      <p>ពិនិត្យសុខភាពទៀងទាត់</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- link bootstrap js -->
+    <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <!-- link swiper js -->
+    <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+    <!-- link aos js -->
+    <script src="../assets/plugins/aos/js/aos.js"></script>
+    <!-- link js custom -->
+    <script src="../assets/js/main.js"></script>
+     <!-- BMI -->
+  <script>
+    // Clear button: close result, open input
+    document.getElementById("clearBtn").addEventListener("click", function () {
+      let bmiResult = document.getElementById("bmi-result");
+      bootstrap.Collapse.getOrCreateInstance(bmiResult).hide();
+
+      let bmiInput = document.getElementById("bmi-input");
+      bootstrap.Collapse.getOrCreateInstance(bmiInput).show();
+    });
+
+    // Calculate button: close input, open result
+    document.getElementById("calcBtn").addEventListener("click", function () {
+      let bmiInput = document.getElementById("bmi-input");
+      bootstrap.Collapse.getOrCreateInstance(bmiInput).hide();
+
+      let bmiResult = document.getElementById("bmi-result");
+      bootstrap.Collapse.getOrCreateInstance(bmiResult).show();
+    });
+  </script>
+
+</body>
+
+</html>
