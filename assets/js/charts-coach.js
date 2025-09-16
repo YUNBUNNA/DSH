@@ -1,0 +1,99 @@
+// Helper to get CSS variable
+function cssVar(name) {
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue(name)
+    .trim();
+}
+
+// Chart options factory (dynamic colors & font)
+function getChartOptions(isBar = true) {
+  const isDarkMode = document.documentElement.classList.contains("dark-mode");
+
+  return {
+    responsive: true,
+    plugins: {
+      legend: {
+        labels: {
+          font: { family: "'Noto Serif Khmer', serif", size: 14 },
+          color: cssVar("--text-prime"),
+        },
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: isDarkMode ? "#ffffff" : "#000000",
+        titleFont: { family: "'Noto Serif Khmer', serif", size: 14 },
+        bodyFont: { family: "'Noto Serif Khmer', serif", size: 12 },
+        titleColor: isDarkMode ? "#000000" : "#ffffff",
+        bodyColor: isDarkMode ? "#000000" : "#ffffff",
+      },
+    },
+    scales: {
+      x: {
+        offset: isBar,
+        ticks: {
+          font: { family: "'Noto Serif Khmer', serif", size: 12 },
+          color: cssVar("--text-prime"),
+          maxRotation: 0,
+          minRotation: 0,
+          align: "center",
+          padding: isBar ? 10 : 0,
+        },
+        grid: {
+          color: isBar ? cssVar("--text-second") : "transparent",
+          display: isBar ? true : false,
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          font: { family: "'Noto Serif Khmer', serif", size: 12 },
+          color: cssVar("--text-prime"),
+        },
+        grid: { color: cssVar("--text-second"), borderDash: [5, 5] },
+      },
+    },
+  };
+}
+
+// Old Charts
+const ctxMembership = document
+  .getElementById("membershipChart")
+  .getContext("2d");
+let membershipChart = new Chart(ctxMembership, {
+  type: "line",
+  data: {
+    labels: ["មករា", "កុម្ភៈ", "មិនា", "មេសា", "ឧសភា", "មិថុនា"],
+    datasets: [
+      {
+        label: "ប្រាក់ចំណូល",
+        data: [250, 300, 450, 650, 800, 1000],
+        borderColor: "#0d6efd",
+        backgroundColor: "rgba(13, 110, 253, 0.2)",
+        fill: true,
+        tension: 0.3,
+        borderWidth: 2,
+      },
+    ],
+  },
+  options: getChartOptions(),
+  plugins: [
+    {
+      id: "legendMargin",
+      beforeInit(chart) {
+        const fitValue = chart.legend.fit;
+        chart.legend.fit = function fit() {
+          fitValue.bind(chart.legend)();
+          this.height += 20;
+        };
+      },
+    },
+  ],
+});
+
+// Add this chart to update on theme change
+function updateCharts() {
+  [membershipChart].forEach((chart) => {
+    chart.options = getChartOptions(chart.config.type === "bar");
+    chart.update("active");
+  });
+}

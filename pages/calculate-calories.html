@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+    <!-- link theme -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
+    <!-- link icons -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+    <!-- link swiper -->
+    <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+    <!-- link aos -->
+    <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
+    <!-- link css custom -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+           .food {
+      transition: .2s ease-in-out;
+    }
+
+    .food:hover {
+      border: 2px solid var(--text-main);
+      border-radius: 1rem;
+    }
+
+    h5 {
+      transition: .3s ease;
+    }
+
+    .food:hover .card h5 {
+      color: var(--text-main) !important;
+    }
+
+    .collapse:hover .card h5 {
+      color: var(--text-main) !important;
+    }
+
+    .bag-container {
+      height: 565px;
+      overflow-y: auto;
+    }
+
+    .bag-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .bag-container::-webkit-scrollbar-thumb {
+      background-color: var(--text-second);
+      border-radius: 3px;
+    }
+
+    .mb {
+      margin-bottom: 9px;
+    }
+
+    </style>
+</head>
+
+<body class="bg-third">
+
+    <!-- Nutrition -->
+    <section class="bg-third pb-10">
+      <div class="container">
+        <h1 class="text-main fw-bold display-5 text-center mb-4">គណនាកាឡូរី</h1>
+        <h4 class="text-second text-center mb-3">គណនាកាឡូរី និងជីវជាតិក្នុងអាហារដែលអ្នកទទួលទានប្រចាំថ្ងៃ</h4>
+        <div class="row g-4">
+          <div class="col-xl-7">
+            <h2 class="text-main fw-bold mb-3 text-center">ជ្រើសរើសអាហារ</h2>
+            <h5 class="fw-normal text-second mb-3 text-center">ចុចលើអាហារដែលអ្នកចង់បន្ថែម</h5>
+            <div class="row g-2">
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag1">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=24467&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">បាយ</h5>
+                        <p class="mb-0 text-second"><span class="ff">130</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag2">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=13306&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">សាច់គោ</h5>
+                        <p class="mb-0 text-second"><span class="ff">250</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag3">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=33471&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">សាច់មាន់</h5>
+                        <p class="mb-0 text-second"><span class="ff">239</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag4">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=FJwlYVi8wcv5&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">សាច់ត្រី</h5>
+                        <p class="mb-0 text-second"><span class="ff">242</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag5">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=x5n9NkwafGXP&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">ស៊ុត</h5>
+                        <p class="mb-0 text-second"><span class="ff">105</span> កាឡូរី / <span>1</span> គ្រាប់</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag6">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=12866&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">ទឹកដោះគោ</h5>
+                        <p class="mb-0 text-second"><span class="ff">150</span> កាឡូរី / <span>1</span> កែវ</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag7">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=18957&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">ផ្លែចេក</h5>
+                        <p class="mb-0 text-second"><span class="ff">89</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag8">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=ngSSMNrR5GFG&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">ផ្លែប៉ោម</h5>
+                        <p class="mb-0 text-second"><span class="ff">52</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag9">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=18039&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">ផ្លែបឺរ</h5>
+                        <p class="mb-0 text-second"><span class="ff">205</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag10">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=18042&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">ផ្កាខាត់ណា</h5>
+                        <p class="mb-0 text-second"><span class="ff">34</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start" type="button" data-bs-target="#bag11">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=20110&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">សាឡាត់</h5>
+                        <p class="mb-0 text-second"><span class="ff">15</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+              <div class="col-lg-6">
+                <button class="btn food w-100 p-0 text-start sh" type="button" data-bs-target="#bag12">
+                  <div class="card border-0 shadow-xs bg-prime rounded-4">
+                    <div class="card-body d-flex align-items-center">
+                      <div class="me-3">
+                        <img src="https://img.icons8.com/?size=100&id=12865&format=png&color=000000" alt="Food"
+                          class="img-fluid" style="width: 50px;">
+                      </div>
+                      <div>
+                        <h5 class="mb-1 text-prime">ការ៉ុត</h5>
+                        <p class="mb-0 text-second"><span class="ff">41</span> កាឡូរី / <span>100</span> ក្រាម</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-5">
+            <h2 class="text-main fw-bold text-center mb-3">អាហារដែលបានជ្រើសរើស</h2>
+            <h5 class="fw-normal text-second text-center mb-3">កែប្រែបរិមាណ ឬលុបអាហារចេញ</h5>
+            <div class="bag-container overflow-auto pe-2">
+              <!-- Bag 1 -->
+              <div class="collapse mb show" id="bag1">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=24467&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">បាយ</h5>
+                      <p class="mb-0 text-second"><span class="ff">130</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag1"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 2 -->
+              <div class="collapse mb show" id="bag2">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=13306&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">សាច់គោ</h5>
+                      <p class="mb-0 text-second"><span class="ff">250</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag2"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 3 -->
+              <div class="collapse mb" id="bag3">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=33471&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">សាច់មាន់</h5>
+                      <p class="mb-0 text-second"><span class="ff">239</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag3"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 4 -->
+              <div class="collapse mb" id="bag4">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=FJwlYVi8wcv5&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">សាច់ត្រី</h5>
+                      <p class="mb-0 text-second"><span class="ff">242</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag4"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 5 -->
+              <div class="collapse mb show" id="bag5">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=x5n9NkwafGXP&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">ស៊ុត</h5>
+                      <p class="mb-0 text-second"><span class="ff">105</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="1" min="1"
+                      class="ms-auto form-control rounded-4 me-2 ps-3 pe-1 ff align-content-center bg-prime text-prime"
+                      style="width: 60px;">
+                    <p class="mb-0 text-second me-5">គ្រាប់</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag5"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 6 -->
+              <div class="collapse mb show" id="bag6">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=12866&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">ទឹកដោះគោ</h5>
+                      <p class="mb-0 text-second"><span class="ff">150</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="1" min="1"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 60px;">
+                    <p class="mb-0 text-second me-6">កែវ</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag6"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 7 -->
+              <div class="collapse mb" id="bag7">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=18957&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">ផ្លែចេក</h5>
+                      <p class="mb-0 text-second"><span class="ff">89</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag7"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 8 -->
+              <div class="collapse mb" id="bag8">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=ngSSMNrR5GFG&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">ផ្លែប៉ោម</h5>
+                      <p class="mb-0 text-second"><span class="ff">52</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag8"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 9 -->
+              <div class="collapse mb" id="bag9">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=18039&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">ផ្លែបឺរ</h5>
+                      <p class="mb-0 text-second"><span class="ff">205</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag9"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 10 -->
+              <div class="collapse mb" id="bag10">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=18042&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">ផ្កាខាត់ណា</h5>
+                      <p class="mb-0 text-second"><span class="ff">34</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag10"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 11 -->
+              <div class="collapse mb" id="bag11">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=20110&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">សាឡាត់</h5>
+                      <p class="mb-0 text-second"><span class="ff">15</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag11"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+              <!-- Bag 12 -->
+              <div class="collapse mb" id="bag12">
+                <div class="card border-0 shadow-xs bg-prime rounded-4">
+                  <div class="card-body d-flex align-items-center">
+                    <div class="me-3">
+                      <img src="https://img.icons8.com/?size=100&id=12865&format=png&color=000000" alt="Food"
+                        class="img-fluid" style="width: 50px;">
+                    </div>
+                    <div>
+                      <h5 class="mb-1 text-prime">ការ៉ុត</h5>
+                      <p class="mb-0 text-second"><span class="ff">41</span> កាឡូរី</p>
+                    </div>
+                    <input type="number" value="100" min="100" step="100"
+                      class="ms-auto form-control ps-3 pe-1 rounded-4 me-2 ff align-content-center bg-prime text-prime"
+                      style="width: 80px;">
+                    <p class="mb-0 text-second me-5">ក្រាម</p>
+                    <button class="btn text-danger fs-5 remove-btn" data-bs-target="#bag12"><i
+                        class="bi bi-trash"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Button to Open Modal -->
+          <button type="button" class="btn btn-lg btn-gold w-fit mx-auto fw-medium px-4 py-1" data-bs-toggle="modal"
+            data-bs-target="#cartModal">
+            ពិនិត្យមើលលទ្ធផល
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content rounded-4 shadow">
+                <!-- Header -->
+                <div class="modal-header bg-prime d-flex justify-content-center position-relative">
+                  <h3 class="modal-title fw-bold text-main" id="cartModalLabel">លទ្ធផលគណនាកាឡូរី</h3>
+                  <button type="button" class="btn  position-absolute end-0" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg text-prime fs-4"></i>
+                  </button>
+                </div>
+
+                <div class="modal-body bg-prime">
+                  <!-- Food List -->
+                  <div class="mb-4">
+                    <h5 class="fw-bold mb-3 text-second text-center">មុខម្ហូបដែលបានជ្រើសរើស</h5>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item bg-prime d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img src="https://img.icons8.com/?size=100&id=24467&format=png&color=000000" alt=""
+                            class="img-fluid me-3" style="width: 40px;">
+                          <div>
+                            <h5 class="mb-0 text-prime mb-1">បាយ</h5>
+                            <h6 class="mb-0 text-second"> <span class="ff">100</span> ក្រាម</h6>
+                          </div>
+                        </div>
+                        <h5 class="text-main"><span class="ff">205</span> កាឡូរី</h5>
+                      </li>
+                      <li class="list-group-item bg-prime d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img src="https://img.icons8.com/?size=100&id=13306&format=png&color=000000" alt=""
+                            class="img-fluid me-3" style="width: 40px;">
+                          <div>
+                            <h5 class="mb-0 text-prime mb-1">សាច់គោ</h5>
+                            <h6 class="mb-0 text-second"> <span class="ff">100</span> ក្រាម</h6>
+                          </div>
+                        </div>
+                        <h5 class="text-main"><span class="ff">250</span> កាឡូរី</h5>
+                      </li>
+                      <li class="list-group-item bg-prime d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img src="https://img.icons8.com/?size=100&id=x5n9NkwafGXP&format=png&color=000000" alt=""
+                            class="img-fluid me-3" style="width: 40px;">
+                          <div>
+                            <h5 class="mb-0 text-prime mb-1">ស៊ុត</h5>
+                            <h6 class="mb-0 text-second"> <span class="ff">1</span> គ្រាប់</h6>
+                          </div>
+                        </div>
+                        <h5 class="text-main"><span class="ff">105 </span> កាឡូរី</h5>
+                      </li>
+                      <li class="list-group-item bg-prime d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img src="https://img.icons8.com/?size=100&id=12866&format=png&color=000000" alt=""
+                            class="img-fluid me-3" style="width: 40px;">
+                          <div>
+                            <h5 class="mb-0 text-prime mb-1">ទឹកដោះគោ</h5>
+                            <h6 class="mb-0 text-second"> <span class="ff">1</span> កែវ</h6>
+                          </div>
+                        </div>
+                        <h5 class="text-main"><span class="ff">150</span> កាឡូរី</h5>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Summary -->
+                  <div class="rounded-4 bg-second pt-3 pb-1">
+                    <h4 class="fw-bold mb-3 text-center text-prime">សរុបជីវជាតិប្រចាំថ្ងៃ</h4>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="card border-0 bg-transparent">
+                          <div class="card-body text-center text-prime">
+                            <div class="d-flex justify-content-center align-items-center ff text-success">
+                              <h3 class="counter card-title" data-countto="635" data-duration="2000">0
+                              </h3>
+                              <h3>g</h3>
+                            </div>
+                            <h5 class="card-text mt-1">កាឡូរី</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="card border-0 bg-transparent">
+                          <div class="card-body text-center text-prime">
+                            <div class="d-flex justify-content-center align-items-center ff text-danger">
+                              <h3 class="counter card-title" data-countto="45" data-duration="2000">0</h3>
+                              <h3>.</h3>
+                              <h3 class="counter card-title" data-countto="7" data-duration="2000">0</h3>
+                              <h3>g</h3>
+                            </div>
+                            <h5 class="card-text mt-1">ប្រូតេអ៊ីន</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="card border-0 bg-transparent">
+                          <div class="card-body text-center text-prime">
+                            <div class="d-flex justify-content-center align-items-center ff text-warning">
+                              <h3 class="counter card-title" data-countto="41" data-duration="2000">0
+                              </h3>
+                              <h3>g</h3>
+                            </div>
+                            <h5 class="card-text mt-1">កាបូអ៊ីដ្រាត</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="card border-0 bg-transparent">
+                          <div class="card-body text-center text-prime">
+                            <div class="d-flex justify-content-center align-items-center ff text-main">
+                              <h3 class="counter card-title" data-countto="30" data-duration="2000">0</h3>
+                              <h3>.</h3>
+                              <h3 class="counter card-title" data-countto="3" data-duration="2000">0</h3>
+                              <h3>g</h3>
+                            </div>
+                            <h5 class="card-text mt-1">ខ្លាញ់</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer bg-prime">
+                  <button type="button" class="btn btn-gold w-fit ms-auto rounded-2 px-4 py-1"
+                    data-bs-dismiss="modal"><i class="bi bi-arrow-left me-2"></i>ត្រឡប់ទៅវិញ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- link bootstrap js -->
+    <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <!-- link swiper js -->
+    <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+    <!-- link aos js -->
+    <script src="../assets/plugins/aos/js/aos.js"></script>
+    <!-- link js custom -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+    document.querySelectorAll('.food').forEach(btn => {
+      btn.addEventListener('click', () => {
+        let target = document.querySelector(btn.getAttribute('data-bs-target'));
+        let bsCollapse = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
+        bsCollapse.show();
+      });
+    });
+
+    document.querySelectorAll('.remove-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        let target = document.querySelector(btn.getAttribute('data-bs-target'));
+        let bsCollapse = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
+        bsCollapse.hide();
+      });
+    });
+  </script>
+  <!-- Count -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const animateCount = (el) => {
+        const target = parseInt(el.getAttribute("data-countto"), 10) || 0;
+        const duration = parseInt(el.getAttribute("data-duration"), 10) || 2000;
+        const startValue = parseInt(el.textContent, 10) || 0;
+        const startTime = performance.now();
+
+        const tick = (now) => {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const value = Math.floor(startValue + (target - startValue) * progress);
+          el.textContent = value;
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            el.textContent = target;
+          }
+        };
+
+        requestAnimationFrame(tick);
+      };
+
+      // Animate numbers each time modal is opened
+      const modal = document.getElementById("cartModal");
+      modal.addEventListener("shown.bs.modal", () => {
+        const counters = modal.querySelectorAll(".counter");
+        counters.forEach(c => {
+          c.textContent = "0"; // reset
+          animateCount(c);     // animate
+        });
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

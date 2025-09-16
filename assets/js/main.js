@@ -38,6 +38,40 @@ toggleButton.addEventListener("click", () => {
       btn.style.setProperty("--accordion-icon", "url(/assets/img/white.svg)");
     });
   }
+  function updateCharts() {
+    // Update Membership Chart
+    membershipChart.options = getChartOptions();
+    membershipChart.update();
+
+    // Update Shop Chart
+    shopChart.options = getChartOptions();
+    shopChart.update();
+
+    // Update Sports Chart
+    sportsChart.options = getChartOptions();
+    sportsChart.update();
+
+    // Update Items Chart
+    itemsChart.options = getChartOptions();
+    itemsChart.update();
+
+    // Update Top Product Chart
+    topProductsChart.options = getChartOptions();
+    topProductsChart.update();
+
+    // Update Daily Chart
+    dailySalesChart.options = getChartOptions();
+    dailySalesChart.update();
+
+    // Update Event Chart
+    eventParticipantsChart.options = getChartOptions();
+    eventParticipantsChart.update();
+
+    // Update Monthly Event Chart
+    monthlyEventChart.options = getChartOptions();
+    monthlyEventChart.update();
+  }
+  updateCharts();
 });
 
 // Animated Counter

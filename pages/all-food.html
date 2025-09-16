@@ -17,10 +17,25 @@
     <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+           /* Internal style  */
+    .toast {
+      display: block !important;
+      opacity: 0;
+      transform: translateX(100vw);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    </style>
 </head>
 
 <body class="bg-prime">
 
+    <!-- header -->
     <header>
         <nav class="navbar py-0 fixed-top bg-prime">
             <div class="container-fluid" style="background-color: #58A8E6;">
@@ -162,69 +177,109 @@
     </header>
 
     <main>
-         <!-- Shop banner -->
-    <section class="pt-15">
-      <div class="container">
-        <img
-          src="https://zandokh.com/image/catalog/banner/2025/ZANDO/July/Extra%2050/50OFFShoes_Cate%20(2160x534)-1.jpg"
-          class="img-fluid object-fit-cover w-100" alt="" style="height: 200px;">
+         <!-- Hero section -->
+    <section class="mt-15">
+      <div class="container-fluid p-0 position-relative">
+        <img src="https://www.nutrition.gov/sites/default/files/hero-image/Test%20Whats%20in%20Food_0.jpg" alt=""
+          class="img-fluid object-fit-contain w-100">
+        <div class="card-img-overlay bg-dark opacity-50"></div>
+        <div class="position-absolute text-white top-50 start-50 translate-middle text-center" style="z-index: 10;">
+          <h1 class="display-6 fw-bold lh-base">រៀនអំពីអាហារដែលមានសារៈប្រយោជន៍សម្រាប់សុខភាពល្អ ការបន្ថយទម្ងន់
+            ការបង្កើនទម្ងន់ និងការហាត់ប្រាណ</h1>
+        </div>
       </div>
     </section>
-    <!-- Products -->
-    <section class="bg-prime">
-      <div class="container d-flex flex-column mt-5 ff">
-        <h2 id="tab-title" class="text-center text-main mb-3">All</h2>
+    <!-- Food -->
+    <section class="bg-third">
+      <div class="container d-flex flex-column mt-5">
+        <h2 id="tab-title" class="text-center text-main mb-3">អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ</h2>
         <ul class="nav nav-pills mb-3 mx-auto gap-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link link-hover active px-4" id="pills-all-tab" data-bs-toggle="pill"
-              data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true"
-              data-title="All">All</button>
+            <button class="nav-link link-hover active px-4" id="pills-food-1-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-food-1" type="button" role="tab" aria-controls="pills-food-1" aria-selected="true"
+              data-title="អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ">អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link link-hover px-4" id="pills-shirt-tab" data-bs-toggle="pill"
-              data-bs-target="#pills-shirt" type="button" role="tab" aria-controls="pills-shirt" aria-selected="false"
-              data-title="Shirt">Shirt</button>
+            <button class="nav-link link-hover px-4" id="pills-food-2-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-food-2" type="button" role="tab" aria-controls="pills-food-2" aria-selected="true"
+              data-title="អាហារសម្រាប់អ្នកហាត់ប្រាណ">អាហារសម្រាប់អ្នកហាត់ប្រាណ</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link link-hover px-4" id="pills-pants-tab" data-bs-toggle="pill"
-              data-bs-target="#pills-pants" type="button" role="tab" aria-controls="pills-pants" aria-selected="false"
-              data-title="Pants">Pants</button>
+            <button class="nav-link link-hover px-4" id="pills-food-3-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-food-3" type="button" role="tab" aria-controls="pills-food-3" aria-selected="true"
+              data-title="អាហារសម្រាប់បន្ថយទម្ងន់">អាហារសម្រាប់បន្ថយទម្ងន់</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link link-hover  px-4" id="pills-food-4-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-food-4" type="button" role="tab" aria-controls="pills-food-4" aria-selected="true"
+              data-title="អាហារសម្រាប់បង្កើនទម្ងន់">អាហារសម្រាប់បង្កើនទម្ងន់</button>
           </li>
         </ul>
 
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+        <div class="tab-content mt-3" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-food-1" role="tabpanel" aria-labelledby="pills-food-1-tab"
             tabindex="0">
             <div class="container">
-              <div class="row">
-                <div class="col-lg-3">
-                  <a href="#" class="text-decoration-none">
-                    <div class="card bg-transparent position-relative border-0">
-                      <div class="card-img bg-second position-relative overflow-hidden" style="height: 400px;">
-                        <img src="../assets/img/shop/shirt/shirt-1.webp" class="img-main w-100 h-100 object-fit-cover" alt="" />
-                        <img src="../assets/img/shop/shirt/shirt-1-hover.webp"
-                          class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="" />
-                      </div>
-                      <div class="card-body ff pb-0">
-                        <div class="d-flex">
-                          <p class="p-0 m-0 fw-bold">
-                            <span class="text-danger">US $8.15</span>
-                            <del class="fw-normal text-second">US $13.59</del>
-                          </p>
-                          <i class="bi bi-heart text-second d-block ms-auto"></i>
+              <div class="row g-3">
+                <div class="col-lg-4">
+                  <div class="card bg-prime shadow-xs border-0">
+                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                      class="img-fluid card-img-top" alt="" />
+                    <div class="card-body">
+                      <div class="d-flex align-items-center mb-3">
+                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn1"><i
+                            class="bi bi-suit-heart"></i></button>
+                        <div class="toast-container position-fixed end-0" style="top: 10%;">
+                          <div id="favoriteToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                              <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                                alt="...">
+                              <small class="ms-auto">ឥឡូវនេះ</small>
+                              <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
+                                  class="bi bi-x-lg text-white"></i></button>
+                            </div>
+                            <div class="toast-body text-prime bg-second">
+                              ម្ហូបនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                            </div>
+                          </div>
                         </div>
-                        <p class="fs-6 text-prime">Arrival Block T-Shirt</p>
+                        <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn1"><i
+                            class="bi bi-bookmark"></i></button>
+                        <div class="toast-container position-fixed end-0" style="top: 22%;">
+                          <div id="cartToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                              <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                                alt="...">
+                              <small class="ms-auto">ឥឡូវនេះ</small>
+                              <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
+                                  class="bi bi-x-lg text-white"></i></button>
+                            </div>
+                            <div class="toast-body text-prime bg-second">
+                              ម្ហូបនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
+                            </div>
+                          </div>
+                        </div>
                       </div>
+                      <div class="d-flex justify-content-between text-prime">
+                        <p class="card-text"><i class="bi bi-clock me-1"></i> <span class="ff">10</span> នាទី</p>
+                        <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
+                        <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
+                      </div>
+                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="pills-shirt" role="tabpanel" aria-labelledby="pills-shirt-tab" tabindex="0">
+          <div class="tab-pane fade" id="pills-food-2" role="tabpanel" aria-labelledby="pills-food-2-tab" tabindex="0">
             <p>Content for Shirt</p>
           </div>
-          <div class="tab-pane fade" id="pills-pants" role="tabpanel" aria-labelledby="pills-pants-tab" tabindex="0">
+          <div class="tab-pane fade" id="pills-food-3" role="tabpanel" aria-labelledby="pills-food-3-tab" tabindex="0">
+            <p>Content for Pants</p>
+          </div>
+          <div class="tab-pane fade" id="pills-food-4" role="tabpanel" aria-labelledby="pills-food-4-tab" tabindex="0">
             <p>Content for Pants</p>
           </div>
         </div>
@@ -240,18 +295,35 @@
     <script src="../assets/plugins/aos/js/aos.js"></script>
     <!-- link js custom -->
     <script src="../assets/js/main.js"></script>
-    <!-- Tab / Product -->
-<script>
-  const tabTitle = document.getElementById('tab-title');
-  const tabButtons = document.querySelectorAll('#pills-tab button');
+     <!-- Tab / Product -->
+  <script>
+    const tabTitle = document.getElementById('tab-title');
+    const tabButtons = document.querySelectorAll('#pills-tab button');
 
-  tabButtons.forEach(button => {
-    button.addEventListener('shown.bs.tab', (e) => {
-      // Update the H1 to the data-title of the active tab
-      tabTitle.textContent = e.target.getAttribute('data-title');
+    tabButtons.forEach(button => {
+      button.addEventListener('shown.bs.tab', (e) => {
+        // Update the H1 to the data-title of the active tab
+        tabTitle.textContent = e.target.getAttribute('data-title');
+      });
     });
-  });
-</script>
+  </script>
+  <!-- Many Toast -->
+  <script>
+    function showToast(id) {
+      const toastEl = document.getElementById(id);
+      const toast = new bootstrap.Toast(toastEl, { delay: 2000, autohide: true }); // 2000ms = 2s
+      toast.show();
+    }
+
+    document.getElementById("favoriteBtn1").addEventListener("click", () => showToast("favoriteToast1"));
+    document.getElementById("addCartBtn1").addEventListener("click", () => showToast("cartToast1"));
+
+    document.getElementById("favoriteBtn2").addEventListener("click", () => showToast("favoriteToast2"));
+    document.getElementById("addCartBtn2").addEventListener("click", () => showToast("cartToast2"));
+
+    document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
+    document.getElementById("addCartBtn3").addEventListener("click", () => showToast("cartToast3"));
+  </script>
 
 </body>
 
