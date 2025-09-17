@@ -163,6 +163,9 @@ body {
 .profile:hover .dropdown {
   height: 192px;
 }
+.admin:hover .dropdown{
+  height: 150px;
+}
 .nav-item {
   cursor: pointer;
 }
@@ -542,4 +545,13 @@ body {
 
 .card-img:hover .img-cover {
   opacity: 1;
+}
+
+.page-item{
+  border: 1px solid #58a8e6 !important;
+}
+
+.page-link{
+  background-color: var(--bg-prime);
+  border: none;
 }
