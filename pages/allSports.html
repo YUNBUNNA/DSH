@@ -4,43 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sport</title>
+  <!-- Load dotlottie-wc -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
   <!-- link bootstrap -->
-  <link rel="stylesheet" href="../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
   <!-- link theme -->
-  <link rel="stylesheet" href="../../assets/plugins/bootstrap-5.3.7/css/theme.css">
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
   <!-- link icons -->
-  <link rel="stylesheet" href="../../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
   <!-- link swiper -->
-  <link rel="stylesheet" href="../../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
   <!-- link aos -->
-  <link rel="stylesheet" href="../../assets/plugins/aos/css/aos.css">
+  <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
   <!-- link css custom -->
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <style>
-    .toast {
-      display: block !important;
-      opacity: 0;
-      transform: translateX(100vw);
-      transition: opacity 0.5s, transform 0.5s;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body class="bg-prime">
-
-  <!-- header -->
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
       <div class="container-fluid d-none d-lg-flex bg-nav p-0">
         <div class="container d-flex align-items-center justify-content-between">
           <a href="" class="navbar-brand px-0">
-            <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
+            <img src="assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
               style="width: 90px; height: 40px" />
           </a>
           <ul class="navbar-nav flex-row align-items-center">
@@ -64,14 +51,14 @@
           aria-label="Toggle navigation">
           <i class="bi bi-list fs-3"></i>
           <a href="">
-            <img src="../../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
+            <img src="assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
           </a>
         </button>
         <div class="offcanvas offcanvas-start bg-prime" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header py-2 bg-nav">
-            <img src="../../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+            <img src="assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
             <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
               <i class="bi bi-x-lg text-white fs-4"></i>
@@ -203,7 +190,19 @@
             <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
           </li>
           <li class="nav-item blog px-3 py-1 position-relative">
-            <a class="nav-link" href="#">អត្ថបទ</a>
+            <a class="nav-link" href="#">
+              អត្ថបទ <i class="bi bi-chevron-down icon"></i>
+            </a>
+            <div class="dropdown position-absolute shadow-xs">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item px-3 py-1">
             <a href="" class="nav-link">អំពីយើង</a>
@@ -249,17 +248,8 @@
               </span>
             </a>
           </li>
-          <li class="nav-item d-block d-lg-none">
-             <a href="../notification-page.html" class="nav-link position-relative">
-              <i class="bi bi-bell text-prime fs-4"></i>
-              <span class="position-absolute bg-danger border-0 rounded-circle start-50"
-                style="width: 15px; height: 15px">
-                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
-              </span>
-            </a>
-          </li>
-          <li class="nav-item noti position-relative z-3 d-none d-lg-block">
-            <a href="#" class="nav-link position-relative">
+          <li class="nav-item noti position-relative z-3">
+            <a href="" class="nav-link position-relative">
               <i class="bi bi-bell text-prime fs-4"></i>
               <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                 style="width: 15px; height: 15px">
@@ -367,157 +357,136 @@
     </nav>
   </header>
   <main>
-    <!-- Detail Products -->
-    <section class="vh-100 pt-15 product-detail">
+    <section class="pt-18 pb-5 bg-prime">
       <div class="container">
-        <div class="row g-4">
+        <div class="row align-items-center">
           <div class="col-lg-6">
-            <div class="d-flex gap-2">
-              <!-- Thumbs -->
-              <div thumbs-slider class="swiper myDetail flex-shrink-0">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide bg-second">
-                    <img src="../../assets/img/shop/shirt/shirt-1.webp" class="img-fluid" />
-                  </div>
-                  <div class="swiper-slide bg-second">
-                    <img src="../../assets/img/shop/shirt/shirt-1-hover.webp" class="img-fluid" />
-                  </div>
-                  <div class="swiper-slide bg-second">
-                    <img src="../../assets/img/shop/shirt/shirt-1-start.webp" class="img-fluid" />
-                  </div>
-                </div>
-              </div>
-              <!-- Main -->
-              <div class="swiper myDetail2 flex-grow-1 bg-second">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="../../assets/img/shop/shirt/shirt-1.webp" class="img-fluid" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../../assets/img/shop/shirt/shirt-1-hover.webp" class="img-fluid" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../../assets/img/shop/shirt/shirt-1-start.webp" class="img-fluid" />
-                  </div>
-                </div>
-                <!-- Navigation -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+            <div class="card border-0 bg-prime p-0">
+              <div class="card-body px-0">
+                <h1 class="text-main mb-3 fw-bold">កីឡានាំមកនូវសុខភាព</h1>
+                <h4 class="text-second fw-normal lh-base mb-3">
+                  ការចូលរួមលេងកីឡាទៀងទាត់ គឺជាវិធីធម្មតាដែលអាចធានាសុខភាពល្អ និងភាពស្រស់ស្រាយរបស់រាងកាយ និងចិត្ត។
+                </h4>
+                <a href="" class="btn btn-lg btn-gold">ចុះឈ្មោះឥឡូវនេះ</a>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body text-prime">
-                <h3 class="card-title fw-normal ff">Arrival Block T-Shirt</h3>
-                <h5 class="mt-2 ff">
-                  <span class="text-danger fw-bold">US $8.15</span>
-                  <del class="fw-normal text-second">US $13.59</del>
-                </h5>
-                <h5 class="mt-3">ទំហំ</h5>
-                <div class="d-flex gap-3 text-dark ff">
-                  <p class="bg-second text-prime px-5 py-1 rounded-1 fs-text">S</p>
-                  <p class="bg-second text-prime px-5 py-1 rounded-1 fs-text">M</p>
-                  <p class="bg-second text-prime px-5 py-1 rounded-1 fs-text">L</p>
-                  <p class="bg-second text-prime px-5 py-1 rounded-1 fs-text">XL</p>
-                  <p class="bg-second text-prime px-5 py-1 rounded-1 fs-text">XLL</p>
-                </div>
-                <h5>បរិមាណ</h5>
-                <div class="d-flex gap-2">
-                  <button class="border-0 bg-second text-prime rounded-1 px-3 py-1"><i
-                      class="bi bi-dash fs-5"></i></button>
-                  <button class="border-0 bg-second text-prime rounded-1 px-4 py-1">1</button>
-                  <button class="border-0 bg-second text-prime rounded-1 px-3 py-1"><i
-                      class="bi bi-plus fs-5"></i></button>
-                </div>
-                <div class="d-flex mt-3 gap-2">
-                  <button type="button" class="btn btn-gold w-75 fs-text fw-medium"
-                    id="addCartBtn">ដាក់ចូលកន្ត្រក</button>
-                  <div class="toast-container position-fixed end-0" style="top: 10%;">
-                    <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
-                            class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        ផលិតផលត្រូវបានបន្ថែមទៅក្នុងកន្ត្រកហើយ!
-                      </div>
-                    </div>
-                  </div>
-                  <button type="button" class="bg-second text-prime border-0 rounded-2 py-1 px-3" id="favoriteBtn"><i
-                      class="bi bi-heart"></i></button>
-                  <div class="toast-container position-fixed end-0" style="top: 22%;">
-                    <div id="favoriteToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
-                            class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        ផលិតផលត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion mt-3" id="accordionExample">
-                  <!-- Fabric & Material -->
-                  <div class="accordion-item bg-prime text-prime">
-                    <h2 class="accordion-header" id="headingFabric">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFabric" aria-expanded="true" aria-controls="collapseFabric">
-                        <i class="bi bi-card-text me-2"></i> ក្រណាត់ និងសម្ភារៈ
-                      </button>
-                    </h2>
-                    <div id="collapseFabric" class="accordion-collapse collapse show" aria-labelledby="headingFabric"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p class="p-0 m-1"><strong>សម្ភារៈ:</strong> 100% កប្បាស (Cotton) ដោយផ្តល់អារម្មណ៍ទន់</p>
-                        <p class="p-0 m-1"><strong>អារម្មណ៍:</strong> ទន់, ងាយស្រូបស្រូង, ឈឺសាច់កាយតិច,
-                          សាកសមសម្រាប់ហាត់ប្រាណ</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Performance & Comfort -->
-                  <div class="accordion-item bg-prime text-prime">
-                    <h2 class="accordion-header" id="headingPerformance">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapsePerformance" aria-expanded="false" aria-controls="collapsePerformance">
-                        <i class="bi bi-lightning me-2"></i> សមត្ថភាព និងទំហំ
-                      </button>
-                    </h2>
-                    <div id="collapsePerformance" class="accordion-collapse collapse"
-                      aria-labelledby="headingPerformance" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p class="p-0 m-1"><strong>សាកសមសម្រាប់ហាត់ប្រាណ:</strong> ងាយស្រួលក្នុងការចល័ត</p>
-                        <p class="p-0 m-1"><strong>ស្រួលពាក់:</strong> ទម្រង់សមស្រប, មិនហើរពណ៌, មិនរើសស្បែក</p>
-                        <p class="p-0 m-1"><strong>ព័ត៌មានម៉ូដែល:</strong> កម្ពស់ 180cm, ពាក់ទំហំ M</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Shipping & Returns -->
-                  <div class="accordion-item bg-prime text-prime">
-                    <h2 class="accordion-header" id="headingShipping">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseShipping" aria-expanded="false" aria-controls="collapseShipping">
-                        <i class="bi bi-truck me-2"></i> ការដឹកជញ្ជូន និងការផ្លាស់ប្តូរ
-                      </button>
-                    </h2>
-                    <div id="collapseShipping" class="accordion-collapse collapse" aria-labelledby="headingShipping"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p class="p-0 m-1"><strong>ការដឹកជញ្ជូន:</strong> 2-5 ថ្ងៃធ្វើការ</p>
-                        <p class="p-0 m-1"><strong>ការផ្លាស់ប្តូរឥតគិតថ្លៃ:</strong> ក្នុងរយៈ 30 ថ្ងៃ</p>
-                        <p class="p-0 m-1"><strong>ការតាមដាន:</strong> អាចតាមដានការបញ្ជាទិញរបស់អ្នកតាមអនឡាញបានងាយ</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <!-- Lottie Animation -->
+            <dotlottie-wc src="../assets/img/football-banner.json" style="width: 400px; height: 350px" loop autoplay
+              speed="1" mode="forward" class="mx-auto">
+            </dotlottie-wc>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Brand -->
+    <section class="brand bg-prime">
+      <div class="container-fluid overflow-hidden position-relative bg-mask">
+        <div class="marquee-container">
+          <div id="marquee-inner" class="marquee-inner pb-3">
+            <img src="https://img.icons8.com/?size=100&id=84301&format=png&color=000000" alt="" class="img-fluid m-2"
+              style="width: 120px; height: 60px;">
+            <img src="https://img.icons8.com/?size=100&id=12969&format=png&color=000000" alt="" class="img-fluid m-2"
+              style="width: 120px; height: 60px;">
+            <img src="https://img.icons8.com/?size=100&id=16584&format=png&color=000000" alt="" class="img-fluid m-2"
+              style="width: 120px; height: 60px;">
+            <img src="https://img.icons8.com/?size=100&id=16960&format=png&color=000000" alt="" class="img-fluid m-2"
+              style="width: 120px; height: 60px;">
+            <img src="https://img.icons8.com/?size=100&id=20808&format=png&color=000000" alt="" class="img-fluid m-2"
+              style="width: 120px; height: 60px;">
+            <img src="https://img.icons8.com/?size=100&id=24314&format=png&color=000000" alt="" class="img-fluid m-2"
+              style="width: 120px; height: 60px;">
+            <img src="https://img.icons8.com/?size=100&id=15128&format=png&color=000000" alt="" class="img-fluid m-2"
+              style="width: 120px; height: 60px;">
+            <img src="https://img.icons8.com/?size=100&id=19873&format=png&color=000000" alt="" class="img-fluid m-2"
+              style="width: 120px; height: 60px;">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- type of sports -->
+    <section class="py-5 bg-third">
+      <div class="container">
+        <h1 class="display-5 text-main text-center fw-bold">ផ្នែកកីឡា</h1>
+        <h4 class="mt-4 text-center fw-normal text-second mb-5">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</h4>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime p-4">
+              <a href="" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+                <img src="https://img.icons8.com/?size=100&id=33507&format=png&color=000000" alt=""
+                  class="img-fluid mx-auto object-fit-contain" style="width: 95px;">
+                <h4 class="text-center">បាល់ទាត់</h4>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime p-4">
+              <a href="" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+                <img src="https://img.icons8.com/?size=100&id=16890&format=png&color=000000" alt=""
+                  class="img-fluid mx-auto object-fit-contain" style="width: 95px;">
+                <h4 class="text-center">រត់ប្រណាំង</h4>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime p-4">
+              <a href="" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+                <img src="https://img.icons8.com/?size=100&id=idGCqGX8YFGW&format=png&color=000000" alt=""
+                  class="img-fluid mx-auto object-fit-contain" style="width: 95px;">
+                <h4 class="text-center">បាល់បោះ</h4>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime p-4">
+              <a href="" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+                <img src="https://img.icons8.com/?size=100&id=33516&format=png&color=000000" alt=""
+                  class="img-fluid mx-auto object-fit-contain" style="width: 95px;">
+                <h4 class="text-center">ជិះកង់</h4>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime p-4">
+              <a href="" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+                <img src="https://img.icons8.com/?size=100&id=33587&format=png&color=000000" alt=""
+                  class="img-fluid mx-auto object-fit-contain" style="width: 95px;">
+                <h4 class="text-center">បាល់ទះ</h4>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime p-4">
+              <a href="" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+                <img src="https://img.icons8.com/?size=100&id=33497&format=png&color=000000" alt=""
+                  class="img-fluid mx-auto object-fit-contain" style="width: 95px;">
+                <h4 class="text-center">ការ៉ាតេ</h4>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime p-4">
+              <a href="" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+                <img src="https://img.icons8.com/?size=100&id=16954&format=png&color=000000" alt=""
+                  class="img-fluid mx-auto object-fit-contain" style="width: 95px;">
+                <h4 class="text-center">ហែលទឹក</h4>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime p-4">
+              <a href="" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+                <img src="https://img.icons8.com/?size=100&id=sAuq1oqwxWlb&format=png&color=000000" alt=""
+                  class="img-fluid mx-auto object-fit-contain" style="width: 95px;">
+                <h4 class="text-center">វាយសី</h4>
+              </a>
             </div>
           </div>
         </div>
@@ -525,15 +494,32 @@
     </section>
   </main>
 
-  <!-- link bootstrap js -->
-  <script src="../../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-  <!-- link swiper js -->
-  <script src="../../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
-  <!-- link aos js -->
-  <script src="../../assets/plugins/aos/js/aos.js"></script>
-  <!-- link js custom -->
-  <script src="../../assets/js/main.js"></script>
-
 </body>
+<script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<!-- Marquee -->
+<script>
+  window.onload = function () {
+    const marqueeInner = document.getElementById("marquee-inner");
+    const container = document.querySelector(".marquee-container");
+
+    while (marqueeInner.scrollWidth < container.offsetWidth * 2) {
+      marqueeInner.innerHTML += marqueeInner.innerHTML;
+    }
+
+    let x = 0;
+    const speed = 0.8;
+
+    function animate() {
+      x -= speed;
+      if (Math.abs(x) >= marqueeInner.scrollWidth / 2) {
+        x = 0;
+      }
+      marqueeInner.style.transform = `translateX(${x}px)`;
+      requestAnimationFrame(animate);
+    }
+    animate();
+  };
+</script>
 
 </html>

@@ -189,6 +189,10 @@ body {
   height: 192px;
 }
 
+.admin:hover .dropdown{
+  height: 150px;
+}
+
 .nav-item {
   cursor: pointer;
 }
@@ -597,4 +601,12 @@ button-icon:active {
 .messenger:focus {
   box-shadow: none !important;
   outline: none !important;
+  
+.page-item{
+  border: 1px solid #58a8e6 !important;
+}
+
+.page-link{
+  background-color: var(--bg-prime);
+  border: none;
 }
