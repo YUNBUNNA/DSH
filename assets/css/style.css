@@ -594,7 +594,3 @@ button-icon:active {
   opacity: 1;
 }
 
-.messenger:focus {
-  box-shadow: none !important;
-  outline: none !important;
-}
