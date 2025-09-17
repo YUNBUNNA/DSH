@@ -189,6 +189,10 @@ body {
   height: 192px;
 }
 
+.admin:hover .dropdown{
+  height: 150px;
+}
+
 .nav-item {
   cursor: pointer;
 }
@@ -594,3 +598,18 @@ button-icon:active {
   opacity: 1;
 }
 
+<<<<<<< HEAD
+=======
+.messenger:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  
+.page-item{
+  border: 1px solid #58a8e6 !important;
+}
+
+.page-link{
+  background-color: var(--bg-prime);
+  border: none;
+}
+>>>>>>> ad5e0214ac991044a9926ec1608bc4748bcf2c47
