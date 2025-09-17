@@ -161,7 +161,7 @@ body {
   height: 325px;
 }
 .profile:hover .dropdown {
-  height: 192px;
+  height: 152px;
 }
 .admin:hover .dropdown{
   height: 150px;
@@ -506,7 +506,7 @@ body {
   background: transparent !important; 
 }
 
-.button-icon:focus, button-icon:active {
+.button-icon:focus, .button-icon:active {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;

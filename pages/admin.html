@@ -160,6 +160,31 @@
       background-color: #2ecc71;
     }
 
+    /* Internal style  */
+    .toast {
+      display: block !important;
+      opacity: 0;
+      transform: translateY(-100vw);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    button {
+      border: none !important;
+      outline: none !important;
+    }
+
+    button:focus,
+    button:active {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
     .form-check-input:checked,
     .form-check-input:focus,
     .form-check-input:active {
@@ -378,7 +403,8 @@
                         class="bi bi-person me-1"></i> គណនី</a>
                   </li>
                   <li>
-                    <a class="dropdown-item py-2 d-block" href="#"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ <span class="opacity-0 mx-4">a</span></a>
+                    <a class="dropdown-item py-2 d-block" href="#"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
+                      <span class="opacity-0 mx-4">a</span></a>
                   </li>
                 </ul>
               </div>
@@ -390,7 +416,7 @@
       <!-- Tab Content -->
       <main class="py-3">
         <div class="tab-content">
-          <div class="tab-pane fade show active" id="tab-dashboard">
+          <div class="tab-pane fade" id="tab-dashboard">
             <!-- Stat Cards (Dashboard) -->
             <div class="row g-3 mb-4">
               <!-- Total Members -->
@@ -832,7 +858,7 @@
           </div>
 
           <!-- Add / Edit / Delete Members -->
-          <div class="tab-pane fade" id="tab-members-add">
+          <div class="tab-pane fade show active" id="tab-members-add">
             <div class="card mb-4 bg-prime border-0">
               <div class="card-header border-0 border-bottom py-3 bg-prime mb-2">
                 <h4 class="mb-0 text-main">បន្ថែមសមាជិកថ្មី</h4>
@@ -849,9 +875,13 @@
                     </div>
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <input type="email" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="អ៊ីមែលសមាជិក">
-                        <i class="bi bi-envelope position-absolute text-gold tran-y icon-input"></i>
+                        <select class="form-select form-control ps-3 bg-prime text-prime">
+                          <option value="" disabled selected hidden>ជ្រើសរើសភេទ</option>
+                          <option>ប្រុៃ</option>
+                          <option>ស្រី</option>
+                        </select>
+                        <i
+                          class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -862,18 +892,10 @@
                   <div class="row g-3 mb-3">
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <select class="form-select form-control ps-3 bg-prime text-prime">
-                          <option value="" disabled selected hidden>ជ្រើសរើសគ្រូបង្វឹក</option>
-                          <option>Michael Phelps</option>
-                          <option>Stephen Curry</option>
-                          <option>Serena Williams</option>
-                          <option>Lionel Messi</option>
-                          <option>Simone Biles</option>
-                        </select>
-                        <i
-                          class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
+                        <input type="number" class="form-control bg-prime fs-text text-second ps-7 pe-2"
+                          placeholder="លេខទូរស័ព្ទ">
+                        <i class="bi bi-telephone position-absolute text-gold tran-y icon-input"></i>
                       </div>
-
                     </div>
                     <div class="col-md-4">
                       <div class="position-relative">
@@ -948,7 +970,17 @@
 
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-gold px-5">បន្ថែមសមាជិក</button>
+                  <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-gold px-5" id="favoriteBtn1">បន្ថែមសមាជិក</button>
+                    <div class="toast-container position-fixed" style="top: 5%; left: 47.5%;">
+                      <div id="favoriteToast1" class="toast shadow-xs border-0 rounded-2" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-body d-flex gap-3 align-items-center text-prime bg-second text-center">
+                          <i class="bi bi-check-lg text-green fs-3"></i>
+                          <p class="m-0 fs-nav">ទីន្នន័យត្រូវបានបញ្ជូលទៅក្នុងបញ្ចី</p> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
@@ -969,89 +1001,698 @@
                     <thead>
                       <tr class="border-bottom">
                         <th class="py-3 ps-5">សមាជិក</th>
+                        <th class="py-3 ps-5">ភេទ</th>
                         <th class="py-3 ps-5">អាយុ</th>
-                        <th class="py-3 ps-5">គ្រូបង្វឹក</th>
+                        <th class="py-3 ps-5">លេខទូរស័ព្ទ</th>
                         <th class="py-3 ps-5">កីឡា</th>
                         <th class="py-3 ps-5">ថ្ងៃ</th>
                         <th class="py-3 ps-5">ម៉ោង</th>
                         <th class="py-3 ps-5">ថ្ងៃចូលរួម</th>
+                        <th></th>
                       </tr>
                     </thead>
                     <tbody class="bg-prime">
+                      <!-- Member 1 -->
                       <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
+                        <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
                             <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
                               style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Michael Brown</h6>
+                            <h6 class="mb-0">សៅ សុភ័ក្រ</h6>
                           </div>
                         </td>
+                        <td class="py-3 ps-5 align-middle">ប្រុស</td>
                         <td class="py-3 ps-5 ff align-middle">20</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">John Smith</h6>
-                          </div>
-                        </td>
+                        <td class="py-3 ps-5 ff align-middle">012 876 389</td>
                         <td class="py-3 ps-5 align-middle">ហែលទឹក</td>
                         <td class="py-3 ps-5 align-middle">ច័ន្ទ - ព្រហស្បតិ៍</td>
                         <td class="py-3 ps-5 ff align-middle">08:00 AM - 10:00 AM</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">25</span> តុលា <span class="ff">2023</span>
                         </td>
+                        <td class="py-3 ps-5 align-middle">
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal" data-bs-target="#member-1">
+                            <i class="bi bi-three-dots text-prime"></i>
+                          </button>
+
+                          <!-- Action Modal -->
+                          <div class="modal fade" id="member-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="member-label-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">សៅ សុភ័ក្រ</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body d-flex flex-column">
+                                  <!-- Delete Trigger -->
+                                  <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
+                                    data-bs-target="#delete-1">
+                                    <div
+                                      class="card-body d-flex align-items-center justify-content-between bg-second rounded-2">
+                                      <h5 class="m-0 text-prime">លុប</h5>
+                                      <h5 class="m-0"><i class="bi bi-trash text-danger"></i></h5>
+                                    </div>
+                                  </button>
+                                  <!-- Eidit Trigger -->
+                                  <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
+                                    data-bs-target="#edit-1">
+                                    <div
+                                      class="card-body d-flex align-items-center justify-content-between bg-second rounded-2">
+                                      <h5 class="m-0 text-prime">កែប្រែ</h5>
+                                      <h5 class="m-0"><i class="bi bi-pencil text-main"></i></h5>
+                                    </div>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Delete Modal -->
+                          <div class="modal fade" id="delete-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="delete-label-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">សៅ សុភ័ក្រ</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
+                                    <div class="d-flex gap-2">
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-danger w-100 text-center text-white">មិនយល់ព្រម</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Edit Modal -->
+                          <div class="modal fade" id="edit-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="edit-label-1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">សៅ សុភ័ក្រ</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card bg-prime border-0">
+                                    <div class="card-header border-0 bg-prime">
+                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានគសមាជិក</h5>
+                                    </div>
+                                    <div class="card-body">
+                                      <form>
+                                        <div class="row g-3 mb-4">
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="name" class="form-label">ឈ្មោះ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="សៅ សុភ័ក្រ">
+                                              <i class="bi bi-person position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="gender" class="form-label">ភេទ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="ប្រុស">
+                                              <i
+                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="age" class="form-label">អាយុ</label>
+                                              <input type="number"
+                                                class="form-control bg-prime fs-text text-second ps-3 pe-2 f-c"
+                                                placeholder="20">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-4">
+                                          <div class="col-md-4">
+                                            <div class=" position-relative">
+                                              <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
+                                              <input type="number"
+                                                class="form-control bg-prime fs-text text-second ps-7 pe-2 f-c"
+                                                placeholder="012 876 389">
+                                              <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="join-date" class="form-label">ថ្ងៃចូលរួម</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="25 តុលា 2023">
+                                              <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="sport" class="form-label">កីឡា</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="ហែលទឹក">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-5">
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="day" class="form-label">ថ្ងៃ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="ច័ន្ទ - ព្រហស្បតិ៍">
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="start-time" class="form-label">ម៉ោងចាប់ផ្ដើម</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="8:00AM">
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="end-time" class="form-label">ម៉ោងបញ្ចប់</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="10:00AM">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                          <button type="submit" class="btn btn-gold px-5 ms-auto"
+                                            data-bs-dismiss="modal">រក្សាទុក</button>
+                                        </div>
+                                      </form>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </td>
                       </tr>
 
+                      <!-- Member 2 -->
                       <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
+                        <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
                             <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
                               style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Jennifer Lee</h6>
+                            <h6 class="mb-0">មុំ ស្រីនាង</h6>
                           </div>
                         </td>
+                        <td class="py-3 ps-5 align-middle">ស្រី</td>
                         <td class="py-3 ps-5 ff align-middle">21</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Sarah Connor</h6>
-                          </div>
-                        </td>
+                        <td class="py-3 ps-5 ff align-middle">098 456 123</td>
                         <td class="py-3 ps-5 align-middle">វាយសី</td>
                         <td class="py-3 ps-5 align-middle">ច័ន្ទ, ពុធ, សុក្រ</td>
                         <td class="py-3 ps-5 ff align-middle">02:00 PM - 04:00 PM</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">28</span> តុលា <span class="ff">2023</span>
                         </td>
+                        <td class="py-3 ps-5 align-middle">
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal" data-bs-target="#member-2">
+                            <i class="bi bi-three-dots text-prime"></i>
+                          </button>
+
+                          <!-- Action Modal -->
+                          <div class="modal fade" id="member-2" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="member-label-2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">មុំ ស្រីនាង</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body d-flex flex-column">
+                                  <!-- Delete Trigger -->
+                                  <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
+                                    data-bs-target="#delete-2">
+                                    <div
+                                      class="card-body d-flex align-items-center justify-content-between bg-second rounded-2">
+                                      <h5 class="m-0 text-prime">លុប</h5>
+                                      <h5 class="m-0"><i class="bi bi-trash text-danger"></i></h5>
+                                    </div>
+                                  </button>
+                                  <!-- Edit Trigger -->
+                                  <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
+                                    data-bs-target="#edit-2">
+                                    <div
+                                      class="card-body d-flex align-items-center justify-content-between bg-second rounded-2">
+                                      <h5 class="m-0 text-prime">កែប្រែ</h5>
+                                      <h5 class="m-0"><i class="bi bi-pencil text-main"></i></h5>
+                                    </div>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Delete Modal -->
+                          <div class="modal fade" id="delete-2" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="delete-label-2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">មុំ ស្រីនាង</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
+                                    <div class="d-flex gap-2">
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-danger w-100 text-center text-white">មិនយល់ព្រម</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Edit Modal -->
+                          <div class="modal fade" id="edit-2" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="edit-label-2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">មុំ ស្រីនាង</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card bg-prime border-0">
+                                    <div class="card-header border-0 bg-prime">
+                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានសមាជិក</h5>
+                                    </div>
+                                    <div class="card-body">
+                                      <form>
+                                        <div class="row g-3 mb-4">
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">ឈ្មោះ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="មុំ ស្រីនាង">
+                                              <i class="bi bi-person position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">ភេទ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="ស្រី">
+                                              <i
+                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">អាយុ</label>
+                                              <input type="number"
+                                                class="form-control bg-prime fs-text text-second ps-3 pe-2 f-c"
+                                                placeholder="21">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-4">
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">លេខទូរស័ព្ទ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="098 456 123">
+                                              <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">ថ្ងៃចូលរួម</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="28 តុលា 2023">
+                                              <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">កីឡា</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="វាយសី">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-5">
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">ថ្ងៃ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="ច័ន្ទ, ពុធ, សុក្រ">
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">ម៉ោងចាប់ផ្ដើម</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="02:00 PM">
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label class="form-label">ម៉ោងបញ្ចប់</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="04:00 PM">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                          <button type="submit" class="btn btn-gold px-5 ms-auto"
+                                            data-bs-dismiss="modal">រក្សាទុក</button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
                       </tr>
 
+                      <!-- Member 3 -->
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 ff align-middle">
                           <div class="d-flex gap-3 align-items-center">
                             <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
                               style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Robert Taylor</h6>
+                            <h6 class="mb-0">ថេឡ័រ រូបត</h6>
                           </div>
                         </td>
+                        <td class="py-3 ps-5 align-middle">ប្រុស</td>
                         <td class="py-3 ps-5 ff align-middle">18</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Mark Johnson</h6>
-                          </div>
-                        </td>
+                        <td class="py-3 ps-5 ff align-middle">015 234 678</td>
                         <td class="py-3 ps-5 align-middle">បាល់បោះ</td>
                         <td class="py-3 ps-5 align-middle">សៅរ៍ - អាទិត្យ</td>
                         <td class="py-3 ps-5 ff align-middle">06:00 PM - 07:00 PM</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">02</span> វិច្ឆិកា <span
                             class="ff">2023</span></td>
+                        <td class="py-3 ps-5 align-middle">
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal" data-bs-target="#member-3">
+                            <i class="bi bi-three-dots text-prime"></i>
+                          </button>
+
+                          <!-- Action Modal -->
+                          <div class="modal fade" id="member-3" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="member-label-3" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">ថេឡ័រ រូបត</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body d-flex flex-column">
+                                  <!-- Delete Trigger -->
+                                  <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
+                                    data-bs-target="#delete-3">
+                                    <div
+                                      class="card-body d-flex align-items-center justify-content-between bg-second rounded-2">
+                                      <h5 class="m-0 text-prime">លុប</h5>
+                                      <h5 class="m-0"><i class="bi bi-trash text-danger"></i></h5>
+                                    </div>
+                                  </button>
+                                  <!-- Edit Trigger -->
+                                  <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
+                                    data-bs-target="#edit-3">
+                                    <div
+                                      class="card-body d-flex align-items-center justify-content-between bg-second rounded-2">
+                                      <h5 class="m-0 text-prime">កែប្រែ</h5>
+                                      <h5 class="m-0"><i class="bi bi-pencil text-main"></i></h5>
+                                    </div>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Delete Modal -->
+                          <div class="modal fade" id="delete-3" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="delete-label-3" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">ថេឡ័រ រូបត</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
+                                    <div class="d-flex gap-2">
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-danger w-100 text-center text-white">មិនយល់ព្រម</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Edit Modal -->
+                          <div class="modal fade" id="edit-3" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="edit-label-3" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px; height: 50px;"
+                                      class="img-fluid object-fit-cover rounded-1">
+                                    <h6 class="mb-0 text-prime">ថេឡ័រ រូបត</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card bg-prime border-0">
+                                    <div class="card-header border-0 bg-prime">
+                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានគសមាជិក</h5>
+                                    </div>
+                                    <div class="card-body">
+                                      <form>
+                                        <div class="row g-3 mb-4">
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="name" class="form-label">ឈ្មោះ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="ថេឡ័រ រូបត">
+                                              <i class="bi bi-person position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="gender" class="form-label">ភេទ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="ប្រុស">
+                                              <i
+                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="age" class="form-label">អាយុ</label>
+                                              <input type="number"
+                                                class="form-control bg-prime fs-text text-second ps-3 pe-2 f-c"
+                                                placeholder="18">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-4">
+                                          <div class="col-md-4">
+                                            <div class=" position-relative">
+                                              <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
+                                              <input type="number"
+                                                class="form-control bg-prime fs-text text-second ps-7 pe-2 f-c"
+                                                placeholder="015 234 678">
+                                              <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="join-date" class="form-label">ថ្ងៃចូលរួម</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                                placeholder="02 វិច្ឆិកា 2023">
+                                              <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="sport" class="form-label">កីឡា</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="បាល់បោះ">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="row g-3 mb-5">
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="day" class="form-label">ថ្ងៃ</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="សៅរ៍ - អាទិត្យ">
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="start-time" class="form-label">ម៉ោងចាប់ផ្ដើម</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="06:00 PM">
+                                            </div>
+                                          </div>
+
+                                          <div class="col-md-4">
+                                            <div class="position-relative">
+                                              <label for="end-time" class="form-label">ម៉ោងបញ្ចប់</label>
+                                              <input type="text"
+                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
+                                                placeholder="07:00 PM">
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                          <button type="submit" class="btn btn-gold px-5 ms-auto"
+                                            data-bs-dismiss="modal">រក្សាទុក</button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
                       </tr>
+
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-
           </div>
 
           <!-- Member Status -->
@@ -2764,6 +3405,7 @@
               </div>
             </div>
           </div>
+
           <!-- Notification Settings -->
           <div class="tab-pane fade" id="tab-notification">
             <div class="card border-0 bg-transparent mb-3">
@@ -3647,6 +4289,23 @@
         });
       });
     });
+  </script>
+  <!-- Many Toast -->
+  <script>
+    function showToast(id) {
+      const toastEl = document.getElementById(id);
+      const toast = new bootstrap.Toast(toastEl, { delay: 2000, autohide: true }); // 2000ms = 2s
+      toast.show();
+    }
+
+    document.getElementById("favoriteBtn1").addEventListener("click", () => showToast("favoriteToast1"));
+    document.getElementById("addCartBtn1").addEventListener("click", () => showToast("cartToast1"));
+
+    document.getElementById("favoriteBtn2").addEventListener("click", () => showToast("favoriteToast2"));
+    document.getElementById("addCartBtn2").addEventListener("click", () => showToast("cartToast2"));
+
+    document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
+    document.getElementById("addCartBtn3").addEventListener("click", () => showToast("cartToast3"));
   </script>
 
 
