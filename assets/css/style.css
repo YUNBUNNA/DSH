@@ -556,6 +556,10 @@ body {
   border: none;
 }
 
+.messenger:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
 @media screen and (max-width:575px) {
   .download {
     width: 120px;
