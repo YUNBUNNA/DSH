@@ -555,3 +555,8 @@ body {
   background-color: var(--bg-prime);
   border: none;
 }
+
+.messenger:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
