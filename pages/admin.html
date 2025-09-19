@@ -669,7 +669,7 @@
           </div>
 
           <!-- Add / Edit / Delete Members -->
-          <div class="tab-pane fade show active" id="tab-members-add">
+          <div class="tab-pane fade" id="tab-members-add">
             <div class="card mb-4 bg-prime border-0">
               <div class="card-header border-0 border-bottom py-3 bg-prime mb-2">
                 <h4 class="mb-0 text-main">បន្ថែមសមាជិកថ្មី</h4>
@@ -3301,7 +3301,7 @@
           </div>
 
           <!-- Security Checkup -->
-          <div class="tab-pane fade" id="tab-security-checkup">
+          <div class="tab-pane fade show active" id="tab-security-checkup">
             <div class="card shadow-xs border-0 bg-prime pt-4">
               <img src="https://img.icons8.com/?size=100&id=0tpqgxISselU&format=png&color=000000" alt=""
                 class="mx-auto img-fluid">
@@ -3340,7 +3340,7 @@
                                 <label class="form-label fs-title mb-3">បញ្ចូលលេខទូរស័ព្ទ</label>
                                 <input type="number" class="form-control bg-prime fs-text text-second ps-13 pe-2"
                                   placeholder="លេខទូរស័ព្ទ">
-                                <p class="position-absolute text-second ff fs-text mb-0 trans-y">KH +855</p>
+                                <p class="position-absolute text-second ff fs-text mb-0" style="top: 65%; left: 3%;">KH +855</p>
                               </div>
                               <p class="text-second lh-lg">អ្នកនឹងទទួលបានលេខកូដផ្ទៀងផ្ទាត់តាមរយៈ SMS។
                                 លេខទូរសព្ទរបស់អ្នកអាចត្រូវបានប្រើ ដើម្បីភ្ជាប់ទំនាក់ទំនង របស់អ្នកជាមួយអ្នកផ្សេងទៀត
@@ -3385,17 +3385,17 @@
                           <div class="col-lg-10">
                             <form id="otpForm">
                               <div class="d-flex justify-content-center gap-3 mb-4 ff">
-                                <input type="text" maxlength="1" placeholder="9"
+                                <input type="text" maxlength="1"
                                   class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="1"
+                                <input type="text" maxlength="1"
                                   class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="4"
+                                <input type="text" maxlength="1"
                                   class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="7"
+                                <input type="text" maxlength="1"
                                   class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="3"
+                                <input type="text" maxlength="1"
                                   class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="5"
+                                <input type="text" maxlength="1"
                                   class="form-control otp-input bg-transparent" />
                               </div>
                               <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
@@ -3451,7 +3451,7 @@
                                 <label for="newPassword" class="form-label fs-title text-prime">ពាក្យសម្ងាត់ថ្មី</label>
                                 <input type="password" class="form-control bg-prime fs-text text-second ps-7"
                                   id="newPassword" placeholder="វាយពាក្យសម្ងាត់ថ្មី">
-                                <i class="bi bi-lock-fill position-absolute text-gold icon-input"></i>
+                                <i class="bi bi-lock position-absolute text-gold icon-input"></i>
                               </div>
 
                               <!-- បញ្ជាក់ពាក្យសម្ងាត់ថ្មី -->
@@ -3460,7 +3460,7 @@
                                   class="form-label fs-title text-prime">បញ្ជាក់ពាក្យសម្ងាត់</label>
                                 <input type="password" class="form-control bg-prime fs-text text-second ps-7"
                                   id="confirmPassword" placeholder="បញ្ជាក់ពាក្យសម្ងាត់">
-                                <i class="bi bi-shield-lock-fill position-absolute text-gold icon-input"></i>
+                                <i class="bi bi-shield-lock position-absolute text-gold icon-input"></i>
                               </div>
 
                               <button type="submit" class="btn btn-gold w-100 fs-btn" data-bs-dismiss="modal">

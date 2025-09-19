@@ -471,7 +471,7 @@ body {
 }
 
 .hover-lift:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   box-shadow: 0 10px 20px var(--box-shadow-prime);
 }
 
@@ -554,4 +554,25 @@ body {
 .page-link{
   background-color: var(--bg-prime);
   border: none;
+}
+
+@media screen and (max-width:575px) {
+  .download {
+    width: 120px;
+    margin-top: 5px;
+  }
+
+}
+
+@media screen and (min-width:576px) {
+  .download {
+    width: 150px;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width:976px) {
+  .w-content {
+    width: fit-content;
+  }
 }
