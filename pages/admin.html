@@ -229,21 +229,8 @@
         </li>
 
         <!-- សមាជិក -->
-        <li class="nav-item mb-2">
-          <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#members-dropdown"
-            role="button" aria-expanded="false">
-            <i class="bi bi-people me-2"></i><span>សមាជិក</span>
-            <i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul id="members-dropdown" class="collapse list-unstyled ps-4 mt-2" data-bs-parent="#sidebar-nav">
-            <li class="nav-item mb-2"><a href="#tab-members-list" class="nav-link text-white"
-                data-bs-toggle="tab">បង្ហាញសមាជិកទាំងអស់</a></li>
-            <li class="nav-item mb-2"><a href="#tab-members-add" class="nav-link text-white"
-                data-bs-toggle="tab">បន្ថែមសមាជិក</a></li>
-            <li class="nav-item"><a href="#tab-members-status" class="nav-link text-white"
-                data-bs-toggle="tab">ស្ថានភាពសមាជិក</a></li>
-          </ul>
-        </li>
+        <li class="nav-item mb-2"><a href="#tab-members-add" class="nav-link text-white"
+            data-bs-toggle="tab"><i class="bi bi-book me-2"></i> បន្ថែមសមាជិក</a></li>
 
         <!-- គ្រូបង្វឹក -->
         <li class="nav-item mb-2">
@@ -381,7 +368,7 @@
             <i class="theme-icon start-50 bi bi-sun fs-4"></i>
             <i class="theme-icon start-50 bi bi-moon fs-4"></i>
           </button>
-          <ul class="navbar-nav me-3">
+          <ul class="navbar-nav pe-3">
             <li class="nav-item admin position-relative">
               <a href="" class="nav-link">
                 <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
@@ -681,182 +668,6 @@
             </div>
           </div>
 
-          <div class="tab-pane fade bg-third" id="tab-members-list">
-            <!-- Filter & Search -->
-            <div class="row g-2 rounded-1 mb-3">
-              <div class="col-md-4">
-                <div class="position-relative">
-                  <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                    placeholder="ស្វែងរកសមាជិកតាមឈ្មោះ">
-                  <i class="bi bi-search position-absolute text-gold icon-input tran-y"></i>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="position-relative">
-                  <select class="form-select form-control ps-3 bg-prime text-prime">
-                    <option value="" disabled selected hidden>ជ្រើសរើសកីឡា</option>
-                    <option>ហែលទឹក</option>
-                    <option>បាល់បោះ</option>
-                    <option>វាយសី</option>
-                    <option>បាល់ទះ</option>
-                  </select>
-                  <i class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="position-relative">
-                  <select class="form-select form-control ps-3 bg-prime text-prime">
-                    <option value="" disabled selected hidden>ជ្រើសរើសស្ថានភាព</option>
-                    <option>សកម្ម</option>
-                    <option>កំពុងរង់ចាំ</option>
-                    <option>ផុតកំណត់</option>
-                  </select>
-                  <i class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Recent Members Table -->
-            <div class="card border-0 shadow-xs bg-prime">
-              <div
-                class="card-header border-0 border-bottom bg-prime py-3 d-flex justify-content-between align-items-center gap-5">
-                <h4 class="mb-0 text-main">តារាងសមាជិក</h4>
-                <button class="btn btn-gold text-nowrap h-fit w-fit">មើលទាំងអស់</button>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table mb-0 text-prime text-nowrap">
-                    <thead class="bg-third text-muted fw-bold">
-                      <tr class="border-bottom">
-                        <th class="py-3 ps-5">សមាជិក</th>
-                        <th class="py-3 ps-5">គ្រូបង្វឹក</th>
-                        <th class="py-3 ps-5">កីឡា</th>
-                        <th class="py-3 ps-5">កាលបរិច្ឆេទចូល</th>
-                        <th class="py-3 ps-5">កាលបរិច្ឆេទផុតកំណត់</th>
-                        <th class="py-3 ps-5">ស្ថានភាព</th>
-                      </tr>
-                    </thead>
-                    <tbody class="bg-prime">
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Sarah Johnson</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Michael Phelps</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 align-middle">ហែលទឹក</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">12</span> តុលា, <span class="ff">2024</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">12</span> មិថុនា, <span
-                            class="ff">2025</span></td>
-                        <td class="py-3 ps-5 align-middle"><span class="text-green">សកម្ម</span></td>
-                      </tr>
-
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">David Wilson</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Stephen Curry</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 align-middle">បាល់បោះ</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">4</span> តុលា, <span class="ff">2024</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">4</span> តុលា, <span class="ff">2025</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="text-green">សកម្ម</span></td>
-                      </tr>
-
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Emma Thompson</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Serena Williams</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 align-middle">ហែលទឹក</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">1</span> តុលា, <span class="ff">2024</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">1</span> តុលា, <span class="ff">2025</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="text-warning">កំពុងរង់ចាំ</span></td>
-                      </tr>
-
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">James Rodriguez</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Lionel Messi</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 align-middle">បាល់ទាត់</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">2</span> តុលា, <span class="ff">2024</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">2</span> តុលា, <span class="ff">2025</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="text-green">សកម្ម</span></td>
-                      </tr>
-
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Lisa Chen</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Simone Biles</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 align-middle">ការ៉ាតេ</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">3</span> តុលា, <span class="ff">2024</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">3</span> តុលា, <span class="ff">2025</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="text-danger">ផុតកំណត់</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- Add / Edit / Delete Members -->
           <div class="tab-pane fade show active" id="tab-members-add">
             <div class="card mb-4 bg-prime border-0">
@@ -973,10 +784,11 @@
                   <div class="d-flex justify-content-end">
                     <button type="button" class="btn btn-gold px-5" id="favoriteBtn1">បន្ថែមសមាជិក</button>
                     <div class="toast-container position-fixed" style="top: 5%; left: 47.5%;">
-                      <div id="favoriteToast1" class="toast shadow-xs border-0 rounded-2" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div id="favoriteToast1" class="toast shadow-xs border-0 rounded-2" role="alert"
+                        aria-live="assertive" aria-atomic="true">
                         <div class="toast-body d-flex gap-3 align-items-center text-prime bg-second text-center">
                           <i class="bi bi-check-lg text-green fs-3"></i>
-                          <p class="m-0 fs-nav">ទីន្នន័យត្រូវបានបញ្ជូលទៅក្នុងបញ្ចី</p> 
+                          <p class="m-0 fs-nav">ទីន្នន័យត្រូវបានបញ្ជូលទៅក្នុងបញ្ចី</p>
                         </div>
                       </div>
                     </div>
@@ -1053,6 +865,12 @@
                                   </button>
                                 </div>
                                 <div class="modal-body d-flex flex-column">
+                                  <div class="card border-0 bg-transparent">
+                                    <div class="card-body py-1">
+                                      <h5 class="text-main">ថ្ងៃផុតកំណត់ : <span class="text-second fs-nav ms-1"><span
+                                            class="ff">25</span> វិច្ឆិកា <span class="ff">2023</span></span></h5>
+                                    </div>
+                                  </div>
                                   <!-- Delete Trigger -->
                                   <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
                                     data-bs-target="#delete-1">
@@ -1100,7 +918,7 @@
                                       <button data-bs-dismiss="modal"
                                         class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
                                       <button data-bs-dismiss="modal"
-                                        class="btn btn-danger w-100 text-center text-white">មិនយល់ព្រម</button>
+                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
                                     </div>
                                   </div>
                                 </div>
@@ -1223,7 +1041,7 @@
                                           </div>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                          <button type="submit" class="btn btn-gold px-5 ms-auto"
+                                          <button type="button" class="btn btn-gold px-5 ms-auto"
                                             data-bs-dismiss="modal">រក្សាទុក</button>
                                         </div>
                                       </form>
@@ -1279,6 +1097,12 @@
                                   </button>
                                 </div>
                                 <div class="modal-body d-flex flex-column">
+                                  <div class="card border-0 bg-transparent">
+                                    <div class="card-body py-1">
+                                      <h5 class="text-main">ថ្ងៃផុតកំណត់ : <span class="text-second fs-nav ms-1"><span
+                                            class="ff">28</span> វិច្ឆិកា <span class="ff">2023</span></span></h5>
+                                    </div>
+                                  </div>
                                   <!-- Delete Trigger -->
                                   <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
                                     data-bs-target="#delete-2">
@@ -1326,7 +1150,7 @@
                                       <button data-bs-dismiss="modal"
                                         class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
                                       <button data-bs-dismiss="modal"
-                                        class="btn btn-danger w-100 text-center text-white">មិនយល់ព្រម</button>
+                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
                                     </div>
                                   </div>
                                 </div>
@@ -1450,7 +1274,7 @@
                                           </div>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                          <button type="submit" class="btn btn-gold px-5 ms-auto"
+                                          <button type="button" class="btn btn-gold px-5 ms-auto"
                                             data-bs-dismiss="modal">រក្សាទុក</button>
                                         </div>
                                       </form>
@@ -1465,11 +1289,11 @@
 
                       <!-- Member 3 -->
                       <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
+                        <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
                             <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
                               style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">ថេឡ័រ រូបត</h6>
+                            <h6 class="mb-0">តេ វិចិត្រ</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 align-middle">ប្រុស</td>
@@ -1496,7 +1320,7 @@
                                     <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
-                                    <h6 class="mb-0 text-prime">ថេឡ័រ រូបត</h6>
+                                    <h6 class="mb-0 text-prime">តេ វិចិត្រ</h6>
                                   </div>
                                   <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
                                     aria-label="Close">
@@ -1504,6 +1328,12 @@
                                   </button>
                                 </div>
                                 <div class="modal-body d-flex flex-column">
+                                  <div class="card border-0 bg-transparent">
+                                    <div class="card-body py-1">
+                                      <h5 class="text-main">ថ្ងៃផុតកំណត់ : <span class="text-second fs-nav ms-1"><span
+                                            class="ff">02</span> ធ្នូ <span class="ff">2023</span></span></h5>
+                                    </div>
+                                  </div>
                                   <!-- Delete Trigger -->
                                   <button type="button" class="btn w-100 fs-5" data-bs-toggle="modal"
                                     data-bs-target="#delete-3">
@@ -1537,7 +1367,7 @@
                                     <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
-                                    <h6 class="mb-0 text-prime">ថេឡ័រ រូបត</h6>
+                                    <h6 class="mb-0 text-prime">តេ វិចិត្រ</h6>
                                   </div>
                                   <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
                                     aria-label="Close">
@@ -1551,7 +1381,7 @@
                                       <button data-bs-dismiss="modal"
                                         class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
                                       <button data-bs-dismiss="modal"
-                                        class="btn btn-danger w-100 text-center text-white">មិនយល់ព្រម</button>
+                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
                                     </div>
                                   </div>
                                 </div>
@@ -1569,7 +1399,7 @@
                                     <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
-                                    <h6 class="mb-0 text-prime">ថេឡ័រ រូបត</h6>
+                                    <h6 class="mb-0 text-prime">តេ វិចិត្រ</h6>
                                   </div>
                                   <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
                                     aria-label="Close">
@@ -1589,7 +1419,7 @@
                                               <label for="name" class="form-label">ឈ្មោះ</label>
                                               <input type="text"
                                                 class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ថេឡ័រ រូបត">
+                                                placeholder="តេ វិចិត្រ">
                                               <i class="bi bi-person position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
@@ -1675,7 +1505,7 @@
                                           </div>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                          <button type="submit" class="btn btn-gold px-5 ms-auto"
+                                          <button type="button" class="btn btn-gold px-5 ms-auto"
                                             data-bs-dismiss="modal">រក្សាទុក</button>
                                         </div>
                                       </form>
@@ -1693,118 +1523,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Member Status -->
-          <div class="tab-pane fade" id="tab-members-status">
-            <!-- Status Filter -->
-            <div class="row mb-3 g-2">
-              <div class="col-md-4">
-                <div class="position-relative">
-                  <select class="form-select form-control ps-3 bg-prime text-prime">
-                    <option value="" disabled selected hidden>ជ្រើសរើសស្ថានភាព</option>
-                    <option>សកម្ម</option>
-                    <option>កំពុងរង់ចាំ</option>
-                    <option>ផុតកំណត់</option>
-                  </select>
-                  <i class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="position-relative">
-                  <input type="text" class="form-control bg-prime fs-text text-second ps-7" placeholder="ស្វែងរកឈ្មោះ">
-                  <i class="bi bi-search position-absolute text-gold icon-input tran-y"></i>
-                </div>
-              </div>
-            </div>
-
-            <!-- Status Table -->
-            <div class="card mb-4 border-0 shadow-xs">
-              <div
-                class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-5">
-                <h4 class="mb-0">ការបន្តជាសមាជិកនៅពេលខាងមុខ</h4>
-                <button class="btn btn-gold text-nowrap h-fit w-fit">មើលទាំងអស់</button>
-              </div>
-              <div class="card-body bg-prime">
-                <div class="table-responsive">
-                  <table class="table mb-0 text-prime text-nowrap">
-                    <thead>
-                      <tr class="border-bottom">
-                        <th class="py-3 ps-5">សមាជិក</th>
-                        <th class="py-3 ps-5">កីឡា</th>
-                        <th class="py-3 ps-5">ថ្ងៃចាប់ផ្តើម</th>
-                        <th class="py-3 ps-5">ថ្ងៃផុតកំណត់</th>
-                        <th class="py-3 ps-5">ចំនួនទឹកប្រាក់</th>
-                        <th class="py-3 ps-5">ស្ថានភាព</th>
-                        <th class="py-3 ps-5">ការជូនដំណឹង</th>
-                      </tr>
-                    </thead>
-                    <tbody class="bg-prime">
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width:50px; height:50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Michael Brown</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 align-middle">ហែលទឹក</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">25</span> តុលា <span class="ff">2023</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">25</span> តុលា <span class="ff">2024</span>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle"><span class="ff">$120</span></td>
-                        <td class="py-3 ps-5 align-middle text-success"><span class="text-green">សកម្ម</span></td>
-                        <td class="py-3 ps-5 align-middle">
-                          <button class="btn btn-gold btn-sm">ផ្ញើការជូនដំណឹង</button>
-                        </td>
-                      </tr>
-
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width:50px; height:50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Jennifer Lee</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 align-middle">វាយសី</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">28</span> តុលា <span class="ff">2023</span>
-                        </td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">28</span> តុលា <span class="ff">2024</span>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle"><span class="ff">$95</span></td>
-                        <td class="py-3 ps-5 align-middle"><span class="text-warning">កំពុងរង់ចាំ</span></td>
-                        <td class="py-3 ps-5 align-middle">
-                          <button class="btn btn-gold btn-sm">ផ្ញើការជូនដំណឹង</button>
-                        </td>
-                      </tr>
-
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width:50px; height:50px;" class="img-fluid object-fit-cover rounded-1">
-                            <h6 class="mb-0">Robert Taylor</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 align-middle">បាល់បោះ</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">2</span> វិច្ឆិកា <span
-                            class="ff">2023</span></td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">2</span> វិច្ឆិកា <span
-                            class="ff">2024</span></td>
-                        <td class="py-3 ps-5 ff align-middle"><span class="ff">$110</span></td>
-                        <td class="py-3 ps-5 align-middle"><span class="text-danger">ផុតកំណត់</span></td>
-                        <td class="py-3 ps-5 align-middle">
-                          <button class="btn btn-gold btn-sm">ផ្ញើការជូនដំណឹង</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
           </div>
 
           <!-- Show Coaches -->
