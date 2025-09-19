@@ -18,6 +18,321 @@
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+<style>
+    .btn-primary-custom {
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        color: white;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(243, 156, 18, 0.3);
+        color: white;
+    }
+
+    .btn-outline-custom {
+        border: 2px solid #f39c12;
+        color: #f39c12;
+        background: transparent;
+        border-radius: 25px;
+        padding: 8px 18px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .btn-outline-custom:hover {
+        background: #f39c12;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .coaches-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    /* Booking Modal Styles */
+    .booking-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+    }
+
+    .booking-modal.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .booking-content {
+        background: white;
+        border-radius: 20px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        animation: slideUp 0.3s ease;
+        position: relative;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .booking-header {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 2rem;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+    }
+
+    .close-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .booking-body {
+        padding: 2rem;
+    }
+
+    .booking-step {
+        margin-bottom: 2rem;
+    }
+
+    .step-title {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .step-number {
+        background: #f39c12;
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    .calendar-container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        margin-bottom: 1rem;
+    }
+
+    .calendar-day {
+        aspect-ratio: 1;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+
+    .calendar-day:hover {
+        border-color: #f39c12;
+        background: #fff3cd;
+    }
+
+    .calendar-day.selected {
+        background: #f39c12;
+        color: white;
+        border-color: #f39c12;
+    }
+
+    .calendar-day.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        background: #f8f9fa;
+    }
+
+    .time-slots {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .time-slot {
+        padding: 10px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+
+    .time-slot:hover {
+        border-color: #f39c12;
+        background: #fff3cd;
+    }
+
+    .time-slot.selected {
+        background: #f39c12;
+        color: white;
+        border-color: #f39c12;
+    }
+
+    .time-slot.booked {
+        background: #dc3545;
+        color: white;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .form-control-custom {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-control-custom:focus {
+        outline: none;
+        border-color: #f39c12;
+        box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+    }
+
+    .booking-summary {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .summary-item:last-child {
+        border-bottom: none;
+        font-weight: 700;
+        color: #2c3e50;
+    }
+
+    .success-message {
+        display: none;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .success-icon {
+        font-size: 4rem;
+        color: #27ae60;
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .coaches-container {
+            grid-template-columns: 1fr;
+        }
+
+        .booking-content {
+            width: 95%;
+            margin: 1rem;
+        }
+
+        .calendar-container {
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        .time-slots {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+</style>
 
 <body class="bg-prime">
 
@@ -271,111 +586,625 @@
         </nav>
     </header>
     <main>
-        <section class="py-17">
+        <!-- General Hero Section for Coach Page -->
+        <section class="hero-banner text-center pt-20 py-15 bg-light position-relative mt-10" style="background-image: url('https://i.pinimg.com/1200x/a9/88/a4/a988a47e605cacc02b0bb41c85270de3.jpg'); 
+           background-size: cover; 
+           background-position: center;">
+
+            <!-- Overlay -->
+            <div class=" position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.541);">
+            </div>
+
+            <div class="container position-relative text-white">
+                <!-- Main Title -->
+                <h1 class="card-title mb-3 text-main">គ្រូបង្វឹកជំនាញខ្ពស់</h1>
+
+                <!-- Subtitle / Expertise -->
+                <h2 class="card-text mb-3">ការបណ្តុះបណ្តាលសម្រាប់អ្នកគ្រប់កម្រិត</h2>
+
+                <!-- Description -->
+                <p class="card-text mb-4 fade-in-up lead">
+                    ចូលរួមជាមួយគ្រូបង្វឹករបស់យើង ដើម្បីពង្រឹងសមត្ថភាព និងទទួលបានបទពិសោធន៍ល្អបំផុត។
+                    យើងផ្តល់កម្មវិធីបណ្តុះបណ្តាលសម្រាប់អ្នកចាប់ផ្តើម រហូតដល់អ្នកដែលមានជំនាញវិជ្ជាជីវៈ។
+                </p>
+            </div>
+        </section>
+        <!-- coach card -->
+        <section class="py-10">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="card border-0 hover-lift shadow-lg bg-prime">
+                <h2 class="text-main pb-4">គ្រូបង្វឹករបស់យើង</h2>
+                <div class="row g-4">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
                             <img src="https://thesun.my/binrepository/kl63-25112024-akademi-badmiton-malaysia_4759631_20241125192810.jpg"
                                 alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
-                            <div class="card-body  text-prime  ">
-                                <h4 class="card-title text-center fw-bold">ណារិទ្ធ ចំរើន</h4>
-                                <p class="card-text fs-nav">គ្រូបង្វឹក: កីឡាវាយសី</p>
-                                <p class="card-text fs-nav">បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹបជាតិ</p>
-                                <p class="card-text fs-nav">វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1 &
-                                        2</span></p>
-                                <p class="card-text fs-nav">ទីតាំង: កំពង់ឆ្នាំង</p>
-                                <div class="card-body d-flex gap-2 px-0">
-                                    <button class="btn btn-gold d-block w-fit "><i class="bi bi-chat"></i>
-                                        កក់</button>
-                                    <a href="" class="btn btn-gold d-block w-fit ms-3">ព័ត៌មានបន្ថែម <i
+                            <div class="card-body  text-prime  align-content-center">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    ទីតាំង: កំពង់ឆ្នាំង</p>
+                                <div class="card-body d-flex gap-2 ">
+                                    <button type="button" class="btn btn-gold d-block w-fit "
+                                        onclick="openBookingModal('ណារិទ្ធ ចំរើន', '$25/hour')">
+                                        កក់ឥឡូវនេះ
+                                    </button>
+                                    <a href="" class="btn btn-gold d-block w-fit ">ព័ត៌មានបន្ថែម <i
                                             class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 hover-lift shadow-lg bg-prime">
-                            <img src="https://thesun.my/binrepository/kl63-25112024-akademi-badmiton-malaysia_4759631_20241125192810.jpg"
-                                alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
-                            <div class="card-body pt-5 text-prime  ">
-                                <h6 class="fw-normal fs-5 text-prime "><strong> គ្រូបង្វឹក:</strong>
-                                    <span class="fs-nav">កីឡាវាយសី</span>
-                                </h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong> បទពិសោធន៍:</strong> <span
-                                        class="fs-nav">7
-                                        ឆ្នាំក្នុងបង្វឹកក្លឹបជាតិ</span></h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong>
-                                        វិញ្ញាបនប័ត្រ:</strong> <span class="ff fs-nav">BWF Level 1 & 2</span></h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong> ទីតាំង:</strong>
-                                    <span class="fs-nav">កំពង់ឆ្នាំង</span>
-                                </h6>
-                                <div class="card-body d-flex gap-2 px-0 ">
-                                    <button class="btn btn-gold d-block w-fit "><i class="bi bi-chat"></i>
-                                        ផ្ញើសារ</button>
-                                    <a href="" class="btn btn-gold d-block w-fit ms-3">ព័ត៌មានបន្ថែម <i
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="../assets/img/sports/cycling-coach-1.jpg" alt="" class="card-img-top"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    ទីតាំង: កំពង់ឆ្នាំង</p>
+                                <div class="card-body d-flex gap-2 ">
+                                    <button type="button" class="btn btn-gold d-block w-fit "
+                                        onclick="openBookingModal('ណារិទ្ធ ', '$25/hour')">
+                                        កក់ឥឡូវនេះ
+                                    </button>
+                                    <a href="" class="btn btn-gold d-block w-fit ">ព័ត៌មានបន្ថែម <i
                                             class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 hover-lift shadow-lg bg-prime">
-                            <img src="https://thesun.my/binrepository/kl63-25112024-akademi-badmiton-malaysia_4759631_20241125192810.jpg"
-                                alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
-                            <div class="card-body pt-5 text-prime  ">
-                                <h6 class="fw-normal fs-5 text-prime "><strong> គ្រូបង្វឹក:</strong>
-                                    <span class="fs-nav">កីឡាវាយសី</span>
-                                </h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong> បទពិសោធន៍:</strong> <span
-                                        class="fs-nav">7
-                                        ឆ្នាំក្នុងបង្វឹកក្លឹបជាតិ</span></h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong>
-                                        វិញ្ញាបនប័ត្រ:</strong> <span class="ff fs-nav">BWF Level 1 & 2</span></h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong> ទីតាំង:</strong>
-                                    <span class="fs-nav">កំពង់ឆ្នាំង</span>
-                                </h6>
-                                <div class="card-body d-flex gap-2 px-0">
-                                    <button class="btn btn-gold d-block w-fit "><i class="bi bi-chat"></i>
-                                        ផ្ញើសារ</button>
-                                    <a href="" class="btn btn-gold d-block w-fit ms-3">ព័ត៌មានបន្ថែម <i
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="../assets/img/sports/basketball-coach-1.jpg" alt="" class="card-img-top"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    ទីតាំង: កំពង់ឆ្នាំង</p>
+                                <div class="card-body d-flex gap-2 ">
+                                    <button type="button" class="btn btn-gold d-block w-fit "
+                                        onclick="openBookingModal('ណារិទ្ធ ចំរើន', '$25/hour')">
+                                        កក់ឥឡូវនេះ
+                                    </button>
+                                    <a href="" class="btn btn-gold d-block w-fit ">ព័ត៌មានបន្ថែម <i
                                             class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="card border-0 hover-lift shadow-lg bg-prime">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
                             <img src="https://thesun.my/binrepository/kl63-25112024-akademi-badmiton-malaysia_4759631_20241125192810.jpg"
                                 alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
-                            <div class="card-body pt-5 text-prime  ">
-                                <h6 class="fw-normal fs-5 text-prime "><strong> គ្រូបង្វឹក:</strong>
-                                    <span class="fs-nav">កីឡាវាយសី</span>
-                                </h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong> បទពិសោធន៍:</strong> <span
-                                        class="fs-nav">7
-                                        ឆ្នាំក្នុងបង្វឹកក្លឹបជាតិ</span></h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong>
-                                        វិញ្ញាបនប័ត្រ:</strong> <span class="ff fs-nav">BWF Level 1 & 2</span></h6>
-                                <h6 class="fw-normal fs-5 text-prime"><strong> ទីតាំង:</strong>
-                                    <span class="fs-nav">កំពង់ឆ្នាំង</span>
-                                </h6>
-                                <div class="card-body d-flex gap-2 px-0">
-                                    <button class="btn btn-gold d-block w-fit "><i class="bi bi-chat"></i>
-                                        ផ្ញើសារ</button>
-                                    <a href="" class="btn btn-gold d-block w-fit ms-3">ព័ត៌មានបន្ថែម <i
+                            <div class="card-body  text-prime  align-content-center">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    ទីតាំង: កំពង់ឆ្នាំង</p>
+                                <div class="card-body d-flex gap-2 ">
+                                    <button type="button" class="btn btn-gold d-block w-fit "
+                                        onclick="openBookingModal('ណារិទ្ធ ចំរើន', '$25/hour')">
+                                        កក់ឥឡូវនេះ
+                                    </button>
+                                    <a href="" class="btn btn-gold d-block w-fit ">ព័ត៌មានបន្ថែម <i
                                             class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
 
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="https://thesun.my/binrepository/kl63-25112024-akademi-badmiton-malaysia_4759631_20241125192810.jpg"
+                                alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    ទីតាំង: កំពង់ឆ្នាំង</p>
+                                <div class="card-body d-flex gap-2 ">
+                                    <button type="button" class="btn btn-gold d-block w-fit "
+                                        onclick="openBookingModal('ណារិទ្ធ ចំរើន', '$25/hour')">
+                                        កក់ឥឡូវនេះ
+                                    </button>
+                                    <a href="" class="btn btn-gold d-block w-fit ">ព័ត៌មានបន្ថែម <i
+                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="../assets/img/sports/cycling-coach-1.jpg" alt="" class="card-img-top"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    ទីតាំង: កំពង់ឆ្នាំង</p>
+                                <div class="card-body d-flex gap-2 ">
+                                    <button type="button" class="btn btn-gold d-block w-fit "
+                                        onclick="openBookingModal('ណារិទ្ធ ', '$25/hour')">
+                                        កក់ឥឡូវនេះ
+                                    </button>
+                                    <a href="" class="btn btn-gold d-block w-fit ">ព័ត៌មានបន្ថែម <i
+                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="../assets/img/sports/basketball-coach-1.jpg" alt="" class="card-img-top"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    ទីតាំង: កំពង់ឆ្នាំង</p>
+                                <div class="card-body d-flex gap-2 ">
+                                    <button type="button" class="btn btn-gold d-block w-fit "
+                                        onclick="openBookingModal('ណារិទ្ធ ចំរើន', '$25/hour')">
+                                        កក់ឥឡូវនេះ
+                                    </button>
+                                    <a href="" class="btn btn-gold d-block w-fit ">ព័ត៌មានបន្ថែម <i
+                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="https://thesun.my/binrepository/kl63-25112024-akademi-badmiton-malaysia_4759631_20241125192810.jpg"
+                                alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                <p class="card-text fs-nav"><i
+                                        class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                    ទីតាំង: កំពង់ឆ្នាំង</p>
+                                <div class="card-body d-flex gap-2 ">
+                                    <button type="button" class="btn btn-gold d-block w-fit "
+                                        onclick="openBookingModal('ណារិទ្ធ ចំរើន', '$25/hour')">
+                                        កក់ឥឡូវនេះ
+                                    </button>
+                                    <a href="" class="btn btn-gold d-block w-fit ">ព័ត៌មានបន្ថែម <i
+                                            class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="booking-modal">
+            <div class="booking-content">
+                <div class="booking-header">
+                    <button class="close-btn" onclick="closeBookingModal()">
+                        <i class="bi bi-x"></i>
+                    </button>
+                    <h3><i class="bi bi-calendar-plus"></i> Book a Session</h3>
+                    <p id="selectedCoachName">with Coach Name</p>
+                </div>
+
+                <div class="booking-body">
+                    <div id="bookingForm">
+                        <!-- Step 1: Select Date -->
+                        <div class="booking-step">
+                            <h4 class="step-title">
+                                <span class="step-number text-prime">1</span>
+                                ជ្រើសរើសថ្ងៃ
+                            </h4>
+                            <div class="calendar-container" id="calendarContainer">
+                                <!-- Calendar will be generated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Select Time -->
+                        <div class="booking-step">
+                            <h4 class="step-title">
+                                <span class="step-number">2</span>
+                                ជ្រើសរើសម៉ោង
+                            </h4>
+                            <div class="time-slots" id="timeSlots">
+                                <!-- Time slots will be generated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Personal Information -->
+                        <div class="booking-step">
+                            <h4 class="step-title">
+                                <span class="step-number">3</span>
+                                ព័ត៌មានរបស់អ្នក
+                            </h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">ឈ្មោះពេញ *</label>
+                                        <input type="text" id="fullName" class="form-control-custom"
+                                            placeholder="បញ្ជូលឈ្មោះ" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">លេខទូរសព្ឋ *</label>
+                                        <input type="tel" id="phoneNumber" class="form-control-custom"
+                                            placeholder="បញ្ជូលលេខទូរសព្ឋ" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">អាសយដ្ឋានអ៊ីមែល *</label>
+                                <input type="email" id="emailAddress" class="form-control-custom"
+                                    placeholder="បញ្ចូលអាសយដ្ឋានអ៊ីមែលរបស់អ្នក" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">កម្រិតបទពិសោធន៍</label>
+                                <select id="experienceLevel" class="form-control-custom text-prime">
+                                    <option value="">ជ្រើសរើសកម្រិតរបស់អ្នក</option>
+                                    <option value="beginner">កម្រិតដំបូង</option>
+                                    <option value="intermediate">កម្រិតមធ្យម</option>
+                                    <option value="advanced">កម្រិតខ្ពស់</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">តម្រូវការពិសេស</label>
+                                <textarea id="specialRequirements" class="form-control-custom" rows="3"
+                                    placeholder="តម្រូវការ ឬគោលដៅពិសេសណាមួយសម្រាប់វគ្គនេះ?"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Booking Summary -->
+                        <div class="booking-summary" id="bookingSummary" style="display: none;">
+                            <h5><i class="bi bi-receipt"></i>សង្ខេបការកក់</h5>
+                            <div class="summary-item">
+                                <span>គ្រូបង្វឹក:</span>
+                                <span id="summaryCoach">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>កាលបរិច្ឆេទ:</span>
+                                <span id="summaryDate">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Time:</span>
+                                <span id="summaryTime">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>ពេលវេលា:</span>
+                                <span>1 ម៉ោង</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>តម្លៃសរុប:</span>
+                                <span id="summaryPrice">$0</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-secondary flex-fill" onclick="closeBookingModal()">
+                                <i class="bi bi-x-circle"></i> បោះបង់
+                            </button>
+                            <button class="btn btn-primary-custom flex-fill" onclick="confirmBooking()">
+                                <i class="bi bi-check-circle"></i> បញ្ជាក់ការកក់
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message">
+                        <div class="success-icon">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <h3>បញ្ជាក់ការកក់!</h3>
+                        <p>វគ្គបង្វឹករបស់អ្នកត្រូវបានកក់ទុកដោយជោគជ័យ។ អ្នកនឹងទទួលបានអ៊ីមែលបញ្ជាក់</p>
+                        <p class="ff"><strong>Booking Reference:</strong> <span id="bookingReference"></span></p>
+                        <button class="btn btn-primary-custom" onclick="closeBookingModal()">
+                            <i class="bi bi-house"></i> Bត្រឡប់ទៅវិញ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fq -->
+        <section class="pb-10">
+            <div class="container">
+                <h2 class=" text-main">
+                    សំណួរញឹកញាប់
+                </h2>
+                <div class="accordion mx-auto shadow-xs bg-prime mt-5" id="faqAccordion">
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fs-title" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                តើគ្រូបង្វឹកមានអ្វីខ្លះ?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title lead">
+                                យើងមានគ្រូបង្វឹកជំនាញក្នុងកីឡាជាច្រើន ដូចជា៖ វាយកូនបាល់ កាយសម្ព័ន្ធ វាយបាល់ទះ
+                                និងការហាត់ប្រាណទូទៅ។ គ្រូបង្វឹកនីមួយៗមានបទពិសោធន៍ និងអាចផ្តល់ការណែនាំផ្ទាល់ខ្លួនបាន។
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-5 fs-title" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq2">
+                                តើធ្វើដូចម្តេចដើម្បីកក់ជួបគ្រូបង្វឹក?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title lead">
+                                អ្នកអាចកក់តាមរយៈគេហទំព័រ ឬទាក់ទងផ្ទាល់តាមទូរស័ព្ទ និង Facebook page របស់យើង។
+                                សូមជ្រើសរើសកីឡា និងគ្រូបង្វឹកដែលអ្នកចង់
+                                ហើយក្រុមការងារយើងនឹងផ្តល់ពេលវេលាសមរម្យសម្រាប់អ្នក។
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-5 fs-title" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq3">
+                                តើការកក់គ្រូត្រូវបង់ប្រាក់មុនដែរទេ?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title lead">
+                                សម្រាប់វគ្គបណ្តុះបណ្តាលពិសេស និងការណែនាំផ្ទាល់ខ្លួន ត្រូវការទូទាត់ប្រាក់ជាមុន។
+                                ចំពោះសកម្មភាពទូទៅ អ្នកអាចចូលរួមដោយឥតបង់ប្រាក់។
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-5 fs-title" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq4">
+                                តើអាចផ្លាស់ប្តូរពេលវេលាកក់បានទេ?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title lead">
+                                បាទ/ចាស អ្នកអាចផ្លាស់ប្តូរពេលវេលាកក់បាន ប្រសិនបើជូនដំណឹងយ៉ាងហោចណាស់ 24 ម៉ោងមុនពេលវគ្គ។
+                                ការផ្លាស់ប្តូរនឹងអាស្រ័យលើការត្រៀមខ្លួនរបស់គ្រូ។
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-prime">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-5 fs-title" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq5">
+                                តើមានវគ្គបណ្តុះបណ្តាលផ្ទាល់ខ្លួនឬក្រុម?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse fs-5" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-prime fs-title lead">
+                                យើងផ្តល់ទាំងវគ្គបណ្តុះបណ្តាលផ្ទាល់ខ្លួន និងវគ្គក្រុម។
+                                វគ្គផ្ទាល់ខ្លួនផ្តោតលើគោលដៅអ្នកតែម្នាក់
+                                ខណៈពេលវគ្គក្រុមផ្តល់បរិយាកាសសហការនិងសប្បាយរីករាយ។
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+         <!-- Feedback -->
+        <section class="py-5 bg-third py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center mb-6 text-main">មតិអតិថិជន</h2>
+                        <div class="swiper mySlide pb-6" style="height: 280px;">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="../assets/img/sports/f-1.jpg" alt=""
+                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ម៉ៃខល ជូដាន់</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                វគ្គហាត់ប្រាណល្អណាស់! ជំនាញបាញ់បាល់
+                                                និងគ្រប់គ្រងបាល់របស់ខ្ញុំកាន់តែប្រសើរ។</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">១០ មីនា ២០២៥</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="../assets/img/sports/f-2.jpg" alt=""
+                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាប៊់រ៉េន ជេមស៍</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ខ្ញុំចូលចិត្តសហគមន៍នេះណាស់! កីឡាករអ្នកបង្វឹកមានជំនាញ និងបរិក្ខារល្អ។</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">១៥ មីនា ២០២៥</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="../assets/img/sports/f-2.jpg " alt=""
+                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ឡាប៊់រ៉េន ជេមស៍</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ខ្ញុំចូលចិត្តសហគមន៍នេះណាស់! កីឡាករអ្នកបង្វឹកមានជំនាញ និងបរិក្ខារល្អ។</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">១៥ មីនា ២០២៥</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="../assets/img/sports/f-2.jpg" alt=""
+                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ស្ទីហ្វិន គូរី</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ក្លឹបនេះមានបរិក្ខារល្អ និងការបង្វឹកដែលស្មោះត្រង់។ ខ្ញុំរំភើបណាស់។</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">២០ មីនា ២០២៥</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="../assets/img/sports/f-2.jpg" alt=""
+                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>ខ្រីស្ទៀន រ៉ូណាល់ដូ</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                ជំនាញរបស់គ្រូបង្វឹកកំពុងអភិវឌ្ឍខ្ញុំ។ ខ្ញុំសប្បាយចិត្តក្នុងការហាត់។</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">២៥ មីនា ២០២៥</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="../assets/img/sports/f-3.jpg" alt=""
+                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5>កាវី លេនណា</h5>
+                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
+                                                វគ្គហាត់នេះមានអត្ថប្រយោជន៍ខ្ពស់! ខ្ញុំរៀនច្រើនអំពីការកាត់បាល់
+                                                និងការពារបាល់។</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">៣០ មីនា ២០២៥</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- link bootstrap js -->
@@ -388,5 +1217,205 @@
     <script src="../assets/js/main.js"></script>
 
 </body>
+<script>
+    let selectedCoach = '';
+    let selectedPrice = '';
+    let selectedDate = '';
+    let selectedTime = '';
+
+    // Sample booked time slots (in a real app, this would come from a database)
+    const bookedSlots = {
+        '2024-09-20': ['10:00 AM', '2:00 PM'],
+        '2024-09-21': ['9:00 AM', '3:00 PM'],
+        '2024-09-22': ['11:00 AM']
+    };
+
+    function openBookingModal(coachName, price) {
+        selectedCoach = coachName;
+        selectedPrice = price;
+        document.getElementById('selectedCoachName').textContent = `with ${coachName}`;
+        document.getElementById('summaryCoach').textContent = coachName;
+        document.getElementById('summaryPrice').textContent = price;
+        document.getElementById('bookingModal').classList.add('show');
+        generateCalendar();
+        generateTimeSlots();
+        updateBookingSummary();
+    }
+
+    function closeBookingModal() {
+        document.getElementById('bookingModal').classList.remove('show');
+        // Reset form
+        document.getElementById('bookingForm').style.display = 'block';
+        document.getElementById('successMessage').style.display = 'none';
+        selectedDate = '';
+        selectedTime = '';
+        updateBookingSummary();
+    }
+
+    function generateCalendar() {
+        const container = document.getElementById('calendarContainer');
+        container.innerHTML = '';
+
+        // Add day headers
+        const days = ['ច័ន្ទ', 'អង្គារ', 'ពុធ', 'ព្រហស្បតិ៍', 'សុក្រ', 'សៅរ៍', 'អាទិត្យ'];
+        days.forEach(day => {
+            const dayHeader = document.createElement('div');
+            dayHeader.textContent = day;
+            dayHeader.style.fontWeight = '700';
+            dayHeader.style.textAlign = 'center';
+            dayHeader.style.padding = '10px';
+            dayHeader.style.color = '#6c757d';
+            container.appendChild(dayHeader);
+        });
+
+        // Generate next 30 days
+        const today = new Date();
+        for (let i = 0; i < 30; i++) {
+            const date = new Date(today);
+            date.setDate(today.getDate() + i);
+
+            const dayElement = document.createElement('div');
+            dayElement.className = 'calendar-day';
+            dayElement.textContent = date.getDate();
+
+            // Disable past dates
+            if (i === 0) {
+                dayElement.classList.add('disabled');
+            } else {
+                dayElement.onclick = () => selectDate(date, dayElement);
+            }
+
+            container.appendChild(dayElement);
+        }
+    }
+
+    function selectDate(date, element) {
+        // Remove previous selection
+        document.querySelectorAll('.calendar-day.selected').forEach(el => {
+            el.classList.remove('selected');
+        });
+
+        // Add selection to clicked element
+        element.classList.add('selected');
+
+        selectedDate = date.toISOString().split('T')[0];
+        document.getElementById('summaryDate').textContent = date.toLocaleDateString();
+
+        generateTimeSlots();
+        updateBookingSummary();
+    }
+
+    function generateTimeSlots() {
+        const container = document.getElementById('timeSlots');
+        container.innerHTML = '';
+
+        const timeSlots = [
+            '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM',
+            '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'
+        ];
+
+        timeSlots.forEach(time => {
+            const timeElement = document.createElement('div');
+            timeElement.className = 'time-slot';
+            timeElement.textContent = time;
+
+            // Check if this slot is already booked
+            const bookedForDate = bookedSlots[selectedDate] || [];
+            if (bookedForDate.includes(time)) {
+                timeElement.classList.add('booked');
+                timeElement.innerHTML = `${time} <br><small>Booked</small>`;
+            } else {
+                timeElement.onclick = () => selectTime(time, timeElement);
+            }
+
+            container.appendChild(timeElement);
+        });
+    }
+
+    function selectTime(time, element) {
+        // Remove previous selection
+        document.querySelectorAll('.time-slot.selected').forEach(el => {
+            el.classList.remove('selected');
+        });
+
+        // Add selection to clicked element
+        element.classList.add('selected');
+
+        selectedTime = time;
+        document.getElementById('summaryTime').textContent = time;
+        updateBookingSummary();
+    }
+
+    function updateBookingSummary() {
+        const summary = document.getElementById('bookingSummary');
+        if (selectedDate && selectedTime) {
+            summary.style.display = 'block';
+        } else {
+            summary.style.display = 'none';
+        }
+    }
+
+    function confirmBooking() {
+        // Validate form
+        const fullName = document.getElementById('fullName').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const emailAddress = document.getElementById('emailAddress').value;
+
+        if (!fullName || !phoneNumber || !emailAddress || !selectedDate || !selectedTime) {
+            alert('Please fill in all required fields and select date/time.');
+            return;
+        }
+
+        // Generate booking reference
+        const bookingRef = 'BDM' + Date.now().toString().slice(-8);
+        document.getElementById('bookingReference').textContent = bookingRef;
+
+        // Add the booking to booked slots (simulate booking)
+        if (!bookedSlots[selectedDate]) {
+            bookedSlots[selectedDate] = [];
+        }
+        bookedSlots[selectedDate].push(selectedTime);
+
+        // Show success message
+        document.getElementById('bookingForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+
+        // In a real application, you would send this data to your backend
+        console.log('Booking confirmed:', {
+            coach: selectedCoach,
+            date: selectedDate,
+            time: selectedTime,
+            customer: {
+                name: fullName,
+                phone: phoneNumber,
+                email: emailAddress,
+                experience: document.getElementById('experienceLevel').value,
+                requirements: document.getElementById('specialRequirements').value
+            },
+            reference: bookingRef
+        });
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('bookingModal').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeBookingModal();
+        }
+    });
+
+    // Form validation
+    document.addEventListener('DOMContentLoaded', function () {
+        const inputs = document.querySelectorAll('.form-control-custom[required]');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function () {
+                if (!this.value.trim()) {
+                    this.style.borderColor = '#dc3545';
+                } else {
+                    this.style.borderColor = '#28a745';
+                }
+            });
+        });
+    });
+</script>
 
 </html>

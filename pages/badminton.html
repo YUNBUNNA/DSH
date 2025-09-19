@@ -187,19 +187,39 @@
         transform: scale(1.1);
     }
 
-    .modal {
 
-        z-index: 1055 !important;
+
+    /* Override modal dialog to appear on right-bottom */
+    .modal-dialog-right {
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        margin: 0;
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-out;
     }
 
-    .modal-backdrop {
-        z-index: 1050 !important;
+    /* Slide in from right */
+    .modal.fade .modal-dialog-right {
+        transform: translateX(100%);
     }
 
-    /* .messenger:focus {
-        box-shadow: none !important;
-        outline: none !important;
-    } */
+    .modal.fade.show .modal-dialog-right {
+        transform: translateX(0);
+    }
+
+    /* Optional rounded content */
+    .modal-content {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    /* Optional chat body scroll */
+    .modal-body {
+        padding: 0.75rem;
+    }
 </style>
 
 <body class="bg-prime">
@@ -873,201 +893,139 @@
                     <h2 class=" fw-bold text-main text-center">គ្រូបង្វឹក</h2>
                     <p class="my-4 text-center text-prime lead ">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</p>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-sm-6 col-lg-4">
-                        <div
-                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
-                            <div class="position-relative overflow-hidden rounded-2 img-hover">
-                                <img src="../assets/img/sports/badminton-coach-1.jpg" alt=""
-                                    class="img-fluid w-100 h-100 rounded-2">
-                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
-                                    style="height: 120%;"></div>
-                                <!-- Social Icons -->
-                                <div class="card-icon position-absolute end-0 top-0">
-                                    <div class="card-body d-flex flex-column pt-2">
-                                        <a href="https://www.instagram.com/" target="_blank"><i
-                                                class="text-gold bi bi-instagram fs-4"></i></a>
-                                        <a href="https://www.facebook.com/" target="_blank"><i
-                                                class="text-gold bi bi-facebook fs-4"></i></a>
-                                        <a href="https://www.linkedin.com/" target="_blank"><i
-                                                class="text-gold bi bi-linkedin fs-4"></i></a>
-                                        <a href="https://twitter.com/" target="_blank"><i
-                                                class="text-gold bi bi-twitter-x fs-4"></i></a>
-                                    </div>
+                <div class="row  g-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="../assets/img/sports/badminton-coach-1.jpg"
+                                alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center px-4">
+                                <h4 class="card-title text-center fw-bold mb-4">ណារិទ្ធ ចំរើន</h4>
+                                <div class="px-2 mb-2">
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        ទីតាំង: ភ្នំពេញ</p>
                                 </div>
-                                <!-- Details -->
-                                <div class="detail position-absolute start-0 top-0">
-                                    <div class="card-body pt-8">
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-person"></i> គ្រូបង្វឹក:</strong>
-                                            កីឡាវាយសី</h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-clock"></i> បទពិសោធន៍:</strong> 7
-                                            ឆ្នាំក្នុងបង្វឹកក្លឹបជាតិ</h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-file-earmark"></i>
-                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">BWF Level 1 & 2</span></h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-geo-alt"></i> ទីតាំង:</strong>
-                                            កំពង់ឆ្នាំង</h6>
-                                    </div>
-                                </div>
-                                <!-- Buttons -->
-                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
-                                    <div class="card-body d-flex gap-2">
-                                        <button type="button" class="btn btn-gold d-block w-fit" data-bs-toggle="modal"
-                                            data-bs-target="#coachModal-1">
-                                            <i class="bi bi-chat"></i> ផ្ញើសារ
-                                        </button>
-                                        <a href="../pages/sports-coach-detail/badminton/badminton-coach-detail.html"
-                                            class="btn btn-gold d-block w-fit">
-                                            ព័ត៌មានបន្ថែម <i class="bi bi-arrow-right"></i>
-                                        </a>
-                                    </div>
+                                <div class="card-body d-flex  ">
+                                    <a href="../pages/sports-coach-detail/badminton/badminton-coach-detail.html" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                            class="bi bi-arrow-right"></i></a>
+                                    <button type="button" class="btn btn-outline-primary d-block w-fit ms-auto" data-bs-toggle="modal"
+                                        data-bs-target="#coachModal-1">
+                                        <i class="bi bi-chat"></i> ផ្ញើសារ
+                                    </button>
+                                    
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <h4 class="text-center card-title">ណារិទ្ធ ចំរើន</h4>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div
-                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
-                            <div class="position-relative overflow-hidden rounded-2 img-hover">
-                                <img src="../assets/img/sports/badminton-coach-2.jpg" alt=""
-                                    class="img-fluid w-100 h-100 rounded-2">
-                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
-                                    style="height: 120%;"></div>
-                                <div class="card-icon position-absolute end-0 top-0">
-                                    <div class="card-body d-flex flex-column pt-2">
-                                        <a href="https://www.instagram.com/" target="_blank"><i
-                                                class="text-gold bi bi-instagram fs-4"></i></a>
-                                        <a href="https://www.facebook.com/" target="_blank"><i
-                                                class="text-gold bi bi-facebook fs-4"></i></a>
-                                        <a href="https://www.linkedin.com/" target="_blank"><i
-                                                class="text-gold bi bi-linkedin fs-4"></i></a>
-                                        <a href="https://twitter.com/" target="_blank"><i
-                                                class="text-gold bi bi-twitter-x fs-4"></i></a>
-                                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="../assets/img/sports/badminton-coach-2.jpg"
+                                alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center px-4">
+                                <h4 class="card-title text-center fw-bold mb-4">សុវណ្ណ សោភ័ណ្ឌ</h4>
+                                <div class="px-2 mb-2">
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        ទីតាំង: ភ្នំពេញ</p>
                                 </div>
-                                <div class="detail position-absolute start-0 top-0">
-                                    <div class="card-body pt-8">
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-person"></i> គ្រូបង្វឹក:</strong>
-                                            កីឡាវាយសី</h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-clock"></i> បទពិសោធន៍:</strong> 5
-                                            ឆ្នាំក្នុងបង្វឹកសាលារៀន</h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-file-earmark"></i>
-                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">BWF Level 1</span></h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-geo-alt"></i> ទីតាំង:</strong>
-                                            ភ្នំពេញ</h6>
-                                    </div>
-                                </div>
-                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
-                                    <div class="card-body d-flex gap-2">
-                                        <button type="button" class="btn btn-gold d-block w-fit" data-bs-toggle="modal"
-                                            data-bs-target="#coachModal-1">
-                                            <i class="bi bi-chat"></i> ផ្ញើសារ
-                                        </button>
-                                        <a href="../pages/sports-coach-detail/badminton/badminton-coach-detail.html"
-                                            class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
-                                                class="bi bi-arrow-right"></i></a>
-                                    </div>
+                                <div class="card-body d-flex  ">
+                                    <a href="../pages/sports-coach-detail/badminton/badminton-coach-detail.html" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                            class="bi bi-arrow-right"></i></a>
+                                    <button type="button" class="btn btn-outline-primary d-block w-fit ms-auto" data-bs-toggle="modal"
+                                        data-bs-target="#coachModal-1">
+                                        <i class="bi bi-chat"></i> ផ្ញើសារ
+                                    </button>
+                                    
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <h4 class="text-center card-title">សុវណ្ណ សោភ័ណ្ឌ</h4>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div
-                            class="card border-0 bg-transparent rounded-2 article-hover text-decoration-none text-prime">
-                            <div class="position-relative overflow-hidden rounded-2 img-hover">
-                                <img src="../assets/img/sports/badminton-coach-3.jpg" alt=""
-                                    class="img-fluid w-100 h-100 rounded-2">
-                                <div class="overlay position-absolute bg-dark opacity-75 w-100 top-0 rounded-2"
-                                    style="height: 120%;"></div>
-                                <div class="card-icon position-absolute end-0 top-0">
-                                    <div class="card-body d-flex flex-column pt-2">
-                                        <a href="https://www.instagram.com/" target="_blank"><i
-                                                class="text-gold bi bi-instagram fs-4"></i></a>
-                                        <a href="https://www.facebook.com/" target="_blank"><i
-                                                class="text-gold bi bi-facebook fs-4"></i></a>
-                                        <a href="https://www.linkedin.com/" target="_blank"><i
-                                                class="text-gold bi bi-linkedin fs-4"></i></a>
-                                        <a href="https://twitter.com/" target="_blank"><i
-                                                class="text-gold bi bi-twitter-x fs-4"></i></a>
-                                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="card border-0 hover-lift shadow-xs bg-prime">
+                            <img src="../assets/img/sports/badminton-coach-3.jpg"
+                                alt="" class="card-img-top" style="height: 250px; object-fit: cover;">
+                            <div class="card-body  text-prime  align-content-center px-4">
+                                <h4 class="card-title text-center fw-bold mb-4">សុភាព ចាន់</h4>
+                                <div class="px-2 mb-2">
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-person-fill fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        គ្រូបង្វឹក: កីឡាវាយសី</p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-calendar-check fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        បទពិសោធន៍: ឆ្នាំក្នុងបង្វឹកក្លឹប </p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-award fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        វិញ្ញាបនប័ត្រ: <span class="ff fs-nav">BWF Level 1</span></p>
+                                    <p class="card-text fs-nav"><i
+                                            class="bi bi-geo-alt fs-5 me-3 text-bg-success px-2 py-1 rounded-circle"></i>
+                                        ទីតាំង: ភ្នំពេញ</p>
                                 </div>
-                                <div class="detail position-absolute start-0 top-0">
-                                    <div class="card-body pt-8">
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-person"></i> គ្រូបង្វឹក:</strong>
-                                            កីឡាវាយសី</h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-clock"></i> បទពិសោធន៍:</strong> 9
-                                            ឆ្នាំក្នុងបណ្តុះកីឡាករអាយុក្មេង</h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-file-earmark"></i>
-                                                វិញ្ញាបនប័ត្រ:</strong> <span class="ff">BWF Level 2</span></h6>
-                                        <h6 class="fw-normal fs-5 text-light"><strong><i
-                                                    class="me-2 text-primary bi bi-geo-alt"></i> ទីតាំង:</strong>
-                                            បាត់ដំបង</h6>
-                                    </div>
+                                <div class="card-body d-flex  ">
+                                    <a href="../pages/sports-coach-detail/badminton/badminton-coach-detail.html" class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
+                                            class="bi bi-arrow-right"></i></a>
+                                    <button type="button" class="btn btn-outline-primary d-block w-fit ms-auto" data-bs-toggle="modal"
+                                        data-bs-target="#coachModal-1">
+                                        <i class="bi bi-chat"></i> ផ្ញើសារ
+                                    </button>
                                 </div>
-                                <div class="card-btn position-absolute bottom-0" style="left: 20%;">
-                                    <div class="card-body d-flex gap-2">
-                                        <button class="btn btn-gold d-block w-fit"><i class="bi bi-chat"></i>
-                                            ផ្ញើសារ</button>
-                                        <a href="../pages/sports-coach-detail/badminton/badminton-coach-detail.html"
-                                            class="btn btn-gold d-block w-fit">ព័ត៌មានបន្ថែម <i
-                                                class="bi bi-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="text-center card-title">សុភាព ចាន់</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-        <!-- Modal -->
+        <!-- Right-side Chat Modal -->
         <div class="modal fade" id="coachModal-1" tabindex="-1" aria-labelledby="coachModalLabel-1" aria-hidden="true"
-            data-bs-backdrop="static" data-bs-keyboard="false">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            data-bs-backdrop="false">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-right">
                 <div class="modal-content">
                     <!-- Modal Header -->
-                    <div class="modal-header shadow-sm">
-                        <div class="d-flex align-items-center">
+                    <div class="modal-header d-flex flex-column align-items-start">
+                        <div class="d-flex align-items-center w-100">
                             <img src="../assets/img/sports/f-3.jpg" alt="" class="rounded-circle"
-                                style="width: 40px; height: 40px; object-fit: cover;">
-                            <p class="ms-2 mb-0 fw-semibold">សុភាព ចាន់</p>
+                                style="width:40px;height:40px;object-fit:cover;">
+                            <div class="ms-2">
+                                <p class="mb-0 fw-semibold">សុភាព ចាន់</p>
+                                <small class="text-muted">Phnom Penh, Cambodia</small>
+                            </div>
+                            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
                         </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <!-- Modal Body (Chat Area) -->
-                    <div class="modal-body" style="max-height: 400px; overflow-y: auto; background: #f8f9fa;">
+                    <div class="modal-body" style="max-height: 400px; overflow-y: auto; background: #f0f2f5;">
                         <!-- Coach message -->
                         <div class="d-flex align-items-start mb-3">
                             <img src="../assets/img/sports/f-3.jpg" alt="" class="rounded-circle"
                                 style="width: 35px; height: 35px; object-fit: cover;">
-                            <div class="ms-2 bg-light border rounded-3 p-2 text-dark">
+                            <div class="ms-2 bg-white border rounded-3 p-2 text-dark shadow-sm">
                                 សួស្តី! តើអ្នកចង់ចាប់ផ្តើមហាត់កីឡាវាយសីពេលណា?
                             </div>
                         </div>
 
                         <!-- User message -->
                         <div class="d-flex justify-content-end mb-3">
-                            <div class="bg-primary text-white rounded-3 p-2" style="max-width: 70%;">
+                            <div class="bg-primary text-white rounded-3 p-2 shadow-sm" style="max-width: 70%;">
                                 សួស្តីគ្រូ! ខ្ញុំចង់ចាប់ផ្តើមសប្តាហ៍ក្រោយ។
                             </div>
                         </div>
@@ -1076,51 +1034,41 @@
                         <div class="d-flex align-items-start mb-3">
                             <img src="../assets/img/sports/f-3.jpg" alt="" class="rounded-circle"
                                 style="width: 35px; height: 35px; object-fit: cover;">
-                            <div class="ms-2 bg-light border rounded-3 p-2 text-dark">
+                            <div class="ms-2 bg-white border rounded-3 p-2 text-dark shadow-sm">
                                 ល្អណាស់ 👍 ខ្ញុំនឹងរៀបចំកាលវិភាគសម្រាប់អ្នក។
                             </div>
                         </div>
 
                         <!-- User message -->
                         <div class="d-flex justify-content-end mb-3">
-                            <div class="bg-primary text-white rounded-3 p-2" style="max-width: 70%;">
+                            <div class="bg-primary text-white rounded-3 p-2 shadow-sm" style="max-width: 70%;">
                                 អរគុណគ្រូ!
                             </div>
                         </div>
                     </div>
 
-                    <!-- Modal Footer (Message input) -->
-                    <div class="modal-footer border-0" style="background: #f8f9fa;">
-                        <div class="input-group align-items-center w-100 bg-secondary rounded-pill px-2 py-1">
+                    <!-- Modal Footer -->
+                    <div class="modal-footer border-0" style="background: #f0f2f5;">
+                        <div class="input-group rounded-pill p-1 border bg-white">
 
-                            <!-- Emoji Icon -->
-                            <button class="btn btn-sm text-light border-0 bg-transparent">
-                                <i class="bi bi-emoji-smile fs-5"></i>
-                            </button>
+                            <button class="btn btn-sm text-secondary border-0 bg-transparent"><i
+                                    class="bi bi-emoji-smile fs-5"></i></button>
 
-                            <!-- Message Input -->
-                            <input type="text" class="form-control border-0 bg-transparent messenger "
-                                placeholder="Message..." aria-label="Message">
+                            <input type="text" class="form-control border-0 bg-white messenger" placeholder="Message..."
+                                aria-label="Message">
 
-                            <!-- Mic Icon -->
-                            <button class="btn btn-sm text-light border-0 bg-transparent">
-                                <i class="bi bi-mic fs-5"></i>
-                            </button>
+                            <button class="btn btn-sm text-secondary border-0 bg-transparent"><i
+                                    class="bi bi-mic fs-5"></i></button>
 
-                            <!-- Image Icon -->
-                            <button class="btn btn-sm text-light border-0 bg-transparent">
-                                <i class="bi bi-image fs-5"></i>
-                            </button>
+                            <button class="btn btn-sm text-secondary border-0 bg-transparent"><i
+                                    class="bi bi-image fs-5"></i></button>
 
-                            <!-- Sticker/GIF Icon -->
-                            <button class="btn btn-sm text-light border-0 bg-transparent">
-                                <i class="bi bi-emoji-laughing fs-5"></i>
-                            </button>
+                            <button class="btn btn-sm text-secondary border-0 bg-transparent"><i
+                                    class="bi bi-emoji-laughing fs-5"></i></button>
                         </div>
                     </div>
 
                 </div>
-
             </div>
         </div>
         <!-- Feedback -->
@@ -1271,6 +1219,7 @@
 
 </body>
 <script>
+
     function animateHoop(hoop) {
         hoop.style.animation = 'none';
         hoop.style.background = '#ffcc02';
