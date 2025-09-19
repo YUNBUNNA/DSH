@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ផ្ទាំងគ្រប់គ្រងគ្រូ</title>
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css" />
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
+  <style>
+    /* Sidebar & main content styles (same as your previous) */
+    .wrapper {
+      display: flex;
+      height: 100vh;
+    }
+
+    #sidebar {
+      width: 250px;
+      overflow: hidden;
+      transition: width 0.4s ease;
+    }
+
+    #sidebar.collapsed {
+      width: 0;
+    }
+
+    #sidebar .nav-link {
+      white-space: nowrap;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      opacity: 1;
+    }
+
+    #sidebar.collapsed .nav-link {
+      opacity: 0;
+      transform: translateX(-20px);
+      pointer-events: none;
+      padding-left: 2rem;
+    }
+
+    #sidebar .nav-link i {
+      min-width: 24px;
+      text-align: center;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+
+    .main-content .navbar {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s ease;
+      margin-left: 1rem;
+    }
+
+    #sidebar.collapsed~.main-content .navbar {
+      margin-left: 0;
+    }
+
+    .main-content main {
+      flex-grow: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 1rem;
+      padding-right: .8rem;
+      transition: all 0.4s ease;
+    }
+
+    .card {
+      transition: all 0.4s ease;
+    }
+
+    .tran-y {
+      transform: translateY(-50%);
+    }
+
+    .trans-y {
+      transform: translateY(-130%);
+      padding-left: 1rem;
+    }
+
+    th {
+      background-color: var(--bg-third) !important;
+      color: var(--text-prime) !important;
+    }
+
+    td {
+      background-color: var(--bg-prime) !important;
+      color: var(--text-prime) !important;
+    }
+
+    tr:hover td {
+      background-color: var(--bg-third) !important;
+    }
+
+    .text-green {
+      color: #2ecc71 !important;
+    }
+
+    .b-all {
+      border: 4px solid var(--text-main);
+    }
+
+    .list-with-disc li::marker {
+      color: var(--text-main);
+    }
+
+    @media screen and (max-width: 991.98px) {
+      #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1050;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+      }
+    }
+
+
+    .form-switch .form-check-input:focus {
+      --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy00IC00IDggOCc+PGNpcmNsZSByPSczJyBmaWxsPScjZmZmJy8+PC9zdmc+);
+    }
+
+    .form-switch .form-check-input {
+      --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy00IC00IDggOCc+PGNpcmNsZSByPSczJyBmaWxsPScjZmZmJy8+PC9zdmc+);
+      width: 3em;
+      height: 1.5rem;
+      background-image: var(--bs-form-switch-bg);
+      background-position: left center;
+      background-color: var(--text-second);
+      border: none;
+    }
+
+    /* When checked */
+    .form-check-input:checked {
+      background-color: #2ecc71;
+    }
+
+    .form-check-input:checked,
+    .form-check-input:focus,
+    .form-check-input:active {
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body class="bg-third">
+  <div class="wrapper d-flex">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="bg-prime text-white shadow-xs rounded-end-1">
+      <div class="d-flex align-items-center justify-content-between bg-nav py-2">
+        <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover ms-1"
+          style="width: 90px; height: 49px;">
+        <button type="button" id="toggle-close" class="btn text-white fs-4 d-block d-lg-none">
+          <i class="bi bi-x-lg"></i> 
+        </button>
+      </div>
+      <ul id="sidebar-nav" class="nav flex-column nav-pills bg-prime py-2">
+        <!-- Profile Overview -->
+        <li class="nav-item mb-2">
+          <a href="#tab-profile" class="nav-link text-white d-flex align-items-center active" data-bs-toggle="tab">
+            <i class="bi bi-person-circle me-2"></i><span>ព័ត៌មានផ្ទាល់ខ្លួន</span>
+          </a>
+        </li>
+
+        <!-- Schedule -->
+        <li class="nav-item mb-2">
+          <a href="#tab-schedule" class="nav-link text-white d-flex align-items-center" data-bs-toggle="tab">
+            <i class="bi bi-calendar-event me-2"></i><span>កាលវិភាគ</span>
+          </a>
+        </li>
+
+
+        <!-- Favorite Places -->
+        <li class="nav-item mb-2">
+          <a href="#tab-places" class="nav-link text-white d-flex align-items-center" data-bs-toggle="tab">
+            <i class="bi bi-suit-heart me-2"></i><span>កន្លែងពេញចិត្ត</span>
+          </a>
+        </li>
+
+        <!-- Saved Items -->
+        <li class="nav-item mb-2">
+          <a href="#tab-saved" class="nav-link text-white d-flex align-items-center" data-bs-toggle="tab">
+            <i class="bi bi-bookmark me-2"></i><span>ការរក្សាទុក</span>
+          </a>
+        </li>
+
+        <!-- Settings with Dropdown -->
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#settings-dropdown"
+            role="button" aria-expanded="false">
+            <i class="bi bi-gear me-2"></i><span>ការកំណត់</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="settings-dropdown" class="collapse list-unstyled ps-4 mt-2" data-bs-parent="#sidebar-nav">
+            <!-- Change Password -->
+            <li class="nav-item mb-2">
+              <a href="#tab-change-password" class="nav-link text-white" data-bs-toggle="tab">
+                ផ្លាស់ប្តូរពាក្យសម្ងាត់
+              </a>
+            </li>
+
+            <!-- Notification -->
+            <li class="nav-item mb-2">
+              <a href="#tab-notification" class="nav-link text-white" data-bs-toggle="tab">
+                ការបិទ <span class="ff mx-1">&</span> បើកមុខងារ
+              </a>
+            </li>
+
+            <!-- Security & Permission (Nested Dropdown) -->
+            <li class="nav-item mb-2">
+              <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
+                href="#security-dropdown" role="button" aria-expanded="false">
+                សុវត្ថិភាព និង ការអនុញ្ញាត
+                <i class="bi bi-chevron-down ms-auto"></i>
+              </a>
+              <ul id="security-dropdown" class="collapse list-unstyled ps-4 mt-2">
+                <li class="nav-item mb-2">
+                  <a href="#tab-security-alerts" class="nav-link text-white" data-bs-toggle="tab">
+                    ការជូនដំណឹងផ្នែកសុវត្ថិភាព
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#tab-security-checkup" class="nav-link text-white" data-bs-toggle="tab">
+                    ការពិនិត្យសុវត្ថិភាព
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1 main-content">
+      <!-- Navbar -->
+      <nav class="navbar bg-prime rounded-2">
+        <div class="container-fluid d-flex align-items-center">
+          <button type="button" id="toggle-btn" class="btn text-prime fs-4">
+            <i class="bi bi-list"></i>
+          </button>
+          <button class="btn text-prime position-absolute" style="right: 5%;" id="theme-toggle">
+            <i class="theme-icon start-50 bi bi-sun fs-4"></i>
+            <i class="theme-icon start-50 bi bi-moon fs-4"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Tab Content -->
+      <main class="py-3">
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Profile -->
+          <div class="tab-pane fade show active" id="tab-profile">
+            <!-- Profile Settings -->
+            <div class="card shadow-xs border-0 bg-prime mb-3">
+              <div class="card-header bg-prime py-3 border-bottom text-main mb-3">
+                <h4 class="mb-0">ព័ត៌មានផ្ទាល់ខ្លួន</h4>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <!-- Profile Picture -->
+                  <div class="col-lg-4">
+                    <div class="card border-0 bg-second text-center">
+                      <div class="d-flex justify-content-center pt-7">
+                        <div class="position-relative" style="width: 150px; height: 150px;">
+                          <img
+                            src="https://static.vecteezy.com/system/resources/thumbnails/011/675/374/small_2x/man-avatar-image-for-profile-png.png"
+                            alt="Profile Picture" class="img-fluid rounded-circle b-all p-2 w-100 h-100">
+                          <ul class="navbar-nav">
+                            <li class="nav-item blog px-3 py-1 position-relative">
+                              <a type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                class="position-absolute d-flex justify-content-center align-items-center btn-prime rounded-circle"
+                                style="width: 30px; height: 30px; bottom: 60px; right: -10px;">
+                                <i class="bi bi-pencil text-white fs-6"></i>
+                              </a>
+                              <div class="dropdown position-absolute shadow-xs" style="left: 65px; top:-51px;">
+                                <ul class="dropdown-menu bg-prime border-0 rounded-3 p-0 m-0 fs-text">
+                                  <li>
+                                    <button type="button" class="dropdown-item py-2 d-block bg-prime"
+                                      data-bs-toggle="modal" data-bs-target="#viewPicture">
+                                      <i class="bi bi-person-circle me-1"></i> មើលរូបភាព
+                                    </button>
+                                  </li>
+
+                                  <li>
+                                    <input type="file" id="uploadImage" accept="image/*" style="display: none;">
+                                    <!-- Styled button/label -->
+                                    <label for="uploadImage" class="d-block btn w-100 dropdown-item py-2">
+                                      <i class="bi bi-camera-fill me-2"></i> ផ្លាស់ប្តូររូបភាព
+                                    </label>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <!-- Modal -->
+                          <div class="modal fade rounded-0" id="viewPicture" tabindex="-1"
+                            aria-labelledby="viewPictureLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                              <div class="modal-content bg-prime">
+                                <div class="modal-header border-bottom">
+                                  <h4 class="modal-title text-main" id="viewPictureLabel">រូបភាពពេញ</h4>
+                                  <button type="button" class="btn ms-auto" data-bs-dismiss="modal"
+                                    aria-label="Close"><i class="bi bi-x-lg text-prime fs-5"></i></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                  <img
+                                    src="https://static.vecteezy.com/system/resources/thumbnails/011/675/374/small_2x/man-avatar-image-for-profile-png.png"
+                                    class="img-fluid rounded object-fit-contain" alt="Profile Picture">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body text-prime">
+                        <h5 class="fw-bold mb-3">ឡាយ ចេមមី</h5>
+                        <div class="d-flex ff text-second justify-content-center gap-3 mb-2">
+                          <h6>+855 12 345 678</h6>
+                          <h6>|</h6>
+                          <h6>@Lay Jammy</h6>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3 pb-1">
+                          <a href="" class="btn btn-gold px-4 text-nowrap h-fit w-fit"><i
+                              class="bi bi-arrow-return-left"></i> ចាកចេញ</a>
+                          <button type="button" class="btn btn-gold px-4 text-nowrap h-fit w-fit" data-bs-toggle="modal"
+                            data-bs-target="#editProfile">
+                            <i class="bi bi-pencil"></i> កែប្រែព័ត៌មាន
+                          </button>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="editProfile" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div
+                              class="modal-dialog modal-dialog-centered modal-lg modal-dialog modal-dialog-centered modal-lg-centered modal-fullscreen">
+                              <div class="modal-content bg-prime">
+                                <div class="modal-header px-10 border-bottom">
+                                  <h3 class="modal-title text-main mx-auto" id="staticBackdropLabel"><i
+                                      class="bi bi-pencil"></i> កែប្រែព័ត៌មាន</h3>
+                                  <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i
+                                      class="bi bi-x-lg text-prime fs-5"></i></button>
+                                </div>
+                                <div class="modal-body text-start px-10">
+                                  <h5 class="text-second text-center my-4">
+                                    សូមកែប្រែព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក ខាងក្រោម។
+                                    បន្ទាប់មកចុច "រក្សាទុកការផ្លាស់ប្តូរ" ដើម្បីរក្សាទុក។
+                                  </h5>
+
+                                  <div class="row mb-3">
+                                    <div class="col-md-6">
+                                      <label class="form-label">នាមត្រកូល</label>
+                                      <div class="position-relative">
+                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                          placeholder="ឡាយ">
+                                        <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label class="form-label">នាមខ្លួន</label>
+                                      <div class="position-relative">
+                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                          placeholder="ចេមមី">
+                                        <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-6">
+                                      <label class="form-label">ថ្ងៃខែឆ្នាំកំណើត</label>
+                                      <div class="position-relative">
+                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 ff f-c"
+                                          placeholder="16/05/2005">
+                                        <i class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label class="form-label">ភេទ</label>
+                                      <div class="position-relative">
+                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                          placeholder="ប្រុស">
+                                        <i
+                                          class="bi bi-gender-ambiguous position-absolute text-gold icon-input tran-y"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-6">
+                                      <label class="form-label">អាស័យដ្ឋាន</label>
+                                      <div class="position-relative">
+                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                                          placeholder="ភ្នំពេញ">
+                                        <i class="bi bi-geo-alt position-absolute text-gold icon-input tran-y"></i>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label class="form-label ff">Username</label>
+                                      <div class="position-relative">
+                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 ff f-c"
+                                          placeholder="@LayJammy">
+                                        <i class="bi bi-card-text position-absolute text-gold icon-input tran-y"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mb-3">
+                                    <div class="col-md-6">
+                                      <label class="form-label">អ៊ីមែល</label>
+                                      <div class="position-relative">
+                                        <input type="email"
+                                          class="form-control bg-prime fs-text text-second ps-7 ff f-c"
+                                          placeholder="LayJammy@gmail.com">
+                                        <i class="bi bi-envelope position-absolute text-gold icon-input tran-y"></i>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label class="form-label">លេខទូរស័ព្ទ</label>
+                                      <div class="position-relative">
+                                        <input type="number"
+                                          class="form-control bg-prime fs-text text-second ps-7 ff f-c pe-2"
+                                          placeholder="+855 12345678">
+                                        <i class="bi bi-telephone position-absolute text-gold icon-input tran-y"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Save Button -->
+                                  <div class="d-flex justify-content-end mt-4">
+                                    <button class="btn btn-gold px-5"
+                                      data-bs-dismiss="modal">រក្សាទុកការផ្លាស់ប្តូរ</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Profile Info -->
+                  <div class="col-lg-8">
+                    <div class="row g-4 mb-3">
+                      <div class="col-md-6">
+                        <label class="form-label">នាមត្រកូល</label>
+                        <div class="position-relative">
+                          <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                            placeholder="ឡាយ" disabled>
+                          <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label">នាមខ្លួន</label>
+                        <div class="position-relative">
+                          <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                            placeholder="ចេមមី" disabled>
+                          <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-4 mb-3">
+                      <div class="col-md-6">
+                        <label class="form-label">ថ្ងៃខែឆ្នាំកំណើត</label>
+                        <div class="position-relative">
+                          <input type="text" class="form-control bg-prime fs-text text-second ps-7 ff f-c"
+                            placeholder="16/05/2005" disabled>
+                          <i class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label">ភេទ</label>
+                        <div class="position-relative">
+                          <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                            placeholder="ប្រុស" disabled>
+                          <i class="bi bi-gender-ambiguous position-absolute text-gold icon-input tran-y"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-4 mb-3">
+                      <div class="col-md-6">
+                        <label class="form-label">អាស័យដ្ឋាន</label>
+                        <div class="position-relative">
+                          <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                            placeholder="ភ្នំពេញ" disabled>
+                          <i class="bi bi-geo-alt position-absolute text-gold icon-input tran-y"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label ff">Username</label>
+                        <div class="position-relative">
+                          <input type="text" class="form-control bg-prime fs-text text-second ps-7 ff f-c"
+                            placeholder="@LayJammy" disabled>
+                          <i class="bi bi-card-text position-absolute text-gold icon-input tran-y"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-4 mb-3">
+                      <div class="col-md-6">
+                        <label class="form-label">អ៊ីមែល</label>
+                        <div class="position-relative">
+                          <input type="email" class="form-control bg-prime fs-text text-second ps-7 ff f-c"
+                            placeholder="LayJammy@gmail.com" disabled>
+                          <i class="bi bi-envelope position-absolute text-gold icon-input tran-y"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label">លេខទូរស័ព្ទ</label>
+                        <div class="position-relative">
+                          <input type="number" class="form-control bg-prime fs-text text-second ps-7 ff f-c"
+                            placeholder="+855 12345678" disabled>
+                          <i class="bi bi-telephone position-absolute text-gold icon-input tran-y"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <!-- Membership Card -->
+              <div class="col-sm-4">
+                <div class="card shadow-xs border-0 text-center p-1 bg-prime">
+                  <div class="card-body text-prime">
+                    <img src="https://img.icons8.com/?size=100&id=84301&format=png&color=000000" alt=""
+                      class="img-fluid object-fit-contain mb-2" style="width: 50px; height: 55px;">
+                    <div class="card-img-overlay d-flex">
+                      <p class="btn-gold w-fit h-fit fs-7 text-dark m-0 rounded-5 ff px-3 ms-auto"
+                        style="letter-spacing: .5px;">Premium</p>
+                    </div>
+                    <h5 class="mb-1 text-main">បាល់ទាត់</h5>
+                    <small class="ff fs-text">Membership</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Valid Until Card -->
+              <div class="col-sm-4">
+                <div class="card bg-prime shadow-sm border-0 text-center p-1 flex-fill">
+                  <div class="card-body text-prime">
+                    <img src="https://img.icons8.com/?size=100&id=15685&format=png&color=000000" alt=""
+                      class="img-fluid object-fit-contain mb-2" style="width: 50px; height: 55px;">
+                    <h5 class="mb-1 ff text-main">31/12/2025</h5>
+                    <small class="fs-text">សុពលភាព</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Valid Until Card -->
+              <div class="col-sm-4">
+                <div class="card bg-prime shadow-sm border-0 text-center p-1 flex-fill">
+                  <div class="card-body text-prime">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvhx9bM1j81_fyhsbC8SHV35UbiT6QAp3JNQ&s"
+                      alt="" class="img-fluid object-fit-cover rounded-2 mb-2" style="width: 50px; height: 55px;">
+                    <h5 class="mb-1 ff text-main">Coach Dara</h5>
+                    <small class="fs-text">គ្រូបង្វឹកចម្បង</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schedule -->
+          <div class="tab-pane fade" id="tab-schedule">
+            <div class="card mb-4 border-0">
+              <div
+                class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-8">
+                <h4 class="mb-0 text-nowrap">កាលវិភាគរបស់ខ្ញំុ</h4>
+              </div>
+              <div class="card-body bg-prime">
+                <div class="table-responsive">
+                  <table class="table mb-0 text-prime text-nowrap">
+                    <thead>
+                      <tr class="border-bottom">
+                        <th class="py-3 ps-5">ថ្ងៃ</th>
+                        <th class="py-3 ps-5">ម៉ោង</th>
+                        <th class="py-3 ps-5">សកម្មភាព</th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-prime">
+                      <tr class="border-bottom">
+                        <td class="py-3 ps-5">ច័ន្ទ</td>
+                        <td class="py-3 ps-5 ff">09:00 AM - 11:00 AM</td>
+                        <td class="py-3 ps-5 text-danger fw-bold">ហ្វឹកហាត់</td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="py-3 ps-5">អង្គារ</td>
+                        <td class="py-3 ps-5 ff">09:00 AM - 11:00 AM</td>
+                        <td class="py-3 ps-5 text-danger fw-bold">ហ្វឹកហាត់</td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="py-3 ps-5">ពុធ</td>
+                        <td class="py-3 ps-5 ff">09:00 AM - 11:00 AM</td>
+                        <td class="py-3 ps-5 text-danger fw-bold">ហ្វឹកហាត់</td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="py-3 ps-5">ព្រហស្បតិ៍</td>
+                        <td class="py-3 ps-5 ff">09:00 AM - 11:00 AM</td>
+                        <td class="py-3 ps-5 text-green fw-bold">មានការប្រកួត</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- favourite -->
+          <div class="tab-pane fade" id="tab-places">
+            <div class="card border-0 mb-4 bg-prime">
+              <div class="card-body">
+                <h2 id="tab-title" class="text-center text-main mb-4">ទាំងអស់</h2>
+
+                <!-- Tabs nav -->
+                <ul class="nav nav-pills mb-3 justify-content-center gap-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link link-hover active px-4" id="pills-clothes-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-clothes" type="button" role="tab" aria-controls="pills-clothes"
+                      aria-selected="true" data-title="សម្លៀកបំពាក់">សម្លៀកបំពាក់</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link link-hover px-4" id="pills-food-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-food" type="button" role="tab" aria-controls="pills-food"
+                      aria-selected="false" data-title="ម្ហូប">ម្ហូប</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link link-hover px-4" id="pills-blog-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-blog" type="button" role="tab" aria-controls="pills-blog"
+                      aria-selected="false" data-title="ប្លុក">ប្លុក</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link link-hover px-4" id="pills-event-tab" data-bs-toggle="pill"
+                      data-bs-target="#pills-event" type="button" role="tab" aria-controls="pills-event"
+                      aria-selected="false" data-title="ព្រឹត្តិការណ៍">ព្រឹត្តិការណ៍</button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content mt-5" id="pills-tabContent">
+                  <!-- Clothes -->
+                  <div class="tab-pane fade show active" id="pills-clothes" role="tabpanel"
+                    aria-labelledby="pills-clothes-tab">
+                    <div class="row g-3">
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="#" class="text-decoration-none">
+                          <div class="card bg-transparent position-relative border-0">
+                            <div class="card-img bg-second position-relative overflow-hidden" style="height: 350px;">
+                              <img src="assets/img/images-1.webp" class="img-main w-100 h-100 object-fit-contain"
+                                alt="" />
+                              <img src="assets/img/images-2.webp"
+                                class="img-cover w-100 h-100 object-fit-contain position-absolute top-0 start-0"
+                                alt="" />
+                            </div>
+                            <div class="card-body ff pb-0">
+                              <div class="d-flex">
+                                <p class="p-0 m-0 fw-bold">
+                                  <span class="text-danger">US $8.15</span>
+                                  <del class="fw-normal text-second">US $13.59</del>
+                                </p>
+                                <i class="bi bi-suit-heart-fill text-danger d-block ms-auto"></i>
+                              </div>
+                              <p class="fs-6 text-prime">Arrival Block T-Shirt</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Food -->
+                  <div class="tab-pane fade" id="pills-food" role="tabpanel" aria-labelledby="pills-food-tab">
+                    <div class="row g-3">
+                      <div class="col-lg-4">
+                        <div class="card bg-prime shadow-xs border-0">
+                          <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                            class="img-fluid card-img-top object-fit-contain" alt="" style="width: 500px;">
+                          <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                              <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                              <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"><i
+                                  class="bi bi-suit-heart-fill text-danger"></i></button>
+                              <button type="button" class="btn button-icon text-second p-0"><i
+                                  class="bi bi-bookmark text-second"></i></button>
+                            </div>
+                            <div class="d-flex justify-content-between text-prime">
+                              <p class="card-text"><i class="bi bi-clock me-1"></i> <span class="ff">10</span> នាទី</p>
+                              <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
+                              <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
+                            </div>
+                            <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Blog -->
+                  <div class="tab-pane fade" id="pills-blog" role="tabpanel" aria-labelledby="pills-blog-tab">
+                    <div class="container">
+                      <div class="row g-3">
+                        <p class="text-center">អត្ថបទ និងព័ត៌មានប្លុក</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Event -->
+                  <div class="tab-pane fade" id="pills-event" role="tabpanel" aria-labelledby="pills-event-tab">
+                    <div class="container">
+                      <div class="row g-3">
+                        <p class="text-center">ព្រឹត្តិការណ៍ និងកាលវិភាគ</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Saved -->
+          <div class="tab-pane fade" id="tab-saved">
+            <div class="card border-0 mb-4 bg-prime">
+              <div class="card-body">
+                <h2 id="tab-title-1" class="text-center text-main mb-4">ទាំងអស់</h2>
+
+                <!-- Tabs nav -->
+                <ul class="nav nav-pills mb-3 justify-content-center gap-3" id="save-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link link-hover px-4 active" id="save-food-tab" data-bs-toggle="pill"
+                      data-bs-target="#save-food" type="button" role="tab" aria-controls="save-food"
+                      aria-selected="false" data-title="ម្ហូប">ម្ហូប</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link link-hover px-4" id="save-blog-tab" data-bs-toggle="pill"
+                      data-bs-target="#save-blog" type="button" role="tab" aria-controls="save-blog"
+                      aria-selected="false" data-title="ប្លុក">ប្លុក</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link link-hover px-4" id="save-event-tab" data-bs-toggle="pill"
+                      data-bs-target="#save-event" type="button" role="tab" aria-controls="save-event"
+                      aria-selected="false" data-title="ព្រឹត្តិការណ៍">ព្រឹត្តិការណ៍</button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content mt-5" id="save-tabContent">
+
+                  <!-- Food -->
+                  <div class="tab-pane fade active show" id="save-food" role="tabpanel" aria-labelledby="save-food-tab">
+                    <div class="row g-3">
+                      <div class="col-lg-4">
+                        <div class="card bg-prime shadow-xs border-0">
+                          <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                            class="img-fluid card-img-top object-fit-contain" alt="" style="width: 500px;">
+                          <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                              <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                              <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"><i
+                                  class="bi bi-suit-heart"></i></button>
+                              <button type="button" class="btn button-icon text-second p-0"><i
+                                  class="bi bi-bookmark-fill text-gold"></i></button>
+                            </div>
+                            <div class="d-flex justify-content-between text-prime">
+                              <p class="card-text"><i class="bi bi-clock me-1"></i> <span class="ff">10</span> នាទី</p>
+                              <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
+                              <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
+                            </div>
+                            <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- Blog -->
+                  <div class="tab-pane fade" id="save-blog" role="tabpanel" aria-labelledby="save-blog-tab">
+                    1
+                  </div>
+
+                  <!-- Event -->
+                  <div class="tab-pane fade" id="save-event" role="tabpanel" aria-labelledby="save-event-tab">
+                   2
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Notification Settings -->
+          <div class="tab-pane fade" id="tab-notification">
+            <div class="card border-0 bg-transparent mb-3">
+              <div class="card-body p-0">
+                <h3 class="text-main mb-3">ការបិទ/បើកមុខងារ</h3>
+                <div class="row">
+                  <!-- Notification Toggle -->
+                  <div class="col-md-4">
+                    <div class="card text-prime border-0 shadow-xs bg-prime py-3">
+                      <div class="form-check p-0 ps-3 form-switch d-flex align-items-center justify-content-between">
+                        <label class="form-check-label fs-nav">ការជូនដំណឹងសារ</label>
+                        <input class="form-check-input me-3" type="checkbox" checked>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-second border-0 shadow-xs bg-prime py-3">
+                      <div class="form-check p-0 ps-3 form-switch d-flex align-items-center justify-content-between">
+                        <label class="form-check-label fs-nav">ការជូនដំណឹងក្រុម</label>
+                        <input class="form-check-input me-3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card text-second border-0 shadow-xs bg-prime py-3">
+                      <div class="form-check p-0 ps-3 form-switch d-flex align-items-center justify-content-between">
+                        <label class="form-check-label fs-nav">សំឡេង</label>
+                        <input class="form-check-input me-3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Change Password -->
+          <div class="tab-pane fade" id="tab-change-password">
+            <div class="card shadow-xs mb-2 border-0 bg-prime">
+              <div class="card-header bg-prime py-3 text-main border-0 border-bottom mb-2">
+                <h4 class="mb-0">ផ្លាស់ប្តូរពាក្យសម្ងាត់</h4>
+              </div>
+              <div class="card-body">
+                <div class="bg-second mb-3 p-4 rounded-2">
+                  <h5 class="text-main mb-3 lh-base">
+                    ដើម្បីធានា​សុវត្ថិភាពនៃពាក្យសម្ងាត់ អ្នកគួរតែ <span class="text-danger">៖</span>
+                  </h5>
+                  <ul class="text-prime list-with-disc mb-0 d-flex flex-column gap-2">
+                    <li>មានប្រវែង <span class="ff">8</span> ទៅ <span class="ff">15</span> ខ្ទង់</li>
+                    <li>មានអក្សរធំយ៉ាងតិច <span class="ff">1</span> និងអក្សរតូចយ៉ាងតិច <span class="ff">1</span></li>
+                    <li>មានលេខយ៉ាងតិច <span class="ff">1</span> ខ្ទង់</li>
+                    <li>មានតួអក្សរពិសេសយ៉ាងតិច <span class="ff">1</span> (!, #, @, $)</li>
+                  </ul>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">ពាក្យសម្ងាត់បច្ចុប្បន្ន <span class="text-danger">*</span></label>
+                    <div class="position-relative">
+                      <input type="password" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                        placeholder="វាយពាក្យសម្ងាត់ចាស់">
+                      <i class="bi bi-lock position-absolute text-gold icon-input tran-y"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">ផ្ទៀងផ្ទាត់ពាក្យសម្ងាត់ <span class="text-danger">*</span></label>
+                    <div class="position-relative">
+                      <input type="password" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                        placeholder="បញ្ជាក់ពាក្យសម្ងាត់ចាស់">
+                      <i class="bi bi-lock position-absolute text-gold icon-input tran-y"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">ពាក្យសម្ងាត់ថ្មី <span class="text-danger">*</span></label>
+                    <div class="position-relative">
+                      <input type="password" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                        placeholder="វាយពាក្យសម្ងាត់ថ្មីរបស់អ្នក">
+                      <i class="bi bi-lock position-absolute text-gold icon-input tran-y"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">បញ្ជាក់ពាក្យសម្ងាត់ថ្មី <span class="text-danger">*</span></label>
+                    <div class="position-relative">
+                      <input type="password" class="form-control bg-prime fs-text text-second ps-7 f-c"
+                        placeholder="បញ្ជាក់ពាក្យសម្ងាត់ថ្មីរបស់អ្នក">
+                      <i class="bi bi-lock position-absolute text-gold icon-input tran-y"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-end mt-4">
+                  <button class="btn btn-gold px-5">រក្សាទុកការផ្លាស់ប្តូរ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Alerts -->
+          <div class="tab-pane fade" id="tab-security-alerts">
+            <div class="card shadow-xs border-0 bg-prime p-4">
+              <img src="https://img.icons8.com/?size=100&id=46732&format=png&color=000000" alt=""
+                class="mx-auto img-fluid">
+              <div class="card-body">
+                <h4 class="text-center mb-3 text-main">សុវត្ថិភាព</h4>
+                <h5 class="text-center text-second mb-3 lh-base">មើល និងគ្រប់គ្រងការកំណត់
+                  ដើម្បីរក្សាគណនីរបស់អ្នកឲមានសុវត្ថីភាព</h5>
+                <hr class="border-bottom mb-3">
+                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5 mb-2"
+                  data-bs-toggle="modal" data-bs-target="#security-alert-1">
+                  <div class="card border-0 bg-transparent py-2 text-start">
+                    <h5 class="mb-2 text-prime">ការជូនដំណឹងផ្នែកសុវត្ថិភាព</h5>
+                    <p class="mb-0 text-second">សកម្មភាពគណនីក្នងរយះពេល <span class="ff">7</span> ថ្ងៃចុងក្រោយ</p>
+                  </div>
+                  <i class="bi bi-chevron-right text-prime fs-5"></i>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="security-alert-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="security-alert-label-1" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="security-alert-label-1">ការជូនដំណឹងផ្នែកសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body px-5 py-10 d-flex flex-column justify-content-center">
+                        <i class="bi bi-check-lg text-green display-1 rounded-circle bg-third d-block text-center align-content-center mx-auto mb-5"
+                          style="width: 100px; height: 100px;"></i>
+                        <h6 class="text-center text-second lh-base">រកមិនឃើញសកម្មភាពគណនីខុសធម្មតាទេក្នងរយះពេល <span
+                            class="ff">7</span> ថ្ងៃចុងក្រោយ។</h6>
+                      </div>
+                      <div class="modal-footer border-0">
+                        <button type="button" data-bs-dismiss="modal"
+                          class="btn btn-gold w-75 mx-auto mb-3">រួចរាល់</button>
+                        <p class="text-prime mx-auto mb-3">នៅតែមានសំណូរឬ? <a href="#"
+                            class="text-decoration-none text-main">សូមទាក់ទងមកយើង</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5"
+                  data-bs-toggle="modal" data-bs-target="#security-alert-2">
+                  <div class="card border-0 bg-transparent py-2 text-start">
+                    <h5 class="mb-2 text-prime"><i class="bi bi-shield-check text-prime me-2"></i>
+                      រកមិនឃើញបញ្ហាសុវត្ថិភាពទេ</h5>
+                  </div>
+                  <i class="bi bi-chevron-right text-prime fs-5"></i>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="security-alert-2" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="security-alert-label-2" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="security-alert-label-2">ការជូនដំណឹងផ្នែកសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body px-5 py-10 d-flex flex-column justify-content-center">
+                        <i class="bi bi-check-lg text-green display-1 rounded-circle bg-third d-block text-center align-content-center mx-auto mb-5"
+                          style="width: 100px; height: 100px;"></i>
+                        <h6 class="text-center text-second lh-base">រកមិនឃើញសកម្មភាពគណនីខុសធម្មតាទេក្នងរយះពេល <span
+                            class="ff">7</span> ថ្ងៃចុងក្រោយ។</h6>
+                      </div>
+                      <div class="modal-footer border-0">
+                        <button type="button" data-bs-dismiss="modal"
+                          class="btn btn-gold w-75 mx-auto mb-3">រួចរាល់</button>
+                        <p class="text-prime mx-auto mb-3">នៅតែមានសំណូរឬ? <a href="#"
+                            class="text-decoration-none text-main">សូមទាក់ទងមកយើង</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="border-bottom mb-3">
+                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5"
+                  data-bs-toggle="modal" data-bs-target="#security-alert-3">
+                  <div class="card border-0 bg-transparent py-2 text-start">
+                    <h5 class="mb-2 text-prime">ឧបករណ៍របស់អ្នក</h5>
+                    <p class="mb-0 text-second">គ្រប់គ្រងឧបករណ៍ដែលអ្នកបានចូលគណនី</p>
+                  </div>
+                  <i class="bi bi-chevron-right text-prime fs-5"></i>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="security-alert-3" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="security-alert-label-3" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="security-alert-label-3">គ្រប់គ្រងឧបករណ៍
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body px-5 py-5">
+                        <div class="card border-0 bg-transparent">
+                          <h5 class="text-prime mb-3">ឧបករណ៍បច្ចុប្បន្ន</h5>
+                          <div class="card-body d-flex gap-3 bg-second rounded-3 shadow-xs mb-3">
+                            <img src="https://img.icons8.com/?size=100&id=102552&format=png&color=000000" alt=""
+                              class="img-fluid object-fit-contain h-fit" style="width: 35px;">
+                            <div>
+                              <h5 class="pt-2 text-prime ff">Dell Latitude 7280</h5>
+                              <h6 class="text-second">គេហទំព័រ <span class="ff">DSH</span></h6>
+                              <h6 class="ff text-second">Unknown login method</h6>
+                              <h6 class="text-second"><span class="ff">12</span> កញ្ញា, <span class="ff">2025 09:20
+                                  AM</span></h6>
+                            </div>
+                          </div>
+                          <div class="card-body d-flex gap-3 bg-second rounded-3 shadow-xs mb-4">
+                            <img src="https://img.icons8.com/?size=100&id=XHTBEjS9Wx14&format=png&color=000000" alt=""
+                              class="img-fluid object-fit-contain h-fit" style="width: 40px;">
+                            <div>
+                              <h5 class="pt-2 text-prime ff">iPhone 17 Pro max</h5>
+                              <h6 class="text-second">គេហទំព័រ <span class="ff">DSH</span></h6>
+                              <h6 class="ff text-second">Unknown login method</h6>
+                              <h6 class="text-second"><span class="ff">05</span> កញ្ញា, <span class="ff">2025 11:45
+                                  PM</span></h6>
+                            </div>
+                          </div>
+                          <h6 class="text-center text-prime lh-base">ឧបករណ៍ផ្សេងទៀតដែលអ្នកបានប្រើដើម្បិចូលគណនី<i
+                              class="bi bi-exclamation-circle ms-2"></i></h6>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Checkup -->
+          <div class="tab-pane fade" id="tab-security-checkup">
+            <div class="card shadow-xs border-0 bg-prime pt-4">
+              <img src="https://img.icons8.com/?size=100&id=0tpqgxISselU&format=png&color=000000" alt=""
+                class="mx-auto img-fluid">
+              <div class="card-body">
+                <h4 class="text-center mb-3 text-main">ការពិនិត្យសុវត្ថិភាព</h4>
+                <h5 class="text-center text-second mb-3 lh-base">ពិនិត្យមើលការការពារសុវត្ថិភាពប្រសិនបើមាន
+                  គោលបំណងធ្វើឱ្យគណនីរបស់អ្នកមានសុវត្ថិភាព។</h5>
+                <hr class="border-bottom mb-3">
+                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5 mb-2"
+                  data-bs-toggle="modal" data-bs-target="#security-check-1">
+                  <div class="card border-0 bg-transparent py-2 text-start">
+                    <h5 class="mb-2 text-prime"><i class="bi bi-exclamation-circle me-2"></i> លេខទូរស័ព្ទ</h5>
+                    <p class="mb-0 text-second ms-5">បញ្ចូលលេខទូរស័ព្ទរបស់អ្នក
+                      ដើម្បីងាយស្រួលស្តារគណនីរបស់អ្នកក្នងករណីបាត់បង់សិទ្ធិចូលប្រើ</p>
+                  </div>
+                  <i class="bi bi-chevron-right text-prime fs-5"></i>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="security-check-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="security-check-label-1" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="security-check-label-1">ការពិនិត្យសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body p-5 d-flex flex-column justify-content-center">
+                        <div class="row">
+                          <div class="col-1"></div>
+                          <div class="col-lg-10">
+                            <form action="">
+                              <div class="mb-3 position-relative">
+                                <label class="form-label fs-title mb-3">បញ្ចូលលេខទូរស័ព្ទ</label>
+                                <input type="number" class="form-control bg-prime fs-text text-second ps-13 pe-2"
+                                  placeholder="លេខទូរស័ព្ទ">
+                                <p class="position-absolute text-second ff fs-text mb-0 trans-y">KH +855</p>
+                              </div>
+                              <p class="text-second lh-lg">អ្នកនឹងទទួលបានលេខកូដផ្ទៀងផ្ទាត់តាមរយៈ SMS។
+                                លេខទូរសព្ទរបស់អ្នកអាចត្រូវបានប្រើ ដើម្បីភ្ជាប់ទំនាក់ទំនង របស់អ្នកជាមួយអ្នកផ្សេងទៀត
+                                កែលម្អការផ្សាយពាណិជ្ជកម្ម និងធ្វើអ្វីៗជាច្រើនទៀតដោយផ្អែកលើការកំណត់របស់អ្នក។
+                                ស្វែងយល់បន្ថែម</p>
+                              <button type="button" class="btn btn-gold w-100 fs-btn" data-bs-toggle="modal"
+                                data-bs-target="#otp" data-bs-dismiss="modal">
+                                បន្ត
+                              </button>
+                            </form>
+                          </div>
+                          <div class="col-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- OTP Modal -->
+                <div class="modal fade" id="otp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="otpLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-prime border-0 rounded-3 shadow">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="opt">ការពិនិត្យសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+
+                      <!-- Body -->
+                      <div class="modal-body p-5">
+                        <div class="row">
+                          <h5 class="mb-3 text-prime text-center">
+                            វាយបញ្ចូលកូដ <span class="ff">6</span>-ខ្ទង់
+                          </h5>
+                          <p class="text-second text-center fs-text mb-4">កូដរបស់អ្នកត្រូវបានផ្ញើទៅកាន់ <span
+                              class="ff">+855 12345678</span>
+                          </p>
+                          <div class="col-1"></div>
+                          <div class="col-lg-10">
+                            <form id="otpForm">
+                              <div class="d-flex justify-content-center gap-3 mb-4 ff">
+                                <input type="text" maxlength="1" placeholder="9"
+                                  class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" placeholder="1"
+                                  class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" placeholder="4"
+                                  class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" placeholder="7"
+                                  class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" placeholder="3"
+                                  class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" placeholder="5"
+                                  class="form-control otp-input bg-transparent" />
+                              </div>
+                              <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
+                                <p class="m-0">មិនបានទទូលលេខកូដ?</p>
+                                <button class="btn m-0 p-0">
+                                  <p class="text-main m-0">ព្យាយាមម្តងទៀតនៅ <span class="ff">59s</span></p>
+                                </button>
+                              </div>
+
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-gold w-100 fs-btn mb-3" data-bs-toggle="modal"
+                                data-bs-target="#resetPw">
+                                បញ្ជាក់
+                              </button>
+                              <a href="#"
+                                class="fs-text d-block text-center text-decoration-none text-second w-fit mx-auto"
+                                data-bs-dismiss="modal" data-bs-target="#security-check-1" data-bs-toggle="modal">
+                                <i class="bi bi-arrow-left"></i> ត្រឡប់ទៅលេខទូរស័ព្ទវិញ
+                              </a>
+                            </form>
+                          </div>
+                          <div class="col-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal បង្កើតពាក្យសម្ងាត់ថ្មី -->
+                <div class="modal fade" id="resetPw" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="resetPass" aria-hidden="true">
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-prime border-0 rounded-3 shadow">
+
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="resetPass">ការពិនិត្យសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+
+                      <!-- Body -->
+                      <div class="modal-body p-5">
+                        <div class="row">
+                          <h5 class="mb-4 text-center fs-title text-prime">សូមបញ្ចូលពាក្យសម្ងាត់ថ្មីរបស់អ្នក</h5>
+
+                          <div class="col-1"></div>
+                          <div class="col-lg-10">
+                            <form id="resetPwForm">
+                              <!-- ពាក្យសម្ងាត់ថ្មី -->
+                              <div class="mb-3 position-relative">
+                                <label for="newPassword" class="form-label fs-title text-prime">ពាក្យសម្ងាត់ថ្មី</label>
+                                <input type="password" class="form-control bg-prime fs-text text-second ps-7"
+                                  id="newPassword" placeholder="វាយពាក្យសម្ងាត់ថ្មី">
+                                <i class="bi bi-lock-fill position-absolute text-gold icon-input"></i>
+                              </div>
+
+                              <!-- បញ្ជាក់ពាក្យសម្ងាត់ថ្មី -->
+                              <div class="mb-4 position-relative">
+                                <label for="confirmPassword"
+                                  class="form-label fs-title text-prime">បញ្ជាក់ពាក្យសម្ងាត់</label>
+                                <input type="password" class="form-control bg-prime fs-text text-second ps-7"
+                                  id="confirmPassword" placeholder="បញ្ជាក់ពាក្យសម្ងាត់">
+                                <i class="bi bi-shield-lock-fill position-absolute text-gold icon-input"></i>
+                              </div>
+
+                              <button type="submit" class="btn btn-gold w-100 fs-btn" data-bs-dismiss="modal">
+                                រក្សាទុកពាក្យសម្ងាត់
+                              </button>
+                            </form>
+                          </div>
+                          <div class="col-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5 mb-2"
+                  data-bs-toggle="modal" data-bs-target="#security-check-2">
+                  <div class="card border-0 bg-transparent py-2 text-start">
+                    <h5 class="mb-2 text-prime"><i class="bi bi-check-lg me-1 fs-3 text-green"></i> សកម្មភាពសុវត្ថិភាព
+                    </h5>
+                    <p class="mb-0 text-second ms-5">គ្មានសកម្មភាពខុសប្រក្រតីទេ ក្នងរយះពេល <span class="ff">30</span>
+                      ថ្ងៃចុងក្រោយ</p>
+                  </div>
+                  <i class="bi bi-chevron-right text-prime fs-5"></i>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="security-check-2" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="security-check-label-2" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                    <div class="modal-content rounded-2 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="security-check-label-2">ការពិនិត្យសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body px-5 py-10 d-flex flex-column justify-content-center">
+                        <i class="bi bi-check-lg text-green display-1 rounded-circle bg-third d-block text-center align-content-center mx-auto mb-5"
+                          style="width: 100px; height: 100px;"></i>
+                        <h6 class="text-center text-second lh-base">រកមិនឃើញសកម្មភាពគណនីខុសធម្មតាទេក្នងរយះពេល <span
+                            class="ff">30</span> ថ្ងៃចុងក្រោយ។</h6>
+                      </div>
+                      <div class="modal-footer border-0">
+                        <button type="button" data-bs-dismiss="modal"
+                          class="btn btn-gold w-75 mx-auto mb-3">រួចរាល់</button>
+                        <p class="text-prime mx-auto mb-3">នៅតែមានសំណូរឬ? <a href="#"
+                            class="text-decoration-none text-main">សូមទាក់ទងមកយើង</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="border-bottom mb-3">
+                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5 mb-2"
+                  data-bs-toggle="modal" data-bs-target="#security-check-3">
+                  <div class="card border-0 bg-transparent py-2 text-start">
+                    <h5 class="mb-2 text-prime"><i class="bi bi-check-lg me-1 fs-3 text-green"></i>ឧបករណ៍របស់អ្នក</h5>
+                    <p class="mb-0 text-second ms-5">គ្រប់គ្រងឧបករណ៍របស់អ្នក</p>
+                  </div>
+                  <i class="bi bi-chevron-right text-prime fs-5"></i>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="security-check-3" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="security-check-label-3" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                    <div class="modal-content rounded-2 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="security-check-label-3">គ្រប់គ្រងឧបករណ៍
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body px-5 py-5">
+                        <div class="card border-0 bg-transparent">
+                          <h5 class="text-prime mb-3">ឧបករណ៍បច្ចុប្បន្ន</h5>
+                          <div class="card-body d-flex gap-3 bg-second rounded-3 shadow-xs mb-3">
+                            <img src="https://img.icons8.com/?size=100&id=102552&format=png&color=000000" alt=""
+                              class="img-fluid object-fit-contain h-fit" style="width: 35px;">
+                            <div>
+                              <h5 class="pt-2 text-prime ff">Dell Latitude 7280</h5>
+                              <h6 class="text-second">គេហទំព័រ <span class="ff">DSH</span></h6>
+                              <h6 class="ff text-second">Unknown login method</h6>
+                              <h6 class="text-second"><span class="ff">12</span> កញ្ញា, <span class="ff">2025 09:20
+                                  AM</span></h6>
+                            </div>
+                          </div>
+                          <div class="card-body d-flex gap-3 bg-second rounded-3 shadow-xs mb-4">
+                            <img src="https://img.icons8.com/?size=100&id=XHTBEjS9Wx14&format=png&color=000000" alt=""
+                              class="img-fluid object-fit-contain h-fit" style="width: 40px;">
+                            <div>
+                              <h5 class="pt-2 text-prime ff">iPhone 17 Pro max</h5>
+                              <h6 class="text-second">គេហទំព័រ <span class="ff">DSH</span></h6>
+                              <h6 class="ff text-second">Unknown login method</h6>
+                              <h6 class="text-second"><span class="ff">05</span> កញ្ញា, <span class="ff">2025 11:45
+                                  PM</span></h6>
+                            </div>
+                          </div>
+                          <h6 class="text-center text-prime lh-base">ឧបករណ៍ផ្សេងទៀតដែលអ្នកបានប្រើដើម្បិចូលគណនី<i
+                              class="bi bi-exclamation-circle ms-2"></i></h6>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5"
+                  data-bs-toggle="modal" data-bs-target="#security-check-4">
+                  <div class="card border-0 bg-transparent py-2 text-start">
+                    <h5 class="mb-2 text-prime"><i class="bi bi-check-lg me-1 fs-3 text-green"></i>អ៊ីមែល</h5>
+                    <p class="mb-0 text-second ms-5"><span class="ff text-second">LayJammy@gmail.com |</span>
+                      បានអាប់ដេតចុងក្រោយ : <span class="ff">26</span> មករា <span class="ff">2025</span></p>
+                  </div>
+                  <i class="bi bi-chevron-right text-prime fs-5"></i>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="security-check-4" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="security-check-label-4" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+                    <div class="modal-content rounded-2 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main" id="security-check-label-4">ការពិនិត្យសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body px-5 pt-3">
+                        <div class="card border-0 bg-transparent">
+                          <div class="card-body text-center text-prime">
+                            <i class="bi bi-envelope display-4 d-block mb-2 text-gold"></i>
+                            <h5 class="fw-normal">អ៊ីមែលរបស់អ្នក</h5>
+                            <h6 class="ff fw-normal mb-3">LayJammy@gmail.com</h6>
+                            <p class="text-second px-13 mb-4 lh-lg">អ៊ីមែលនេះត្រូវបានភ្ជាប់ទៅគណនីរបស់អ្នក
+                              និងមានតែអ្នកប៉ុណ្ណោះទើបមើលឃើញ។
+                              បើ អ្នកប្តូរវា វាប្រហែលជានៅតែត្រូវបានរក្សាទុក សម្រាប់គោលបំណងស្ដារគណនី។
+                            </p>
+                            <div class="d-flex gap-3">
+                              <button type="submit" class="btn btn-gold w-100 fs-btn" data-bs-dismiss="modal">
+                                ប្តូរអ៊ីមែល
+                              </button>
+                              <button type="submit" class="btn btn-gold w-100 fs-btn" data-bs-dismiss="modal">
+                                ឈប់តភ្ជាប់អ៊ីមែល
+                              </button>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const toggleBtn = document.getElementById("toggle-btn");
+    const toggleClose = document.getElementById("toggle-close");
+    const main = document.querySelector(".main-content main");
+
+    toggleBtn.addEventListener("click", () => { sidebar.classList.toggle("collapsed"); });
+    toggleClose.addEventListener("click", () => { sidebar.classList.toggle("collapsed"); });
+
+    function handleSidebarByScreen() {
+      if (window.innerWidth < 992) sidebar.classList.add("collapsed");
+      else sidebar.classList.remove("collapsed");
+    }
+    handleSidebarByScreen();
+    window.addEventListener("resize", handleSidebarByScreen);
+
+    document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+      tab.addEventListener("shown.bs.tab", () => {
+        main.scrollTop = 0;
+        if (window.innerWidth < 992) sidebar.classList.add("collapsed");
+      });
+    });
+  </script>
+  <!-- Tab / Product -->
+  <script>
+    const tabTitle = document.getElementById('tab-title');
+    const tabButtons = document.querySelectorAll('#pills-tab button');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('shown.bs.tab', (e) => {
+        // Update the H1 to the data-title of the active tab
+        tabTitle.textContent = e.target.getAttribute('data-title');
+      });
+    });
+  </script>
+</body>
+
+</html>
