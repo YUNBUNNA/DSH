@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- link bootstrap -->
-    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
-    <!-- link theme -->
-    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
-    <!-- link icons -->
-    <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
-    <!-- link swiper -->
-    <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
-    <!-- link aos -->
-    <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
-    <!-- link css custom -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Load dotlottie-wc -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+  <!-- link theme -->
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
+  <!-- link icons -->
+  <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+  <!-- link swiper -->
+  <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+  <!-- link aos -->
+  <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
+  <!-- link css custom -->
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body class="bg-third">
 
-    <main>
-      <section>
-          <div class="container-fluid">
-            <div class="row justify-content-center align-items-center min-vh-100">
-   <div class="col-lg-5">
-        <h4 class="text-main text-center mb-4 fw-bold">សូមជ្រើសរើសប្រភេទអ្នកប្រើប្រាស់</h4>
-        <div class="card border-0 shadow-xs bg-prime py-3 mb-3">
-          <a href="" class="text-decoration-none">
-                    <div class="card-body d-flex align-items-center gap-3">
-                       <i class="bi bi-person fs-3 d-block bg-third rounded-circle text-center align-content-center" style="width: 70px; height: 70px;"></i>    
-                       <div>
-                           <h5 class="text-prime ff">Admin</h5>
-                           <h6 class="text-prime">ចូលប្រើប្រាស់ជា <span class="ff">admin</span></h6>
-                       </div>
-                    </div>
-          </a>
-        </div>
-        <div class="card border-0 shadow-xs bg-prime py-3 mb-3">
-          <a href="" class="text-decoration-none">
-                    <div class="card-body d-flex align-items-center gap-3">
-                       <i class="bi bi-person fs-3 d-block bg-third rounded-circle text-center align-content-center" style="width: 70px; height: 70px;"></i>    
-                       <div>
-                           <h5 class="text-prime">គ្រូបង្វឹក</h5>
-                           <h6 class="text-prime">ចូលប្រើប្រាស់ជាគ្រូបង្វឹក</h6>
-                       </div>
-                    </div>
-          </a>
-        </div>
-        <div class="card border-0 shadow-xs bg-prime py-3 mb-3">
-          <a href="" class="text-decoration-none">
-                    <div class="card-body d-flex align-items-center gap-3">
-                       <i class="bi bi-person fs-3 d-block bg-third rounded-circle text-center align-content-center" style="width: 70px; height: 70px;"></i>    
-                       <div>
-                           <h5 class="text-prime">សិស្ស</h5>
-                           <h6 class="text-prime">ចូលប្រើប្រាស់ជាសិស្ស</h6>
-                       </div>
-                    </div>
-          </a>
-        </div>
-   </div>     
-</div>
-
+  <main>
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-5">
+            <!-- Lottie Animation -->
+            <dotlottie-wc src="../assets/img/Typer-User.json" style="height: 550px" loop autoplay speed="1"
+              mode="forward" class="w-100">
+            </dotlottie-wc>
+            <div class="card-img-overlay">
+              <img src="../assets/img/logo2.png" alt="" class="img-fluid position-absolute" style="width: 120px; top: -3%;">
+            </div>
           </div>
-      </section>
-    </main>
+          <div class="col-1"></div>
+          <div class="col-lg-5">
+            <h2 class="text-main text-center mb-4 fw-bold">សូមជ្រើសរើសប្រភេទអ្នកប្រើប្រាស់</h2>
+            <div class="card border-0 article-hover shadow-xs bg-prime mb-3">
+              <a href="" class="text-decoration-none">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <i class="bi  bi-person-fill-gear fs-2 d-block bg-third rounded-circle text-center align-content-center text-main"
+                    style="width: 70px; height: 70px;"></i>
+                  <div>
+                    <h5 class="card-title text-prime">អ្នកគ្រប់គ្រង</h5>
+                    <h6 class="text-second">ចូលប្រើប្រាស់ជាអ្នកគ្រប់គ្រង</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card border-0 article-hover shadow-xs bg-prime mb-3">
+              <a href="" class="text-decoration-none">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <i class="bi bi-person-lines-fill fs-2 d-block bg-third rounded-circle text-center align-content-center text-main"
+                    style="width: 70px; height: 70px;"></i>
+                  <div>
+                    <h5 class="card-title text-prime">គ្រូបង្វឹក</h5>
+                    <h6 class="text-second">ចូលប្រើប្រាស់ជាគ្រូបង្វឹក</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card border-0 article-hover shadow-xs bg-prime">
+              <a href="" class="text-decoration-none">
+                <div class="card-body d-flex align-items-center gap-3">
+                  <i class="bi bi-person-fill fs-2 d-block bg-third rounded-circle text-center align-content-center text-main"
+                    style="width: 70px; height: 70px;"></i>
+                  <div>
+                    <h5 class="card-title text-prime">សមាជិក</h5>
+                    <h6 class="text-second">ចូលប្រើប្រាស់ជាសមាជិក</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
 
-    <!-- link bootstrap js -->
-    <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-    <!-- link swiper js -->
-    <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
-    <!-- link aos js -->
-    <script src="../assets/plugins/aos/js/aos.js"></script>
-    <!-- link js custom -->
-    <script src="../assets/js/main.js"></script>
-    
+      </div>
+    </section>
+  </main>
+
+  <!-- link bootstrap js -->
+  <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <!-- link swiper js -->
+  <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+  <!-- link aos js -->
+  <script src="../assets/plugins/aos/js/aos.js"></script>
+  <!-- link js custom -->
+  <script src="../assets/js/main.js"></script>
+
 </body>
+
 </html>
