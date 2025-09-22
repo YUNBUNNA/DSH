@@ -76,6 +76,19 @@
       transition: all 0.4s ease;
     }
 
+    /* Internal style  */
+    .toast {
+      display: block !important;
+      opacity: 0;
+      transform: translateY(-100vw);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .card {
       transition: all 0.4s ease;
     }
@@ -160,59 +173,60 @@
         </li>
 
         <!-- Members -->
-        <li class="nav-item mb-2">
-          <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#members-dropdown"
-            role="button" aria-expanded="false">
-            <i class="bi bi-people me-2"></i><span>សមាជិករបស់ខ្ញុំ</span>
-            <i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul id="members-dropdown" class="collapse list-unstyled ps-4 mt-2" data-bs-parent="#sidebar-nav">
-            <li class="nav-item mb-2"><a href="#tab-members-list" class="nav-link text-white"
-                data-bs-toggle="tab">បញ្ជីសមាជិក</a></li>
-            <li class="nav-item"><a href="#tab-training-results" class="nav-link text-white"
-                data-bs-toggle="tab">លទ្ធផលហ្វឹកហាត់</a></li>
-          </ul>
-        </li>
+        <li class="nav-item mb-2"><a href="#tab-members-list" class="nav-link text-white" data-bs-toggle="tab"><i
+              class="bi bi-people me-2"></i> បញ្ជីសីស្សរបស់ខ្ញំុ</a></li>
 
         <!-- Schedule -->
-        <li class="nav-item mb-2">
-          <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#schedule-dropdown"
-            role="button" aria-expanded="false">
-            <i class="bi bi-calendar4-event me-2"></i><span>កាលវិភាគបង្វឹក</span>
-            <i class="bi bi-chevron-down ms-auto"></i>
-          </a>
-          <ul id="schedule-dropdown" class="collapse list-unstyled ps-4 mt-2" data-bs-parent="#sidebar-nav">
-            <li class="nav-item mb-2"><a href="#tab-schedule-view" class="nav-link text-white"
-                data-bs-toggle="tab">មើលកាលវិភាគ</a></li>
-            <li class="nav-item"><a href="#tab-schedule-update" class="nav-link text-white"
-                data-bs-toggle="tab">កែប្រែកាលវិភាគរបស់សមាជិក</a></li>
-          </ul>
-        </li>
+        <li class="nav-item mb-2"><a href="#tab-schedule-view" class="nav-link text-white" data-bs-toggle="tab"><i
+              class="bi bi-calendar3 me-2"></i> មើលកាលវិភាគ</a></li>
 
-        <!-- Messages -->
-        <li class="nav-item mb-2">
-          <a href="#tab-messages" class="nav-link text-white d-flex align-items-center" data-bs-toggle="tab">
-            <i class="bi bi-chat-dots me-2"></i><span>សារ និង ការជូនដំណឹង</span>
-          </a>
-        </li>
       </ul>
     </aside>
 
     <!-- Main Content -->
     <div class="flex-grow-1 main-content">
       <!-- Navbar -->
-      <nav class="navbar bg-prime rounded-2">
+      <nav class="navbar rounded-2 bg-prime shadow-xs">
         <div class="container-fluid d-flex align-items-center">
           <button type="button" id="toggle-btn" class="btn text-prime fs-4">
             <i class="bi bi-list"></i>
           </button>
-          <button class="btn text-prime position-absolute" style="right: 5%;" id="theme-toggle">
+          <button class="btn text-prime position-absolute dm-lm" id="theme-toggle">
             <i class="theme-icon start-50 bi bi-sun fs-4"></i>
             <i class="theme-icon start-50 bi bi-moon fs-4"></i>
           </button>
+          <ul class="navbar-nav pe-3">
+            <li class="nav-item admin position-relative">
+              <a href="" class="nav-link">
+                <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                  class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+              </a>
+              <div class="dropdown position-absolute shadow-xs" style="left: -125px;">
+                <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                  <div class="card border-0 border-bottom rounded-0 bg-second p-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-end gap-3">
+                        <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
+                          class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;" alt="">
+                        <h6 class="fs-text text-prime">ឡាយ ចេមមី</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <li>
+                    <a class="dropdown-item py-2 d-block m-0" href="../pages/admin-profile.html"><i
+                        class="bi bi-person me-1"></i> គណនី</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="../index.html"><i
+                        class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
+                      <span class="opacity-0 mx-4">a</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </nav>
-
 
       <!-- Tab Content -->
       <main class="py-3">
@@ -266,17 +280,39 @@
 
             <!-- Chart -->
             <div class="row g-3 mb-4">
+              <!-- Membership Income -->
               <div class="col-lg-6">
                 <div class="card bg-prime shadow-xs border-0">
                   <div class="card-body">
                     <h6 class="card-title text-prime">
                       <i class="bi bi-graph-up-arrow me-2 text-main"></i> ប្រាក់ចំណូលក្នុងមួយខែ
                     </h6>
-                    <canvas id="membershipChart" style="height: 300px;"></canvas>
+                    <div style="height: 300px;">
+                      <canvas id="membershipChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Students Joined -->
+              <div class="col-lg-6">
+                <div class="card bg-prime shadow-xs border-0">
+                  <div class="card-body">
+                    <h6 class="card-title text-prime">
+                      <i class="bi bi-people me-2 text-main"></i> សិស្សចូលក្នុងមួយខែ
+                    </h6>
+                    <div style="height: 300px;">
+                      <canvas id="studentsChart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Include Chart.js -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="charts.js"></script>
+
           </div>
 
           <!-- Create New Course -->
@@ -290,24 +326,24 @@
               <div class="card-body">
                 <form>
                   <div class="row g-3 mb-3">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
+                      <div class="position-relative">
+                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
+                          placeholder="ឈ្មោះពេញ">
+                        <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
                       <div class="position-relative">
                         <input type="text" class="form-control bg-prime fs-text text-second ps-7"
                           placeholder="ឈ្មោះវគ្គសិក្សា">
                         <i class="bi bi-journal-plus position-absolute text-gold icon-input tran-y"></i>
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <div class="position-relative">
                         <input type="text" class="form-control bg-prime fs-text text-second ps-7"
                           placeholder="ថ្ងៃចាប់ផ្ដើម">
-                        <i class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ថ្ងៃបញ្ចប់">
                         <i class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
                       </div>
                     </div>
@@ -381,7 +417,19 @@
                     <label class="form-label">ព័ត៌មានបន្ថែម</label>
                     <textarea class="form-control ps-2 bg-prime" rows="2" placeholder="កំណត់ចំណាំបន្ថែម"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-gold px-5">ផ្ញើទៅកាន់ <span class="ff">admin</span></button>
+                  <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-gold px-5" id="favoriteBtn1">ផ្ញើទៅកាន់ <span
+                        class="ff">admin</span></button>
+                    <div class="toast-container position-fixed" style="top: 5%; left: 47.5%;">
+                      <div id="favoriteToast1" class="toast shadow-xs border-0 rounded-2" role="alert"
+                        aria-live="assertive" aria-atomic="true">
+                        <div class="toast-body d-flex gap-3 align-items-center text-prime bg-second text-center">
+                          <i class="bi bi-check-lg text-green fs-3"></i>
+                          <p class="m-0 fs-nav">ទីន្នន័យត្រូវបានផ្ញើទៅកាន់ <span class="ff">admin</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
@@ -393,9 +441,9 @@
             <div class="card mb-4 border-0">
               <div
                 class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-8">
-                <h4 class="mb-0 text-nowrap">បញ្ជីសមាជិក</h4>
+                <h4 class="mb-0 text-nowrap">បញ្ជីសិស្ស</h4>
                 <div class="position-relative">
-                  <input type="text" class="form-control bg-prime fs-text text-second ps-7" placeholder="ស្វែងរកសមាជិក">
+                  <input type="text" class="form-control bg-prime fs-text text-second ps-7" placeholder="ស្វែងរកសិស្ស">
                   <i class="bi bi-search position-absolute text-gold icon-input tran-y"></i>
                 </div>
               </div>
@@ -405,129 +453,249 @@
                     <thead>
                       <tr class="border-bottom">
                         <th class="py-3 ps-5">អត្តលេខ</th>
-                        <th class="py-3 ps-5">ឈ្មោះសមាជិក</th>
+                        <th class="py-3 ps-5">ភេទ</th>
+                        <th class="py-3 ps-5">ឈ្មោះសិស្ស</th>
                         <th class="py-3 ps-5">អាយុ</th>
                         <th class="py-3 ps-5">ថ្ងៃចូលរួម</th>
-                        <th class="py-3 ps-5">ម៉ោងសមាជិក</th>
+                        <th class="py-3 ps-5">ម៉ោងសិស្ស</th>
+                        <th></th>
                       </tr>
                     </thead>
                     <tbody class="bg-prime">
+                      <!-- Student 1 -->
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 ff align-middle">001</td>
-                        <td class="py-3 ps-5 ff align-middle">
+                        <td class="py-3 ps-5 align-middle">ប្រុស</td>
+                        <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
                             <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
                               style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">John Smith</h6>
+                            <h6 class="mb-0">សោម សុវណ្ណ</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 ff align-middle">25</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">01</span> មិថុនា <span
                             class="ff">2025</span></td>
                         <td class="py-3 ps-5 ff align-middle">08:00 AM - 10:00 AM</td>
+                        <td class="py-3 ps-5 align-middle">
+                          <!-- Delete Button -->
+                          <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal"
+                            data-bs-target="#delete-001">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+
+                          <!-- Delete Modal -->
+                          <div class="modal fade" id="delete-001" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="delete-label-001" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
+                                    <h6 class="mb-0 text-prime">សោម សុវណ្ណ</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
+                                    <div class="d-flex gap-2">
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#success-delete-001"
+                                        class="btn btn-primary w-100 text-center text-white"
+                                        data-bs-dismiss="modal">យល់ព្រម</button>
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Success Modal for Delete -->
+                          <div class="modal fade" id="success-delete-001" tabindex="-1"
+                            aria-labelledby="success-delete-label-001" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-0 shadow-none">
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                                      style="width: 100px; height: 100px;"></i>
+                                    <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
                       </tr>
+
+                      <!-- Student 2 -->
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 ff align-middle">002</td>
-                        <td class="py-3 ps-5 ff align-middle">
+                        <td class="py-3 ps-5 align-middle">ស្រី</td>
+                        <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
                             <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
                               style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">David Johnson</h6>
+                            <h6 class="mb-0">ស៊ូ សារ៉ា</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 ff align-middle">28</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">10</span> មិថុនា <span
                             class="ff">2025</span></td>
                         <td class="py-3 ps-5 ff align-middle">02:00 PM - 04:00 PM</td>
+                        <td class="py-3 ps-5 align-middle">
+                          <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal"
+                            data-bs-target="#delete-002">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                          <!-- Delete Modal for 002 same structure as 001, just change IDs -->
+                          <div class="modal fade" id="delete-002" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="delete-label-002" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
+                                    <h6 class="mb-0 text-prime">ស៊ូ សារ៉ា</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
+                                    <div class="d-flex gap-2">
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#success-delete-002"
+                                        class="btn btn-primary w-100 text-center text-white"
+                                        data-bs-dismiss="modal">យល់ព្រម</button>
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Success Modal for 002 -->
+                          <div class="modal fade" id="success-delete-002" tabindex="-1"
+                            aria-labelledby="success-delete-label-002" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-0 shadow-none">
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                                      style="width: 100px; height: 100px;"></i>
+                                    <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
                       </tr>
+
+                      <!-- Student 3 -->
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 ff align-middle">003</td>
-                        <td class="py-3 ps-5 ff align-middle">
+                        <td class="py-3 ps-5 align-middle">ប្រុស</td>
+                        <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
                             <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
                               style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">Sarah Williams</h6>
+                            <h6 class="mb-0">ជា សុខា</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 ff align-middle">22</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">20</span> មិថុនា <span
                             class="ff">2025</span></td>
                         <td class="py-3 ps-5 ff align-middle">09:00 PM - 11:00 PM</td>
+                        <td class="py-3 ps-5 align-middle">
+                          <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal"
+                            data-bs-target="#delete-003">
+                            <i class="bi bi-trash text-danger"></i>
+                          </button>
+                          <!-- Delete Modal for 003 -->
+                          <div class="modal fade" id="delete-003" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="delete-label-003" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-bottom px-5">
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                      alt="" style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
+                                    <h6 class="mb-0 text-prime">ជា សុខា</h6>
+                                  </div>
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
+                                    <div class="d-flex gap-2">
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#success-delete-003"
+                                        class="btn btn-primary w-100 text-center text-white"
+                                        data-bs-dismiss="modal">យល់ព្រម</button>
+                                      <button data-bs-dismiss="modal"
+                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Success Modal for 003 -->
+                          <div class="modal fade" id="success-delete-003" tabindex="-1"
+                            aria-labelledby="success-delete-label-003" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content rounded-3 bg-prime">
+                                <div class="modal-header border-0 shadow-none">
+                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <div class="card-body">
+                                    <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                                      style="width: 100px; height: 100px;"></i>
+                                    <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Training Results -->
-          <div class="tab-pane fade" id="tab-training-results">
-            <div class="card mb-4 border-0">
-              <div
-                class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-8">
-                <h4 class="mb-0 text-nowrap">លទ្ធផលហ្វឹកហាត់សមាជិក</h4>
-                <div class="position-relative">
-                  <input type="text" class="form-control bg-prime fs-text text-second ps-7" placeholder="ស្វែងរកសមាជិក">
-                  <i class="bi bi-search position-absolute text-gold icon-input tran-y"></i>
-                </div>
-              </div>
-              <div class="card-body bg-prime">
-                <div class="table-responsive">
-                  <table class="table mb-0 text-prime text-nowrap">
-                    <thead>
-                      <tr class="border-bottom">
-                        <th class="py-3 ps-5">ឈ្មោះសមាជិក</th>
-                        <th class="py-3 ps-5">ការលេងចុងក្រោយ</th>
-                        <th class="py-3 ps-5">គោលដៅបន្ទាប់</th>
-                        <th class="py-3 ps-5">កាលបរិច្ឆេទ</th>
-                      </tr>
-                    </thead>
-                    <tbody class="bg-prime">
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">John Smith</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">Matches: 7, Goals: 5</td>
-                        <td class="py-3 ps-5 ff align-middle">Next Goal Target: 8 Goals</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">05</span> មិថុនា <span
-                            class="ff">2025</span></td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">David Johnson</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">Matches: 6, Goals: 3</td>
-                        <td class="py-3 ps-5 ff align-middle">Next Goal Target: 5 Goals</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">12</span> មិថុនា <span
-                            class="ff">2025</span></td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">Sarah Williams</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">Matches: 8, Goals: 6</td>
-                        <td class="py-3 ps-5 ff align-middle">Next Goal Target: 10 Goals</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">20</span> មិថុនា <span
-                            class="ff">2025</span></td>
-                      </tr>
-                    </tbody>
                   </table>
                 </div>
               </div>
             </div>
+
           </div>
 
           <!-- Schedule View -->
@@ -544,14 +712,14 @@
                       <tr class="border-bottom">
                         <th class="py-3 ps-5">ថ្ងៃ</th>
                         <th class="py-3 ps-5">ម៉ោង</th>
-                        <th class="py-3 ps-5">ថ្នាក់</th>
+                        <th class="py-3 ps-5">ថ្នាក់ <span class="ff">A</span></th>
                       </tr>
                     </thead>
                     <tbody class="bg-prime">
                       <tr class="border-bottom">
                         <td class="py-3 ps-5">ច័ន្ទ</td>
                         <td class="py-3 ps-5">-</td>
-                        <td class="py-3 ps-5">គ្មានថ្នាក់</td>
+                        <td class="py-3 ps-5">-</td>
                       </tr>
                       <tr class="border-bottom">
                         <td class="py-3 ps-5">អង្គារ</td>
@@ -566,7 +734,7 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5">ព្រហស្បតិ៍</td>
                         <td class="py-3 ps-5">-</td>
-                        <td class="py-3 ps-5">គ្មានថ្នាក់</td>
+                        <td class="py-3 ps-5">-</td>
                       </tr>
                       <tr class="border-bottom">
                         <td class="py-3 ps-5">សុក្រ</td>
@@ -576,12 +744,12 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5">សៅរ៍</td>
                         <td class="py-3 ps-5">-</td>
-                        <td class="py-3 ps-5">គ្មានថ្នាក់</td>
+                        <td class="py-3 ps-5">-</td>
                       </tr>
                       <tr class="border-bottom">
                         <td class="py-3 ps-5">អាទិត្យ</td>
                         <td class="py-3 ps-5">-</td>
-                        <td class="py-3 ps-5">គ្មានថ្នាក់</td>
+                        <td class="py-3 ps-5">-</td>
                       </tr>
                     </tbody>
                   </table>
@@ -590,161 +758,6 @@
             </div>
           </div>
 
-          <!-- Schedule Update -->
-          <div class="tab-pane fade" id="tab-schedule-update">
-            <div class="card mb-4 border-0">
-              <div
-                class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-8">
-                <h4 class="mb-0 text-nowrap">កែប្រែកាលវិភាគ</h4>
-                <div class="position-relative">
-                  <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                    placeholder="ស្វែងរកកាលវិភាគ">
-                  <i class="bi bi-search position-absolute text-gold icon-input tran-y"></i>
-                </div>
-              </div>
-              <div class="card-body bg-prime">
-                <div class="table-responsive">
-                  <table class="table mb-0 text-prime text-nowrap">
-                    <thead>
-                      <tr class="border-bottom">
-                        <th class="py-3 ps-5">កាលបរិច្ឆេទ</th>
-                        <th class="py-3 ps-5">ម៉ោង</th>
-                        <th class="py-3 ps-5">ឈ្មោះសមាជិក</th>
-                        <th class="py-3 ps-5">កីឡា</th>
-                        <th class="py-3 ps-5">ការកំណត់</th>
-                      </tr>
-                    </thead>
-                    <tbody class="bg-prime">
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 align-middle"><span class="ff">01</span> មិថុនា <span
-                            class="ff">2025</span></td>
-                        <td class="py-3 ps-5 ff align-middle">01:00 PM - 03:00 PM</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">John Smith</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">Football</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <button class="btn p-0 text-main me-3"><i class="bi bi-pencil"></i></button>
-                          <button class="btn p-0 text-danger"><i class="bi bi-trash"></i></button>
-                        </td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 align-middle"><span class="ff">02</span> មិថុនា <span
-                            class="ff">2025</span></td>
-                        <td class="py-3 ps-5 ff align-middle">08:00 AM - 10:00 PM</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">David Johnson</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">Football</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <button class="btn p-0 text-main me-3"><i class="bi bi-pencil"></i></button>
-                          <button class="btn p-0 text-danger"><i class="bi bi-trash"></i></button>
-                        </td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 align-middle"><span class="ff">03</span> មិថុនា <span
-                            class="ff">2025</span></td>
-                        <td class="py-3 ps-5 ff align-middle">02:00 PM - 04:00 PM</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">Sarah Williams</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">Football</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <button class="btn p-0 text-main me-3"><i class="bi bi-pencil"></i></button>
-                          <button class="btn p-0 text-danger"><i class="bi bi-trash"></i></button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Messages -->
-          <div class="tab-pane fade" id="tab-messages">
-            <div class="card mb-4 border-0">
-              <div
-                class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-8">
-                <h4 class="mb-0 text-nowrap">បញ្ជីសមាជិក</h4>
-                <div class="position-relative">
-                  <input type="text" class="form-control bg-prime fs-text text-second ps-7" placeholder="ស្វែងរកសមាជិក">
-                  <i class="bi bi-search position-absolute text-gold icon-input tran-y"></i>
-                </div>
-              </div>
-              <div class="card-body bg-prime">
-                <div class="table-responsive">
-                  <table class="table mb-0 text-prime text-nowrap">
-                    <thead>
-                      <tr class="border-bottom">
-                        <th class="py-3 ps-5">អត្តលេខ</th>
-                        <th class="py-3 ps-5">ឈ្មោះសមាជិក</th>
-                        <th class="py-3 ps-5">អ៊ីមែល</th>
-                        <th class="py-3 ps-5">លេខទូរស័ព្ទ</th>
-                        <th class="py-3 ps-5">ការជូនដំណឺង</th>
-                      </tr>
-                    </thead>
-                    <tbody class="bg-prime">
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">001</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">John Smith</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">john@example.com</td>
-                        <td class="py-3 ps-5 ff align-middle">012 345 678</td>
-                        <td class="py-3 ps-5 align-middle"><button
-                            class="btn btn-gold btn-sm px-3">ផ្ញើការជូនដំណឹង</button></td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">002</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">David Johnson</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">david@example.com</td>
-                        <td class="py-3 ps-5 ff align-middle">098 765 432</td>
-                        <td class="py-3 ps-5 align-middle"><button
-                            class="btn btn-gold btn-sm px-3">ផ្ញើការជូនដំណឹង</button></td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">003</td>
-                        <td class="py-3 ps-5 ff align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">Sarah Williams</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">sarah@example.com</td>
-                        <td class="py-3 ps-5 ff align-middle">017 234 567</td>
-                        <td class="py-3 ps-5 align-middle"><button
-                            class="btn btn-gold btn-sm px-3">ផ្ញើការជូនដំណឹង</button></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </div>
@@ -777,8 +790,20 @@
       });
     });
   </script>
+  <!-- Many Toast -->
   <script>
+    function showToast(id) {
+      const toastEl = document.getElementById(id);
+      const toast = new bootstrap.Toast(toastEl, { delay: 2000, autohide: true }); // 2000ms = 2s
+      toast.show();
+    }
 
+    document.getElementById("favoriteBtn1").addEventListener("click", () => showToast("favoriteToast1"));
+    document.getElementById("favoriteBtn2").addEventListener("click", () => showToast("favoriteToast2"));
+    document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
+    document.getElementById("favoriteBtn4").addEventListener("click", () => showToast("favoriteToast4"));
+    document.getElementById("favoriteBtn5").addEventListener("click", () => showToast("favoriteToast5"));
+    document.getElementById("favoriteBtn6").addEventListener("click", () => showToast("favoriteToast6"));
   </script>
 </body>
 
