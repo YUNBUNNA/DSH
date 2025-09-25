@@ -17,30 +17,332 @@
   <link rel="stylesheet" href="../../../assets/plugins/aos/css/aos.css">
   <!-- link css custom -->
   <link rel="stylesheet" href="../../../assets/css/style.css">
-  <style>
-    .list-with-disc {
-      list-style-type: disc;
-      padding-left: 1.5rem;
+ 
+</head>
+ <style>
+    /* Hero Section */
+    .hero-section {
+      /* background: linear-gradient(135deg, #2c5530 0%, #7fb069 100%); */
+      padding: 3rem 0;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
     }
 
-    .list-with-disc .list-group-item {
-      display: list-item;
-      list-style-position: inside;
-      border-radius: 0;
-      border: none;
-      border-bottom: 1px solid var(--text-second) !important;
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="80" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="60" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
     }
 
-    .list-with-disc .list-group-item::marker {
-      color: var(--text-main);
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
-    .border-full {
-      border: 1px solid var(--text-second);
+    /* Content Card */
+    .content-card {
+      background: #fefefe;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+      margin: -2rem auto 3rem;
+      position: relative;
+      z-index: 3;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Breadcrumb */
+    .breadcrumb-custom {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 0.75rem 1.5rem;
+      margin: 0 auto 2rem;
+      width: fit-content;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .breadcrumb-custom a {
+      color: #2c5530;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb-custom a:hover {
+      color: #f4a261;
+    }
+
+    /* Hero Image */
+    .hero-image {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+      transform: rotate(2deg);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Main Title */
+    .main-title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+      margin: 2rem 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    /* Section Headers */
+    .section-header {
+      color: #2c5530;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .section-header::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #f4a261, transparent);
+      margin-left: 1rem;
+    }
+
+    .section-header i {
+      color: #f4a261;
+      margin-right: 0.75rem;
+      font-size: 1.25em;
+    }
+
+    /* Lists */
+    .ingredient-list,
+    .direction-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ingredient-list li,
+    .direction-list li {
+      background: linear-gradient(135deg, rgba(127, 176, 105, 0.1), rgba(244, 162, 97, 0.05));
+      margin-bottom: 0.75rem;
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      border-left: 4px solid #f4a261;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ingredient-list li:hover,
+    .direction-list li:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .ingredient-list li::before {
+      content: '🥗';
+      margin-right: 0.75rem;
+      font-size: 1.2em;
+    }
+
+    /* Direction Steps */
+    .step-number {
+      background: linear-gradient(135deg, #2c5530, #7fb069);
+      color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin-right: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    .direction-list li {
+      display: flex;
+      align-items: flex-start;
+      border-left-color: #2c5530;
+    }
+
+    /* Nutrition Cards */
+    .nutrition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .nutrition-card {
+      background: var(--bg-second);
+      border: 2px solid transparent;
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nutrition-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(244, 162, 97, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .nutrition-card:hover::before {
+      left: 100%;
+    }
+
+    .nutrition-card:hover {
+      border-color: #f4a261;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .nutrition-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2c5530;
+      margin-bottom: 0.5rem;
+    }
+
+    .nutrition-label {
+      color: #636e72;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Benefits Cards */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .benefit-card {
+      background: var(--bg-second);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit-card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(244, 162, 97, 0.05) 0%, transparent 70%);
+      transition: all 0.5s ease;
+      transform: scale(0);
+    }
+
+    .benefit-card:hover::after {
+      transform: scale(1);
+    }
+
+    .benefit-card:hover {
+      border-color: #f4a261;
+      transform: translateY(-8px);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: #f4a261;
+      margin-bottom: 1rem;
+    }
+
+    .benefit-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2c5530;
+      margin-bottom: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 2rem;
+      }
+
+      .content-card {
+        margin: -1rem auto 2rem;
+        padding: 1.5rem;
+      }
+
+      .nutrition-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .stagger-1 {
+      animation-delay: 0.1s;
+    }
+
+    .stagger-2 {
+      animation-delay: 0.2s;
+    }
+
+    .stagger-3 {
+      animation-delay: 0.3s;
     }
   </style>
-</head>
-
 <body class="bg-prime">
 
   <!-- header -->
@@ -367,280 +669,232 @@
       </div>
     </nav>
   </header>
-
-  <main>
-    <!-- Food Detail -->
-    <section class="pt-20 py-10 pb-2">
+  <main class="bg-third">
+    <div class="hero-section mt-10">
       <div class="container">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb fs-5 mb-5 ">
-            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">អាហារសម្រាប់បង្កើនទម្ងន់</a></li>
-            <li class="breadcrumb-item active" aria-current="page">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</li>
-          </ol>
-        </nav>
-        <div class="row g-4">
-          <!-- Image Column -->
-          <div class="col-xl-5">
-            <div class="card border-0 bg-transparent">
-              <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
-                alt="សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ" class="img-fluid rounded">
-              <div class="card-body mt-3">
-                <div class="d-flex justify-content-evenly text-prime">
-                  <h5 class="card-text text-prime"><i class="bi bi-clock me-1 text-main"></i> <span class="ff">10</span>
-                    នាទី</h5>
-                  <h5 class="card-text text-prime"><span class="ff">420</span> កាឡូរី</h5>
-                  <h5 class="card-text text-prime"><span class="ff">30g</span> ប្រូតេអ៊ីន</h5>
-                </div>
+        <div class="hero-content">
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb-custom fade-in lead">
+            <a href="#">អាហារសម្រាប់បង្កើនទម្ងន់</a>
+            <span class="mx-2">→</span>
+            <span>សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</span>
+          </nav>
+          <!-- Hero Image and Title -->
+          <div class="row align-items-center">
+            <div class="col-lg-6 fade-in  stagger-1" data-aos="fade-right">
+              <div class="hero-image">
+                <img src="../../../assets/img/food-detail/food-1.jpg"
+                  alt="Mediterranean Salmon Salad" class="img-fluid ">
               </div>
             </div>
-          </div>
-          <!-- Content Column -->
-          <div class="col-xl-7 px-4">
-            <div class="card border-0 bg-transparent">
-              <h1 class="card-title text-main fw-bold text-center">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h1>
-              <!-- Tabs -->
-              <div class="mt-4">
-                <ul class="nav nav-pills mb-4 justify-content-center gap-3" id="foodTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link link-hover active" id="ingredients-tab" data-bs-toggle="pill"
-                      data-bs-target="#ingredients" type="button" role="tab">
-                      គ្រឿងផ្សំ
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link link-hover" id="nutrition-tab" data-bs-toggle="pill"
-                      data-bs-target="#nutrition" type="button" role="tab">
-                      អាហារូបត្ថម្ភ
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link link-hover" id="benefits-tab" data-bs-toggle="pill"
-                      data-bs-target="#benefits" type="button" role="tab">
-                      ផលប្រយោជន៍
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link link-hover" id="directions-tab" data-bs-toggle="pill"
-                      data-bs-target="#directions" type="button" role="tab">
-                      របៀបធ្វើ
-                    </button>
-                  </li>
-                </ul>
-                <div class="tab-content" id="foodTabContent">
-                  <!-- Ingredients -->
-                  <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
-                    <h4 class="text-main mb-3">
-                      <i class="bi bi-list-check me-2"></i>គ្រឿងផ្សំ
-                    </h4>
-                    <ul class="list-group mb-3  list-with-disc">
-                      <li class="list-group-item bg-prime text-prime">
-                        ហ្វីលេសាម៉ុង <span class="ff">1</span> ដុំ (ប្រហែល <span class="ff">6</span> អោន)
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ស្ពៃក្ដោបចម្រុះ <span class="ff">4</span> ពែង
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ដំឡូងបារាំងខ្ចី <span class="ff">1/2</span> ពែង ចិតជាម៉ាស
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ខ្ទឹមបារាំងក្រហម <span class="ff">1/4</span> ពែង ចិតស្រទាប់
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        អូលីវក្រហម <span class="ff">1/4</span> ពែង
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ហ្វេតាឈីស <span class="ff">1/4</span> ពែង
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ផ្កាគារី <span class="ff">2</span> ស្លាបព្រា (ស្រេចចិត្ត)
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ជីរនានាខ្ចី <span class="ff">1/4</span> ពែង ចិតកាត់
-                      </li>
-                    </ul>
-
-                    <h4 class="text-main mt-3">
-                      <i class="bi bi-droplet-half me-2"></i>សម្រាប់ទឹកជ្រលក់ខ្លឹម
-                    </h4>
-                    <ul class="list-group list-with-disc">
-                      <li class="list-group-item bg-prime text-prime">
-                        ប្រេងអូលីវ <span class="ff">3</span> ស្លាបព្រា
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ទឹកក្រូចឆ្មារ <span class="ff">2</span> ស្លាបព្រា
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ម៉ាស់តាដីជូន Dijon <span class="ff">1</span> ស្លាបព្រាកាហ្វេ
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ខ្ទឹមសក្កុល <span class="ff">1</span> កំណើតតូច ច្របាច់
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        រមៀតក្ដោប <span class="ff">1/2</span> ស្លាបព្រាកាហ្វេ
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        អំបិល និងម្រេច តាមចំណង់ចិត្ត
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- Nutrition -->
-                  <div class="tab-pane fade" id="nutrition" role="tabpanel">
-                    <h4 class="text-main mb-3">
-                      <i class="bi bi-bar-chart-line me-2"></i>អាហារូបត្ថម្ភក្នុង ១ ចាន
-                    </h4>
-                    <div class="row g-3">
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">420</div>
-                          <small>កាឡូរី</small>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">30g</div>
-                          <small>ប្រូតេអ៊ីន</small>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">12g</div>
-                          <small>កាបូអ៊ីដ្រាត</small>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">32g</div>
-                          <small>ខ្លាញ់</small>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">5g</div>
-                          <small>ស្ករ</small>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-4">
-                        <div class="card border-full bg-transparent text-prime text-center p-2">
-                          <div class="fs-4 text-main ff">850mg</div>
-                          <small>សូដ្យូម</small>
-                        </div>
-                      </div>
-                    </div>
-                    <h4 class="text-main mt-3">
-                      ប្រភពជីវជាតិ:
-                    </h4>
-                    <ul class="list-group mb-3 list-with-disc p-0">
-                      <li class="list-group-item bg-prime text-prime">
-                        សាច់សាឡ្មុន: ប្រូតេអ៊ីន និងជាតិខ្លាញ់អូមេហ្គា <span class="ff">3</span>
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ប្រេងអូលីវ: ជាតិខ្លាញ់ល្អ និង វីតាមីន <span class="ff">E</span>
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ស្ពៃក្ដោប: សរសៃអាហារ វីតាមីន និងរ៉ែ
-                      </li>
-                      <li class="list-group-item bg-prime text-prime">
-                        ហ្វេតាឈីស: កាល់ស្យូម និង ប្រូតេអ៊ីន
-                      </li>
-                    </ul>
-
-                  </div>
-                  <!-- Benefits -->
-                  <div class="tab-pane fade" id="benefits" role="tabpanel">
-                    <h4 class="text-main mb-3">
-                      <i class="bi bi-heart-fill me-2"></i>ផលប្រយោជន៍អាហារូបត្ថម្ភ
-                    </h4>
-                    <div class="row g-3">
-                      <div class="col-md-6">
-                        <div class="card bg-transparent border-full text-prime p-3 text-center">
-                          <i class="bi bi-heart-pulse fs-3 text-main mb-2"></i>
-                          <h5>សុខភាពបេះដូង</h5>
-                          <p>ជាតិខ្លាញ់អូមេហ្គា ៣ ពីសាឡ្មុន អាចជួយកាត់បន្ថយហន្តារ៉ាយ និងថែទាំសុខភាពបេះដូង</p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card bg-transparent border-full text-prime p-3 text-center">
-                          <i class="bi bi-lightning-charge fs-3 text-main mb-2"></i>
-                          <h5>អាហារូបត្ថម្ភខួរក្បាល</h5>
-                          <p>ជាតិខ្លាញ់អូមេហ្គា ៣ ពីសាឡ្មុន ជួយពង្រឹងសមត្ថភាពចងចាំ និងការគិតគូរ</p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card bg-transparent border-full text-prime p-3 text-center">
-                          <i class="bi bi-droplet fs-3 text-main mb-2"></i>
-                          <h5>ការគ្រប់គ្រងទំងន់</h5>
-                          <p>ប្រូតេអ៊ីនខ្ពស់ ជួយអោយអ្នកឆ្អែតរយៈពេលយូរ និងកាត់បន្ថយការចង់ញ៉ាំ</p>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card bg-transparent border-full text-prime p-3 text-center">
-                          <i class="bi bi-shield-check fs-3 text-main mb-2"></i>
-                          <h5>ប្រព័ន្ធការពារ</h5>
-                          <p>វីតាមីន និងរ៉ែ ពីបន្លែ និងសាឡ្មុន ជួយពង្រឹងប្រព័ន្ធការពាររាងកាយ</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Directions -->
-                  <div class="tab-pane fade" id="directions" role="tabpanel">
-                    <h4 class="text-main mb-3">
-                      <i class="bi bi-journal-check me-2"></i>របៀបធ្វើ
-                    </h4>
-                    <ol class="list-group">
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">1</span> យកក្រដាសទទេជូតហ្វីលេសាម៉ុងអោយស្ងួត
-                        រួចចាក់អំបិលនិងម្រេចទៅលើសាម៉ុងពីរខាង។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">2</span> ដាក់ប្រេងអូលីវ <span class="ff">1</span>
-                        ស្លាបព្រាក្នុងខ្ទះឆ្អិនអាហារ លើភ្លើងកម្ដៅមធ្យម។
-                      </li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">3</span> ដាក់សាម៉ុងចំហៀងស្បែកឡើងលើ ហើយឆាប្រហែល <span
-                          class="ff">4-5</span> នាទី រហូតដល់មានពណ៌មាស។
-                      </li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">4</span> បើកសាម៉ុងចំហៀងមកវិញ ហើយឆាបន្ត <span
-                          class="ff">3-4</span> នាទីទៀត រហូតដល់ឆ្អិនល្អ។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">5</span> យកចេញពីភ្លើង ទុកអោយត្រជាក់ <span
-                          class="ff">2</span> នាទី មុននឹងយកទៅរលាស់ជាដុំៗ។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">6</span> ក្នុងចានធំខ្លះ លាយស្ពៃក្ដោប ដំឡូងបារាំងខ្ចី
-                        ខ្ទឹមបារាំងក្រហម អូលីវ
-                        និងផ្កាគារីចូលគ្នា។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">7</span> ក្នុងចានតូចខ្លះ
-                        លាយគ្រឿងទាំងអស់សម្រាប់ទឹកជ្រលក់ខ្លឹមអោយចូលគ្នា។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">8</span> ចាក់ទឹកជ្រលក់ខ្លឹមទៅលើសាឡាត់ ហើយកូរអោយសព្វ។</li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">9</span> ចាក់សាឡាត់ទៅក្នុងចាន <span class="ff">2</span> ចាន
-                        ដាក់សាម៉ុងដែលរលាស់ហើយ និងហ្វេតាឈីសពីលើ។
-                      </li>
-                      <li class="list-group-item bg-transparent text-prime"> <span
-                          class="ff btn-prime text-white rounded-circle d-inline-block text-center align-content-center fs-6 me-2"
-                          style="width: 25px; height: 25px;">10</span> អាចហូបបានភ្លាមៗ!</li>
-                    </ol>
-                    <div class="alert bg-gold mt-3">
-                      <i class="bi bi-lightbulb"></i> <strong>ព័ត៌មានបន្ថែម:</strong>
-                      អ្នកអាចបន្ថែមគ្រឿងផ្សំផ្សេងទៀតដូចជា ត្រសក់ ឬ ស្លឹកភ្លូក្លូវ តាមចំណង់ចិត្ត។
-                    </div>
-                  </div>
+            <div class="col-lg-6 fade-in stagger-2" data-aos="fade-left">
+              <h1 class="main-title text-prime">សាឡាត់សាលម៉ុន<br>មេឌីទែរ៉ាណេ</h1>
+              <div class="text-center">
+                <div class="d-inline-flex align-items-center bg-white bg-opacity-20 rounded-pill px-4 py-2  bg-gold">
+                  <i class="bi bi-clock me-2"></i>
+                  <span class="text-prime">៣០ នាទី</span>
+                  <span class="mx-3 text-prime">•</span>
+                  <i class="bi bi-people me-2"></i>
+                  <span class="text-prime">២ នាក់</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <section class="mt-5">
+      <div class="container bg-prime rounded-4 p-4">
+        <!-- Tabs -->
+        <div class="mt-4">
+          <!-- Navigation Pills -->
+          <ul class="nav nav-pills nav-pills-custom justify-content-center mb-4 gap-6" id="recipeTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active " id="ingredients-tab" data-bs-toggle="pill" data-bs-target="#ingredients"
+                type="button" role="tab">
+                <i class="bi bi-list-check me-2"></i>គ្រឿងផ្សំ
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="nutrition-tab" data-bs-toggle="pill" data-bs-target="#nutrition"
+                type="button" role="tab">
+                <i class="bi bi-bar-chart-line me-2"></i>អាហារូបត្ថម្ភ
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="benefits-tab" data-bs-toggle="pill" data-bs-target="#benefits" type="button"
+                role="tab">
+                <i class="bi bi-heart-fill me-2"></i>ផលប្រយោជន៍
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="directions-tab" data-bs-toggle="pill" data-bs-target="#directions"
+                type="button" role="tab">
+                <i class="bi bi-journal-check me-2"></i>របៀបធ្វើ
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="foodTabContent">
+            <!-- Ingredients -->
+            <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
+              <h4 class="section-header text-prime">
+                <i class="bi bi-basket"></i>គ្រឿងផ្សំសម្រាប់សាឡាត់
+              </h4>
+              <ul class="ingredient-list text-prime lead">
+                <li>ហ្វីលេសាម៉ុង <strong>១</strong> ដុំ (ប្រហែល <strong>៦</strong> អោន)</li>
+                <li>ស្ពៃក្ដោបចម្រុះ <strong>៤</strong> ពែង</li>
+                <li>ដំឡូងបារាំងខ្ចី <strong>១/២</strong> ពែង ចិតជាម៉ាស</li>
+                <li>ខ្ទឹមបារាំងក្រហម <strong>១/៤</strong> ពែង ចិតស្រទាប់</li>
+                <li>អូលីវក្រហម <strong>១/៤</strong> ពែង</li>
+                <li>ហ្វេតាឈីស <strong>១/៤</strong> ពែង</li>
+                <li>ផ្កាគារី <strong>២</strong> ស្លាបព្រា (ស្រេចចិត្ត)</li>
+                <li>ជីរនានាខ្ចី <strong>១/៤</strong> ពែង ចិតកាត់</li>
+              </ul>
+
+              <h4 class="section-header mt-4 text-prime">
+                <i class="bi bi-droplet-half"></i>សម្រាប់ទឹកជ្រលក់ខ្លឹម
+              </h4>
+              <ul class="ingredient-list text-prime lead ">
+                <li>ប្រេងអូលីវ <strong>៣</strong> ស្លាបព្រា</li>
+                <li>ទឹកក្រូចឆ្មារ <strong>២</strong> ស្លាបព្រា</li>
+                <li>ម៉ាស់តាដីជូន Dijon <strong>១</strong> ស្លាបព្រាកាហ្វេ</li>
+                <li>ខ្ទឹមសក្កុល <strong>១</strong> កំណើតតូច ច្របាច់</li>
+                <li>រមៀតក្ដោប <strong>១/២</strong> ស្លាបព្រាកាហ្វេ</li>
+                <li>អំបិល និងម្រេច តាមចំណង់ចិត្ត</li>
+              </ul>
+            </div>
+            <!-- Nutrition -->
+            <div class="tab-pane fade" id="nutrition" role="tabpanel">
+              <h4 class="section-header text-prime">
+                <i class="bi bi-bar-chart-line "></i>អាហារូបត្ថម្ភក្នុង ១ ចាន
+              </h4>
+              <div class="nutrition-grid ">
+                <div class="nutrition-card shadow-xs">
+                  <div class="nutrition-value text-prime">420</div>
+                  <div class="nutrition-label text-second">កាឡូរី</div>
+                </div>
+                <div class="nutrition-card shadow-xs">
+                  <div class="nutrition-value text-prime">30g</div>
+                  <div class="nutrition-label text-second">ប្រូតេអ៊ីន</div>
+                </div>
+                <div class="nutrition-card shadow-xs">
+                  <div class="nutrition-value text-prime">12g</div>
+                  <div class="nutrition-label text-second">កាបូអ៊ីដ្រាត</div>
+                </div>
+                <div class="nutrition-card shadow-xs">
+                  <div class="nutrition-value text-prime">32g</div>
+                  <div class="nutrition-label text-second">ខ្លាញ់</div>
+                </div>
+                <div class="nutrition-card shadow-xs">
+                  <div class="nutrition-value text-prime">5g</div>
+                  <div class="nutrition-label text-second">ស្ករ</div>
+                </div>
+                <div class="nutrition-card shadow-xs">
+                  <div class="nutrition-value text-prime">850mg</div>
+                  <div class="nutrition-label text-second">សូដ្យូម</div>
+                </div>
+              </div>
+
+              <h4 class="section-header text-prime">
+                <i class="bi bi-info-circle"></i>ប្រភពជីវជាតិ
+              </h4>
+              <ul class="ingredient-list text-prime lead">
+                <li>សាច់សាឡ្មុន: ប្រូតេអ៊ីន និងជាតិខ្លាញ់អូមេហ្គា <strong>៣</strong></li>
+                <li>ប្រេងអូលីវ: ជាតិខ្លាញ់ល្អ និង វីតាមីន <strong>E</strong></li>
+                <li>ស្ពៃក្ដោប: សរសៃអាហារ វីតាមីន និងរ៉ែ</li>
+                <li>ហ្វេតាឈីស: កាល់ស្យូម និង ប្រូតេអ៊ីន</li>
+              </ul>
+            </div>
+            <!-- Benefits -->
+            <div class="tab-pane fade" id="benefits" role="tabpanel">
+              <h4 class="section-header text-prime">
+                <i class="bi bi-heart-pulse"></i>ផលប្រយោជន៍អាហារូបត្ថម្ភ
+              </h4>
+              <div class="benefits-grid ">
+                <div class="benefit-card">
+                  <div class="benefit-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                  </div>
+                  <h5 class="benefit-title text-prime">សុខភាពបេះដូង</h5>
+                  <p class="text-second">ជាតិខ្លាញ់អូមេហ្គា ៣ ពីសាឡ្មុន អាចជួយកាត់បន្ថយហន្តារ៉ាយ និងថែទាំសុខភាពបេះដូង
+                  </p>
+                </div>
+                <div class="benefit-card">
+                  <div class="benefit-icon">
+                    <i class="bi bi-lightning-charge"></i>
+                  </div>
+                  <h5 class="benefit-title text-prime">អាហារូបត្ថម្ភខួរក្បាល</h5>
+                  <p class="text-second">ជាតិខ្លាញ់អូមេហ្គា ៣ ពីសាឡ្មុន ជួយពង្រឹងសមត្ថភាពចងចាំ និងការគិតគូរ</p>
+                </div>
+                <div class="benefit-card">
+                  <div class="benefit-icon">
+                    <i class="bi bi-droplet"></i>
+                  </div>
+                  <h5 class="benefit-title text-prime">ការគ្រប់គ្រងទំងន់</h5>
+                  <p class="text-second">ប្រូតេអ៊ីនខ្ពស់ ជួយអោយអ្នកឆ្អែតរយៈពេលយូរ និងកាត់បន្ថយការចង់ញ៉ាំ</p>
+                </div>
+                <div class="benefit-card">
+                  <div class="benefit-icon">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <h5 class="benefit-title text-prime">ប្រព័ន្ធការពារ</h5>
+                  <p class="text-second">វីតាមីន និងរ៉ែ ពីបន្លែ និងសាឡ្មុន ជួយពង្រឹងប្រព័ន្ធការពាររាងកាយ</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Directions -->
+            <div class="tab-pane fade" id="directions" role="tabpanel">
+              <h4 class="section-header text-prime">
+                <i class="bi bi-journal-check"></i>របៀបធ្វើតាមជំហាន
+              </h4>
+              <ol class="direction-list text-prime lead">
+                <li>
+                  <span class="step-number">1</span>
+                  <span>យកក្រដាសទទេជូតហ្វីលេសាម៉ុងអោយស្ងួត រួចចាក់អំបិលនិងម្រេចទៅលើសាម៉ុងពីរខាង។</span>
+                </li>
+                <li>
+                  <span class="step-number">2</span>
+                  <span>ដាក់ប្រេងអូលីវ <strong>១</strong> ស្លាបព្រាក្នុងខ្ទះឆ្អិនអាហារ លើភ្លើងកម្ដៅមធ្យម។</span>
+                </li>
+                <li>
+                  <span class="step-number">3</span>
+                  <span>ដាក់សាម៉ុងចំហៀងស្បែកឡើងលើ ហើយឆាប្រហែល <strong>៤-៥</strong> នាទី រហូតដល់មានពណ៌មាស។</span>
+                </li>
+                <li>
+                  <span class="step-number">4</span>
+                  <span>បើកសាម៉ុងចំហៀងមកវិញ ហើយឆាបន្ត <strong>៣-៤</strong> នាទីទៀត រហូតដល់ឆ្អិនល្អ។</span>
+                </li>
+                <li>
+                  <span class="step-number">5</span>
+                  <span>យកចេញពីភ្លើង ទុកអោយត្រជាក់ <strong>២</strong> នាទី មុននឹងយកទៅរលាស់ជាដុំៗ។</span>
+                </li>
+                <li>
+                  <span class="step-number">6</span>
+                  <span>ក្នុងចានធំខ្លះ លាយស្ពៃក្ដោប ដំឡូងបារាំងខ្ចី ខ្ទឹមបារាំងក្រហម អូលីវ និងផ្កាគារីចូលគ្នា។</span>
+                </li>
+                <li>
+                  <span class="step-number">7</span>
+                  <span>ក្នុងចានតូចខ្លះ លាយគ្រឿងទាំងអស់សម្រាប់ទឹកជ្រលក់ខ្លឹមអោយចូលគ្នា។</span>
+                </li>
+                <li>
+                  <span class="step-number">8</span>
+                  <span>ចាក់ទឹកជ្រលក់ខ្លឹមទៅលើសាឡាត់ ហើយកូរអោយសព្វ។</span>
+                </li>
+                <li>
+                  <span class="step-number">9</span>
+                  <span>ចាក់សាឡាត់ទៅក្នុងចាន <strong>២</strong> ចាន ដាក់សាម៉ុងដែលរលាស់ហើយ និងហ្វេតាឈីសពីលើ។</span>
+                </li>
+                <li>
+                  <span class="step-number">10</span>
+                  <span>អាចហូបបានភ្លាមៗ!</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
   </main>
 
