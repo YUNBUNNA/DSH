@@ -17,27 +17,13 @@
   <link rel="stylesheet" href="../../assets/plugins/aos/css/aos.css">
   <!-- link css custom -->
   <link rel="stylesheet" href="../../assets/css/style.css">
-  <style>
-    .toast {
-      display: block !important;
-      opacity: 0;
-      transform: translateX(100vw);
-      transition: opacity 0.5s, transform 0.5s;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
 </head>
 
-<body class="bg-prime">
-
-    <!-- header -->
+<body class="bg-third">
+  <!-- header -->
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
-      <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
+      <div class="container-fluid d-none d-lg-flex bg-nav p-0">
         <div class="container d-flex align-items-center justify-content-between">
           <a href="../homepage.html" class="navbar-brand px-0">
             <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
@@ -61,9 +47,9 @@
         <button
           class="navbar-toggler d-flex gap-3 align-items-center p-0 border-0 shadow-none d-block d-xl-none text-prime"
           type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation" data-aos="fade-down">
+          aria-label="Toggle navigation">
           <i class="bi bi-list fs-3"></i>
-          <a href="../homepage.html">
+          <a href="">
             <img src="../../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
           </a>
@@ -80,7 +66,7 @@
           <div class="offcanvas-body p-0">
             <ul id="off" class="nav flex-column">
               <li class="nav-item py-1">
-                <a class="nav-link text-prime" href="../homepage.html">ទំព័រដើម</a>
+                <a class="nav-link active text-prime" href="../homepage.html">ទំព័រដើម</a>
               </li>
 
               <!-- ផ្នែកកីឡា -->
@@ -121,7 +107,7 @@
                 <a class="nav-link" href="../training.html">ការហ្វឹកហាត់</a>
               </li>
               <li class="nav-item py-1">
-                <a class="nav-link active" href="../shop.html">ទំនិញ</a>
+                <a class="nav-link" href="../shop.html">ទំនិញ</a>
               </li>
               <li class="nav-item py-1">
                 <a class="nav-link" href="../event.html">ព្រឹត្តិការណ៏</a>
@@ -165,7 +151,7 @@
             </ul>
           </div>
         </div>
-        <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
+        <ul class="navbar-nav flex-row d-none d-xl-flex">
           <li class="nav-item ps-1 pe-3 py-1">
             <a href="../homepage.html" class="nav-link">ទំព័រដើម</a>
           </li>
@@ -188,7 +174,7 @@
             <a href="../training.html" class="nav-link">ការហ្វឹកហាត់</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="../shop.html" class="nav-link active">ទំនិញ</a>
+            <a href="../shop.html" class="nav-link">ទំនិញ</a>
           </li>
           <li class="nav-item px-3 py-1">
             <a href="../event.html" class="nav-link">ព្រឹត្តិការណ៏</a>
@@ -224,7 +210,7 @@
             </div>
           </li>
         </ul>
-        <ul class="navbar-nav flex-row align-items-center gap-4" data-aos="fade-down">
+        <ul class="navbar-nav flex-row align-items-center gap-4">
           <li class="nav-item">
             <a class="main-btn text-prime" id="theme-toggle">
               <i class="theme-icon bi bi-sun fs-4"></i>
@@ -241,7 +227,7 @@
             </a>
           </li>
           <li class="nav-item d-block d-lg-none">
-             <a href="../notification-page.html" class="nav-link position-relative">
+            <a href="../notification-page.html" class="nav-link position-relative">
               <i class="bi bi-bell text-prime fs-4"></i>
               <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                 style="width: 15px; height: 15px">
@@ -272,9 +258,8 @@
                   <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../allSports.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="../../assets/img/sport-poster.jpg"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../assets/img/sport-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">កីឡា</small>
@@ -287,9 +272,8 @@
                   <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../shop.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="../../assets/img/discount-poster.jpg"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../assets/img/discount-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">សម្លៀកបំពាក់</small>
@@ -302,9 +286,8 @@
                   <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../blog.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="../../assets/img/gym-poster.jpg"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../assets/img/gym-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-muted">អត្ថបទថ្មី</small>
@@ -317,7 +300,7 @@
             </div>
           </li>
           <li class="nav-item d-block d-lg-none">
-              <a href="../user.html" class="nav-link">
+            <a href="../user.html" class="nav-link">
               <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
                 class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
             </a>
@@ -339,12 +322,13 @@
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item py-2 d-block m-0" href="../user.html"><i
-                      class="bi bi-person me-1"></i> គណនី</a>
+                  <a class="dropdown-item py-2 d-block m-0" href="../user.html"><i class="bi bi-person me-1"></i>
+                    គណនី</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="../../index.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
-                  <span class="ms-7 opacity-0">a</span></a>
+                  <a class="dropdown-item py-2 d-block" href="../../index.html"><i
+                      class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
+                    <span class="ms-7 opacity-0">a</span></a>
                 </li>
               </ul>
             </div>
@@ -353,159 +337,172 @@
       </div>
     </nav>
   </header>
-
-  <!-- main -->
   <main>
-    <!-- Detail Products -->
-    <section class="vh-100 first-section product-detail">
+    <!-- Payment -->
+    <section class="first-section">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="d-flex gap-2">
-              <!-- Thumbs -->
-              <div thumbs-slider class="swiper myDetail flex-shrink-0" data-aos="fade-right" data-aos-delay="400">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide bg-second">
-                    <img src="../../assets/img/shop/shirt/shirt-3.png" class="img-fluid" />
-                  </div>
-                  <div class="swiper-slide bg-second">
-                    <img src="../../assets/img/shop/shirt/shirt-3-hover.png" class="img-fluid" />
-                  </div>
-                  <div class="swiper-slide bg-second">
-                    <img src="../../assets/img/shop/shirt/shirt-3-start.png" class="img-fluid" />
-                  </div>
+        <div class="row g-2">
+          <div class="col-lg-5">
+            <div class="card shadow-xs border-0 bg-prime">
+              <div class="card-body px-4 text-prime">
+                <h3 class="text-main border-bottom pb-4 pt-1 mb-3 text-center">
+                  សរុបការទិញ
+                </h3>
+                <div class="d-flex justify-content-between pb-3 pt-1">
+                  <h6 class="fs-title">សរុបថ្លៃទំនិញ</h6>
+                  <h6 class="fw-bolder text-danger ff fs-text">US $24.45</h6>
                 </div>
-              </div>
-              <!-- Main -->
-              <div class="swiper myDetail2 flex-grow-1 bg-second" data-aos="fade-right">
-                <div class="swiper-wrapper" data-aos="fade-right" data-aos-delay="300">
-                  <div class="swiper-slide">
-                    <img src="../../assets/img/shop/shirt/shirt-3.png" class="img-fluid" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../../assets/img/shop/shirt/shirt-3-hover.png" class="img-fluid" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="../../assets/img/shop/shirt/shirt-3-start.png" class="img-fluid" />
-                  </div>
+                <div class="d-flex justify-content-between pb-3 mb-3 border-bottom">
+                  <h6 class="fs-title">ដឹកជញ្ជូន</h6>
+                  <h6 class="fw-bolder text-danger ff fs-text">US $5.00</h6>
                 </div>
-                <!-- Navigation -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="d-flex justify-content-between pb-3 pt-1">
+                  <h6 class="fs-title">សរុបទាំងអស់</h6>
+                  <h6 class="fw-bolder text-danger ff fs-text">US $29.45</h6>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body text-prime">
-                <h3 class="card-title fw-normal ff" data-aos="fade-right">Ribbed Tank 1PK</h3>
-                <h5 class="mt-2 ff" data-aos="fade-right">
-                  <span class="text-danger fw-bold">US $16.00</span>
-                  <del class="fw-normal text-second">US $20.00</del>
-                </h5>
-                <h5 class="mt-3" data-aos="fade-right">ទំហំ</h5>
-                <div class="d-flex gap-3 text-dark ff" data-aos="fade-right" data-aos-delay="300">
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">S</p>
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">M</p>
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">L</p>
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">XL</p>
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">XLL</p>
+          <div class="col-lg-7">
+            <div class="card border-0 bg-prime shadow-xs">
+              <div class="card-body">
+                <h4 class="ff text-main mb-3">Checkout</h4>
+                <div class="d-flex gap-2 mb-3">
+                  <img src="../assets/img/aba-card.png" alt="" class="img-fluid" style="width: 120px;">
+                  <img src="../assets/img/ac-card.jpg" alt="" class="img-fluid" style="width: 120px;">
+                  <img src="../assets/img/master-card.png" alt="" class="img-fluid" style="width: 120px;">
                 </div>
-                <h5 data-aos="fade-right">បរិមាណ</h5>
-                <div class="d-flex gap-2" data-aos="fade-right" data-aos-delay="300">
-                  <button class="border-0 bg-second text-prime rounded-1 px-3 py-1"><i
-                      class="bi bi-dash fs-5"></i></button>
-                  <button class="border-0 bg-second text-prime rounded-1 px-4 py-1">1</button>
-                  <button class="border-0 bg-second text-prime rounded-1 px-3 py-1"><i
-                      class="bi bi-plus fs-5"></i></button>
-                </div>
-                <div class="d-flex mt-3 gap-2">
-                  <button type="button" class="btn btn-gold w-75 fs-text fw-medium"
-                    id="addCartBtn" data-aos="fade-right" data-aos-delay="300">ដាក់ចូលកន្ត្រក</button>
-                  <div class="toast-container position-fixed end-0" style="top: 10%;">
-                    <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
-                            class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        ទំនិញត្រូវបានបន្ថែមទៅក្នុងកន្ត្រកហើយ!
+                <form action="">
+                  <div class="row g-3 mb-3">
+                    <div class="col-12">
+                      <label for="" class="form-label fs-nav">ឈ្មោះនៅលើកាត</label>
+                      <input type="text" name="" id="" class="form-control bg-prime ps-3" placeholder="ឈ្មោះនៅលើកាត">
+                    </div>
+                    <div class="col-12">
+                      <label for="" class="form-label fs-nav">លេខកាត</label>
+                      <input type="number" placeholder="0000 0000 0000 0000" name="" id=""
+                        class="form-control bg-prime ps-3 pe-2">
+                    </div>
+                    <div class="col-12">
+                      <div class="row g-3">
+                        <div class="col-md-6">
+                          <label for="" class="form-label fs-nav">កាលបរិច្ឆេទដកហូត</label>
+                          <input type="text" name="" id="" class="form-control bg-prime ps-3" placeholder="កាលបរិច្ឆេទ">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="" class="form-label fs-nav">លេខកូដសុវត្ថិភាព</label>
+                          <input type="number" name="" id="" class="form-control bg-prime ps-3 ff pe-2"
+                            placeholder="CVC / CVV">
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <button type="button" class="bg-second text-prime border-0 rounded-2 py-1 px-3" id="favoriteBtn" data-aos="fade-right"><i
-                      class="bi bi-heart"></i></button>
-                  <div class="toast-container position-fixed end-0" style="top: 22%;">
-                    <div id="favoriteToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn p-0 ms-2" data-bs-dismiss="toast" aria-label="Close"><i
-                            class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                  <div class="d-flex justify-content-end">
+                    <button type="button" data-bs-target="#success-pay-1" data-bs-toggle="modal"
+                      class="btn btn-gold m-0 px-4 fs-nav">ទូទាត់ប្រាក់</button>
+                  </div>
+                  <!-- Invoice Modal -->
+                  <div class="modal fade" id="invoiceModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content bg-prime">
+                        <div class="modal-header border-bottom px-5">
+                          <div class="d-flex gap-3 align-items-center">
+                            <img src="../assets/img/logo2.png" alt="" style="width:70px; height:50px;"
+                              class="img-fluid object-fit-cover rounded-1">
+                          </div>
+                          <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x-lg fs-5 text-prime"></i>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="card border-0 bg-prime">
+                            <h4 class="text-main text-center">វិក្កយបត្រ</h4>
+                            <div class="card-body">
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="text-second">ឈ្មោះអ្នកទិញ:</h6>
+                                <h6 class="text-prime">លោក សុវណ្ណា</h6>
+                              </div>
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="text-second">ថ្ងៃលក់:</h6>
+                                <h6 class="text-prime"><span class="ff">21</span> តុលា <span class="ff">2025</span></h6>
+                              </div>
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="text-second">លេខទូរស័ព្ទ:</h6>
+                                <h6 class="text-prime ff">098765432</h6>
+                              </div>
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="text-second">វិធីទូទាត់:</h6>
+                                <h6 class="text-prime ff">ABA</h6>
+                              </div>
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="text-second">ឈ្មោះទំនិញ:</h6>
+                                <h6 class="text-prime">អាវកីឡា</h6>
+                              </div>
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="text-second">បរិមាណ:</h6>
+                                <h6 class="text-prime ff">3</h6>
+                              </div>
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="text-second">បញ្ចុះតម្លៃ:</h6>
+                                <h6 class="text-prime ff">10%</h6>
+                              </div>
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="text-second">តម្លៃសរុប:</h6>
+                                <h6 class="text-prime ff">$50</h6>
+                              </div>
+                            </div>
+                            <div class="d-flex justify-content-end gap-3">
+                              <button type="button" class="btn btn-gold px-5" data-bs-toggle="modal"
+                                data-bs-target="#success-save-1">រក្សាទុក</button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="accordion mt-3" id="accordionExample" data-aos="fade-right">
-                  <!-- Fabric & Material -->
-                  <div class="accordion-item bg-prime text-prime">
-                    <h2 class="accordion-header" id="headingFabric">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFabric" aria-expanded="true" aria-controls="collapseFabric">
-                        <i class="bi bi-card-text me-2"></i> ក្រណាត់ និងសម្ភារៈ
-                      </button>
-                    </h2>
-                    <div id="collapseFabric" class="accordion-collapse collapse show" aria-labelledby="headingFabric"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p class="p-0 m-1"><strong>សម្ភារៈ:</strong> 100% កប្បាស (Cotton) ដោយផ្តល់អារម្មណ៍ទន់</p>
-                        <p class="p-0 m-1"><strong>អារម្មណ៍:</strong> ទន់, ងាយស្រូបស្រូង, ឈឺសាច់កាយតិច,
-                          សាកសមសម្រាប់ហាត់ប្រាណ</p>
+
+                  <!-- Success Pay Modal -->
+                  <div class="modal fade" id="success-pay-1" tabindex="-1" aria-labelledby="success-print-label-1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content rounded-3 bg-prime">
+                        <div class="modal-header border-0 shadow-none">
+                          <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x-lg fs-5 text-prime"></i>
+                          </button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <div class="card-body">
+                            <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                              style="width: 100px; height: 100px;"></i>
+                            <h5 class="text-prime mb-7">រួចរាល់</h5>
+                            <button type="button" data-bs-target="#invoiceModal" data-bs-toggle="modal"
+                              class="btn btn-gold w-100">មើលវិក្កយបត្រ</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Performance & Comfort -->
-                  <div class="accordion-item bg-prime text-prime">
-                    <h2 class="accordion-header" id="headingPerformance">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapsePerformance" aria-expanded="false" aria-controls="collapsePerformance">
-                        <i class="bi bi-lightning me-2"></i> សមត្ថភាព និងទំហំ
-                      </button>
-                    </h2>
-                    <div id="collapsePerformance" class="accordion-collapse collapse"
-                      aria-labelledby="headingPerformance" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p class="p-0 m-1"><strong>សាកសមសម្រាប់ហាត់ប្រាណ:</strong> ងាយស្រួលក្នុងការចល័ត</p>
-                        <p class="p-0 m-1"><strong>ស្រួលពាក់:</strong> ទម្រង់សមស្រប, មិនហើរពណ៌, មិនរើសស្បែក</p>
-                        <p class="p-0 m-1"><strong>ព័ត៌មានម៉ូដែល:</strong> កម្ពស់ 180cm, ពាក់ទំហំ M</p>
+
+                  <!-- Success save Modal -->
+                  <div class="modal fade" id="success-save-1" tabindex="-1" aria-labelledby="success-print-label-1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content rounded-3 bg-prime">
+                        <div class="modal-header border-0 shadow-none">
+                          <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x-lg fs-5 text-prime"></i>
+                          </button>
+                        </div>
+                        <div class="modal-body text-center">
+                          <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                            style="width: 100px; height: 100px;"></i>
+                          <h5 class="text-prime mb-4">រួចរាល់</h5>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Shipping & Returns -->
-                  <div class="accordion-item bg-prime text-prime">
-                    <h2 class="accordion-header" id="headingShipping">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseShipping" aria-expanded="false" aria-controls="collapseShipping">
-                        <i class="bi bi-truck me-2"></i> ការដឹកជញ្ជូន និងការផ្លាស់ប្តូរ
-                      </button>
-                    </h2>
-                    <div id="collapseShipping" class="accordion-collapse collapse" aria-labelledby="headingShipping"
-                      data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        <p class="p-0 m-1"><strong>ការដឹកជញ្ជូន:</strong> 2-5 ថ្ងៃធ្វើការ</p>
-                        <p class="p-0 m-1"><strong>ការផ្លាស់ប្តូរឥតគិតថ្លៃ:</strong> ក្នុងរយៈ 30 ថ្ងៃ</p>
-                        <p class="p-0 m-1"><strong>ការតាមដាន:</strong> អាចតាមដានការបញ្ជាទិញរបស់អ្នកតាមអនឡាញបានងាយ</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -514,15 +511,8 @@
     </section>
   </main>
 
-  <!-- link bootstrap js -->
-  <script src="../../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-  <!-- link swiper js -->
-  <script src="../../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
-  <!-- link aos js -->
-  <script src="../../assets/plugins/aos/js/aos.js"></script>
-  <!-- link js custom -->
-  <script src="../../assets/js/main.js"></script>
-
 </body>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
 
 </html>

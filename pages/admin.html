@@ -132,6 +132,10 @@
       background: transparent;
     }
 
+    .bottom-4 {
+      bottom: -4%;
+    }
+
     .list-with-disc li::marker {
       color: var(--text-main);
     }
@@ -354,7 +358,7 @@
       <!-- Tab Content -->
       <main class="py-3">
         <div class="tab-content">
-          <div class="tab-pane fade" id="tab-dashboard">
+          <div class="tab-pane fade active show" id="tab-dashboard">
             <!-- Stat Cards (Dashboard) -->
             <div class="row g-3 mb-4">
               <!-- Total Members -->
@@ -630,7 +634,7 @@
                   <div class="row g-3 mb-3">
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7" id="name"
+                        <input type="text" class="form-control bg-prime fs-text ps-7" id="name"
                           placeholder="ឈ្មោះសមាជិក">
                         <i class="bi bi-person position-absolute text-gold tran-y icon-input"></i>
                       </div>
@@ -639,7 +643,7 @@
                       <div class="position-relative">
                         <select class="form-select form-control ps-3 bg-prime text-prime">
                           <option value="" disabled selected hidden>ជ្រើសរើសភេទ</option>
-                          <option>ប្រុៃ</option>
+                          <option>ប្រុស</option>
                           <option>ស្រី</option>
                         </select>
                         <i
@@ -647,22 +651,19 @@
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <input type="number" class="form-control bg-prime fs-text text-second ps-3 pe-2"
-                        placeholder="អាយុ">
+                      <input type="number" class="form-control bg-prime fs-text ps-3 pe-2" placeholder="អាយុ">
                     </div>
                   </div>
                   <div class="row g-3 mb-3">
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <input type="number" class="form-control bg-prime fs-text text-second ps-7 pe-2"
-                          placeholder="លេខទូរស័ព្ទ">
+                        <input type="number" class="form-control bg-prime fs-text ps-7 pe-2" placeholder="លេខទូរស័ព្ទ">
                         <i class="bi bi-telephone position-absolute text-gold tran-y icon-input"></i>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ថ្ងៃចូលរួម">
+                        <input type="text" class="form-control bg-prime fs-text ps-7" placeholder="ថ្ងៃចូលរួម">
                         <i class="bi bi-calendar3 position-absolute text-gold tran-y icon-input"></i>
                       </div>
                     </div>
@@ -707,7 +708,6 @@
                           <option>1:00PM</option>
                           <option>2:00PM</option>
                           <option>3:00PM</option>
-                          <option>4:00PM</option>
                         </select>
                         <i
                           class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
@@ -717,7 +717,6 @@
                       <div class="position-relative">
                         <select class="form-select form-control ps-3 bg-prime text-prime">
                           <option value="" disabled selected hidden>ជ្រើសរើសម៉ោងបញ្ចប់</option>
-                          <option>8:00AM</option>
                           <option>9:00AM</option>
                           <option>10:00AM</option>
                           <option>11:00AM</option>
@@ -779,14 +778,14 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
+                            <img src="../assets/img/profile-img/member-1.jpg" alt=""
                               style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0">សៅ សុភ័ក្រ</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 align-middle">ប្រុស</td>
                         <td class="py-3 ps-5 ff align-middle">20</td>
-                        <td class="py-3 ps-5 ff align-middle">012 876 389</td>
+                        <td class="py-3 ps-5 ff align-middle">012876389</td>
                         <td class="py-3 ps-5 align-middle">ហែលទឹក</td>
                         <td class="py-3 ps-5 align-middle">ច័ន្ទ - ព្រហស្បតិ៍</td>
                         <td class="py-3 ps-5 ff align-middle">08:00 AM - 10:00 AM</td>
@@ -805,7 +804,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-1.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">សៅ សុភ័ក្រ</h6>
@@ -852,7 +851,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-1.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">សៅ សុភ័ក្រ</h6>
@@ -883,7 +882,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-1.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">សៅ សុភ័ក្រ</h6>
@@ -901,102 +900,136 @@
                                     <div class="card-body">
                                       <form>
                                         <div class="row g-3 mb-4">
+                                          <!-- Name -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
-                                              <label for="name" class="form-label">ឈ្មោះ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="សៅ សុភ័ក្រ">
+                                              <label class="form-label">ឈ្មោះ</label>
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="សៅ សុភ័ក្រ">
                                               <i class="bi bi-person position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Gender -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
-                                              <label for="gender" class="form-label">ភេទ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ប្រុស">
+                                              <label class="form-label">ភេទ</label>
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option selected>ប្រុស</option>
+                                                <option>ស្រី</option>
+                                              </select>
                                               <i
-                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Age -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
-                                              <label for="age" class="form-label">អាយុ</label>
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-3 pe-2 f-c"
-                                                placeholder="20">
+                                              <label class="form-label">អាយុ</label>
+                                              <input type="number" class="form-control bg-prime fs-text ps-3 pe-2 f-c"
+                                                value="20">
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Phone -->
                                           <div class="col-md-4">
                                             <div class=" position-relative">
-                                              <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-7 pe-2 f-c"
-                                                placeholder="012 876 389">
+                                              <label class="form-label">លេខទូរស័ព្ទ</label>
+                                              <input type="number" class="form-control bg-prime fs-text ps-7 pe-2"
+                                                value="012876389">
                                               <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Join Date -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
-                                              <label for="join-date" class="form-label">ថ្ងៃចូលរួម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="25 តុលា 2023">
+                                              <label class="form-label">ថ្ងៃចូលរួម</label>
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="25 តុលា 2023">
                                               <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Sport -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
-                                              <label for="sport" class="form-label">កីឡា</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="ហែលទឹក">
+                                              <label class="form-label">កីឡា</label>
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option selected>ហែលទឹក</option>
+                                                <option>បាល់បោះ</option>
+                                                <option>វាយសី</option>
+                                                <option>បាល់ទះ</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-5">
+                                          <!-- Day -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
-                                              <label for="day" class="form-label">ថ្ងៃ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="ច័ន្ទ - ព្រហស្បតិ៍">
+                                              <label class="form-label">ថ្ងៃ</label>
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option selected>ច័ន្ទ - ព្រហស្បតិ៍</option>
+                                                <option>អង្គារ - សុក្រ</option>
+                                                <option>ពុធ - សៅរ៍</option>
+                                                <option>សៅរ៍ - អាទិត្យ</option>
+                                                <option>ច័ន្ទ, ពុធ, សុក្រ</option>
+                                                <option>អង្គារ, ព្រហស្បតិ៍, សៅរ៍</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Start Time -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
-                                              <label for="start-time" class="form-label">ម៉ោងចាប់ផ្ដើម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="8:00AM">
+                                              <label class="form-label">ម៉ោងចាប់ផ្ដើម</label>
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option selected>8:00AM</option>
+                                                <option>9:00AM</option>
+                                                <option>10:00AM</option>
+                                                <option>11:00AM</option>
+                                                <option>1:00PM</option>
+                                                <option>2:00PM</option>
+                                                <option>3:00PM</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- End Time -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
-                                              <label for="end-time" class="form-label">ម៉ោងបញ្ចប់</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="10:00AM">
+                                              <label class="form-label">ម៉ោងបញ្ចប់</label>
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option>9:00AM</option>
+                                                <option selected>10:00AM</option>
+                                                <option>11:00AM</option>
+                                                <option>1:00PM</option>
+                                                <option>2:00PM</option>
+                                                <option>3:00PM</option>
+                                                <option>4:00PM</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="d-flex justify-content-end">
                                           <button type="button" data-bs-toggle="modal" data-bs-target="#success-edit-1"
                                             class="btn btn-gold px-5 ms-auto" data-bs-dismiss="modal">រក្សាទុក</button>
                                         </div>
                                       </form>
-
                                     </div>
                                   </div>
                                 </div>
@@ -1054,14 +1087,14 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
+                            <img src="../assets/img/profile-img/member-3.jpg" alt=""
                               style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0">មុំ ស្រីនាង</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 align-middle">ស្រី</td>
                         <td class="py-3 ps-5 ff align-middle">21</td>
-                        <td class="py-3 ps-5 ff align-middle">098 456 123</td>
+                        <td class="py-3 ps-5 ff align-middle">098456123</td>
                         <td class="py-3 ps-5 align-middle">វាយសី</td>
                         <td class="py-3 ps-5 align-middle">ច័ន្ទ, ពុធ, សុក្រ</td>
                         <td class="py-3 ps-5 ff align-middle">02:00 PM - 04:00 PM</td>
@@ -1080,7 +1113,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">មុំ ស្រីនាង</h6>
@@ -1127,7 +1160,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">មុំ ស្រីនាង</h6>
@@ -1159,7 +1192,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">មុំ ស្រីនាង</h6>
@@ -1177,96 +1210,131 @@
                                     <div class="card-body">
                                       <form>
                                         <div class="row g-3 mb-4">
+                                          <!-- Name -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">ឈ្មោះ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="មុំ ស្រីនាង">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="មុំ ស្រីនាង">
                                               <i class="bi bi-person position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Gender -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">ភេទ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ស្រី">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option>ប្រុស</option>
+                                                <option selected>ស្រី</option>
+                                              </select>
                                               <i
-                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Age -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">អាយុ</label>
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-3 pe-2 f-c"
-                                                placeholder="21">
+                                              <input type="number" class="form-control bg-prime fs-text ps-3 pe-2 f-c"
+                                                value="21">
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Phone -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">លេខទូរស័ព្ទ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="098 456 123">
+                                              <input type="number" class="form-control bg-prime fs-text ps-7 pe-2 f-c"
+                                                value="098456123">
                                               <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Join Date -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">ថ្ងៃចូលរួម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="28 តុលា 2023">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="28 តុលា 2023">
                                               <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Sport -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">កីឡា</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="វាយសី">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option>ហែលទឹក</option>
+                                                <option selected>វាយសី</option>
+                                                <option>បាល់បោះ</option>
+                                                <option>បាល់ទះ</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-5">
+                                          <!-- Day -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">ថ្ងៃ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="ច័ន្ទ, ពុធ, សុក្រ">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option selected>ច័ន្ទ, ពុធ, សុក្រ</option>
+                                                <option>ច័ន្ទ - ព្រហស្បតិ៍</option>
+                                                <option>អង្គារ - សុក្រ</option>
+                                                <option>ពុធ - សៅរ៍</option>
+                                                <option>សៅរ៍ - អាទិត្យ</option>
+                                                <option>អង្គារ, ព្រហស្បតិ៍, សៅរ៍</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Start Time -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">ម៉ោងចាប់ផ្ដើម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="02:00 PM">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option>8:00 AM</option>
+                                                <option>9:00 AM</option>
+                                                <option>10:00 AM</option>
+                                                <option>11:00 AM</option>
+                                                <option>1:00 PM</option>
+                                                <option selected>2:00 PM</option>
+                                                <option>3:00 PM</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- End Time -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label class="form-label">ម៉ោងបញ្ចប់</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="04:00 PM">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option>9:00 AM</option>
+                                                <option>10:00 AM</option>
+                                                <option>11:00 AM</option>
+                                                <option>1:00 PM</option>
+                                                <option>2:00 PM</option>
+                                                <option>3:00 PM</option>
+                                                <option selected>4:00 PM</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="d-flex justify-content-end">
                                           <button type="button" data-bs-toggle="modal" data-bs-target="#success-edit-2"
                                             class="btn btn-gold px-5 ms-auto" data-bs-dismiss="modal">រក្សាទុក</button>
@@ -1300,6 +1368,7 @@
                               </div>
                             </div>
                           </div>
+
                           <!-- Success Modal -->
                           <div class="modal fade" id="success-edit-2" tabindex="-1"
                             aria-labelledby="success-delete-label-1" aria-hidden="true">
@@ -1328,17 +1397,17 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
+                            <img src="../assets/img/profile-img/member-2.jpg" alt=""
                               style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0">តេ វិចិត្រ</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 align-middle">ប្រុស</td>
                         <td class="py-3 ps-5 ff align-middle">18</td>
-                        <td class="py-3 ps-5 ff align-middle">015 234 678</td>
+                        <td class="py-3 ps-5 ff align-middle">015234678</td>
                         <td class="py-3 ps-5 align-middle">បាល់បោះ</td>
                         <td class="py-3 ps-5 align-middle">សៅរ៍ - អាទិត្យ</td>
-                        <td class="py-3 ps-5 ff align-middle">06:00 PM - 07:00 PM</td>
+                        <td class="py-3 ps-5 ff align-middle">03:00 PM - 04:00 PM</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">02</span> វិច្ឆិកា <span
                             class="ff">2023</span></td>
                         <td class="py-3 ps-5 align-middle">
@@ -1354,7 +1423,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-2.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">តេ វិចិត្រ</h6>
@@ -1401,7 +1470,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-2.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">តេ វិចិត្រ</h6>
@@ -1433,7 +1502,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-2.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">តេ វិចិត្រ</h6>
@@ -1451,101 +1520,138 @@
                                     <div class="card-body">
                                       <form>
                                         <div class="row g-3 mb-4">
+                                          <!-- Name -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label for="name" class="form-label">ឈ្មោះ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="តេ វិចិត្រ">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="តេ វិចិត្រ">
                                               <i class="bi bi-person position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Gender -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label for="gender" class="form-label">ភេទ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ប្រុស">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option selected>ប្រុស</option>
+                                                <option>ស្រី</option>
+                                              </select>
                                               <i
-                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                                class="bi bi-chevron-down text-gold position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Age -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label for="age" class="form-label">អាយុ</label>
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-3 pe-2 f-c"
-                                                placeholder="18">
+                                              <input type="number" class="form-control bg-prime fs-text ps-3 pe-2 f-c"
+                                                value="18">
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Phone -->
                                           <div class="col-md-4">
-                                            <div class=" position-relative">
+                                            <div class="position-relative">
                                               <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-7 pe-2 f-c"
-                                                placeholder="015 234 678">
+                                              <input type="number" class="form-control bg-prime fs-text ps-7 pe-2 f-c"
+                                                value="015234678">
                                               <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Join Date -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label for="join-date" class="form-label">ថ្ងៃចូលរួម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="02 វិច្ឆិកា 2023">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="02 វិច្ឆិកា 2023">
                                               <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Sport -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label for="sport" class="form-label">កីឡា</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="បាល់បោះ">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option selected>បាល់បោះ</option>
+                                                <option>ហែលទឹក</option>
+                                                <option>វាយសី</option>
+                                                <option>បាល់ទះ</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-gold position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-5">
+                                          <!-- Day -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label for="day" class="form-label">ថ្ងៃ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="សៅរ៍ - អាទិត្យ">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option selected>សៅរ៍ - អាទិត្យ</option>
+                                                <option>ច័ន្ទ - ព្រហស្បតិ៍</option>
+                                                <option>អង្គារ - សុក្រ</option>
+                                                <option>ពុធ - សៅរ៍</option>
+                                                <option>ច័ន្ទ, ពុធ, សុក្រ</option>
+                                                <option>អង្គារ, ព្រហស្បតិ៍, សៅរ៍</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-gold position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Start Time -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label for="start-time" class="form-label">ម៉ោងចាប់ផ្ដើម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="06:00 PM">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option>8:00 AM</option>
+                                                <option>9:00 AM</option>
+                                                <option>10:00 AM</option>
+                                                <option>11:00 AM</option>
+                                                <option>1:00 PM</option>
+                                                <option>2:00 PM</option>
+                                                <option selected>3:00 PM</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-gold position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
 
+                                          <!-- End Time -->
                                           <div class="col-md-4">
                                             <div class="position-relative">
                                               <label for="end-time" class="form-label">ម៉ោងបញ្ចប់</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="07:00 PM">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option>9:00 AM</option>
+                                                <option>10:00 AM</option>
+                                                <option>11:00 AM</option>
+                                                <option>1:00 PM</option>
+                                                <option>2:00 PM</option>
+                                                <option>3:00 PM</option>
+                                                <option selected>4:00 PM</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-gold position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="d-flex justify-content-end">
                                           <button type="button" data-bs-toggle="modal" data-bs-target="#success-edit-3"
                                             class="btn btn-gold px-5 ms-auto">រក្សាទុក</button>
                                         </div>
                                       </form>
+
+
                                     </div>
                                   </div>
                                 </div>
@@ -1960,21 +2066,19 @@
                   <div class="row g-3 mb-3">
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ឈ្មោះគ្រូបង្វឹក">
+                        <input type="text" class="form-control bg-prime fs-text ps-7" placeholder="ឈ្មោះគ្រូបង្វឹក">
                         <i class="bi bi-person position-absolute text-gold tran-y icon-input"></i>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <input type="email" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="អ៊ីមែលគ្រូបង្វឹក">
+                        <input type="email" class="form-control bg-prime fs-text ps-7" placeholder="អ៊ីមែលគ្រូបង្វឹក">
                         <i class="bi bi-envelope position-absolute text-gold tran-y icon-input"></i>
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <input type="number" class="form-control bg-prime fs-text text-second ps-7 pe-2"
+                        <input type="number" class="form-control bg-prime fs-text ps-7 pe-2"
                           placeholder="លេខ​ទួរស័ព្ទគ្រូបង្វឹក">
                         <i class="bi bi-telephone position-absolute text-gold tran-y icon-input"></i>
                       </div>
@@ -1994,8 +2098,7 @@
                     </div>
                     <div class="col-md-4">
                       <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ថ្ងៃចូលរួម">
+                        <input type="text" class="form-control bg-prime fs-text ps-7" placeholder="ថ្ងៃចូលរួម">
                         <i class="bi bi-calendar3 position-absolute text-gold tran-y icon-input"></i>
                       </div>
                     </div>
@@ -2035,7 +2138,7 @@
                 class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-8">
                 <h4 class="mb-0">បញ្ជីគ្រូបង្វឹក</h4>
                 <div class="position-relative">
-                  <input type="text" class="form-control bg-prime fs-text text-second ps-7" placeholder="ស្វែងរកឈ្មោះ">
+                  <input type="text" class="form-control bg-prime fs-text ps-7" placeholder="ស្វែងរកឈ្មោះ">
                   <i class="bi bi-search position-absolute text-gold icon-input tran-y"></i>
                 </div>
               </div>
@@ -2057,14 +2160,14 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
+                            <img src="../assets/img/sports/swimming-coach-3.jpg" alt=""
                               style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0 ff">Michael Phelps</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 align-middle">ប្រុស</td>
-                        <td class="py-3 ps-5 ff align-middle">phelps.coach@gmail.com</td>
-                        <td class="py-3 ps-5 ff align-middle">02025550145</td>
+                        <td class="py-3 ps-5 ff align-middle">michael.phelpsh@gmail.com</td>
+                        <td class="py-3 ps-5 ff align-middle">096234543</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">25</span> តុលា <span class="ff">2023</span>
                         </td>
                         <td class="py-3 ps-5 align-middle">ហែលទឹក</td>
@@ -2083,7 +2186,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/sports/swimming-coach-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Michael Phelps</h6>
@@ -2124,7 +2227,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/sports/swimming-coach-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Michael Phelps</h6>
@@ -2154,7 +2257,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/sports/swimming-coach-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Michael Phelps</h6>
@@ -2172,67 +2275,75 @@
                                     <div class="card-body">
                                       <form>
                                         <div class="row g-3 mb-4">
+                                          <!-- Name -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="name" class="form-label">ឈ្មោះ</label>
-                                              <input type="text"
-                                                class="form-control ff bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="Michael Phelps">
+                                              <input type="text" class="form-control ff bg-prime fs-text ps-7 f-c"
+                                                value="Michael Phelps">
                                               <i class="bi bi-person position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Gender -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="gender" class="form-label">ភេទ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ប្រុស">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option value="male" selected>ប្រុស</option>
+                                                <option value="female">ស្រី</option>
+                                              </select>
                                               <i
-                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Email -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="email" class="form-label">អ៊ីមែល</label>
-                                              <input type="email"
-                                                class="form-control ff bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="phelps.coach@gmail.com">
+                                              <input type="email" class="form-control ff bg-prime fs-text ps-7 f-c"
+                                                value="michael.phelps@gmail.com">
                                               <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Phone -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-7 pe-2 f-c"
-                                                placeholder="02025550145">
+                                              <input type="number" class="form-control bg-prime fs-text ps-7 pe-2 f-c"
+                                                value="096234543">
                                               <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Join Date -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="join-date" class="form-label">ថ្ងៃចូលរួម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="25 តុលា 2023">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="25 តុលា 2023">
                                               <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Sport -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="sport" class="form-label">កីឡា</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="ហែលទឹក">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option value="swimming" selected>ហែលទឹក</option>
+                                                <option value="basketball">បាល់បោះ</option>
+                                                <option value="volleyball">វាយសី</option>
+                                                <option value="football">បាល់ទះ</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
@@ -2242,8 +2353,6 @@
                                             class="btn btn-gold px-5 ms-auto">រក្សាទុក</button>
                                         </div>
                                       </form>
-
-
                                     </div>
                                   </div>
                                 </div>
@@ -2295,14 +2404,14 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 ff align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
+                            <img src="../assets/img/profile-img/member-4.jpg" alt=""
                               style="width:50px; height:50px;" class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0 ff">Serena Williams</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 align-middle">ស្រី</td>
                         <td class="py-3 ps-5 ff align-middle">serena.williams@gmail.com</td>
-                        <td class="py-3 ps-5 ff align-middle">02025550177</td>
+                        <td class="py-3 ps-5 ff align-middle">087276239</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">10</span> វិច្ឆិកា <span
                             class="ff">2023</span></td>
                         <td class="py-3 ps-5 align-middle">វាយសី</td>
@@ -2321,7 +2430,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-4.jpg"
                                       alt="" style="width:50px; height:50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Serena Williams</h6>
@@ -2362,7 +2471,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-4.jpg"
                                       alt="" style="width:50px; height:50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Serena Williams</h6>
@@ -2392,7 +2501,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-4.jpg"
                                       alt="" style="width:50px; height:50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Serena Williams</h6>
@@ -2410,67 +2519,75 @@
                                     <div class="card-body">
                                       <form>
                                         <div class="row g-3 mb-4">
+                                          <!-- Name -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="name" class="form-label">ឈ្មោះ</label>
-                                              <input type="text"
-                                                class="form-control ff bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="Serena Williams">
+                                              <input type="text" class="form-control ff bg-prime fs-text ps-7 f-c"
+                                                value="Serena Williams">
                                               <i class="bi bi-person position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Gender -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="gender" class="form-label">ភេទ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ស្រី">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option value="female" selected>ស្រី</option>
+                                                <option value="male">ប្រុស</option>
+                                              </select>
                                               <i
-                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Email -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="email" class="form-label">អ៊ីមែល</label>
-                                              <input type="email"
-                                                class="form-control ff bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="serena.williams@gmail.com">
+                                              <input type="email" class="form-control ff bg-prime fs-text ps-7 f-c"
+                                                value="serena.williams@gmail.com">
                                               <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Phone -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-7 pe-2 f-c"
-                                                placeholder="02025550177">
+                                              <input type="number" class="form-control bg-prime fs-text ps-7 pe-2 f-c"
+                                                value="087276239">
                                               <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Join Date -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="join-date" class="form-label">ថ្ងៃចូលរួម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="10 វិច្ឆិកា 2023">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="10 វិច្ឆិកា 2023">
                                               <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
 
+                                          <!-- Sport -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="sport" class="form-label">កីឡា</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="វាយសី">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option value="volleyball" selected>វាយសី</option>
+                                                <option value="swimming">ហែលទឹក</option>
+                                                <option value="basketball">បាល់បោះ</option>
+                                                <option value="football">បាល់ទះ</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
@@ -2480,6 +2597,7 @@
                                             class="btn btn-gold px-5 ms-auto">រក្សាទុក</button>
                                         </div>
                                       </form>
+
                                     </div>
                                   </div>
                                 </div>
@@ -2532,14 +2650,14 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 ff align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
+                            <img src="../assets/img/sports/basketball-coach-3.jpg" alt=""
                               style="width:50px; height:50px;" class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0 ff">Stephen Curry</h6>
                           </div>
                         </td>
                         <td class="py-3 ps-5 align-middle">ប្រុស</td>
                         <td class="py-3 ps-5 ff align-middle">steph.curry@gmail.com</td>
-                        <td class="py-3 ps-5 ff align-middle">02025550199</td>
+                        <td class="py-3 ps-5 ff align-middle">086954754</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">5</span> មិថុនា <span class="ff">2024</span>
                         </td>
                         <td class="py-3 ps-5 align-middle">បាល់បោះ</td>
@@ -2557,7 +2675,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/sports/basketball-coach-3.jpg"
                                       alt="" style="width:50px; height:50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Stephen Curry</h6>
@@ -2596,7 +2714,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/sports/basketball-coach-3.jpg"
                                       alt="" style="width:50px; height:50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Stephen Curry</h6>
@@ -2626,7 +2744,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/sports/basketball-coach-3.jpg"
                                       alt="" style="width:50px; height:50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime ff">Stephen Curry</h6>
@@ -2644,64 +2762,75 @@
                                     <div class="card-body">
                                       <form>
                                         <div class="row g-3 mb-4">
+                                          <!-- Name -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="name" class="form-label">ឈ្មោះ</label>
-                                              <input type="text"
-                                                class="form-control ff bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="Stephen Curry">
+                                              <input type="text" class="form-control ff bg-prime fs-text ps-7 f-c"
+                                                value="Stephen Curry">
                                               <i class="bi bi-person position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
+
+                                          <!-- Gender -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="gender" class="form-label">ភេទ</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ប្រុស">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option value="male" selected>ប្រុស</option>
+                                                <option value="female">ស្រី</option>
+                                              </select>
                                               <i
-                                                class="bi bi-gender-ambiguous position-absolute text-gold icon-input"></i>
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Email -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="email" class="form-label">អ៊ីមែល</label>
-                                              <input type="email"
-                                                class="form-control ff bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="steph.curry@gmail.com">
+                                              <input type="email" class="form-control ff bg-prime fs-text ps-7 f-c"
+                                                value="steph.curry@gmail.com">
                                               <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
+
+                                          <!-- Phone -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-7 pe-2 f-c"
-                                                placeholder="02025550199">
+                                              <input type="number" class="form-control bg-prime fs-text ps-7 pe-2 f-c"
+                                                value="086954754">
                                               <i class="bi bi-telephone position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
                                         </div>
 
                                         <div class="row g-3 mb-4">
+                                          <!-- Join Date -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="join-date" class="form-label">ថ្ងៃចូលរួម</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="5 មិថុនា 2024">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="5 មិថុនា 2024">
                                               <i class="bi bi-calendar3 position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
+
+                                          <!-- Sport -->
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <label for="sport" class="form-label">កីឡា</label>
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-3 f-c"
-                                                placeholder="បាល់បោះ">
+                                              <select class="form-select form-control ps-3 bg-prime text-prime">
+                                                <option value="basketball" selected>បាល់បោះ</option>
+                                                <option value="swimming">ហែលទឹក</option>
+                                                <option value="volleyball">វាយសី</option>
+                                                <option value="football">បាល់ទះ</option>
+                                              </select>
+                                              <i
+                                                class="bi bi-chevron-down text-prime position-absolute end-0 translate-middle-y me-3 bottom-4"></i>
                                             </div>
                                           </div>
                                         </div>
@@ -2711,6 +2840,7 @@
                                             class="btn btn-gold px-5 ms-auto">រក្សាទុក</button>
                                         </div>
                                       </form>
+
                                     </div>
                                   </div>
                                 </div>
@@ -2773,7 +2903,7 @@
             <!-- Add / Edit Schedule Form -->
             <div class="card mb-4 shadow-xs border-0 bg-prime">
               <div class="card-header border-0 py-3 text-main bg-prime border-bottom mb-2">
-                <h4 class="mb-0">បន្ថែម / កែប្រែ កាលវិភាគ</h4>
+                <h4 class="mb-0">បង្កើតកាលវិភាគ</h4>
               </div>
               <div class="card-body">
                 <form>
@@ -2899,29 +3029,26 @@
             <!-- Add / Edit Event Form -->
             <div class="card mb-4 shadow-xs bg-prime border-0">
               <div class="card-header py-3 border-0 border-bottom bg-prime text-main mb-2">
-                <h4 class="mb-0">បន្ថែម / កែប្រែ ព្រឹត្តិការណ៍</h4>
+                <h4 class="mb-0">បង្កើតព្រឹត្តិការណ៍</h4>
               </div>
               <div class="card-body">
                 <form>
                   <div class="row g-3 mb-3">
                     <div class="col-md-6">
                       <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ឈ្មោះព្រឹត្តិការណ៍">
+                        <input type="text" class="form-control bg-prime fs-text ps-7" placeholder="ឈ្មោះព្រឹត្តិការណ៍">
                         <i class="bi bi-activity position-absolute text-gold icon-input tran-y"></i>
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ថ្ងៃចាប់ផ្ដើម">
+                        <input type="text" class="form-control bg-prime fs-text ps-7" placeholder="ថ្ងៃចាប់ផ្ដើម">
                         <i class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ថ្ងៃបញ្ចប់">
+                        <input type="text" class="form-control bg-prime fs-text ps-7" placeholder="ថ្ងៃបញ្ចប់">
                         <i class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
                       </div>
                     </div>
@@ -2930,14 +3057,13 @@
                     <div class="row g-3 mb-3">
                       <div class="col-md-9">
                         <div class="position-relative">
-                          <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                            placeholder="ទីតាំង">
+                          <input type="text" class="form-control bg-prime fs-text ps-7" placeholder="ទីតាំង">
                           <i class="bi bi-geo-alt position-absolute text-gold icon-input tran-y"></i>
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="position-relative">
-                          <input type="text" class="form-control bg-prime fs-text text-second ps-3" placeholder="តម្លៃ">
+                          <input type="text" class="form-control bg-prime fs-text ps-3" placeholder="តម្លៃ">
                         </div>
                       </div>
                     </div>
@@ -3059,21 +3185,20 @@
                                           <div class="col-12">
                                             <label class="form-label">ឈ្មោះព្រឹត្តិការណ៍</label>
                                             <div class="position-relative">
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ការប្រកួតបាល់ទាត់">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="ការប្រកួតបាល់ទាត់">
                                               <i
                                                 class="bi bi-activity position-absolute text-gold icon-input tran-y"></i>
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="row g-3 mb-3">
                                           <div class="col-md-6">
                                             <label class="form-label">ថ្ងៃចាប់ផ្ដើម</label>
                                             <div class="position-relative">
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="15 តុលា 2023">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="15 តុលា 2023">
                                               <i
                                                 class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
                                             </div>
@@ -3081,38 +3206,38 @@
                                           <div class="col-md-6">
                                             <label class="form-label">ថ្ងៃបញ្ចប់</label>
                                             <div class="position-relative">
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="16 តុលា 2023">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="16 តុលា 2023">
                                               <i
                                                 class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="row g-3 mb-4">
                                           <div class="col-md-6">
                                             <label class="form-label">ទីតាំង</label>
                                             <div class="position-relative">
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ខេត្តតាកែវ">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="ខេត្តតាកែវ">
                                               <i
                                                 class="bi bi-geo-alt position-absolute text-gold icon-input tran-y"></i>
                                             </div>
                                           </div>
                                           <div class="col-md-6">
                                             <label class="form-label">តម្លៃ</label>
-                                            <input type="text"
-                                              class="form-control f-c bg-prime fs-text text-second ps-3"
-                                              placeholder="$30">
+                                            <input type="text" class="form-control f-c bg-prime fs-text ps-3"
+                                              value="$30">
                                           </div>
                                         </div>
+
                                         <div class="d-flex justify-content-end">
                                           <button type="button" class="btn btn-gold px-5" data-bs-toggle="modal"
                                             data-bs-target="#success-edit-unique"
                                             data-bs-dismiss="modal">រក្សាទុក</button>
                                         </div>
                                       </form>
+
                                     </div>
                                   </div>
                                 </div>
@@ -3266,21 +3391,20 @@
                                           <div class="col-12">
                                             <label class="form-label">ឈ្មោះព្រឹត្តិការណ៍</label>
                                             <div class="position-relative">
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ការប្រកួតហែលទឹក">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="ការប្រកួតហែលទឹក">
                                               <i
                                                 class="bi bi-activity position-absolute text-gold icon-input tran-y"></i>
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="row g-3 mb-3">
                                           <div class="col-md-6">
                                             <label class="form-label">ថ្ងៃចាប់ផ្ដើម</label>
                                             <div class="position-relative">
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="18 តុលា 2023">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="18 តុលា 2023">
                                               <i
                                                 class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
                                             </div>
@@ -3288,37 +3412,37 @@
                                           <div class="col-md-6">
                                             <label class="form-label">ថ្ងៃបញ្ចប់</label>
                                             <div class="position-relative">
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="22 តុលា 2023">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="22 តុលា 2023">
                                               <i
                                                 class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="row g-3 mb-4">
                                           <div class="col-md-6">
                                             <label class="form-label">ទីតាំង</label>
                                             <div class="position-relative">
-                                              <input type="text"
-                                                class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                                placeholder="ស្ទឺងមានជ័យ">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="ស្ទឺងមានជ័យ">
                                               <i
                                                 class="bi bi-geo-alt position-absolute text-gold icon-input tran-y"></i>
                                             </div>
                                           </div>
                                           <div class="col-md-6">
                                             <label class="form-label">តម្លៃ</label>
-                                            <input type="text"
-                                              class="form-control f-c bg-prime fs-text text-second ps-3"
-                                              placeholder="$25">
+                                            <input type="text" class="form-control f-c bg-prime fs-text ps-3"
+                                              value="$25">
                                           </div>
                                         </div>
+
                                         <div class="d-flex justify-content-end">
                                           <button type="button" class="btn btn-gold px-5" data-bs-toggle="modal"
                                             data-bs-target="#success-edit-7" data-bs-dismiss="modal">រក្សាទុក</button>
                                         </div>
                                       </form>
+
                                     </div>
                                   </div>
                                 </div>
@@ -3497,7 +3621,7 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
+                            <img src="../assets/img/profile-img/member-6.jpg" alt=""
                               style="width:50px; height:50px;" class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0">សោភា ចំរើន</h6>
                           </div>
@@ -3519,7 +3643,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-6.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">សោភា ចំរើន</h6>
@@ -3560,7 +3684,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-6.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">សោភា ចំរើន</h6>
@@ -3580,15 +3704,15 @@
                                         <div class="row g-3 mb-3">
                                           <div class="col-md-6">
                                             <div class="position-relative">
-                                              <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                                                placeholder="ឈ្មោះអ្នកចូលរួម">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="សោភា ចំរើន">
                                               <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
                                             </div>
                                           </div>
                                           <div class="col-md-6">
                                             <div class="position-relative">
-                                              <input type="email" class="form-control bg-prime fs-text text-second ps-7"
-                                                placeholder="អ៊ីមែល">
+                                              <input type="email" class="form-control bg-prime fs-text ps-7 ff"
+                                                value="sopha@gmail.com">
                                               <i
                                                 class="bi bi-envelope position-absolute text-gold icon-input tran-y"></i>
                                             </div>
@@ -3598,9 +3722,8 @@
                                         <div class="row g-3 mb-3">
                                           <div class="col-md-6">
                                             <div class="position-relative">
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-7 pe-2"
-                                                placeholder="លេខទូរស័ព្ទ">
+                                              <input type="number" class="form-control bg-prime fs-text ps-7 pe-2 ff"
+                                                value="0961234567">
                                               <i
                                                 class="bi bi-telephone position-absolute text-gold icon-input tran-y"></i>
                                             </div>
@@ -3608,21 +3731,22 @@
                                           <div class="col-md-6">
                                             <div class="position-relative">
                                               <select class="form-select form-control ps-3 bg-prime text-prime">
-                                                <option value="" disabled selected hidden>ជ្រើសរើសព្រឹត្តិការណ៍</option>
-                                                <option>ការប្រកួតប្រណាំងកង់</option>
-                                                <option>ការប្រកួតវាយសី</option>
-                                                <option>ការប្រកួតបាល់ទាត់</option>
+                                                <option value="football" selected>ការប្រកួតបាល់ទាត់</option>
+                                                <option value="cycling">ការប្រកួតប្រណាំងកង់</option>
+                                                <option value="tennis">ការប្រកួតវាយសី</option>
                                               </select>
                                               <i
                                                 class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="d-flex justify-content-end">
                                           <button type="button" class="btn btn-gold px-5" data-bs-toggle="modal"
                                             data-bs-target="#success-edit-8" data-bs-dismiss="modal">រក្សាទុក</button>
                                         </div>
                                       </form>
+
                                     </div>
                                   </div>
                                 </div>
@@ -3637,7 +3761,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-6.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">សោភា ចំរើន</h6>
@@ -3712,7 +3836,7 @@
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
+                            <img src="../assets/img/profile-img/member-3.jpg" alt=""
                               style="width:50px; height:50px;" class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0">ម៉ារី អូន</h6>
                           </div>
@@ -3734,7 +3858,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">ម៉ារី អូន</h6>
@@ -3775,7 +3899,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">ម៉ារី អូន</h6>
@@ -3795,16 +3919,15 @@
                                         <div class="row g-3 mb-3">
                                           <div class="col-md-6">
                                             <div class="position-relative">
-                                              <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                                                placeholder="ឈ្មោះអ្នកចូលរួម" value="ម៉ារី អូន">
+                                              <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                                value="ម៉ារី អូន">
                                               <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
                                             </div>
                                           </div>
                                           <div class="col-md-6">
                                             <div class="position-relative">
-                                              <input type="email"
-                                                class="form-control ff  bg-prime fs-text text-prime ps-7"
-                                                placeholder="អ៊ីមែល" value="mary.on@gmail.com">
+                                              <input type="email" class="form-control ff bg-prime fs-text ps-7"
+                                                value="mary.on@gmail.com">
                                               <i
                                                 class="bi bi-envelope position-absolute text-gold icon-input tran-y"></i>
                                             </div>
@@ -3814,9 +3937,8 @@
                                         <div class="row g-3 mb-3">
                                           <div class="col-md-6">
                                             <div class="position-relative">
-                                              <input type="number"
-                                                class="form-control bg-prime fs-text text-second ps-7 pe-2"
-                                                placeholder="លេខទូរស័ព្ទ" value="0976543210">
+                                              <input type="number" class="form-control bg-prime fs-text ps-7 pe-2 f-c"
+                                                value="0976543210">
                                               <i
                                                 class="bi bi-telephone position-absolute text-gold icon-input tran-y"></i>
                                             </div>
@@ -3825,9 +3947,9 @@
                                             <div class="position-relative">
                                               <select class="form-select form-control ps-3 bg-prime text-prime">
                                                 <option value="" disabled hidden>ជ្រើសរើសព្រឹត្តិការណ៍</option>
-                                                <option>ការប្រកួតប្រណាំងកង់</option>
-                                                <option>ការប្រកួតវាយសី</option>
-                                                <option selected>ការប្រកួតហែលទឹក</option>
+                                                <option value="cycling">ការប្រកួតប្រណាំងកង់</option>
+                                                <option value="tennis">ការប្រកួតវាយសី</option>
+                                                <option value="swimming" selected>ការប្រកួតហែលទឹក</option>
                                               </select>
                                               <i
                                                 class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
@@ -3840,6 +3962,7 @@
                                             data-bs-target="#success-edit-9" data-bs-dismiss="modal">រក្សាទុក</button>
                                         </div>
                                       </form>
+
                                     </div>
                                   </div>
                                 </div>
@@ -3854,7 +3977,7 @@
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg"
+                                    <img src="../assets/img/profile-img/member-3.jpg"
                                       alt="" style="width: 50px; height: 50px;"
                                       class="img-fluid object-fit-cover rounded-1">
                                     <h6 class="mb-0 text-prime">ម៉ារី អូន</h6>
@@ -4215,7 +4338,7 @@
                   </div>
                   <div class="modal-body">
                     <div class="card border-0 bg-prime">
-                      <h5 class="text-main text-center">វិក្កយបត្រ</h5>
+                      <h4 class="text-main text-center">វិក្កយបត្រ</h4>
                       <div class="card-body">
                         <div class="d-flex justify-content-between mb-2">
                           <h6 class="text-second">ឈ្មោះអ្នកទិញ:</h6>
@@ -4824,25 +4947,24 @@
             </div>
           </div>
           <!-- eidt website -->
-          <div class="tab-pane fade active show" id="tab-edit-website">
+          <div class="tab-pane fade" id="tab-edit-website">
             <div class="container p-0">
               <div class="card border-0 shadow-xs bg-prime mb-3">
                 <h2 class="text-main text-center my-4">កំណត់រចនាបថគេហទំព័រ</h2>
                 <ul class="nav nav-pills mb-3 d-flex justify-content-center gap-3" id="pills-tab" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active ff" id="pills-home-tab" data-bs-toggle="pill"
-                      data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                      aria-selected="true">Banner</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link ff" id="pills-profile-tab" data-bs-toggle="pill"
+                    <button class="nav-link active ff" id="pills-profile-tab" data-bs-toggle="pill"
                       data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
                       aria-selected="false">Logo</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link ff" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                      type="button" role="tab" aria-controls="pills-home" aria-selected="true">Banner</button>
                   </li>
                 </ul>
               </div>
               <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
                   tabindex="0">
                   <div class="card border-0 bg-prime">
                     <div
@@ -4870,7 +4992,7 @@
                                       <div class="position-relative">
                                         <label class="form-label">ចំណងជើង</label>
                                         <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                                          id="emaill" placeholder="ចំណងជើង Banner">
+                                          placeholder="ចំណងជើង Banner">
                                         <i class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
                                       </div>
                                     </div>
@@ -4919,7 +5041,7 @@
                                           class="bi bi-card-image"></i> Upload</button>
                                     </li>
                                   </ul>
-  
+
                                   <div class="tab-content" id="pills-tabContent-website">
                                     <div class="tab-pane fade show active" id="content-banner" role="tabpanel"
                                       aria-labelledby="tab-banner" tabindex="0">
@@ -4928,7 +5050,8 @@
                                           <div class="position-relative">
                                             <input type="text" class="form-control bg-prime fs-text text-second ps-6"
                                               placeholder="រូបភាព URL">
-                                            <i class="bi bi-link-45deg position-absolute text-gold icon-input tran-y"></i>
+                                            <i
+                                              class="bi bi-link-45deg position-absolute text-gold icon-input tran-y"></i>
                                           </div>
                                         </div>
                                       </div>
@@ -4940,7 +5063,7 @@
                                           <input class="form-control ps-2 ff text-prime" type="file" id="customFile">
                                         </div>
                                       </div>
-  
+
                                     </div>
                                   </div>
                                 </div>
@@ -4948,7 +5071,8 @@
                                   <button type="button" class="btn btn-danger text-white px-4"
                                     data-bs-dismiss="modal">បោះបង់</button>
                                   <button type="button" data-bs-toggle="modal" data-bs-target="#success-create-banner"
-                                    class="btn btn-primary text-white px-4">បង្កើត <span class="ff">Banner</span></button>
+                                    class="btn btn-primary text-white px-4">បង្កើត <span
+                                      class="ff">Banner</span></button>
                                 </div>
                               </div>
                             </div>
@@ -4979,9 +5103,11 @@
                         <div class="col-lg-4">
                           <div class="card border-0 bg-prime shadow-xs rounded-3">
                             <div class="position-relative">
-                              <img src="../assets/img/homepage/banner-1.jpg" alt="" class="img-fluid object-fit-contain">
+                              <img src="../assets/img/homepage/banner-1.jpg" alt=""
+                                class="img-fluid object-fit-contain">
                               <div class="card-img-overlay bg-dark opacity-50"></div>
-                              <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                              <div
+                                class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                                 <h5 class="text-white fw-bold lh-base">រឹងមាំកាយ សុខភាពកាន់តែប្រសើរ</h5>
                                 <h6 class="text-white fs-6 mb-3 lh-base">ការហាត់ប្រាណជាប្រចាំ នាំឲ្យមានថាមពល
                                   និងភាពស្រស់ស្រាយ</h6>
@@ -5005,7 +5131,7 @@
                                     data-bs-target="#edit-banner-1">
                                     <i class="bi bi-pencil text-main fs-nav"></i>
                                   </button>
-  
+
                                   <button class="btn p-0 text-prime bg-prime text-center" data-bs-toggle="modal"
                                     data-bs-target="#delete-banner-1">
                                     <i class="bi bi-trash text-danger fs-nav"></i>
@@ -5046,7 +5172,7 @@
                                   </div>
                                 </div>
                               </div>
-  
+
                               <!-- Edit Banner Modal -->
                               <div class="modal fade" id="edit-banner-1" data-bs-backdrop="static"
                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="edit-banner-label-1"
@@ -5080,7 +5206,7 @@
                                               </div>
                                             </div>
                                           </div>
-  
+
                                           <!-- Button + Select -->
                                           <div class="row mb-3 g-3">
                                             <div class="col-md-6">
@@ -5106,7 +5232,7 @@
                                               </div>
                                             </div>
                                           </div>
-  
+
                                           <!-- Description -->
                                           <div class="row mb-3">
                                             <div class="col-12">
@@ -5115,7 +5241,7 @@
                                                 placeholder="ការពិពណ៌នាពី Banner">ការហាត់ប្រាណជាប្រចាំ នាំឲ្យមានថាមពល និងភាពស្រស់ស្រាយ</textarea>
                                             </div>
                                           </div>
-  
+
                                           <!-- Tabs -->
                                           <ul class="nav nav-pills mb-3 d-flex gap-2" id="pills-tab-website-2"
                                             role="tablist">
@@ -5134,7 +5260,7 @@
                                               </button>
                                             </li>
                                           </ul>
-  
+
                                           <!-- Tab Content -->
                                           <div class="tab-content" id="pills-tabContent-website-2">
                                             <!-- URL -->
@@ -5164,7 +5290,7 @@
                                             </div>
                                           </div>
                                         </div>
-  
+
                                         <!-- Actions -->
                                         <div class="d-flex justify-content-end gap-2">
                                           <button type="button" class="btn btn-danger text-white px-4"
@@ -5178,7 +5304,7 @@
                                   </div>
                                 </div>
                               </div>
-  
+
                               <!-- Success Delete Banner Modal -->
                               <div class="modal fade" id="success-delete-banner-1" tabindex="-1"
                                 aria-labelledby="success-delete-banner-label-1" aria-hidden="true">
@@ -5200,7 +5326,7 @@
                                   </div>
                                 </div>
                               </div>
-                              
+
                               <!-- Success Edit Banner Modal -->
                               <div class="modal fade" id="success-edit-banner-1" tabindex="-1"
                                 aria-labelledby="success-delete-banner-label-1" aria-hidden="true">
@@ -5223,7 +5349,7 @@
                                 </div>
                               </div>
                             </div>
-  
+
                           </div>
                         </div>
                         <div class="col-lg-4">
@@ -5232,7 +5358,8 @@
                               <img src="../assets/img/banner-nutrition.jpg" alt=""
                                 class="img-fluid rounded-0 object-fit-cover" style="height: 235px;">
                               <div class="card-img-overlay bg-dark opacity-50"></div>
-                              <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                              <div
+                                class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                                 <h5 class="text-white fw-bold lh-base">អាហារូបត្ថម្ភល្អ ជាគន្លឹះនៃជីវិតមានសុខភាព</h5>
                                 <h6 class="text-white fs-6 mb-3 text-center lh-base">
                                   ជ្រើសរើសម្ហូបសម្បូរបែប និងមានតុល្យភាព ដើម្បីថែរក្សាកាយសម្បទា និងថាមពលប្រចាំថ្ងៃ
@@ -5241,7 +5368,7 @@
                                   class="btn btn-gold rounded-2 btn-sm w-fit h-fit text-nowrap px-4">ចាប់ផ្តើម</a>
                               </div>
                             </div>
-  
+
                             <div class="card-body bg-prime">
                               <div class="d-flex mb-3 border-bottom pb-3 justify-content-between align-items-center">
                                 <div class="form-check form-switch">
@@ -5250,7 +5377,7 @@
                                 </div>
                                 <h6 class="m-0 bg-second px-4 rounded-3 py-2 fs-6 text-prime">អាហារូបត្ថម្ភ</h6>
                               </div>
-  
+
                               <div class="d-flex gap-3 justify-content-between align-items-center">
                                 <h6 class="fs-6 mb-0 text-end text-second"><span class="ff">17</span> តុលា <span
                                     class="ff">2024</span></h6>
@@ -5260,7 +5387,7 @@
                                     data-bs-target="#edit-banner-2">
                                     <i class="bi bi-pencil text-main fs-nav"></i>
                                   </button>
-  
+
                                   <!-- Delete Button -->
                                   <button class="btn p-0 text-prime bg-prime text-center" data-bs-toggle="modal"
                                     data-bs-target="#delete-banner-2">
@@ -5269,7 +5396,7 @@
                                 </div>
                               </div>
                             </div>
-  
+
                             <!-- Delete Banner Modal -->
                             <div class="modal fade" id="delete-banner-2" data-bs-backdrop="static"
                               data-bs-keyboard="false" tabindex="-1" aria-labelledby="delete-banner-label-1"
@@ -5303,10 +5430,11 @@
                                 </div>
                               </div>
                             </div>
-  
+
                             <!-- Edit Banner Modal -->
-                            <div class="modal fade" id="edit-banner-2" data-bs-backdrop="static" data-bs-keyboard="false"
-                              tabindex="-1" aria-labelledby="edit-banner-label-1" aria-hidden="true">
+                            <div class="modal fade" id="edit-banner-2" data-bs-backdrop="static"
+                              data-bs-keyboard="false" tabindex="-1" aria-labelledby="edit-banner-label-1"
+                              aria-hidden="true">
                               <div class="modal-dialog modal-lg modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-bottom px-5">
@@ -5331,11 +5459,12 @@
                                               <input type="text" class="form-control bg-prime fs-text text-prime ps-7"
                                                 value="អាហារូបត្ថម្ភល្អ ជាគន្លឹះនៃជីវិតមានសុខភាព"
                                                 placeholder="ចំណងជើង Banner">
-                                              <i class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
+                                              <i
+                                                class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
                                         </div>
-  
+
                                         <!-- Button + Select -->
                                         <div class="row mb-3 g-3">
                                           <div class="col-md-6">
@@ -5343,7 +5472,8 @@
                                               <label class="form-label">ប៊ូតុង</label>
                                               <input type="text" class="form-control bg-prime fs-text text-prime ps-7"
                                                 value="ចាប់ផ្តើម" placeholder="អក្សររបស់ប៊ូតុង">
-                                              <i class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
+                                              <i
+                                                class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
                                           <div class="col-md-6">
@@ -5360,7 +5490,7 @@
                                             </div>
                                           </div>
                                         </div>
-  
+
                                         <!-- Description -->
                                         <div class="row mb-3">
                                           <div class="col-12">
@@ -5369,7 +5499,7 @@
                                               rows="2">ជ្រើសរើសម្ហូបសម្បូរបែប និងមានតុល្យភាព ដើម្បីថែរក្សាកាយសម្បទា និងថាមពលប្រចាំថ្ងៃ</textarea>
                                           </div>
                                         </div>
-  
+
                                         <!-- Tabs -->
                                         <ul class="nav nav-pills mb-3 d-flex gap-2" id="pills-tab-website-3"
                                           role="tablist">
@@ -5388,7 +5518,7 @@
                                             </button>
                                           </li>
                                         </ul>
-  
+
                                         <!-- Tab Content -->
                                         <div class="tab-content" id="pills-tabContent-website-3">
                                           <!-- URL -->
@@ -5417,7 +5547,7 @@
                                             </div>
                                           </div>
                                         </div>
-  
+
                                         <!-- Actions -->
                                         <div class="d-flex justify-content-end gap-2">
                                           <button type="button" class="btn btn-danger text-white px-4"
@@ -5426,14 +5556,14 @@
                                             data-bs-target="#success-edit-banner-2"
                                             class="btn btn-primary text-white px-4">រក្សាទុក</button>
                                         </div>
-  
+
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-  
+
                             <!-- Success Delete Banner Modal -->
                             <div class="modal fade" id="success-delete-banner-2" tabindex="-1" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
@@ -5454,7 +5584,7 @@
                                 </div>
                               </div>
                             </div>
-  
+
                             <!-- Success Edit Banner Modal -->
                             <div class="modal fade" id="success-edit-banner-2" tabindex="-1" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
@@ -5475,7 +5605,7 @@
                                 </div>
                               </div>
                             </div>
-  
+
                           </div>
                         </div>
                         <div class="col-lg-4">
@@ -5484,7 +5614,8 @@
                               <img src="../assets/img/banner-nutrition-2.jpeg" alt=""
                                 class="img-fluid rounded-0 object-fit-cover w-100" style="height: 235px;">
                               <div class="card-img-overlay bg-dark opacity-50"></div>
-                              <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                              <div
+                                class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                                 <h5 class="text-white fw-bold lh-base">អាហារូបត្ថម្ភល្អ ជាគន្លឹះនៃជីវិតមានសុខភាព</h5>
                                 <h6 class="text-white fs-6 mb-3 text-center lh-base">
                                   ជ្រើសរើសម្ហូបសម្បូរបែប និងមានតុល្យភាព ដើម្បីថែរក្សាកាយសម្បទា និងថាមពលប្រចាំថ្ងៃ
@@ -5493,7 +5624,7 @@
                                   class="btn btn-gold rounded-2 btn-sm w-fit h-fit text-nowrap px-4">ចាប់ផ្តើម</a>
                               </div>
                             </div>
-  
+
                             <div class="card-body bg-prime">
                               <div class="d-flex mb-3 border-bottom pb-3 justify-content-between align-items-center">
                                 <div class="form-check form-switch">
@@ -5502,7 +5633,7 @@
                                 </div>
                                 <h6 class="m-0 bg-second px-4 rounded-3 py-2 fs-6 text-prime">អាហារូបត្ថម្ភ</h6>
                               </div>
-  
+
                               <div class="d-flex gap-3 justify-content-between align-items-center">
                                 <h6 class="fs-6 mb-0 text-end text-second"><span class="ff">17</span> តុលា <span
                                     class="ff">2024</span></h6>
@@ -5512,7 +5643,7 @@
                                     data-bs-target="#edit-banner-3">
                                     <i class="bi bi-pencil text-main fs-nav"></i>
                                   </button>
-  
+
                                   <!-- Delete Button -->
                                   <button class="btn p-0 text-prime bg-prime text-center" data-bs-toggle="modal"
                                     data-bs-target="#delete-banner-3">
@@ -5521,7 +5652,7 @@
                                 </div>
                               </div>
                             </div>
-  
+
                             <!-- Delete Banner Modal -->
                             <div class="modal fade" id="delete-banner-3" data-bs-backdrop="static"
                               data-bs-keyboard="false" tabindex="-1" aria-labelledby="delete-banner-label-1"
@@ -5555,10 +5686,11 @@
                                 </div>
                               </div>
                             </div>
-  
+
                             <!-- Edit Banner Modal -->
-                            <div class="modal fade" id="edit-banner-3" data-bs-backdrop="static" data-bs-keyboard="false"
-                              tabindex="-1" aria-labelledby="edit-banner-label-1" aria-hidden="true">
+                            <div class="modal fade" id="edit-banner-3" data-bs-backdrop="static"
+                              data-bs-keyboard="false" tabindex="-1" aria-labelledby="edit-banner-label-1"
+                              aria-hidden="true">
                               <div class="modal-dialog modal-lg modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-bottom px-5">
@@ -5583,11 +5715,12 @@
                                               <input type="text" class="form-control bg-prime fs-text text-prime ps-7"
                                                 value="អាហារូបត្ថម្ភល្អ ជាគន្លឹះនៃជីវិតមានសុខភាព"
                                                 placeholder="ចំណងជើង Banner">
-                                              <i class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
+                                              <i
+                                                class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
                                         </div>
-  
+
                                         <!-- Button + Select -->
                                         <div class="row mb-3 g-3">
                                           <div class="col-md-6">
@@ -5595,7 +5728,8 @@
                                               <label class="form-label">ប៊ូតុង</label>
                                               <input type="text" class="form-control bg-prime fs-text text-prime ps-7"
                                                 value="ចាប់ផ្តើម" placeholder="អក្សររបស់ប៊ូតុង">
-                                              <i class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
+                                              <i
+                                                class="bi bi-bookmark-check position-absolute text-gold icon-input"></i>
                                             </div>
                                           </div>
                                           <div class="col-md-6">
@@ -5612,7 +5746,7 @@
                                             </div>
                                           </div>
                                         </div>
-  
+
                                         <!-- Description -->
                                         <div class="row mb-3">
                                           <div class="col-12">
@@ -5621,7 +5755,7 @@
                                               rows="2">ជ្រើសរើសម្ហូបសម្បូរបែប និងមានតុល្យភាព ដើម្បីថែរក្សាកាយសម្បទា និងថាមពលប្រចាំថ្ងៃ</textarea>
                                           </div>
                                         </div>
-  
+
                                         <!-- Tabs -->
                                         <ul class="nav nav-pills mb-3 d-flex gap-2" id="pills-tab-website-4"
                                           role="tablist">
@@ -5640,7 +5774,7 @@
                                             </button>
                                           </li>
                                         </ul>
-  
+
                                         <!-- Tab Content -->
                                         <div class="tab-content" id="pills-tabContent-website-4">
                                           <!-- URL -->
@@ -5669,7 +5803,7 @@
                                             </div>
                                           </div>
                                         </div>
-  
+
                                         <!-- Actions -->
                                         <div class="d-flex justify-content-end gap-2">
                                           <button type="button" class="btn btn-danger text-white px-4"
@@ -5678,14 +5812,14 @@
                                             data-bs-target="#success-edit-banner-3"
                                             class="btn btn-primary text-white px-4">រក្សាទុក</button>
                                         </div>
-  
+
                                       </div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-  
+
                             <!-- Success Delete Banner Modal -->
                             <div class="modal fade" id="success-delete-banner-3" tabindex="-1" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
@@ -5706,7 +5840,7 @@
                                 </div>
                               </div>
                             </div>
-  
+
                             <!-- Success Edit Banner Modal -->
                             <div class="modal fade" id="success-edit-banner-3" tabindex="-1" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
@@ -5727,15 +5861,314 @@
                                 </div>
                               </div>
                             </div>
-  
+
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
-                  tabindex="0">...</div>
+                <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
+                  aria-labelledby="pills-profile-tab" tabindex="0">
+                  <div class="card border-0 bg-prime">
+                    <div
+                      class="card-header border-0 border-bottom py-3 bg-prime d-flex justify-content-between align-content-center">
+                      <h4 class="mb-0 text-main">កំណត់ <span class="ff">Logo</span></h4>
+                      <button type="button" class="btn btn-gold fs-nav fw-normal px-5" data-bs-toggle="modal"
+                        data-bs-target="#create-logo">
+                        <i class="bi bi-plus-lg me-1"></i> បង្កើត <span class="ff">Logo</span>
+                      </button>
+                      <!-- Change Logo Modal -->
+                      <div class="modal fade" id="create-logo" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="change-logo-label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content rounded-3 bg-prime">
+                            <div class="modal-header border-bottom px-5">
+                              <h4 class="mb-0 text-main">បង្កើត <span class="ff">Logo</span> ថ្មី</h4>
+                              <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="bi bi-x-lg fs-5 text-prime"></i>
+                              </button>
+                            </div>
+                            <div class="modal-body d-flex flex-column">
+                              <div class="card border-0 bg-prime">
+                                <div class="card-body">
+
+                                  <!-- Tab Switch -->
+                                  <ul class="nav nav-pills mb-3 d-flex gap-2" id="pills-tab-logo" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active ff" id="tab-logo-url" data-bs-toggle="pill"
+                                        data-bs-target="#content-logo-url" type="button" role="tab"
+                                        aria-controls="content-logo-url" aria-selected="true">
+                                        <i class="bi bi-link-45deg"></i> URL
+                                      </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link ff" id="tab-logo-upload" data-bs-toggle="pill"
+                                        data-bs-target="#content-logo-upload" type="button" role="tab"
+                                        aria-controls="content-logo-upload" aria-selected="false">
+                                        <i class="bi bi-card-image"></i> Upload
+                                      </button>
+                                    </li>
+                                  </ul>
+
+                                  <!-- Tab Content -->
+                                  <div class="tab-content" id="pills-tabContent-logo">
+                                    <!-- URL Input -->
+                                    <div class="tab-pane fade show active" id="content-logo-url" role="tabpanel"
+                                      aria-labelledby="tab-logo-url" tabindex="0">
+                                      <div class="row mb-3">
+                                        <div class="col-md-12">
+                                          <div class="position-relative">
+                                            <input type="text" class="form-control bg-prime fs-text text-second ps-6 ff"
+                                              placeholder="Logo URL">
+                                            <i
+                                              class="bi bi-link-45deg position-absolute text-gold icon-input tran-y"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- File Upload -->
+                                    <div class="tab-pane fade" id="content-logo-upload" role="tabpanel"
+                                      aria-labelledby="tab-logo-upload" tabindex="0">
+                                      <div class="row mb-3">
+                                        <div class="col-md-12">
+                                          <input class="form-control ps-2 ff text-prime" type="file"
+                                            id="customLogoFile">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div>
+
+                                <!-- Modal Buttons -->
+                                <div class="d-flex justify-content-end gap-2">
+                                  <button type="button" class="btn btn-danger text-white px-4"
+                                    data-bs-dismiss="modal">បោះបង់</button>
+                                  <button type="button" data-bs-toggle="modal" data-bs-target="#success-change-logo"
+                                    class="btn btn-primary text-white px-4">រក្សាទុក</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Success Modal -->
+                      <div class="modal fade" id="success-change-logo" tabindex="-1"
+                        aria-labelledby="success-logo-label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content rounded-3 bg-prime">
+                            <div class="modal-header border-0 shadow-none">
+                              <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="bi bi-x-lg fs-5 text-prime"></i>
+                              </button>
+                            </div>
+                            <div class="modal-body text-center">
+                              <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                                style="width: 100px; height: 100px;"></i>
+                              <h5 class="text-prime mb-4">រួចរាល់</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="card-body bg-third px-0">
+                      <div class="row">
+                        <div class="col-lg-3">
+                          <div class="card border-0 bg-prime">
+                            <img src="../assets/img/logo2.png" alt="" class="img-fluid w-50 mx-auto">
+                            <div class="card-body pt-0">
+                              <div class="form-check form-switch">
+                                <input class="form-check-input my-0 me-2" type="checkbox" checked>
+                                <label class="form-check-label text-prime ff">Active</label>
+                              </div>
+                              <div class="border-bottom pb-3 mb-3"></div>
+                              <div class="d-flex gap-3 justify-content-between align-items-center">
+                                <h6 class="fs-6 mb-0 text-end text-second"><span class="ff">17</span> តុលា <span
+                                    class="ff">2024</span></h6>
+                                <div class="d-flex gap-3">
+                                  <!-- Edit Button -->
+                                  <button class="btn p-0 text-prime bg-prime text-center" data-bs-toggle="modal"
+                                    data-bs-target="#edit-logo-1">
+                                    <i class="bi bi-pencil text-main fs-nav"></i>
+                                  </button>
+
+                                  <!-- Delete Button -->
+                                  <button class="btn p-0 text-prime bg-prime text-center" data-bs-toggle="modal"
+                                    data-bs-target="#delete-logo-1">
+                                    <i class="bi bi-trash text-danger fs-nav"></i>
+                                  </button>
+                                </div>
+
+                                <!-- Delete Banner Modal -->
+                                <div class="modal fade" id="delete-logo-1" data-bs-backdrop="static"
+                                  data-bs-keyboard="false" tabindex="-1" aria-labelledby="delete-banner-label-2"
+                                  aria-hidden="true">
+                                  <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content rounded-3 bg-prime">
+                                      <div class="modal-header border-bottom px-5">
+                                        <div class="d-flex gap-3 align-items-center">
+                                          <img src="../assets/img/logo2.png" alt="" style="width: 80px; height: 50px;"
+                                            class="img-fluid object-fit-cover rounded-1">
+                                        </div>
+                                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                          aria-label="Close">
+                                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="card-body">
+                                          <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុប <span
+                                              class="ff">Logo</span> នេះឬ?</h5>
+                                          <div class="d-flex gap-2">
+                                            <button type="button" data-bs-toggle="modal"
+                                              data-bs-target="#success-delete-logo-1"
+                                              class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
+                                            <button data-bs-dismiss="modal"
+                                              class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Success Delete Banner Modal -->
+                                <div class="modal fade" id="success-delete-logo-1" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content rounded-3 bg-prime">
+                                      <div class="modal-header border-0 shadow-none">
+                                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                          aria-label="Close">
+                                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body text-center">
+                                        <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                                          style="width: 100px; height: 100px;"></i>
+                                        <h5 class="text-prime mb-4">រួចរាល់</h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Edit Banner Modal -->
+                                <div class="modal fade" id="edit-logo-1" data-bs-backdrop="static"
+                                  data-bs-keyboard="false" tabindex="-1" aria-labelledby="edit-banner-label-2"
+                                  aria-hidden="true">
+                                  <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content rounded-3 bg-prime">
+                                      <div class="modal-header border-bottom px-5">
+                                        <div class="d-flex gap-3 align-items-center">
+                                          <img src="../assets/img/logo2.png" alt="" style="width: 80px; height: 50px;"
+                                            class="img-fluid object-fit-cover rounded-1">
+                                        </div>
+                                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                          aria-label="Close">
+                                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body d-flex flex-column">
+                                        <div class="card border-0 bg-prime">
+                                          <div class="card-body">
+
+                                            <!-- Tab Switch -->
+                                            <ul class="nav nav-pills mb-3 d-flex gap-2" id="pills-tab-edit-banner"
+                                              role="tablist">
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link active ff" id="tab-edit-banner-url"
+                                                  data-bs-toggle="pill" data-bs-target="#content-edit-banner-url"
+                                                  type="button" role="tab" aria-controls="content-edit-banner-url"
+                                                  aria-selected="true">
+                                                  <i class="bi bi-link-45deg"></i> URL
+                                                </button>
+                                              </li>
+                                              <li class="nav-item" role="presentation">
+                                                <button class="nav-link ff" id="tab-edit-banner-upload"
+                                                  data-bs-toggle="pill" data-bs-target="#content-edit-banner-upload"
+                                                  type="button" role="tab" aria-controls="content-edit-banner-upload"
+                                                  aria-selected="false">
+                                                  <i class="bi bi-card-image"></i> Upload
+                                                </button>
+                                              </li>
+                                            </ul>
+
+                                            <!-- Tab Content -->
+                                            <div class="tab-content" id="pills-tabContent-edit-banner">
+                                              <!-- URL Input -->
+                                              <div class="tab-pane fade show active" id="content-edit-banner-url"
+                                                role="tabpanel" aria-labelledby="tab-edit-banner-url" tabindex="0">
+                                                <div class="row mb-3">
+                                                  <div class="col-md-12">
+                                                    <div class="position-relative">
+                                                      <input type="text"
+                                                        class="form-control bg-prime fs-text text-second ps-6 ff"
+                                                        placeholder="Logo URL">
+                                                      <i
+                                                        class="bi bi-link-45deg position-absolute text-gold icon-input tran-y"></i>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <!-- File Upload -->
+                                              <div class="tab-pane fade" id="content-edit-banner-upload" role="tabpanel"
+                                                aria-labelledby="tab-edit-banner-upload" tabindex="0">
+                                                <div class="row mb-3">
+                                                  <div class="col-md-12">
+                                                    <input class="form-control ps-2 ff text-prime" type="file"
+                                                      id="customEditBannerFile">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                          </div>
+
+                                          <!-- Modal Buttons -->
+                                          <div class="d-flex justify-content-end gap-2">
+                                            <button type="button" class="btn btn-danger text-white px-4"
+                                              data-bs-dismiss="modal">បោះបង់</button>
+                                            <button type="button" data-bs-toggle="modal"
+                                              data-bs-target="#success-edit-logo-1"
+                                              class="btn btn-primary text-white px-4">រក្សាទុក</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Success Edit Banner Modal -->
+                                <div class="modal fade" id="success-edit-logo-1" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content rounded-3 bg-prime">
+                                      <div class="modal-header border-0 shadow-none">
+                                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                          aria-label="Close">
+                                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body text-center">
+                                        <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                                          style="width: 100px; height: 100px;"></i>
+                                        <h5 class="text-prime mb-4">រួចរាល់</h5>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

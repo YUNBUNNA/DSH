@@ -4,22 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ផ្ទាំងគ្រប់គ្រងគ្រូ</title>
+  <title>Profile</title>
   <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css" />
   <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css" />
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
   <style>
-    /* Sidebar & main content styles (same as your previous) */
     .wrapper {
       display: flex;
       height: 100vh;
     }
 
     #sidebar {
-      width: 250px;
+      width: 280px;
       overflow: hidden;
       transition: width 0.4s ease;
+      overflow: auto;
+    }
+
+    #sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    #sidebar::-webkit-scrollbar-thumb {
+      background-color: var(--text-second);
+      border-radius: 3px;
     }
 
     #sidebar.collapsed {
@@ -45,6 +54,10 @@
     #sidebar .nav-link i {
       min-width: 24px;
       text-align: center;
+    }
+
+    #sidebar ul#sidebar-nav>li {
+      transition: opacity 0.4s ease;
     }
 
     .main-content {
@@ -76,17 +89,16 @@
       transition: all 0.4s ease;
     }
 
+    .f-c::placeholder {
+      color: var(--text-prime) !important;
+    }
+
     .card {
       transition: all 0.4s ease;
     }
 
     .tran-y {
       transform: translateY(-50%);
-    }
-
-    .trans-y {
-      transform: translateY(-130%);
-      padding-left: 1rem;
     }
 
     th {
@@ -108,27 +120,21 @@
     }
 
     .b-all {
-      border: 4px solid var(--text-main);
+      border: 4px solid #58a8e6;
+    }
+
+    select.form-select {
+      appearance: none;
+      /* Remove default arrow */
+      -webkit-appearance: none;
+      /* Safari/Chrome */
+      -moz-appearance: none;
+      background: transparent;
     }
 
     .list-with-disc li::marker {
       color: var(--text-main);
     }
-
-    @media screen and (max-width: 991.98px) {
-      #sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        z-index: 1050;
-      }
-
-      .main-content {
-        margin-left: 0 !important;
-      }
-    }
-
 
     .form-switch .form-check-input:focus {
       --bs-form-switch-bg: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy00IC00IDggOCc+PGNpcmNsZSByPSczJyBmaWxsPScjZmZmJy8+PC9zdmc+);
@@ -144,15 +150,60 @@
       border: none;
     }
 
+    .bg-green {
+      background-color: #2ecc71;
+    }
+
     /* When checked */
     .form-check-input:checked {
-      background-color: #2ecc71;
+      /* background-color: #2ecc71; */
+      background-color: #58a8e6;
+    }
+
+    /* Internal style  */
+    .toast {
+      display: block !important;
+      opacity: 0;
+      transform: translateY(-100vw);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    button {
+      border: none !important;
+      outline: none !important;
+    }
+
+    button:focus,
+    button:active {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
     }
 
     .form-check-input:checked,
     .form-check-input:focus,
     .form-check-input:active {
       box-shadow: none;
+    }
+
+    /* Sidebar responsive rules */
+    @media screen and (max-width: 991.98px) {
+      #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1050;
+      }
+
+      .main-content {
+        margin-left: 0 !important;
+      }
     }
   </style>
 </head>
@@ -165,7 +216,7 @@
         <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover ms-1"
           style="width: 90px; height: 49px;">
         <button type="button" id="toggle-close" class="btn text-white fs-4 d-block d-lg-none">
-          <i class="bi bi-x-lg"></i> 
+          <i class="bi bi-x-lg"></i>
         </button>
       </div>
       <ul id="sidebar-nav" class="nav flex-column nav-pills bg-prime py-2">
@@ -174,7 +225,7 @@
           <a href="#tab-profile" class="nav-link text-white d-flex align-items-center active" data-bs-toggle="tab">
             <i class="bi bi-person-circle me-2"></i><span>ព័ត៌មានផ្ទាល់ខ្លួន</span>
           </a>
-          
+
         </li>
 
         <!-- Schedule -->
@@ -199,50 +250,35 @@
           </a>
         </li>
 
-        <!-- Settings with Dropdown -->
+        <!-- Notification -->
         <li class="nav-item mb-2">
-          <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#settings-dropdown"
+          <a href="#tab-notification" class="nav-link text-white" data-bs-toggle="tab">
+            <i class="bi bi-megaphone me-2"></i>
+            ការបិទ <span class="ff mx-1">&</span> បើកមុខងារ
+          </a>
+        </li>
+
+        <!-- ការកំណត់ -->
+        <li class="nav-item mb-2">
+          <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#security-dropdown"
             role="button" aria-expanded="false">
-            <i class="bi bi-gear me-2"></i><span>ការកំណត់</span>
+            <i class="bi bi-gear me-2"></i><span>សុវត្ថិភាព និង ការអនុញ្ញាត</span>
             <i class="bi bi-chevron-down ms-auto"></i>
           </a>
-          <ul id="settings-dropdown" class="collapse list-unstyled ps-4 mt-2" data-bs-parent="#sidebar-nav">
-            <!-- Change Password -->
+          <ul id="security-dropdown" class="collapse list-unstyled ps-4 mt-2">
             <li class="nav-item mb-2">
-              <a href="#tab-change-password" class="nav-link text-white" data-bs-toggle="tab">
-                ផ្លាស់ប្តូរពាក្យសម្ងាត់
+              <a href="#tab-security-alerts" class="nav-link text-white" data-bs-toggle="tab">
+                ការជូនដំណឹងផ្នែកសុវត្ថិភាព
               </a>
             </li>
-
-            <!-- Notification -->
-            <li class="nav-item mb-2">
-              <a href="#tab-notification" class="nav-link text-white" data-bs-toggle="tab">
-                ការបិទ <span class="ff mx-1">&</span> បើកមុខងារ
+            <li class="nav-item">
+              <a href="#tab-security-checkup" class="nav-link text-white" data-bs-toggle="tab">
+                ការពិនិត្យសុវត្ថិភាព
               </a>
-            </li>
-
-            <!-- Security & Permission (Nested Dropdown) -->
-            <li class="nav-item mb-2">
-              <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
-                href="#security-dropdown" role="button" aria-expanded="false">
-                សុវត្ថិភាព និង ការអនុញ្ញាត
-                <i class="bi bi-chevron-down ms-auto"></i>
-              </a>
-              <ul id="security-dropdown" class="collapse list-unstyled ps-4 mt-2">
-                <li class="nav-item mb-2">
-                  <a href="#tab-security-alerts" class="nav-link text-white" data-bs-toggle="tab">
-                    ការជូនដំណឹងផ្នែកសុវត្ថិភាព
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#tab-security-checkup" class="nav-link text-white" data-bs-toggle="tab">
-                    ការពិនិត្យសុវត្ថិភាព
-                  </a>
-                </li>
-              </ul>
             </li>
           </ul>
         </li>
+
 
       </ul>
     </aside>
@@ -250,15 +286,45 @@
     <!-- Main Content -->
     <div class="flex-grow-1 main-content">
       <!-- Navbar -->
-      <nav class="navbar bg-prime rounded-2">
+      <nav class="navbar rounded-2 bg-prime shadow-xs">
         <div class="container-fluid d-flex align-items-center">
           <button type="button" id="toggle-btn" class="btn text-prime fs-4">
             <i class="bi bi-list"></i>
           </button>
-          <button class="btn text-prime position-absolute" style="right: 5%;" id="theme-toggle">
+          <button class="btn text-prime position-absolute" style="right: 6%;" id="theme-toggle">
             <i class="theme-icon start-50 bi bi-sun fs-4"></i>
             <i class="theme-icon start-50 bi bi-moon fs-4"></i>
           </button>
+          <ul class="navbar-nav pe-3">
+            <li class="nav-item admin position-relative">
+              <a href="" class="nav-link">
+                <img src="../assets/img/profile-user.jpg"
+                  class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+              </a>
+              <div class="dropdown position-absolute shadow-xs" style="left: -125px;">
+                <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                  <div class="card border-0 border-bottom rounded-0 bg-second p-0">
+                    <div class="card-body">
+                      <div class="d-flex align-items-end gap-3">
+                        <img src="../assets/img/profile-user.jpg"
+                          class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;" alt="">
+                        <h6 class="fs-text text-prime">ឡាយ ចេមមី</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <li>
+                    <a class="dropdown-item py-2 d-block m-0" href="../pages/user.html"><i
+                        class="bi bi-person me-1"></i> គណនី</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-2 d-block" href="../index.html"><i
+                        class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
+                      <span class="opacity-0 mx-4">a</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </nav>
 
@@ -281,13 +347,13 @@
                       <div class="d-flex justify-content-center pt-7">
                         <div class="position-relative" style="width: 150px; height: 150px;">
                           <img
-                            src="https://static.vecteezy.com/system/resources/thumbnails/011/675/374/small_2x/man-avatar-image-for-profile-png.png"
-                            alt="Profile Picture" class="img-fluid rounded-circle b-all p-2 w-100 h-100">
+                            src="../assets/img/profile-user.jpg"
+                            alt="Profile Picture" class="img-fluid rounded-circle w-100 h-100">
                           <ul class="navbar-nav">
                             <li class="nav-item blog px-3 py-1 position-relative">
                               <a type="button" data-bs-toggle="dropdown" aria-expanded="false"
-                                class="position-absolute d-flex justify-content-center align-items-center btn-prime rounded-circle"
-                                style="width: 30px; height: 30px; bottom: 60px; right: -10px;">
+                                class="position-absolute d-flex justify-content-center align-items-center bg-nav rounded-circle"
+                                style="width: 30px; height: 30px; bottom: 60px; right: -13px;">
                                 <i class="bi bi-pencil text-white fs-6"></i>
                               </a>
                               <div class="dropdown position-absolute shadow-xs" style="left: 65px; top:-51px;">
@@ -322,7 +388,7 @@
                                 </div>
                                 <div class="modal-body text-center">
                                   <img
-                                    src="https://static.vecteezy.com/system/resources/thumbnails/011/675/374/small_2x/man-avatar-image-for-profile-png.png"
+                                    src="../assets/img/profile-user.jpg"
                                     class="img-fluid rounded object-fit-contain" alt="Profile Picture">
                                 </div>
                               </div>
@@ -338,7 +404,7 @@
                           <h6>@Lay Jammy</h6>
                         </div>
                         <div class="d-flex justify-content-center gap-3 pb-1">
-                          <a href="" class="btn btn-gold px-4 text-nowrap h-fit w-fit"><i
+                          <a href="../index.html" class="btn btn-danger px-4 text-nowrap h-fit w-fit"><i
                               class="bi bi-arrow-return-left"></i> ចាកចេញ</a>
                           <button type="button" class="btn btn-gold px-4 text-nowrap h-fit w-fit" data-bs-toggle="modal"
                             data-bs-target="#editProfile">
@@ -367,16 +433,14 @@
                                     <div class="col-md-6">
                                       <label class="form-label">នាមត្រកូល</label>
                                       <div class="position-relative">
-                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                          placeholder="ឡាយ">
+                                        <input type="text" class="form-control bg-prime fs-text ps-7 f-c" value="ឡាយ">
                                         <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
                                       </div>
                                     </div>
                                     <div class="col-md-6">
                                       <label class="form-label">នាមខ្លួន</label>
                                       <div class="position-relative">
-                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                          placeholder="ចេមមី">
+                                        <input type="text" class="form-control bg-prime fs-text ps-7 f-c" value="ចេមមី">
                                         <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
                                       </div>
                                     </div>
@@ -385,16 +449,15 @@
                                     <div class="col-md-6">
                                       <label class="form-label">ថ្ងៃខែឆ្នាំកំណើត</label>
                                       <div class="position-relative">
-                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 ff f-c"
-                                          placeholder="16/05/2005">
+                                        <input type="text" class="form-control bg-prime fs-text ps-7 ff f-c"
+                                          value="16/05/2005">
                                         <i class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
                                       </div>
                                     </div>
                                     <div class="col-md-6">
                                       <label class="form-label">ភេទ</label>
                                       <div class="position-relative">
-                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                          placeholder="ប្រុស">
+                                        <input type="text" class="form-control bg-prime fs-text ps-7 f-c" value="ប្រុស">
                                         <i
                                           class="bi bi-gender-ambiguous position-absolute text-gold icon-input tran-y"></i>
                                       </div>
@@ -404,16 +467,16 @@
                                     <div class="col-md-6">
                                       <label class="form-label">អាស័យដ្ឋាន</label>
                                       <div class="position-relative">
-                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                                          placeholder="ភ្នំពេញ">
+                                        <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                          value="ភ្នំពេញ">
                                         <i class="bi bi-geo-alt position-absolute text-gold icon-input tran-y"></i>
                                       </div>
                                     </div>
                                     <div class="col-md-6">
                                       <label class="form-label ff">Username</label>
                                       <div class="position-relative">
-                                        <input type="text" class="form-control bg-prime fs-text text-second ps-7 ff f-c"
-                                          placeholder="@LayJammy">
+                                        <input type="text" class="form-control bg-prime fs-text ps-7 ff f-c"
+                                          value="@LayJammy">
                                         <i class="bi bi-card-text position-absolute text-gold icon-input tran-y"></i>
                                       </div>
                                     </div>
@@ -422,26 +485,24 @@
                                     <div class="col-md-6">
                                       <label class="form-label">អ៊ីមែល</label>
                                       <div class="position-relative">
-                                        <input type="email"
-                                          class="form-control bg-prime fs-text text-second ps-7 ff f-c"
-                                          placeholder="LayJammy@gmail.com">
+                                        <input type="email" class="form-control bg-prime fs-text ps-7 ff f-c"
+                                          value="LayJammy@gmail.com">
                                         <i class="bi bi-envelope position-absolute text-gold icon-input tran-y"></i>
                                       </div>
                                     </div>
                                     <div class="col-md-6">
                                       <label class="form-label">លេខទូរស័ព្ទ</label>
                                       <div class="position-relative">
-                                        <input type="number"
-                                          class="form-control bg-prime fs-text text-second ps-7 ff f-c pe-2"
-                                          placeholder="+855 12345678">
+                                        <input type="number" class="form-control bg-prime fs-text ps-7 ff f-c pe-2"
+                                          value="012345678">
                                         <i class="bi bi-telephone position-absolute text-gold icon-input tran-y"></i>
                                       </div>
                                     </div>
                                   </div>
                                   <!-- Save Button -->
                                   <div class="d-flex justify-content-end mt-4">
-                                    <button class="btn btn-gold px-5"
-                                      data-bs-dismiss="modal">រក្សាទុកការផ្លាស់ប្តូរ</button>
+                                    <button class="btn btn-gold px-5" type="button" data-bs-toggle="modal"
+                                      data-bs-target="#success-edit-1">រក្សាទុកការផ្លាស់ប្តូរ</button>
                                   </div>
                                 </div>
                               </div>
@@ -458,8 +519,7 @@
                       <div class="col-md-6">
                         <label class="form-label">នាមត្រកូល</label>
                         <div class="position-relative">
-                          <input type="text" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                            placeholder="ឡាយ" disabled>
+                          <input type="text" class="form-control bg-prime fs-text ps-7 f-c" placeholder="ឡាយ" disabled>
                           <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
                         </div>
                       </div>
@@ -527,10 +587,29 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Success Modal -->
+                  <div class="modal fade" id="success-edit-1" tabindex="-1" aria-labelledby="success-delete-label-1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content rounded-3 bg-prime">
+                        <div class="modal-header border-0 shadow-none">
+                          <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x-lg fs-5 text-prime"></i>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="card-body">
+                            <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                              style="width: 100px; height: 100px;"></i>
+                            <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-
             <div class="row g-3">
               <!-- Membership Card -->
               <div class="col-sm-4">
@@ -539,7 +618,7 @@
                     <img src="https://img.icons8.com/?size=100&id=84301&format=png&color=000000" alt=""
                       class="img-fluid object-fit-contain mb-2" style="width: 50px; height: 55px;">
                     <div class="card-img-overlay d-flex">
-                      <p class="btn-gold w-fit h-fit fs-7 text-dark m-0 rounded-5 ff px-3 ms-auto"
+                      <p class="bg-gold w-fit h-fit fs-7 text-white m-0 rounded-5 ff px-3 py-1 ms-auto"
                         style="letter-spacing: .5px;">Premium</p>
                     </div>
                     <h5 class="mb-1 text-main">បាល់ទាត់</h5>
@@ -564,10 +643,9 @@
               <div class="col-sm-4">
                 <div class="card bg-prime shadow-sm border-0 text-center p-1 flex-fill">
                   <div class="card-body text-prime">
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvhx9bM1j81_fyhsbC8SHV35UbiT6QAp3JNQ&s"
-                      alt="" class="img-fluid object-fit-cover rounded-2 mb-2" style="width: 50px; height: 55px;">
-                    <h5 class="mb-1 ff text-main">Coach Dara</h5>
+                    <img src="../assets/img/sports/football-coach-1.jpg" alt=""
+                      class="img-fluid object-fit-cover rounded-2 mb-2" style="width: 50px; height: 55px;">
+                    <h5 class="text-main">ម៉ុង សុវណ្ណឆាយ</h5>
                     <small class="fs-text">គ្រូបង្វឹកចម្បង</small>
                   </div>
                 </div>
@@ -624,14 +702,14 @@
           <div class="tab-pane fade" id="tab-places">
             <div class="card border-0 mb-4 bg-prime">
               <div class="card-body">
-                <h2 id="tab-title" class="text-center text-main mb-4">ទាំងអស់</h2>
+                <h2 id="tab-title" class="text-center text-main mb-4">ទំនិញ</h2>
 
                 <!-- Tabs nav -->
                 <ul class="nav nav-pills mb-3 justify-content-center gap-3" id="pills-tab" role="tablist">
                   <li class="nav-item" role="presentation">
                     <button class="nav-link link-hover active px-4" id="pills-clothes-tab" data-bs-toggle="pill"
                       data-bs-target="#pills-clothes" type="button" role="tab" aria-controls="pills-clothes"
-                      aria-selected="true" data-title="សម្លៀកបំពាក់">សម្លៀកបំពាក់</button>
+                      aria-selected="true" data-title="ទំនិញ">ទំនិញ</button>
                   </li>
                   <li class="nav-item" role="presentation">
                     <button class="nav-link link-hover px-4" id="pills-food-tab" data-bs-toggle="pill"
@@ -656,13 +734,13 @@
                   <div class="tab-pane fade show active" id="pills-clothes" role="tabpanel"
                     aria-labelledby="pills-clothes-tab">
                     <div class="row g-3">
-                      <div class="col-sm-6 col-md-4 col-lg-3">
-                        <a href="#" class="text-decoration-none">
+                      <div class="col-sm-6 col-lg-3">
+                        <a href="../pages/product-detail/shirt-1.html" class="text-decoration-none">
                           <div class="card bg-transparent position-relative border-0">
                             <div class="card-img bg-second position-relative overflow-hidden" style="height: 350px;">
-                              <img src="assets/img/images-1.webp" class="img-main w-100 h-100 object-fit-contain"
-                                alt="" />
-                              <img src="assets/img/images-2.webp"
+                              <img src="../assets/img/shop/shirt/shirt-1.webp"
+                                class="img-main w-100 h-100 object-fit-contain" alt="" />
+                              <img src="../assets/img/shop/shirt/shirt-1-hover.webp"
                                 class="img-cover w-100 h-100 object-fit-contain position-absolute top-0 start-0"
                                 alt="" />
                             </div>
@@ -679,6 +757,76 @@
                           </div>
                         </a>
                       </div>
+                      <div class="col-sm-6 col-lg-3">
+                        <a href="../pages/product-detail/shirt-3.html" class="text-decoration-none">
+                          <div class="card bg-transparent position-relative border-0">
+                            <div class="card-img bg-second position-relative overflow-hidden" style="height: 350px;">
+                              <img src="../assets/img/shop/shirt/shirt-3.png"
+                                class="img-main w-100 h-100 object-fit-contain" alt="" />
+                              <img src="../assets/img/shop/shirt/shirt-3-hover.png"
+                                class="img-cover w-100 h-100 object-fit-contain position-absolute top-0 start-0"
+                                alt="" />
+                            </div>
+                            <div class="card-body ff pb-0">
+                              <div class="d-flex">
+                                <p class="p-0 m-0 fw-bold">
+                                  <span class="text-danger">US $16.00</span>
+                                  <del class="fw-normal text-second">US $20.00</del>
+                                </p>
+                                <i class="bi bi-suit-heart-fill text-danger d-block ms-auto"></i>
+                              </div>
+                              <p class="fs-6 text-prime">Ribbed Tank 1PK</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-6 col-lg-3">
+                        <a href="../pages/product-detail/pants-1.html" class="text-decoration-none">
+                          <div class="card bg-transparent position-relative border-0">
+                            <div class="card-img bg-second position-relative overflow-hidden" style="height: 350px;">
+                              <img src="../assets/img/shop/pants/pants-1.png"
+                                class="img-main w-100 h-100 object-fit-contain" alt="" />
+                              <img src="../assets/img/shop/pants/pants-1-hover.png"
+                                class="img-cover w-100 h-100 object-fit-contain position-absolute top-0 start-0"
+                                alt="" />
+                            </div>
+                            <div class="card-body ff pb-0">
+                              <div class="d-flex">
+                                <p class="p-0 m-0 fw-bold">
+                                  <span class="text-danger">US $24.00</span>
+                                  <del class="fw-normal text-second">US $30.00</del>
+                                </p>
+                                <i class="bi bi-suit-heart-fill text-danger d-block ms-auto"></i>
+                              </div>
+                              <p class="fs-6 text-prime">Sport 7" 2 in 1 Shorts</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-sm-6 col-lg-3">
+                        <a href="../pages/product-detail/pants-1.html" class="text-decoration-none">
+                          <div class="card bg-transparent position-relative border-0">
+                            <div class="card-img bg-second position-relative overflow-hidden" style="height: 350px;">
+                              <img src="../assets/img/shop/AllSport/football-1.png"
+                                class="img-main w-100 h-100 object-fit-contain" alt="" />
+                              <img src="../assets/img/shop/AllSport/football-1-hover.png"
+                                class="img-cover w-100 h-100 object-fit-contain position-absolute top-0 start-0"
+                                alt="" />
+                            </div>
+                            <div class="card-body ff pb-0">
+                              <div class="d-flex">
+                                <p class="p-0 m-0 fw-bold">
+                                  <span class="text-danger">US $24.00</span>
+                                  <del class="fw-normal text-second">US $30.00</del>
+                                </p>
+                                <i class="bi bi-suit-heart-fill text-danger d-block ms-auto"></i>
+                              </div>
+                              <p class="fs-6 text-prime">Sport 7" 2 in 1 Shorts</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
                     </div>
                   </div>
 
@@ -713,7 +861,31 @@
                   <div class="tab-pane fade" id="pills-blog" role="tabpanel" aria-labelledby="pills-blog-tab">
                     <div class="container">
                       <div class="row g-3">
-                        <p class="text-center">អត្ថបទ និងព័ត៌មានប្លុក</p>
+                        <!-- Card 1 -->
+                        <div class="col-md-6 col-lg-4">
+                          <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
+                            <div class="card-img w-100" style="height: 200px;">
+                              <img
+                                src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
+                                alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
+                            </div>
+                            <div class="card-body">
+                              <div class="d-flex align-items-center mb-2">
+                                <p class="fs-6 text-main mb-0">ការហ្វឹកហាត់</p>
+                                <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"
+                                  id="favoriteBtn1"><i class="bi bi-suit-heart-fill text-danger"></i></button>
+                                <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn1"><i
+                                    class="bi bi-bookmark"></i></button>
+                              </div>
+                              <h5 class="card-title text-prime mb-2">១០
+                                គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h5>
+                              <p class="card-text text-second fs-text mb-3">
+                                រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ</p>
+                              <a href="#" class="btn btn-gold d-block border-2">អានបន្ថែម <i
+                                  class="bi bi-arrow-right"></i></a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -732,12 +904,11 @@
             </div>
           </div>
 
-
           <!-- Saved -->
           <div class="tab-pane fade" id="tab-saved">
             <div class="card border-0 mb-4 bg-prime">
               <div class="card-body">
-                <h2 id="tab-title-1" class="text-center text-main mb-4">ទាំងអស់</h2>
+                <h2 id="tab-title-1" class="text-center text-main mb-4">ម្ហូប</h2>
 
                 <!-- Tabs nav -->
                 <ul class="nav nav-pills mb-3 justify-content-center gap-3" id="save-tab" role="tablist">
@@ -791,12 +962,36 @@
 
                   <!-- Blog -->
                   <div class="tab-pane fade" id="save-blog" role="tabpanel" aria-labelledby="save-blog-tab">
-                    1
+                    <div class="row g-3">
+                      <!-- Card 2 -->
+                      <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
+                          <div class="card-img w-100" style="height: 200px;">
+                            <img src="https://fitfuel-slideshow.vercel.app/assets/hero-2-C_ldFfDg.jpg" alt=""
+                              class="img-fluid object-fit-cover w-100 h-100 card-img-top">
+                          </div>
+                          <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                              <p class="fs-6 text-main mb-0">អាហារ</p>
+                              <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"
+                                id="favoriteBtn2"><i class="bi bi-suit-heart"></i></button>
+                              <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn2"
+                              ><i class="bi bi-bookmark-fill text-gold"></i></button>
+                            </div>
+                            <h5 class="card-title text-prime mb-2">អាហារសុខភាពសម្រាប់អ្នកកីឡា</h5>
+                            <p class="card-text text-second fs-text mb-3">
+                              ផែនការអាហារដើម្បីបង្កើនការអនុវត្តកីឡា</p>
+                            <span class="btn btn-gold d-block border-2">អានបន្ថែម <i
+                                class="bi bi-arrow-right"></i></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <!-- Event -->
                   <div class="tab-pane fade" id="save-event" role="tabpanel" aria-labelledby="save-event-tab">
-                   2
+                    2
                   </div>
                 </div>
               </div>
@@ -808,26 +1003,33 @@
           <div class="tab-pane fade" id="tab-notification">
             <div class="card border-0 bg-transparent mb-3">
               <div class="card-body p-0">
-                <h3 class="text-main mb-3">ការបិទ/បើកមុខងារ</h3>
-                <div class="row">
+                <div class="row g-3">
                   <!-- Notification Toggle -->
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="card text-prime border-0 shadow-xs bg-prime py-3">
                       <div class="form-check p-0 ps-3 form-switch d-flex align-items-center justify-content-between">
-                        <label class="form-check-label fs-nav">ការជូនដំណឹងសារ</label>
+                        <label class="form-check-label fs-nav">ការជូនដំណឹងពីសមាជិក</label>
                         <input class="form-check-input me-3" type="checkbox" checked>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4">
-                    <div class="card text-second border-0 shadow-xs bg-prime py-3">
+                  <div class="col-md-6">
+                    <div class="card text-prime border-0 shadow-xs bg-prime py-3">
                       <div class="form-check p-0 ps-3 form-switch d-flex align-items-center justify-content-between">
-                        <label class="form-check-label fs-nav">ការជូនដំណឹងក្រុម</label>
-                        <input class="form-check-input me-3" type="checkbox">
+                        <label class="form-check-label fs-nav">ការជូនដំណឹងពីគ្រូបង្វឺក</label>
+                        <input class="form-check-input me-3" type="checkbox" checked>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
+                    <div class="card text-prime border-0 shadow-xs bg-prime py-3">
+                      <div class="form-check p-0 ps-3 form-switch d-flex align-items-center justify-content-between">
+                        <label class="form-check-label fs-nav">ការជូនដំណឹងស្នើបង្កើតថ្នាក់</label>
+                        <input class="form-check-input me-3" type="checkbox" checked>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
                     <div class="card text-second border-0 shadow-xs bg-prime py-3">
                       <div class="form-check p-0 ps-3 form-switch d-flex align-items-center justify-content-between">
                         <label class="form-check-label fs-nav">សំឡេង</label>
@@ -835,67 +1037,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Change Password -->
-          <div class="tab-pane fade" id="tab-change-password">
-            <div class="card shadow-xs mb-2 border-0 bg-prime">
-              <div class="card-header bg-prime py-3 text-main border-0 border-bottom mb-2">
-                <h4 class="mb-0">ផ្លាស់ប្តូរពាក្យសម្ងាត់</h4>
-              </div>
-              <div class="card-body">
-                <div class="bg-second mb-3 p-4 rounded-2">
-                  <h5 class="text-main mb-3 lh-base">
-                    ដើម្បីធានា​សុវត្ថិភាពនៃពាក្យសម្ងាត់ អ្នកគួរតែ <span class="text-danger">៖</span>
-                  </h5>
-                  <ul class="text-prime list-with-disc mb-0 d-flex flex-column gap-2">
-                    <li>មានប្រវែង <span class="ff">8</span> ទៅ <span class="ff">15</span> ខ្ទង់</li>
-                    <li>មានអក្សរធំយ៉ាងតិច <span class="ff">1</span> និងអក្សរតូចយ៉ាងតិច <span class="ff">1</span></li>
-                    <li>មានលេខយ៉ាងតិច <span class="ff">1</span> ខ្ទង់</li>
-                    <li>មានតួអក្សរពិសេសយ៉ាងតិច <span class="ff">1</span> (!, #, @, $)</li>
-                  </ul>
-                </div>
-
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label class="form-label">ពាក្យសម្ងាត់បច្ចុប្បន្ន <span class="text-danger">*</span></label>
-                    <div class="position-relative">
-                      <input type="password" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                        placeholder="វាយពាក្យសម្ងាត់ចាស់">
-                      <i class="bi bi-lock position-absolute text-gold icon-input tran-y"></i>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">ផ្ទៀងផ្ទាត់ពាក្យសម្ងាត់ <span class="text-danger">*</span></label>
-                    <div class="position-relative">
-                      <input type="password" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                        placeholder="បញ្ជាក់ពាក្យសម្ងាត់ចាស់">
-                      <i class="bi bi-lock position-absolute text-gold icon-input tran-y"></i>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">ពាក្យសម្ងាត់ថ្មី <span class="text-danger">*</span></label>
-                    <div class="position-relative">
-                      <input type="password" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                        placeholder="វាយពាក្យសម្ងាត់ថ្មីរបស់អ្នក">
-                      <i class="bi bi-lock position-absolute text-gold icon-input tran-y"></i>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">បញ្ជាក់ពាក្យសម្ងាត់ថ្មី <span class="text-danger">*</span></label>
-                    <div class="position-relative">
-                      <input type="password" class="form-control bg-prime fs-text text-second ps-7 f-c"
-                        placeholder="បញ្ជាក់ពាក្យសម្ងាត់ថ្មីរបស់អ្នក">
-                      <i class="bi bi-lock position-absolute text-gold icon-input tran-y"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="d-flex justify-content-end mt-4">
-                  <button class="btn btn-gold px-5">រក្សាទុកការផ្លាស់ប្តូរ</button>
                 </div>
               </div>
             </div>
@@ -1009,8 +1150,12 @@
                           <div class="card-body d-flex gap-3 bg-second rounded-3 shadow-xs mb-3">
                             <img src="https://img.icons8.com/?size=100&id=102552&format=png&color=000000" alt=""
                               class="img-fluid object-fit-contain h-fit" style="width: 35px;">
-                            <div>
-                              <h5 class="pt-2 text-prime ff">Dell Latitude 7280</h5>
+                            <div class="w-100">
+                              <div class="d-flex justify-content-between">
+                                <h5 class="pt-2 text-prime ff">Dell Latitude 7280</h5>
+                                <button data-bs-toggle="modal" data-bs-target="#logout-1"
+                                  class="btn d-block ms-auto ff text-danger">Log out</button>
+                              </div>
                               <h6 class="text-second">គេហទំព័រ <span class="ff">DSH</span></h6>
                               <h6 class="ff text-second">Unknown login method</h6>
                               <h6 class="text-second"><span class="ff">12</span> កញ្ញា, <span class="ff">2025 09:20
@@ -1020,8 +1165,12 @@
                           <div class="card-body d-flex gap-3 bg-second rounded-3 shadow-xs mb-4">
                             <img src="https://img.icons8.com/?size=100&id=XHTBEjS9Wx14&format=png&color=000000" alt=""
                               class="img-fluid object-fit-contain h-fit" style="width: 40px;">
-                            <div>
-                              <h5 class="pt-2 text-prime ff">iPhone 17 Pro max</h5>
+                            <div class="w-100">
+                              <div class="d-flex justify-content-between">
+                                <h5 class="pt-2 text-prime ff">iPhone 17 Pro max</h5>
+                                <button data-bs-toggle="modal" data-bs-target="#logout-2"
+                                  class="btn d-block ff text-danger">Log out</button>
+                              </div>
                               <h6 class="text-second">គេហទំព័រ <span class="ff">DSH</span></h6>
                               <h6 class="ff text-second">Unknown login method</h6>
                               <h6 class="text-second"><span class="ff">05</span> កញ្ញា, <span class="ff">2025 11:45
@@ -1037,12 +1186,112 @@
                   </div>
                 </div>
 
+                <!-- Delete Modal 1 -->
+                <div class="modal fade" id="logout-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="logout-label-1" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img src="https://img.icons8.com/?size=100&id=102552&format=png&color=000000" alt=""
+                            style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
+                          <h6 class="mb-0 text-prime ff">Dell Latitude 7280</h6>
+
+                        </div>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់ចេញពីឧបករណ៍នេះទេ?</h5>
+                          <div class="d-flex gap-2">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#success-logout-1"
+                              class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
+                            <button data-bs-dismiss="modal"
+                              class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Delete Modal 2 -->
+                <div class="modal fade" id="logout-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="logout-label-2" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img src="https://img.icons8.com/?size=100&id=XHTBEjS9Wx14&format=png&color=000000" alt=""
+                            style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
+                          <h6 class="mb-0 text-prime ff">iPhone 17 Pro max</h6>
+                        </div>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់ចេញពីឧបករណ៍នេះទេ?</h5>
+                          <div class="d-flex gap-2">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#success-logout-2"
+                              class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
+                            <button data-bs-dismiss="modal"
+                              class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Success Modal -->
+                <div class="modal fade" id="success-logout-1" tabindex="-1" aria-labelledby="success-logout-label-1"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-0 shadow-none">
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                            style="width: 100px; height: 100px;"></i>
+                          <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Success Modal -->
+                <div class="modal fade" id="success-logout-2" tabindex="-1" aria-labelledby="success-logout-label-2"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-0 shadow-none">
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                            style="width: 100px; height: 100px;"></i>
+                          <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
 
           <!-- Security Checkup -->
-          <div class="tab-pane fade" id="tab-security-checkup">
+          <div class="tab-pane" id="tab-security-checkup">
             <div class="card shadow-xs border-0 bg-prime pt-4">
               <img src="https://img.icons8.com/?size=100&id=0tpqgxISselU&format=png&color=000000" alt=""
                 class="mx-auto img-fluid">
@@ -1081,14 +1330,15 @@
                                 <label class="form-label fs-title mb-3">បញ្ចូលលេខទូរស័ព្ទ</label>
                                 <input type="number" class="form-control bg-prime fs-text text-second ps-13 pe-2"
                                   placeholder="លេខទូរស័ព្ទ">
-                                <p class="position-absolute text-second ff fs-text mb-0 trans-y">KH +855</p>
+                                <p class="position-absolute text-second ff fs-text mb-0" style="top: 65%; left: 3%;">KH
+                                  +855</p>
                               </div>
                               <p class="text-second lh-lg">អ្នកនឹងទទួលបានលេខកូដផ្ទៀងផ្ទាត់តាមរយៈ SMS។
                                 លេខទូរសព្ទរបស់អ្នកអាចត្រូវបានប្រើ ដើម្បីភ្ជាប់ទំនាក់ទំនង របស់អ្នកជាមួយអ្នកផ្សេងទៀត
                                 កែលម្អការផ្សាយពាណិជ្ជកម្ម និងធ្វើអ្វីៗជាច្រើនទៀតដោយផ្អែកលើការកំណត់របស់អ្នក។
                                 ស្វែងយល់បន្ថែម</p>
                               <button type="button" class="btn btn-gold w-100 fs-btn" data-bs-toggle="modal"
-                                data-bs-target="#otp" data-bs-dismiss="modal">
+                                data-bs-target="#otp-1" data-bs-dismiss="modal">
                                 បន្ត
                               </button>
                             </form>
@@ -1101,7 +1351,7 @@
                 </div>
 
                 <!-- OTP Modal -->
-                <div class="modal fade" id="otp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                <div class="modal fade" id="otp-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                   aria-labelledby="otpLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content bg-prime border-0 rounded-3 shadow">
@@ -1126,18 +1376,12 @@
                           <div class="col-lg-10">
                             <form id="otpForm">
                               <div class="d-flex justify-content-center gap-3 mb-4 ff">
-                                <input type="text" maxlength="1" placeholder="9"
-                                  class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="1"
-                                  class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="4"
-                                  class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="7"
-                                  class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="3"
-                                  class="form-control otp-input bg-transparent" />
-                                <input type="text" maxlength="1" placeholder="5"
-                                  class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
                               </div>
                               <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
                                 <p class="m-0">មិនបានទទូលលេខកូដ?</p>
@@ -1192,7 +1436,7 @@
                                 <label for="newPassword" class="form-label fs-title text-prime">ពាក្យសម្ងាត់ថ្មី</label>
                                 <input type="password" class="form-control bg-prime fs-text text-second ps-7"
                                   id="newPassword" placeholder="វាយពាក្យសម្ងាត់ថ្មី">
-                                <i class="bi bi-lock-fill position-absolute text-gold icon-input"></i>
+                                <i class="bi bi-lock position-absolute text-gold icon-input"></i>
                               </div>
 
                               <!-- បញ្ជាក់ពាក្យសម្ងាត់ថ្មី -->
@@ -1201,15 +1445,37 @@
                                   class="form-label fs-title text-prime">បញ្ជាក់ពាក្យសម្ងាត់</label>
                                 <input type="password" class="form-control bg-prime fs-text text-second ps-7"
                                   id="confirmPassword" placeholder="បញ្ជាក់ពាក្យសម្ងាត់">
-                                <i class="bi bi-shield-lock-fill position-absolute text-gold icon-input"></i>
+                                <i class="bi bi-shield-lock position-absolute text-gold icon-input"></i>
                               </div>
 
-                              <button type="submit" class="btn btn-gold w-100 fs-btn" data-bs-dismiss="modal">
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#success-pw-1"
+                                class="btn btn-gold w-100 fs-btn">
                                 រក្សាទុកពាក្យសម្ងាត់
                               </button>
                             </form>
                           </div>
                           <div class="col-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Success Modal password -->
+                <div class="modal fade" id="success-pw-1" tabindex="-1" aria-labelledby="success-logout-label-4"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-0 shadow-none">
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                            style="width: 100px; height: 100px;"></i>
+                          <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
                         </div>
                       </div>
                     </div>
@@ -1254,21 +1520,21 @@
                   </div>
                 </div>
                 <hr class="border-bottom mb-3">
-                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5 mb-2"
-                  data-bs-toggle="modal" data-bs-target="#security-check-3">
+                <button type="button" class="btn p-0 w-100 d-flex align-items-center justify-content-between gap-5"
+                  data-bs-toggle="modal" data-bs-target="#security-3">
                   <div class="card border-0 bg-transparent py-2 text-start">
-                    <h5 class="mb-2 text-prime"><i class="bi bi-check-lg me-1 fs-3 text-green"></i>ឧបករណ៍របស់អ្នក</h5>
-                    <p class="mb-0 text-second ms-5">គ្រប់គ្រងឧបករណ៍របស់អ្នក</p>
+                    <h5 class="mb-2 text-prime"><i class="bi bi-check-lg me-1 fs-3 text-green"></i> ឧបករណ៍របស់អ្នក</h5>
+                    <p class="mb-0 text-second ms-5">គ្រប់គ្រងឧបករណ៍ដែលអ្នកបានចូលគណនី</p>
                   </div>
                   <i class="bi bi-chevron-right text-prime fs-5"></i>
                 </button>
                 <!-- Modal -->
-                <div class="modal fade" id="security-check-3" data-bs-backdrop="static" data-bs-keyboard="false"
-                  tabindex="-1" aria-labelledby="security-check-label-3" aria-hidden="true">
+                <div class="modal fade" id="security-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="security-alert-label-3" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
-                    <div class="modal-content rounded-2 bg-prime">
+                    <div class="modal-content rounded-3 bg-prime">
                       <div class="modal-header border-bottom px-5">
-                        <h1 class="modal-title fs-4 text-main" id="security-check-label-3">គ្រប់គ្រងឧបករណ៍
+                        <h1 class="modal-title fs-4 text-main">ការពិនិត្យសុវត្ថិភាព
                         </h1>
                         <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
                           <i class="bi bi-x-lg fs-5 text-prime"></i>
@@ -1280,8 +1546,12 @@
                           <div class="card-body d-flex gap-3 bg-second rounded-3 shadow-xs mb-3">
                             <img src="https://img.icons8.com/?size=100&id=102552&format=png&color=000000" alt=""
                               class="img-fluid object-fit-contain h-fit" style="width: 35px;">
-                            <div>
-                              <h5 class="pt-2 text-prime ff">Dell Latitude 7280</h5>
+                            <div class="w-100">
+                              <div class="d-flex justify-content-between">
+                                <h5 class="pt-2 text-prime ff">Dell Latitude 7280</h5>
+                                <button data-bs-toggle="modal" data-bs-target="#logout-3"
+                                  class="btn d-block ms-auto ff text-danger">Log out</button>
+                              </div>
                               <h6 class="text-second">គេហទំព័រ <span class="ff">DSH</span></h6>
                               <h6 class="ff text-second">Unknown login method</h6>
                               <h6 class="text-second"><span class="ff">12</span> កញ្ញា, <span class="ff">2025 09:20
@@ -1291,8 +1561,12 @@
                           <div class="card-body d-flex gap-3 bg-second rounded-3 shadow-xs mb-4">
                             <img src="https://img.icons8.com/?size=100&id=XHTBEjS9Wx14&format=png&color=000000" alt=""
                               class="img-fluid object-fit-contain h-fit" style="width: 40px;">
-                            <div>
-                              <h5 class="pt-2 text-prime ff">iPhone 17 Pro max</h5>
+                            <div class="w-100">
+                              <div class="d-flex justify-content-between">
+                                <h5 class="pt-2 text-prime ff">iPhone 17 Pro max</h5>
+                                <button data-bs-toggle="modal" data-bs-target="#logout-4"
+                                  class="btn d-block ff text-danger">Log out</button>
+                              </div>
                               <h6 class="text-second">គេហទំព័រ <span class="ff">DSH</span></h6>
                               <h6 class="ff text-second">Unknown login method</h6>
                               <h6 class="text-second"><span class="ff">05</span> កញ្ញា, <span class="ff">2025 11:45
@@ -1304,6 +1578,106 @@
                         </div>
                       </div>
 
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Delete Modal 3 -->
+                <div class="modal fade" id="logout-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="logout-label-3" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img src="https://img.icons8.com/?size=100&id=102552&format=png&color=000000" alt=""
+                            style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
+                          <h6 class="mb-0 text-prime ff">Dell Latitude 7280</h6>
+
+                        </div>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់ចេញពីឧបករណ៍នេះទេ?</h5>
+                          <div class="d-flex gap-2">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#success-logout-3"
+                              class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
+                            <button data-bs-dismiss="modal"
+                              class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Delete Modal 4 -->
+                <div class="modal fade" id="logout-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="logout-label-4" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-bottom px-5">
+                        <div class="d-flex gap-3 align-items-center">
+                          <img src="https://img.icons8.com/?size=100&id=XHTBEjS9Wx14&format=png&color=000000" alt=""
+                            style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
+                          <h6 class="mb-0 text-prime ff">iPhone 17 Pro max</h6>
+                        </div>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់ចេញពីឧបករណ៍នេះទេ?</h5>
+                          <div class="d-flex gap-2">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#success-logout-4"
+                              class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
+                            <button data-bs-dismiss="modal"
+                              class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Success Modal 3 -->
+                <div class="modal fade" id="success-logout-3" tabindex="-1" aria-labelledby="success-logout-label-3"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-0 shadow-none">
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                            style="width: 100px; height: 100px;"></i>
+                          <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Success Modal 4 -->
+                <div class="modal fade" id="success-logout-4" tabindex="-1" aria-labelledby="success-logout-label-4"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-0 shadow-none">
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                            style="width: 100px; height: 100px;"></i>
+                          <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1339,15 +1713,10 @@
                               និងមានតែអ្នកប៉ុណ្ណោះទើបមើលឃើញ។
                               បើ អ្នកប្តូរវា វាប្រហែលជានៅតែត្រូវបានរក្សាទុក សម្រាប់គោលបំណងស្ដារគណនី។
                             </p>
-                            <div class="d-flex gap-3">
-                              <button type="submit" class="btn btn-gold w-100 fs-btn" data-bs-dismiss="modal">
-                                ប្តូរអ៊ីមែល
-                              </button>
-                              <button type="submit" class="btn btn-gold w-100 fs-btn" data-bs-dismiss="modal">
-                                ឈប់តភ្ជាប់អ៊ីមែល
-                              </button>
-                            </div>
-
+                            <button type="button" class="btn btn-gold w-100 fs-btn" data-bs-toggle="modal"
+                              data-bs-target="#otp-2" data-bs-dismiss="modal">
+                              ប្តូរអ៊ីមែល
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -1356,6 +1725,132 @@
                   </div>
                 </div>
 
+                <!-- OTP Modal 2 -->
+                <div class="modal fade" id="otp-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="otpLabel-2" aria-hidden="true">
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-prime border-0 rounded-3 shadow">
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main">ការពិនិត្យសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+
+                      <!-- Body -->
+                      <div class="modal-body p-5">
+                        <div class="row">
+                          <h5 class="mb-3 text-prime text-center">
+                            វាយបញ្ចូលកូដ <span class="ff">6</span>-ខ្ទង់
+                          </h5>
+                          <p class="text-second text-center fs-text mb-4">កូដរបស់អ្នកត្រូវបានផ្ញើទៅកាន់ <span
+                              class="ff">LayJammy@gmail.com</span>
+                          </p>
+                          <div class="col-1"></div>
+                          <div class="col-lg-10">
+                            <form>
+                              <div class="d-flex justify-content-center gap-3 mb-4 ff">
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                                <input type="text" maxlength="1" class="form-control otp-input bg-transparent" />
+                              </div>
+                              <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
+                                <p class="m-0">មិនបានទទូលលេខកូដ?</p>
+                                <button class="btn m-0 p-0">
+                                  <p class="text-main m-0">ព្យាយាមម្តងទៀតនៅ <span class="ff">59s</span></p>
+                                </button>
+                              </div>
+
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-gold w-100 fs-btn mb-3" data-bs-toggle="modal"
+                                data-bs-target="#resetPw-2">
+                                បញ្ជាក់
+                              </button>
+                            </form>
+                          </div>
+                          <div class="col-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal បង្កើតពាក្យសម្ងាត់ថ្មី -->
+                <div class="modal fade" id="resetPw-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="resetPass" aria-hidden="true">
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content bg-prime border-0 rounded-3 shadow">
+
+                      <div class="modal-header border-bottom px-5">
+                        <h1 class="modal-title fs-4 text-main">ការពិនិត្យសុវត្ថិភាព
+                        </h1>
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+
+                      <!-- Body -->
+                      <div class="modal-body p-5">
+                        <div class="row">
+                          <h5 class="mb-4 text-center fs-title text-prime">សូមបញ្ចូលអ៊ីមែលថ្មីរបស់អ្នក</h5>
+
+                          <div class="col-1"></div>
+                          <div class="col-lg-10">
+                            <form>
+                              <!-- ពាក្យសម្ងាត់ថ្មី -->
+                              <div class="mb-3 position-relative">
+                                <label for="newPassword1" class="form-label fs-title text-prime">អ៊ីមែលថ្មី</label>
+                                <input type="password" class="form-control bg-prime fs-text text-second ps-7"
+                                  id="newPassword1" placeholder="វាយអ៊ីមែលថ្មី">
+                                <i class="bi bi-lock position-absolute text-gold icon-input"></i>
+                              </div>
+
+                              <!-- បញ្ជាក់ពាក្យសម្ងាត់ថ្មី -->
+                              <div class="mb-4 position-relative">
+                                <label for="confirmPassword"
+                                  class="form-label fs-title text-prime">បញ្ជាក់អ៊ីមែល</label>
+                                <input type="password1" class="form-control bg-prime fs-text text-second ps-7"
+                                  id="confirmPassword1" placeholder="បញ្ជាក់អ៊ីមែល">
+                                <i class="bi bi-shield-lock position-absolute text-gold icon-input"></i>
+                              </div>
+
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#success-email-1"
+                                class="btn btn-gold w-100 fs-btn">
+                                រក្សាទុក
+                              </button>
+                            </form>
+                          </div>
+                          <div class="col-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Success Modal 4 -->
+                <div class="modal fade" id="success-email-1" tabindex="-1" aria-labelledby="success-logout-label-4"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-3 bg-prime">
+                      <div class="modal-header border-0 shadow-none">
+                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
+                          <i class="bi bi-x-lg fs-5 text-prime"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="card-body">
+                          <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                            style="width: 100px; height: 100px;"></i>
+                          <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
