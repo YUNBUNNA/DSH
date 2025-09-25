@@ -20,6 +20,58 @@
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+<style>
+    /* Hero Section */
+    .floating-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 24px;
+        padding: 2rem;
+        box-shadow: var(--shadow-large);
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .hero-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.6s ease;
+    }
+
+    .hero-image:hover img {
+        transform: scale(1.05);
+    }
+
+    .workout-plan-card {
+        transition: all 0.3s ease;
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+    }
+
+    .workout-plan-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+</style>
 
 <body class="bg-prime">
 
@@ -352,9 +404,97 @@
     </header>
 
     <main>
-        <section class="bg-third pt-20 pb-10">
+        <!-- Hero Section -->
+        <section class="bg-prime pt-18 pb-10  d-flex align-items-center">
             <div class="container">
-                <h1 class="text-main text-center text-prime mb-3">ការហ្វឹកហាត់</h1>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="card bg-prime  border-0">
+                            <div class="card-body">
+                                <h1 class="card-title text-main fade-in-up">
+                                    ការហ្វឹកហាត់
+                                </h1>
+                                <p class="card-text text-prime mb-4 fade-in-up lead">
+                                    កសាងរាងកាយដែលអ្នកចង់បាន ជាមួយគម្រោងហ្វឹកហាត់ដ៏ទូលំទូលាយ
+                                </p>
+                                <div class="fade-in-up ">
+                                    <a href="#pricing" class="btn btn-prime text-white btn-lg me-3">ចាប់ផ្តើម</a>
+                                    <a href="#rules"
+                                        class="btn btn-outline-secondary btn-lg text-prime">ស្វែងយល់បន្ថែម</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="floating-card fade-in-up bg-prime border-0">
+                            <div class="hero-image">
+                                <img src="https://cdn.shopify.com/s/files/1/2716/9828/files/homepage_head_cover.png?v=1725337917&width=3840"
+                                    alt="Football Team" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Achievement -->
+        <section class="star bg-gold mt-5 py-5 ">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body text-center">
+                                <div class="d-flex display-5 justify-content-center align-items-center">
+                                    <h1 class="counter card-title display-5 ff" data-countto="150" data-duration="2000">
+                                        0</h1>
+                                    <span>+</span>
+                                </div>
+                                <h4 class="card-text mt-1">អតិថិជន</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body text-center">
+                                <div class="d-flex display-6 justify-content-center align-items-center">
+                                    <h1 class="counter card-title display-5 ff" data-countto="7" data-duration="2000">0
+                                    </h1>
+                                    <span class="ms-1">ឆ្នាំ</span>
+                                </div>
+                                <h4 class="card-text mt-1">បទពិសោធន៏</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body text-center">
+                                <div class="d-flex display-5 justify-content-center align-items-center">
+                                    <h1 class="counter card-title display-5 ff" data-countto="50" data-duration="2000">
+                                        0</h1>
+                                    <span>+</span>
+                                </div>
+                                <h4 class="card-text mt-1">អ្នកបណ្តុះបណ្តាល</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body text-center">
+                                <div class="d-flex display-5 justify-content-center align-items-center">
+                                    <h1 class="counter card-title display-5 ff" data-countto="98" data-duration="2000">0
+                                    </h1>
+                                    <span class="fs-2 fw-bold">%</span>
+                                </div>
+                                <h4 class="card-text mt-1">សម្រេចបាន​គោលដៅ</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ការហ្វឹកហាត់ -->
+        <section class="bg-third py-8 mb-5">
+            <div class="container">
+                <h1 class="text-main text-center text-prime mb-5">ការហ្វឹកហាត់</h1>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-4">
                         <div class="card border-0 shadow-xs bg-prime">
@@ -363,8 +503,10 @@
                                 loop autoplay speed="1" mode="forward" class="mx-auto">
                             </dotlottie-wc>
                             <div class="card-body text-center text-prime">
-                                <h5 class="ff">Push-ups</h5>
-                                <h6><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <h5 class="ff text-main">Push-ups</h5>
+                                <h6 class="lead"><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <p class="text-prime text-center lead ">បង្កើនកម្លាំងជើងចង្វាក់, ស្មា និងសាច់ដុំស្នូល
+                                    ល្អសម្រាប់ការហ្វឹកហាត់ upper body</p>
                             </div>
                         </div>
                     </div>
@@ -375,8 +517,11 @@
                                 loop autoplay speed="1" mode="forward" class="mx-auto">
                             </dotlottie-wc>
                             <div class="card-body text-center text-prime">
-                                <h5 class="">លើកទម្ងន់</h5>
-                                <h6><span class="ff">8-12</span> ដង <span class="ff">x 4 </span> សេត</h6>
+                                <h5 class="text-main">លើកទម្ងន់</h5>
+                                <h6 class="lead"><span class="ff">8-12</span> ដង <span class="ff">x 4 </span> សេត</h6>
+                                <p class="text-prime text-center lead ">លំហាត់ស្នូលសម្រាប់កម្លាំងទូទៅ ពង្រឹងខ្នង, ជើង
+                                    និងសាច់ដុំគូទ</p>
+
                             </div>
                         </div>
                     </div>
@@ -387,8 +532,11 @@
                                 loop autoplay speed="1" mode="forward" class="mx-auto">
                             </dotlottie-wc>
                             <div class="card-body text-center text-prime">
-                                <h5 class="ff">Leg Press</h5>
-                                <h6><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <h5 class="ff text-main">Leg Press</h5>
+                                <h6 class="lead"><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <p class="text-prime text-center lead">បង្កើនកម្លាំងសាច់ដុំជើង និងគូទ សុវត្ថិភាពខ្ពស់
+                                    និងងាយស្រួលប្រើ</p>
+
                             </div>
                         </div>
                     </div>
@@ -400,8 +548,11 @@
                                 class="mx-auto">
                             </dotlottie-wc>
                             <div class="card-body text-center text-prime">
-                                <h5 class="ff">Tricep Dips</h5>
-                                <h6><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <h5 class="ff text-main">Tricep Dips</h5>
+                                <h6 class="lead"><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <p class="text-prime text-center lead">ផ្តោតលើសាច់ដុំ <span class=" ff">triceps</span>
+                                    នៃដៃ ជួយបង្កើនកម្លាំងដៃ និងស្មា។</p>
+
                             </div>
                         </div>
                     </div>
@@ -413,8 +564,11 @@
                                 class="mx-auto">
                             </dotlottie-wc>
                             <div class="card-body text-center text-prime">
-                                <h5 class="ff">Plank with Lateral Arm Raise</h5>
-                                <h6><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <h5 class="ff text-main">Plank with Lateral Arm Raise</h5>
+                                <h6 class="lead"><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <p class="text-prime text-center lead">បង្កើនស្ថេរភាព និងកម្លាំងស្នូល
+                                    ល្អសម្រាប់ការកែលំអរាងកាយ</p>
+
                             </div>
                         </div>
                     </div>
@@ -425,72 +579,251 @@
                                 loop autoplay speed="1" mode="forward" class="mx-auto">
                             </dotlottie-wc>
                             <div class="card-body text-center text-prime">
-                                <h5 class="ff">Dead Bug</h5>
-                                <h6><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <h5 class="ff text-main">Dead Bug</h5>
+                                <h6 class="lead"><span class="ff">10-15</span> ដង <span class="ff">x 3 </span> សេត</h6>
+                                <p class="text-prime text-center lead">លំហាត់សម្រាប់ការសម្របសម្រួល និងកម្លាំងស្នូល
+                                    ជួយកែលំអឥរិយាបថ</p>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ផ្នែកផែនការហ្វឹកហាត់ -->
-        <section class="workout-plan-section py-8 bg-light">
+        <!-- Workout Plans Section -->
+        <section class=" py-5  mb-5">
             <div class="container">
-                <div class="text-center mb-6">
-                    <h2 class="text-main fw-bold">ផែនការហ្វឹកហាត់</h2>
-                    <p class="text-muted fs-5">អនុវត្តន៍វគ្គហ្វឹកហាត់តាមរបៀបសំរាប់រាងកាយ មិនត្រឹមតែជាជម្រើសចៃដន្យទេ</p>
+                <h1 class="text-main text-center text-prime mb-5">ផែនការហ្វឹកហាត់</h1>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                                <h5 class=" text-main fs-title">ថ្ងៃហ្វឹកហាត់រាងកាយទាំងមូល</h5>
+                                <p class="card-text text-prime lead fs-text">
+                                    វគ្គពេញលេញសម្រាប់ហ្វឹកហាត់សាច់ដុំទាំងអស់ក្នុងថ្ងៃតែមួយ
+                                </p>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2 "></i>រយៈពេល: 60-90 នាទី</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ភាពលំបាក: មធ្យម</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ល្អសម្រាប់អ្នកចាប់ផ្តើម</li>
+                                </ul>
+                                <button class="btn bg-gold w-100">ចាប់ផ្តើមវគ្គ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                                <h5 class=" text-main fs-title">ថ្ងៃហ្វឹកហាត់រាងកាយទាំងមូល</h5>
+                                <p class="card-text text-prime lead fs-text">
+                                    វគ្គពេញលេញសម្រាប់ហ្វឹកហាត់សាច់ដុំទាំងអស់ក្នុងថ្ងៃតែមួយ
+                                </p>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2 "></i>រយៈពេល: 60-90 នាទី</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ភាពលំបាក: មធ្យម</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ល្អសម្រាប់អ្នកចាប់ផ្តើម</li>
+                                </ul>
+                                <button class="btn bg-gold w-100">ចាប់ផ្តើមវគ្គ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                                <h5 class=" text-main fs-title ff">Core & Abs Blast</h5>
+                                <p class="card-text text-prime lead fs-text">
+                                    បង្កើនកម្លាំងស្នូលរាងកាយ និងក្រពះ
+                                </p>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2 "></i>រយៈពេល: 30-45 នាទី</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ភាពលំបាក: មធ្យម</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ល្អសម្រាប់អ្នកចាប់ផ្តើម</li>
+                                </ul>
+                                <button class="btn bg-gold w-100">ចាប់ផ្តើមវគ្គ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                                <h5 class=" text-main fs-title">ថ្ងៃសាច់ដុំជើង</h5>
+                                <p class="card-text text-prime lead fs-text">
+                                    បង្កើនកម្លាំងជើង
+                                </p>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2 "></i>រយៈពេល: 60-75 នាទី</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ភាពលំបាក: ខ្ពស់</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>កសាងកម្លាំងជើង</li>
+                                </ul>
+                                <button class="btn bg-gold w-100">ចាប់ផ្តើមវគ្គ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                                <h5 class=" text-main fs-title ff">Cardio Intensive</h5>
+                                <p class="card-text text-prime lead fs-text">
+                                    បង្កើនសមត្ថភាពបេះដូង និងដុតខ្លាញ់
+                                </p>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2 "></i>រយៈពេល: 30-45 នាទី</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ភាពលំបាក: មធ្យម-ខ្ពស់</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ដុតកាឡូរី</li>
+                                </ul>
+                                <button class="btn bg-gold w-100">ចាប់ផ្តើមវគ្គ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                                <h5 class=" text-main fs-title ff">HIIT Training</h5>
+                                <p class="card-text text-prime lead fs-text">
+                                    ហ្វឹកហាត់ដោយភាពអាំងតង់ស៊ីតេខ្ពស់
+                                </p>
+                                <ul class="list-unstyled text-start mb-4">
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2 "></i>រយៈពេល: 20-30 នាទី</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ភាពលំបាក: ខ្ពស់</li>
+                                    <li class="border-bottom py-2 text-prime"><i
+                                            class="bi bi-check-lg text-success me-2"></i>ការដុតខ្លាញ់ឆាប់រហ័ស</li>
+                                </ul>
+                                <button class="btn bg-gold w-100">ចាប់ផ្តើមវគ្គ</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
+        <!-- អាហារូបត្ថម្ភ -->
+        <section class="bg-third py-8 mb-5">
+            <div class="container">
+                <h1 class="text-main text-center text-prime mb-3">អាហារូបត្ថម្ភ</h1>
+                <p class="text-center mb-5 fs-5 lead text-prime">អាហារដែលត្រឹមត្រូវគឺជាកត្តាសំខាន់ 70% នៃភាពជោគជ័យ
+                </p>
 
                 <div class="row g-4">
-                    <!-- Full Body Day Card -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card shadow-sm h-100">
-                            <div class="card-body text-center">
-                                <h5 class="card-title text-main">ថ្ងៃហ្វឹកហាត់រាងកាយទាំងមូល</h5>
-                                <p class="card-text text-muted">វគ្គពេញលេញសម្រាប់ហ្វឹកហាត់សាច់ដុំទាំងអស់។
-                                    ល្អសម្រាប់កម្លាំង
-                                    និងសមត្ថភាពទូទៅ។</p>
-                                <a href="#" class="btn btn-primary mt-3">ចាប់ផ្តើមវគ្គ</a>
-                            </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift">
+                            <i class="bi bi-egg-fried text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <h3 class=" card-title text-main ">ប្រូតេអ៊ីន</h3>
+                            <p class="card-text lead text-prime  fs-title"> <span class=" ff">1.6-2.2g</span> ក្នុង 1kg
+                                ទម្ងន់ខ្លួន</p>
+                            <div class="text-prime lead">សម្រាប់កសាង និងជួសជុលសាច់ដុំ</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift">
+                            <i class="bi bi-cup-hot text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <h3 class="card-title text-main">កាបូហ៊ីដ្រាត</h3>
+                            <p class="card-text lead text-prime  fs-title">3-7g ក្នុង 1kg ទម្ងន់ខ្លួន</p>
+                            <div class="text-prime lead">ថាមពលសម្រាប់ការហ្វឹកហាត់</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift">
+                            <i class="bi bi-droplet text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <h3 class="card-title text-main">ខ្លាញ់ល្អ</h3>
+                            <p class="card-text lead text-prime  fs-title">0.8-1.2g ក្នុង 1kg ទម្ងន់ខ្លួន</p>
+                            <div class="text-prime lead">សម្រាប់ហរម៉ូន និងសុខភាពទូទៅ</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift">
+                            <i class="bi bi-droplet text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <h3 class="card-title text-main">ទឹក</h3>
+                            <p class="card-text lead text-prime  fs-title">2.5-3.5 លីត្រ ក្នុងមួយថ្ងៃ</p>
+                            <div class="text-prime lead">សម្រាប់ការរំលាយអាហារ </div>
                         </div>
                     </div>
 
-                    <!-- Upper Body Day Card -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card shadow-sm h-100">
-                            <div class="card-body text-center">
-                                <h5 class="card-title text-main">ថ្ងៃសាច់ដុំលើ</h5>
-                                <p class="card-text text-muted">ផ្តោតលើជើងចង្វាក់, ខ្នង, ស្មា និងដៃសម្រាប់កម្លាំង upper
-                                    body។</p>
-                                <a href="#" class="btn btn-primary mt-3">ចាប់ផ្តើមវគ្គ</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Core & Abs Blast Card -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card shadow-sm h-100">
-                            <div class="card-body text-center">
-                                <h5 class="card-title text-main">Core & Abs Blast</h5>
-                                <p class="card-text text-muted">បង្កើនកម្លាំងស្នូលរាងកាយ និងក្រពះជាមួយវគ្គនេះ។</p>
-                                <a href="#" class="btn btn-primary mt-3">ចាប់ផ្តើមវគ្គ</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Leg Day Card -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card shadow-sm h-100">
-                            <div class="card-body text-center">
-                                <h5 class="card-title text-main">ថ្ងៃសាច់ដុំជើង</h5>
-                                <p class="card-text text-muted">បង្កើនកម្លាំងជើង និងប៉ីស្ដើងជាមួយវគ្គ lower body។</p>
-                                <a href="#" class="btn btn-primary mt-3">ចាប់ផ្តើមវគ្គ</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
+        <!-- គន្លឹះហ្វឹកហាត់n -->
+        <section class=" py-5  mb-5">
+            <div class="container">
+                <h1 class="text-main text-center text-prime mb-5">គន្លឹះហ្វឹកហាត់</h1>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+
+                                <i class="bi bi-clock text-gold " style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <h3 class=" text-main ">ស្ថេរភាព</h3>
+                                <p class="card-text text-prime lead">ហ្វឹកហាត់ជាទៀងទាត់ជាងការហ្វឹកហាត់ខ្លាំងម្តងម្កាល។
+                                    ការស្ថេរភាពគឺជាសោរដែលបើកទ្វារដល់ភាពជោគជ័យ។</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                               <i class="bi bi-graph-up text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <h3 class="text-main">រីកចម្រើនបន្តិចម្តង</h3 >
+                                <p class="card-text text-prime lead">បន្ថែមទម្ងន់ ឬចំនួនដងបន្តិចម្តងរៀងរាល់សប្តាហ៍។ Progressive overload
+                                    គឺជាគន្លឹះនៃការកសាងសាច់ដុំ។</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-moon text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <h3 class="text-main">ការសម្រាក</h3 >
+                                <p class="card-text text-prime lead">ដេក 7-9 ម៉ោងក្នុងមួយយប់។ សាច់ដុំរីកចម្រើននៅពេលសម្រាក មិនមែននៅពេលហ្វឹកហាត់ទេ។</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                               <i class="bi bi-thermometer-half text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <h3 class="text-main" >ការដុតខ្លួន</h3 >
+                                <p class="card-text text-prime lead">ដុតខ្លួនមុនហ្វឹកហាត់ 10-15 នាទី ដើម្បីជៀសវាងរបួស និងបង្កើនប្រសិទ្ធភាព។</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                               <i class="bi bi-clipboard-data text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <h3 class="text-main">កត់ត្រាការហ្វឹកហាត់</h3 >
+                                <p class="card-text text-prime lead">កត់ត្រាលម្អិតអំពីទម្ងន់, ចំនួនដង និងសេត ដើម្បីតាមដានការរីកចម្រើន។</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card workout-plan-card border-0 shadow-sm bg-third h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="bi bi-people text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <h3 class="text-main">ស្វែងរកការគាំទ្រ</h3>
+                                <p class="card-text text-prime lead">ហ្វឹកហាត់ជាមួយមិត្តភ័ក្តិ ឬស្វែងរកគ្រូបង្វឹក។ ការគាំទ្រពីសង្គមជួយកំណត់គោលដៅ។</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
 
