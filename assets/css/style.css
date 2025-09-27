@@ -617,6 +617,18 @@ body {
   .text-btn{
     font-size: 16px;
   }
+  .sign-up{
+    font-size: 15px !important;
+  }
+  .sign-in{
+    font-size: 15px !important;
+  }
+  .dsh-logo{
+    width: 60px;
+  }
+  .second-section{
+    padding-top: 4rem;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -650,6 +662,9 @@ body {
   }
    .text-btn{
     font-size: 22px;
+  }
+  .dsh-logo{
+    width: 90px;
   }
 }
 

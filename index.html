@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/jpg" href="assets/img/brand.png" />
-  <title style="font-family: Poppins;">SDH | landing</title>
+  <title style="font-family: Poppins;">DSH | landing</title>
   <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.7/css/bootstrap.css" />
   <link rel="stylesheet" href="assets/plugins/bootstrap-5.3.7/css/theme.css" />
   <link rel="stylesheet" href="assets/plugins/bootstrap-icons/bootstrap-icons.css" />
@@ -27,31 +27,34 @@
         background-position: 200% center;
       }
     }
+    .text-white{
+      color: white !important;
+    }
   </style>
 </head>
 
 <body class="bg-prime">
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
-      <div class="container-fluid py-1 d-none d-lg-flex bg-nav">
+      <div class="container-fluid py-1 bg-nav">
         <div class="container d-flex align-items-center justify-content-between">
           <a href="" class="navbar-brand">
-            <img src="assets/img/brand.png" alt="" class="img-fluid object-fit-cover"
-              style="width: 90px; height: 40px" />
+            <img src="assets/img/brand.png" alt="" class="img-fluid object-fit-cover dsh-logo"
+              style="height: 40px" />
           </a>
           <ul class="navbar-nav flex-row align-items-center">
             <li>
-              <button class="main-btn text-white" id="theme-toggle" style="left: 40px; top: 4px;">
+              <button class="main-btn text-white" id="theme-toggle" style="left: 35px; top: 4px;">
                 <i class="theme-icon bi bi-sun fs-4"></i>
                 <i class="theme-icon bi bi-moon fs-4"></i>
               </button>
             </li>
             <li class="nav-item">
-              <a href="pages/typeofUser.html" class="px-4 text-white text-decoration-none fs-nav">ចូលគណនី</a>
+              <a href="pages/typeofUser.html" class="text-decoration-none px-4 text-white sign-in text-nowrap">ចូលគណនី</a>
             </li>
             <li class="nav-item">
               <a href="pages/signup.html"
-                class="btn-gold text-dark text-decoration-none fs-nav px-4 py-1 rounded-2">ចុះឈ្មោះ</a>
+                class="text-decoration-none text-white fs-nav px-2 sign-up text-nowrap">ចុះឈ្មោះ</a>
             </li>
           </ul>
         </div>
@@ -62,20 +65,18 @@
   <!-- main -->
   <main>
     <!-- hero-banner -->
-    <section class="hero-banner pt-2 mb-lg-10">
+    <section class="hero-banner second-section">
       <div class="container">
         <div class="row justify-content-center align-items-center h-100 g-4">
           <div class="col-lg-6">
             <div class="card border-0 bg-transparent">
               <div class="card-body">
-                <a href="" style="background-color: #22c373;" class="btn mb-4 text-white"><i class="bi bi-award"></i>
-                  វេទិកាកីឡាឈានមុខគេ</a>
-                <div id="app"></div>
-                <p class="card-text mt-3 mb-4 text-prime" style="font-size: 20px;">
+                <div id="app" class="d-none d-lg-block"></div>
+                <h1 class="d-block d-lg-none text-main fw-bold lh-base">សូមស្វាគមន៍មកកាន់គេហទំព័រ <span class="ff">DSH</span></h1>
+                <p class="card-text mt-3 mb-4 text-prime fs-title lh-base">
                   ចូលរួមជាមួយយើងដើម្បីបង្កើតជីវិតដ៏មានសុខភាពល្អ ជាមួយនឹងកម្មវិធីហ្វឹកហាត់ ការណែនាំអាហារ
                   និងការទំទង់ពីសហគមន៍</p>
-                <a href="pages/signup.html" class="btn btn-lg btn-gold me-2 fw-bold"
-                  style="border: 2px solid #d8b75c;">ចុះឈ្មោះឥឡូវនេះ</a>
+                <a href="pages/signup.html" class="btn btn-lg btn-gold me-2">ចុះឈ្មោះឥឡូវនេះ</a>
                 <a href="pages/typeofUser.html" class="btn btn-lg fw-bold text-prime border-blue">ចូលគណនី</a>
               </div>
             </div>
@@ -93,15 +94,15 @@
     <section class="what-is-ds pb-5">
       <div class="container">
         <div class="text-center mb-8">
-          <h4 class="display-6 fw-bold text-main">តើ Digital Sports <span style="color: #d8b75c;">&</span> Health
+          <h4 class="display-6 fw-bold text-main">តើ <span class="ff">Digital Sports </span><span style="color: #d8b75c;">&</span> <span class="ff">Health</span>
             គឺជាអ្វី?</h4>
-          <p class="mt-3 fs-5 text-prime">DSH គឺជាគេហទំព័រអំពីសហគមន៍កីឡា និងសុខភាព​ ដែលផ្តល់អត្ថប្រយោជន៍ដូចជា</p>
+          <p class="mt-3 fs-5 text-prime"><span class="ff">DSH</span> គឺជាគេហទំព័រអំពីសហគមន៍កីឡា និងសុខភាព​ ដែលផ្តល់អត្ថប្រយោជន៍ដូចជា</p>
         </div>
         <div class="row g-4 justify-content-between">
           <div class="col-lg-4">
             <div class="card bg-transparent border-0 rounded-3">
               <div class="card-body text-center p-5 text-prime">
-                <i class="d-block bi bi-people rounded-circle fs-2 fw-bold bg-gold text-center align-content-center mx-auto mb-3 text-dark"
+                <i class="bi bi-people d-flex justify-content-center align-items-center mx-auto rounded-circle fs-2 fw-bold bg-gold mb-3"
                   style="width: 80px; height: 80px;"></i>
                 <h3>សហគមន៍</h3>
                 <p class="card-text mt-1">សហគមន៍មួយដែលផ្តល់ការគាំទ្រ និងលើកទឹកចិត្តសមាជិកទាំងអស់ក្នុងការហាត់ប្រាណ
@@ -112,8 +113,8 @@
           <div class="col-lg-4">
             <div class="card bg-transparent border-0 rounded-3">
               <div class="card-body text-center p-5 text-prime">
-                <i class="d-block bi bi-heart-pulse rounded-circle fs-2 fw-bold text-center align-content-center mx-auto mb-3 text-white"
-                  style="width: 80px; height: 80px; background-color: #58A8E6;"></i>
+                <i class="bi bi-heart-pulse d-flex justify-content-center align-items-center mx-auto rounded-circle fs-2 fw-bold bg-gold mb-3"
+                  style="width: 80px; height: 80px;"></i>
                 <h3>សុខភាព</h3>
                 <p class="card-text mt-1">យើងផ្តោតលើការធ្វើឱ្យជីវិតមានសុខភាពល្អតាមរយៈការហាត់ប្រាណ ការញុំាអាហារល្អ
                   និងការថែរក្សាផ្លូវចិត្ត។</p>
@@ -123,7 +124,7 @@
           <div class="col-lg-4">
             <div class="card bg-transparent border-0 rounded-3">
               <div class="card-body text-center p-5 text-prime">
-                <i class="d-block bi bi-trophy rounded-circle fs-2 fw-bold text-center align-content-center mx-auto mb-3 text-white"
+                <i class="bi bi-trophy d-flex justify-content-center align-items-center mx-auto rounded-circle fs-2 fw-bold bg-gold mb-3"
                   style="width: 80px; height: 80px; background-color: #22c373;"></i>
                 <h3>លទ្ធផល</h3>
                 <p class="card-text mt-1">តាមរយៈកម្មវិធីនានា យើងជួយសមាជិកឱ្យសម្រេចបាននូវគោលដៅសុខភាព និងកីឡារបស់ពួកគេ។
@@ -136,53 +137,43 @@
     </section>
 
     <!-- Achievement -->
-    <section class="star bg-gold py-6">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-3">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body text-center">
-                <div class="d-flex display-5 justify-content-center align-items-center">
-                  <h1 class="counter card-title display-5 ff" data-countto="150" data-duration="2000">0</h1>
-                  <span>+</span>
+    <section class="pt-4">
+      <div class="container-fluid" data-aos="fade-right" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-12 bg-gold rounded-2">
+            <div class="row">
+              <div class="col-4">
+                <div class="card border-0 bg-transparent">
+                  <div class="card-body text-center text-white">
+                    <div class="d-flex achi-num justify-content-center align-items-center">
+                      <h1 class="counter card-title achi-num ff" data-countto="3720" data-duration="2000">0</h1>
+                      <h1 class="achi-num">+</h1>
+                    </div>
+                    <h3 class="achi-title">អតិថិជន</h3>
+                  </div>
                 </div>
-                <h4 class="card-text mt-1">អតិថិជន</h4>
               </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body text-center">
-                <div class="d-flex display-6 justify-content-center align-items-center">
-                  <h1 class="counter card-title display-5 ff" data-countto="7" data-duration="2000">0
-                  </h1>
-                  <span class="ms-1">ឆ្នាំ</span>
+              <div class="col-4">
+                <div class="card border-0 bg-transparent text-white">
+                  <div class="card-body text-center">
+                    <div class="d-flex display-6 justify-content-center align-items-center">
+                      <h1 class="counter card-title achi-num ff" data-countto="7" data-duration="2000">0</h1>
+                      <span class="ms-1 mb-2">ឆ្នាំ</span>
+                    </div>
+                    <h3 class="achi-title">បទពិសោធន៏</h3>
+                  </div>
                 </div>
-                <h4 class="card-text mt-1">បទពិសោធន៏</h4>
               </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body text-center">
-                <div class="d-flex display-5 justify-content-center align-items-center">
-                  <h1 class="counter card-title display-5 ff" data-countto="50" data-duration="2000">
-                    0</h1>
-                  <span>+</span>
+              <div class="col-4">
+                <div class="card border-0 bg-transparent">
+                  <div class="card-body text-center text-white">
+                    <div class="d-flex achi-num justify-content-center align-items-center">
+                      <h1 class="counter card-title achi-num ff" data-countto="150" data-duration="2000">0</h1>
+                      <h1 class="achi-num">+</h1>
+                    </div>
+                    <h3 class="achi-title text-nowrap">អ្នកបណ្តុះបណ្តាល</h3>
+                  </div>
                 </div>
-                <h4 class="card-text mt-1">អ្នកបណ្តុះបណ្តាល</h4>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body text-center">
-                <div class="d-flex display-5 justify-content-center align-items-center">
-                  <h1 class="counter card-title display-5 ff" data-countto="98" data-duration="2000">0
-                  </h1>
-                  <span class="fs-2 fw-bold">%</span>
-                </div>
-                <h4 class="card-text mt-1">សម្រេចបាន​គោលដៅ</h4>
               </div>
             </div>
           </div>
@@ -202,8 +193,8 @@
             <div class="card border-0 d-flex align-items-start ps-5 bg-transparent">
               <div class="card-body d-flex justify-content-center align-items-start">
                 <div class="me-3 rounded-circle d-flex justify-content-center align-items-center"
-                  style="width: 65px; height: 65px; font-size: 2rem; background-color: #d8b75c;">
-                  <i class="bi bi-shield"></i>
+                  style="width: 65px; height: 65px; background-color: #ebc55c;">
+                  <i class="bi bi-shield fs-3"></i>
                 </div>
                 <div>
                   <h5 class="card-title fw-bold text-prime">ការពារជំងឺ</h5>
@@ -217,8 +208,8 @@
             <div class="card border-0 d-flex align-items-start ps-5 bg-transparent">
               <div class="card-body d-flex justify-content-center align-items-start">
                 <div class="me-3 rounded-circle d-flex justify-content-center align-items-center"
-                  style="width: 65px; height: 65px; font-size: 2rem; background-color: #d8b75c;">
-                  <i class="bi bi-person-hearts"></i>
+                  style="width: 65px; height: 65px; background-color: #ebc55c;">
+                  <i class="bi bi-person-hearts fs-3"></i>
                 </div>
                 <div>
                   <h5 class="card-title fw-bold text-prime">សុខភាពផ្លូវចិត្ត</h5>
@@ -231,8 +222,8 @@
             <div class="card border-0 d-flex align-items-start ps-5 bg-transparent">
               <div class="card-body d-flex justify-content-center align-items-start">
                 <div class="me-3 rounded-circle d-flex justify-content-center align-items-center"
-                  style="width: 65px; height: 65px; font-size: 2rem; background-color: #58A8E6;">
-                  <i class="bi bi-people text-white"></i>
+                  style="width: 65px; height: 65px; background-color: #58A8E6;">
+                  <i class="bi bi-people text-white fs-3"></i>
                 </div>
                 <div>
                   <h5 class="card-title fw-bold text-prime">ទំនាក់ទំនងសង្គម</h5>
@@ -245,8 +236,8 @@
             <div class="card border-0 d-flex align-items-start ps-5 bg-transparent">
               <div class="card-body d-flex justify-content-center align-items-start">
                 <div class="me-3 rounded-circle d-flex justify-content-center align-items-center"
-                  style="width: 65px; height: 65px; font-size: 2rem; background-color: #22c373;">
-                  <i class="bi bi-clock text-white"></i>
+                  style="width: 65px; height: 65px; background-color: #22c373;">
+                  <i class="bi bi-clock text-white fs-3"></i>
                 </div>
                 <div>
                   <h5 class="card-title fw-bold text-prime">អាយុវែង</h5>
@@ -350,8 +341,8 @@
         <div class="text-center mb-8">
           <h4 class="display-6 fw-bold text-main">រួមគ្នាកសាងអនាគតដ៏មានសុខភាពល្អ</h4>
           <p class="mt-3 fs-5 text-prime">ចូលរួមជាមួយយើងថ្ងៃនេះ និងចាប់ផ្តើមដំណើរឆ្ពោះទៅរកជីវិតដ៏មានសុខភាពល្អ</p>
-          <a href="" class="btn btn-lg btn-gold me-2 fw-bold" style="border: 2px solid #d8b75c;">ចុះឈ្មោះឥឡូវនេះ</a>
-          <a href="" class="btn btn-lg fw-bold text-prime border-blue">ចូលគណនី</a>
+          <a href="pages/signup.html" class="btn btn-lg btn-gold me-2">ចុះឈ្មោះឥឡូវនេះ</a>
+          <a href="pages/typeofUser.html" class="btn btn-lg fw-bold text-prime border-blue">ចូលគណនី</a>
         </div>
       </div>
     </section>
@@ -368,8 +359,8 @@
           <div class="col-lg-8">
             <div class="card border-0 bg-transparent">
               <div class="card-body text-center">
-                <h2 class="card-title">ទាញយកកម្មវិធី <span class="ff">HDS</span> ឥឡូវ​នេះ!!</h2>
-                <p class="card-text fs-text py-2">ដើម្បីទទួលបានបទពិសោធន៍ហាត់ប្រាណថ្មី និងភាពងាយស្រួលជាមួយកម្មវិធីសុខភាព
+                <h2 class="card-title text-white">ទាញយកកម្មវិធី <span class="ff">HDS</span> ឥឡូវ​នេះ!!</h2>
+                <p class="card-text fs-text py-2 text-white lh-lg">ដើម្បីទទួលបានបទពិសោធន៍ហាត់ប្រាណថ្មី និងភាពងាយស្រួលជាមួយកម្មវិធីសុខភាព
                   និងហាត់ប្រាណរបស់យើង។ ទាញយកកម្មវិធីនៅលើ App Store ឬ Play Store
                   ដើម្បីចូលប្រើប្រាស់វគ្គហាត់ប្រាណដែលអ្នកចូលចិត្តយ៉ាងឆាប់រហ័ស ទទួលបានព័ត៌មានថ្មីៗ
                   និងការជំរុញលើការហាត់ប្រាណរបស់អ្នក និងសេវាកម្មផ្សេងៗដែលមានផ្តល់ជូនដោយមានទំនុកចិត្តខ្ពស់។</p>
