@@ -38,10 +38,10 @@
   <!-- header -->
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
-      <div class="container-fluid d-none d-lg-flex bg-nav p-0">
+      <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
         <div class="container d-flex align-items-center justify-content-between">
           <a href="homepage.html" class="navbar-brand px-0">
-            <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
+            <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
               style="width: 90px; height: 40px" />
           </a>
           <ul class="navbar-nav flex-row align-items-center">
@@ -58,21 +58,21 @@
           </ul>
         </div>
       </div>
-      <div class="container d-flex justify-content-between text-prime">
+      <div class="container d-flex justify-content-between align-items-center pt-1 text-prime">
         <button
           class="navbar-toggler d-flex gap-3 align-items-center p-0 border-0 shadow-none d-block d-xl-none text-prime"
           type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation" data-aos="fade-down">
           <i class="bi bi-list fs-3"></i>
           <a href="">
-            <img src="../../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
+            <img src="../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
           </a>
         </button>
         <div class="offcanvas offcanvas-start bg-prime" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header py-2 bg-nav">
-            <img src="../../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+            <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
             <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
               <i class="bi bi-x-lg text-white fs-4"></i>
@@ -81,7 +81,7 @@
           <div class="offcanvas-body p-0">
             <ul id="off" class="nav flex-column">
               <li class="nav-item py-1">
-                <a class="nav-link active text-prime" href="homepage.html">ទំព័រដើម</a>
+                <a class="nav-link text-prime " href="homepage.html">ទំព័រដើម</a>
               </li>
 
               <!-- ផ្នែកកីឡា -->
@@ -98,7 +98,7 @@
                     <a href="running.html" class="nav-link text-prime">រត់ប្រណាំង</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="basketball.html" class="nav-link text-prime">បាល់បោះ</a>
+                    <a href="basketball.html" class="nav-link text-prime ">បាល់បោះ</a>
                   </li>
                   <li class="nav-item py-1">
                     <a href="cycling.html" class="nav-link text-prime">ជិះកង់</a>
@@ -113,7 +113,7 @@
                     <a href="swimming.html" class="nav-link text-prime">ហែលទឹក</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="badminton.html" class="nav-link text-prime">វាយសី</a>
+                    <a href="badminton.html" class="nav-link text-prime ">វាយសី</a>
                   </li>
                 </ul>
               </li>
@@ -130,14 +130,13 @@
 
               <!-- អត្ថបទ -->
               <li class="nav-item py-1">
-                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="blog.html"
-                  role="button" aria-expanded="false" aria-controls="blog">
-                  អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
+                <a href="blog.html" class="nav-link text-white d-flex align-items-center">
+                  អត្ថបទ
                 </a>
               </li>
 
-              <li class="nav-item py-1 ">
-                <a class="nav-link active" href="about.html">អំពីយើង</a>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="about.html">អំពីយើង</a>
               </li>
               <li class="nav-item py-1">
                 <a class="nav-link" href="contect.html">ទំនាក់ទំនង</a>
@@ -167,9 +166,9 @@
             </ul>
           </div>
         </div>
-        <ul class="navbar-nav flex-row d-none d-xl-flex">
+        <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
           <li class="nav-item ps-1 pe-3 py-1">
-            <a href="homepage.html" class="nav-link">ទំព័រដើម</a>
+            <a href="homepage.html" class="nav-link active">ទំព័រដើម</a>
           </li>
           <li class="nav-item sport px-3 py-1 position-relative">
             <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
@@ -177,12 +176,12 @@
               <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
                 <li><a class="dropdown-item py-2" href="football.html">បាល់ទាត់</a></li>
                 <li><a class="dropdown-item py-2" href="running.html">រត់ប្រណាំង</a></li>
-                <li><a class="dropdown-item py-2" href="basketball.html">បាល់បោះ</a></li>
+                <li><a class="dropdown-item py-2 " href="basketball.html">បាល់បោះ</a></li>
                 <li><a class="dropdown-item py-2" href="cycling.html">ជិះកង់</a></li>
                 <li><a class="dropdown-item py-2" href="volleyball.html">បាល់ទះ</a></li>
                 <li><a class="dropdown-item py-2" href="karate.html">ការ៉ាតេ</a></li>
                 <li><a class="dropdown-item py-2" href="swimming.html">ហែលទឹក</a></li>
-                <li><a class="dropdown-item py-2" href="badminton.html">វាយសី</a></li>
+                <li><a class="dropdown-item py-2 " href="badminton.html">វាយសី</a></li>
               </ul>
             </div>
           </li>
@@ -226,7 +225,7 @@
             </div>
           </li>
         </ul>
-        <ul class="navbar-nav flex-row align-items-center gap-4">
+        <ul class="navbar-nav flex-row align-items-center gap-4" data-aos="fade-down">
           <li class="nav-item">
             <a class="main-btn text-prime" id="theme-toggle">
               <i class="theme-icon bi bi-sun fs-4"></i>
@@ -271,80 +270,75 @@
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="allSports.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../assets/img/sport-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">កីឡា</small>
                       <p class="m-0 fw-bold">ការប្រកួតបាល់ទាត់នៅចុងសប្តាហ៍នេះ!</p>
                       <small class="ff text-second">15m</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="shop.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../assets/img/discount-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">សម្លៀកបំពាក់</small>
                       <p class="m-0 fw-bold">បញ្ចុះតម្លៃ 30% លើអាវកីឡា!</p>
                       <small class="ff text-second">2h</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="blog.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../assets/img/gym-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
-                      <small class="text-muted">អត្ថបទថ្មី</small>
+                      <small class="text-second">អត្ថបទថ្មី</small>
                       <p class="m-0 fw-bold">របៀបហាត់ប្រាណឲ្យមានប្រសិទ្ធភាព</p>
                       <small class="ff text-second">11h</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item d-block d-lg-none">
-            <a href="../user.html" class="nav-link">
-              <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+            <a href="user.html" class="nav-link">
+              <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                style="width: 30px; height: 30px;" alt="">
             </a>
           </li>
           <li class="nav-item profile position-relative d-none d-lg-block">
             <a href="#" class="nav-link">
-              <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+              <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                style="width: 30px; height: 30px;" alt="">
             </a>
             <div class="dropdown position-absolute shadow-xs" style="left: -90px;">
               <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
                 <div class="card border-0 border-bottom rounded-0 bg-prime p-0">
                   <div class="card-body bg-second">
                     <div class="d-flex align-items-end gap-3">
-                      <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                        class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;" alt="">
+                      <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                        style="width: 40px; height: 40px;" alt="">
                       <h6 class="fs-text text-prime">ឡាយ ចេមមី</h6>
                     </div>
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item py-2 d-block m-0" href="user.html"><i class="bi bi-person me-1"></i> គណនី</a>
+                  <a class="dropdown-item py-2 d-block m-0" href="../pages/user.html"><i class="bi bi-person me-1"></i>
+                    គណនី</a>
                 </li>
                 <li>
                   <a class="dropdown-item py-2 d-block" href="../index.html"><i
@@ -379,17 +373,17 @@
     <!-- Food -->
     <section id="nutrition" class="bg-third pb-5 pt-3">
       <div class="container d-flex flex-column mt-5">
-        <h2 id="tab-title" class="text-center text-main mb-3">អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ</h2>
+        <h2 id="tab-title" class="text-center text-main mb-3">អាហារសម្រាប់</h2>
         <ul class="nav nav-pills mb-3 mx-auto gap-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link link-hover active px-4" id="pills-food-1-tab" data-bs-toggle="pill"
               data-bs-target="#pills-food-1" type="button" role="tab" aria-controls="pills-food-1" aria-selected="true"
-              data-title="អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ">អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ</button>
+              data-title="អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ">អាហារសម្រាប់បង្កើនទម្ងន់</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link link-hover px-4" id="pills-food-2-tab" data-bs-toggle="pill"
               data-bs-target="#pills-food-2" type="button" role="tab" aria-controls="pills-food-2" aria-selected="true"
-              data-title="អាហារសម្រាប់អ្នកហាត់ប្រាណ">អាហារសម្រាប់អ្នកហាត់ប្រាណ</button>
+              data-title="អាហារសម្រាប់អ្នកហាត់ប្រាណ">អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ </button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link link-hover px-4" id="pills-food-3-tab" data-bs-toggle="pill"
@@ -399,7 +393,7 @@
           <li class="nav-item" role="presentation">
             <button class="nav-link link-hover  px-4" id="pills-food-4-tab" data-bs-toggle="pill"
               data-bs-target="#pills-food-4" type="button" role="tab" aria-controls="pills-food-4" aria-selected="true"
-              data-title="អាហារសម្រាប់បង្កើនទម្ងន់">អាហារសម្រាប់បង្កើនទម្ងន់</button>
+              data-title="អាហារសម្រាប់បង្កើនទម្ងន់">អាហារសម្រាប់អ្នកហាត់ប្រាណ</button>
           </li>
         </ul>
 
@@ -410,7 +404,7 @@
               <div class="row g-4">
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-1.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -453,17 +447,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-1.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-2.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ប៊ឺហ្គ័រសាច់គោនិងអាហ្វូខាដូ</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn2"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -498,21 +492,21 @@
                         </div>
                       </div>
                       <div class="d-flex justify-content-between text-prime">
-                        <p class="card-text"><i class="bi bi-clock me-1"></i> <span class="ff">10</span> នាទី</p>
-                        <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
-                        <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
+                        <p class="card-text"><i class="bi bi-clock me-1"></i> <span class="ff">30</span> នាទី</p>
+                        <p class="card-text"><span class="ff">680</span> កាឡូរី</p>
+                        <p class="card-text"><span class="ff">42g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-2.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-3.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ខោលសាច់មាន់ជាមួយអង្ករដំណើប</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn3"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -548,20 +542,20 @@
                       </div>
                       <div class="d-flex justify-content-between text-prime">
                         <p class="card-text"><i class="bi bi-clock me-1"></i> <span class="ff">10</span> នាទី</p>
-                        <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
-                        <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
+                        <p class="card-text"><span class="ff">550</span> កាឡូរី</p>
+                        <p class="card-text"><span class="ff">42g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-3.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-4.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់ Tuna និង Quinoa</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn4"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -600,17 +594,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-4.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-5.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">Pasta Alfredo ជាមួយបង្គា</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn5"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -649,7 +643,7 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-5.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
@@ -661,11 +655,11 @@
               <div class="row g-4">
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-6.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">បាយសាច់មាន់</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn6"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -704,17 +698,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-1.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-7.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុន</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn7"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -753,17 +747,18 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-2.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-8.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ចានកាណូវ៉ា
+បន្លែសុខភាព</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn8"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -802,17 +797,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-3.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-9.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ស៊ុបបន្លែ</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn9"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -851,17 +846,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-4.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-10.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ឡាស៊ែនសណ្តែកបាយ</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn10"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -900,7 +895,7 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-5.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
@@ -912,7 +907,7 @@
               <div class="row g-4">
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-11.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -955,13 +950,13 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-1.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-12.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1004,13 +999,13 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-2.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-13.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1053,13 +1048,13 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-3.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-14.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1102,13 +1097,13 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-4.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-15.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1151,7 +1146,7 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-5.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
@@ -1163,7 +1158,7 @@
               <div class="row g-4">
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-16.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1206,13 +1201,13 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-1.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-17.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1255,13 +1250,13 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-2.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-18.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1304,13 +1299,13 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-3.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-19.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1353,13 +1348,13 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-4.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="https://www.aquastar.com/wp-content/uploads/2018/02/Mediterranean_Salmon_Salad.jpg"
+                    <img src="../assets/img/food-detail/food-20.jpg"
                       class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
@@ -1402,7 +1397,7 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-5.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
