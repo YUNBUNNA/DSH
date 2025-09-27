@@ -51,7 +51,7 @@
       <div class="container-fluid d-none d-lg-flex bg-nav p-0">
         <div class="container d-flex align-items-center justify-content-between">
           <a href="homepage.html" class="navbar-brand px-0">
-            <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
+            <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
               style="width: 90px; height: 40px" />
           </a>
           <ul class="navbar-nav flex-row align-items-center">
@@ -75,14 +75,14 @@
           aria-label="Toggle navigation">
           <i class="bi bi-list fs-3"></i>
           <a href="">
-            <img src="../../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
+            <img src="../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
           </a>
         </button>
         <div class="offcanvas offcanvas-start bg-prime" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header py-2 bg-nav">
-            <img src="../../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+            <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
             <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
               <i class="bi bi-x-lg text-white fs-4"></i>
@@ -370,34 +370,28 @@
   </header>
   <main>
     <!-- Hero Banner -->
-    <section>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="hero-banner">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img
-                    src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/primary/ydk9vatpnihwfquy6zq3"
-                    alt="" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                  <img src="https://limitlessperformancewi.com/wp-content/uploads/2024/09/limitless-9-of-83-scaled.jpg"
-                    alt="" class="img-fluid">
-                </div>
-                <div class="swiper-slide">
-                  <img
-                    src="https://e0.pxfuel.com/wallpapers/144/354/desktop-wallpaper-nba-top-shot-this-ja-morant-skies-for-incredible-one-handed-alley-oop-dunk-canada-the-official-site-of.jpg"
-                    alt="" class="img-fluid">
-                </div>
-              </div>
+    <section class="first-section hero-banner vh-80">
+      <div class="container-fluid p-0">
+        <div class="swiper mySwiper position-relative" data-aos="fade-right" data-aos-delay="400">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/img/homepage/banner-1.jpg" class="w-100 h-100 object-fit-cover" alt="" />
+              <div class="card-img-overlay bg-dark opacity-50"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/img/homepage/banner-2.jpg" class="w-100 h-100 object-fit-cover" alt="">
+              <div class="card-img-overlay bg-dark opacity-50"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/img/homepage/banner-3.jpg" class="w-100 h-100 object-fit-cover" alt="">
+              <div class="card-img-overlay bg-dark opacity-50"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="mt-10">
+    <section class="py-8 bg-third">
       <div class="container">
         <div class="row gy-4">
           <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
@@ -449,7 +443,7 @@
     </section>
 
     <!-- Activity Section -->
-    <section class="mt-10">
+    <section class="py-8">
       <div class="container">
         <h2 class="display-5 fw-bold text-main text-center py-10">សកម្មភាពនៃការលេងកីឡា</h2>
         <div class="row gy-5">
@@ -539,7 +533,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="mt-5">
+    <section class="py-8 bg-third">
       <div class="container">
         <h2 class="display-5 fw-bold text-main text-center py-10">កម្រងរូបភាពសកម្មភាព</h2>
         <div class="row gy-4">
@@ -688,23 +682,16 @@
   <script src="../assets/plugins/aos/js/aos.js"></script>
   <!-- link js custom -->
   <script src="../assets/js/main.js"></script>
-  <script>
+    <script>
     var swiper = new Swiper(".mySwiper", {
-      loop: true, // keeps looping
+      loop: true,
       autoplay: {
-        delay: 3000, // slide every 3s
-        disableOnInteraction: false, // keep autoplay after user interaction
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        delay: 5000,
+        disableOnInteraction: false,
       },
     });
   </script>
+
 
 
 
