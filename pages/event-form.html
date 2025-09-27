@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
     <!-- link css custom -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        select.form-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+        }
+    </style>
 </head>
 
 <body class="bg-prime">
@@ -350,61 +358,55 @@
     </header>
 
     <!-- main -->
-    <section class="pt-20 pb-10 bg-third">
+    <section class="bg-third first-section pb-3">
         <div class="container shadow-xs rounded-3 p-4 bg-prime" style="max-width: 800px;">
             <div class="form-header text-center">
-                <h1 class="display-4 fw-bold text-main">ការចុះឈ្មោះព្រឹត្តិការណ៍កីឡា</h1>
+                <h1 class="fw-bold text-main">ការចុះឈ្មោះព្រឹត្តិការណ៍កីឡា</h1>
                 <p class="lead text-prime mt-4">សូមចុះឈ្មោះសម្រាប់ព្រឹត្តិការណ៍ប្រកួតកីឡាខាងមុខនេះ!</p>
             </div>
 
             <form id="registration-form">
                 <!-- Personal Information Section -->
                 <div class="mb-3">
-                    <h3 class="h5 fw-bold text-prime">ព័ត៌មានផ្ទាល់ខ្លួន</h3>
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <label for="firstName" class="form-label">ឈ្មោះ</label>
-                            <input type="text" class="form-control px-2" id="firstName" placeholder="John" required>
+                            <label for="firstName" class="form-label">ឈ្មោះពេញ</label>
+                            <input type="text" class="form-control ps-3 ff" id="firstName" placeholder="John Doe">
                         </div>
                         <div class="col-md-6">
-                            <label for="lastName" class="form-label">ត្រកូល</label>
-                            <input type="text" class="form-control px-2" id="lastName" placeholder="Doe" required>
+                            <label for="lastName" class="form-label">តម្លៃ</label>
+                            <input type="text" class="form-control ps-3 ff bg-prime" id="lastName" value="$15" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="email" class="form-label">អ៊ីម៉ែល</label>
-                            <input type="email" class="form-control px-2" id="email" placeholder="john.doe@example.com"
-                                required>
+                            <input type="email" class="form-control ps-3 ff" id="email"
+                                placeholder="john.doe@example.com">
                         </div>
                         <div class="col-md-6">
                             <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
-                            <input type="tel" class="form-control px-2" id="phone" placeholder="123-456-7890">
+                            <input type="tel" class="form-control ps-3 ff" id="phone" placeholder="123-456-7890">
                         </div>
                     </div>
                 </div>
 
                 <!-- Event Selection Section -->
-                <div class="mb-4">
-                    <h3 class="h5 fw-bold text-prime">ការជ្រើសរើសព្រឹត្តិការណ៍</h3>
+                <div class="mb-3">
                     <label for="eventSelect" class="form-label">ជ្រើសរើសព្រឹត្តិការណ៍របស់អ្នក</label>
-                    <select class="form-select form-control" id="eventSelect" required>
-                        <option selected disabled value="">ជ្រើសរើសព្រឹត្តិការណ៍...</option>
-                        <option value="basketball">ការប្រកួតបាល់បោះ</option>
-                        <option value="soccer">ពានរង្វាន់បាល់ទាត់</option>
-                        <option value="volleyball">ជើងឯកបាល់ទះ</option>
-                        <option value="swimming">ការប្រកួតហែលទឹក</option>
-                    </select>
-                </div>
-
-                <!-- Team Information Section (for team-based events) -->
-                <div class="mb-4" id="team-info-section" style="display: none;">
-                    <h3 class="h5 fw-bold text-secondary">ព័ត៌មានក្រុម</h3>
-                    <label for="teamName" class="form-label">ឈ្មោះក្រុម</label>
-                    <input type="text" class="form-control" id="teamName" placeholder="ឧ. ក្រុម Mavericks">
+                    <div class="position-relative">
+                        <select class="form-select form-control ps-3 bg-prime text-prime">
+                            <option value="" disabled selected hidden>ជ្រើសរើសព្រឹត្តិការណ៍</option>
+                            <option>ការប្រកួតបាល់ទាត់</option>
+                            <option>ការប្រកួតបាល់ទះ</option>
+                            <option>ការប្រកួតវាយសី</option>
+                        </select>
+                        <i
+                            class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
+                    </div>
                 </div>
 
                 <!-- Waiver & Confirmation Section -->
-                <div class="mb-4 form-check">
-                    <input class="form-check-input" type="checkbox" id="waiverCheck" required>
+                <div class="form-check">
+                    <input class="form-check-input me-3" type="checkbox" id="waiverCheck">
                     <label class="form-check-label text-prime" for="waiverCheck">
                         ខ្ញុំយល់ព្រមនឹង <a href="#" data-bs-toggle="modal" data-bs-target="#waiverModal">លក្ខខណ្ឌ</a>
                         និងការលើកលែងការទទួលខុសត្រូវ។
@@ -412,17 +414,38 @@
                 </div>
 
                 <!-- Final Registration Button with Price -->
-                <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
-                    <button type="submit" class="btn btn-gold fw-bold">ចុះឈ្មោះឥឡូវនេះ</button>
-                    <p class="text-danger fw-bold mb-0">$15.00</p>
+                <div class="d-flex justify-content-end align-items-center">
+                    <button type="button" class="btn btn-gold" data-bs-toggle="modal"  data-bs-target="#success-edit-1">ចុះឈ្មោះឥឡូវនេះ</button>
+                </div>
+                <!-- Success Modal -->
+                <div class="modal fade" id="success-edit-1" tabindex="-1" aria-labelledby="success-delete-label-1"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content rounded-3 bg-prime">
+                            <div class="modal-header border-0 shadow-none">
+                                <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card-body">
+                                    <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                                        style="width: 100px; height: 100px;"></i>
+                                    <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
+
         </div>
     </section>
 
 
     <!-- footer -->
-    <footer class="pt-5 bg-prime" data-aos="fade-right">
+    <footer class="pt-5 bg-prime">
         <section class="pb-4">
             <div class="container">
                 <div class="row g-3">

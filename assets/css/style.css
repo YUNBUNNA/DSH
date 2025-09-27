@@ -633,6 +633,9 @@ body {
   .second-section{
     padding-top: 4rem;
   }
+  .img-nutrition{
+    height: 400px;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -670,6 +673,9 @@ body {
   .dsh-logo{
     width: 90px;
   }
+  .img-nutrition{
+    height: 400px;
+  }
 }
 
 @media screen and (min-width: 976px) {
@@ -681,5 +687,8 @@ body {
   }
   .dm-lm {
     right: 6.2%;
+  }
+   .img-nutrition{
+    height: 500px;
   }
 }
