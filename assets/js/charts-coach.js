@@ -5,12 +5,12 @@ function cssVar(name) {
     .trim();
 }
 
-// Chart options factory (dynamic colors & font)
+// Chart options factory
 function getChartOptions(isBar = true) {
   const isDarkMode = document.documentElement.classList.contains("dark-mode");
-
   return {
     responsive: true,
+    maintainAspectRatio: false, // IMPORTANT: chart fills container
     plugins: {
       legend: {
         labels: {
@@ -40,7 +40,7 @@ function getChartOptions(isBar = true) {
         },
         grid: {
           color: isBar ? cssVar("--text-second") : "transparent",
-          display: isBar ? true : false,
+          display: isBar,
         },
       },
       y: {
@@ -55,7 +55,7 @@ function getChartOptions(isBar = true) {
   };
 }
 
-// Old Charts
+// Membership Chart
 const ctxMembership = document
   .getElementById("membershipChart")
   .getContext("2d");
@@ -76,6 +76,25 @@ let membershipChart = new Chart(ctxMembership, {
     ],
   },
   options: getChartOptions(),
+});
+
+
+const ctxStudents = document.getElementById("studentsChart").getContext("2d");
+let studentsChart = new Chart(ctxStudents, {
+  type: "bar",
+  data: {
+    labels: ["មករា", "កុម្ភៈ", "មិនា", "មេសា", "ឧសភា", "មិថុនា"],
+    datasets: [
+      {
+        label: "ចំនួនសិស្ស",
+        data: [142, 98, 125, 76, 87, 64, 92, 58],
+        backgroundColor: [
+          "#4361ee",
+        ],
+      },
+    ],
+  },
+  options: getChartOptions(true),
   plugins: [
     {
       id: "legendMargin",
@@ -90,9 +109,9 @@ let membershipChart = new Chart(ctxMembership, {
   ],
 });
 
-// Add this chart to update on theme change
+// Optional: update charts on theme change
 function updateCharts() {
-  [membershipChart].forEach((chart) => {
+  [membershipChart, studentsChart].forEach((chart) => {
     chart.options = getChartOptions(chart.config.type === "bar");
     chart.update("active");
   });

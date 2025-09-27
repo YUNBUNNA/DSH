@@ -49,13 +49,14 @@
 </head>
 
 <body class="bg-prime">
+  <!-- header -->
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
-      <div class="container-fluid d-none d-lg-flex bg-nav">
-        <div class="container d-flex align-items-center justify-content-between p-0">
-          <a href="" class="navbar-brand">
+      <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
+        <div class="container d-flex align-items-center justify-content-between">
+          <a href="homepage.html" class="navbar-brand px-0">
             <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
-              style="width: 85px; height: 45px" />
+              style="width: 90px; height: 40px" />
           </a>
           <ul class="navbar-nav flex-row align-items-center">
             <li class="nav-item">
@@ -65,170 +66,156 @@
             </li>
             <li class="nav-item">
               <a href="" class="ff text-white text-decoration-none">
-                <i class="bi bi-envelope fs-5"></i> Dsh@gmail.com
+                <i class="bi bi-envelope fs-5 me-1"></i> Dsh@gmail.com
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="container d-flex align-items-center justify-content-between p-0">
-        <button class="navbar-toggler border-0 shadow-none d-block d-xl-none" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <div class="container d-flex justify-content-between align-items-center pt-1 text-prime">
+        <button
+          class="navbar-toggler d-flex gap-3 align-items-center p-0 border-0 shadow-none d-block d-xl-none text-prime"
+          type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation" data-aos="fade-down">
           <i class="bi bi-list fs-3"></i>
+          <a href="">
+            <img src="../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
+              style="width: 80px; height: 40px;">
+          </a>
         </button>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        <div class="offcanvas offcanvas-start bg-prime" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+          <div class="offcanvas-header py-2 bg-nav">
             <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
-              style="width: 90px; height: 40px;">
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              style="width: 80px; height: 40px;">
+            <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="bi bi-x-lg text-white fs-4"></i>
+            </button>
           </div>
-          <div class="offcanvas-body">
-            <ul id="off" class="nav flex-column justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">ទំព័រដើម</a>
+          <div class="offcanvas-body p-0">
+            <ul id="off" class="nav flex-column">
+              <li class="nav-item py-1">
+                <a class="nav-link text-prime active" href="homepage.html">ទំព័រដើម</a>
               </li>
 
               <!-- ផ្នែកកីឡា -->
-              <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#sport"
+              <li class="nav-item py-1">
+                <a class="nav-link text-prime d-flex align-items-center" data-bs-toggle="collapse" href="#sport"
                   role="button" aria-expanded="false" aria-controls="sport">
                   ផ្នែកកីឡា <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="sport" class="collapse list-unstyled ps-2" data-bs-parent="#off">
-                  <li class="nav-item mb-2">
-                    <a href="#" class="nav-link text-prime">បាល់ទាត់</a>
+                  <li class="nav-item py-1">
+                    <a href="football.html" class="nav-link text-prime">បាល់ទាត់</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">រត់ប្រណាំង</a>
+                  <li class="nav-item py-1">
+                    <a href="running.html" class="nav-link text-prime">រត់ប្រណាំង</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">បាល់បោះ</a>
+                  <li class="nav-item py-1">
+                    <a href="basketball.html" class="nav-link text-prime">បាល់បោះ</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">ជិះកង់</a>
+                  <li class="nav-item py-1">
+                    <a href="cycling.html" class="nav-link text-prime">ជិះកង់</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">បាល់ទះ</a>
+                  <li class="nav-item py-1">
+                    <a href="volleyball.html" class="nav-link text-prime">បាល់ទះ</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">ការ៉ាតេ</a>
+                  <li class="nav-item py-1">
+                    <a href="karate.html" class="nav-link text-prime">ការ៉ាតេ</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">ហែលទឹក</a>
+                  <li class="nav-item py-1">
+                    <a href="swimming.html" class="nav-link text-prime">ហែលទឹក</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">វាយសី</a>
+                  <li class="nav-item py-1">
+                    <a href="badminton.html" class="nav-link text-prime">វាយសី</a>
                   </li>
                 </ul>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">ការហ្វឹកហាត់</a>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="training.html">ការហ្វឹកហាត់</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ទំនិញ</a>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="shop.html">ទំនិញ</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ព្រឹត្តិការណ៏</a>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="event.html">ព្រឹត្តិការណ៏</a>
               </li>
 
               <!-- អត្ថបទ -->
-              <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#blog"
-                  role="button" aria-expanded="false" aria-controls="blog">
-                  អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
+              <li class="nav-item py-1">
+                <a href="blog.html" class="nav-link text-white d-flex align-items-center">
+                  អត្ថបទ
                 </a>
-                <ul id="blog" class="collapse list-unstyled ps-2" data-bs-parent="#off">
-                  <li class="nav-item mb-2">
-                    <a href="#" class="nav-link text-prime">កីឡា</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">សុខភាព</a>
-                  </li>
-                </ul>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="#">អំពីយើង</a>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="about.html">អំពីយើង</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">ទំនាក់ទំនង</a>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="contect.html">ទំនាក់ទំនង</a>
               </li>
 
               <!-- ផ្សេងៗ -->
-              <li class="nav-item">
-                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#other"
+              <li class="nav-item py-1">
+                <a class="nav-link text-prime d-flex align-items-center" data-bs-toggle="collapse" href="#other"
                   role="button" aria-expanded="false" aria-controls="other">
                   ផ្សេងៗ <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="other" class="collapse list-unstyled ps-2" data-bs-parent="#off">
-                  <li class="nav-item mb-2">
-                    <a href="#" class="nav-link text-prime">គ្រូបង្វឹក</a>
+                  <li class="nav-item py-1">
+                    <a href="coach.html" class="nav-link text-prime">គ្រូបង្វឹក</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">សកម្មភាព</a>
+                  <li class="nav-item py-1">
+                    <a href="activity.html" class="nav-link text-prime">សកម្មភាព</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
+                  <li class="nav-item py-1">
+                    <a href="nutrition.html" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
+                  <li class="nav-item py-1">
+                    <a href="FAQ.html" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
-        <ul class="navbar-nav flex-row d-none d-xl-flex">
-          <li class="nav-item pe-3 py-1">
-            <a href="" class="nav-link">ទំព័រដើម</a>
+        <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
+          <li class="nav-item ps-1 pe-3 py-1">
+            <a href="homepage.html" class="nav-link active">ទំព័រដើម</a>
           </li>
           <li class="nav-item sport px-3 py-1 position-relative">
             <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
             <div class="dropdown position-absolute shadow-xs">
               <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
-                <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
-                <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
-                <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
-                <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
-                <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
-                <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
-                <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
-                <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
+                <li><a class="dropdown-item py-2" href="football.html">បាល់ទាត់</a></li>
+                <li><a class="dropdown-item py-2" href="running.html">រត់ប្រណាំង</a></li>
+                <li><a class="dropdown-item py-2" href="basketball.html">បាល់បោះ</a></li>
+                <li><a class="dropdown-item py-2" href="cycling.html">ជិះកង់</a></li>
+                <li><a class="dropdown-item py-2" href="volleyball.html">បាល់ទះ</a></li>
+                <li><a class="dropdown-item py-2" href="karate.html">ការ៉ាតេ</a></li>
+                <li><a class="dropdown-item py-2" href="swimming.html">ហែលទឹក</a></li>
+                <li><a class="dropdown-item py-2" href="badminton.html">វាយសី</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="" class="nav-link">ការហ្វឹកហាត់</a>
+            <a href="training.html" class="nav-link">ការហ្វឹកហាត់</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="" class="nav-link">ទំនិញ</a>
+            <a href="shop.html" class="nav-link">ទំនិញ</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
+            <a href="event.html" class="nav-link">ព្រឹត្តិការណ៏</a>
           </li>
           <li class="nav-item blog px-3 py-1 position-relative">
-            <a class="nav-link" href="#">
-              អត្ថបទ <i class="bi bi-chevron-down icon"></i>
-            </a>
-            <div class="dropdown position-absolute shadow-xs">
-              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
-                <li>
-                  <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
-                </li>
-                <li>
-                  <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
-                </li>
-              </ul>
-            </div>
+            <a class="nav-link" href="blog.html">អត្ថបទ</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="" class="nav-link">អំពីយើង</a>
+            <a href="about.html" class="nav-link">អំពីយើង</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="" class="nav-link">ទំនាក់ទំនង</a>
+            <a href="contect.html" class="nav-link">ទំនាក់ទំនង</a>
           </li>
           <li class="nav-item other px-3 py-1 position-relative">
             <a class="nav-link" href="#">
@@ -237,22 +224,22 @@
             <div class="dropdown position-absolute shadow-xs">
               <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a>
+                  <a class="dropdown-item py-2 d-block" href="coach.html">គ្រូបង្វឹក</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
+                  <a class="dropdown-item py-2 d-block" href="activity.html">សកម្មភាព</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a>
+                  <a class="dropdown-item py-2 d-block" href="nutrition.html">អាហារូបត្ថម្ភ</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a>
+                  <a class="dropdown-item py-2 d-block" href="FAQ.html">សំណួរ & ចម្លើយ</a>
                 </li>
               </ul>
             </div>
           </li>
         </ul>
-        <ul class="navbar-nav flex-row align-items-center gap-4">
+        <ul class="navbar-nav flex-row align-items-center gap-4" data-aos="fade-down">
           <li class="nav-item">
             <a class="main-btn text-prime" id="theme-toggle">
               <i class="theme-icon bi bi-sun fs-4"></i>
@@ -260,7 +247,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link position-relative">
+            <a href="cart.html" class="nav-link position-relative">
               <i class="bi bi-cart2 text-prime fs-4"></i>
               <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                 style="width: 15px; height: 15px">
@@ -268,29 +255,112 @@
               </span>
             </a>
           </li>
-          <li class="nav-item blog position-relative z-3">
-            <a href="" class="nav-link position-relative">
+          <li class="nav-item d-block d-lg-none">
+            <a href="notification-page.html" class="nav-link position-relative">
               <i class="bi bi-bell text-prime fs-4"></i>
               <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                 style="width: 15px; height: 15px">
                 <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
               </span>
             </a>
-            <div class="dropdown position-absolute shadow-xs" style="left: -50px">
+          </li>
+          <li class="nav-item noti position-relative z-3 d-none d-lg-block">
+            <a href="#" class="nav-link position-relative">
+              <i class="bi bi-bell text-prime fs-4"></i>
+              <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                style="width: 15px; height: 15px">
+                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+              </span>
+            </a>
+            <div class="dropdown position-absolute shadow-xs" style="left: -290px;">
               <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                <div class="card border-0 border-bottom rounded-0 bg-transparent p-0">
+                  <div class="card-body pb-0">
+                    <div class="d-flex">
+                      <p class="text-prime fs-5">ការជូនដំណឺង</p>
+                      <i class="bi bi-three-dots text-prime fs-4 me-4 ms-auto"></i>
+                      <i class="bi bi-search text-prime fs-5"></i>
+                    </div>
+                  </div>
+                </div>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="#"> កីឡា </a>
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="allSports.html">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
+                      <img src="../assets/img/sport-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
+                    </div>
+                    <div>
+                      <small class="text-second">កីឡា</small>
+                      <p class="m-0 fw-bold">ការប្រកួតបាល់ទាត់នៅចុងសប្តាហ៍នេះ!</p>
+                      <small class="ff text-second">15m</small>
+                    </div>
+                  </a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="shop.html">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
+                      <img src="../assets/img/discount-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
+                    </div>
+                    <div>
+                      <small class="text-second">សម្លៀកបំពាក់</small>
+                      <p class="m-0 fw-bold">បញ្ចុះតម្លៃ 30% លើអាវកីឡា!</p>
+                      <small class="ff text-second">2h</small>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="blog.html">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
+                      <img src="../assets/img/gym-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
+                    </div>
+                    <div>
+                      <small class="text-second">អត្ថបទថ្មី</small>
+                      <p class="m-0 fw-bold">របៀបហាត់ប្រាណឲ្យមានប្រសិទ្ធភាព</p>
+                      <small class="ff text-second">11h</small>
+                    </div>
+                  </a>
                 </li>
               </ul>
             </div>
           </li>
-          <li class="nav-item py-1 profile">
-            <a href="" class="nav-link d-block">
-              <i class="bi bi-person-circle text-prime fs-4"></i>
+          <li class="nav-item d-block d-lg-none">
+            <a href="user.html" class="nav-link">
+              <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                style="width: 30px; height: 30px;" alt="">
             </a>
+          </li>
+          <li class="nav-item profile position-relative d-none d-lg-block">
+            <a href="#" class="nav-link">
+              <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                style="width: 30px; height: 30px;" alt="">
+            </a>
+            <div class="dropdown position-absolute shadow-xs" style="left: -90px;">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                <div class="card border-0 border-bottom rounded-0 bg-prime p-0">
+                  <div class="card-body bg-second">
+                    <div class="d-flex align-items-end gap-3">
+                      <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                        style="width: 40px; height: 40px;" alt="">
+                      <h6 class="fs-text text-prime">ឡាយ ចេមមី</h6>
+                    </div>
+                  </div>
+                </div>
+                <li>
+                  <a class="dropdown-item py-2 d-block m-0" href="../pages/user.html"><i class="bi bi-person me-1"></i>
+                    គណនី</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="../index.html"><i
+                      class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
+                    <span class="ms-7 opacity-0">a</span></a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
@@ -298,30 +368,40 @@
   </header>
   <main>
     <!-- Hero-section -->
-    <section class="pt-15 hero-banner vh-80">
+    <section class="first-section hero-banner vh-80">
       <div class="container-fluid p-0">
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper position-relative" data-aos="fade-right" data-aos-delay="400">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="../assets/img/homepage/banner-1.jpg" class="w-100 h-100 object-fit-cover" alt="" />
-              <div class="card-img-overlay bg-dark opacity-25"></div>
+              <div class="card-img-overlay bg-dark opacity-50"></div>
             </div>
             <div class="swiper-slide">
               <img src="../assets/img/homepage/banner-2.jpg" class="w-100 h-100 object-fit-cover" alt="">
-              <div class="card-img-overlay bg-dark opacity-25"></div>
+              <div class="card-img-overlay bg-dark opacity-50"></div>
             </div>
             <div class="swiper-slide">
               <img src="../assets/img/homepage/banner-3.jpg" class="w-100 h-100 object-fit-cover" alt="">
-              <div class="card-img-overlay bg-dark opacity-25"></div>
+              <div class="card-img-overlay bg-dark opacity-50"></div>
             </div>
           </div>
         </div>
+        <div class="position-absolute text-white top-50 start-50 translate-middle text-center w-100"
+          style="z-index: 10;">
+          <h1 class="text-white display-5 fw-bold lh-base title-banner" data-aos="fade-down" data-aos-delay="700">
+            រឹងមាំកាយ សុខភាពកាន់តែប្រសើរ</h1>
+          <h3 class="text-white lh-base mb-3 description-banner" data-aos="fade-down" data-aos-delay="600">
+            ការហាត់ប្រាណជាប្រចាំ នាំឲ្យមានថាមពល និងភាពស្រស់ស្រាយ</h3>
+          <a href="#sports" class="btn btn-gold rounded-2 w-fit h-fit text-nowrap px-5 py-2 text-btn" data-aos="fade-up"
+            data-aos-delay="600">ចាប់ផ្តើម</a>
+        </div>
       </div>
     </section>
+    
     <!-- Brand -->
     <section class="brand mt-2">
       <div class="container-fluid overflow-hidden position-relative bg-mask">
-        <div class="marquee-container">
+        <div class="marquee-container" data-aos="fade-down">
           <div id="marquee-inner" class="marquee-inner">
             <img src="../assets/img/logo-brand/logo1.png" alt="" class="img-fluid">
             <img src="../assets/img/logo-brand/logo2.png" alt="" class="img-fluid">
@@ -334,47 +414,43 @@
         </div>
       </div>
     </section>
+
     <!-- Achievement -->
-    <section class="py-5">
-      <div class="container">
+    <section class="pt-4">
+      <div class="container-fluid" data-aos="fade-right" data-aos-delay="100">
         <div class="row align-items-center">
-          <div class="col-lg-4">
-            <div class="card border-0">
-              <img src="../assets/img/6.png" alt="" class="img-fluid object-fit-cover">
-            </div>
-          </div>
-          <div class="col-lg-8 bg-gold rounded-2">
+          <div class="col-12 bg-gold rounded-2">
             <div class="row">
-              <div class="col-lg-4">
+              <div class="col-4">
                 <div class="card border-0 bg-transparent">
-                  <div class="card-body text-center">
-                    <div class="d-flex display-5 justify-content-center align-items-center">
-                      <h1 class="counter card-title display-5 ff" data-countto="3720" data-duration="2000">0</h1>
-                      <span>+</span>
+                  <div class="card-body text-center text-white">
+                    <div class="d-flex achi-num justify-content-center align-items-center">
+                      <h1 class="counter card-title achi-num ff" data-countto="3720" data-duration="2000">0</h1>
+                      <h1 class="achi-num">+</h1>
                     </div>
-                    <h3 class="card-text">អតិថិជន</h3>
+                    <h3 class="achi-title">អតិថិជន</h3>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="card border-0 bg-transparent">
+              <div class="col-4">
+                <div class="card border-0 bg-transparent text-white">
                   <div class="card-body text-center">
                     <div class="d-flex display-6 justify-content-center align-items-center">
-                      <h1 class="counter card-title display-5 ff" data-countto="7" data-duration="2000">0</h1>
-                      <span class="ms-1">ឆ្នាំ</span>
+                      <h1 class="counter card-title achi-num ff" data-countto="7" data-duration="2000">0</h1>
+                      <span class="ms-1 mb-2">ឆ្នាំ</span>
                     </div>
-                    <h3 class="card-text">បទពិសោធន៏</h3>
+                    <h3 class="achi-title">បទពិសោធន៏</h3>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4">
+              <div class="col-4">
                 <div class="card border-0 bg-transparent">
-                  <div class="card-body text-center">
-                    <div class="d-flex display-5 justify-content-center align-items-center">
-                      <h1 class="counter card-title display-5 ff" data-countto="150" data-duration="2000">0</h1>
-                      <span>+</span>
+                  <div class="card-body text-center text-white">
+                    <div class="d-flex achi-num justify-content-center align-items-center">
+                      <h1 class="counter card-title achi-num ff" data-countto="150" data-duration="2000">0</h1>
+                      <h1 class="achi-num">+</h1>
                     </div>
-                    <h3 class="card-text">អ្នកបណ្តុះបណ្តាល</h3>
+                    <h3 class="achi-title text-nowrap">អ្នកបណ្តុះបណ្តាល</h3>
                   </div>
                 </div>
               </div>
@@ -383,64 +459,69 @@
         </div>
       </div>
     </section>
+
     <!-- Type of sports -->
-    <section class="bg-third py-5">
+    <section id="sports" class="bg-third py-5">
       <div class="container">
         <div class="position-relative text-center py-3">
-          <h1 class="display-5 text-main fw-bold">ផ្នែកកីឡា</h1>
-          <h4 class="mt-4 text-center fw-normal text-second">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</h4>
-          <a href="#" class="btn btn-gold fs-text position-absolute top-50 end-0 translate-middle-y">
+          <h1 class="text-main fw-bold" data-aos="fade-right" data-aos-delay="200">ផ្នែកកីឡា</h1>
+          <h4 class="mt-4 text-center fw-normal text-second lh-base" data-aos="fade-up" data-aos-delay="300">
+            ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</h4>
+          <a href="../pages/allSports.html" data-aos="fade-right" data-aos-delay="600"
+            class="btn btn-gold d-none d-lg-block fs-text position-absolute top-50 end-0 translate-middle-y">
             មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
           </a>
         </div>
-        <div class="swiper mySlider pb-6 pt-2" style="height: 300px;">
+        <div class="swiper mySlider pb-6 pt-2" style="height: 300px;" data-aos="fade-right" data-aos-delay="400">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
-            <a href=""
+            <a href="../pages/football.html"
               class="swiper-slide d-flex flex-column gap-5 shadow-xs bg-prime rounded-2 text-decoration-none text-prime">
-              <img src="https://img.icons8.com/?size=100&id=33507&format=png&color=000000" alt="">
-              <h3 class="text-center">បាល់ទាត់</h3>
+              <img src="https://img.icons8.com/?size=100&id=33507&format=png&color=000000" alt="" style="width: 80px;">
+              <h4 class="text-center">បាល់ទាត់</h4>
             </a>
             <!-- Slide 2 -->
-            <a href=""
+            <a href="../pages/running.html"
               class="swiper-slide d-flex flex-column gap-5 shadow-xs bg-prime rounded-2 text-decoration-none text-prime">
-              <img src="https://img.icons8.com/?size=100&id=16890&format=png&color=000000" alt="">
-              <h3 class="text-center">រត់ប្រណាំង</h3>
+              <img src="https://img.icons8.com/?size=100&id=16890&format=png&color=000000" alt="" style="width: 80px;">
+              <h4 class="text-center">រត់ប្រណាំង</h4>
             </a>
             <!-- Slide 3 -->
-            <a href=""
+            <a href="../pages/basketball.html"
               class="swiper-slide d-flex flex-column gap-5 shadow-xs bg-prime rounded-2 text-decoration-none text-prime">
-              <img src="https://img.icons8.com/?size=100&id=idGCqGX8YFGW&format=png&color=000000" alt="">
-              <h3 class="text-center">បាល់បោះ</h3>
+              <img src="https://img.icons8.com/?size=100&id=idGCqGX8YFGW&format=png&color=000000" alt=""
+                style="width: 80px;">
+              <h4 class="text-center">បាល់បោះ</h4>
             </a>
             <!-- Slide 4 -->
-            <a href=""
+            <a href="../pages/cycling.html"
               class="swiper-slide d-flex flex-column gap-5 shadow-xs bg-prime rounded-2 text-decoration-none text-prime">
-              <img src="https://img.icons8.com/?size=100&id=33516&format=png&color=000000" alt="">
-              <h3 class="text-center">ជិះកង់</h3>
+              <img src="https://img.icons8.com/?size=100&id=33516&format=png&color=000000" alt="" style="width: 80px;">
+              <h4 class="text-center">ជិះកង់</h4>
             </a>
             <!-- Slide 5 -->
-            <a href=""
+            <a href="../pages/volleyball.html"
               class="swiper-slide d-flex flex-column gap-5 shadow-xs bg-prime rounded-2 text-decoration-none text-prime">
-              <img src="https://img.icons8.com/?size=100&id=33587&format=png&color=000000" alt="">
-              <h3 class="text-center">បាល់ទះ</h3>
+              <img src="https://img.icons8.com/?size=100&id=33587&format=png&color=000000" alt="" style="width: 80px;">
+              <h4 class="text-center">បាល់ទះ</h4>
             </a>
             <!-- Slide 6 -->
-            <a href=""
+            <a href="../pages/karate.html"
               class="swiper-slide d-flex flex-column gap-5 shadow-xs bg-prime rounded-2 text-decoration-none text-prime">
-              <img src="https://img.icons8.com/?size=100&id=33497&format=png&color=000000" alt="">
-              <h3 class="text-center">ការ៉ាតេ</h3>
+              <img src="https://img.icons8.com/?size=100&id=33497&format=png&color=000000" alt="" style="width: 80px;">
+              <h4 class="text-center">ការ៉ាតេ</h4>
             </a>
             <!-- Slide 7 -->
-            <a href=""
+            <a href="../pages/swimming.html"
               class="swiper-slide d-flex flex-column gap-5 shadow-xs bg-prime rounded-2 text-decoration-none text-prime">
-              <img src="https://img.icons8.com/?size=100&id=16954&format=png&color=000000" alt="">
-              <h3 class="text-center">ហែលទឹក</h3>
+              <img src="https://img.icons8.com/?size=100&id=16954&format=png&color=000000" alt="" style="width: 80px;">
+              <h4 class="text-center">ហែលទឹក</h4>
             </a>
             <!-- Slide 8 -->
-            <a href=""
+            <a href="../pages/badminton.html"
               class="swiper-slide d-flex flex-column gap-5 shadow-xs bg-prime rounded-2 text-decoration-none text-prime">
-              <img src="https://img.icons8.com/?size=100&id=sAuq1oqwxWlb&format=png&color=000000" alt="">
+              <img src="https://img.icons8.com/?size=100&id=sAuq1oqwxWlb&format=png&color=000000" alt=""
+                style="width: 80px;">
               <h3 class="text-center">វាយសី</h3>
             </a>
           </div>
@@ -448,13 +529,16 @@
         </div>
       </div>
     </section>
+
     <!-- Coach -->
-    <section class="bg-third">
+    <section class="bg-third py-5">
       <div class="container">
         <div class="position-relative text-center py-3">
-          <h1 class="display-5 text-main fw-bold">គ្រូបង្វឹក</h1>
-          <h4 class="mt-4 text-center fw-normal text-second">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</h4>
-          <a href="#" class="btn btn-gold fs-text position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+          <h1 class="text-main fw-bold" data-aos="fade-right" data-aos-delay="200">គ្រូបង្វឹក</h1>
+          <h4 class="mt-4 text-center fw-normal text-second lh-base" data-aos="fade-up" data-aos-delay="300">
+            ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</h4>
+          <a href="../pages/coach.html" data-aos="fade-right" data-aos-delay="600"
+            class="btn btn-gold d-none d-lg-block fs-text position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
             មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
           </a>
         </div>
@@ -628,24 +712,389 @@
 
       </div>
     </section>
+    <!-- Calculate Calories -->
+    <section class="bg-third py-5">
+      <div class="container">
+        <h1 class="text-center text-main mb-5 fw-bold" data-aos="fade-right" data-aos-delay="200">គណនាកាឡូរី</h1>
+        <div class="card bg-prime d-flex flex-column flex-lg-row align-items-center border-0 shadow-xs"
+          data-aos="fade-up" data-aos-delay="600">
+          <!-- Lottie Animation -->
+          <dotlottie-wc src="../assets/img/Food Choice.json" style="width: 350px; height: 300px" loop autoplay speed="1"
+            mode="forward">
+          </dotlottie-wc>
+          <div class="card-body">
+            <h3 class="text-main mb-3 text-center">
+              <i class="bi bi-calculator-fill me-2"></i> បញ្ចូលព័ត៌មានអាហាររបស់អ្នក ដើម្បីគណនាបរិមាណកាឡូរី
+            </h3>
+            <p class="text-second mb-3 fs-5 text-center"> ការគ្រប់គ្រងកាឡូរីជួយអ្នកក្នុងការថែរក្សាទម្ងន់
+              ដើម្បីឆ្ពោះទៅកាន់គោលដៅហាត់ប្រាណ និងសុខភាពរបស់អ្នក។</p>
+            <a href="../pages/calculate-calories.html" class="btn btn-gold px-5 d-block w-fit mx-auto">ចាប់ផ្តើមគណនា</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Article -->
+    <section class="bg-third py-5">
+      <div class="container">
+        <div class="position-relative">
+          <h1 class="fw-bold text-main text-center" data-aos="fade-right" data-aos-delay="200">អត្ថបទថ្មីៗ</h1>
+          <h4 class="my-4 text-center fw-normal text-second lh-base" data-aos="fade-up" data-aos-delay="300">
+            ចំណេះដឹងនិងគន្លឹះថ្មីៗសម្រាប់សុខភាពល្អ</h4>
+          <a href="../pages/blog.html" data-aos="fade-right" data-aos-delay="600"
+            class="btn btn-gold d-none d-lg-block fs-text position-absolute top-50 end-0 translate-middle-y">
+            មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="row g-4 mt-3 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
+              <div class="card-img w-100" style="height: 200px;" data-aos="fade-down">
+                <img
+                  src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
+                  alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  <p class="fs-6 text-main mb-0" data-aos="fade-right">ការហ្វឹកហាត់</p>
+                  <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn1"
+                    data-aos="fade-right"><i class="bi bi-suit-heart"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 10%;">
+                    <div id="favoriteToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
+                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn1"
+                    data-aos="fade-right"><i class="bi bi-bookmark"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 22%;">
+                    <div id="cartToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
+                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="card-title text-prime mb-2" data-aos="fade-right">១០ គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h5>
+                <p class="card-text text-second fs-text mb-3" data-aos="fade-right">
+                  រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ</p>
+                <a href="#" class="btn btn-gold d-block border-2" data-aos="fade-right">អានបន្ថែម <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
+              <div class="card-img w-100" style="height: 200px;" data-aos="fade-down">
+                <img src="https://fitfuel-slideshow.vercel.app/assets/hero-2-C_ldFfDg.jpg" alt=""
+                  class="img-fluid object-fit-cover w-100 h-100 card-img-top">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  <p class="fs-6 text-main mb-0" data-aos="fade-right">អាហារ</p>
+                  <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn2"
+                    data-aos="fade-right"><i class="bi bi-suit-heart"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 10%;">
+                    <div id="favoriteToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
+                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn2"
+                    data-aos="fade-right"><i class="bi bi-bookmark"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 22%;">
+                    <div id="cartToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
+                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="card-title text-prime mb-2" data-aos="fade-right">អាហារសុខភាពសម្រាប់អ្នកកីឡា</h5>
+                <p class="card-text text-second fs-text mb-3" data-aos="fade-right">
+                  ផែនការអាហារដើម្បីបង្កើនការអនុវត្តកីឡា</p>
+                <span class="btn btn-gold d-block border-2" data-aos="fade-right">អានបន្ថែម <i
+                    class="bi bi-arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
+              <div class="card-img w-100" style="height: 200px;" data-aos="fade-down">
+                <img
+                  src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
+                  alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  <p class="fs-6 text-main mb-0" data-aos="fade-right">សុខភាពចិត្ត</p>
+                  <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn3"
+                    data-aos="fade-right"><i class="bi bi-suit-heart"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 10%;">
+                    <div id="favoriteToast3" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
+                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn3"
+                    data-aos="fade-right"><i class="bi bi-bookmark"></i></button>
+                  <div class="toast-container position-fixed end-0" style="top: 22%;">
+                    <div id="cartToast3" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
+                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
+                          alt="...">
+                        <small class="ms-auto">ឥឡូវនេះ</small>
+                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
+                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                      </div>
+                      <div class="toast-body text-prime bg-second">
+                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="card-title text-prime mb-2" data-aos="fade-right">ការគ្រប់គ្រងកង្វល់ តាមរយៈកីឡា</h5>
+                <p class="card-text text-second fs-text mb-3" data-aos="fade-right">របៀបប្រើកីឡាដើម្បីកាត់បន្ថយកង្វល់
+                </p>
+                <span class="btn btn-gold d-block border-2" data-aos="fade-right">អានបន្ថែម <i
+                    class="bi bi-arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Calculate BMI-->
+    <section class="bg-third py-5">
+      <div class="container">
+        <h1 class="text-center text-main mb-5 fw-bold" data-aos="fade-right" data-aos-delay="200">ការគណនា <span
+            class="ff">BMI</span></h1>
+        <div class="card bg-prime d-flex flex-column flex-lg-row align-items-center border-0 shadow-xs"
+          data-aos="fade-up" data-aos-delay="600">
+          <!-- Lottie Animation -->
+          <dotlottie-wc src="../assets/img/Calculate-BMI.json" style="width: 350px; height: 300px" loop autoplay
+            speed="1" mode="forward">
+          </dotlottie-wc>
+          <div class="card-body">
+            <h3 class="text-main mb-3 text-center">
+              <i class="bi bi-calculator-fill me-2"></i> បញ្ចូលទម្ងន់ និងកម្ពស់របស់អ្នក ដើម្បីគណនា <span
+                class="ff">BMI</span>
+            </h3>
+            <p class="text-second mb-3 fs-5 text-center">
+              ការគណនា <span class="ff">BMI</span> ជួយអ្នកវាយតម្លៃស្ថានភាពសុខភាព និងទម្ងន់ ដើម្បីអាចថែរក្សារាងកាយ
+              និងសុខភាពរបស់អ្នក។
+            </p>
+            <a href="../pages/calculate-bmi.html" class="btn btn-gold px-5 d-block w-fit mx-auto">ចាប់ផ្តើមគណនា</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pricing -->
+    <section class="py-5 bg-third">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="fs-1 fw-bold mb-4 py-2 text-main" data-aos="fade-right" data-aos-delay="200">ចូលជាសមាជិក</h1>
+        </div>
+        <div class="row g-5 justify-content-center" data-aos="fade-right" data-aos-delay="400">
+          <!-- Essential Plan -->
+          <div class="col-md-6 col-lg-4">
+            <div class=" h-100 ">
+              <div class="card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs">
+                <div class="card-body ">
+                  <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក <span class="ff">BASIC</span></h2>
+                  <p class=" text-center text-prime lead ">សម្រាប់អ្នកចាប់ផ្តើម</p>
+                  <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; ">15
+                    / ខែ
+                  </h1>
+                  <div class="text-center">
+                    <button class="btn btn-outline-primary w-90 mt-2 mb-2 ">
+                      ទិញឥឡូវនេះ
+                    </button>
+                  </div>
+
+                  <ul class="features-list" type="none">
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      ចូលហាត់បាន 3 ដង / សប្ដាហ៍
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      កម្មវិធីហាត់បឋម
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      បរិយាកាសសប្បាយរីករាយ
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      មានឧបករណ៍មូលដ្ឋាន
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Premium Plan -->
+          <div class="col-md-6 col-lg-4">
+            <div class="pricing-card popular-card rounded-5 ">
+              <div class="card py-3  rounded-5 border-0 bg-prime">
+                <div class="card-body">
+                  <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក <span class="ff">PRIME</span></h2>
+                  <p class=" text-center text-prime lead ">សម្រាប់អ្នកចង់ពង្រឹងសុខភាព</p>
+                  <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;">$30
+                    / ខែ
+                  </h1>
+                  <div class="text-center">
+                    <button class="btn btn-gold w-90 mt-2 mb-2">
+                      ទិញឥឡូវនេះ
+                    </button>
+                  </div>
+                  <ul class="features-list" type="none">
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      ចូលហាត់បាន រាល់ថ្ងៃ ដោយគ្មានកំណត់
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      មាន គ្រូបង្វឹកផ្ទាល់ខ្លួន
+
+                    </li>
+                    <li class="border-bottom py-2 text-prime ">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      ឧបករណ៍ទំនើបពេញលេញ
+
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      បរិយាកាស VIP សម្រាប់ Elite Training
+
+                    </li>
+                    <li class="border-bottom py-2 text-prime ">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      ការណែនាំផ្នែកអាហារូបត្ថម្ភការគ្រប់គ្រងរាងកាយ
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      ឱកាសចូលរួមក្នុង Professional Trials
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Professional Plan -->
+          <div class="col-md-6 col-lg-4">
+            <div class="  rounded-5">
+              <div class=" pricing-card  card py-3  rounded-5 border-0 bg-prime  ">
+                <div class="card-body">
+                  <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក <span class="ff">STANDARD</span> </h2>
+                  <p class=" text-center text-prime lead">សម្រាប់អ្នកហាត់ទៀងទាត់</p>
+                  <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; ">$25
+                    / ខែ
+                  </h1>
+                  <div class="text-center">
+                    <button class="btn btn-outline-primary w-90 mt-2 mb-2  ">
+                      ទិញឥឡូវនេះ
+                    </button>
+                  </div>
+                  <ul class="features-list" type="none">
+                    <li class="border-bottom py-2 text-prime ">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      ចូលហាត់បានរាល់ថ្ងៃ
+                    </li>
+                    <li class="border-bottom py-2 text-prime ">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      មានគ្រូបង្វឹកណែនាំ
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      ឧបករណ៍ទំនើប
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      បរិយាកាសល្អ
+                    </li>
+                    <li class="border-bottom py-2 text-prime">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      ឧបករណ៍ថ្មី & ទំនើប
+
+                    </li>
+                    <li class="border-bottom py-2 text-prime    ">
+                      <i class="bi bi-check-circle-fill text-success me-3"></i>
+                      បរិយាកាស VIP
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
     <!-- Feedback -->
     <section class="py-5 bg-third">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1 class="text-center mb-6 text-main fw-bold">មតិអតិថិជន</h1>
-            <div class="swiper mySlide pb-6" style="height: 280px;">
+            <h1 class="text-center mb-6 text-main fw-bold" data-aos="fade-right" data-aos-delay="200">មតិអតិថិជន</h1>
+            <div class="swiper mySlide pb-6" style="height: 280px;" data-aos="fade-right" data-aos-delay="400">
               <div class="swiper-wrapper">
                 <div class="swiper-slide shadow-xs rounded-2">
                   <div class="card border-0 bg-prime text-prime rounded-2">
-                    <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg" alt=""
-                      class="img-fluid rounded-circle mx-auto mt-2" style="width: 60px; height: 60px;">
+                    <img src="../assets/img/sports/f-1.jpg" alt="" class="img-fluid rounded-circle mx-auto mt-2"
+                      style="width: 60px; height: 60px;">
                     <div class="card-body pb-0">
-                      <h5>ឡាយ ចេមមី</h5>
+                      <h5>សុភា ម៉េង</h5>
                       <p class="m-0 border-bottom pb-3 lh-lg">
-                        ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ និងបរិក្ខារទំនើប!</p>
+                        ក្លឹបស្អាត និងឧបករណ៍ពេញលេញ។
+                        ខ្ញុំមានអារម្មណ៍រឹងមាំជាងមុន។</p>
                       <div class="d-flex p-0">
-                        <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                        <p class="fs-6 mt-2 fw-bold">05 កុម្ភៈ 2024</p>
                         <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -657,14 +1106,15 @@
                 </div>
                 <div class="swiper-slide shadow-xs rounded-2">
                   <div class="card border-0 bg-prime text-prime rounded-2">
-                    <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg" alt=""
-                      class="img-fluid rounded-circle mx-auto mt-2" style="width: 60px; height: 60px;">
+                    <img src="../assets/img/sports/f-2.jpg" alt="" class="img-fluid rounded-circle mx-auto mt-2"
+                      style="width: 60px; height: 60px;">
                     <div class="card-body pb-0">
-                      <h5>ឡាយ ចេមមី</h5>
+                      <h5>វ៉ាន់ណា សាយ</h5>
                       <p class="m-0 border-bottom pb-3 lh-lg">
-                        ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ និងបរិក្ខារទំនើប!</p>
+                        គ្រូបង្វឹកមានជំនាញខ្ពស់។
+                        ខ្ញុំសប្បាយចិត្តក្នុងការហាត់ប្រាណ។</p>
                       <div class="d-flex p-0">
-                        <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                        <p class="fs-6 mt-2 fw-bold">12 មិនា 2024</p>
                         <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -676,14 +1126,15 @@
                 </div>
                 <div class="swiper-slide shadow-xs rounded-2">
                   <div class="card border-0 bg-prime text-prime rounded-2">
-                    <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg" alt=""
-                      class="img-fluid rounded-circle mx-auto mt-2" style="width: 60px; height: 60px;">
+                    <img src="../assets/img/sports/f-3.jpg" alt="" class="img-fluid rounded-circle mx-auto mt-2"
+                      style="width: 60px; height: 60px;">
                     <div class="card-body pb-0">
-                      <h5>ឡាយ ចេមមី</h5>
+                      <h5>ពិសិដ្ឋ ចាន់</h5>
                       <p class="m-0 border-bottom pb-3 lh-lg">
-                        ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ និងបរិក្ខារទំនើប!</p>
+                        តម្លៃសមរម្យសម្រាប់សមាជិក។
+                        ខ្ញុំបានឃើញលទ្ធផលល្អណាស់។</p>
                       <div class="d-flex p-0">
-                        <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                        <p class="fs-6 mt-2 fw-bold">25 មេសា 2024</p>
                         <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -695,14 +1146,15 @@
                 </div>
                 <div class="swiper-slide shadow-xs rounded-2">
                   <div class="card border-0 bg-prime text-prime rounded-2">
-                    <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg" alt=""
-                      class="img-fluid rounded-circle mx-auto mt-2" style="width: 60px; height: 60px;">
+                    <img src="../assets/img/sports/f-4.jpg" alt="" class="img-fluid rounded-circle mx-auto mt-2"
+                      style="width: 60px; height: 60px;">
                     <div class="card-body pb-0">
-                      <h5>ឡាយ ចេមមី</h5>
+                      <h5>ម៉ារី អូន</h5>
                       <p class="m-0 border-bottom pb-3 lh-lg">
-                        ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ និងបរិក្ខារទំនើប!</p>
+                        មនុស្សជាច្រើនអនុគ្រោះ។
+                        ខ្ញុំមានកម្លាំងកាន់តែច្រើន។</p>
                       <div class="d-flex p-0">
-                        <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                        <p class="fs-6 mt-2 fw-bold">10 ឧសភា 2024</p>
                         <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -714,14 +1166,15 @@
                 </div>
                 <div class="swiper-slide shadow-xs rounded-2">
                   <div class="card border-0 bg-prime text-prime rounded-2">
-                    <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg" alt=""
+                    <img src="../assets/img/sports/badminton-coach-2.jpg" alt=""
                       class="img-fluid rounded-circle mx-auto mt-2" style="width: 60px; height: 60px;">
                     <div class="card-body pb-0">
-                      <h5>ឡាយ ចេមមី</h5>
+                      <h5>រឿន សំអុល</h5>
                       <p class="m-0 border-bottom pb-3 lh-lg">
-                        ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ និងបរិក្ខារទំនើប!</p>
+                        សមាជិកភាពប្រចាំឆ្នាំមានអត្ថប្រយោជន៍។
+                        គ្រូបានណែនាំយ៉ាងល្អ។</p>
                       <div class="d-flex p-0">
-                        <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                        <p class="fs-6 mt-2 fw-bold">01 មិថុនា 2024</p>
                         <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                         <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -738,211 +1191,86 @@
         </div>
       </div>
     </section>
-    <!-- Article -->
-    <section class="bg-third py-5">
-      <div class="container">
-        <div class="position-relative">
-          <h1 class="display-5 fw-bold text-main text-center">អត្ថបទថ្មីៗ</h1>
-          <h4 class="my-4 text-center fw-normal text-second">ចំណេះដឹងនិងគន្លឹះថ្មីៗសម្រាប់សុខភាពល្អ</h4>
-          <a href="#" class="btn btn-gold fs-text position-absolute top-50 end-0 translate-middle-y">
-            មើលទាំងអស់ <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-        <div class="row g-4 mt-3 justify-content-center">
-          <!-- Card 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
-              <div class="card-img w-100" style="height: 200px;">
-                <img
-                  src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
-                  alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-2">
-                  <p class="fs-6 text-main mb-0">ការហ្វឹកហាត់</p>
-                  <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn1"><i
-                      class="bi bi-heart"></i></button>
-                  <div class="toast-container position-fixed end-0" style="top: 10%;">
-                    <div id="favoriteToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
-                      </div>
-                    </div>
-                  </div>
-                  <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn1"><i
-                      class="bi bi-bookmark"></i></button>
-                  <div class="toast-container position-fixed end-0" style="top: 22%;">
-                    <div id="cartToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <h5 class="card-title text-prime mb-2">១០ គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h5>
-                <p class="card-text text-second fs-text mb-3">រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ</p>
-                <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
-              <div class="card-img w-100" style="height: 200px;">
-                <img src="https://fitfuel-slideshow.vercel.app/assets/hero-2-C_ldFfDg.jpg" alt=""
-                  class="img-fluid object-fit-cover w-100 h-100 card-img-top">
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-2">
-                  <p class="fs-6 text-main mb-0">អាហារ</p>
-                  <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn2"><i
-                      class="bi bi-heart"></i></button>
-                  <div class="toast-container position-fixed end-0" style="top: 10%;">
-                    <div id="favoriteToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
-                      </div>
-                    </div>
-                  </div>
-                  <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn2"><i
-                      class="bi bi-bookmark"></i></button>
-                  <div class="toast-container position-fixed end-0" style="top: 22%;">
-                    <div id="cartToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <h5 class="card-title text-prime mb-2">អាហារសុខភាពសម្រាប់អ្នកកីឡា</h5>
-                <p class="card-text text-second fs-text mb-3">ផែនការអាហារដើម្បីបង្កើនការអនុវត្តកីឡា</p>
-                <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
-              <div class="card-img w-100" style="height: 200px;">
-                <img
-                  src="https://static.wixstatic.com/media/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg/v1/fill/w_640,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2f76f53cf2bb4516bfc6a88bfc019c30~mv2.jpg"
-                  alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-2">
-                  <p class="fs-6 text-main mb-0">សុខភាពចិត្ត</p>
-                  <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn3"><i
-                      class="bi bi-heart"></i></button>
-                  <div class="toast-container position-fixed end-0" style="top: 10%;">
-                    <div id="favoriteToast3" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
-                      </div>
-                    </div>
-                  </div>
-                  <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn3"><i
-                      class="bi bi-bookmark"></i></button>
-                  <div class="toast-container position-fixed end-0" style="top: 22%;">
-                    <div id="cartToast3" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="toast-header d-flex py-0 bg-nav text-white border-0">
-                        <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid" style="width: 40px;"
-                          alt="...">
-                        <small class="ms-auto">ឥឡូវនេះ</small>
-                        <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                          aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
-                      </div>
-                      <div class="toast-body text-prime bg-second">
-                        អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <h5 class="card-title text-prime mb-2">ការគ្រប់គ្រងកង្វល់ តាមរយៈកីឡា</h5>
-                <p class="card-text text-second fs-text mb-3">របៀបប្រើកីឡាដើម្បីកាត់បន្ថយកង្វល់</p>
-                <span class="btn btn-gold d-block border-2">អានបន្ថែម <i class="bi bi-arrow-right"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-     <!-- Calculate BMI-->
-    <section class="bg-third mb-10">
-      <div class="container">
-        <div class="card bg-prime d-flex flex-column flex-lg-row align-items-center border-0 shadow-xs">
-          <!-- Lottie Animation -->
-          <dotlottie-wc src="../assets/img/Calculate-BMI.json" style="width: 350px; height: 300px" loop autoplay speed="1"
-            mode="forward">
-          </dotlottie-wc>
-          <div class="card-body">
-            <h3 class="text-main mb-3 text-center">
-              <i class="bi bi-calculator-fill me-2"></i> បញ្ចូលទម្ងន់ និងកម្ពស់របស់អ្នក ដើម្បីគណនា <span
-                class="ff">BMI</span>
-            </h3>
-            <p class="text-second mb-3 fs-5 text-center">
-              ការគណនា <span class="ff">BMI</span> ជួយអ្នកវាយតម្លៃស្ថានភាពសុខភាព និងទម្ងន់ ដើម្បីអាចថែរក្សារាងកាយ
-              និងសុខភាពរបស់អ្នក។
-            </p>
-            <a href="#" class="btn btn-gold px-5 d-block w-fit mx-auto">ចាប់ផ្តើមគណនា</a>
-          </div>
-        </div>
-      </div>
-    </section>
-     <!-- Calculate Calories -->
-    <section class="bg-third mb-10">
-      <div class="container">
-        <div class="card bg-prime d-flex flex-column flex-lg-row align-items-center border-0 shadow-xs">
-          <!-- Lottie Animation -->
-          <dotlottie-wc src="../assets/img/Food Choice.json" style="width: 350px; height: 300px" loop autoplay speed="1"
-            mode="forward">
-          </dotlottie-wc>
-          <div class="card-body">
-            <h3 class="text-main mb-3 text-center">
-              <i class="bi bi-calculator-fill me-2"></i> បញ្ចូលព័ត៌មានអាហាររបស់អ្នក ដើម្បីគណនាបរិមាណកាឡូរី
-            </h3>
-            <p class="text-second mb-3 fs-5 text-center"> ការគ្រប់គ្រងកាឡូរីជួយអ្នកក្នុងការថែរក្សាទម្ងន់
-              ដើម្បីឆ្ពោះទៅកាន់គោលដៅហាត់ប្រាណ និងសុខភាពរបស់អ្នក។</p>
-            <a href="#" class="btn btn-gold px-5 d-block w-fit mx-auto">ចាប់ផ្តើមគណនា</a>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </main>
+  <!-- Footer -->
+  <footer class="pt-5 bg-prime" data-aos="fade-right">
+    <section class="pb-4">
+      <div class="container">
+        <div class="row g-3">
+          <!-- Logo & About -->
+          <div class="col-lg-4">
+            <a href="homepage.html">
+              <img src="../assets/img/logo2.png" alt="SportHub" class="img-fluid object-fit-cover"
+                style="width:100px; height:80px;">
+            </a>
+            <p class="mb-3 text-second fs-nav lh-base">
+              <span class="ff">DSH</span> ផ្តល់នូវព័ត៌មានកីឡា កម្មវិធីហាត់ប្រាណ និងប្រកួតប្រជែង
+              ដើម្បីជួយអ្នកមានសុខភាព
+              និងកាយសម្បទាកាន់តែប្រសើរ។
+            </p>
+            <h5 class="fw-bold mb-3 text-prime">បណ្តាញសង្គម</h5>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-twitter-x fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-linkedin fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-telegram fs-4"></i></a>
+          </div>
+
+          <div class="col-1"></div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2">
+            <h5 class="fw-bold mb-3 text-prime">តំណភ្ជាប់</h5>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="homepage.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">ទំព័រដើម</a>
+              </li>
+              <li class="nav-item"><a href="training.html"
+                  class="nav-link text-second w-fit p-0 pb-2 fs-6">ការហ្វឹកហាត់</a></li>
+              <li class="nav-item"><a href="event.html"
+                  class="nav-link text-second w-fit p-0 pb-2 fs-6">ព្រឹត្តិការណ៏</a></li>
+              <li class="nav-item"><a href="blog.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">អត្ថបទ</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="col-lg-2">
+            <h5 class="fw-bold mb-3 text-prime">ជំនួយ</h5>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="about.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">អំពីយើង</a>
+              </li>
+              <li class="nav-item"><a href="faq.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
+                  ចម្លើយ</a></li>
+              <li class="nav-item"><a href="activity.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">សកម្មភាព</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3">
+            <h5 class="fw-bold mb-3 text-prime">ទំនាក់ទំនង</h5>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="mailto:DSH@gmail.com" class="nav-link p-0 pb-2 text-second">អ៊ីមែល: <span
+                    class="ff">Dsh@gmail.com</span></a></li>
+              <li class="nav-item"><a href="tel: 96 123 4567" class="nav-link p-0 pb-2 text-second">ទូរស័ព្ទ: <span
+                    class="ff">+855 96 123
+                    4567</span></a></li>
+              <li class="nav-item d-flex gap-2">
+                <a href="#"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
+                    alt="App Store" class="img-fluid download"></a>
+                <a href="#"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png"
+                    alt="Google Play" class="img-fluid download"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
 
   <!-- link bootstrap js -->
   <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
@@ -1002,7 +1330,6 @@
     document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
     document.getElementById("addCartBtn3").addEventListener("click", () => showToast("cartToast3"));
   </script>
-
 
 </body>
 

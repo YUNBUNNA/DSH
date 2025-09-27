@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Load dotlottie-wc -->
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
     <!-- link bootstrap -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
     <!-- link theme -->
@@ -22,11 +24,14 @@
 <body class="bg-prime">
     <main>
         <section class="sign-up vh-100">
-            <div class="container-fluid h-100 p-0">
+            <div class="container-fluid h-100">
                 <div class="row h-100 m-0 align-items-center">
-                    <div class="col-lg-5 p-0 h-100">
+                    <div class="col-lg-5">
                         <div class="card bg-prime h-100 border-0 rounded-0">
-                            <img src="../assets/img/6.png" alt="" class="img-fluid my-auto w-100">
+                            <!-- Lottie Animation -->
+                            <dotlottie-wc src="../assets/img/Sign-in.json" style="height: 450px" loop autoplay speed="1"
+                                mode="forward" class="w-100">
+                            </dotlottie-wc>
                         </div>
                         <div class="card-img-overlay">
                             <img src="../assets/img/logo2.png" alt="" class="position-absolute img-fluid"
@@ -37,8 +42,9 @@
                     <div class="col-lg-5">
                         <div class="card border-0 bg-prime">
                             <div class="card-body text-prime">
-                                <h1 class="text-center mb-4 text-main">ចុះឈ្មោះប្រើប្រាស់</h1>
-                                <h4 class="text-center text-second mb-5">បង្កើតគណនីថ្មីដើម្បីចាប់ផ្តើមដំណើរសុខភាព</h4>
+                                <h2 class="text-center fw-bold mb-3 text-main">ចុះឈ្មោះប្រើប្រាស់</h2>
+                                <h5 class="text-center text-second mb-4 fw-normal">
+                                    បង្កើតគណនីថ្មីដើម្បីចាប់ផ្តើមដំណើរសុខភាព</h5>
                                 <form>
                                     <div class="mb-3 position-relative">
                                         <label for="name" class="form-label fs-title">ឈ្មោះពេញ</label>
@@ -75,10 +81,10 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-gold w-100 fs-btn fw-bold">បង្កើតគណនី</button>
-                                    <p class="fs-text text-center mt-3 text-prime">មានគណនីរួចហើយ? <a href=""
+                                    <a href="../pages/signin.html" type="button" class="btn btn-gold w-100 fs-btn">បង្កើតគណនី</a>
+                                    <p class="fs-text text-center mt-3 text-prime">មានគណនីរួចហើយ? <a href="signin.html"
                                             class="text-decoration-none text-main">ចូលគណនី</a></p>
-                                    <a href="" class="fs-text d-block text-center text-decoration-none text-second">
+                                    <a href="../index.html" class="fs-text d-block text-center text-decoration-none text-second">
                                         <i class="bi bi-arrow-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
                                 </form>
                             </div>

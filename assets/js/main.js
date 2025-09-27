@@ -70,6 +70,10 @@ toggleButton.addEventListener("click", () => {
     // Update Monthly Event Chart
     monthlyEventChart.options = getChartOptions();
     monthlyEventChart.update();
+
+    // Update Monthly Event Chart
+    studentsChart.options = getChartOptions();
+    studentsChart.update();
   }
   updateCharts();
 });

@@ -2,30 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- link bootstrap -->
-    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css" />
     <!-- link theme -->
-    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css" />
     <!-- link icons -->
-    <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css" />
     <!-- link swiper -->
-    <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css" />
     <!-- link aos -->
-    <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
+    <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css" />
     <!-- link css custom -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+        /* Internal style  */
+        .toast {
+            display: block !important;
+            opacity: 0;
+            transform: translateX(100vw);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 </head>
 
 <body class="bg-prime">
-
+    <!-- header -->
     <header>
         <nav class="navbar py-0 fixed-top bg-prime">
-            <div class="container-fluid" style="background-color: #58A8E6;">
+            <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
                 <div class="container d-flex align-items-center justify-content-between">
-                    <a href="" class="navbar-brand">
+                    <a href="homepage.html" class="navbar-brand px-0">
                         <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
                             style="width: 90px; height: 40px" />
                     </a>
@@ -37,62 +51,156 @@
                         </li>
                         <li class="nav-item">
                             <a href="" class="ff text-white text-decoration-none">
-                                <i class="bi bi-envelope fs-5"></i> Dsh@gmail.com
+                                <i class="bi bi-envelope fs-5 me-1"></i> Dsh@gmail.com
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="container-fluid border-bottom"></div>
-            <div class="container d-flex align-items-center justify-content-between">
-                <ul class="navbar-nav flex-row">
-                    <li class="nav-item pe-3 py-1">
-                        <a href="" class="nav-link">ទំព័រដើម</a>
+            <div class="container d-flex justify-content-between align-items-center pt-1 text-prime">
+                <button
+                    class="navbar-toggler d-flex gap-3 align-items-center p-0 border-0 shadow-none d-block d-xl-none text-prime"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-label="Toggle navigation" data-aos="fade-down">
+                    <i class="bi bi-list fs-3"></i>
+                    <a href="">
+                        <img src="../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
+                            style="width: 80px; height: 40px;">
+                    </a>
+                </button>
+                <div class="offcanvas offcanvas-start bg-prime" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header py-2 bg-nav">
+                        <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+                            style="width: 80px; height: 40px;">
+                        <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="bi bi-x-lg text-white fs-4"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body p-0">
+                        <ul id="off" class="nav flex-column">
+                            <li class="nav-item py-1">
+                                <a class="nav-link text-prime " href="homepage.html">ទំព័រដើម</a>
+                            </li>
+
+                            <!-- ផ្នែកកីឡា -->
+                            <li class="nav-item py-1">
+                                <a class="nav-link text-prime d-flex align-items-center" data-bs-toggle="collapse"
+                                    href="#sport" role="button" aria-expanded="false" aria-controls="sport">
+                                    ផ្នែកកីឡា <i class="bi bi-chevron-down ms-auto"></i>
+                                </a>
+                                <ul id="sport" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                                    <li class="nav-item py-1">
+                                        <a href="football.html" class="nav-link text-prime">បាល់ទាត់</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="running.html" class="nav-link text-prime">រត់ប្រណាំង</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="basketball.html" class="nav-link text-prime">បាល់បោះ</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="cycling.html" class="nav-link text-prime">ជិះកង់</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="volleyball.html" class="nav-link text-prime">បាល់ទះ</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="karate.html" class="nav-link text-prime">ការ៉ាតេ</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="swimming.html" class="nav-link text-prime">ហែលទឹក</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="badminton.html" class="nav-link text-prime">វាយសី</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item py-1">
+                                <a class="nav-link" href="training.html">ការហ្វឹកហាត់</a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a class="nav-link activem" href="shop.html">ទំនិញ</a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a class="nav-link" href="event.html">ព្រឹត្តិការណ៏</a>
+                            </li>
+
+                            <!-- អត្ថបទ -->
+                            <li class="nav-item py-1">
+                                <a href="blog.html" class="nav-link text-white d-flex align-items-center">
+                                    អត្ថបទ
+                                </a>
+                            </li>
+
+                            <li class="nav-item py-1">
+                                <a class="nav-link" href="about.html">អំពីយើង</a>
+                            </li>
+                            <li class="nav-item py-1">
+                                <a class="nav-link" href="contect.html">ទំនាក់ទំនង</a>
+                            </li>
+
+                            <!-- ផ្សេងៗ -->
+                            <li class="nav-item py-1">
+                                <a class="nav-link text-prime d-flex align-items-center" data-bs-toggle="collapse"
+                                    href="#other" role="button" aria-expanded="false" aria-controls="other">
+                                    ផ្សេងៗ <i class="bi bi-chevron-down ms-auto"></i>
+                                </a>
+                                <ul id="other" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                                    <li class="nav-item py-1">
+                                        <a href="coach.html" class="nav-link text-prime">គ្រូបង្វឹក</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="activity.html" class="nav-link text-prime">សកម្មភាព</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="nutrition.html" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
+                                    </li>
+                                    <li class="nav-item py-1">
+                                        <a href="FAQ.html" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
+                    <li class="nav-item ps-1 pe-3 py-1">
+                        <a href="homepage.html" class="nav-link ">ទំព័រដើម</a>
                     </li>
                     <li class="nav-item sport px-3 py-1 position-relative">
                         <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
                         <div class="dropdown position-absolute shadow-xs">
                             <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
-                                <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
-                                <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
-                                <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
-                                <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
-                                <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
-                                <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
+                                <li><a class="dropdown-item py-2" href="football.html">បាល់ទាត់</a></li>
+                                <li><a class="dropdown-item py-2" href="running.html">រត់ប្រណាំង</a></li>
+                                <li><a class="dropdown-item py-2" href="basketball.html">បាល់បោះ</a></li>
+                                <li><a class="dropdown-item py-2" href="cycling.html">ជិះកង់</a></li>
+                                <li><a class="dropdown-item py-2" href="volleyball.html">បាល់ទះ</a></li>
+                                <li><a class="dropdown-item py-2" href="karate.html">ការ៉ាតេ</a></li>
+                                <li><a class="dropdown-item py-2" href="swimming.html">ហែលទឹក</a></li>
+                                <li><a class="dropdown-item py-2" href="badminton.html">វាយសី</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ការហ្វឹកហាត់</a>
+                        <a href="training.html" class="nav-link">ការហ្វឹកហាត់</a>
                     </li>
                     <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ទំនិញ</a>
+                        <a href="shop.html" class="nav-link active">ទំនិញ</a>
                     </li>
                     <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
+                        <a href="event.html" class="nav-link">ព្រឹត្តិការណ៏</a>
                     </li>
                     <li class="nav-item blog px-3 py-1 position-relative">
-                        <a class="nav-link" href="#">
-                            អត្ថបទ <i class="bi bi-chevron-down icon"></i>
-                        </a>
-                        <div class="dropdown position-absolute shadow-xs">
-                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a class="nav-link" href="blog.html">អត្ថបទ</a>
                     </li>
                     <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">អំពីយើង</a>
+                        <a href="about.html" class="nav-link">អំពីយើង</a>
                     </li>
                     <li class="nav-item px-3 py-1">
-                        <a href="" class="nav-link">ទំនាក់ទំនង</a>
+                        <a href="contect.html" class="nav-link">ទំនាក់ទំនង</a>
                     </li>
                     <li class="nav-item other px-3 py-1 position-relative">
                         <a class="nav-link" href="#">
@@ -101,22 +209,22 @@
                         <div class="dropdown position-absolute shadow-xs">
                             <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
                                 <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a>
+                                    <a class="dropdown-item py-2 d-block" href="coach.html">គ្រូបង្វឹក</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
+                                    <a class="dropdown-item py-2 d-block" href="activity.html">សកម្មភាព</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a>
+                                    <a class="dropdown-item py-2 d-block" href="nutrition.html">អាហារូបត្ថម្ភ</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a>
+                                    <a class="dropdown-item py-2 d-block" href="FAQ.html">សំណួរ & ចម្លើយ</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                 </ul>
-                <ul class="navbar-nav flex-row align-items-center gap-4">
+                <ul class="navbar-nav flex-row align-items-center gap-4" data-aos="fade-down">
                     <li class="nav-item">
                         <a class="main-btn text-prime" id="theme-toggle">
                             <i class="theme-icon bi bi-sun fs-4"></i>
@@ -124,7 +232,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link position-relative">
+                        <a href="cart.html" class="nav-link position-relative">
                             <i class="bi bi-cart2 text-prime fs-4"></i>
                             <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                                 style="width: 15px; height: 15px">
@@ -132,29 +240,117 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item blog position-relative z-3">
-                        <a href="" class="nav-link position-relative">
+                    <li class="nav-item d-block d-lg-none">
+                        <a href="notification-page.html" class="nav-link position-relative">
                             <i class="bi bi-bell text-prime fs-4"></i>
                             <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                                 style="width: 15px; height: 15px">
                                 <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
                             </span>
                         </a>
-                        <div class="dropdown position-absolute shadow-xs" style="left: -50px">
+                    </li>
+                    <li class="nav-item noti position-relative z-3 d-none d-lg-block">
+                        <a href="#" class="nav-link position-relative">
+                            <i class="bi bi-bell text-prime fs-4"></i>
+                            <span class="position-absolute bg-danger border-0 rounded-circle start-50"
+                                style="width: 15px; height: 15px">
+                                <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
+                            </span>
+                        </a>
+                        <div class="dropdown position-absolute shadow-xs" style="left: -290px;">
                             <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                                <div class="card border-0 border-bottom rounded-0 bg-transparent p-0">
+                                    <div class="card-body pb-0">
+                                        <div class="d-flex">
+                                            <p class="text-prime fs-5">ការជូនដំណឺង</p>
+                                            <i class="bi bi-three-dots text-prime fs-4 me-4 ms-auto"></i>
+                                            <i class="bi bi-search text-prime fs-5"></i>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
-                                    <a class="dropdown-item py-2 d-block" href="#"> កីឡា </a>
+                                    <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="allSports.html">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="circle btn-prime rounded-circle"
+                                                style="width: 12px; height: 12px;"></div>
+                                            <img src="../assets/img/sport-poster.jpg" alt="" class="rounded-circle"
+                                                style="width: 60px; height: 60px;">
+                                        </div>
+                                        <div>
+                                            <small class="text-second">កីឡា</small>
+                                            <p class="m-0 fw-bold">ការប្រកួតបាល់ទាត់នៅចុងសប្តាហ៍នេះ!</p>
+                                            <small class="ff text-second">15m</small>
+                                        </div>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                                    <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="shop.html">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="circle btn-prime rounded-circle"
+                                                style="width: 12px; height: 12px;"></div>
+                                            <img src="../assets/img/discount-poster.jpg" alt="" class="rounded-circle"
+                                                style="width: 60px; height: 60px;">
+                                        </div>
+                                        <div>
+                                            <small class="text-second">សម្លៀកបំពាក់</small>
+                                            <p class="m-0 fw-bold">បញ្ចុះតម្លៃ 30% លើអាវកីឡា!</p>
+                                            <small class="ff text-second">2h</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="blog.html">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="circle btn-prime rounded-circle"
+                                                style="width: 12px; height: 12px;"></div>
+                                            <img src="../assets/img/gym-poster.jpg" alt="" class="rounded-circle"
+                                                style="width: 60px; height: 60px;">
+                                        </div>
+                                        <div>
+                                            <small class="text-second">អត្ថបទថ្មី</small>
+                                            <p class="m-0 fw-bold">របៀបហាត់ប្រាណឲ្យមានប្រសិទ្ធភាព</p>
+                                            <small class="ff text-second">11h</small>
+                                        </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item py-1">
-                        <a href="" class="nav-link d-block">
-                            <i class="bi bi-person-circle text-prime fs-4"></i>
+                    <li class="nav-item d-block d-lg-none">
+                        <a href="user.html" class="nav-link">
+                            <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                                style="width: 30px; height: 30px;" alt="">
                         </a>
+                    </li>
+                    <li class="nav-item profile position-relative d-none d-lg-block">
+                        <a href="#" class="nav-link">
+                            <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                                style="width: 30px; height: 30px;" alt="">
+                        </a>
+                        <div class="dropdown position-absolute shadow-xs" style="left: -90px;">
+                            <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
+                                <div class="card border-0 border-bottom rounded-0 bg-prime p-0">
+                                    <div class="card-body bg-second">
+                                        <div class="d-flex align-items-end gap-3">
+                                            <img src="../assets/img/profile-user.jpg"
+                                                class="img-fluid rounded-circle object-fit-cover"
+                                                style="width: 40px; height: 40px;" alt="">
+                                            <h6 class="fs-text text-prime">ឡាយ ចេមមី</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block m-0" href="../pages/user.html"><i
+                                            class="bi bi-person me-1"></i>
+                                        គណនី</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item py-2 d-block" href="../index.html"><i
+                                            class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
+                                        <span class="ms-7 opacity-0">a</span></a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -162,76 +358,917 @@
     </header>
 
     <main>
-         <!-- Shop banner -->
-    <section class="pt-15">
-      <div class="container">
-        <img
-          src="https://zandokh.com/image/catalog/banner/2025/ZANDO/July/Extra%2050/50OFFShoes_Cate%20(2160x534)-1.jpg"
-          class="img-fluid object-fit-cover w-100" alt="" style="height: 200px;">
-      </div>
-    </section>
-    <!-- Products -->
-    <section class="bg-prime">
-      <div class="container d-flex flex-column mt-5 ff">
-        <h2 id="tab-title" class="text-center text-main mb-3">All</h2>
-        <ul class="nav nav-pills mb-3 mx-auto gap-3" id="pills-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link link-hover active px-4" id="pills-all-tab" data-bs-toggle="pill"
-              data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true"
-              data-title="All">All</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link link-hover px-4" id="pills-shirt-tab" data-bs-toggle="pill"
-              data-bs-target="#pills-shirt" type="button" role="tab" aria-controls="pills-shirt" aria-selected="false"
-              data-title="Shirt">Shirt</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link link-hover px-4" id="pills-pants-tab" data-bs-toggle="pill"
-              data-bs-target="#pills-pants" type="button" role="tab" aria-controls="pills-pants" aria-selected="false"
-              data-title="Pants">Pants</button>
-          </li>
-        </ul>
-
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
-            tabindex="0">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-3">
-                  <a href="#" class="text-decoration-none">
-                    <div class="card bg-transparent position-relative border-0">
-                      <div class="card-img bg-second position-relative overflow-hidden" style="height: 400px;">
-                        <img src="../assets/img/shop/shirt/shirt-1.webp" class="img-main w-100 h-100 object-fit-cover" alt="" />
-                        <img src="../assets/img/shop/shirt/shirt-1-hover.webp"
-                          class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0" alt="" />
-                      </div>
-                      <div class="card-body ff pb-0">
-                        <div class="d-flex">
-                          <p class="p-0 m-0 fw-bold">
-                            <span class="text-danger">US $8.15</span>
-                            <del class="fw-normal text-second">US $13.59</del>
-                          </p>
-                          <i class="bi bi-heart text-second d-block ms-auto"></i>
-                        </div>
-                        <p class="fs-6 text-prime">Arrival Block T-Shirt</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
+        <!-- Shop banner -->
+        <section class="pt-15 first-section">
+            <div class="container" data-aos="fade-right" data-aos-delay="400">
+                <img src="../assets/img/shop-banner.jpg" class="img-fluid object-fit-cover w-100" alt=""
+                    style="height: 200px" />
             </div>
-          </div>
-          <div class="tab-pane fade" id="pills-shirt" role="tabpanel" aria-labelledby="pills-shirt-tab" tabindex="0">
-            <p>Content for Shirt</p>
-          </div>
-          <div class="tab-pane fade" id="pills-pants" role="tabpanel" aria-labelledby="pills-pants-tab" tabindex="0">
-            <p>Content for Pants</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    </main>
+        </section>
+        <!-- Products -->
+        <section class="bg-prime pb-5">
+            <div class="container d-flex flex-column mt-5">
+                <h2 id="tab-title" class="text-center text-main mb-3">សម្ភារៈ
+                </h2>
+                <ul class="nav nav-pills mb-3 mx-auto gap-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link link-hover active px-4" id="pills-all-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
+                            aria-selected="true" data-title="សម្ភារៈ">
+                            សម្ភារៈ
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link link-hover px-4" id="pills-shirt-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-shirt" type="button" role="tab" aria-controls="pills-shirt"
+                            aria-selected="false" data-title="អាវកីឡា">
+                            អាវកីឡា
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link link-hover px-4" id="pills-pants-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-pants" type="button" role="tab" aria-controls="pills-pants"
+                            aria-selected="false" data-title="ខោកីឡា">
+                            ខោកីឡា
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link link-hover px-4" id="pills-other-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-other" type="button" role="tab" aria-controls="pills-other"
+                            aria-selected="false" data-title="ស្បែកជើង">
+                            ស្បែកជើង
+                        </button>
+                    </li>
+                </ul>
 
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel"
+                        aria-labelledby="pills-all-tab" tabindex="0">
+                        <div class="container">
+                            <div class="row g-3">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/basketball-product.html" data-aos="fade-right"
+                                            data-aos-delay="400">
+                                            <div class="card-img d-flex justify-content-center bg-second position-relative overflow-hidden"
+                                                style="height: 300px">
+                                                <img src="../assets/img/shop/AllSport/basketball-1.png"
+                                                    class="img-main w-75 h-100 object-fit-contain" alt="" />
+                                                <img src="../assets/img/shop/AllSport/basketball-1-hover.png"
+                                                    class="img-cover w-75 h-100 object-fit-contain position-absolute top-0 translate-middle-x start-50"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $13.00</span>
+                                                    <del class="fw-normal text-second">US $16.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn1">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast1" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">NBA Basketball</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/football-product.html" data-aos="fade-right"
+                                            data-aos-delay="500">
+                                            <div class="card-img d-flex justify-content-center bg-second position-relative overflow-hidden"
+                                                style="height: 300px">
+                                                <img src="../assets/img/shop/AllSport/football-1.png"
+                                                    class="img-main w-75 h-100 object-fit-contain" alt="" />
+                                                <img src="../assets/img/shop/AllSport/football-1-hover.png"
+                                                    class="img-cover w-75 h-100 object-fit-contain position-absolute top-0 translate-middle-x start-50"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $16.00</span>
+                                                    <del class="fw-normal text-second">US $18.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn2">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast2" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Premier League Football</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/volleyball-product.html" data-aos="fade-right"
+                                            data-aos-delay="600">
+                                            <div class="card-img d-flex justify-content-center bg-second position-relative overflow-hidden"
+                                                style="height: 300px">
+                                                <img src="../assets/img/shop/AllSport/volleyball-1.png"
+                                                    class="img-main w-75 h-100 object-fit-contain" alt="" />
+                                                <img src="../assets/img/shop/AllSport/volleyball-1-hover.png"
+                                                    class="img-cover w-75 h-100 object-fit-contain position-absolute top-0 translate-middle-x start-50"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $10.00</span>
+                                                    <del class="fw-normal text-second">US $12.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn3">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast3" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Smash Volleyball</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/gloves-product.html" data-aos="fade-right"
+                                            data-aos-delay="700">
+                                            <div class="card-img d-flex justify-content-center bg-second position-relative overflow-hidden"
+                                                style="height: 300px">
+                                                <img src="../assets/img/shop/AllSport/glove-1.png"
+                                                    class="img-main w-75 h-100 object-fit-contain" alt="" />
+                                                <img src="../assets/img/shop/AllSport/glove-1-hover.png"
+                                                    class="img-cover w-75 h-100 object-fit-contain position-absolute top-0 translate-middle-x start-50"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $35.00</span>
+                                                    <del class="fw-normal text-second">US $41.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn4">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast4" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Powerline Supergrip+</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-shirt" role="tabpanel" aria-labelledby="pills-shirt-tab"
+                        tabindex="0">
+                        <div class="container">
+                            <div class="row g-3">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/shirt-1.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/shirt/shirt-1.webp"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/shirt/shirt-1-hover.webp"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $8.15</span>
+                                                    <del class="fw-normal text-second">US $13.59</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn5">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast5" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Arrival Block T-Shirt</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/shirt-2.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/shirt/shirt-2.webp"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/shirt/shirt-2-hover.webp"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $16.00</span>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn6">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast6" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Vital Crop Top</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/shirt-3.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/shirt/shirt-3.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/shirt/shirt-3-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $20.00</span>
+                                                    <del class="fw-normal text-second">US $16.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn7">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast7" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Ribbed Tank 1PK</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/shirt-4.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/shirt/shirt-4.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/shirt/shirt-4-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $20.00</span>
+                                                    <del class="fw-normal text-second">US $25.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn8">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast8" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Training Racer Midi Tank</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-pants" role="tabpanel" aria-labelledby="pills-pants-tab"
+                        tabindex="0">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/pants-1.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/pants/pants-1.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/pants/pants-1-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $24.00</span>
+                                                    <del class="fw-normal text-second">US $30.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn9">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast9" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Sport 7" 2 in 1 Shorts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/pants-2.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/pants/pants-3.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/pants/pants-3-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $14.00</span>
+                                                    <del class="fw-normal text-second">US $17.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn10">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast10" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Collegiate Graphic Short</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/pants-3.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/pants/pants-2.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/pants/pants-2-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $15.00</span>
+                                                    <del class="fw-normal text-second">US $19.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn11">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast11" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Sport Panel 7" Shorts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/pants-4.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/pants/pants-4.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/pants/pants-4-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $22.00</span>
+                                                    <del class="fw-normal text-second">US $25.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn12">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast12" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Training Straight Leg Legging</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-other-tab"
+                        tabindex="0">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/shoes-1.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/shoes/shoes-1.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/shoes/shoes-1-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $200.00</span>
+                                                    <del class="fw-normal text-second">US $225.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn13">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast13" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Men's Air Jordan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/shoes-2.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/shoes/shoes-2.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/shoes/shoes-2-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $87.00</span>
+                                                    <del class="fw-normal text-second">US $100.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn14">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast14" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Women's ASICS GEL-1130</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/shoes-3.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/shoes/shoes-3.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/shoes/shoes-3-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $140.00</span>
+                                                    <del class="fw-normal text-second">US $160.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn15">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast15" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Men's Nike Air VaporMax</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="card bg-transparent position-relative border-0">
+                                        <a href="../pages/product-detail/shoes-4.html">
+                                            <div class="card-img bg-second position-relative overflow-hidden"
+                                                style="height: 400px">
+                                                <img src="../assets/img/shop/shoes/shoes-4.png"
+                                                    class="img-main w-100 h-100 object-fit-cover" alt="" />
+                                                <img src="../assets/img/shop/shoes/shoes-4-hover.png"
+                                                    class="img-cover w-100 h-100 object-fit-cover position-absolute top-0 start-0"
+                                                    alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex">
+                                                <p class="p-0 m-0 fw-bold ff">
+                                                    <span class="text-danger">US $150.00</span>
+                                                    <del class="fw-normal text-second">US $180.00</del>
+                                                </p>
+                                                <button type="button"
+                                                    class="btn button-icon text-second ms-auto p-0 me-2"
+                                                    id="favoriteBtn16">
+                                                    <i class="bi bi-suit-heart"></i>
+                                                </button>
+                                                <div class="toast-container position-fixed end-0" style="top: 10%">
+                                                    <div id="favoriteToast16" class="toast" role="alert"
+                                                        aria-live="assertive" aria-atomic="true">
+                                                        <div
+                                                            class="toast-header d-flex py-0 bg-nav text-white border-0">
+                                                            <img src="../assets/img/logo2.png"
+                                                                class="rounded me-2 img-fluid" style="width: 40px"
+                                                                alt="..." />
+                                                            <small class="ms-auto">ឥឡូវនេះ</small>
+                                                            <button type="button" class="btn button-icon p-0 ms-2"
+                                                                data-bs-dismiss="toast" aria-label="Close">
+                                                                <i class="bi bi-x-lg text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="toast-body text-prime bg-second">
+                                                            ទំនិញត្រូវបានបញ្ចូលទៅក្នុងបញ្ជីចំណូលចិត្ត!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 text-prime ff">Women's Nike Air</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="pt-5 bg-prime" data-aos="fade-right">
+        <section class="pb-4">
+            <div class="container">
+                <div class="row g-3">
+                    <!-- Logo & About -->
+                    <div class="col-lg-4">
+                        <a href="homepage.html">
+                            <img src="../assets/img/logo2.png" alt="SportHub" class="img-fluid object-fit-cover"
+                                style="width:100px; height:80px;">
+                        </a>
+                        <p class="mb-3 text-second fs-nav lh-base">
+                            <span class="ff">DSH</span> ផ្តល់នូវព័ត៌មានកីឡា កម្មវិធីហាត់ប្រាណ និងប្រកួតប្រជែង
+                            ដើម្បីជួយអ្នកមានសុខភាព
+                            និងកាយសម្បទាកាន់តែប្រសើរ។
+                        </p>
+                        <h5 class="fw-bold mb-3 text-prime">បណ្តាញសង្គម</h5>
+                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-twitter-x fs-4"></i></a>
+                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-telegram fs-4"></i></a>
+                    </div>
+
+                    <div class="col-1"></div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2">
+                        <h5 class="fw-bold mb-3 text-prime">តំណភ្ជាប់</h5>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="homepage.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">ទំព័រដើម</a></li>
+                            <li class="nav-item"><a href="training.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">ការហ្វឹកហាត់</a></li>
+                            <li class="nav-item"><a href="event.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">ព្រឹត្តិការណ៏</a></li>
+                            <li class="nav-item"><a href="blog.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">អត្ថបទ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="col-lg-2">
+                        <h5 class="fw-bold mb-3 text-prime">ជំនួយ</h5>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="about.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">អំពីយើង</a></li>
+                            <li class="nav-item"><a href="faq.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
+                                    ចម្លើយ</a></li>
+                            <li class="nav-item"><a href="activity.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">សកម្មភាព</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-lg-3">
+                        <h5 class="fw-bold mb-3 text-prime">ទំនាក់ទំនង</h5>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="mailto:DSH@gmail.com"
+                                    class="nav-link p-0 pb-2 text-second">អ៊ីមែល: <span
+                                        class="ff">Dsh@gmail.com</span></a></li>
+                            <li class="nav-item"><a href="tel: 96 123 4567"
+                                    class="nav-link p-0 pb-2 text-second">ទូរស័ព្ទ: <span class="ff">+855 96 123
+                                        4567</span></a></li>
+                            <li class="nav-item d-flex gap-2">
+                                <a href="#"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
+                                        alt="App Store" class="img-fluid download"></a>
+                                <a href="#"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png"
+                                        alt="Google Play" class="img-fluid download"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
     <!-- link bootstrap js -->
     <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
     <!-- link swiper js -->
@@ -241,18 +1278,78 @@
     <!-- link js custom -->
     <script src="../assets/js/main.js"></script>
     <!-- Tab / Product -->
-<script>
-  const tabTitle = document.getElementById('tab-title');
-  const tabButtons = document.querySelectorAll('#pills-tab button');
+    <script>
+        const tabTitle = document.getElementById("tab-title");
+        const tabButtons = document.querySelectorAll("#pills-tab button");
 
-  tabButtons.forEach(button => {
-    button.addEventListener('shown.bs.tab', (e) => {
-      // Update the H1 to the data-title of the active tab
-      tabTitle.textContent = e.target.getAttribute('data-title');
-    });
-  });
-</script>
+        tabButtons.forEach((button) => {
+            button.addEventListener("shown.bs.tab", (e) => {
+                // Update the H1 to the data-title of the active tab
+                tabTitle.textContent = e.target.getAttribute("data-title");
+            });
+        });
+    </script>
+    <!-- Many Toast -->
+    <script>
+        function showToast(id) {
+            const toastEl = document.getElementById(id);
+            const toast = new bootstrap.Toast(toastEl, {
+                delay: 2000,
+                autohide: true,
+            }); // 2000ms = 2s
+            toast.show();
+        }
 
+        document
+            .getElementById("favoriteBtn1")
+            .addEventListener("click", () => showToast("favoriteToast1"));
+
+        document
+            .getElementById("favoriteBtn2")
+            .addEventListener("click", () => showToast("favoriteToast2"));
+        document
+            .getElementById("favoriteBtn3")
+            .addEventListener("click", () => showToast("favoriteToast3"));
+        document
+            .getElementById("favoriteBtn4")
+            .addEventListener("click", () => showToast("favoriteToast4"));
+        document
+            .getElementById("favoriteBtn5")
+            .addEventListener("click", () => showToast("favoriteToast5"));
+        document
+            .getElementById("favoriteBtn6")
+            .addEventListener("click", () => showToast("favoriteToast6"));
+        document
+            .getElementById("favoriteBtn7")
+            .addEventListener("click", () => showToast("favoriteToast7"));
+        document
+            .getElementById("favoriteBtn8")
+            .addEventListener("click", () => showToast("favoriteToast8"));
+        document
+            .getElementById("favoriteBtn9")
+            .addEventListener("click", () => showToast("favoriteToast9"));
+        document
+            .getElementById("favoriteBtn10")
+            .addEventListener("click", () => showToast("favoriteToast10"));
+        document
+            .getElementById("favoriteBtn11")
+            .addEventListener("click", () => showToast("favoriteToast11"));
+        document
+            .getElementById("favoriteBtn12")
+            .addEventListener("click", () => showToast("favoriteToast12"));
+        document
+            .getElementById("favoriteBtn13")
+            .addEventListener("click", () => showToast("favoriteToast13"));
+        document
+            .getElementById("favoriteBtn14")
+            .addEventListener("click", () => showToast("favoriteToast14"));
+        document
+            .getElementById("favoriteBtn15")
+            .addEventListener("click", () => showToast("favoriteToast15"));
+        document
+            .getElementById("favoriteBtn16")
+            .addEventListener("click", () => showToast("favoriteToast16"));
+    </script>
 </body>
 
 </html>
