@@ -143,14 +143,7 @@ let sportsChart = new Chart(ctxSports, {
         label: "ចំនួនសមាជិកក្នុងកីឡា",
         data: [142, 98, 125, 76, 87, 64, 92, 58],
         backgroundColor: [
-          "#4361ee",
-          "#f72585",
           "#4cc9f0",
-          "#3f37c9",
-          "#4895ef",
-          "#4cc9f0",
-          "#f72585",
-          "#4361ee",
         ],
       },
     ],
@@ -190,13 +183,7 @@ let itemsChart = new Chart(ctxItems, {
         data: [50, 80, 120, 30, 60, 40, 70, 20],
         backgroundColor: [
           "#ffc107",
-          "#4caf50",
-          "#03a9f4",
-          "#ff5722",
-          "#9c27b0",
-          "#ffc107",
-          "#4caf50",
-          "#03a9f4",
+         
         ],
         borderColor: [
           "#ffc107",

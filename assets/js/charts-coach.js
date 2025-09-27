@@ -90,13 +90,6 @@ let studentsChart = new Chart(ctxStudents, {
         data: [142, 98, 125, 76, 87, 64, 92, 58],
         backgroundColor: [
           "#4361ee",
-          "#f72585",
-          "#4cc9f0",
-          "#3f37c9",
-          "#4895ef",
-          "#4cc9f0",
-          "#f72585",
-          "#4361ee",
         ],
       },
     ],
