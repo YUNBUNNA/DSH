@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+      <!-- Load dotlottie-wc -->
+      <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
+    <!-- link bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css"
+    />
+    <!-- link theme -->
+    <link
+      rel="stylesheet"
+      href="../assets/plugins/bootstrap-5.3.7/css/theme.css"
+    />
+    <!-- link icons -->
+    <link
+      rel="stylesheet"
+      href="../assets/plugins/bootstrap-icons/bootstrap-icons.css"
+    />
+    <!-- link swiper -->
+    <link
+      rel="stylesheet"
+      href="../assets/plugins/swiper-js/css/swiper-bundle.min.css"
+    />
+    <!-- link aos -->
+    <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css" />
+    <!-- link css custom -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- link animation -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jaiminmalaviya/magical-css-library/magical.min.css"/>
+    
+<style>
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+.link .bi-facebook , .bi-telegram , .bi-instagram{
+  border: 1px solid goldenrod !important;
+  padding: 7px 10px !important;
+}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
-  <!-- Load dotlottie-wc -->
-  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
-  <!-- link bootstrap -->
-  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css" />
-  <!-- link theme -->
-  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css" />
-  <!-- link icons -->
-  <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css" />
-  <!-- link swiper -->
-  <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css" />
-  <!-- link aos -->
-  <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css" />
-  <!-- link css custom -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
 
-  <style>
-    /* Card hover effect */
-    .card-hover {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card-hover:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-    }
-
-
-    /* .profile-img {
+/* .profile-img {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 } */
-    /* .card-hover:hover .profile-img {
+/* .card-hover:hover .profile-img {
   transform: scale(1.05) rotate(-2deg);
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 } */
@@ -44,23 +60,26 @@
     .social-btn {
     transition: transform 0.3s ease, background 0.3s ease;
     } */
-    .social-btn:hover {
-      transform: scale(1.1);
-      background: var(--text-main) !important;
-      /* blue highlight */
-      color: #fff !important;
-    }
-  </style>
-</head>
+.social-btn:hover {
+  transform: scale(1.1);
+  background: var(--text-main) !important; /* blue highlight */
+  color: #fff !important;
+}
 
-<body class="bg-prime">
-  <!-- header -->
-  <header>
+
+
+
+</style>
+  </head>
+
+  <body class="bg-prime">
+    <!-- header -->
+ <header class="mb-5">
     <nav class="navbar py-0 fixed-top bg-prime">
       <div class="container-fluid d-none d-lg-flex bg-nav p-0">
         <div class="container d-flex align-items-center justify-content-between">
-          <a href="homepage.html" class="navbar-brand px-0">
-            <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
+          <a href="" class="navbar-brand px-0">
+            <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
               style="width: 90px; height: 40px" />
           </a>
           <ul class="navbar-nav flex-row align-items-center">
@@ -84,14 +103,14 @@
           aria-label="Toggle navigation">
           <i class="bi bi-list fs-3"></i>
           <a href="">
-            <img src="../../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
+            <img src="../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
           </a>
         </button>
         <div class="offcanvas offcanvas-start bg-prime" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header py-2 bg-nav">
-            <img src="../../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+            <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
               style="width: 80px; height: 40px;">
             <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
               <i class="bi bi-x-lg text-white fs-4"></i>
@@ -100,7 +119,7 @@
           <div class="offcanvas-body p-0">
             <ul id="off" class="nav flex-column">
               <li class="nav-item py-1">
-                <a class="nav-link active text-prime" href="homepage.html">ទំព័រដើម</a>
+                <a class="nav-link active text-prime" href="#">ទំព័រដើម</a>
               </li>
 
               <!-- ផ្នែកកីឡា -->
@@ -111,55 +130,63 @@
                 </a>
                 <ul id="sport" class="collapse list-unstyled ps-2" data-bs-parent="#off">
                   <li class="nav-item py-1">
-                    <a href="football.html" class="nav-link text-prime">បាល់ទាត់</a>
+                    <a href="#" class="nav-link text-prime">បាល់ទាត់</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="running.html" class="nav-link text-prime">រត់ប្រណាំង</a>
+                    <a href="#" class="nav-link text-prime">រត់ប្រណាំង</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="basketball.html" class="nav-link text-prime">បាល់បោះ</a>
+                    <a href="#" class="nav-link text-prime">បាល់បោះ</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="cycling.html" class="nav-link text-prime">ជិះកង់</a>
+                    <a href="#" class="nav-link text-prime">ជិះកង់</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="volleyball.html" class="nav-link text-prime">បាល់ទះ</a>
+                    <a href="#" class="nav-link text-prime">បាល់ទះ</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="karate.html" class="nav-link text-prime">ការ៉ាតេ</a>
+                    <a href="#" class="nav-link text-prime">ការ៉ាតេ</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="swimming.html" class="nav-link text-prime">ហែលទឹក</a>
+                    <a href="#" class="nav-link text-prime">ហែលទឹក</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="badminton.html" class="nav-link text-prime">វាយសី</a>
+                    <a href="#" class="nav-link text-prime">វាយសី</a>
                   </li>
                 </ul>
               </li>
 
               <li class="nav-item py-1">
-                <a class="nav-link" href="training.html">ការហ្វឹកហាត់</a>
+                <a class="nav-link" href="#">ការហ្វឹកហាត់</a>
               </li>
               <li class="nav-item py-1">
-                <a class="nav-link" href="shop.html">ទំនិញ</a>
+                <a class="nav-link" href="#">ទំនិញ</a>
               </li>
               <li class="nav-item py-1">
-                <a class="nav-link" href="event.html">ព្រឹត្តិការណ៏</a>
+                <a class="nav-link" href="#">ព្រឹត្តិការណ៏</a>
               </li>
 
               <!-- អត្ថបទ -->
               <li class="nav-item py-1">
-                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="blog.html"
+                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="#blog"
                   role="button" aria-expanded="false" aria-controls="blog">
                   អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <ul id="blog" class="collapse list-unstyled ps-2" data-bs-parent="#off">
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">កីឡា</a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a href="#" class="nav-link text-prime">សុខភាព</a>
+                  </li>
+                </ul>
               </li>
 
-              <li class="nav-item py-1 ">
-                <a class="nav-link active" href="about.html">អំពីយើង</a>
+              <li class="nav-item py-1">
+                <a class="nav-link" href="#">អំពីយើង</a>
               </li>
               <li class="nav-item py-1">
-                <a class="nav-link" href="contect.html">ទំនាក់ទំនង</a>
+                <a class="nav-link" href="#">ទំនាក់ទំនង</a>
               </li>
 
               <!-- ផ្សេងៗ -->
@@ -170,16 +197,16 @@
                 </a>
                 <ul id="other" class="collapse list-unstyled ps-2" data-bs-parent="#off">
                   <li class="nav-item py-1">
-                    <a href="coach.html" class="nav-link text-prime">គ្រូបង្វឹក</a>
+                    <a href="#" class="nav-link text-prime">គ្រូបង្វឹក</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="activity.html" class="nav-link text-prime">សកម្មភាព</a>
+                    <a href="#" class="nav-link text-prime">សកម្មភាព</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="nutrition.html" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
+                    <a href="#" class="nav-link text-prime">អាហារូបត្ថម្ភ</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="FAQ.html" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
+                    <a href="#" class="nav-link text-prime">សំណួរ & ចម្លើយ</a>
                   </li>
                 </ul>
               </li>
@@ -188,40 +215,52 @@
         </div>
         <ul class="navbar-nav flex-row d-none d-xl-flex">
           <li class="nav-item ps-1 pe-3 py-1">
-            <a href="homepage.html" class="nav-link">ទំព័រដើម</a>
+            <a href="" class="nav-link">ទំព័រដើម</a>
           </li>
           <li class="nav-item sport px-3 py-1 position-relative">
             <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
             <div class="dropdown position-absolute shadow-xs">
               <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
-                <li><a class="dropdown-item py-2" href="football.html">បាល់ទាត់</a></li>
-                <li><a class="dropdown-item py-2" href="running.html">រត់ប្រណាំង</a></li>
-                <li><a class="dropdown-item py-2" href="basketball.html">បាល់បោះ</a></li>
-                <li><a class="dropdown-item py-2" href="cycling.html">ជិះកង់</a></li>
-                <li><a class="dropdown-item py-2" href="volleyball.html">បាល់ទះ</a></li>
-                <li><a class="dropdown-item py-2" href="karate.html">ការ៉ាតេ</a></li>
-                <li><a class="dropdown-item py-2" href="swimming.html">ហែលទឹក</a></li>
-                <li><a class="dropdown-item py-2" href="badminton.html">វាយសី</a></li>
+                <li><a class="dropdown-item py-2" href="#">បាល់ទាត់</a></li>
+                <li><a class="dropdown-item py-2" href="#">រត់ប្រណាំង</a></li>
+                <li><a class="dropdown-item py-2" href="#">បាល់បោះ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ជិះកង់</a></li>
+                <li><a class="dropdown-item py-2" href="#">បាល់ទះ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ការ៉ាតេ</a></li>
+                <li><a class="dropdown-item py-2" href="#">ហែលទឹក</a></li>
+                <li><a class="dropdown-item py-2" href="#">វាយសី</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="training.html" class="nav-link">ការហ្វឹកហាត់</a>
+            <a href="" class="nav-link">ការហ្វឹកហាត់</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="shop.html" class="nav-link">ទំនិញ</a>
+            <a href="" class="nav-link">ទំនិញ</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="event.html" class="nav-link">ព្រឹត្តិការណ៏</a>
+            <a href="" class="nav-link">ព្រឹត្តិការណ៏</a>
           </li>
           <li class="nav-item blog px-3 py-1 position-relative">
-            <a class="nav-link" href="blog.html">អត្ថបទ</a>
+            <a class="nav-link" href="#">
+              អត្ថបទ <i class="bi bi-chevron-down icon"></i>
+            </a>
+            <div class="dropdown position-absolute shadow-xs">
+              <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text">
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">កីឡា</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#">សុខភាព</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="about.html" class="nav-link active">អំពីយើង</a>
+            <a href="" class="nav-link">អំពីយើង</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="contect.html" class="nav-link">ទំនាក់ទំនង</a>
+            <a href="" class="nav-link">ទំនាក់ទំនង</a>
           </li>
           <li class="nav-item other px-3 py-1 position-relative">
             <a class="nav-link" href="#">
@@ -230,16 +269,16 @@
             <div class="dropdown position-absolute shadow-xs">
               <ul class="dropdown-menu bg-prime p-0 m-0 border-0 rounded-0 fs-text w-100">
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="coach.html">គ្រូបង្វឹក</a>
+                  <a class="dropdown-item py-2 d-block" href="#">គ្រូបង្វឹក</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="activity.html">សកម្មភាព</a>
+                  <a class="dropdown-item py-2 d-block" href="#">សកម្មភាព</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="nutrition.html">អាហារូបត្ថម្ភ</a>
+                  <a class="dropdown-item py-2 d-block" href="#">អាហារូបត្ថម្ភ</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="FAQ.html">សំណួរ & ចម្លើយ</a>
+                  <a class="dropdown-item py-2 d-block" href="#">សំណួរ & ចម្លើយ</a>
                 </li>
               </ul>
             </div>
@@ -253,7 +292,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="cart.html" class="nav-link position-relative">
+            <a href="" class="nav-link position-relative">
               <i class="bi bi-cart2 text-prime fs-4"></i>
               <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                 style="width: 15px; height: 15px">
@@ -262,7 +301,7 @@
             </a>
           </li>
           <li class="nav-item d-block d-lg-none">
-            <a href="notification-page.html" class="nav-link position-relative">
+             <a href="../notification-page.html" class="nav-link position-relative">
               <i class="bi bi-bell text-prime fs-4"></i>
               <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                 style="width: 15px; height: 15px">
@@ -278,7 +317,7 @@
                 <span class="text-white fs-8 d-flex justify-content-center align-items-center">3</span>
               </span>
             </a>
-            <div class="dropdown position-absolute shadow-xs" style="left: -290px;">
+            <div class="dropdown position-absolute shadow-xs" style="left: -250px">
               <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
                 <div class="card border-0 border-bottom rounded-0 bg-transparent p-0">
                   <div class="card-body pb-0">
@@ -340,21 +379,15 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item d-block d-lg-none">
-            <a href="../user.html" class="nav-link">
+          <li class="nav-item profile position-relative">
+            <a href="" class="nav-link">
               <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
                 class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
             </a>
-          </li>
-          <li class="nav-item profile position-relative d-none d-lg-block">
-            <a href="#" class="nav-link">
-              <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
-            </a>
-            <div class="dropdown position-absolute shadow-xs" style="left: -90px;">
+            <div class="dropdown position-absolute shadow-xs" style="left: -60px;">
               <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
                 <div class="card border-0 border-bottom rounded-0 bg-prime p-0">
-                  <div class="card-body bg-second">
+                  <div class="card-body">
                     <div class="d-flex align-items-end gap-3">
                       <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
                         class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;" alt="">
@@ -363,12 +396,19 @@
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item py-2 d-block m-0" href="user.html"><i class="bi bi-person me-1"></i> គណនី</a>
+                  <a class="dropdown-item py-2 d-block m-0" href="profile-user.html#tab-profile"><i
+                      class="bi bi-person me-1"></i> គណនី</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="../index.html"><i
-                      class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
-                    <span class="ms-7 opacity-0">a</span></a>
+                  <a class="dropdown-item py-2 d-block" href="profile-user.html#tab-change-password"><i
+                      class="bi bi-gear me-2"></i>ការកំណត់</a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#"><i class="bi bi-speedometer2 me-2"></i>ផ្ទាំងគ្រប់គ្រង
+                    <span class="ms-5 opacity-0">a</span></a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 d-block" href="#"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ</a>
                 </li>
               </ul>
             </div>
@@ -377,210 +417,265 @@
       </div>
     </nav>
   </header>
-  <main>
-    <section style="margin-top: 200px;">
-      <div class="hero-banner mt-5">
-        <div class="container">
-          <div class="row ">
-            <div class="col-lg-7">
-              <h5 class="display-4 text-prime text-main fw-bold">សូមជម្រាបសួរ!</h5>
-              <br>
-              <br>
-              <p class="text-prime fs-title">
-                ក្រុមពួកយើងជាសិស្សជាសិស្សអាហាររូបករណ៍នៅ <a href="https://www.antkh.com/"
-                  class="text-decoration-none">ថ្នាក់បណ្តុះបណ្តាលបច្ចេកវិទ្យាអាន-ANT</a>
-                ក្រុមរបស់ពួកយើងមានសមាជិកចំនួន ៥នាក់។ ក្រុមពួកយើងបានបង្កើតគេដើម្បីបង្ហាញពីស្នាដៃ
-                និងចំណវដឹងដែលក្រុមពួកយើងសិក្សាក្នុងវគ្គ <span class="ff"> HTML CSS </span> និង <span
-                  class="ff">Bootstrap</span> ក្នុងរយៈពេល ៣ខែ​ កន្លងមកនេះ។ ក្រុមពួកយើងសូមថ្លែងអំណរគុណដល់លោកគ្រូ សួ​
-                លីឡាយ ដែលបានផ្តល់នូវចំណេះដឹង និងការណែនាំដ៏មានតម្លៃរយៈពេលកន្លងមកនេះ។
-              </p>
-            </div>
-            <div class="d-none d-lg-block col-lg-5">
-              <img style="width: 100%;" src="../assets/img/about_Team.png" alt="" class="img-fluid rounded-4">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="py-10">
-      <div class="container">
-        <h2 class="text-center text-prime text-main fw-bold">គៅលបំណងក្នុងការបង្កើត <span class="ff">DSH</span></h2>
-        <div class="bg-third p-4 mt-5 rounded-4 shadow-xs">
-          <div class="row">
-            <div class="col-lg-7">
-              <div class="card mt-5 border-0 bg-transparent">
-                <p class="text-prime fs-title">
-                  យើងបានបង្កើតគេហទំពេ័រ<span class="ff"> DSH </span><span class="ff text-main">(Digital Sport and
-                    Healt)</span>
-                  ដោយសារការមើលឃើញពីភាពខ្វះខាតក្នុងសង្គមសព្វថ្ងៃទាក់ទងនឹងចំណេះដឹងនិងឯកសារអត្ថបទជាភាសាជាតិអំពីកីឡានិងសុខភាព។ភាពខ្វះខាតនេះធ្វើឲ្យមនុស្សជាច្រើនមិនទាន់មានការយល់ដឹងគ្រប់គ្រាន់អំពីវិធីថែរក្សាសុខភាពការការពារជំងឺនិងអត្ថប្រយោជន៍នៃការលេងកីឡា។
-                  ដោយហេតុនេះការចែករំលែកចំណេះដឹងនិងការបង្កើនការយល់ដឹងជាសាធារណៈអំពីកីឡា&សុខភាពគឺមានសារៈសំខាន់ដើម្បីលើកកម្ពស់គុណភាពជីវិតនិងសុខុមាលភាពរបស់ប្រជាជនជាតិខ្មែរ។ដើម្បីចូលរួមដោះស្រាយបញ្ហាភាពខ្វះខាតចំណេះដឹងនិងឯកសារជាភាសាជាតិអំពីកីឡានិងសុខភាពគោលបំណងរបស់យើងគឺបង្កើតគេហទំព័រមួយដែលមានលក្ខណៈហើយអាចប្រើប្រាស់បានទាំងលើកម្មវិធីBrowserនិងទូរស័ព្ទចល័ត។
-                  គេហទំព័រនេះនឹងក្លាយជាវេទិកាសាធារណៈសម្រាប់ចែករំលែកនិងផ្សព្វផ្សាយចំណេះដឹងអំពី៖អត្ថប្រយោជន៍នៃការលេងកីឡាវិធីថែរក្សាសុខភាពការពារជំងឺនិងសុខភាពផ្លូវចិត្តគន្លឹះសម្រាប់របបអាហារដែលមានប្រយោជន៍គោលបំណងសំខាន់គឺដើម្បីជួយលើកកម្ពស់ការយល់ដឹងរបស់ប្រជាជនកម្ពុជាអំពីសារៈសំខាន់នៃកីឡានិងសុខភាពដើម្បីអាចមានជីវិតប្រកបដោយសុខុមាលភាព
-                  សមរម្យ និងរឹងមាំ។
+    <main>
+      <!-- About Team -->
+      <section style="margin-top: 200px;">
+        <div class="hero-banner mt-5">
+          <div class="container">
+            <div class="row ">
+              <div class="col-lg-7">
+                <h5 class="display-4 text-prime text-main fw-bold animate__animated animate__fadeInLeft">សូមជម្រាបសួរ!</h5>
+                <p class="text-prime fs-title py-5 animate__animated animate__fadeInLeft">
+                  ក្រុមពួកយើងជាសិស្សជាសិស្សអាហាររូបករណ៍នៅ <a href="https://www.antkh.com/" class="text-decoration-none">ថ្នាក់បណ្តុះបណ្តាលបច្ចេកវិទ្យាអាន-ANT</a>
+                  ក្រុមរបស់ពួកយើងមានសមាជិកចំនួន ៥នាក់។ ក្រុមពួកយើងបានបង្កើតគេដើម្បីបង្ហាញពីស្នាដៃ និងចំណវដឹងដែលក្រុមពួកយើងសិក្សាក្នុងវគ្គ <span class="ff"> HTML CSS </span> និង <span class="ff">Bootstrap</span> ក្នុងរយៈពេល ៣ខែ​ កន្លងមកនេះ។ ក្រុមពួកយើងសូមថ្លែងអំណរគុណដល់លោកគ្រូ សួ​ លីឡាយ ដែលបានផ្តល់នូវចំណេះដឹង និងការណែនាំដ៏មានតម្លៃរយៈពេលកន្លងមកនេះ។
                 </p>
               </div>
-            </div>
-            <div class="d-none d-lg-block col-lg-5">
-              <dotlottie-wc src="../assets/img/Building Page.json" data-aos="zoom-in" style="width: 100%; height: 100%"
-                loop autoplay speed="1" mode="forward">
-              </dotlottie-wc>
+              <div class="d-none d-lg-block col-lg-5">
+                <img style="width: 100%;" src="../assets/img/about_Team.png" alt="" class="img-fluid rounded-4 animate__animated animate__fadeInRight">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Thanks -->
-    <section class="mt-5">
-      <h2 class="text-center text-prime text-main fw-bold"> សេចក្តីថ្លៃងអំណរគុណ </h2>
-      <div class="container">
-        <div class="bg-third p-4 mt-5 rounded-4 shadow-xs">
+      <!-- Purpose -->
+
+      <section class="py-10">
+        <div class="container">
+          <h2 class="text-center text-prime text-main fw-bold" data-aos="fade-up">គៅលបំណងក្នុងការបង្កើត <span class="ff">DSH</span></h2>
+          <div class="bg-third p-4 mt-5 rounded-4 shadow-xs"  data-aos="fade-up">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="card mt-5 border-0 bg-transparent">
+                  <p class="text-prime fs-title">
+                    យើងបានបង្កើតគេហទំពេ័រ<span class="ff"> DSH </span><span class="ff text-main">(Digital Sport and Healt)</span> ដោយសារការមើលឃើញពីភាពខ្វះខាតក្នុងសង្គមសព្វថ្ងៃទាក់ទងនឹងចំណេះដឹងនិងឯកសារអត្ថបទជាភាសាជាតិអំពីកីឡានិងសុខភាព។ភាពខ្វះខាតនេះធ្វើឲ្យមនុស្សជាច្រើនមិនទាន់មានការយល់ដឹងគ្រប់គ្រាន់អំពីវិធីថែរក្សាសុខភាពការការពារជំងឺនិងអត្ថប្រយោជន៍នៃការលេងកីឡា។
+                    ដោយហេតុនេះការចែករំលែកចំណេះដឹងនិងការបង្កើនការយល់ដឹងជាសាធារណៈអំពីកីឡា&សុខភាពគឺមានសារៈសំខាន់ដើម្បីលើកកម្ពស់គុណភាពជីវិតនិងសុខុមាលភាពរបស់ប្រជាជនជាតិខ្មែរ។គេហទំព័រនេះនឹងក្លាយជាវេទិកាសាធារណៈសម្រាប់ចែករំលែកនិងផ្សព្វផ្សាយចំណេះដឹងអំពី៖អត្ថប្រយោជន៍នៃការលេងកីឡាវិធីថែរក្សាសុខភាពការពារជំងឺនិងសុខភាពផ្លូវចិត្តគន្លឹះសម្រាប់របបអាហារដែលមានប្រយោជន៍គោលបំណងសំខាន់គឺដើម្បីជួយលើកកម្ពស់ការយល់ដឹងរបស់ប្រជាជនកម្ពុជាអំពីសារៈសំខាន់នៃកីឡានិងសុខភាពដើម្បីអាចមានជីវិតប្រកបដោយសុខុមាលភាព សមរម្យ និងរឹងមាំ។
+                  </p>
+                </div>
+              </div>
+              <div class="d-none d-lg-block col-lg-5">
+                <dotlottie-wc src="../assets/img/Building Page.json" data-aos="zoom-in" style="width: 100%; height: 100%" loop autoplay speed="1"
+                    mode="forward">
+                </dotlottie-wc>
+              </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thanks -->
+      <section class="mt-5">
+        <h2 class="text-center text-prime text-main fw-bold" data-aos="fade-up"> សេចក្តីថ្លៃងអំណរគុណ  </h2>
+        <div class="container">
+        <div class="bg-third p-4 mt-5 rounded-4 shadow-xs" data-aos="fade-up">
           <div class="row">
             <div class="col-lg-7">
               <div class="card border-0 bg-transparent mt-5">
                 <p class="text-prime fs-title mt-6" style="line-height: 2;">
-                  ក្រុមយើងខ្ញុំសូមថ្លែងអំណរគុណចំពោះ <a href="https://www.antkh.com/"
-                    class="text-decoration-none">​ថ្នាក់បណ្តុះបណ្តាលបច្ចេកវិទ្យាអាន-ANT</a>
+                  ក្រុមយើងខ្ញុំសូមថ្លែងអំណរគុណចំពោះ <a href="https://www.antkh.com/" class="text-decoration-none">​ថ្នាក់បណ្តុះបណ្តាលបច្ចេកវិទ្យាអាន-ANT</a>
                   ដែលបានផ្តល់អាហាររូបករណ៏ទៅលើជំនាញការអភិវឌ្ឍគេហទំព័រអាហារូបករណ៍​នេះពិតជាបានជួយសម្រាលបន្ទុកហិរញ្ញវត្តុនៃការចាយការសិក្សាដល់ក្រុមរបស់ពួកយើងទាំងអស់គ្នា​
-                  ក្រុមរបស់ពួកយើងនិងប្តេជ្ញាការខិតខំប្រឹងប្រែងសិក្សា​​​​
-                  គឺដើម្បីកសាងសមត្តភាពក៏អាចចូលរួចចំណែកសង្គមនាពេលថ្ងៃអនាគត។
+                  ក្រុមរបស់ពួកយើងនិងប្តេជ្ញាការខិតខំប្រឹងប្រែងសិក្សា​​​​ គឺដើម្បីកសាងសមត្តភាពក៏អាចចូលរួចចំណែកសង្គមនាពេលថ្ងៃអនាគត។
                 </p>
               </div>
             </div>
             <div class="col-lg-5">
               <div class="card rounded-4 p-4 border-0 mt-6 bg-transparent">
-                <img src="../assets/img/ant-logo-.png" alt="" class="img-fluid">
-                <div class="card-body">
-
+                <img src="../assets/img/ant-logo-.png" alt="" class="img-fluid" data-aos="zoom-in">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <!-- Experience -->
+      <section class="py-10">
+        <h2 class="text-center text-prime text-main fw-bold mb-8" data-aos="fade-up"> បទពិសោ​ធន៏កំឡុងពេលសិក្សា </h2>
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-6">
+              <div class="row gy-4" data-aos="fade-right">
+                <div class="col-12">
+                <div class="card bg-transparent" style="border: 1px solid gold;">
+                  <div class="card-body p-5">
+                    <h4 class="card-title fw-bold text-prime">៣ ខែទៅលើ <span class="ff">HTML HTML5</span></h4>
+                    <p class="card-text text-second">
+                      ពួកយើងបានសិក្សាទៅលើ <span class="ff">HTML HTML5</span> បានមួយរយៈជាមួយលោកគ្រូអ្នកគ្រូនិងបានឆ្លងកាត់ការធ្វើ <span class="ff">Homework, classwork, Practices</span> និង <span class="ff">Project-Assignment</span> ជាច្រើនព្រមទាំងទទួលបានលទ្ធផលល្អក្នុងការសិក្សា។
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card bg-transparent" style="border: 1px solid gold;">
+                  <div class="card-body p-5">
+                    <h4 class="card-title fw-bold text-prime">៣ ខែទៅលើ <span class="ff">CSS3</span></h4>
+                    <p class="card-text text-second">
+                      ពួកយើងបានសិក្សាទៅលើ <span class="ff">CSS3</span> បានមួយរយៈជាមួយលោកគ្រូអ្នកគ្រូនិងបានឆ្លងកាត់ការធ្វើ <span class="ff">Homework, classwork, Practices</span> និង <span class="ff">Project-Assignment</span> ជាច្រើនព្រមទាំងទទួលបានលទ្ធផលល្អក្នុងការសិក្សា។
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card bg-transparent" style="border: 1px solid gold;">
+                  <div class="card-body p-5">
+                    <h4 class="card-title fw-bold text-prime">៣ ខែទៅលើ <span class="ff">BOOTSTRAP 5</span></h4>
+                    <p class="card-text text-second">
+                      ពួកយើងបានសិក្សាទៅលើ <span class="ff">Bootstrap5</span> បានមួយរយៈជាមួយលោកគ្រូអ្នកគ្រូនិងបានឆ្លងកាត់ការធ្វើ <span class="ff">Homework, classwork, Practices</span> និង <span class="ff">Project-Assignment</span> ជាច្រើនព្រមទាំងទទួលបានលទ្ធផលល្អក្នុងការសិក្សា។
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row" data-aos="fade-left">
+                <h5 class="fw-bold text-prime text-center mt-5 py-4" style="text-align: justify; line-height: 1.6;">
+                  ទាំងនេះជាបទពិសោធន៍ខ្លះៗដែលពួកយើងបានឆ្លងកាត់ការបង្ហាត់ពីលោកគ្រូ
+                  ហើយក៏បានយកវាទៅអនុវត្តន៍ ធ្វើកិច្ចការសាលានិង <span class="ff text-main">Project</span> ព្រោះទាំងបាន
+                  បង្កើតគេហទំព័រនេះឡើងផងដែរ។
+                </h5>
+                <div class="experience-img mt-4">
+                  <img src="../assets/img/web2.png" alt="" class="img-fluid">
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- About Member -->
+      <section class="py-10">
+        <div class="container">
+          <h2 class="text-center text-prime text-main fw-bold mb-9" data-aos="fade-up">អំពីសមាជិកក្រុម</h2>
+          <div class="row gy-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card bg-transparent rounded-4 hover-lift" data-aos="fade-right" style="border: 1px solid #f7d78c;">
+                <div class="d-flex justify-content-center border-3 py-4 mt-2">
+                  <img src="../assets/img/img-about-team/jammy.JPG" alt="" class="img-fluid object-fit-cover" style="width: 180px; height: 180px; border-radius: 50%;">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold text-prime">ឡាយ ចេមមី</h3>
+                  <p class="card-text py-2 text-prime">ខ្ញុំបាទជានិសិ្សតមកពីសាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ(RUPP) ឆ្នាំទី៣ ផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រហើយនិងកំពុងសិក្សាថ្នាក់អាហារូបករណ៍ជំនាញ <span class="ff">Web Development</span> នៅសាលា <a href="https://www.facebook.com/ant.com.kh" class="text-decoration-none text-main ff fw-bold"> ANT Technology Training Center</a> ផងដែរ។</p>
+                </div>
+                <div class="col icon text-center py-5">
+                  <a href="https://www.facebook.com/JammyNiceOne" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-facebook rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://t.me/LayJammy" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-telegram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://www.instagram.com/jammy.prettyb0y?igsh=anE2b2s5anc4eHV1&utm_source=qr" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-instagram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-    <!-- About Team -->
-    <section class="py-10">
-      <div class="container">
-        <h2 class="text-center text-prime text-main fw-bold">អំពីសមាជិកក្រុម</h2>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card bg-transparent" style="border: 1px solid #f7d78c;">
-              <div class="d-flex justify-content-center border-3 py-3">
-                <img src="../assets/img/img-about-team/IMG_0157.JPG" alt="" class="img-fluid object-fit-cover"
-                  style="width: 200px; height: 200px; border-radius: 50%;">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card bg-transparent rounded-4 hover-lift" data-aos="fade-up" style="border: 1px solid #f7d78c;">
+                <div class="d-flex justify-content-center border-3 py-4 mt-2">
+                  <img src="../assets/img/img-about-team/bunna.jpg" alt="" class="img-fluid object-fit-cover" style="width: 180px; height: 180px; border-radius: 50%;">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold text-prime">យន់ ប៊ុណ្ណា</h3>
+                  <p class="card-text py-2 text-prime">ខ្ញុំបាទជានិសិ្សតមកពីសាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ(RUPP) ឆ្នាំទី៤ ផ្នែកវិស្វកម្មព័ត៌មានវិទ្យាហើយនិងកំពុងសិក្សាថ្នាក់អាហារូបករណ៍ជំនាញ <span class="ff">Web Development</span> នៅសាលា <a href="https://www.facebook.com/ant.com.kh" class="text-decoration-none text-main ff fw-bold"> ANT Technology Training Center</a> ផងដែរ។</p>
+                </div>
+                <div class="col icon text-center py-5">
+                  <a href="https://www.facebook.com/JammyNiceOne" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-facebook rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://t.me/LayJammy" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-telegram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://www.instagram.com/jammy.prettyb0y?igsh=anE2b2s5anc4eHV1&utm_source=qr" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-instagram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                </div>
               </div>
-              <div class="card-body text-center">
-                <h3 class="card-title fw-bold">ឡាយ ចេមមី</h3>
-                <p class="card-text py-2">ខ្ញុំបាទជានិសិ្សតមកពីសាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ(RUPP) ឆ្នាំទី៣
-                  ផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រហើយនិងកំពុងសិក្សាថ្នាក់អាហារូបករណ៍ជំនាញ <span class="ff">Web
-                    Development</span> នៅសាលា <a href="https://www.facebook.com/ant.com.kh"
-                    class="text-decoration-none text-main ff fw-bold"> ANT Technology Training Center</a> ផងដែរ។</p>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card bg-transparent rounded-4 hover-lift" data-aos="fade-left" style="border: 1px solid #f7d78c;">
+                <div class="d-flex justify-content-center border-3 py-4 mt-2">
+                  <img src="../assets/img/img-about-team/vichhara.jpg" alt="" class="img-fluid object-fit-cover" style="width: 180px; height: 180px; border-radius: 50%;">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold text-prime">ឃុន វិច្ចរ៉ា</h3>
+                  <p class="card-text py-2 text-prime">ខ្ញុំបាទជានិសិ្សតមកពីវិទ្យាស្ថានជាតិបណ្តុះបណ្តាលបច្ចេកទេស(NTTI) ឆ្នាំទី៣ ផ្នែកព័ត៌មានវិទ្យាហើយនិងកំពុងសិក្សាថ្នាក់អាហារូបករណ៍ជំនាញ <span class="ff">Web Development</span> នៅសាលា <a href="https://www.facebook.com/ant.com.kh" class="text-decoration-none text-main ff fw-bold"> ANT Technology Training Center</a> ផងដែរ។</p>
+                </div>
+                <div class="col icon text-center py-5">
+                  <a href="https://web.facebook.com/vic.ra.vze" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-facebook rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://t.me/khunvichhra" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-telegram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://www.instagram.com/vicra_vze?igsh=MWMyeTRuMnA2NmRnaA==" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-instagram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                </div>
               </div>
-              <div class="col icon text-center py-5">
-                <a href="https://www.facebook.com/JammyNiceOne" class="link py-3 px-3 rounded-2 text-decoration-none"
-                  style="border: 1px solid black;">
-                  <i class="bi bi-facebook" style="font-size: 25px;"></i>
-                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card bg-transparent rounded-4 hover-lift" data-aos="fade-up" style="border: 1px solid #f7d78c;">
+                <div class="d-flex justify-content-center border-3 py-4 mt-2">
+                  <img src="../assets/img/img-about-team/heang.JPG" alt="" class="img-fluid object-fit-cover" style="width: 180px; height: 180px; border-radius: 50%;">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold text-prime">បាវ ហ៊ាង</h3>
+                  <p class="card-text py-2 text-prime">ខ្ញុំបាទជានិសិ្សតមកពីសាកលវិទ្យាល័យ ប៊ែលធី អន្តរជាតិ(BIU) ឆ្នាំទី២ ផ្នែកវិស្វកម្មព័ត៌មានវិទ្យាហើយនិងកំពុងសិក្សាថ្នាក់អាហារូបករណ៍ជំនាញ <span class="ff">Web Development</span> នៅសាលា <a href="https://www.facebook.com/ant.com.kh" class="text-decoration-none text-main ff fw-bold"> ANT Technology Training Center</a> ផងដែរ។</p>
+                </div>
+                <div class="col icon text-center py-5">
+                  <a href="https://web.facebook.com/vic.ra.vze" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-facebook rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://t.me/khunvichhra" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-telegram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://www.instagram.com/vicra_vze?igsh=MWMyeTRuMnA2NmRnaA==" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-instagram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="card bg-transparent rounded-4 hover-lift" data-aos="fade-up" style="border: 1px solid #f7d78c;">
+                <div class="d-flex justify-content-center border-3 py-4 mt-2">
+                  <img src="../assets/img/img-about-team/muslim.jpg" alt="" class="img-fluid object-fit-cover" style="width: 180px; height: 180px; border-radius: 50%;">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title fw-bold text-prime">ស្មាន​ មូស្លីម</h3>
+                  <p class="card-text py-2 text-prime">ខ្ញុំបាទជានិសិ្សតមកពីសាកលវិទ្យាកម្ពុជាគ្រប់គ្រង និងបច្ចេកវិទ្យា ឆ្នាំទី២ ផ្នែកវិទ្យាសាស្រ្តកុំព្យូទ័រហើយនិងកំពុងសិក្សាថ្នាក់អាហារូបករណ៍ជំនាញ <span class="ff">Web Development</span> នៅសាលា <a href="https://www.facebook.com/ant.com.kh" class="text-decoration-none text-main ff fw-bold"> ANT Technology Training Center</a> ផងដែរ។</p>
+                </div>
+                <div class="col icon text-center py-5">
+                  <a href="https://web.facebook.com/muslim.sman.381070" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-facebook rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://t.me/Muslim_Sman" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-telegram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                  <a href="https://www.instagram.com/vicra_vze?igsh=MWMyeTRuMnA2NmRnaA==" class="link text-decoration-none pe-2" >
+                    <i class="bi bi-instagram rounded-3 text-prime" style="font-size: 25px;"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+    </main>
 
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js">
+    </script>
+    <!-- link bootstrap js -->
+    <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <!-- link swiper js -->
+    <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+    <!-- link aos js -->
+    <script src="../assets/plugins/aos/js/aos.js"></script>
+    <!-- link js custom -->
+    <script src="../assets/js/main.js"></script>
 
-  <!-- footer -->
-  <footer class="pt-5 bg-prime" data-aos="fade-right">
-    <section class="pb-4">
-      <div class="container">
-        <div class="row g-3">
-          <!-- Logo & About -->
-          <div class="col-lg-4">
-            <a href="homepage.html">
-              <img src="../assets/img/logo2.png" alt="SportHub" class="img-fluid object-fit-cover"
-                style="width:100px; height:80px;">
-            </a>
-            <p class="mb-3 text-second fs-nav lh-base">
-              <span class="ff">DSH</span> ផ្តល់នូវព័ត៌មានកីឡា កម្មវិធីហាត់ប្រាណ និងប្រកួតប្រជែង
-              ដើម្បីជួយអ្នកមានសុខភាព
-              និងកាយសម្បទាកាន់តែប្រសើរ។
-            </p>
-            <h5 class="fw-bold mb-3 text-prime">បណ្តាញសង្គម</h5>
-            <a href="#" class="text-decoration-none me-2"><i class="bi bi-facebook fs-4"></i></a>
-            <a href="#" class="text-decoration-none me-2"><i class="bi bi-twitter-x fs-4"></i></a>
-            <a href="#" class="text-decoration-none me-2"><i class="bi bi-linkedin fs-4"></i></a>
-            <a href="#" class="text-decoration-none me-2"><i class="bi bi-instagram fs-4"></i></a>
-            <a href="#" class="text-decoration-none me-2"><i class="bi bi-telegram fs-4"></i></a>
-          </div>
-
-          <div class="col-1"></div>
-
-          <!-- Quick Links -->
-          <div class="col-lg-2">
-            <h5 class="fw-bold mb-3 text-prime">តំណភ្ជាប់</h5>
-            <ul class="navbar-nav">
-              <li class="nav-item"><a href="homepage.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">ទំព័រដើម</a>
-              </li>
-              <li class="nav-item"><a href="training.html"
-                  class="nav-link text-second w-fit p-0 pb-2 fs-6">ការហ្វឹកហាត់</a></li>
-              <li class="nav-item"><a href="event.html"
-                  class="nav-link text-second w-fit p-0 pb-2 fs-6">ព្រឹត្តិការណ៏</a></li>
-              <li class="nav-item"><a href="blog.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">អត្ថបទ</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Support -->
-          <div class="col-lg-2">
-            <h5 class="fw-bold mb-3 text-prime">ជំនួយ</h5>
-            <ul class="navbar-nav">
-              <li class="nav-item"><a href="about.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">អំពីយើង</a>
-              </li>
-              <li class="nav-item"><a href="faq.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
-                  ចម្លើយ</a></li>
-              <li class="nav-item"><a href="activity.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">សកម្មភាព</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div class="col-lg-3">
-            <h5 class="fw-bold mb-3 text-prime">ទំនាក់ទំនង</h5>
-            <ul class="navbar-nav">
-              <li class="nav-item"><a href="mailto:DSH@gmail.com" class="nav-link p-0 pb-2 text-second">អ៊ីមែល: <span
-                    class="ff">Dsh@gmail.com</span></a></li>
-              <li class="nav-item"><a href="tel: 96 123 4567" class="nav-link p-0 pb-2 text-second">ទូរស័ព្ទ: <span
-                    class="ff">+855 96 123
-                    4567</span></a></li>
-              <li class="nav-item d-flex gap-2">
-                <a href="#"><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
-                    alt="App Store" class="img-fluid download"></a>
-                <a href="#"><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png"
-                    alt="Google Play" class="img-fluid download"></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer>
-
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js">
-  </script>
-  <!-- link bootstrap js -->
-  <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-  <!-- link swiper js -->
-  <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
-  <!-- link aos js -->
-  <script src="../assets/plugins/aos/js/aos.js"></script>
-  <!-- link js custom -->
-  <script src="../assets/js/main.js"></script>
-
-</body>
-
+  </body>
 </html>
