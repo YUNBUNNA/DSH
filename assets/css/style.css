@@ -204,6 +204,10 @@ body {
   color: var(--text-main) !important;
   background-color: var(--btn-second) !important;
 }
+.dropdown-item.active{
+  color: var(--text-main) !important;
+  background-color: var(--btn-second) !important;
+}
 
 .no-transition .theme-icon {
   transition: none !important;
