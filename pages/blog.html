@@ -22,12 +22,25 @@
         button:focus {
             border: none !important;
         }
+
+        /* Internal style  */
+        .toast {
+            display: block !important;
+            opacity: 0;
+            transform: translateX(100vw);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
     </style>
 </head>
 
 <body class="bg-prime">
 
-     <!-- header -->
+    <!-- header -->
     <header>
         <nav class="navbar py-0 fixed-top bg-prime">
             <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
@@ -160,7 +173,7 @@
                 </div>
                 <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
                     <li class="nav-item ps-1 pe-3 py-1">
-                        <a href="homepage.html" class="nav-link active">ទំព័រដើម</a>
+                        <a href="homepage.html" class="nav-link">ទំព័រដើម</a>
                     </li>
                     <li class="nav-item sport px-3 py-1 position-relative">
                         <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
@@ -168,7 +181,7 @@
                             <ul class="dropdown-menu bg-prime border-0 rounded-0 fs-text p-0 m-0">
                                 <li><a class="dropdown-item py-2" href="football.html">បាល់ទាត់</a></li>
                                 <li><a class="dropdown-item py-2" href="running.html">រត់ប្រណាំង</a></li>
-                                <li><a class="dropdown-item py-2 active" href="basketball.html">បាល់បោះ</a></li>
+                                <li><a class="dropdown-item py-2" href="basketball.html">បាល់បោះ</a></li>
                                 <li><a class="dropdown-item py-2" href="cycling.html">ជិះកង់</a></li>
                                 <li><a class="dropdown-item py-2" href="volleyball.html">បាល់ទះ</a></li>
                                 <li><a class="dropdown-item py-2" href="karate.html">ការ៉ាតេ</a></li>
@@ -364,14 +377,14 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
                             <div class="card-img w-100" style="height: 250px;">
-                                <img src="https://cdn.pixabay.com/photo/2017/04/25/20/18/woman-2260736_1280.jpg"
-                                    alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
+                                <img src="https://cdn.pixabay.com/photo/2017/04/25/20/18/woman-2260736_1280.jpg" alt=""
+                                    class="img-fluid object-fit-cover w-100 h-100 card-img-top">
                             </div>
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-2">
                                     <p class="fs-6 text-main mb-0">ការហ្វឹកហាត់</p>
-                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn1"><i
-                                            class="bi bi-heart"></i></button>
+                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"
+                                        id="favoriteBtn1"><i class="bi bi-suit-heart"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 10%;">
                                         <div id="favoriteToast1" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -379,16 +392,17 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn1"><i
-                                            class="bi bi-bookmark"></i></button>
+                                    <button type="button" class="btn button-icon text-second p-0 ms-1"
+                                        id="addCartBtn1"><i class="bi bi-bookmark"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 22%;">
                                         <div id="cartToast1" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -396,8 +410,9 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
@@ -408,8 +423,8 @@
                                 <h5 class="card-title text-prime mb-2">១០ គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h5>
                                 <p class="card-text text-second fs-text mb-3">
                                     រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ</p>
-                                <span class="btn btn-gold d-block border-2">អានបន្ថែម <i
-                                        class="bi bi-arrow-right"></i></span>
+                                <a href="../pages/detail-blog.html" class="btn btn-gold d-block border-2">អានបន្ថែម <i
+                                        class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -423,8 +438,8 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-2">
                                     <p class="fs-6 text-main mb-0">អាហារ</p>
-                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn2"><i
-                                            class="bi bi-heart"></i></button>
+                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"
+                                        id="favoriteBtn2"><i class="bi bi-suit-heart"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 10%;">
                                         <div id="favoriteToast2" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -432,16 +447,17 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn2"><i
-                                            class="bi bi-bookmark"></i></button>
+                                    <button type="button" class="btn button-icon text-second p-0 ms-1"
+                                        id="addCartBtn2"><i class="bi bi-bookmark"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 22%;">
                                         <div id="cartToast2" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -449,8 +465,9 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
@@ -475,8 +492,8 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-2">
                                     <p class="fs-6 text-main mb-0">សុខភាពចិត្ត</p>
-                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn3"><i
-                                            class="bi bi-heart"></i></button>
+                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"
+                                        id="favoriteBtn3"><i class="bi bi-suit-heart"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 10%;">
                                         <div id="favoriteToast3" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -484,16 +501,17 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn3"><i
-                                            class="bi bi-bookmark"></i></button>
+                                    <button type="button" class="btn button-icon text-second p-0 ms-1"
+                                        id="addCartBtn3"><i class="bi bi-bookmark"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 22%;">
                                         <div id="cartToast3" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -501,8 +519,9 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
@@ -521,14 +540,14 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
                             <div class="card-img w-100" style="height: 250px;">
-                                <img src="https://cdn.pixabay.com/photo/2021/10/16/06/05/woman-6714008_1280.jpg"
-                                    alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
+                                <img src="https://cdn.pixabay.com/photo/2021/10/16/06/05/woman-6714008_1280.jpg" alt=""
+                                    class="img-fluid object-fit-cover w-100 h-100 card-img-top">
                             </div>
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-2">
                                     <p class="fs-6 text-main mb-0">ការហ្វឹកហាត់</p>
-                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn4"><i
-                                            class="bi bi-heart"></i></button>
+                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"
+                                        id="favoriteBtn4"><i class="bi bi-suit-heart"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 10%;">
                                         <div id="favoriteToast4" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -536,16 +555,17 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn4"><i
-                                            class="bi bi-bookmark"></i></button>
+                                    <button type="button" class="btn button-icon text-second p-0 ms-1"
+                                        id="addCartBtn4"><i class="bi bi-bookmark"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 22%;">
                                         <div id="cartToast4" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -553,8 +573,9 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
@@ -574,14 +595,14 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card border-0 w-100 bg-prime shadow-xs rounded-2 article-hover">
                             <div class="card-img w-100" style="height: 250px;">
-                                <img src="https://i.pinimg.com/1200x/c2/14/75/c214758ada9d732817c219451e11da3c.jpg" alt=""
-                                    class="img-fluid object-fit-cover w-100 h-100 card-img-top">
+                                <img src="https://i.pinimg.com/1200x/c2/14/75/c214758ada9d732817c219451e11da3c.jpg"
+                                    alt="" class="img-fluid object-fit-cover w-100 h-100 card-img-top">
                             </div>
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-2">
                                     <p class="fs-6 text-main mb-0">អាហារ</p>
-                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn5"><i
-                                            class="bi bi-heart"></i></button>
+                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"
+                                        id="favoriteBtn5"><i class="bi bi-suit-heart"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 10%;">
                                         <div id="favoriteToast5" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -589,16 +610,17 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn5"><i
-                                            class="bi bi-bookmark"></i></button>
+                                    <button type="button" class="btn button-icon text-second p-0 ms-1"
+                                        id="addCartBtn5"><i class="bi bi-bookmark"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 22%;">
                                         <div id="cartToast5" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -606,8 +628,9 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
@@ -632,8 +655,8 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-2">
                                     <p class="fs-6 text-main mb-0">សុខភាពចិត្ត</p>
-                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn6"><i
-                                            class="bi bi-heart"></i></button>
+                                    <button type="button" class="btn button-icon text-second ms-auto p-0 me-2"
+                                        id="favoriteBtn6"><i class="bi bi-suit-heart"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 10%;">
                                         <div id="favoriteToast6" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -641,16 +664,17 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានបញ្ចូលក្នុងបញ្ជីចំណូលចិត្តរបស់អ្នកហើយ!
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn button-icon text-second p-0 ms-1" id="addCartBtn6"><i
-                                            class="bi bi-bookmark"></i></button>
+                                    <button type="button" class="btn button-icon text-second p-0 ms-1"
+                                        id="addCartBtn6"><i class="bi bi-bookmark"></i></button>
                                     <div class="toast-container position-fixed end-0" style="top: 22%;">
                                         <div id="cartToast6" class="toast" role="alert" aria-live="assertive"
                                             aria-atomic="true">
@@ -658,8 +682,9 @@
                                                 <img src="../assets/img/logo2.png" class="rounded me-2 img-fluid"
                                                     style="width: 40px;" alt="...">
                                                 <small class="ms-auto">ឥឡូវនេះ</small>
-                                                <button type="button" class="btn button-icon p-0 ms-2" data-bs-dismiss="toast"
-                                                    aria-label="Close"><i class="bi bi-x-lg text-white"></i></button>
+                                                <button type="button" class="btn button-icon p-0 ms-2"
+                                                    data-bs-dismiss="toast" aria-label="Close"><i
+                                                        class="bi bi-x-lg text-white"></i></button>
                                             </div>
                                             <div class="toast-body text-prime bg-second">
                                                 អត្ថបទនេះត្រូវបានរក្សាទុកក្នុងបញ្ជីរបស់អ្នកហើយ!
@@ -668,7 +693,8 @@
                                     </div>
                                 </div>
                                 <h5 class="card-title text-prime mb-2">ការហាត់ប្រាណ, អាហារដែលជួយកីឡាករ</h5>
-                                <p class="card-text text-second fs-text mb-3">ស្វែងយល់កាន់តែច្បាស់អំពីអាហារដែលជួយកីឡាករ</p>
+                                <p class="card-text text-second fs-text mb-3">ស្វែងយល់កាន់តែច្បាស់អំពីអាហារដែលជួយកីឡាករ
+                                </p>
                                 <span class="btn btn-gold d-block border-2">អានបន្ថែម <i
                                         class="bi bi-arrow-right"></i></span>
                             </div>
@@ -681,7 +707,7 @@
 
 
     <!-- footer -->
-  <footer class="pt-5 bg-prime" data-aos="fade-right">
+    <footer class="pt-5 bg-prime" data-aos="fade-right">
         <section class="pb-4">
             <div class="container">
                 <div class="row g-3">
@@ -716,7 +742,8 @@
                                     class="nav-link text-second w-fit p-0 pb-2 fs-6">ការហ្វឹកហាត់</a></li>
                             <li class="nav-item"><a href="event.html"
                                     class="nav-link text-second w-fit p-0 pb-2 fs-6">ព្រឹត្តិការណ៏</a></li>
-                            <li class="nav-item"><a href="blog.html" class="nav-link text-second w-fit p-0 pb-2 fs-6 ">អត្ថបទ</a>
+                            <li class="nav-item"><a href="blog.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6 ">អត្ថបទ</a>
                             </li>
                         </ul>
                     </div>
@@ -727,7 +754,8 @@
                         <ul class="navbar-nav">
                             <li class="nav-item"><a href="about.html"
                                     class="nav-link text-second w-fit p-0 pb-2 fs-6">អំពីយើង</a></li>
-                            <li class="nav-item"><a href="faq.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
+                            <li class="nav-item"><a href="faq.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
                                     ចម្លើយ</a></li>
                             <li class="nav-item"><a href="activity.html"
                                     class="nav-link text-second w-fit p-0 pb-2 fs-6">សកម្មភាព</a></li>
