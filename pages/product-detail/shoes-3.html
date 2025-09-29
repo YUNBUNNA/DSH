@@ -522,6 +522,18 @@
   <script src="../../assets/plugins/aos/js/aos.js"></script>
   <!-- link js custom -->
   <script src="../../assets/js/main.js"></script>
+    <!-- Many Toast -->
+  <script>
+    function showToast(id) {
+      const toastEl = document.getElementById(id);
+      const toast = new bootstrap.Toast(toastEl, { delay: 1500, autohide: true }); // 2000ms = 2s
+      toast.show();
+    }
+
+    document.getElementById("favoriteBtn").addEventListener("click", () => showToast("favoriteToast"));
+    document.getElementById("addCartBtn").addEventListener("click", () => showToast("cartToast"));
+
+  </script>
 
 </body>
 
