@@ -204,7 +204,7 @@ body {
   color: var(--text-main) !important;
   background-color: var(--btn-second) !important;
 }
-.dropdown-item.active{
+.dropdown-item.active {
   color: var(--text-main) !important;
   background-color: var(--btn-second) !important;
 }
@@ -310,7 +310,6 @@ body {
   height: 200% !important;
   z-index: 1040 !important;
 }
-
 
 .nav .nav-link {
   transition: 0.4s ease;
@@ -609,31 +608,31 @@ body {
   .dm-lm {
     right: 16%;
   }
-   .size{
+  .size {
     padding: 0 20px;
   }
-  .title-banner{
+  .title-banner {
     font-size: 25px;
   }
-  .description-banner{
-     font-size: 18px;
+  .description-banner {
+    font-size: 18px;
   }
-  .text-btn{
+  .text-btn {
     font-size: 16px;
   }
-  .sign-up{
+  .sign-up {
     font-size: 15px !important;
   }
-  .sign-in{
-    font-size: 15px !important;
+  .sign-in {
+    font-size: 14px !important;
   }
-  .dsh-logo{
+  .dsh-logo {
     width: 60px;
   }
-  .second-section{
+  .second-section {
     padding-top: 4rem;
   }
-  .img-nutrition{
+  .img-nutrition {
     height: 400px;
   }
 }
@@ -658,22 +657,28 @@ body {
   .pri {
     font-size: 16px;
   }
+  .sign-up {
+    font-size: 18px !important;
+  }
+  .sign-in {
+    font-size: 17px !important;
+  }
   .first-section {
     padding-top: 4rem;
   }
   .dm-lm {
     right: 9%;
   }
-  .size{
+  .size {
     padding: 0 30px;
   }
-   .text-btn{
+  .text-btn {
     font-size: 22px;
   }
-  .dsh-logo{
+  .dsh-logo {
     width: 90px;
   }
-  .img-nutrition{
+  .img-nutrition {
     height: 400px;
   }
 }
@@ -688,7 +693,7 @@ body {
   .dm-lm {
     right: 6.2%;
   }
-   .img-nutrition{
+  .img-nutrition {
     height: 630px;
   }
 }
