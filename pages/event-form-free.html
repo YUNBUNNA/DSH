@@ -2,25 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- link bootstrap -->
-  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
-  <!-- link theme -->
-  <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
-  <!-- link icons -->
-  <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
-  <!-- link swiper -->
-  <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
-  <!-- link aos -->
-  <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
-  <!-- link css custom -->
-  <link rel="stylesheet" href="../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+    <!-- link theme -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css">
+    <!-- link icons -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+    <!-- link swiper -->
+    <link rel="stylesheet" href="../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+    <!-- link aos -->
+    <link rel="stylesheet" href="../assets/plugins/aos/css/aos.css">
+    <!-- link css custom -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        select.form-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+        }
+    </style>
 </head>
 
 <body class="bg-third">
-  <!-- header -->
+
+   <!-- header -->
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
       <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
@@ -66,7 +75,7 @@
           <div class="offcanvas-body p-0">
             <ul id="off" class="nav flex-column">
               <li class="nav-item py-1">
-                <a class="nav-link text-prime " href="homepage.html">ទំព័រដើម</a>
+                <a class="nav-link text-prime" href="homepage.html">ទំព័រដើម</a>
               </li>
 
               <!-- ផ្នែកកីឡា -->
@@ -107,10 +116,10 @@
                 <a class="nav-link" href="training.html">ការហ្វឹកហាត់</a>
               </li>
               <li class="nav-item py-1">
-                <a class="nav-link " href="shop.html">ទំនិញ</a>
+                <a class="nav-link" href="shop.html">ទំនិញ</a>
               </li>
               <li class="nav-item py-1">
-                <a class="nav-link" href="event.html">ព្រឹត្តិការណ៏</a>
+                <a class="nav-link active" href="event.html">ព្រឹត្តិការណ៏</a>
               </li>
 
               <!-- អត្ថបទ -->
@@ -153,7 +162,7 @@
         </div>
         <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
           <li class="nav-item ps-1 pe-3 py-1">
-            <a href="homepage.html" class="nav-link ">ទំព័រដើម</a>
+            <a href="homepage.html" class="nav-link">ទំព័រដើម</a>
           </li>
           <li class="nav-item sport px-3 py-1 position-relative">
             <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
@@ -174,10 +183,10 @@
             <a href="training.html" class="nav-link">ការហ្វឹកហាត់</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="shop.html" class="nav-link ">ទំនិញ</a>
+            <a href="shop.html" class="nav-link">ទំនិញ</a>
           </li>
           <li class="nav-item px-3 py-1">
-            <a href="event.html" class="nav-link">ព្រឹត្តិការណ៏</a>
+            <a href="event.html" class="nav-link active">ព្រឹត្តិការណ៏</a>
           </li>
           <li class="nav-item blog px-3 py-1 position-relative">
             <a class="nav-link" href="blog.html">អត្ថបទ</a>
@@ -337,187 +346,103 @@
       </div>
     </nav>
   </header>
-  <main>
-    <!-- Payment -->
-    <section class="first-section pb-2">
-      <div class="container">
-        <div class="row g-2">
-          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="300">
-            <div class="card shadow-xs border-0 bg-prime">
-              <div class="card-body px-4 text-prime">
-                <h3 class="text-main border-bottom pb-4 pt-1 mb-3 text-center">
-                  សរុបការទិញ
-                </h3>
-                <div class="d-flex justify-content-between pb-3 pt-1">
-                  <h6 class="fs-title">សរុបថ្លៃទំនិញ</h6>
-                  <h6 class="fw-bolder text-danger ff fs-text">US $24.45</h6>
-                </div>
-                <div class="d-flex justify-content-between pb-3 mb-3 border-bottom">
-                  <h6 class="fs-title">ដឹកជញ្ជូន</h6>
-                  <h6 class="fw-bolder text-danger ff fs-text">US $5.00</h6>
-                </div>
-                <div class="d-flex justify-content-between pb-3 pt-1">
-                  <h6 class="fs-title">សរុបទាំងអស់</h6>
-                  <h6 class="fw-bolder text-danger ff fs-text">US $29.45</h6>
-                </div>
-              </div>
+
+    <!-- main -->
+    <section class="bg-third first-section" data-aos="fade-right" data-aos-delay="500">
+        <div class="container shadow-xs rounded-3 p-4 bg-prime" style="max-width: 800px;">
+            <div class="form-header text-center">
+                <h2 class="fw-bold text-main">ការចុះឈ្មោះព្រឹត្តិការណ៍កីឡា</h2>
+                <p class="lead text-prime mt-4">សូមចុះឈ្មោះសម្រាប់ព្រឹត្តិការណ៍ប្រកួតកីឡាខាងមុខនេះ!</p>
             </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="card border-0 bg-prime shadow-xs">
-              <div class="card-body">
-                <h4 class="ff text-main mb-3">Checkout</h4>
-                <div class="d-flex gap-2 mb-3">
-                  <img src="../assets/img/aba-card.png" alt="" class="img-fluid" style="width: 120px;">
-                  <img src="../assets/img/ac-card.jpg" alt="" class="img-fluid" style="width: 120px;">
-                  <img src="../assets/img/master-card.png" alt="" class="img-fluid" style="width: 120px;">
-                </div>
-                <form action="">
-                  <div class="row g-3 mb-3">
-                    <div class="col-12">
-                      <label for="" class="form-label fs-nav">ឈ្មោះនៅលើកាត</label>
-                      <input type="text" name="" id="" class="form-control bg-prime ps-3" placeholder="ឈ្មោះនៅលើកាត">
-                    </div>
-                    <div class="col-12">
-                      <label for="" class="form-label fs-nav">លេខកាត</label>
-                      <input type="number" placeholder="0000 0000 0000 0000" name="" id=""
-                        class="form-control bg-prime ps-3 pe-2">
-                    </div>
-                    <div class="col-12">
-                      <div class="row g-3">
+
+            <form id="registration-form">
+                <!-- Personal Information Section -->
+                <div class="mb-3">
+                    <div class="row g-3">
                         <div class="col-md-6">
-                          <label for="" class="form-label fs-nav">កាលបរិច្ឆេទដកហូត</label>
-                          <input type="text" name="" id="" class="form-control bg-prime ps-3" placeholder="កាលបរិច្ឆេទ">
+                            <label for="firstName" class="form-label">ឈ្មោះពេញ</label>
+                            <input type="text" class="form-control ps-3 ff" id="firstName" placeholder="John Doe">
                         </div>
                         <div class="col-md-6">
-                          <label for="" class="form-label fs-nav">លេខកូដសុវត្ថិភាព</label>
-                          <input type="number" name="" id="" class="form-control bg-prime ps-3 ff pe-2"
-                            placeholder="CVC / CVV">
+                            <label for="lastName" class="form-label">តម្លៃ</label>
+                            <input type="text" class="form-control ps-3 ff bg-prime" id="lastName" value="$15" disabled>
                         </div>
-                      </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">អ៊ីម៉ែល</label>
+                            <input type="email" class="form-control ps-3 ff" id="email"
+                                placeholder="john.doe@example.com">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
+                            <input type="tel" class="form-control ps-3 ff" id="phone" placeholder="123-456-7890">
+                        </div>
                     </div>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <button type="button" data-bs-target="#success-pay-1" data-bs-toggle="modal"
-                      class="btn btn-gold m-0 px-4 fs-nav">ទូទាត់ប្រាក់</button>
-                  </div>
-                  <!-- Invoice Modal -->
-                  <div class="modal fade" id="invoiceModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content bg-prime">
-                        <div class="modal-header border-bottom px-5">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="../assets/img/logo2.png" alt="" style="width:70px; height:50px;"
-                              class="img-fluid object-fit-cover rounded-1">
-                          </div>
-                          <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="bi bi-x-lg fs-5 text-prime"></i>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="card border-0 bg-prime">
-                            <h4 class="text-main text-center">វិក្កយបត្រ</h4>
-                            <div class="card-body">
-                              <div class="d-flex justify-content-between mb-2">
-                                <h6 class="text-second">ឈ្មោះអ្នកទិញ:</h6>
-                                <h6 class="text-prime">លោក សុវណ្ណា</h6>
-                              </div>
-                              <div class="d-flex justify-content-between mb-2">
-                                <h6 class="text-second">ថ្ងៃលក់:</h6>
-                                <h6 class="text-prime"><span class="ff">21</span> តុលា <span class="ff">2025</span></h6>
-                              </div>
-                              <div class="d-flex justify-content-between mb-2">
-                                <h6 class="text-second">លេខទូរស័ព្ទ:</h6>
-                                <h6 class="text-prime ff">098765432</h6>
-                              </div>
-                              <div class="d-flex justify-content-between mb-2">
-                                <h6 class="text-second">វិធីទូទាត់:</h6>
-                                <h6 class="text-prime ff">ABA</h6>
-                              </div>
-                              <div class="d-flex justify-content-between mb-2">
-                                <h6 class="text-second">ឈ្មោះទំនិញ:</h6>
-                                <h6 class="text-prime">អាវកីឡា</h6>
-                              </div>
-                              <div class="d-flex justify-content-between mb-2">
-                                <h6 class="text-second">បរិមាណ:</h6>
-                                <h6 class="text-prime ff">3</h6>
-                              </div>
-                              <div class="d-flex justify-content-between mb-2">
-                                <h6 class="text-second">បញ្ចុះតម្លៃ:</h6>
-                                <h6 class="text-prime ff">10%</h6>
-                              </div>
-                              <div class="d-flex justify-content-between mb-2">
-                                <h6 class="text-second">តម្លៃសរុប:</h6>
-                                <h6 class="text-prime ff">$50</h6>
-                              </div>
-                            </div>
-                            <div class="d-flex justify-content-end gap-3">
-                              <button type="button" class="btn btn-gold px-5" data-bs-toggle="modal"
-                                data-bs-target="#success-save-1">រក្សាទុក</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                </div>
 
-                  <!-- Success Pay Modal -->
-                  <div class="modal fade" id="success-pay-1" tabindex="-1" aria-labelledby="success-print-label-1"
+                <!-- Event Selection Section -->
+                <div class="mb-3">
+                    <label for="eventSelect" class="form-label">ជ្រើសរើសព្រឹត្តិការណ៍របស់អ្នក</label>
+                    <div class="position-relative">
+                        <select class="form-select form-control ps-3 bg-prime text-prime">
+                            <option value="" disabled selected hidden>ជ្រើសរើសព្រឹត្តិការណ៍</option>
+                            <option>ការប្រកួតបាល់ទាត់</option>
+                            <option>ការប្រកួតបាល់ទះ</option>
+                            <option>ការប្រកួតវាយសី</option>
+                        </select>
+                        <i
+                            class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
+                    </div>
+                </div>
+
+                <!-- Waiver & Confirmation Section -->
+                <div class="form-check">
+                    <input class="form-check-input me-3" type="checkbox" id="waiverCheck">
+                    <label class="form-check-label text-prime" for="waiverCheck">
+                        ខ្ញុំយល់ព្រមនឹង <a href="#" data-bs-toggle="modal" data-bs-target="#waiverModal">លក្ខខណ្ឌ</a>
+                        និងការលើកលែងការទទួលខុសត្រូវ។
+                    </label>
+                </div>
+
+                <!-- Final Registration Button with Price -->
+                <div class="d-flex justify-content-end align-items-center">
+                    <button type="button" class="btn btn-gold" data-bs-toggle="modal"  data-bs-target="#success-edit-1">ចុះឈ្មោះឥឡូវនេះ</button>
+                </div>
+                <!-- Success Modal -->
+                <div class="modal fade" id="success-edit-1" tabindex="-1" aria-labelledby="success-delete-label-1"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content rounded-3 bg-prime">
-                        <div class="modal-header border-0 shadow-none d-flex justify-content-center align-items-center">
-                          <h4 class="text-main ms-auto mb-0">ការទូទាត់</h4>    
-                          <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="bi bi-x-lg fs-5 text-prime"></i>
-                          </button>
+                        <div class="modal-content rounded-3 bg-prime">
+                            <div class="modal-header border-0 shadow-none">
+                                <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card-body">
+                                    <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
+                                        style="width: 100px; height: 100px;"></i>
+                                    <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body text-center">
-                          <div class="card-body">
-                            <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                              style="width: 100px; height: 100px;"></i>
-                            <h5 class="text-prime mb-7">រួចរាល់</h5>
-                            <button type="button" data-bs-target="#invoiceModal" data-bs-toggle="modal"
-                              class="btn btn-gold w-100">មើលវិក្កយបត្រ</button>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
+                </div>
+            </form>
 
-                  <!-- Success save Modal -->
-                  <div class="modal fade" id="success-save-1" tabindex="-1" aria-labelledby="success-print-label-1"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content rounded-3 bg-prime">
-                        <div class="modal-header border-0 shadow-none">
-                          <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="bi bi-x-lg fs-5 text-prime"></i>
-                          </button>
-                        </div>
-                        <div class="modal-body text-center">
-                          <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                            style="width: 100px; height: 100px;"></i>
-                          <h5 class="text-prime mb-4">រួចរាល់</h5>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
-  </main>
+
+
+    <!-- link bootstrap js -->
+    <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+    <!-- link swiper js -->
+    <script src="../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+    <!-- link aos js -->
+    <script src="../assets/plugins/aos/js/aos.js"></script>
+    <!-- link js custom -->
+    <script src="../assets/js/main.js"></script>
 
 </body>
-<!-- link bootstrap js -->
-<script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-<!-- link aos js -->
-<script src="../assets/plugins/aos/js/aos.js"></script>
-<!-- link js custom -->
-<script src="../assets/js/main.js"></script>
 
 </html>
