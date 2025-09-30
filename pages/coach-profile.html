@@ -279,8 +279,8 @@
           <ul class="navbar-nav pe-3">
             <li class="nav-item admin position-relative">
               <a href="" class="nav-link">
-                <img src="../assets/img/sports/football-coach-1.jpg"
-                  class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+                <img src="../assets/img/sports/football-coach-1.jpg" class="img-fluid rounded-circle object-fit-cover"
+                  style="width: 30px; height: 30px;" alt="">
               </a>
               <div class="dropdown position-absolute shadow-xs" style="left: -125px;">
                 <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
@@ -289,7 +289,7 @@
                       <div class="d-flex align-items-end gap-3">
                         <img src="../assets/img/sports/football-coach-1.jpg"
                           class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;" alt="">
-                        <h6 class="fs-text text-prime">ម៉ុង  សុវណ្ណឆាយ</h6>
+                        <h6 class="fs-text text-prime">ម៉ុង សុវណ្ណឆាយ</h6>
                       </div>
                     </div>
                   </div>
@@ -699,7 +699,7 @@
                               </div>
                               <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
                                 <p class="m-0">មិនបានទទូលលេខកូដ?</p>
-                                <button class="btn m-0 p-0">
+                                <button class="btn m-0 p-0" disabled>
                                   <p class="text-main m-0">ព្យាយាមម្តងទៀតនៅ <span class="ff">59s</span></p>
                                 </button>
                               </div>
@@ -1074,7 +1074,7 @@
                               </div>
                               <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
                                 <p class="m-0">មិនបានទទូលលេខកូដ?</p>
-                                <button class="btn m-0 p-0">
+                                <button class="btn m-0 p-0" disabled>
                                   <p class="text-main m-0">ព្យាយាមម្តងទៀតនៅ <span class="ff">59s</span></p>
                                 </button>
                               </div>
@@ -1183,9 +1183,8 @@
                     <div class="card border-0 bg-second text-center">
                       <div class="d-flex justify-content-center pt-7">
                         <div class="position-relative" style="width: 150px; height: 150px;">
-                          <img
-                            src="../assets/img/sports/football-coach-1.jpg"
-                            alt="Profile Picture" class="img-fluid rounded-circle w-100 h-100 object-fit-cover">
+                          <img src="../assets/img/sports/football-coach-1.jpg" alt="Profile Picture"
+                            class="img-fluid rounded-circle w-100 h-100 object-fit-cover">
                           <ul class="navbar-nav">
                             <li class="nav-item blog px-3 py-1 position-relative">
                               <a type="button" data-bs-toggle="dropdown" aria-expanded="false"
@@ -1224,8 +1223,7 @@
                                     aria-label="Close"><i class="bi bi-x-lg text-prime fs-5"></i></button>
                                 </div>
                                 <div class="modal-body text-center">
-                                  <img
-                                    src="../assets/img/sports/football-coach-1.jpg"
+                                  <img src="../assets/img/sports/football-coach-1.jpg"
                                     class="img-fluid rounded object-fit-contain" alt="Profile Picture">
                                 </div>
                               </div>
@@ -1236,7 +1234,7 @@
                       <div class="card-body text-prime">
                         <h5 class="fw-bold mb-3">ម៉ុង សុវណ្ណឆាយ</h5>
                         <div class="d-flex ff text-second justify-content-center gap-3 mb-2">
-                          <h6>+855  96 784 567</h6>
+                          <h6>+855 96 784 567</h6>
                           <h6>|</h6>
                           <h6>@Mong Sovannchhay</h6>
                         </div>
@@ -1277,7 +1275,8 @@
                                     <div class="col-md-6">
                                       <label class="form-label">នាមខ្លួន</label>
                                       <div class="position-relative">
-                                        <input type="text" class="form-control bg-prime fs-text ps-7 f-c" value="សុវណ្ណឆាយ">
+                                        <input type="text" class="form-control bg-prime fs-text ps-7 f-c"
+                                          value="សុវណ្ណឆាយ">
                                         <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
                                       </div>
                                     </div>
@@ -1356,7 +1355,8 @@
                       <div class="col-md-6">
                         <label class="form-label">នាមត្រកូល</label>
                         <div class="position-relative">
-                          <input type="text" class="form-control bg-prime fs-text ps-7 f-c" placeholder="ម៉ុង " disabled>
+                          <input type="text" class="form-control bg-prime fs-text ps-7 f-c" placeholder="ម៉ុង "
+                            disabled>
                           <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
                         </div>
                       </div>
@@ -1523,6 +1523,50 @@
 
     document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
     document.getElementById("addCartBtn3").addEventListener("click", () => showToast("cartToast3"));
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const otpModals = [document.getElementById('otp-1'), document.getElementById('otp-2')];
+
+      otpModals.forEach(modal => {
+        const otpInputs = modal.querySelectorAll('.otp-input');
+
+        // Focus the first input when modal opens
+        modal.addEventListener('shown.bs.modal', () => {
+          otpInputs[0].focus();
+        });
+
+        otpInputs.forEach((input, index) => {
+          input.addEventListener('input', () => {
+            // Allow only digits
+            input.value = input.value.replace(/[^0-9]/g, '');
+
+            // Move to next input automatically
+            if (input.value && index < otpInputs.length - 1) {
+              otpInputs[index + 1].focus();
+            }
+          });
+
+          input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !input.value && index > 0) {
+              // Move back if empty and Backspace pressed
+              otpInputs[index - 1].focus();
+            }
+          });
+
+          // Allow pasting a full OTP
+          input.addEventListener('paste', (e) => {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, otpInputs.length);
+            pasteData.split('').forEach((num, i) => {
+              if (i < otpInputs.length) otpInputs[i].value = num;
+            });
+            const nextIndex = Math.min(pasteData.length, otpInputs.length - 1);
+            otpInputs[nextIndex].focus();
+          });
+        });
+      });
+    });
   </script>
 
 
