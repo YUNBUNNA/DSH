@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/jpg" href="../assets/img/brand.png">
+  <title style="font-family: Poppins;">Sign in | Admin</title>
   <!-- Load dotlottie-wc -->
   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
   <!-- link bootstrap -->
@@ -48,13 +49,13 @@
                 <form>
 
                   <div class="mb-3 position-relative">
-                    <label for="emaill" class="form-label fs-title">អ៊ីមែល</label>
+                    <label for="emaill" class="form-label fs-nav">អ៊ីមែល</label>
                     <input type="email" class="form-control bg-prime fs-text text-second ps-7" id="emaill"
                       placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក">
                     <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
                   </div>
                   <div class="mb-3 position-relative">
-                    <label for="pass" class="form-label fs-title">ពាក្យសម្ងាត់</label>
+                    <label for="pass" class="form-label fs-nav">ពាក្យសម្ងាត់</label>
                     <input type="password" class="form-control bg-prime fs-text text-second ps-7" id="pass"
                       placeholder="បញ្ចូលពាក្យសម្ងាត់">
                     <i class="bi bi-lock position-absolute text-gold icon-input"></i>
@@ -89,7 +90,7 @@
                                 <div class="col-lg-8 pb-2">
                                   <form id="forgotPasswordForm">
                                     <div class="mb-3 position-relative">
-                                      <label for="resetEmail" class="form-label fs-title text-prime">អ៊ីមែល</label>
+                                      <label for="resetEmail" class="form-label fs-nav text-prime">អ៊ីមែល</label>
                                       <input type="email" class="form-control bg-prime fs-text text-second ps-7"
                                         id="resetEmail" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក">
                                       <i class="bi bi-envelope position-absolute text-gold icon-input"></i>
@@ -143,7 +144,7 @@
 
                                     <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
                                       <p class="m-0">មិនបានទទូលលេខកូដ?</p>
-                                      <button class="btn m-0 p-0">
+                                      <button class="btn m-0 p-0 border-0" disabled>
                                         <p class="text-main m-0">ព្យាយាមម្តងទៀតនៅ <span class="ff">59s</span></p>
                                       </button>
                                     </div>
@@ -191,7 +192,7 @@
                                     <!-- ពាក្យសម្ងាត់ថ្មី -->
                                     <div class="mb-3 position-relative">
                                       <label for="newPassword"
-                                        class="form-label fs-title text-prime">ពាក្យសម្ងាត់ថ្មី</label>
+                                        class="form-label fs-nav text-prime">ពាក្យសម្ងាត់ថ្មី</label>
                                       <input type="password" class="form-control bg-prime fs-text text-second ps-7"
                                         id="newPassword" placeholder="បញ្ចូលពាក្យសម្ងាត់ថ្មី">
                                       <i class="bi bi-lock position-absolute text-gold icon-input"></i>
@@ -200,12 +201,12 @@
                                     <!-- បញ្ជាក់ពាក្យសម្ងាត់ថ្មី -->
                                     <div class="mb-3 position-relative">
                                       <label for="confirmPassword"
-                                        class="form-label fs-title text-prime">បញ្ជាក់ពាក្យសម្ងាត់</label>
+                                        class="form-label fs-nav text-prime">បញ្ជាក់ពាក្យសម្ងាត់</label>
                                       <input type="password" class="form-control bg-prime fs-text text-second ps-7"
                                         id="confirmPassword" placeholder="បញ្ជាក់ពាក្យសម្ងាត់">
                                       <i class="bi bi-shield-lock position-absolute text-gold icon-input"></i>
                                     </div>
-                                    <button type="submit" class="btn btn-gold w-100 fs-btn">
+                                    <button type="button" data-bs-dismiss="modal" class="btn btn-gold w-100 fs-btn">
                                       រក្សាទុកពាក្យសម្ងាត់
                                     </button>
                                   </form>
@@ -220,7 +221,7 @@
                     </div>
                   </div>
                   <a href="../pages/admin.html" type="button" class="btn btn-gold w-100 fs-btn">ចូលគណនី</a>
-                  <p class="fs-text text-center mt-3 text-prime">មិនមានគណនីទេ? <a href=""
+                  <p class="fs-text text-center mt-3 text-prime">មិនមានគណនីទេ? <a href="signup.html"
                       class="text-decoration-none text-main">ចុះឈ្មោះ</a></p>
                   <a href="../index.html" class="fs-text d-block text-center text-decoration-none text-second">
                     <i class="bi bi-arrow-left"></i> ត្រឡប់ទៅទំព័រដើម</a>
@@ -242,6 +243,47 @@
   <script src="../assets/plugins/aos/js/aos.js"></script>
   <!-- link js custom -->
   <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const otpInputs = document.querySelectorAll('.otp-input');
+      const otpModal = document.getElementById('otp');
+
+      // Focus the first input when modal opens
+      otpModal.addEventListener('shown.bs.modal', () => {
+        otpInputs[0].focus();
+      });
+
+      otpInputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+          // Allow only digits
+          input.value = input.value.replace(/[^0-9]/g, '');
+
+          // Move to next input automatically
+          if (input.value && index < otpInputs.length - 1) {
+            otpInputs[index + 1].focus();
+          }
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && !input.value && index > 0) {
+            // Move back if empty and Backspace pressed
+            otpInputs[index - 1].focus();
+          }
+        });
+
+        // Optional: allow pasting a full OTP
+        input.addEventListener('paste', (e) => {
+          e.preventDefault();
+          const pasteData = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, otpInputs.length);
+          pasteData.split('').forEach((num, i) => {
+            if (i < otpInputs.length) otpInputs[i].value = num;
+          });
+          const nextIndex = Math.min(pasteData.length, otpInputs.length - 1);
+          otpInputs[nextIndex].focus();
+        });
+      });
+    });
+  </script>
 
 </body>
 

@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculate BMI</title>
+   <link rel="icon" type="image/jpg" href="../assets/img/brand.png">
+  <title style="font-family: Poppins;">Calculate BMI</title>
   <!-- link bootstrap -->
   <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
   <!-- link theme -->
@@ -248,7 +249,7 @@
                 <div class="card border-0 border-bottom rounded-0 bg-transparent p-0">
                   <div class="card-body pb-0">
                     <div class="d-flex">
-                      <p class="text-prime fs-5">ការជូនដំណឺង</p>
+                      <p class="text-prime fs-5">ការជូនដំណឹង</p>
                       <i class="bi bi-three-dots text-prime fs-4 me-4 ms-auto"></i>
                       <i class="bi bi-search text-prime fs-5"></i>
                     </div>
@@ -340,7 +341,7 @@
 
   <main>
     <!-- BMI -->
-    <section class="bg-third first-section">
+    <section class="bg-third first-section pb-5">
       <div class="container">
         <h1 class="text-main fw-bold text-center mb-4 pt-2" data-aos="fade-right">ការគណនា <span class="ff">BMI</span></h1>
         <h4 class="text-second text-center mb-5" data-aos="fade-right">ពិនិត្យមើលសន្ទស្សន៍ម៉ាស់រាងកាយរបស់អ្នក <span class="ff">(Body Mass
@@ -384,7 +385,7 @@
                 <h2 class="text-main fw-bold text-center mb-3">លទ្ធផល <span class="ff">BMI</span></h2>
                 <h5 class="fw-normal text-second text-center mb-3">ការបកស្រាយលទ្ធផល និងការណែនាំ</h5>
                 <!-- BMI Input Message -->
-                <div class="collapse" id="bmi-input">
+                <div class="collapse show" id="bmi-input">
                   <div class="card border-0 d-flex flex-column justify-content-center align-items-center bg-prime"
                     style="min-height:200px;">
                     <i class="bi bi-calculator fs-1 text-main mb-3"></i>
@@ -396,7 +397,7 @@
                 </div>
 
                 <!-- BMI Result -->
-                <div class="collapse show" id="bmi-result" data-bs-parent="">
+                <div class="collapse" id="bmi-result" data-bs-parent="">
                   <div class="card-body">
                     <div class="bg-second rounded-3 p-2">
                       <h3 class="text-center text-prime">
@@ -427,6 +428,47 @@
 
           </div>
         </div>
+      </div>
+    </section>
+      <section class="bg-third pb-5" data-aos="fade-right">
+      <div class="container">
+        <h2 class="text-main fw-bold mb-3 text-center">តារាង <span class="ff">BMI</span></h2>
+        <h5 class="fw-normal text-second mb-4 text-center">ការចាត់ថ្នាក់ <span class="ff">BMI</span> តាមស្តង់ដារអន្តរជាតិ</h5>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime">
+              <div class="card-body text-center">
+                <h4 class="mb-3 text-warning"><i class="bi bi-graph-down-arrow me-2"></i>ខ្សោយ</h4>
+                <h5 class="ff text-second">BMI <i class="bi bi-chevron-left"></i> 18.5 </h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime">
+              <div class="card-body text-center">
+                <h4 class="mb-3 text-green"><i class="bi bi-suit-heart me-1"></i> ធម្មតា</h4>
+                <h5 class="ff text-second">18.5 - 24.9</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime">
+              <div class="card-body text-center">
+                <h4 class="mb-3 text-warning"><i class="bi bi-graph-up-arrow me-2"></i>លើសទម្ងន់</h4>
+                <h5 class="ff text-second">25.0 - 29.9</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-xs bg-prime">
+              <div class="card-body text-center">
+                <h4 class="mb-3 text-danger"><i class="bi bi-patch-exclamation me-2"></i>ធាត់</h4>
+                <h5 class="ff text-second">BMI <i class="bi bi-chevron-right"></i> 30 </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>

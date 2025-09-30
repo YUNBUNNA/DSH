@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ផ្ទាំងគ្រប់គ្រង</title>
+  <link rel="icon" type="image/jpg" href="../assets/img/brand.png" />
+  <title style="font-family: Poppins;">Profile | Admin</title>
   <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css" />
   <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/theme.css" />
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -699,7 +700,7 @@
                               </div>
                               <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
                                 <p class="m-0">មិនបានទទូលលេខកូដ?</p>
-                                <button class="btn m-0 p-0">
+                                <button class="btn m-0 p-0" disabled>
                                   <p class="text-main m-0">ព្យាយាមម្តងទៀតនៅ <span class="ff">59s</span></p>
                                 </button>
                               </div>
@@ -1074,7 +1075,7 @@
                               </div>
                               <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
                                 <p class="m-0">មិនបានទទូលលេខកូដ?</p>
-                                <button class="btn m-0 p-0">
+                                <button class="btn m-0 p-0" disabled>
                                   <p class="text-main m-0">ព្យាយាមម្តងទៀតនៅ <span class="ff">59s</span></p>
                                 </button>
                               </div>
@@ -1183,9 +1184,8 @@
                     <div class="card border-0 bg-second text-center">
                       <div class="d-flex justify-content-center pt-7">
                         <div class="position-relative" style="width: 150px; height: 150px;">
-                          <img
-                            src="../assets/img/profile-img/admin-profile.webp"
-                            alt="Profile Picture" class="img-fluid rounded-circle b-all p-2 w-100 h-100">
+                          <img src="../assets/img/profile-img/admin-profile.webp" alt="Profile Picture"
+                            class="img-fluid rounded-circle b-all p-2 w-100 h-100">
                           <ul class="navbar-nav">
                             <li class="nav-item blog px-3 py-1 position-relative">
                               <a type="button" data-bs-toggle="dropdown" aria-expanded="false"
@@ -1523,6 +1523,50 @@
 
     document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
     document.getElementById("addCartBtn3").addEventListener("click", () => showToast("cartToast3"));
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const otpModals = [document.getElementById('otp-1'), document.getElementById('otp-2')];
+
+      otpModals.forEach(modal => {
+        const otpInputs = modal.querySelectorAll('.otp-input');
+
+        // Focus the first input when modal opens
+        modal.addEventListener('shown.bs.modal', () => {
+          otpInputs[0].focus();
+        });
+
+        otpInputs.forEach((input, index) => {
+          input.addEventListener('input', () => {
+            // Allow only digits
+            input.value = input.value.replace(/[^0-9]/g, '');
+
+            // Move to next input automatically
+            if (input.value && index < otpInputs.length - 1) {
+              otpInputs[index + 1].focus();
+            }
+          });
+
+          input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !input.value && index > 0) {
+              // Move back if empty and Backspace pressed
+              otpInputs[index - 1].focus();
+            }
+          });
+
+          // Allow pasting a full OTP
+          input.addEventListener('paste', (e) => {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, otpInputs.length);
+            pasteData.split('').forEach((num, i) => {
+              if (i < otpInputs.length) otpInputs[i].value = num;
+            });
+            const nextIndex = Math.min(pasteData.length, otpInputs.length - 1);
+            otpInputs[nextIndex].focus();
+          });
+        });
+      });
+    });
   </script>
 
 

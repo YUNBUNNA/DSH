@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/jpg" href="../../../assets/img/brand.png">
+  <title style="font-family: Poppins;">Food | Lost Weight</title>
   <!-- link bootstrap -->
   <link rel="stylesheet" href="../../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
   <!-- link theme -->
@@ -348,7 +349,7 @@
   <!-- header -->
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
-      <div class="container-fluid d-none d-lg-flex bg-nav p-0">
+      <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
         <div class="container d-flex align-items-center justify-content-between">
           <a href="../../homepage.html" class="navbar-brand px-0">
             <img src="../../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
@@ -368,11 +369,11 @@
           </ul>
         </div>
       </div>
-      <div class="container d-flex justify-content-between text-prime">
+      <div class="container d-flex justify-content-between align-items-center pt-1 text-prime">
         <button
           class="navbar-toggler d-flex gap-3 align-items-center p-0 border-0 shadow-none d-block d-xl-none text-prime"
           type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation" data-aos="fade-down">
           <i class="bi bi-list fs-3"></i>
           <a href="">
             <img src="../../../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
@@ -391,7 +392,7 @@
           <div class="offcanvas-body p-0">
             <ul id="off" class="nav flex-column">
               <li class="nav-item py-1">
-                <a class="nav-link active text-prime" href="../../homepage.html">ទំព័រដើម</a>
+                <a class="nav-link text-prime " href="../../homepage.html">ទំព័រដើម</a>
               </li>
 
               <!-- ផ្នែកកីឡា -->
@@ -423,7 +424,7 @@
                     <a href="../../swimming.html" class="nav-link text-prime">ហែលទឹក</a>
                   </li>
                   <li class="nav-item py-1">
-                    <a href="../../badminton.html" class="nav-link text-prime">វាយសី</a>
+                    <a href="../../ badminton.html" class="nav-link text-prime active">វាយសី</a>
                   </li>
                 </ul>
               </li>
@@ -440,9 +441,8 @@
 
               <!-- អត្ថបទ -->
               <li class="nav-item py-1">
-                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse"
-                  href="../../blog.html" role="button" aria-expanded="false" aria-controls="blog">
-                  អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
+                <a href="../../blog.html" class="nav-link text-white d-flex align-items-center">
+                  អត្ថបទ
                 </a>
               </li>
 
@@ -477,9 +477,9 @@
             </ul>
           </div>
         </div>
-        <ul class="navbar-nav flex-row d-none d-xl-flex">
+        <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
           <li class="nav-item ps-1 pe-3 py-1">
-            <a href="../../homepage.html" class="nav-link">ទំព័រដើម</a>
+            <a href="../../homepage.html" class="nav-link ">ទំព័រដើម</a>
           </li>
           <li class="nav-item sport px-3 py-1 position-relative">
             <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
@@ -492,7 +492,7 @@
                 <li><a class="dropdown-item py-2" href="../../volleyball.html">បាល់ទះ</a></li>
                 <li><a class="dropdown-item py-2" href="../../karate.html">ការ៉ាតេ</a></li>
                 <li><a class="dropdown-item py-2" href="../../swimming.html">ហែលទឹក</a></li>
-                <li><a class="dropdown-item py-2" href="../../badminton.html">វាយសី</a></li>
+                <li><a class="dropdown-item py-2 " href="../../badminton.html">វាយសី</a></li>
               </ul>
             </div>
           </li>
@@ -527,7 +527,7 @@
                   <a class="dropdown-item py-2 d-block" href="../../activity.html">សកម្មភាព</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="../../nutrition.html">អាហារូបត្ថម្ភ</a>
+                  <a class="dropdown-item py-2 d-block active" href="../../nutrition.html">អាហារូបត្ថម្ភ</a>
                 </li>
                 <li>
                   <a class="dropdown-item py-2 d-block" href="../../FAQ.html">សំណួរ & ចម្លើយ</a>
@@ -536,7 +536,7 @@
             </div>
           </li>
         </ul>
-        <ul class="navbar-nav flex-row align-items-center gap-4">
+        <ul class="navbar-nav flex-row align-items-center gap-4" data-aos="fade-down">
           <li class="nav-item">
             <a class="main-btn text-prime" id="theme-toggle">
               <i class="theme-icon bi bi-sun fs-4"></i>
@@ -581,51 +581,45 @@
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../../allSports.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../../../assets/img/sport-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">កីឡា</small>
                       <p class="m-0 fw-bold">ការប្រកួតបាល់ទាត់នៅចុងសប្តាហ៍នេះ!</p>
                       <small class="ff text-second">15m</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../../shop.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../../../assets/img/discount-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">សម្លៀកបំពាក់</small>
                       <p class="m-0 fw-bold">បញ្ចុះតម្លៃ 30% លើអាវកីឡា!</p>
                       <small class="ff text-second">2h</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../../blog.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../../../assets/img/gym-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
-                      <small class="text-muted">អត្ថបទថ្មី</small>
+                      <small class="text-second">អត្ថបទថ្មី</small>
                       <p class="m-0 fw-bold">របៀបហាត់ប្រាណឲ្យមានប្រសិទ្ធភាព</p>
                       <small class="ff text-second">11h</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
               </ul>
@@ -633,22 +627,22 @@
           </li>
           <li class="nav-item d-block d-lg-none">
             <a href="../../user.html" class="nav-link">
-              <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+              <img src="../../../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                style="width: 30px; height: 30px;" alt="">
             </a>
           </li>
           <li class="nav-item profile position-relative d-none d-lg-block">
             <a href="#" class="nav-link">
-              <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+              <img src="../../../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                style="width: 30px; height: 30px;" alt="">
             </a>
             <div class="dropdown position-absolute shadow-xs" style="left: -90px;">
               <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
                 <div class="card border-0 border-bottom rounded-0 bg-prime p-0">
                   <div class="card-body bg-second">
                     <div class="d-flex align-items-end gap-3">
-                      <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                        class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;" alt="">
+                      <img src="../../../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                        style="width: 40px; height: 40px;" alt="">
                       <h6 class="fs-text text-prime">ឡាយ ចេមមី</h6>
                     </div>
                   </div>
@@ -669,7 +663,6 @@
       </div>
     </nav>
   </header>
-
   <main class="bg-third">
     <div class="hero-section mt-10">
       <div class="container">

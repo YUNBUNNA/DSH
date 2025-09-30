@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/jpg" href="../assets/img/brand.png">
+  <title style="font-family: Poppins;">Nutrition</title>
+  <!-- Load dotlottie-wc -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
   <!-- link bootstrap -->
   <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
   <!-- link theme -->
@@ -168,7 +171,7 @@
         </div>
         <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
           <li class="nav-item ps-1 pe-3 py-1">
-            <a href="homepage.html" class="nav-link active">ទំព័រដើម</a>
+            <a href="homepage.html" class="nav-link">ទំព័រដើម</a>
           </li>
           <li class="nav-item sport px-3 py-1 position-relative">
             <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
@@ -263,7 +266,7 @@
                 <div class="card border-0 border-bottom rounded-0 bg-transparent p-0">
                   <div class="card-body pb-0">
                     <div class="d-flex">
-                      <p class="text-prime fs-5">ការជូនដំណឺង</p>
+                      <p class="text-prime fs-5">ការជូនដំណឹង</p>
                       <i class="bi bi-three-dots text-prime fs-4 me-4 ms-auto"></i>
                       <i class="bi bi-search text-prime fs-5"></i>
                     </div>
@@ -356,34 +359,37 @@
   <main>
     <!-- Hero section -->
     <section class="first-section">
-      <div class="container-fluid p-0 position-relative">
+      <div class="container-fluid p-0 position-relative" data-aos="fade-right" data-aos-delay="400">
         <img src="../assets/img/banner-nutrition.jpg" alt="" class="img-fluid object-fit-cover w-100 img-nutrition">
         <div class="card-img-overlay bg-dark opacity-50"></div>
         <div class="position-absolute text-white top-50 start-50 translate-middle text-center w-100"
           style="z-index: 10;">
-          <h1 class="text-white fw-bold lh-base title-banner">អាហារូបត្ថម្ភល្អ ជាគន្លឹះនៃជីវិតមានសុខភាព</h1>
-          <h3 class="text-white lh-base mb-3 description-banner">ជ្រើសរើសម្ហូបសម្បូរបែប និងមានតុល្យភាព
+          <h1 class="text-white fw-bold lh-base title-banner" data-aos="fade-down" data-aos-delay="700">អាហារូបត្ថម្ភល្អ
+            ជាគន្លឹះនៃជីវិតមានសុខភាព</h1>
+          <h3 class="text-white lh-base mb-3 description-banner" data-aos="fade-down" data-aos-delay="600">
+            ជ្រើសរើសម្ហូបសម្បូរបែប និងមានតុល្យភាព
             ដើម្បីថែរក្សាកាយសម្បទា និងថាមពលប្រចាំថ្ងៃ
           </h3>
-          <a href="#nutrition"
-            class="btn btn-gold rounded-2 btn-lg w-fit h-fit text-nowrap px-5 py-2 text-btn">ចាប់ផ្តើម</a>
+          <a href="#nutrition" class="btn btn-gold rounded-2 btn-lg w-fit h-fit text-nowrap px-5 py-2 text-btn"
+            data-aos="fade-up" data-aos-delay="600">ចាប់ផ្តើម</a>
         </div>
       </div>
     </section>
     <!-- Food -->
-    <section id="nutrition" class="bg-third pb-5 pt-3">
-      <div class="container d-flex flex-column mt-5">
-        <h2 id="tab-title" class="text-center text-main mb-3">អាហារសម្រាប់</h2>
+    <section id="nutrition" class="bg-third py-5">
+      <div class="container d-flex flex-column">
+        <h2 id="tab-title" class="text-center text-main mb-4 fw-bold" data-aos="fade-right">អាហារសម្រាប់បង្កើនទម្ងន់
+        </h2>
         <ul class="nav nav-pills mb-3 mx-auto gap-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link link-hover active px-4" id="pills-food-1-tab" data-bs-toggle="pill"
               data-bs-target="#pills-food-1" type="button" role="tab" aria-controls="pills-food-1" aria-selected="true"
-              data-title="អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ">អាហារសម្រាប់បង្កើនទម្ងន់</button>
+              data-title="អាហារសម្រាប់បង្កើនទម្ងន់">អាហារសម្រាប់បង្កើនទម្ងន់</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link link-hover px-4" id="pills-food-2-tab" data-bs-toggle="pill"
               data-bs-target="#pills-food-2" type="button" role="tab" aria-controls="pills-food-2" aria-selected="true"
-              data-title="អាហារសម្រាប់អ្នកហាត់ប្រាណ">អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ </button>
+              data-title="អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ">អាហារសម្រាប់រក្សាសុខភាពជាទូទៅ </button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link link-hover px-4" id="pills-food-3-tab" data-bs-toggle="pill"
@@ -393,7 +399,7 @@
           <li class="nav-item" role="presentation">
             <button class="nav-link link-hover  px-4" id="pills-food-4-tab" data-bs-toggle="pill"
               data-bs-target="#pills-food-4" type="button" role="tab" aria-controls="pills-food-4" aria-selected="true"
-              data-title="អាហារសម្រាប់បង្កើនទម្ងន់">អាហារសម្រាប់អ្នកហាត់ប្រាណ</button>
+              data-title="អាហារសម្រាប់អ្នកហាត់ប្រាណ">អាហារសម្រាប់អ្នកហាត់ប្រាណ</button>
           </li>
         </ul>
 
@@ -404,8 +410,7 @@
               <div class="row g-4">
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-1.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-1.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
@@ -447,14 +452,14 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-1.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-1.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-2.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-2.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">ប៊ឺហ្គ័រសាច់គោនិងអាហ្វូខាដូ</h5>
@@ -496,14 +501,14 @@
                         <p class="card-text"><span class="ff">680</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">42g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-2.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-2.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-3.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-3.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">ខោលសាច់មាន់ជាមួយអង្ករដំណើប</h5>
@@ -545,14 +550,14 @@
                         <p class="card-text"><span class="ff">550</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">42g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-3.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-3.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-4.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-4.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់ Tuna និង Quinoa</h5>
@@ -594,14 +599,14 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-4.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-4.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-5.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-5.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">Pasta Alfredo ជាមួយបង្គា</h5>
@@ -643,7 +648,8 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-5.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-gain-weight/food-gain-5.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
@@ -655,8 +661,7 @@
               <div class="row g-4">
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-6.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-6.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">បាយសាច់មាន់</h5>
@@ -698,14 +703,14 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-health/food-health-1.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-1.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-7.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-7.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុន</h5>
@@ -747,18 +752,18 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-health/food-health-2.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-2.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-8.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-8.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">ចានកាណូវ៉ា
-បន្លែសុខភាព</h5>
+                          បន្លែសុខភាព</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn8"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -797,14 +802,14 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-health/food-health-3.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-3.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-9.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-9.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">ស៊ុបបន្លែ</h5>
@@ -846,14 +851,14 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-health/food-health-4.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-4.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-10.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-10.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
                         <h5 class="p-0 m-0 fw-bold text-prime">ឡាស៊ែនសណ្តែកបាយ</h5>
@@ -895,7 +900,8 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-health/food-health-5.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-health/food-health-5.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
@@ -907,11 +913,10 @@
               <div class="row g-4">
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-11.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-11.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ស៊ុបតោហ៊ូជាមួយបន្លែ</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn11"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -950,17 +955,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-1.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-1.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-12.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-12.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">អូម៉េឡេតបន្លែ</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn12"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -999,17 +1004,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-2.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-2.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-13.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-13.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់ត្រសក់និងត្រី</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn13"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -1048,17 +1053,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-3.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-3.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-14.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-14.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">អាកៃប៊ូល</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn14"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -1097,17 +1102,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-4.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-4.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-15.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-15.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ស៊ុបត្រសក់ និងខ្ទឹមបារាំង</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn15"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -1146,7 +1151,8 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-5.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-lost-weight/food-lost-5.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
@@ -1158,11 +1164,10 @@
               <div class="row g-4">
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-16.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-16.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ដំឡូងបារាំងចំហុយជាមួយសាច់មាន់</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn16"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -1201,17 +1206,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-sport/food-sport-1.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-1.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-17.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-17.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">មាន់អាំង</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn17"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -1250,17 +1255,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-sport/food-sport-2.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-2.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-18.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-18.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">បង្គាឆាបន្លែ</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn18"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -1299,17 +1304,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-sport/food-sport-3.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-3.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-19.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-19.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">ឆាសាច់គោស្រាស់ជាមួយខាត់ណា</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn19"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -1348,17 +1353,17 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-sport/food-sport-4.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-4.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="card bg-prime shadow-xs border-0">
-                    <img src="../assets/img/food-detail/food-20.jpg"
-                      class="img-fluid card-img-top" alt="" />
+                    <img src="../assets/img/food-detail/food-20.jpg" class="img-fluid card-img-top" alt="" />
                     <div class="card-body">
                       <div class="d-flex align-items-center mb-3">
-                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់សាលម៉ុនមេឌីទែរ៉ាណេ</h5>
+                        <h5 class="p-0 m-0 fw-bold text-prime">សាឡាត់គីនវ៉ា</h5>
                         <button type="button" class="btn button-icon text-second ms-auto p-0 me-2" id="favoriteBtn20"><i
                             class="bi bi-suit-heart"></i></button>
                         <div class="toast-container position-fixed end-0" style="top: 10%;">
@@ -1397,12 +1402,35 @@
                         <p class="card-text"><span class="ff">420</span> កាឡូរី</p>
                         <p class="card-text"><span class="ff">30g</span> ប្រូតេអ៊ីន</p>
                       </div>
-                      <a href="../pages/food-detail/food-for-sport/food-sport-5.html" class="btn btn-gold w-100">មើលរូបមន្ត</a>
+                      <a href="../pages/food-detail/food-for-sport/food-sport-5.html"
+                        class="btn btn-gold w-100">មើលរូបមន្ត</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculate Calories -->
+    <section class="bg-third py-5">
+      <div class="container">
+        <h1 class="text-center text-main mb-5 fw-bold" data-aos="fade-right" data-aos-delay="200">គណនាកាឡូរី</h1>
+        <div class="card bg-prime d-flex flex-column flex-lg-row align-items-center border-0 shadow-xs"
+          data-aos="fade-up" data-aos-delay="600">
+          <!-- Lottie Animation -->
+          <dotlottie-wc src="../assets/img/Food Choice.json" style="width: 350px; height: 300px" loop autoplay speed="1"
+            mode="forward">
+          </dotlottie-wc>
+          <div class="card-body">
+            <h3 class="text-main mb-3 text-center">
+              <i class="bi bi-calculator-fill me-2"></i> បញ្ចូលព័ត៌មានអាហាររបស់អ្នក ដើម្បីគណនាបរិមាណកាឡូរី
+            </h3>
+            <p class="text-second mb-3 fs-5 text-center"> ការគ្រប់គ្រងកាឡូរីជួយអ្នកក្នុងការថែរក្សាទម្ងន់
+              ដើម្បីឆ្ពោះទៅកាន់គោលដៅហាត់ប្រាណ និងសុខភាពរបស់អ្នក។</p>
+            <a href="../pages/calculate-calories.html" class="btn btn-gold px-5 d-block w-fit mx-auto">ចាប់ផ្តើមគណនា</a>
           </div>
         </div>
       </div>
@@ -1562,6 +1590,18 @@
     document.getElementById("favoriteBtn20").addEventListener("click", () => showToast("favoriteToast20"));
     document.getElementById("addCartBtn20").addEventListener("click", () => showToast("cartToast20"));
 
+  </script>
+  <!-- Tab / Product -->
+  <script>
+    const tabTitle = document.getElementById("tab-title");
+    const tabButtons = document.querySelectorAll("#pills-tab button");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("shown.bs.tab", (e) => {
+        // Update the H1 to the data-title of the active tab
+        tabTitle.textContent = e.target.getAttribute("data-title");
+      });
+    });
   </script>
 
 </body>

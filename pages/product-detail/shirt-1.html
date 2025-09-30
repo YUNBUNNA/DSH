@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/jpg" href="../../assets/img/brand.png">
+  <title style="font-family: Poppins;">Shop | Shirts</title>
   <!-- link bootstrap -->
   <link rel="stylesheet" href="../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
   <!-- link theme -->
@@ -28,6 +29,25 @@
     .toast.show {
       opacity: 1;
       transform: translateX(0);
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Active (checked) style */
+    .btn-check:checked+.btn {
+      background-color: #58a8e6 !important;
+      color: #fff !important;
+      border: none;
+      margin: 0;
+    }
+
+    .bg-hover:hover {
+      background-color: #58a8e6 !important;
+      color: #fff !important;
     }
   </style>
 </head>
@@ -241,7 +261,7 @@
             </a>
           </li>
           <li class="nav-item d-block d-lg-none">
-             <a href="../notification-page.html" class="nav-link position-relative">
+            <a href="../notification-page.html" class="nav-link position-relative">
               <i class="bi bi-bell text-prime fs-4"></i>
               <span class="position-absolute bg-danger border-0 rounded-circle start-50"
                 style="width: 15px; height: 15px">
@@ -272,9 +292,8 @@
                   <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../allSports.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="../../assets/img/sport-poster.jpg"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../assets/img/sport-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">កីឡា</small>
@@ -287,9 +306,8 @@
                   <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../shop.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="../../assets/img/discount-poster.jpg"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../assets/img/discount-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">សម្លៀកបំពាក់</small>
@@ -302,9 +320,8 @@
                   <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="../blog.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="../../assets/img/gym-poster.jpg"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../../assets/img/gym-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-muted">អត្ថបទថ្មី</small>
@@ -317,7 +334,7 @@
             </div>
           </li>
           <li class="nav-item d-block d-lg-none">
-              <a href="../user.html" class="nav-link">
+            <a href="../user.html" class="nav-link">
               <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
                 class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
             </a>
@@ -339,12 +356,13 @@
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item py-2 d-block m-0" href="../user.html"><i
-                      class="bi bi-person me-1"></i> គណនី</a>
+                  <a class="dropdown-item py-2 d-block m-0" href="../user.html"><i class="bi bi-person me-1"></i>
+                    គណនី</a>
                 </li>
                 <li>
-                  <a class="dropdown-item py-2 d-block" href="../../index.html"><i class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
-                  <span class="ms-7 opacity-0">a</span></a>
+                  <a class="dropdown-item py-2 d-block" href="../../index.html"><i
+                      class="bi bi-box-arrow-right me-2"></i>ចាកចេញ
+                    <span class="ms-7 opacity-0">a</span></a>
                 </li>
               </ul>
             </div>
@@ -404,24 +422,42 @@
                   <del class="fw-normal text-second">US $13.59</del>
                 </h5>
                 <h5 class="mt-3" data-aos="fade-right">ទំហំ</h5>
-                <div class="d-flex gap-3 text-dark ff" data-aos="fade-right" data-aos-delay="300">
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">S</p>
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">M</p>
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">L</p>
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">XL</p>
-                  <p class="bg-second text-prime size py-1 rounded-1 fs-text">XLL</p>
+                <div class="d-flex gap-3 text-prime ff mb-3" data-aos="fade-right" data-aos-delay="300">
+                  <input type="radio" class="btn-check" name="size" id="size-s" autocomplete="off">
+                  <label class="bg-second bg-hover text-prime size py-1 rounded-1 fs-text btn" for="size-s">S</label>
+
+                  <input type="radio" class="btn-check" name="size" id="size-m" autocomplete="off">
+                  <label class="bg-second bg-hover text-prime size py-1 rounded-1 fs-text btn" for="size-m">M</label>
+
+                  <input type="radio" class="btn-check" name="size" id="size-l" autocomplete="off">
+                  <label class="bg-second bg-hover text-prime size py-1 rounded-1 fs-text btn" for="size-l">L</label>
+
+                  <input type="radio" class="btn-check" name="size" id="size-xl" autocomplete="off">
+                  <label class="bg-second bg-hover text-prime size py-1 rounded-1 fs-text btn" for="size-xl">XL</label>
+
+                  <input type="radio" class="btn-check" name="size" id="size-xll" autocomplete="off">
+                  <label class="bg-second bg-hover text-prime size py-1 rounded-1 fs-text btn"
+                    for="size-xll">XLL</label>
                 </div>
+
                 <h5 data-aos="fade-right">បរិមាណ</h5>
                 <div class="d-flex gap-2" data-aos="fade-right" data-aos-delay="300">
-                  <button class="border-0 bg-second text-prime rounded-1 px-3 py-1"><i
-                      class="bi bi-dash fs-5"></i></button>
-                  <button class="border-0 bg-second text-prime rounded-1 px-4 py-1">1</button>
-                  <button class="border-0 bg-second text-prime rounded-1 px-3 py-1"><i
-                      class="bi bi-plus fs-5"></i></button>
+                  <button type="button" class="border-0 bg-second text-prime rounded-1 px-3 py-1"
+                    onclick="document.getElementById('number').stepDown()">
+                    <i class="bi bi-dash fs-5"></i>
+                  </button>
+
+                  <input type="number" id="number" name="numberInput" required min="1" max="50" value="1"
+                    class="border-0 bg-second text-center ff m-0">
+
+                  <button class="border-0 bg-second text-prime rounded-1 px-3 py-1" type="button"
+                    onclick="document.getElementById('number').stepUp()" aria-label="Increase quantity">
+                    <i class="bi bi-plus fs-5"></i>
+                  </button>
                 </div>
                 <div class="d-flex mt-3 gap-2">
-                  <button type="button" class="btn btn-gold w-75 fs-text fw-medium"
-                    id="addCartBtn" data-aos="fade-right" data-aos-delay="300">ដាក់ចូលកន្ត្រក</button>
+                  <button type="button" class="btn btn-gold w-75 fs-text fw-medium" id="addCartBtn"
+                    data-aos="fade-right" data-aos-delay="300">ដាក់ចូលកន្ត្រក</button>
                   <div class="toast-container position-fixed end-0" style="top: 10%;">
                     <div id="cartToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                       <div class="toast-header d-flex py-0 bg-nav text-white border-0">
@@ -436,8 +472,8 @@
                       </div>
                     </div>
                   </div>
-                  <button type="button" class="bg-second text-prime border-0 rounded-2 py-1 px-3" id="favoriteBtn" data-aos="fade-right"><i
-                      class="bi bi-heart"></i></button>
+                  <button type="button" class="bg-second text-prime border-0 rounded-2 py-1 px-3" id="favoriteBtn"
+                    data-aos="fade-right"><i class="bi bi-suit-heart text-second"></i></button>
                   <div class="toast-container position-fixed end-0" style="top: 22%;">
                     <div id="favoriteToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                       <div class="toast-header d-flex py-0 bg-nav text-white border-0">
@@ -515,129 +551,6 @@
   </main>
 
 
-  <!-- footer -->
-    <footer class="pt-5 bg-main">
-        <section class="pb-4">
-            <div class="container">
-                <div class="row g-3">
-                    <div class="col-lg-4">
-                        <h5 class="fw-bold mb-3">
-                            DSH
-                        </h5>
-                        <p class="fs-6 text-muted m-0 mb-3">
-                            DSH ផ្តល់មាតិកាអំពីកីឡា និងសុខភាពដោយផ្អែកលើចំណេះដឹង និងបទពិសោធន៍។
-                            យើងសហការជាមួយគ្រូបង្វឹក វេជ្ជបណ្ឌិត និងអ្នកជំនាញវិទ្យាសាស្រ្តកីឡា
-                            ដើម្បីផ្ដល់ដំបូន្មានឆ្លាតវៃ
-                            និងអាចអនុវត្តបាន។ DSH គាំទ្រអ្នកក្នុងការកែលម្អសមត្ថភាព សុវត្ថិភាព និងសុខភាពទូទៅ។
-                        </p>
-                        <h5 class="fw-bold mb-3">
-                            Social Media
-                        </h5>
-                        <a href="" class="text-decoration-none">
-                            <i class="bi bi-facebook me-2 text-primary fs-4"></i>
-                        </a>
-                        <a href="" class="text-decoration-none">
-                            <i class="bi bi-twitter-x me-2 text-primary fs-4"></i>
-                        </a>
-                        <a href="" class="text-decoration-none">
-                            <i class="bi bi-linkedin me-2 text-primary fs-4"></i>
-                        </a>
-                        <a href="" class="text-decoration-none">
-                            <i class="bi bi-instagram me-2 text-primary fs-4"></i>
-                        </a>
-                        <a href="" class="text-decoration-none">
-                            <i class="bi bi-telegram me-2 text-primary fs-4"></i>
-                        </a>
-                    </div>
-                    <div class="col-1"></div>
-                    <div class="col-lg-2">
-                        <h6 class="fw-bold mb-3">DSH</h6>
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a href="../homepage.html" class="nav-link w-fit p-0 pb-2 text-muted fs-6">ទំព័រដើម</a>
-                            </li>
-                            <li class="nav-item"><a href="../allSports.html"
-                                    class="nav-link w-fit p-0 pb-2 text-muted fs-6">ផ្នែកកីឡា</a>
-                            </li>
-                            <li class="nav-item"><a href="../training.html"
-                                    class="nav-link w-fit p-0 pb-2 text-muted fs-6">ការហ្វឹកហាត់</a>
-                            </li>
-                            <li class="nav-item"><a href="../event.html"
-                                    class="nav-link w-fit p-0 pb-2 text-muted fs-6">ព្រឹត្តិការណ៏</a>
-                            </li>
-                            <li class="nav-item"><a href="../blog.html" class="nav-link w-fit p-0 pb-2 text-muted fs-6">អត្ថបទ </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2">
-                        <h6 class="fw-bold mb-3">Support</h6>
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a href="../about.html" class="nav-link w-fit p-0 pb-2 text-muted fs-6">អំពីយើង</a>
-                            </li>
-                            <li class="nav-item"><a href="../contect.html"
-                                    class="nav-link w-fit p-0 pb-2 text-muted fs-6">ទំនាក់ទំនង</a></li>
-                            <li class="nav-item"><a href="../FAQ.html" class="nav-link w-fit p-0 pb-2 text-muted fs-6">សំណួរ​ &
-                                    ចម្លើយ</a>
-                            </li>
-                            <li class="nav-item"><a href="../activity.html" class="nav-link w-fit p-0 pb-2 text-muted fs-6">សកម្មភាព</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h6 class="fw-bold mb-3">Get in touch</h6>
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a href="../contect.html" class="nav-link pe-none p-0 pb-2 text-muted fs-6">339
-                                    McDermott
-                                    Points
-                                    Hettingerhaven, NV 15283</a></li>
-                            <li class="nav-item"><a href="../contect.html" class="nav-link pe-none p-0 pb-2 text-muted fs-6">Email:
-                                    support@dsh.com</a>
-                            </li>
-                            <li class="nav-item ff"><a href="../contect.html" class="nav-link pe-none p-0 pb-2 text-muted fs-6">Phone:
-                                    000
-                                    123 456
-                                    789</a></li>
-                            <li class="nav-item d-flex gap-2">
-                                <a href="" class="p-0 pb-2 text-muted fs-6">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
-                                        alt="App Store" class="img-fluid download">
-                                </a>
-                                <a href="" class="p-0 pb-2 text-muted fs-6">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png"
-                                        alt="Google Play" class="img-fluid download">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container ff" style="border-top: 1px solid lightgray;">
-                <div class="row g-0">
-                    <div class="col-md-6 col-lg-2 w-content">
-                        <p class="text-second m-2 fs-6">© 2023 DSH-UI</p>
-                    </div>
-                    <div class="col-md-6 col-lg-2 w-content">
-                        <p class="text-second m-2 fs-6">Privacy Policy</p>
-                    </div>
-                    <div class="col-md-6 col-lg-2 w-content">
-                        <p class="text-second m-2 fs-6">Cookie Notice</p>
-                    </div>
-                    <div class="col-md-6 col-lg-2 w-content">
-                        <p class="text-second m-2 fs-6">Do Not Sell My Personal Information</p>
-                    </div>
-                    <div class="col-md-6 col-lg-2 w-content">
-                        <p class="text-second m-2 fs-6">Terms of Use</p>
-                    </div>
-                    <div class="col-md-6 col-lg-2 w-content ms-lg-auto">
-                        <p class="text-second m-2 fs-6"><i class="bi bi-globe"></i> Language <i
-                                class="bi bi-chevron-down"></i></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </footer>
-
   <!-- link bootstrap js -->
   <script src="../../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
   <!-- link swiper js -->
@@ -646,6 +559,18 @@
   <script src="../../assets/plugins/aos/js/aos.js"></script>
   <!-- link js custom -->
   <script src="../../assets/js/main.js"></script>
+  <!-- Many Toast -->
+  <script>
+    function showToast(id) {
+      const toastEl = document.getElementById(id);
+      const toast = new bootstrap.Toast(toastEl, { delay: 1500, autohide: true }); // 2000ms = 2s
+      toast.show();
+    }
+
+    document.getElementById("favoriteBtn").addEventListener("click", () => showToast("favoriteToast"));
+    document.getElementById("addCartBtn").addEventListener("click", () => showToast("cartToast"));
+
+  </script>
 
 </body>
 

@@ -203,16 +203,3 @@ window.addEventListener("scroll", function () {
     topbar.classList.remove("hide");
   }
 });
-
-// Add to Cart
-document.getElementById("addCartBtn").addEventListener("click", () => {
-  const toast = new bootstrap.Toast(document.getElementById("cartToast"));
-  toast.show();
-});
-
-// Add to Favorites
-document.getElementById("favoriteBtn").addEventListener("click", () => {
-  const toast = new bootstrap.Toast(document.getElementById("favoriteToast"));
-  toast.show();
-});
-
