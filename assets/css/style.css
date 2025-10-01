@@ -681,6 +681,9 @@ body {
   .img-nutrition {
     height: 400px;
   }
+  .second-section{
+    padding-top: 5rem;
+  }
 }
 
 @media screen and (min-width: 976px) {
@@ -695,5 +698,8 @@ body {
   }
   .img-nutrition {
     height: 630px;
+  }
+  .second-section{
+    padding-top: 3rem;
   }
 }
