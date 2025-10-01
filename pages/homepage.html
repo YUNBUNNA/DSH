@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/jpg" href="../assets/img/brand.png">
+  <title style="font-family: Poppins;">Homepage</title>
   <!-- Load dotlottie-wc -->
   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
   <!-- link bootstrap -->
@@ -46,36 +47,43 @@
       transform: translateX(0);
     }
 
-       /* Override modal dialog to appear on right-bottom */
+    /* Override modal dialog to appear on right-bottom */
     .modal-dialog-right {
-        position: fixed;
-        bottom: 50px;
-        right: 20px;
-        margin: 0;
-        max-width: 350px;
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease-out;
+      position: fixed;
+      bottom: 50px;
+      right: 20px;
+      margin: 0;
+      max-width: 350px;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-out;
     }
 
     /* Slide in from right */
     .modal.fade .modal-dialog-right {
-        transform: translateX(100%);
+      transform: translateX(100%);
     }
 
     .modal.fade.show .modal-dialog-right {
-        transform: translateX(0);
+      transform: translateX(0);
     }
 
     /* Optional rounded content */
     .modal-content {
-        border-radius: 15px;
-        overflow: hidden;
+      border-radius: 15px;
+      overflow: hidden;
     }
 
     /* Optional chat body scroll */
     .modal-body {
-        padding: 0.75rem;
+      padding: 0.75rem;
+    }
+
+    /* remove input border and outline  */
+    .form-control {
+      outline: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
     }
   </style>
 </head>
@@ -829,8 +837,8 @@
                 <h5 class="card-title text-prime mb-2" data-aos="fade-right">១០ គន្លឹះហ្វឹកហាត់សម្រាប់អ្នកចាប់ផ្តើម</h5>
                 <p class="card-text text-second fs-text mb-3" data-aos="fade-right">
                   រៀនពីវិធីចាប់ផ្តើមដំណើរហ្វឹកហាត់ដោយត្រឹមត្រូវ</p>
-                <a href="../pages/detail-blog.html" class="btn btn-gold d-block border-2" data-aos="fade-right">អានបន្ថែម <i
-                    class="bi bi-arrow-right"></i></a>
+                <a href="../pages/detail-blog.html" class="btn btn-gold d-block border-2"
+                  data-aos="fade-right">អានបន្ថែម <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -880,8 +888,8 @@
                 <h5 class="card-title text-prime mb-2" data-aos="fade-right">អាហារសុខភាពសម្រាប់អ្នកកីឡា</h5>
                 <p class="card-text text-second fs-text mb-3" data-aos="fade-right">
                   ផែនការអាហារដើម្បីបង្កើនការអនុវត្តកីឡា</p>
-                <a href="../pages/detail-blog.html" class="btn btn-gold d-block border-2" data-aos="fade-right">អានបន្ថែម <i
-                    class="bi bi-arrow-right"></i></a>
+                <a href="../pages/detail-blog.html" class="btn btn-gold d-block border-2"
+                  data-aos="fade-right">អានបន្ថែម <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -932,8 +940,8 @@
                 <h5 class="card-title text-prime mb-2" data-aos="fade-right">ការគ្រប់គ្រងកង្វល់ តាមរយៈកីឡា</h5>
                 <p class="card-text text-second fs-text mb-3" data-aos="fade-right">របៀបប្រើកីឡាដើម្បីកាត់បន្ថយកង្វល់
                 </p>
-                <a href="../pages/detail-blog.html" class="btn btn-gold d-block border-2" data-aos="fade-right">អានបន្ថែម <i
-                    class="bi bi-arrow-right"></i></a>
+                <a href="../pages/detail-blog.html" class="btn btn-gold d-block border-2"
+                  data-aos="fade-right">អានបន្ថែម <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>

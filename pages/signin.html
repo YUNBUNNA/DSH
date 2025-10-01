@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/jpg" href="../assets/img/brand.png">
+  <title style="font-family: Poppins;">Sign in | Member</title>
   <!-- Load dotlottie-wc -->
   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
   <!-- link bootstrap -->
@@ -143,7 +144,7 @@
 
                                     <div class="d-flex justify-content-center text-second gap-2 mb-4 ">
                                       <p class="m-0">មិនបានទទូលលេខកូដ?</p>
-                                      <button class="btn m-0 p-0">
+                                      <button class="btn m-0 p-0 border-0" disabled>
                                         <p class="text-main m-0">ព្យាយាមម្តងទៀតនៅ <span class="ff">59s</span></p>
                                       </button>
                                     </div>
@@ -242,6 +243,48 @@
   <script src="../assets/plugins/aos/js/aos.js"></script>
   <!-- link js custom -->
   <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const otpInputs = document.querySelectorAll('.otp-input');
+      const otpModal = document.getElementById('otp');
+
+      // Focus the first input when modal opens
+      otpModal.addEventListener('shown.bs.modal', () => {
+        otpInputs[0].focus();
+      });
+
+      otpInputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+          // Allow only digits
+          input.value = input.value.replace(/[^0-9]/g, '');
+
+          // Move to next input automatically
+          if (input.value && index < otpInputs.length - 1) {
+            otpInputs[index + 1].focus();
+          }
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && !input.value && index > 0) {
+            // Move back if empty and Backspace pressed
+            otpInputs[index - 1].focus();
+          }
+        });
+
+        // Optional: allow pasting a full OTP
+        input.addEventListener('paste', (e) => {
+          e.preventDefault();
+          const pasteData = e.clipboardData.getData('text').replace(/\D/g, '').slice(0, otpInputs.length);
+          pasteData.split('').forEach((num, i) => {
+            if (i < otpInputs.length) otpInputs[i].value = num;
+          });
+          const nextIndex = Math.min(pasteData.length, otpInputs.length - 1);
+          otpInputs[nextIndex].focus();
+        });
+      });
+    });
+  </script>
+
 
 </body>
 
