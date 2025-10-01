@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="../assets/img/sports-logo/running.png" />
     <title>Running Training</title>
     <!-- link bootstrap -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
@@ -227,6 +228,14 @@
     /* Optional chat body scroll */
     .modal-body {
         padding: 0.75rem;
+    }
+
+    /* remove input border and outline  */
+    .form-control {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: transparent !important;
+
     }
 </style>
 
@@ -572,9 +581,10 @@
                                     និងបច្ចេកទេសរត់របស់ពួកគេជាមួយការបង្វឹករបស់យើង
                                 </p>
                                 <div class="fade-in-up ">
-                                    <a href="#pricing" class="btn btn-gold  btn-lg me-3" data-aos="fade-right" data-aos-delay="600">ចាប់ផ្តើម</a>
-                                    <a href="#rules"
-                                        class="btn btn-lg border-2 border-blue text-prime" data-aos="fade-right" data-aos-delay="700">ស្វែងយល់បន្ថែម</a>
+                                    <a href="#pricing" class="btn btn-gold  btn-lg me-3" data-aos="fade-right"
+                                        data-aos-delay="600">ចាប់ផ្តើម</a>
+                                    <a href="#rules" class="btn btn-lg border-2 border-blue text-prime"
+                                        data-aos="fade-right" data-aos-delay="700">ស្វែងយល់បន្ថែម</a>
                                 </div>
                             </div>
                         </div>
@@ -591,78 +601,72 @@
             </div>
         </section>
         <!-- Achievement -->
-        <section class="star bg-gold py-8" data-aos="fade-right" data-aos-delay="100">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-3">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body text-center">
-                                <div class="d-flex display-5 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="150"
-                                        data-duration="20000">0</h1>
-                                    <span>+</span>
+        <section class="pt-4">
+            <div class="container-fluid" data-aos="fade-right" data-aos-delay="100">
+                <div class="row align-items-center">
+                    <div class="col-12 bg-gold rounded-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card border-0 bg-transparent">
+                                    <div class="card-body text-center text-white">
+                                        <div class="d-flex achi-num justify-content-center align-items-center">
+                                            <h1 class="counter card-title achi-num ff" data-countto="3720"
+                                                data-delay="2000">0</h1>
+                                            <h1 class="achi-num">+</h1>
+                                        </div>
+                                        <h3 class="achi-title">អតិថិជន</h3>
+                                    </div>
                                 </div>
-                                <h4 class="card-text mt-1">អតិថិជន</h4>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body text-center">
-                                <div class="d-flex display-6 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="7" data-duration="2000">0
-                                    </h1>
-                                    <span class="ms-1">ឆ្នាំ</span>
+                            <div class="col-4">
+                                <div class="card border-0 bg-transparent text-white">
+                                    <div class="card-body text-center">
+                                        <div class="d-flex display-6 justify-content-center align-items-center">
+                                            <h1 class="counter card-title achi-num ff" data-countto="7"
+                                                data-delay="2000">0</h1>
+                                            <span class="ms-1 mb-2">ឆ្នាំ</span>
+                                        </div>
+                                        <h3 class="achi-title">បទពិសោធន៏</h3>
+                                    </div>
                                 </div>
-                                <h4 class="card-text mt-1">បទពិសោធន៏</h4>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body text-center">
-                                <div class="d-flex display-5 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="50" data-duration="2000">
-                                        0</h1>
-                                    <span>+</span>
+                            <div class="col-4">
+                                <div class="card border-0 bg-transparent">
+                                    <div class="card-body text-center text-white">
+                                        <div class="d-flex achi-num justify-content-center align-items-center">
+                                            <h1 class="counter card-title achi-num ff" data-countto="150"
+                                                data-delay="2000">0</h1>
+                                            <h1 class="achi-num">+</h1>
+                                        </div>
+                                        <h3 class="achi-title text-nowrap">អ្នកបណ្តុះបណ្តាល</h3>
+                                    </div>
                                 </div>
-                                <h4 class="card-text mt-1">អ្នកបណ្តុះបណ្តាល</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body text-center">
-                                <div class="d-flex display-5 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="98" data-duration="2000">0
-                                    </h1>
-                                    <span class="fs-2 fw-bold">%</span>
-                                </div>
-                                <h4 class="card-text mt-1">សម្រេចបាន​គោលដៅ</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Rules -->
-        <section class="py-3">
+        <!-- Rules Section -->
+        <section class="py-3" id="rules">
             <div class="container">
                 <div class=" mb-2">
                     <div class="text-center my-5">
-                        <h2 class="fw-bold text-main" data-aos="fade-right" data-aos-duration="800">ច្បាប់នៃការរត់</h2>
-                        <p class="lead text-prime mt-3" style="font-size: 20px;" data-aos="fade-left" data-aos-duration="500">
+                        <h2 class="fw-bold text-main" data-aos="fade-right" data-aos-delay="100">ច្បាប់នៃការរត់</h2>
+                        <p class="lead text-prime mt-3" style="font-size: 20px;" data-aos="fade-left"
+                            data-aos-delay="200">
                             កម្មវិធីបណ្តុះបណ្តាលរត់នេះសម្រាប់អ្នករាល់កម្រិត។
                             យើងបង្រៀនច្បាប់ និងបច្ចេកទេសរត់ដើម្បីធានាសុវត្ថិភាព និងប្រកួតប្រជែងបានត្រឹមត្រូវ។
                         </p>
                     </div>
 
-                    <div class="row g-4 mt-4" data-aos="fade-up" data-aos-duration="500">
+                    <div class="row g-4 mt-4" data-aos="fade-up" data-aos-delay="500">
                         <!-- Rule 1 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center">ទីតាំង</h4>
+                                <div class="card-body text-center">
+                                    <i class="bi bi-geo-alt fs-1 text-main mb-3"></i>
+                                    <h4 class="card-title text-main fw-bold">ទីតាំង</h4>
                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                         ផ្លូវរត់ប្រកួតមាន 6-8 lanes, ប្រវែង <span class="ff">400m</span>, ត្រូវគោរព lane
                                         របស់អ្នក។
@@ -674,8 +678,9 @@
                         <!-- Rule 2 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center">ស្ទាយរត់</h4>
+                                <div class="card-body text-center">
+                                    <i class="bi bi-lightning-charge fs-1 text-main mb-3"></i>
+                                    <h4 class="card-title text-main fw-bold">ស្ទាយរត់</h4>
                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                         អ្នកអាចរត់បែបណាមួយ ប៉ុន្តែ Sprint លឿនបំផុត។ រក្សា lane របស់អ្នក។
                                     </p>
@@ -686,8 +691,9 @@
                         <!-- Rule 3 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center">ចាប់ផ្តើម</h4>
+                                <div class="card-body text-center">
+                                    <i class="bi bi-flag fs-1 text-main mb-3"></i>
+                                    <h4 class="card-title text-main fw-bold">ចាប់ផ្តើម</h4>
                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                         ចាប់ផ្តើមពី Starting Block សម្រាប់ Sprint ឬឈរទាំងស្ទឹងសម្រាប់រត់ប្រវែងវែង។
                                         ចាប់មុនសញ្ញា = DQ
@@ -699,8 +705,9 @@
                         <!-- Rule 4 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center">បត់</h4>
+                                <div class="card-body text-center">
+                                    <i class="bi bi-arrow-repeat fs-1 text-main mb-3"></i>
+                                    <h4 class="card-title text-main fw-bold">បត់</h4>
                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                         នៅពេលបត់កោង រក្សា lane របស់អ្នក និងមិនរារាំងអ្នកផ្សេង។
                                     </p>
@@ -711,8 +718,9 @@
                         <!-- Rule 5 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center">Relay</h4>
+                                <div class="card-body text-center">
+                                    <i class="bi bi-shuffle fs-1 text-main mb-3"></i>
+                                    <h4 class="card-title text-main fw-bold">Relay</h4>
                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                         អ្នកបន្ទាប់ចាប់ផ្តើមក្រោយអ្នកមុនបញ្ចប់ការបញ្ជូន Baton។ ចាប់មុន = DQ
                                     </p>
@@ -723,9 +731,9 @@
                         <!-- Rule 6 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                <div class="card-body">
-
-                                    <h4 class="card-title text-main fw-bold text-center">សុវត្ថិភាព</h4>
+                                <div class="card-body text-center">
+                                    <i class="bi bi-shield-check fs-1 text-main mb-3"></i>
+                                    <h4 class="card-title text-main fw-bold">សុវត្ថិភាព</h4>
                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                         មិនរត់ពេលខ្យល់ខ្លាំង ឬលើទីលំនៅមិនសម, ត្រូវពាក់ស្បែកជើងសម និងតាមដានសុខភាព។
                                     </p>
@@ -736,8 +744,9 @@
                         <!-- Rule 7 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center">ស្មារតីកីឡា</h4>
+                                <div class="card-body text-center">
+                                    <i class="bi bi-people fs-1 text-main mb-3"></i>
+                                    <h4 class="card-title text-main fw-bold">ស្មារតីកីឡា</h4>
                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                         គោរពគ្នា និងគោរព Referee មិនប្រើពាក្យ ឬសកម្មភាពមិនសម។
                                     </p>
@@ -748,27 +757,30 @@
                         <!-- Rule 8 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center">ការបញ្ជាក់លទ្ធផល</h4>
+                                <div class="card-body text-center">
+                                    <i class="bi bi-clipboard-check fs-1 text-main mb-3"></i>
+                                    <h4 class="card-title text-main fw-bold">ការបញ្ជាក់លទ្ធផល</h4>
                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                         អាចមាន DQ ប្រសិនបើចាប់មុន, រារាំងអ្នកផ្សេង, ឬមិនគោរពច្បាប់។
                                     </p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
+                    <!-- Accordion -->
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item bg-prime border-0">
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body p-0 m-0 mt-4">
-                                    <div class="row g-4 ">
+                                    <div class="row g-4">
                                         <!-- Rule 9 -->
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
-                                                <div class="card-body">
-                                                    <h4 class="card-title text-main fw-bold text-center">ឧបករណ៍</h4>
+                                                <div class="card-body text-center">
+                                                    <i class="bi bi-box-seam fs-1 text-main mb-3"></i>
+                                                    <h4 class="card-title text-main fw-bold">ឧបករណ៍</h4>
                                                     <p class="card-text text-prime lead" style="font-size: 18px;">
                                                         ត្រូវប្រើស្បែកជើង និងឧបករណ៍សុវត្ថិភាពត្រឹមត្រូវ។
                                                         មិនអនុញ្ញាតឧបករណ៍ជំនួយ។
@@ -789,14 +801,17 @@
                 </div>
             </div>
         </section>
+
         <!-- ប្រយោជន៍នៃការហែលទឹក -->
         <section class="py-10  bg-third">
             <div class="container">
-                <h2 class="fw-bold text-main text-center" data-aos="fade-right" data-aos-duration="800">ប្រយោជន៍នៃការរត់</h2>
-                <p class="my-4 text-center text-prime lead" data-aos="fade-right" data-aos-duration="800">សុខភាពកាយ និងចិត្តល្អប្រសើរដោយការរត់</p>
-                <div class="row g-4" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="fw-bold text-main text-center" data-aos="fade-right" data-aos-delay="100">ប្រយោជន៍នៃការរត់
+                </h2>
+                <p class="my-4 text-center text-prime lead" data-aos="fade-right" data-aos-delay="200">សុខភាពកាយ
+                    និងចិត្តល្អប្រសើរដោយការរត់</p>
+                <div class="row g-4" >
                     <div class="col-lg-4">
-                        <div class="card bg-prime border-0  h-100  hover-lift">
+                        <div class="card bg-prime border-0  h-100  hover-lift py-3 px-2" data-aos="fade-up" data-aos-delay="100">
                             <div class="card-body text-center">
                                 <i class="bi bi-shield-check text-info fs-1 mb-3"></i>
                                 <h5 class="card-title text-main fw-bold">ពង្រឹងភាពធន់នឹងជំងឺ</h5>
@@ -808,7 +823,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card bg-prime border-0  h-100  hover-lift">
+                        <div class="card bg-prime border-0  h-100  hover-lift py-3 px-2" data-aos="fade-up" data-aos-delay="200">
                             <div class="card-body text-center">
                                 <i class="bi bi-heart-pulse text-success fs-1 mb-3"></i>
                                 <h5 class="card-title text-main fw-bold">បង្កើនសុខភាពបេះដូង</h5>
@@ -820,7 +835,7 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="card bg-prime border-0  h-100 hover-lift">
+                        <div class="card bg-prime border-0  h-100 hover-lift py-3 px-2" data-aos="fade-up" data-aos-delay="300">
                             <div class="card-body text-center">
                                 <i class="bi bi-people-fill text-success fs-1 mb-3"></i>
                                 <h5 class="card-title text-main fw-bold">ការសហការនិងទំនាក់ទំនងសង្គម</h5>
@@ -835,17 +850,17 @@
 
         </section>
         <!-- pricing -->
-        <section class="py-5 bg-third">
+        <section class="py-5 bg-third" id="pricing">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="fs-1 fw-bold py-2 text-main">ចូលជាសមាជិក</h2>
-                    <p class="lead text-prime mt-3" style="font-size: 20px;">
+                    <h2 class="fs-1 fw-bold py-2 text-main" data-aos="fade-right" data-aos-delay="100">ចូលជាសមាជិក</h2>
+                    <p class="lead text-prime mt-3" style="font-size: 20px;" data-aos="fade-left" data-aos-delay="200">
                         ជាសមាជិក អ្នកនឹងទទួលបានផែនការហាត់ប្រាណផ្ទាល់ខ្លួន, ការបណ្តុះបណ្តាលជាក្រុម
                         និងពេលវេលាហាត់ដ៏មានគុណភាព។
                         ជ្រើសរើសផែនការដែលសមស្របសម្រាប់អ្នក និងចាប់ផ្តើមរត់ឥឡូវនេះ!
                     </p>
                 </div>
-                <div class="row g-5 justify-content-center">
+                <div class="row g-5 justify-content-center"  data-aos="fade-up" data-aos-delay="800">
                     <!-- Essential Plan -->
                     <div class="col-md-6 col-lg-4">
                         <div class=" h-100 ">
@@ -855,13 +870,14 @@
                                             class="ff">BASIC</span> </h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចាប់ផ្តើម</p>
                                     <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; "><span
-                                            class="ff">20</span>
+                                            class="ff">$20</span>
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
-                                        <a href="../pages/payment-card.html"><button class="btn btn-outline-primary w-90 mt-2 mb-2 ">
-                                            ទិញឥឡូវនេះ
-                                        </button></a>
+                                        <a href="../pages/payment-card.html"><button
+                                                class="btn btn-outline-primary mt-2 mb-2 ">
+                                                ទិញឥឡូវនេះ
+                                            </button></a>
                                     </div>
                                     <ul class="features-list" type="none">
                                         <li class="border-bottom py-2 text-prime">
@@ -896,9 +912,10 @@
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
-                                       <a href="../pages/payment-card.html"> <button class="btn btn-gold w-90 mt-2 mb-2">
-                                            ទិញឥឡូវនេះ
-                                        </button></a>
+                                        <a href="../pages/payment-card.html"> <button
+                                                class="btn btn-gold mt-2 mb-2">
+                                                ទិញឥឡូវនេះ
+                                            </button></a>
                                     </div>
                                     <ul class="features-list" type="none">
                                         <li class="border-bottom py-2 text-prime mb-2"><i
@@ -935,9 +952,10 @@
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
-                                        <a href="../pages/payment-card.html"><button class="btn btn-outline-primary w-90 mt-2 mb-2  ">
-                                            ទិញឥឡូវនេះ
-                                        </button></a>
+                                        <a href="../pages/payment-card.html"><button
+                                                class="btn btn-outline-primary mt-2 mb-2  ">
+                                                ទិញឥឡូវនេះ
+                                            </button></a>
                                     </div>
                                     <ul class="features-list" type="none">
                                         <li class="border-bottom py-2 text-prime mb-2"><i
@@ -966,11 +984,13 @@
         <!-- Coach -->
         <section class=" py-5">
             <div class="container">
-                <div class="position-relative text-center py-3"  >
-                    <h2 class=" fw-bold text-main text-center" data-aos="fade-right" data-aos-duration="400">គ្រូបង្វឹក</h2>
-                    <p class="my-4 text-center text-prime lead " data-aos="fade-up" data-aos-duration="300">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</p>
+                <div class="position-relative text-center py-3">
+                    <h2 class=" fw-bold text-main text-center" data-aos="fade-right" data-aos-delay="400">គ្រូបង្វឹក
+                    </h2>
+                    <p class="my-4 text-center text-prime lead " data-aos="fade-up" data-aos-delay="300">
+                        ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</p>
                 </div>
-                <div class="row  g-4 justify-content-center"  data-aos="fade-right" data-aos-duration="600">
+                <div class="row  g-4 justify-content-center" data-aos="fade-right" data-aos-delay="600">
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card border-0 hover-lift shadow-xs bg-prime">
                             <img src="../assets/img/sports/running-coach-1.jpg" alt="" class="card-img-top"
@@ -1155,10 +1175,11 @@
                 </div>
             </div>
         </div>
-        <!-- Feedback -->
-        <section class="py-5 bg-third py-5">
+         <!-- Feedback -->
+        <section class="py-5 bg-third">
             <div class="container">
                 <div class="row">
+
                     <div class="col-12">
                         <h2 class="text-center mb-6 text-main">មតិអតិថិជន</h2>
                         <div class="swiper mySlide pb-6" style="height: 280px;">
@@ -1168,14 +1189,12 @@
                                         <img src="../assets/img/sports/f-1.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ស្រី ចន្ទា</h5>
-                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                                កម្មវិធីរត់នៅទីនេះពិតជាល្អណាស់ មានគ្រូបង្វឹកជំនាញ
-                                                និងផែនការហាត់ត្រឹមត្រូវ។
-                                                ខ្ញុំមានការរីកចម្រើនសមត្ថភាពរត់របស់ខ្ញុំ។
-                                            </p>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
                                             <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 ឧសភា 2024</p>
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -1190,19 +1209,17 @@
                                         <img src="../assets/img/sports/f-2.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>សុខ ពិសី</h5>
-                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                                ខ្ញុំមានបទពិសោធន៍ល្អណាស់ក្នុងកម្មវិធីរត់។ ផ្លូវហាត់ស្អាត
-                                                និងមានសុវត្ថិភាព
-                                                គ្រូបង្វឹកអត់ធ្មត់ និងផ្តល់ការណែនាំល្អ!
-                                            </p>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
                                             <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">10 កុម្ភៈ 2024</p>
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -1212,14 +1229,32 @@
                                         <img src="../assets/img/sports/f-3.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ម៉េង ស្រីពៅ</h5>
-                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                                ក្លឹបរត់មានផ្លូវហាត់ទំនើប និងមានគ្រប់គ្រាន់។
-                                                ខ្ញុំមានភាពជឿជាក់ក្នុងការរត់
-                                                ព្រោះមានគ្រូបង្វឹកដែលមានជំនាញខ្ពស់។
-                                            </p>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
                                             <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">05 មីនា 2024</p>
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-half ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="../assets/img/sports/f-4.jpg" alt=""
+                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
@@ -1231,65 +1266,40 @@
                                 </div>
                                 <div class="swiper-slide shadow-xs rounded-2">
                                     <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="../assets/img/sports/f-4.jpg" alt=""
-                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>វ៉ាន់ រតនា</h5>
-                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមការបណ្តុះបណ្តាលនៅទីនេះ។
-                                                គ្រូមានភាពជំនាញខ្ពស់
-                                                ហើយពិតជាថែរក្សាសុវត្ថិភាព។
-                                            </p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">20 មេសា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
-                                        <img src="../assets/img/sports/f-4.jpg" alt=""
-                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
-                                        <div class="card-body pb-0">
-                                            <h5>ចាន់ សុភា</h5>
-                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                                អាងទឹកធំ ស្អាត និងមានការគ្រប់គ្រងល្អ។
-                                                ការបណ្តុះបណ្តាលក៏ល្អឥតខ្ចោះសម្រាប់កុមារនិងមនុស្សពេញវ័យ។
-                                            </p>
-                                            <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">08 ឧសភា 2024</p>
-                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide shadow-xs rounded-2">
-                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2 ">
                                         <img src="../assets/img/sports/f-1.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>គង់ ស្រីមុំ</h5>
-                                            <p class="m-0 border-bottom pb-3 text-second" style="line-height: 1.7;">
-                                                អាងទឹកមានការថែរក្សាស្អាត
-                                                និងមានគ្រប់សម្ភារៈសម្រាប់ការហែលទឹក។
-                                                ខ្ញុំពិតជាដឹងថាមានការរីកចម្រើនក្នុងជំនាញរបស់ខ្ញុំ។
-                                            </p>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
                                             <div class="d-flex p-0">
-                                                <p class="fs-6 mt-2 fw-bold">15 ឧសភា 2024</p>
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
                                                 <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide shadow-xs rounded-2">
+                                    <div class="card border-0 bg-prime text-prime pt-3 rounded-2">
+                                        <img src="../assets/img/sports/f-3.jpg" alt=""
+                                            class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
+                                        <div class="card-body pb-0">
+                                           <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
+                                            <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
+                                                ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
+                                                និងបរិក្ខារទំនើប!</p>
+                                            <div class="d-flex p-0">
+                                                <p class="fs-6 mt-2 fw-bold">15 មករា 2024</p>
+                                                <i class="bi bi-star-fill ms-1 fs-6 ms-auto mt-2 text-warning"></i>
                                                 <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star-fill ms-1 fs-6 mt-2 text-warning"></i>
+                                                <i class="bi bi-star ms-1 fs-6 mt-2 text-warning"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -1298,6 +1308,7 @@
                             <div class="swiper-pagination swiper-pagination-2"></div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -1306,7 +1317,7 @@
 
 
     <!-- footer -->
-   <footer class="pt-5 bg-prime" data-aos="fade-right">
+    <footer class="pt-5 bg-prime" data-aos="fade-right">
         <section class="pb-4">
             <div class="container">
                 <div class="row g-3">
@@ -1341,7 +1352,8 @@
                                     class="nav-link text-second w-fit p-0 pb-2 fs-6">ការហ្វឹកហាត់</a></li>
                             <li class="nav-item"><a href="event.html"
                                     class="nav-link text-second w-fit p-0 pb-2 fs-6">ព្រឹត្តិការណ៏</a></li>
-                            <li class="nav-item"><a href="blog.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">អត្ថបទ</a>
+                            <li class="nav-item"><a href="blog.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">អត្ថបទ</a>
                             </li>
                         </ul>
                     </div>
@@ -1352,7 +1364,8 @@
                         <ul class="navbar-nav">
                             <li class="nav-item"><a href="about.html"
                                     class="nav-link text-second w-fit p-0 pb-2 fs-6">អំពីយើង</a></li>
-                            <li class="nav-item"><a href="faq.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
+                            <li class="nav-item"><a href="faq.html"
+                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
                                     ចម្លើយ</a></li>
                             <li class="nav-item"><a href="activity.html"
                                     class="nav-link text-second w-fit p-0 pb-2 fs-6">សកម្មភាព</a></li>

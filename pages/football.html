@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="../assets/img/sports-logo/football.png" />
+
     <title>Football Training</title>
     <!-- link bootstrap -->
     <link rel="stylesheet" href="../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
@@ -150,6 +152,14 @@
     /* Optional chat body scroll */
     .modal-body {
         padding: 0.75rem;
+    }
+
+    /* remove input border and outline  */
+    .form-control {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: transparent !important;
+
     }
 </style>
 
@@ -483,21 +493,22 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="card bg-prime  border-0" data-aos="fade-right" data-aos-delay="100" >
+                        <div class="card bg-prime  border-0" data-aos="fade-right" data-aos-delay="100">
                             <div class="card-body">
                                 <h1 class="card-title text-prime fade-in-up" data-aos="fade-right" data-aos-delay="100">
                                     ស្វាគមន៍មកកាន់ <span class="text-warning ff">Cambodia</span><br>
-                                   <span class="ff"> Football Academy</span>
+                                    <span class="ff"> Football Academy</span>
                                 </h1>
-                                <p class="card-text text-prime mb-4 fade-in-up lead" data-aos="fade-right" data-aos-delay="110">
+                                <p class="card-text text-prime mb-4 fade-in-up lead" data-aos="fade-right"
+                                    data-aos-delay="110">
                                     កម្មវិធីបង្វឹកបាល់ទាត់អាជីពដែលត្រូវបានរចនាឡើងសម្រាប់កម្រិតជំនាញទាំងអស់។
                                     ចូលរួមជាមួយអ្នកលេងរាប់ពាន់នាក់ដែលបានផ្លាស់ប្តូរការលេងរបស់ពួកគេជាមួយនឹងការបង្វឹករបស់យើង។
                                 </p>
                                 <div class="fade-in-up ">
-                                    <a href="#pricing" class="btn btn-gold text-white btn-lg me-3"
-                                        data-aos="fade-right" data-aos-duration="600">ចាប់ផ្តើម</a>
-                                    <a href="#rules" class="btn border-blue btn-lg text-prime"
-                                        data-aos="fade-right" data-aos-duration="700">ស្វែងយល់បន្ថែម</a>
+                                    <a href="#pricing" class="btn btn-gold text-white btn-lg me-3" data-aos="fade-right"
+                                        data-aos-delay="600">ចាប់ផ្តើម</a>
+                                    <a href="#rules" class="btn border-blue btn-lg text-prime" data-aos="fade-right"
+                                        data-aos-delay="700">ស្វែងយល់បន្ថែម</a>
                                 </div>
                             </div>
                         </div>
@@ -514,54 +525,46 @@
             </div>
         </section>
         <!-- Achievement -->
-        <section class="star bg-gold py-8" data-aos="fade-right" data-aos-delay="100">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-3">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body text-center">
-                                <div class="d-flex display-5 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="150" data-duration="2000">
-                                        0</h1>
-                                    <span>+</span>
+        <section class="pt-4">
+            <div class="container-fluid" data-aos="fade-right" data-aos-delay="100">
+                <div class="row align-items-center">
+                    <div class="col-12 bg-gold rounded-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card border-0 bg-transparent">
+                                    <div class="card-body text-center text-white">
+                                        <div class="d-flex achi-num justify-content-center align-items-center">
+                                            <h1 class="counter card-title achi-num ff" data-countto="3720"
+                                                data-delay="2000">0</h1>
+                                            <h1 class="achi-num">+</h1>
+                                        </div>
+                                        <h3 class="achi-title">អតិថិជន</h3>
+                                    </div>
                                 </div>
-                                <h4 class="card-text mt-1">អតិថិជន</h4>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body text-center">
-                                <div class="d-flex display-6 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="7" data-duration="2000">0
-                                    </h1>
-                                    <span class="ms-1">ឆ្នាំ</span>
+                            <div class="col-4">
+                                <div class="card border-0 bg-transparent text-white">
+                                    <div class="card-body text-center">
+                                        <div class="d-flex display-6 justify-content-center align-items-center">
+                                            <h1 class="counter card-title achi-num ff" data-countto="7"
+                                                data-delay="2000">0</h1>
+                                            <span class="ms-1 mb-2">ឆ្នាំ</span>
+                                        </div>
+                                        <h3 class="achi-title">បទពិសោធន៏</h3>
+                                    </div>
                                 </div>
-                                <h4 class="card-text mt-1">បទពិសោធន៏</h4>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body text-center">
-                                <div class="d-flex display-5 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="50" data-duration="2000">
-                                        0</h1>
-                                    <span>+</span>
+                            <div class="col-4">
+                                <div class="card border-0 bg-transparent">
+                                    <div class="card-body text-center text-white">
+                                        <div class="d-flex achi-num justify-content-center align-items-center">
+                                            <h1 class="counter card-title achi-num ff" data-countto="150"
+                                                data-delay="2000">0</h1>
+                                            <h1 class="achi-num">+</h1>
+                                        </div>
+                                        <h3 class="achi-title text-nowrap">អ្នកបណ្តុះបណ្តាល</h3>
+                                    </div>
                                 </div>
-                                <h4 class="card-text mt-1">អ្នកបណ្តុះបណ្តាល</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body text-center">
-                                <div class="d-flex display-5 justify-content-center align-items-center">
-                                    <h1 class="counter card-title display-5 ff" data-countto="98" data-duration="2000">0
-                                    </h1>
-                                    <span class="fs-2 fw-bold">%</span>
-                                </div>
-                                <h4 class="card-text mt-1">សម្រេចបាន​គោលដៅ</h4>
                             </div>
                         </div>
                     </div>
@@ -569,15 +572,15 @@
             </div>
         </section>
         <!-- Rules -->
-        <section class="py-3 mb-5">
+        <section class="py-3 mb-5" id="pricing">
             <div class="container">
                 <div class=" mb-2">
                     <div class="text-center my-5">
-                        <h2 class=" fw-bold text-main text-center" data-aos="fade-right" data-aos-duration="800">
+                        <h2 class=" fw-bold text-main text-center" data-aos="fade-right" data-aos-delay="100">
                             ច្បាប់បាល់ទាត់ <span class="text-prime ff">Master
                                 the
                                 Rules</span></h2>
-                        <p class="my-4 text-center text-prime lead " data-aos="fade-left" data-aos-duration="500">
+                        <p class="my-4 text-center text-prime lead " data-aos="fade-left" data-aos-delay="200">
                             ម៉ូឌុលបណ្តុះបណ្តាលដ៏ទូលំទូលាយ
                             ដែលបង្កើតឡើងសម្រាប់អ្នកចូលចិត្តបាល់ទាត់
                             ដើម្បីបន្ថែមការយល់ដឹងពីច្បាប់សកល <span class="ff">(FIFA Laws of the Game)</span>។
@@ -586,12 +589,15 @@
 
                     </div>
 
-                    <div class="row g-4 mt-4" data-aos="fade-up" data-aos-duration="500">
+                    <div class="row g-4 mt-4" data-aos="fade-up" data-aos-delay="500">
                         <!-- Rule 1 -->
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                 <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center ">ទីលាន</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-bounding-box text-gold fs-1 mb-3"></i>
+                                    </div>
+                                    <h4 class="card-title text-prime lead fw-bold text-center ">ទីលាន</h4>
                                     <p class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
                                         ទីលានមានរាងចតុកោណកែង, ប្រវែង <span class="ff">100–110m</span>, ទទឹង <span
                                             class="ff">64–75m</span>;
@@ -605,10 +611,13 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                 <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center ">បាល់</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-record-circle text-gold fs-1 mb-3"></i>
+                                    </div>
+                                    <h4 class="card-title text-prime lead fw-bold text-center ">បាល់</h4>
                                     <p class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
-                                        បាល់មានទំហំ <span class="ff">68–70cm</span>, ទំងន់ <span
-                                            class="ff">410–450g</span> (Size 5), ត្រូវធ្វើពីសម្ភារៈសុវត្ថិភាព
+                                        បាល់មានទំហំ <span class="ff">68–70cm</span>, ទំងន់ <span class="ff">410–450g
+                                            (Size 5)</span> , ត្រូវធ្វើពីសម្ភារៈសុវត្ថិភាព
                                         និងរក្សាសម្ពាធខ្យល់សមរម្យ។
                                     </p>
                                 </div>
@@ -619,7 +628,10 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                 <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center ">អ្នកលេង</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-people-fill text-gold fs-1 mb-3"></i>
+                                    </div>
+                                    <h4 class="card-title text-prime lead  fw-bold text-center ">អ្នកលេង</h4>
                                     <p class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
                                         ក្រុមមួយមាន <span class="ff">11</span> នាក់ (រួមទាំងអ្នកចាំទី); ត្រូវមានយ៉ាងតិច
                                         <span class="ff">7</span> នាក់ដើម្បីបន្តការប្រកួតបាន។
@@ -632,9 +644,13 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                 <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center ">សម្ភារៈ</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-shield text-gold fs-1 mb-3"></i>
+                                    </div>
+                                    <h4 class="card-title text-prime lead fw-bold text-center ">សម្ភារៈ</h4>
                                     <p class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
-                                        អាវ, ខោ, shin guards, និងស្បែកជើង; អ្នកចាំទីពាក់អាវពណ៌ខុសពីអ្នកលេង។
+                                        អាវ, ខោ, <span class="ff">shin guards</span>, និងស្បែកជើង;
+                                        អ្នកចាំទីពាក់អាវពណ៌ខុសពីអ្នកលេង។
                                     </p>
                                 </div>
                             </div>
@@ -644,8 +660,10 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                 <div class="card-body">
-
-                                    <h4 class="card-title text-main fw-bold text-center ff ">Referee</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-person-badge text-gold fs-1 mb-3"></i>
+                                    </div>
+                                    <h4 class="card-title text-prime lead  fw-bold text-center ff ">Referee</h4>
                                     <p class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
                                         ជាអ្នកសម្រេចចិត្តចុងក្រោយ, គ្រប់គ្រងការប្រកួត, អនុវត្តច្បាប់,
                                         និងថែរក្សាសុវត្ថិភាពអ្នកលេង។</p>
@@ -657,11 +675,16 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                 <div class="card-body">
-
-                                    <h4 class="card-title text-main fw-bold text-center ff ">Officials</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-person-badge text-gold fs-1 mb-3"></i>
+                                    </div>
+                                    <h4 class="card-title text-prime lead fw-bold text-center ff ">Officials</h4>
                                     <p class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
-                                        អ្នកជំនួយការទី ១ & ២, អ្នកជំនួយទី ៤, និង VAR; ជួយសម្រេចចិត្តបាល់ចេញ, Offside,
-                                        និងហេតុការណ៍សំខាន់ៗ។</p>
+                                        អ្នកជំនួយការទី <span class="ff">1 & 2</span>, អ្នកជំនួយទី <span
+                                            class="ff">4,</span> និង<span class="ff"> VAR</span>; ជួយសម្រេចចិត្តបាល់ចេញ,
+                                        <span class="ff">Offside</span>,
+                                        និងហេតុការណ៍សំខាន់ៗ។
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -670,7 +693,10 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                 <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center  ">រយៈពេល</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-clock text-danger fs-1 mb-3"></i>
+                                    </div>
+                                    <h4 class="card-title text-prime lead fw-bold text-center  ">រយៈពេល</h4>
                                     <p class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
                                         ការប្រកួតមាន <span class="ff">90 នាទី (45'×2)</span>, សម្រាកពាក់កណ្ដាល <span
                                             class="ff">15'</span>;
@@ -683,7 +709,10 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                 <div class="card-body">
-                                    <h4 class="card-title text-main fw-bold text-center ff ">Start & Restart</h4>
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-arrow-repeat text-gold fs-1 mb-3"></i>
+                                    </div>
+                                    <h4 class="card-title text-prime lead fw-bold text-center ff ">Start & Restart</h4>
                                     <p class="card-text text-prime  lead" style="font-size: 18px; line-height: 30px;">
                                         ការចាប់ផ្តើមដោយ <span class="ff">Kick-off</span>, បន្តដោយ <span
                                             class="ff">drop-ball, throw-in, free kick, penalty kick,corner kick។</span>
@@ -703,7 +732,11 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-main fw-bold text-center ff ">Ball In/Out
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="bi bi-arrow-left-right text-gold fs-1 mb-3"></i>
+                                                    </div>
+                                                    <h4 class="card-title text-prime lead  fw-bold text-center ff ">Ball
+                                                        In/Out
                                                     </h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
@@ -719,7 +752,11 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-main fw-bold text-center ">លទ្ធផល</h4>
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="bi bi-trophy text-success fs-1 mb-3"></i>
+                                                    </div>
+                                                    <h4 class="card-title text-prime lead fw-bold text-center ">លទ្ធផល
+                                                    </h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
                                                         គ្រាប់បាល់ត្រូវបានរាប់ នៅពេលបាល់ចូលពេញលើ <span class="ff">goal
@@ -736,12 +773,16 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-main fw-bold text-center ff">Offside</h4>
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="bi bi-octagon-fill text-danger fs-1 mb-3"></i>
+                                                    </div>
+                                                    <h4 class="card-title text-prime lead  fw-bold text-center ff">
+                                                        Offside</h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
                                                         អ្នកលេងស្ថិតនៅ <span class="ff">offside position</span>
                                                         ប្រសិនបើនៅជិតគូប្រជែងជាង
-                                                        បាល់ និងអ្នកលេងទី ២ ចុងក្រោយ នៅពេលបាល់ត្រូវបញ្ជូន។
+                                                        បាល់ និងអ្នកលេងទី 2 ចុងក្រោយ នៅពេលបាល់ត្រូវបញ្ជូន។
                                                         ក្លាយជាបទល្មើស
                                                         ប្រសិនបើពាក់ព័ន្ធក្នុងការលេង។
                                                     </p>
@@ -753,8 +794,13 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
+                                                    <div class="d-flex justify-content-center">
+                                                        <i
+                                                            class="bi bi-exclamation-triangle-fill text-danger fs-1 mb-3"></i>
+                                                    </div>
 
-                                                    <h4 class="card-title text-main fw-bold text-center ff"> Fouls &
+                                                    <h4 class="card-title text-prime lead fw-bold text-center ff"> Fouls
+                                                        &
                                                         Misconduct</h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
@@ -771,8 +817,11 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
-
-                                                    <h4 class="card-title text-main fw-bold text-center ff"> Free Kick
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="bi bi-bullseye text-gold fs-1 mb-3"></i>
+                                                    </div>
+                                                    <h4 class="card-title text-prime lead  fw-bold text-center ff"> Free
+                                                        Kick
                                                     </h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
@@ -789,7 +838,11 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-main fw-bold text-center ff">Penalty Kick
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="bi bi-bullseye text-danger fs-1 mb-3"></i>
+                                                    </div>
+                                                    <h4 class="card-title text-prime lead  fw-bold text-center ff">
+                                                        Penalty Kick
                                                     </h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
@@ -805,7 +858,11 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-main fw-bold text-center ff">Throw-in
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="bi bi-arrow-bar-right text-gold fs-1 mb-3"></i>
+                                                    </div>
+                                                    <h4 class="card-title text-prime lead fw-bold text-center ff">
+                                                        Throw-in
                                                     </h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
@@ -821,8 +878,11 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
-
-                                                    <h4 class="card-title text-main fw-bold text-center ff">Goal Kick
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="bi bi-box-arrow-up text-gold fs-1 mb-3"></i>
+                                                    </div>
+                                                    <h4 class="card-title text-prime lead fw-bold text-center ff">Goal
+                                                        Kick
                                                     </h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
@@ -838,7 +898,11 @@
                                         <div class="col-lg-3 col-md-4 col-sm-6">
                                             <div class="card card-Rules bg-third border-0 text-prime mb-4">
                                                 <div class="card-body">
-                                                    <h4 class="card-title text-main fw-bold text-center ff">Corner Kick
+                                                    <div class="d-flex justify-content-center">
+                                                        <i class="bi bi-bullseye text-danger fs-1 mb-3"></i>
+                                                    </div>
+                                                    <h4 class="card-title text-prime lead fw-bold text-center ff">Corner
+                                                        Kick
                                                     </h4>
                                                     <p class="card-text text-prime  lead"
                                                         style="font-size: 18px; line-height: 30px;">
@@ -864,13 +928,16 @@
                 </div>
             </div>
         </section>
-        <section class="py-10 bg-third">
+        <section class="py-10 bg-third" id="rules">
             <div class="container">
-                <h2 class="fw-bold text-main text-center" data-aos="fade-right" data-aos-duration="800">ប្រយោជន៍នៃការលេងបាល់ទាត់</h2>
-                <p class="my-4 text-center text-prime lead" data-aos="fade-right" data-aos-duration="800">សុខភាពកាយ និងចិត្តល្អប្រសើរដោយការលេងបាល់ទាត់</p>
-                <div class="row g-4" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="fw-bold text-main text-center" data-aos="fade-right" data-aos-delay="100">
+                    ប្រយោជន៍នៃការលេងបាល់ទាត់</h2>
+                <p class="my-4 text-center text-prime lead" data-aos="fade-left" data-aos-delay="200">សុខភាពកាយ
+                    និងចិត្តល្អប្រសើរដោយការលេងបាល់ទាត់</p>
+                <div class="row g-4">
                     <div class="col-lg-4">
-                        <div class="card bg-prime border-0 h-100 hover-lift">
+                        <div class="card bg-prime border-0 h-100 hover-lift py-3 px-2" data-aos="fade-up"
+                            data-aos-delay="100">
                             <div class="card-body text-center">
                                 <i class="bi bi-heart-pulse-fill text-danger fs-1 mb-3"></i>
                                 <h5 class="card-title text-main fw-bold">សុខភាពបេះដូង និងសមត្ថភាពកាយ</h5>
@@ -883,7 +950,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card bg-prime border-0 h-100 hover-lift">
+                        <div class="card bg-prime border-0 h-100 hover-lift py-3 px-2" data-aos="fade-up"
+                            data-aos-delay="200">
                             <div class="card-body text-center">
                                 <i class="bi bi-people-fill text-success fs-1 mb-3"></i>
                                 <h5 class="card-title text-main fw-bold">ការសហការគ្នា និងការទំនាក់ទំនងសង្គម</h5>
@@ -895,7 +963,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card bg-prime border-0 h-100 hover-lift">
+                        <div class="card bg-prime border-0 h-100 hover-lift py-3 px-2" data-aos="fade-up"
+                            data-aos-delay="300">
                             <div class="card-body text-center">
                                 <i class="bi bi-lightbulb text-warning fs-1 mb-3"></i>
                                 <h5 class="card-title text-main fw-bold">ការកែលម្អផ្លូវចិត្ត និងវិន័យ</h5>
@@ -914,22 +983,25 @@
         <section class="py-5 bg-third">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="fs-1 fw-bold  mb-4 py-2 text-main"  data-aos="fade-right" data-aos-duration="800">ចូលជាសមាជិក</h2>
+                    <h2 class="fs-1 fw-bold  mb-4 py-2 text-main" data-aos="fade-right" data-aos-delay="800">ចូលជាសមាជិក
+                    </h2>
                 </div>
-                <div class="row g-5 justify-content-center"  data-aos="fade-right" data-aos-duration="400">
+                <div class="row g-5 justify-content-center" data-aos="fade-right" data-aos-delay="400">
                     <!-- Essential Plan -->
 
                     <div class="col-md-6 col-lg-4">
                         <div class=" h-100 ">
                             <div class="card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs">
                                 <div class="card-body ">
-                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក <span class="ff">BASIC</span></h2>
+                                    <h2 class="fs-3 text-center fw-bold text-prime">កាតសមាជិក <span
+                                            class="ff">BASIC</span></h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចាប់ផ្តើម</p>
-                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; ">15
+                                    <h1 class=" text-primary text-center fw-bold" style="font-size: 35px; ">$15
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
-                                        <a href="../pages/payment-card.html" class="btn btn-outline-primary w-90 mt-2 mb-2 ">
+                                        <a href="../pages/payment-card.html"
+                                            class="btn btn-outline-primary w-90 mt-2 mb-2 ">
                                             ទិញឥឡូវនេះ
                                         </a>
                                     </div>
@@ -972,7 +1044,8 @@
                         <div class="pricing-card popular-card rounded-5 ">
                             <div class="card py-3  rounded-5 border-0 bg-prime">
                                 <div class="card-body">
-                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក <span class="ff">PRIME</span></h2>
+                                    <h2 class=" fw-bold  text-center text-prime">កាតសមាជិក <span class="ff">PRIME</span>
+                                    </h2>
                                     <p class=" text-center text-prime lead ">សម្រាប់អ្នកចង់ពង្រឹងសុខភាព</p>
                                     <h1 class=" text-primary text-center fw-bold" style="font-size:  35px;">$30
                                         / ខែ
@@ -1023,13 +1096,15 @@
                         <div class="  rounded-5">
                             <div class=" card pricing-card py-3 rounded-5 border-0 bg-prime shadow-xs ">
                                 <div class="card-body">
-                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក <span class="ff">STANDARD</span> </h2>
+                                    <h2 class=" fw-bold fs-3 text-center text-prime"> កាតសមាជិក <span
+                                            class="ff">STANDARD</span> </h2>
                                     <p class=" text-center text-prime lead">សម្រាប់អ្នកហាត់ទៀងទាត់</p>
                                     <h1 class=" text-primary text-center fw-bold " style="font-size: 35px; ">$25
                                         / ខែ
                                     </h1>
                                     <div class="text-center">
-                                        <a href="../pages/payment-card.html" class="btn btn-outline-primary w-90 mt-2 mb-2  ">
+                                        <a href="../pages/payment-card.html"
+                                            class="btn btn-outline-primary w-90 mt-2 mb-2  ">
                                             ទិញឥឡូវនេះ
                                         </a>
                                     </div>
@@ -1074,10 +1149,12 @@
         <section class="bg-third py-5">
             <div class="container">
                 <div class="position-relative text-center py-3">
-                    <h1 class=" fw-bold text-main text-center" data-aos="fade-right" data-aos-duration="400">គ្រូបង្វឹក</h1>
-                    <p class="my-4 text-center text-prime lead " data-aos="fade-up" data-aos-duration="300">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</p>
+                    <h1 class=" fw-bold text-main text-center" data-aos="fade-right" data-aos-delay="100">គ្រូបង្វឹក
+                    </h1>
+                    <p class="my-4 text-center text-prime lead " data-aos="fade-up" data-aos-delay="200">
+                        ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</p>
                 </div>
-                <div class="row  g-4 justify-content-center" data-aos="fade-right" data-aos-duration="600">
+                <div class="row  g-4 justify-content-center" data-aos="fade-right" data-aos-delay="300">
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="card border-0 hover-lift shadow-xs bg-prime">
                             <img src="../assets/img/sports/football-coach-1.jpg" alt="" class="card-img-top"
@@ -1277,7 +1354,7 @@
                                         <img src="../assets/img/sports/f-1.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
                                             <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
                                                 ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
                                                 និងបរិក្ខារទំនើប!</p>
@@ -1297,7 +1374,7 @@
                                         <img src="../assets/img/sports/f-2.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
                                             <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
                                                 ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
                                                 និងបរិក្ខារទំនើប!</p>
@@ -1317,7 +1394,7 @@
                                         <img src="../assets/img/sports/f-3.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
                                             <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
                                                 ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
                                                 និងបរិក្ខារទំនើប!</p>
@@ -1337,7 +1414,7 @@
                                         <img src="../assets/img/sports/f-4.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
                                             <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
                                                 ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
                                                 និងបរិក្ខារទំនើប!</p>
@@ -1357,7 +1434,7 @@
                                         <img src="../assets/img/sports/f-1.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
+                                            <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
                                             <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
                                                 ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
                                                 និងបរិក្ខារទំនើប!</p>
@@ -1377,7 +1454,7 @@
                                         <img src="../assets/img/sports/f-3.jpg" alt=""
                                             class="img-fluid rounded-circle mx-auto" style="width: 60px; height: 60px;">
                                         <div class="card-body pb-0">
-                                            <h5>ឡាយ ចេមមី</h5>
+                                           <h5 class="text-center">ឃុន វិច្ចរ៉ា</h5>
                                             <p class="m-0 border-bottom pb-3" style="line-height: 1.7;">
                                                 ខ្ញុំសប្បាយចិត្តណាស់ដែលបានចូលរួមក្លឹបនេះ។ គ្រូបង្វឹកល្អ
                                                 និងបរិក្ខារទំនើប!</p>
