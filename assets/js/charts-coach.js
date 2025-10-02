@@ -62,7 +62,7 @@ const ctxMembership = document
 let membershipChart = new Chart(ctxMembership, {
   type: "line",
   data: {
-    labels: ["មករា", "កុម្ភៈ", "មិនា", "មេសា", "ឧសភា", "មិថុនា"],
+    labels: ["មករា", "កុម្ភៈ", "មីនា", "មេសា", "ឧសភា", "មិថុនា"],
     datasets: [
       {
         label: "ប្រាក់ចំណូល",
@@ -83,7 +83,7 @@ const ctxStudents = document.getElementById("studentsChart").getContext("2d");
 let studentsChart = new Chart(ctxStudents, {
   type: "bar",
   data: {
-    labels: ["មករា", "កុម្ភៈ", "មិនា", "មេសា", "ឧសភា", "មិថុនា"],
+    labels: ["មករា", "កុម្ភៈ", "មីនា", "មេសា", "ឧសភា", "មិថុនា"],
     datasets: [
       {
         label: "ចំនួនសិស្ស",
