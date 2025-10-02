@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/jpg" href="../assets/img/brand.png">
+  <link rel="icon" type="image/jpg" href="../assets/img/brand.png">
   <title style="font-family: Poppins;">Sports</title>
   <!-- Load dotlottie-wc -->
   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.7.1/dist/dotlottie-wc.js" type="module"></script>
@@ -26,10 +26,10 @@
   <!-- header -->
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
-      <div class="container-fluid d-none d-lg-flex bg-nav p-0">
+      <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
         <div class="container d-flex align-items-center justify-content-between">
           <a href="homepage.html" class="navbar-brand px-0">
-            <img src="../../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
+            <img src="../assets/img/logo2.png" alt="" class="img-fluid object-fit-cover"
               style="width: 90px; height: 40px" />
           </a>
           <ul class="navbar-nav flex-row align-items-center">
@@ -46,22 +46,22 @@
           </ul>
         </div>
       </div>
-      <div class="container d-flex justify-content-between text-prime">
+      <div class="container d-flex justify-content-between align-items-center pt-1 text-prime">
         <button
           class="navbar-toggler d-flex gap-3 align-items-center p-0 border-0 shadow-none d-block d-xl-none text-prime"
           type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation" data-aos="fade-down">
           <i class="bi bi-list fs-3"></i>
           <a href="">
-            <img src="../../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
-              style="width: 70px; height: 40px;">
+            <img src="../assets/img/logo2.png" class="d-block d-lg-none img-fluid object-fit-cover" alt=""
+              style="width: 80px; height: 40px;">
           </a>
         </button>
         <div class="offcanvas offcanvas-start bg-prime" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header py-2 bg-nav">
-            <img src="../../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
-              style="width: 70px; height: 40px;">
+            <img src="../assets/img/logo2.png" class="offcanvas-title img-fluid object-fit-cover" alt=""
+              style="width: 80px; height: 40px;">
             <button type="button" class="btn ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
               <i class="bi bi-x-lg text-white fs-4"></i>
             </button>
@@ -69,7 +69,7 @@
           <div class="offcanvas-body p-0">
             <ul id="off" class="nav flex-column">
               <li class="nav-item py-1">
-                <a class="nav-link active text-prime" href="homepage.html">ទំព័រដើម</a>
+                <a class="nav-link text-prime " href="homepage.html">ទំព័រដើម</a>
               </li>
 
               <!-- ផ្នែកកីឡា -->
@@ -118,9 +118,8 @@
 
               <!-- អត្ថបទ -->
               <li class="nav-item py-1">
-                <a class="nav-link text-white d-flex align-items-center" data-bs-toggle="collapse" href="blog.html"
-                  role="button" aria-expanded="false" aria-controls="blog">
-                  អត្ថបទ <i class="bi bi-chevron-down ms-auto"></i>
+                <a href="blog.html" class="nav-link text-white d-flex align-items-center">
+                  អត្ថបទ
                 </a>
               </li>
 
@@ -155,9 +154,9 @@
             </ul>
           </div>
         </div>
-        <ul class="navbar-nav flex-row d-none d-xl-flex">
+        <ul class="navbar-nav flex-row d-none d-xl-flex" data-aos="fade-down">
           <li class="nav-item ps-1 pe-3 py-1">
-            <a href="homepage.html" class="nav-link">ទំព័រដើម</a>
+            <a href="homepage.html" class="nav-link ">ទំព័រដើម</a>
           </li>
           <li class="nav-item sport px-3 py-1 position-relative">
             <a href="" class="nav-link">ផ្នែកកីឡា <i class="bi bi-chevron-down icon"></i></a>
@@ -214,7 +213,7 @@
             </div>
           </li>
         </ul>
-        <ul class="navbar-nav flex-row align-items-center gap-4">
+        <ul class="navbar-nav flex-row align-items-center gap-4" data-aos="fade-down">
           <li class="nav-item">
             <a class="main-btn text-prime" id="theme-toggle">
               <i class="theme-icon bi bi-sun fs-4"></i>
@@ -259,80 +258,75 @@
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="allSports.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../assets/img/sport-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">កីឡា</small>
                       <p class="m-0 fw-bold">ការប្រកួតបាល់ទាត់នៅចុងសប្តាហ៍នេះ!</p>
                       <small class="ff text-second">15m</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="shop.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../assets/img/discount-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
                       <small class="text-second">សម្លៀកបំពាក់</small>
                       <p class="m-0 fw-bold">បញ្ចុះតម្លៃ 30% លើអាវកីឡា!</p>
                       <small class="ff text-second">2h</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="#">
+                  <a class="dropdown-item d-flex gap-4 py-2 d-block m-0" href="blog.html">
                     <div class="d-flex align-items-center gap-2">
                       <div class="circle btn-prime rounded-circle" style="width: 12px; height: 12px;"></div>
-                      <img
-                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sports-event-flyer-template-design-123fd63b06a935d9ff808da85dfb931f_screen.jpg?ts=1636984552"
-                        alt="" class="rounded-circle" style="width: 60px; height: 60px;">
+                      <img src="../assets/img/gym-poster.jpg" alt="" class="rounded-circle"
+                        style="width: 60px; height: 60px;">
                     </div>
                     <div>
-                      <small class="text-muted">អត្ថបទថ្មី</small>
+                      <small class="text-second">អត្ថបទថ្មី</small>
                       <p class="m-0 fw-bold">របៀបហាត់ប្រាណឲ្យមានប្រសិទ្ធភាព</p>
                       <small class="ff text-second">11h</small>
                     </div>
-                    <i class="bi bi-three-dots fs-5 text-prime ms-auto"></i>
                   </a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav-item d-block d-lg-none">
-            <a href="../user.html" class="nav-link">
-              <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+            <a href="user.html" class="nav-link">
+              <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                style="width: 30px; height: 30px;" alt="">
             </a>
           </li>
           <li class="nav-item profile position-relative d-none d-lg-block">
             <a href="#" class="nav-link">
-              <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+              <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                style="width: 30px; height: 30px;" alt="">
             </a>
             <div class="dropdown position-absolute shadow-xs" style="left: -90px;">
               <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
                 <div class="card border-0 border-bottom rounded-0 bg-prime p-0">
                   <div class="card-body bg-second">
                     <div class="d-flex align-items-end gap-3">
-                      <img src="https://i.pinimg.com/1200x/9e/66/92/9e66924a2a320ece32fdce1257caddcd.jpg"
-                        class="img-fluid rounded-circle object-fit-cover" style="width: 40px; height: 40px;" alt="">
+                      <img src="../assets/img/profile-user.jpg" class="img-fluid rounded-circle object-fit-cover"
+                        style="width: 40px; height: 40px;" alt="">
                       <h6 class="fs-text text-prime">ឡាយ ចេមមី</h6>
                     </div>
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item py-2 d-block m-0" href="user.html"><i class="bi bi-person me-1"></i> គណនី</a>
+                  <a class="dropdown-item py-2 d-block m-0" href="user.html"><i class="bi bi-person me-1"></i>
+                    គណនី</a>
                 </li>
                 <li>
                   <a class="dropdown-item py-2 d-block" href="../index.html"><i
@@ -346,12 +340,13 @@
       </div>
     </nav>
   </header>
+
   <main>
     <section class="first-section pb-5 bg-prime">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <div class="card border-0 bg-prime p-0">
+            <div class="card border-0 bg-prime p-0" data-aos="fade-right" data-aos-delay="400">
               <div class="card-body px-0">
                 <h1 class="text-main mb-3 fw-bold">កីឡានាំមកនូវសុខភាព</h1>
                 <h4 class="text-second fw-normal lh-base mb-3">
@@ -364,32 +359,32 @@
           <div class="col-lg-6">
             <!-- Lottie Animation -->
             <dotlottie-wc src="../assets/img/football-banner.json" style="width: 400px; height: 350px" loop autoplay
-              speed="1" mode="forward" class="mx-auto">
+              speed="1" mode="forward" class="mx-auto" data-aos="fade-left" data-aos-delay="400">
             </dotlottie-wc>
           </div>
         </div>
       </div>
     </section>
     <!-- Brand -->
-    <section class="brand bg-prime">
+    <section class="brand bg-prime" data-aos="fade-down" data-aos-delay="400">
       <div class="container-fluid overflow-hidden position-relative bg-mask">
         <div class="marquee-container">
           <div id="marquee-inner" class="marquee-inner pb-3">
-            <img src="https://img.icons8.com/?size=100&id=84301&format=png&color=000000" alt="" class="img-fluid m-2"
+            <img src="../assets/img/icon-sports/football-icon.png" alt="" class="img-fluid m-2"
               style="width: 120px; height: 60px;">
-            <img src="https://img.icons8.com/?size=100&id=12969&format=png&color=000000" alt="" class="img-fluid m-2"
+            <img src="../assets/img/icon-sports/shoes-icon.png" alt="" class="img-fluid m-2"
               style="width: 120px; height: 60px;">
-            <img src="https://img.icons8.com/?size=100&id=16584&format=png&color=000000" alt="" class="img-fluid m-2"
+            <img src="../assets/img/icon-sports/basketball-icon.png" alt="" class="img-fluid m-2"
               style="width: 120px; height: 60px;">
-            <img src="https://img.icons8.com/?size=100&id=16960&format=png&color=000000" alt="" class="img-fluid m-2"
+            <img src="../assets/img/icon-sports/bike-icon.png" alt="" class="img-fluid m-2"
               style="width: 120px; height: 60px;">
-            <img src="https://img.icons8.com/?size=100&id=20808&format=png&color=000000" alt="" class="img-fluid m-2"
+            <img src="../assets/img/icon-sports/volleyball-icon.png" alt="" class="img-fluid m-2"
               style="width: 120px; height: 60px;">
-            <img src="https://img.icons8.com/?size=100&id=24314&format=png&color=000000" alt="" class="img-fluid m-2"
+            <img src="../assets/img/icon-sports/karate-icon.png" alt="" class="img-fluid m-2"
               style="width: 120px; height: 60px;">
-            <img src="https://img.icons8.com/?size=100&id=15128&format=png&color=000000" alt="" class="img-fluid m-2"
+            <img src="../assets/img/icon-sports/swimming-pool-icon.png" alt="" class="img-fluid m-2"
               style="width: 120px; height: 60px;">
-            <img src="https://img.icons8.com/?size=100&id=19873&format=png&color=000000" alt="" class="img-fluid m-2"
+            <img src="../assets/img/icon-sports/badminton-icon.png" alt="" class="img-fluid m-2"
               style="width: 120px; height: 60px;">
           </div>
         </div>
@@ -398,11 +393,11 @@
     <!-- type of sports -->
     <section id="All-sport" class="py-5 bg-third">
       <div class="container">
-        <h1 class="text-main text-center fw-bold">ផ្នែកកីឡា</h1>
-        <h4 class="mt-4 text-center fw-normal text-second mb-5">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</h4>
+        <h1 class="text-main text-center fw-bold" data-aos="fade-right" data-aos-delay="400">ផ្នែកកីឡា</h1>
+        <h4 class="mt-4 text-center fw-normal text-second mb-5" data-aos="fade-right">ស្វែងយល់ពីកីឡាផ្សេងៗ និងប្រយោជន៍របស់វា</h4>
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-xs bg-prime p-4 article-hover">
+            <div class="card border-0 shadow-xs bg-prime p-4 article-hover" data-aos="fade-right">
               <a href="football.html"
                 class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
                 <img src="../assets/img/sports-icon-person/football-icon-person.png" alt=""
@@ -412,7 +407,7 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-xs bg-prime p-4 article-hover">
+            <div class="card border-0 shadow-xs bg-prime p-4 article-hover" data-aos="fade-right">
               <a href="running.html"
                 class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
                 <img src="../assets/img/sports-icon-person/running-icon-person.png" alt=""
@@ -423,7 +418,7 @@
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-xs bg-prime p-4 article-hover">
+            <div class="card border-0 shadow-xs bg-prime p-4 article-hover" data-aos="fade-right">
               <a href="basketball.html"
                 class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
                 <img src="../assets/img/sports-icon-person/basketball-icon-person.png" alt=""
@@ -434,7 +429,7 @@
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-xs bg-prime p-4 article-hover">
+            <div class="card border-0 shadow-xs bg-prime p-4 article-hover" data-aos="fade-right">
               <a href="cycling.html"
                 class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
                 <img src="../assets/img/sports-icon-person/cycling-icon-person.png" alt=""
@@ -445,7 +440,7 @@
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-xs bg-prime p-4 article-hover">
+            <div class="card border-0 shadow-xs bg-prime p-4 article-hover" data-aos="fade-right">
               <a href="volleyball.html"
                 class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
                 <img src="../assets/img/sports-icon-person/volleyball-icon-person.png" alt=""
@@ -456,9 +451,8 @@
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-xs bg-prime p-4 article-hover">
-              <a href="karate.html"
-                class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
+            <div class="card border-0 shadow-xs bg-prime p-4 article-hover" data-aos="fade-right">
+              <a href="karate.html" class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
                 <img src="../assets/img/sports-icon-person/karate-icon-person.png" alt=""
                   class="img-fluid mx-auto object-fit-contain" style="width: 70px;">
                 <h4 class="card-title text-center">ការ៉ាតេ</h4>
@@ -467,7 +461,7 @@
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-xs bg-prime p-4 article-hover">
+            <div class="card border-0 shadow-xs bg-prime p-4 article-hover" data-aos="fade-right">
               <a href="swimming.html"
                 class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
                 <img src="../assets/img/sports-icon-person/swimming-icon-person.png" alt=""
@@ -478,7 +472,7 @@
           </div>
 
           <div class="col-md-6 col-lg-3">
-            <div class="card border-0 shadow-xs bg-prime p-4 article-hover">
+            <div class="card border-0 shadow-xs bg-prime p-4 article-hover" data-aos="fade-right">
               <a href="badminton.html"
                 class="d-flex flex-column gap-5 bg-prime rounded-2 text-decoration-none text-prime">
                 <img src="../assets/img/sports-icon-person/badminton-icon-person.png" alt=""
@@ -509,11 +503,11 @@
                     / ខែ
                   </h1>
                   <div class="text-center">
-                   <a href="../pages/payment-card.html">
-                     <button class="btn btn-outline-primary w-90 mt-2 mb-2 ">
-                      ទិញឥឡូវនេះ
-                    </button>
-                   </a>
+                    <a href="../pages/payment-card.html">
+                      <button class="btn btn-outline-primary w-90 mt-2 mb-2 ">
+                        ទិញឥឡូវនេះ
+                      </button>
+                    </a>
                   </div>
 
                   <ul class="features-list" type="none">
@@ -552,8 +546,8 @@
                   <div class="text-center">
                     <a href="../pages/payment-card.html">
                       <button class="btn btn-gold w-90 mt-2 mb-2">
-                      ទិញឥឡូវនេះ
-                    </button>
+                        ទិញឥឡូវនេះ
+                      </button>
                     </a>
                   </div>
                   <ul class="features-list" type="none">
@@ -604,8 +598,8 @@
                   <div class="text-center">
                     <a href="../pages/payment-card.html">
                       <button class="btn btn-outline-primary w-90 mt-2 mb-2  ">
-                      ទិញឥឡូវនេះ
-                    </button>
+                        ទិញឥឡូវនេះ
+                      </button>
                     </a>
                   </div>
                   <ul class="features-list" type="none">

@@ -2,246 +2,247 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- link bootstrap -->
-    <link rel="stylesheet" href="../../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
-    <!-- link theme -->
-    <link rel="stylesheet" href="../../../assets/plugins/bootstrap-5.3.7/css/theme.css">
-    <!-- link icons -->
-    <link rel="stylesheet" href="../../../assets/plugins/bootstrap-icons/bootstrap-icons.css">
-    <!-- link swiper -->
-    <link rel="stylesheet" href="../../../assets/plugins/swiper-js/css/swiper-bundle.min.css">
-    <!-- link aos -->
-    <link rel="stylesheet" href="../../../assets/plugins/aos/css/aos.css">
-    <!-- link css custom -->
-    <link rel="stylesheet" href="../../../assets/css/style.css">
-    <style>
-        .coach-card {
-            background: white;
-            border-radius: 15px;
-            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
-            overflow: hidden;
-            margin-top: -35px;
-            position: relative;
-            z-index: 10;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" href="../../../assets/img/brand.png" />
+  <title style="font-family: Poppins;">Coach | Swimming</title>
+  <!-- link bootstrap -->
+  <link rel="stylesheet" href="../../../assets/plugins/bootstrap-5.3.7/css/bootstrap.css">
+  <!-- link theme -->
+  <link rel="stylesheet" href="../../../assets/plugins/bootstrap-5.3.7/css/theme.css">
+  <!-- link icons -->
+  <link rel="stylesheet" href="../../../assets/plugins/bootstrap-icons/bootstrap-icons.css">
+  <!-- link swiper -->
+  <link rel="stylesheet" href="../../../assets/plugins/swiper-js/css/swiper-bundle.min.css">
+  <!-- link aos -->
+  <link rel="stylesheet" href="../../../assets/plugins/aos/css/aos.css">
+  <!-- link css custom -->
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <style>
+    .coach-card {
+      background: white;
+      border-radius: 15px;
+      /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
+      overflow: hidden;
+      margin-top: -35px;
+      position: relative;
+      z-index: 10;
+    }
 
-        .coach-img-container {
-            text-align: center;
-            padding: 20px;
-        }
+    .coach-img-container {
+      text-align: center;
+      padding: 20px;
+    }
 
-        .coach-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
-        }
+    .coach-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
 
-        .coach-info {
-            padding: 30px;
-        }
+    .coach-info {
+      padding: 30px;
+    }
 
-        .coach-stats {
-            display: flex;
-            justify-content: space-around;
-            margin: 25px 0;
-            padding: 15px 0;
-            background-color: rgba(227, 242, 253, 0.5);
-            border-radius: 15px;
-        }
+    .coach-stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 25px 0;
+      padding: 15px 0;
+      background-color: rgba(227, 242, 253, 0.5);
+      border-radius: 15px;
+    }
 
-        .stat-item {
-            text-align: center;
-        }
+    .stat-item {
+      text-align: center;
+    }
 
-        .stat-value {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-        }
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+    }
 
-        .stat-label {
-            font-size: 16px;
-            color: #666;
-            margin-top: 5px;
-        }
+    .stat-label {
+      font-size: 16px;
+      color: #666;
+      margin-top: 5px;
+    }
 
-        .section-title {
-            /* color: var(--primary); */
-            /* font-weight: 700; */
-            border-bottom: 2px solid #e3f2fd;
-            padding-bottom: 10px;
-            margin: 40px 0 25px;
-            position: relative;
-            font-size: 24px;
-        }
+    .section-title {
+      /* color: var(--primary); */
+      /* font-weight: 700; */
+      border-bottom: 2px solid #e3f2fd;
+      padding-bottom: 10px;
+      margin: 40px 0 25px;
+      position: relative;
+      font-size: 24px;
+    }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 60px;
-            height: 2px;
-            background: #0f4da8;
-        }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: #0f4da8;
+    }
 
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            margin: 40px 0;
-        }
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      margin: 40px 0;
+    }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 15px;
-            height: calc(100% - 30px);
-            width: 4px;
-            background: linear-gradient(to bottom, #0f4da8, #4fc3f7);
-            border-radius: 3px;
-        }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      height: calc(100% - 30px);
+      width: 4px;
+      background: linear-gradient(to bottom, #0f4da8, #4fc3f7);
+      border-radius: 3px;
+    }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 40px;
-            padding-left: 30px;
-        }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 30px;
+    }
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -12px;
-            top: 10px;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: white;
-            border: 4px solid #0f4da8;
-            box-shadow: 0 0 0 3px #e3f2fd;
-        }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 10px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: white;
+      border: 4px solid #0f4da8;
+      box-shadow: 0 0 0 3px #e3f2fd;
+    }
 
-        .timeline-year {
-            font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 20px;
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 30px;
-        }
+    .timeline-year {
+      font-weight: 500;
+      margin-bottom: 8px;
+      font-size: 20px;
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 30px;
+    }
 
-        .coaching-philosophy {
-            background: var(--light);
-            padding: 30px;
-            border-radius: 15px;
-            margin: 30px 0;
-            border-left: 5px solid var(--secondary);
-        }
+    .coaching-philosophy {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+      border-left: 5px solid var(--secondary);
+    }
 
-        .philosophy-title {
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 15px;
-            font-size: 20px;
-        }
+    .philosophy-title {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
 
-        .coach-footer {
-            background: var(--dark);
-            color: white;
-            padding: 30px 0;
-            margin-top: 50px;
-        }
+    .coach-footer {
+      background: var(--dark);
+      color: white;
+      padding: 30px 0;
+      margin-top: 50px;
+    }
 
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 20px 0;
-        }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: blue;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin: 20px 0;
-        }
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+    }
 
-        .hover-up {
-            transition: all 0.2s ease-in-out;
-        }
+    .hover-up {
+      transition: all 0.2s ease-in-out;
+    }
 
-        .hover-up:hover {
-            /* background: var(--secondary); */
-            transform: translateY(-3px);
-        }
+    .hover-up:hover {
+      /* background: var(--secondary); */
+      transform: translateY(-3px);
+    }
 
-        .badge-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-        }
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
 
-        .coaching-badge {
-            padding: 10px 18px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.2s ease;
-        }
+    .coaching-badge {
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
 
-        .coaching-badge:hover {
-            background: linear-gradient(to right, #0f4da8, #0288d1);
-            transform: translateY(-2px);
-        }
+    .coaching-badge:hover {
+      background: linear-gradient(to right, #0f4da8, #0288d1);
+      transform: translateY(-2px);
+    }
 
-        /* --primary: #0f4da8;
+    /* --primary: #0f4da8;
             --primary-light: #4fc3f7;
             --accent: #0288d1;
             --secondary: #e34a26;
             --light: #e3f2fd;
             --dark: #1a1a2e; */
 
-        @media (max-width: 768px) {
-            .coach-stats {
-                flex-direction: column;
-                gap: 20px;
-            }
+    @media (max-width: 768px) {
+      .coach-stats {
+        flex-direction: column;
+        gap: 20px;
+      }
 
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
+      .contact-info {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-prime">
 
-    <!-- header -->
+  <!-- header -->
   <header>
     <nav class="navbar py-0 fixed-top bg-prime">
       <div class="container-fluid d-none d-lg-flex bg-nav p-0" data-aos="fade-down" data-aos-delay="100">
@@ -543,7 +544,7 @@
                   </div>
                 </div>
                 <li>
-                  <a class="dropdown-item py-2 d-block m-0" href="../../pages/user.html"><i class="bi bi-person me-1"></i>
+                  <a class="dropdown-item py-2 d-block m-0" href="../user.html"><i class="bi bi-person me-1"></i>
                     គណនី</a>
                 </li>
                 <li>
@@ -558,225 +559,220 @@
       </div>
     </nav>
   </header>
-    <main class="bg-third">
-        <section class=" mb-1 mt-14 py-5">
-            <div class="container text-center">
-                <h1 class="display-4 fw-bold text-main mb-5 ">ប្រវត្តិគ្រូបង្វឹកហែលទឹក</h1>
-                <!-- <p class="lead">ផ្តល់ការអប់រំ និងការអភិវឌ្ឍន៍ឱ្យអ្នកចាស់ និងអ្នកខ្ចី</p> -->
-            </div>
-        </section>
-        <section class="pb-5">
-            <div class="container mb-5 ">
-                <div class="coach-card shadow-lg  ">
-                    <div class="coach-img-container bg-nav">
-                        <img src="../../../assets/img/sports/swimming-coach-1.jpg" alt="គ្រូបង្វឹក វិទ្យា"
-                            class="coach-img">
-                    </div>
-                    <div class="coach-info bg-third ">
-                        <h2 class=" text-center text-prime">គ្រូបង្វឹក វិទ្យា</h2>
-                        <p class="fs-nav lead text-center text-prime">គ្រូបង្វឹកហែលទឹកជាន់ខ្ពស់
-                            និងអ្នកអភិវឌ្ឍសមត្ថភាពកីឡាករ</p>
-                        <h3 class="section-title text-prime">បទពិសោធន៍អាជីព</h3>
+  <main class="bg-third">
+    <section class="first-section mt-3 pb-4">
+      <div class="container text-center">
+        <h1 class="fw-bold text-main mb-5 ">ប្រវត្តិគ្រូបង្វឹកហែលទឹក</h1>
+      </div>
+    </section>
+    <section class="pb-5">
+      <div class="container mb-5 ">
+        <div class="coach-card shadow-lg  ">
+          <div class="coach-img-container bg-nav">
+            <img src="../../../assets/img/sports/swimming-coach-1.jpg" alt="គ្រូបង្វឹក វិទ្យា" class="coach-img">
+          </div>
+          <div class="coach-info bg-third ">
+            <h2 class=" text-center text-prime">គ្រូបង្វឹក វិទ្យា</h2>
+            <p class="fs-nav lead text-center text-prime">គ្រូបង្វឹកហែលទឹកជាន់ខ្ពស់
+              និងអ្នកអភិវឌ្ឍសមត្ថភាពកីឡាករ</p>
+            <h3 class="section-title text-prime">បទពិសោធន៍អាជីព</h3>
 
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-year text-prime bg-nav" style="opacity: calc(80%);"><span
-                                        class="ff">2021</span> - បច្ចុប្បន្ន</div>
-                                <h5 class="text-prime ">គ្រូបង្វឹកក្រុមជាតិ</h5>
-                                <div class="fs-nav text-prime lead ">កម្ពុជា <span class="ff lead ">National Swim
-                                        Team</span></div>
-                                <p class="fs-text text-prime lead">ដឹកនាំក្រុមហែលទឹកជាតិឱ្យឈ្នះមេដាយមាស SEA Games ២ ដង។
-                                    អនុវត្តវិធីសាស្ត្រហ្វឹកហាត់ទំនើបដែលបានកាត់បន្ថយពេលវេលាហែលរហូតដល់ ១៨%។</p>
-                            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-year text-prime bg-nav" style="opacity: calc(80%);"><span class="ff">2021</span> -
+                  បច្ចុប្បន្ន</div>
+                <h5 class="text-prime ">គ្រូបង្វឹកក្រុមជាតិ</h5>
+                <div class="fs-nav text-prime lead ">កម្ពុជា <span class="ff lead ">National Swim
+                    Team</span></div>
+                <p class="fs-text text-prime lead">ដឹកនាំក្រុមហែលទឹកជាតិឱ្យឈ្នះមេដាយមាស SEA Games ២ ដង។
+                  អនុវត្តវិធីសាស្ត្រហ្វឹកហាត់ទំនើបដែលបានកាត់បន្ថយពេលវេលាហែលរហូតដល់ ១៨%។</p>
+              </div>
 
-                            <div class="timeline-item">
-                                <div class="timeline-year text-prime bg-nav ff" style="opacity: calc(80%);">2016 - 2021
-                                </div>
-                                <h5 class="text-prime">គ្រូបង្វឹកជាន់ខ្ពស់</h5>
-                                <div class="fs-nav text-prime lead ff">Singapore Aquatic Academy</div>
-                                <p class="fs-text text-prime lead ">អភិវឌ្ឍអ្នកលេងវ័យក្មេងឱ្យក្លាយជាអត្តពលិកអន្តរជាតិ។
-                                    ចូលរួមក្នុងការបង្កើតកម្មវិធីហ្វឹកហាត់គោលការណ៍ចម្រុះ។</p>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-year text-prime bg-nav  ff">2012 - 2016</div>
-                                <h5 class="text-prime">គ្រូបង្វឹកជំនួយ</h5>
-                                <div class="fs-nav text-prime lead">អូស្ត្រាលី <span class="ff">Swimming Club</span>
-                                </div>
-                                <p class="fs-text text-prime lead">ជួយបណ្តុះកីឡាករដល់កម្រិតប្រកួតអន្តរជាតិ។
-                                    ផ្តោតលើបច្ចេកទេសដង្ហើម និងការបង្ហាប់ទឹក។</p>
-                            </div>
-                        </div>
-
-                        <h3 class="section-title">ការអប់រំ និងវិញ្ញាបនបត្រ</h3>
-
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-year text-prime bg-nav ff">2008 - 2012</div>
-                                <h5 class="text-prime">បរិញ្ញាបត្រវិទ្យាសាស្ត្រកីឡា</h5>
-                                <div class="fs-nav text-prime lead ff ff">University of Queensland, Australia</div>
-                                <p class="fs-text text-prime lead">ឯកទេសផ្នែកហែលទឹក និងវិទ្យាសាស្ត្រកាយសម្ពាធ។</p>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-year text-prime bg-nav ff">2013</div>
-                                <h5 class="text-prime">វិញ្ញាបនប័ត្រ <span class="ff"> FINA Level 2</span></h5>
-                                <div class="fs-nav text-prime lead ff ff">FINA Academy</div>
-                                <p class="fs-text text-prime lead">វិញ្ញាបនប័ត្រអន្តរជាតិផ្នែកបង្វឹកហែលទឹក។</p>
-                            </div>
-                        </div>
-
-                        <h3 class="section-title text-prime">ឯកទេសរបស់គ្រូបង្វឹក</h3>
-
-                        <div class="badge-container">
-                            <span class="coaching-badge bg-second shadow-xs text-prime">បច្ចេកទេសហែលទឹក</span>
-                            <span class="coaching-badge bg-second shadow-xs text-prime">ការត្រៀមសម្រាប់ប្រកួត</span>
-                            <span class="coaching-badge bg-second shadow-xs text-prime">ការគ្រប់គ្រងសមត្ថភាព</span>
-                            <span class="coaching-badge bg-second shadow-xs text-prime">ចិត្តវិទ្យាកីឡា</span>
-                            <span class="coaching-badge bg-second shadow-xs text-prime">ការអភិវឌ្ឍយុវជន</span>
-                            <span class="coaching-badge bg-second shadow-xs text-prime">ការទប់ស្កាត់របួស</span>
-                            <span class="coaching-badge bg-second shadow-xs text-prime">កាយសម្ពាធ និងសុខភាព</span>
-                        </div>
-
-                        <h3 class="section-title text-prime">ព័ត៌មានទំនាក់ទំនង</h3>
-
-                        <div class="contact-info">
-                            <!-- Email -->
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="bi bi-envelope-fill"></i>
-                                </div>
-                                <a href="mailto:coach.vithea@swimmingacademy.com" class="ff text-prime" style="text-decoration: none;">
-                                    coach.vithea@swimmingacademy.com
-                                </a>
-                            </div>
-
-                            <!-- Phone -->
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="bi bi-telephone-fill"></i>
-                                </div>
-                                <a href="tel:+85596987123" class="ff text-prime" style="text-decoration: none;">
-                                    +855 96 987 123
-                                </a>
-                            </div>
-
-                            <!-- Location -->
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                </div>
-                                <span class="text-prime">សៀមរាប, កម្ពុជា</span>
-                            </div>
-                        </div>
-
-
-                        <div class="card-body d-flex  pt-2 ">
-                            <a href="https://www.instagram.com/" target="_blank" class="hover-up me-4"><i
-                                    class="text-gold bi bi-instagram fs-4"></i></a>
-                            <a href="https://www.facebook.com/" target="_blank" class="hover-up me-4"><i
-                                    class="text-gold bi bi-facebook fs-4"></i></a>
-                            <a href="https://www.linkedin.com/" target="_blank" class="hover-up me-4"><i
-                                    class="text-gold bi bi-linkedin fs-4"></i></a>
-                            <a href="https://twitter.com/" target="_blank" class="hover-up"><i
-                                    class="text-gold bi bi-twitter-x fs-4"></i></a>
-                        </div>
-                    </div>
+              <div class="timeline-item">
+                <div class="timeline-year text-prime bg-nav ff" style="opacity: calc(80%);">2016 - 2021
                 </div>
-            </div>
-        </section>
+                <h5 class="text-prime">គ្រូបង្វឹកជាន់ខ្ពស់</h5>
+                <div class="fs-nav text-prime lead ff">Singapore Aquatic Academy</div>
+                <p class="fs-text text-prime lead ">អភិវឌ្ឍអ្នកលេងវ័យក្មេងឱ្យក្លាយជាអត្តពលិកអន្តរជាតិ។
+                  ចូលរួមក្នុងការបង្កើតកម្មវិធីហ្វឹកហាត់គោលការណ៍ចម្រុះ។</p>
+              </div>
 
-
-    </main>
-    <!-- Footer -->
-    <footer class="pt-5 bg-prime" data-aos="fade-right">
-        <section class="pb-4">
-            <div class="container">
-                <div class="row g-3">
-                    <!-- Logo & About -->
-                    <div class="col-lg-4">
-                        <a href="../../homepage.html">
-                            <img src="../../../assets/img/logo2.png" alt="SportHub" class="img-fluid object-fit-cover"
-                                style="width:100px; height:80px;">
-                        </a>
-                        <p class="mb-3 text-second fs-nav lh-base">
-                            <span class="ff">DSH</span> ផ្តល់នូវព័ត៌មានកីឡា កម្មវិធីហាត់ប្រាណ និងប្រកួតប្រជែង
-                            ដើម្បីជួយអ្នកមានសុខភាព
-                            និងកាយសម្បទាកាន់តែប្រសើរ។
-                        </p>
-                        <h5 class="fw-bold mb-3 text-prime">បណ្តាញសង្គម</h5>
-                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-facebook fs-4"></i></a>
-                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-twitter-x fs-4"></i></a>
-                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-linkedin fs-4"></i></a>
-                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-instagram fs-4"></i></a>
-                        <a href="#" class="text-decoration-none me-2"><i class="bi bi-telegram fs-4"></i></a>
-                    </div>
-
-                    <div class="col-1"></div>
-
-                    <!-- Quick Links -->
-                    <div class="col-lg-2">
-                        <h5 class="fw-bold mb-3 text-prime">តំណភ្ជាប់</h5>
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a href="../../homepage.html"
-                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">ទំព័រដើម</a></li>
-                            <li class="nav-item"><a href="../../training.html"
-                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">ការហ្វឹកហាត់</a></li>
-                            <li class="nav-item"><a href="../../event.html"
-                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">ព្រឹត្តិការណ៍</a></li>
-                            <li class="nav-item"><a href="../../blog.html"
-                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">អត្ថបទ</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Support -->
-                    <div class="col-lg-2">
-                        <h5 class="fw-bold mb-3 text-prime">ជំនួយ</h5>
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a href="../../about.html"
-                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">អំពីយើង</a></li>
-                            <li class="nav-item"><a href="../../FAQ.html"
-                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
-                                    ចម្លើយ</a></li>
-                            <li class="nav-item"><a href="../../activity.html"
-                                    class="nav-link text-second w-fit p-0 pb-2 fs-6">សកម្មភាព</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact -->
-                    <div class="col-lg-3">
-                        <h5 class="fw-bold mb-3 text-prime">ទំនាក់ទំនង</h5>
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a href="mailto:DSH@gmail.com"
-                                    class="nav-link p-0 pb-2 text-second">អ៊ីមែល: <span
-                                        class="ff">Dsh@gmail.com</span></a></li>
-                            <li class="nav-item"><a href="tel: 96 123 4567"
-                                    class="nav-link p-0 pb-2 text-second">ទូរស័ព្ទ: <span class="ff">+855 96 123
-                                        4567</span></a></li>
-                            <li class="nav-item d-flex gap-2">
-                                <a href="#"><img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
-                                        alt="App Store" class="img-fluid download"></a>
-                                <a href="#"><img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png"
-                                        alt="Google Play" class="img-fluid download"></a>
-                            </li>
-                        </ul>
-                    </div>
+              <div class="timeline-item">
+                <div class="timeline-year text-prime bg-nav  ff">2012 - 2016</div>
+                <h5 class="text-prime">គ្រូបង្វឹកជំនួយ</h5>
+                <div class="fs-nav text-prime lead">អូស្ត្រាលី <span class="ff">Swimming Club</span>
                 </div>
+                <p class="fs-text text-prime lead">ជួយបណ្តុះកីឡាករដល់កម្រិតប្រកួតអន្តរជាតិ។
+                  ផ្តោតលើបច្ចេកទេសដង្ហើម និងការបង្ហាប់ទឹក។</p>
+              </div>
             </div>
-        </section>
-    </footer>
 
-    <!-- link bootstrap js -->
-    <script src="../../../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
-    <!-- link swiper js -->
-    <script src="../../../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
-    <!-- link aos js -->
-    <script src="../../../assets/plugins/aos/js/aos.js"></script>
-    <!-- link js custom -->
-    <script src="../../../assets/js/main.js"></script>
+            <h3 class="section-title">ការអប់រំ និងវិញ្ញាបនបត្រ</h3>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-year text-prime bg-nav ff">2008 - 2012</div>
+                <h5 class="text-prime">បរិញ្ញាបត្រវិទ្យាសាស្ត្រកីឡា</h5>
+                <div class="fs-nav text-prime lead ff ff">University of Queensland, Australia</div>
+                <p class="fs-text text-prime lead">ឯកទេសផ្នែកហែលទឹក និងវិទ្យាសាស្ត្រកាយសម្ពាធ។</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-year text-prime bg-nav ff">2013</div>
+                <h5 class="text-prime">វិញ្ញាបនប័ត្រ <span class="ff"> FINA Level 2</span></h5>
+                <div class="fs-nav text-prime lead ff ff">FINA Academy</div>
+                <p class="fs-text text-prime lead">វិញ្ញាបនប័ត្រអន្តរជាតិផ្នែកបង្វឹកហែលទឹក។</p>
+              </div>
+            </div>
+
+            <h3 class="section-title text-prime">ឯកទេសរបស់គ្រូបង្វឹក</h3>
+
+            <div class="badge-container">
+              <span class="coaching-badge bg-second shadow-xs text-prime">បច្ចេកទេសហែលទឹក</span>
+              <span class="coaching-badge bg-second shadow-xs text-prime">ការត្រៀមសម្រាប់ប្រកួត</span>
+              <span class="coaching-badge bg-second shadow-xs text-prime">ការគ្រប់គ្រងសមត្ថភាព</span>
+              <span class="coaching-badge bg-second shadow-xs text-prime">ចិត្តវិទ្យាកីឡា</span>
+              <span class="coaching-badge bg-second shadow-xs text-prime">ការអភិវឌ្ឍយុវជន</span>
+              <span class="coaching-badge bg-second shadow-xs text-prime">ការទប់ស្កាត់របួស</span>
+              <span class="coaching-badge bg-second shadow-xs text-prime">កាយសម្ពាធ និងសុខភាព</span>
+            </div>
+
+            <h3 class="section-title text-prime">ព័ត៌មានទំនាក់ទំនង</h3>
+
+            <div class="contact-info">
+              <!-- Email -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <a href="mailto:coach.vithea@swimmingacademy.com" class="ff text-prime" style="text-decoration: none;">
+                  coach.vithea@swimmingacademy.com
+                </a>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <a href="tel:+85596987123" class="ff text-prime" style="text-decoration: none;">
+                  +855 96 987 123
+                </a>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <span class="text-prime">សៀមរាប, កម្ពុជា</span>
+              </div>
+            </div>
+
+
+            <div class="card-body d-flex  pt-2 ">
+              <a href="https://www.instagram.com/" target="_blank" class="hover-up me-4"><i
+                  class="text-gold bi bi-instagram fs-4"></i></a>
+              <a href="https://www.facebook.com/" target="_blank" class="hover-up me-4"><i
+                  class="text-gold bi bi-facebook fs-4"></i></a>
+              <a href="https://www.linkedin.com/" target="_blank" class="hover-up me-4"><i
+                  class="text-gold bi bi-linkedin fs-4"></i></a>
+              <a href="https://twitter.com/" target="_blank" class="hover-up"><i
+                  class="text-gold bi bi-twitter-x fs-4"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <!-- Footer -->
+  <footer class="pt-5 bg-prime" data-aos="fade-right">
+    <section class="pb-4">
+      <div class="container">
+        <div class="row g-3">
+          <!-- Logo & About -->
+          <div class="col-lg-4">
+            <a href="../../homepage.html">
+              <img src="../../../assets/img/logo2.png" alt="SportHub" class="img-fluid object-fit-cover"
+                style="width:100px; height:80px;">
+            </a>
+            <p class="mb-3 text-second fs-nav lh-base">
+              <span class="ff">DSH</span> ផ្តល់នូវព័ត៌មានកីឡា កម្មវិធីហាត់ប្រាណ និងប្រកួតប្រជែង
+              ដើម្បីជួយអ្នកមានសុខភាព
+              និងកាយសម្បទាកាន់តែប្រសើរ។
+            </p>
+            <h5 class="fw-bold mb-3 text-prime">បណ្តាញសង្គម</h5>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-twitter-x fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-linkedin fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-decoration-none me-2"><i class="bi bi-telegram fs-4"></i></a>
+          </div>
+
+          <div class="col-1"></div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2">
+            <h5 class="fw-bold mb-3 text-prime">តំណភ្ជាប់</h5>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="../../homepage.html"
+                  class="nav-link text-second w-fit p-0 pb-2 fs-6">ទំព័រដើម</a></li>
+              <li class="nav-item"><a href="../../training.html"
+                  class="nav-link text-second w-fit p-0 pb-2 fs-6">ការហ្វឹកហាត់</a></li>
+              <li class="nav-item"><a href="../../event.html"
+                  class="nav-link text-second w-fit p-0 pb-2 fs-6">ព្រឹត្តិការណ៍</a></li>
+              <li class="nav-item"><a href="../../blog.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">អត្ថបទ</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="col-lg-2">
+            <h5 class="fw-bold mb-3 text-prime">ជំនួយ</h5>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="../../about.html"
+                  class="nav-link text-second w-fit p-0 pb-2 fs-6">អំពីយើង</a></li>
+              <li class="nav-item"><a href="../../FAQ.html" class="nav-link text-second w-fit p-0 pb-2 fs-6">សំណួរ &
+                  ចម្លើយ</a></li>
+              <li class="nav-item"><a href="../../activity.html"
+                  class="nav-link text-second w-fit p-0 pb-2 fs-6">សកម្មភាព</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3">
+            <h5 class="fw-bold mb-3 text-prime">ទំនាក់ទំនង</h5>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="mailto:DSH@gmail.com" class="nav-link p-0 pb-2 text-second">អ៊ីមែល: <span
+                    class="ff">Dsh@gmail.com</span></a></li>
+              <li class="nav-item"><a href="tel: 96 123 4567" class="nav-link p-0 pb-2 text-second">ទូរស័ព្ទ: <span
+                    class="ff">+855 96 123
+                    4567</span></a></li>
+              <li class="nav-item d-flex gap-2">
+                <a href="#"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"
+                    alt="App Store" class="img-fluid download"></a>
+                <a href="#"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1280px-Google_Play_Store_badge_EN.svg.png"
+                    alt="Google Play" class="img-fluid download"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <!-- link bootstrap js -->
+  <script src="../../../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <!-- link swiper js -->
+  <script src="../../../assets/plugins/swiper-js/js/swiper-bundle.min.js"></script>
+  <!-- link aos js -->
+  <script src="../../../assets/plugins/aos/js/aos.js"></script>
+  <!-- link js custom -->
+  <script src="../../../assets/js/main.js"></script>
 
 </body>
 
