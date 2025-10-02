@@ -402,7 +402,7 @@ body {
   display: inline-block;
   width: 1rem;
   height: 1rem;
-  background-image: var(--accordion-icon) !important;
+  /* background-image: var(--accordion-icon) !important; */
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: auto;
