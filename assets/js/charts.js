@@ -62,7 +62,7 @@ const ctxMembership = document
 let membershipChart = new Chart(ctxMembership, {
   type: "line",
   data: {
-    labels: ["មករា", "កុម្ភៈ", "មិនា", "មេសា", "ឧសភា", "មិថុនា"],
+    labels: ["មករា", "កុម្ភៈ", "មីនា", "មេសា", "ឧសភា", "មិថុនា"],
     datasets: [
       {
         label: "សមាជិក",
@@ -94,7 +94,7 @@ const ctxShop = document.getElementById("shopChart").getContext("2d");
 let shopChart = new Chart(ctxShop, {
   type: "line",
   data: {
-    labels: ["មករា", "កុម្ភៈ", "មិនា", "មេសា", "ឧសភា", "មិថុនា"],
+    labels: ["មករា", "កុម្ភៈ", "មីនា", "មេសា", "ឧសភា", "មិថុនា"],
     datasets: [
       {
         label: "ចំណូលប្រចាំខែ",
@@ -357,7 +357,7 @@ const ctxMonthlyEvent = document
 let monthlyEventChart = new Chart(ctxMonthlyEvent, {
   type: "line",
   data: {
-    labels: ["មករា", "កុម្ភៈ", "មិនា", "មេសា", "ឧសភា", "មិថុនា"],
+    labels: ["មករា", "កុម្ភៈ", "មីនា", "មេសា", "ឧសភា", "មិថុនា"],
     datasets: [
       {
         label: "ចំនួនអ្នកចូលរួមប្រចាំខែ",
