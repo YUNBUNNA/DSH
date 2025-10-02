@@ -28,14 +28,14 @@ toggleButton.addEventListener("click", () => {
     document.documentElement.classList.add("light-mode");
     localStorage.setItem("theme", "light");
     accordionButtons.forEach((btn) => {
-      btn.style.setProperty("--accordion-icon", "url(/assets/img/black.svg)");
+      btn.style.setProperty("--accordion-icon", "url(assets/img/black.svg)");
     });
   } else {
     document.documentElement.classList.remove("light-mode");
     document.documentElement.classList.add("dark-mode");
     localStorage.setItem("theme", "dark");
     accordionButtons.forEach((btn) => {
-      btn.style.setProperty("--accordion-icon", "url(/assets/img/white.svg)");
+      btn.style.setProperty("--accordion-icon", "url(assets/img/white.svg)");
     });
   }
   function updateCharts() {
