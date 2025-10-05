@@ -360,10 +360,12 @@
 
     <main>
         <!-- Shop banner -->
-        <section class="pt-15 first-section">
+        <section class="first-section">
             <div class="container" data-aos="fade-right" data-aos-delay="400">
-                <img src="../assets/img/shop-banner.jpg" class="img-fluid object-fit-cover w-100" alt=""
+                <img src="../assets/img/shop-banner.jpg" class="img-fluid object-fit-cover w-100 d-none d-md-block" alt=""
                     style="height: 200px" />
+                <img src="../assets/img/shop-banner.jpg" class="img-fluid object-fit-cover w-100 d-block d-md-none" alt=""
+                    style="height: 120px" />
             </div>
         </section>
         <!-- Products -->
@@ -371,7 +373,8 @@
             <div class="container d-flex flex-column mt-5">
                 <h2 id="tab-title" class="text-center text-main mb-4 fw-bold" data-aos="fade-right">សម្ភារៈ
                 </h2>
-                <ul class="nav nav-pills mb-3 mx-auto gap-3" id="pills-tab" role="tablist" data-aos="fade-right" data-aos-delay="300">
+                <ul class="nav nav-pills mb-4 justify-content-center align-items-center gap-3" id="pills-tab" role="tablist" data-aos="fade-right"
+                    data-aos-delay="300">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link link-hover active px-4" id="pills-all-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
