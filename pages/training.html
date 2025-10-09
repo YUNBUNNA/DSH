@@ -72,6 +72,14 @@
         transform: translateY(-5px);
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
+    .hover-up {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .hover-up:hover {
+      /* background: var(--secondary); */
+      transform: translateY(-3px);
+    }
 </style>
 
 <body class="bg-prime">
@@ -745,11 +753,11 @@
                 </p>
 
                 <div class="row g-4">
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift">
-                            <i class="bi bi-egg-fried text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <h3 class=" card-title text-main ">ប្រូតេអ៊ីន</h3>
-                            <p class="card-text lead text-prime  fs-title"> <span class=" ff">1.6-2.2g</span> ក្នុង <span class="ff">1kg</span>
+                    <div class="col-md-6 col-lg-3" >
+                        <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift hover-up" data-aos="fade-up" data-aos-delay="100">
+                            <i class="bi bi-egg-fried text-gold " style="font-size: 3rem; "></i>
+                            <h3 class=" card-title text-main mb-3 ">ប្រូតេអ៊ីន</h3>
+                            <p class="card-text lead text-prime fs-title mb-1"> <span class=" ff">1.6-2.2g</span> ក្នុង <span class="ff">1kg</span>
                                 ទម្ងន់ខ្លួន</p>
                             <div class="text-prime lead">សម្រាប់កសាង និងជួសជុលសាច់ដុំ</div>
                         </div>
@@ -757,27 +765,27 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift" data-aos="fade-up"
                             data-aos-delay="200">
-                            <i class="bi bi-cup-hot text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <h3 class="card-title text-main">កាបូអ៊ីដ្រាត</h3>
-                            <p class="card-text lead text-prime  fs-title"><span class="ff">3-7g</span> ក្នុង <span class="ff">1kg</span> ទម្ងន់ខ្លួន</p>
+                            <i class="bi bi-cup-hot text-gold " style="font-size: 3rem; "></i>
+                            <h3 class="card-title text-main mb-3">កាបូអ៊ីដ្រាត</h3>
+                            <p class="card-text lead text-prime  fs-title mb-1"><span class="ff">3-7g</span> ក្នុង <span class="ff">1kg</span> ទម្ងន់ខ្លួន</p>
                             <div class="text-prime lead">ថាមពលសម្រាប់ការហ្វឹកហាត់</div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift" data-aos="fade-up"
                             data-aos-delay="300">
-                            <i class="bi bi-droplet text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <h3 class="card-title text-main">ខ្លាញ់ល្អ</h3>
-                            <p class="card-text lead text-prime  fs-title"><span class="ff">0.8-1.2g</span> ក្នុង <span class="ff">1kg</span> ទម្ងន់ខ្លួន</p>
+                            <i class="bi bi-droplet text-gold" style="font-size: 3rem;"></i>
+                            <h3 class="card-title text-main mb-3">ខ្លាញ់ល្អ</h3>
+                            <p class="card-text lead text-prime  fs-title mb-1"><span class="ff">0.8-1.2g</span> ក្នុង <span class="ff">1kg</span> ទម្ងន់ខ្លួន</p>
                             <div class="text-prime lead">សម្រាប់អរម៉ូន និងសុខភាពទូទៅ</div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="card border-0 shadow-xs bg-prime text-center py-5 hover-lift" data-aos="fade-up"
                             data-aos-delay="400">
-                            <i class="bi bi-droplet text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                            <h3 class="card-title text-main">ទឹក</h3>
-                            <p class="card-text lead text-prime  fs-title"><span class="ff">2.5-3.5</span> លីត្រ ក្នុងមួយថ្ងៃ</p>
+                            <i class="bi bi-droplet text-gold" style="font-size: 3rem; "></i>
+                            <h3 class="card-title text-main mb-3">ទឹក</h3>
+                            <p class="card-text lead text-prime  fs-title mb-1"><span class="ff">2.5-3.5</span> លីត្រ ក្នុងមួយថ្ងៃ</p>
                             <div class="text-prime lead">សម្រាប់ការរំលាយអាហារ </div>
                         </div>
                     </div>
@@ -796,8 +804,8 @@
                             data-aos-delay="100">
                             <div class="card-body text-center p-4">
 
-                                <i class="bi bi-clock text-gold " style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                <h3 class=" text-main ">ស្ថេរភាព</h3>
+                                <i class="bi bi-clock text-gold " style="font-size: 3rem; "></i>
+                                <h3 class=" text-main mb-3">ស្ថេរភាព</h3>
                                 <p class="card-text text-prime lead">ហ្វឹកហាត់ជាទៀងទាត់ជាងការហ្វឹកហាត់ខ្លាំងម្តងម្កាល។
                                     ការស្ថេរភាពគឺជាសោរដែលបើកទ្វារដល់ភាពជោគជ័យ។</p>
                             </div>
@@ -807,8 +815,8 @@
                         <div class="card workout-plan-card border-0 shadow-sm bg-third h-100" data-aos="fade-up"
                             data-aos-delay="200">
                             <div class="card-body text-center p-4">
-                                <i class="bi bi-graph-up text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                <h3 class="text-main">រីកចម្រើនបន្តិចម្តង</h3>
+                                <i class="bi bi-graph-up text-gold" style="font-size: 3rem; "></i>
+                                <h3 class="text-main mb-3">រីកចម្រើនបន្តិចម្តង</h3>
                                 <p class="card-text text-prime lead">បន្ថែមទម្ងន់ ឬចំនួនដងបន្តិចម្តងរៀងរាល់សប្តាហ៍។
                                     <span class="ff">Progressive overload</span>
                                     គឺជាគន្លឹះនៃការកសាងសាច់ដុំ។</p>
@@ -819,8 +827,8 @@
                         <div class="card workout-plan-card border-0 shadow-sm bg-third h-100" data-aos="fade-up"
                             data-aos-delay="300">
                             <div class="card-body text-center p-4">
-                                <i class="bi bi-moon text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                <h3 class="text-main">ការសម្រាក</h3>
+                                <i class="bi bi-moon text-gold" style="font-size: 3rem; "></i>
+                                <h3 class="text-main mb-3">ការសម្រាក</h3>
                                 <p class="card-text text-prime lead">ដេក <span class="ff">7-9 </span>ម៉ោងក្នុងមួយយប់។
                                     សាច់ដុំរីកចម្រើននៅពេលសម្រាក មិនមែននៅពេលហ្វឹកហាត់ទេ។</p>
                             </div>
@@ -831,8 +839,8 @@
                             data-aos-delay="400">
                             <div class="card-body text-center p-4">
                                 <i class="bi bi-thermometer-half text-gold"
-                                    style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                <h3 class="text-main">ការកំដៅសាច់ដំុ</h3>
+                                    style="font-size: 3rem; "></i>
+                                <h3 class="text-main mb-3">ការកំដៅសាច់ដំុ</h3>
                                 <p class="card-text text-prime lead">កំដៅសាច់ដំុមុនហ្វឹកហាត់ <span class="ff">10-15</span> នាទី ដើម្បីជៀសវាងរបួស
                                     និងបង្កើនប្រសិទ្ធភាព</p>
                             </div>
@@ -843,8 +851,8 @@
                             data-aos-delay="500">
                             <div class="card-body text-center p-4">
                                 <i class="bi bi-clipboard-data text-gold"
-                                    style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                <h3 class="text-main">កត់ត្រាការហ្វឹកហាត់</h3>
+                                    style="font-size: 3rem; "></i>
+                                <h3 class="text-main mb-3">កត់ត្រាការហ្វឹកហាត់</h3>
                                 <p class="card-text text-prime lead">កត់ត្រាលម្អិតអំពីទម្ងន់, ចំនួនដង និងសេត
                                     ដើម្បីតាមដានការរីកចម្រើន។</p>
                             </div>
@@ -854,8 +862,8 @@
                         <div class="card workout-plan-card border-0 shadow-sm bg-third h-100" data-aos="fade-up"
                             data-aos-delay="600">
                             <div class="card-body text-center p-4">
-                                <i class="bi bi-people text-gold" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                                <h3 class="text-main">ស្វែងរកការគាំទ្រ</h3>
+                                <i class="bi bi-people text-gold" style="font-size: 3rem; "></i>
+                                <h3 class="text-main mb-3">ស្វែងរកការគាំទ្រ</h3>
                                 <p class="card-text text-prime lead">ហ្វឹកហាត់ជាមួយមិត្តភក្តិ ឬស្វែងរកគ្រូបង្វឹក។
                                     ការគាំទ្រពីសង្គមជួយកំណត់គោលដៅ។</p>
                             </div>
