@@ -232,9 +232,9 @@
           </a>
         </li>
 
-        <!-- សមាជិក -->
+        <!-- សិស្ស -->
         <li class="nav-item mb-2"><a href="#tab-members-add" class="nav-link text-white" data-bs-toggle="tab"><i
-              class="bi bi-book me-2"></i> បន្ថែមសមាជិក</a></li>
+              class="bi bi-person me-2"></i> បន្ថែមសិស្ស</a></li>
 
         <!-- គ្រូបង្វឹក -->
         <li class="nav-item mb-2">
@@ -244,18 +244,10 @@
             <i class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="coaches-dropdown" class="collapse list-unstyled ps-4 mt-2" data-bs-parent="#sidebar-nav">
-            <li class="nav-item mb-2"><a href="#tab-create-class" class="nav-link text-white"
-                data-bs-toggle="tab">ស្នើរបង្កើតថ្នាក់</a></li>
             <li class="nav-item mb-2"><a href="#tab-coaches-manage" class="nav-link text-white"
                 data-bs-toggle="tab">បន្ថែមគ្រូបង្វឹក</a></li>
             <li class="nav-item mb-2"><a href="#tab-coaches-schedule" class="nav-link text-white"
                 data-bs-toggle="tab">បង្កើតកាលវិភាគគ្រូបង្វឹក</a></li>
-            <!-- កាលវិភាគហ្វឹកហាត់ -->
-            <li class="nav-item mb-2">
-              <a href="#tab-schedule" class="nav-link text-white d-flex align-items-center" data-bs-toggle="tab">
-                កាលវិភាគហ្វឹកហាត់
-              </a>
-            </li>
           </ul>
         </li>
 
@@ -368,7 +360,7 @@
                   <div class="card-body">
                     <i class="bi bi-people fs-2 text-primary mb-2"></i>
                     <h4 class="mb-1 ff">842</h4>
-                    <small>សមាជិកសរុប</small>
+                    <small>សិស្សសរុប</small>
                   </div>
                 </div>
               </div>
@@ -435,7 +427,7 @@
                 <div class="card bg-prime shadow-xs border-0">
                   <div class="card-body">
                     <h6 class="card-title text-prime">
-                      <i class="bi bi-graph-up-arrow me-2 text-main"></i> កំណើនសមាជិក
+                      <i class="bi bi-graph-up-arrow me-2 text-main"></i> កំណើនសិស្ស
                     </h6>
                     <canvas id="membershipChart" style="height: 300px;"></canvas>
                   </div>
@@ -446,7 +438,7 @@
                 <div class="card shadow-xs border-0 bg-prime">
                   <div class="card-body">
                     <h6 class="card-title text-prime">
-                      <i class="bi bi-bar-chart-fill me-2 text-warning"></i> ចំនួនសមាជិកក្នុងកីឡាផ្សេងៗ
+                      <i class="bi bi-bar-chart-fill me-2 text-warning"></i> ចំនួនសិស្សក្នុងកីឡាផ្សេងៗ
                     </h6>
                     <canvas id="sportsChart" style="height: 300px;"></canvas>
                   </div>
@@ -481,7 +473,7 @@
             <!-- Table -->
             <div class="card mb-4 shadow-xs bg-prime">
               <div class="card-header border-0 border-bottom py-3 bg-prime">
-                <h4 class="mb-0 text-main">សមាជិកប្រចាំខែ</h4>
+                <h4 class="mb-0 text-main">សិស្សប្រចាំខែ</h4>
               </div>
               <div class="card-body d-flex flex-column pb-0">
                 <div class="table-responsive">
@@ -489,8 +481,8 @@
                     <thead>
                       <tr class="border-bottom">
                         <th class="py-3 ps-5">ខែ</th>
-                        <th class="py-3 ps-5">សមាជិកថ្មី</th>
-                        <th class="py-3 ps-5">សរុបសមាជិក</th>
+                        <th class="py-3 ps-5">សិស្សថ្មី</th>
+                        <th class="py-3 ps-5">សរុបសិស្ស</th>
                         <th class="py-3 ps-5">ការលូតលាស់ (%)</th>
                       </tr>
                     </thead>
@@ -628,7 +620,7 @@
           <div class="tab-pane fade" id="tab-members-add">
             <div class="card mb-4 bg-prime border-0">
               <div class="card-header border-0 border-bottom py-3 bg-prime mb-2">
-                <h4 class="mb-0 text-main">បន្ថែមសមាជិកថ្មី</h4>
+                <h4 class="mb-0 text-main">បន្ថែមសិស្សថ្មី</h4>
               </div>
               <div class="card-body">
                 <form>
@@ -636,7 +628,7 @@
                     <div class="col-md-4">
                       <div class="position-relative">
                         <input type="text" class="form-control bg-prime fs-text ps-7" id="name"
-                          placeholder="ឈ្មោះសមាជិក">
+                          placeholder="ឈ្មោះសិស្ស">
                         <i class="bi bi-person position-absolute text-gold tran-y icon-input"></i>
                       </div>
                     </div>
@@ -686,7 +678,7 @@
                     <div class="col-md-4">
                       <div class="position-relative">
                         <select class="form-select form-control ps-3 bg-prime text-prime">
-                          <option value="" disabled selected hidden>ជ្រើសរើសថ្ងៃ</option>
+                          <option value="" disabled selected hidden>ជ្រើសរើសថ្ងៃហ្វឹកហាត់</option>
                           <option>ច័ន្ទ - ព្រហស្បតិ៍</option>
                           <option>អង្គារ - សុក្រ</option>
                           <option>ពុធ - សៅរ៍</option>
@@ -733,7 +725,7 @@
                     </div>
                   </div>
                   <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-gold px-5" id="favoriteBtn1">បន្ថែមសមាជិក</button>
+                    <button type="button" class="btn btn-gold px-5" id="favoriteBtn1">បន្ថែមសិស្ស</button>
                     <div class="toast-container position-fixed" style="top: 5%; left: 47.5%;">
                       <div id="favoriteToast1" class="toast shadow-xs border-0 rounded-2" role="alert"
                         aria-live="assertive" aria-atomic="true">
@@ -752,7 +744,7 @@
             <div class="card mb-4 border-0">
               <div
                 class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-8">
-                <h4 class="mb-0 text-nowrap">បញ្ជីសមាជិក</h4>
+                <h4 class="mb-0 text-nowrap">បញ្ជីសិស្ស</h4>
                 <div class="position-relative">
                   <input type="text" class="form-control bg-prime fs-text text-second ps-7" placeholder="ស្វែងរកឈ្មោះ">
                   <i class="bi bi-search position-absolute text-gold icon-input tran-y"></i>
@@ -763,7 +755,7 @@
                   <table class="table mb-0 text-prime text-nowrap">
                     <thead>
                       <tr class="border-bottom">
-                        <th class="py-3 ps-5">សមាជិក</th>
+                        <th class="py-3 ps-5">សិស្ស</th>
                         <th class="py-3 ps-5">ភេទ</th>
                         <th class="py-3 ps-5">អាយុ</th>
                         <th class="py-3 ps-5">លេខទូរស័ព្ទ</th>
@@ -893,7 +885,7 @@
                                 <div class="modal-body">
                                   <div class="card bg-prime border-0">
                                     <div class="card-header border-0 bg-prime">
-                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានសមាជិក</h5>
+                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានសិស្ស</h5>
                                     </div>
                                     <div class="card-body">
                                       <form>
@@ -1036,7 +1028,7 @@
                           </div>
 
                           <!-- Success Modal -->
-                          <div class="modal fade" id="success-delete-1" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-delete-1" tabindex="-1"
                             aria-labelledby="success-delete-label-1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -1057,7 +1049,7 @@
                             </div>
                           </div>
                           <!-- Success Modal -->
-                          <div class="modal fade" id="success-edit-1" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-1" tabindex="-1"
                             aria-labelledby="success-delete-label-1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -1200,7 +1192,7 @@
                                 <div class="modal-body">
                                   <div class="card bg-prime border-0">
                                     <div class="card-header border-0 bg-prime">
-                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានសមាជិក</h5>
+                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានសិស្ស</h5>
                                     </div>
                                     <div class="card-body">
                                       <form>
@@ -1343,7 +1335,7 @@
                           </div>
 
                           <!-- Success Modal -->
-                          <div class="modal fade" id="success-delete-2" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-delete-2" tabindex="-1"
                             aria-labelledby="success-delete-label-1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -1365,7 +1357,7 @@
                           </div>
 
                           <!-- Success Modal -->
-                          <div class="modal fade" id="success-edit-2" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-2" tabindex="-1"
                             aria-labelledby="success-delete-label-1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -1507,7 +1499,7 @@
                                 <div class="modal-body">
                                   <div class="card bg-prime border-0">
                                     <div class="card-header border-0 bg-prime">
-                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានសមាជិក</h5>
+                                      <h5 class="mb-0 text-main text-center">កែប្រែព័ត៌មានសិស្ស</h5>
                                     </div>
                                     <div class="card-body">
                                       <form>
@@ -1652,7 +1644,7 @@
                           </div>
 
                           <!-- Success Modal -->
-                          <div class="modal fade" id="success-delete-3" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-delete-3" tabindex="-1"
                             aria-labelledby="success-delete-label-3" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -1672,8 +1664,9 @@
                               </div>
                             </div>
                           </div>
+
                           <!-- Success Modal -->
-                          <div class="modal fade" id="success-edit-3" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-3" tabindex="-1"
                             aria-labelledby="success-delete-label-1" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -1701,350 +1694,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="tab-pane fade" id="tab-create-class">
-            <div class="card mb-4 shadow-xs bg-prime">
-              <div class="card-header border-0 border-bottom py-3 bg-prime text-main">
-                <h4>
-                  <i class="bi bi-journal-plus me-2 text-main"></i> ការស្នើរសុំវគ្គសិក្សាពីគ្រូបង្វឹក
-                </h4>
-              </div>
-              <div class="card-body d-flex flex-column">
-                <div class="table-responsive">
-                  <table class="table text-prime text-nowrap">
-                    <thead>
-                      <tr class="border-bottom">
-                        <th class="py-3 ps-5 align-middle">ឈ្មោះវគ្គសិក្សា</th>
-                        <th class="py-3 ps-5 align-middle">គ្រូបង្វឹក</th>
-                        <th class="py-3 ps-5 align-middle">ប្រភេទកីឡា</th>
-                        <th class="py-3 ps-5 align-middle">ថ្ងៃចាប់ផ្ដើម</th>
-                        <th class="py-3 ps-5 align-middle">ម៉ោងចាប់ផ្ដើម - ម៉ោងបញ្ចប់</th>
-                        <th class="py-3 ps-5 align-middle">សកម្មភាព</th>
-                      </tr>
-                    </thead>
-                    <tbody class="bg-prime">
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">Swimming Basics</td>
-                        <td class="py-3 ps-5 ff align-middle">Michael Phelps</td>
-                        <td class="py-3 ps-5 align-middle">ហែលទឹក</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">25</span> តុលា <span class="ff">2023</span>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">8:00AM - 10:00AM</td>
-                        <td class="py-3 ps-5 align-middle d-flex gap-2">
-                          <!-- Accept Button triggers Accept Modal -->
-                          <button class="btn btn-success btn-sm px-4" data-bs-toggle="modal"
-                            data-bs-target="#acceptModal1">
-                            យល់ព្រម
-                          </button>
-                          <!-- Reject Button triggers Reject Modal -->
-                          <button class="btn btn-danger btn-sm px-4" data-bs-toggle="modal"
-                            data-bs-target="#rejectModal1">
-                            បោះបង់
-                          </button>
-                        </td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">Badminton Basics</td>
-                        <td class="py-3 ps-5 ff align-middle">Lisa Smith</td>
-                        <td class="py-3 ps-5 align-middle">វាយសី</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">2</span> វិច្ឆិកា <span
-                            class="ff">2023</span></td>
-                        <td class="py-3 ps-5 ff align-middle">10:00AM - 11:30AM</td>
-                        <td class="py-3 ps-5 align-middle d-flex gap-2">
-                          <!-- Accept Button triggers Accept Modal -->
-                          <button class="btn btn-success btn-sm px-4" data-bs-toggle="modal"
-                            data-bs-target="#acceptModal2">
-                            យល់ព្រម
-                          </button>
-                          <!-- Reject Button triggers Reject Modal -->
-                          <button class="btn btn-danger btn-sm px-4" data-bs-toggle="modal"
-                            data-bs-target="#rejectModal2">
-                            បោះបង់
-                          </button>
-                        </td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">Basketball Advanced</td>
-                        <td class="py-3 ps-5 ff align-middle">James Jordan</td>
-                        <td class="py-3 ps-5 align-middle">បាល់បោះ</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">10</span> ធ្នូ <span class="ff">2023</span>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">2:00PM - 4:00PM</td>
-                        <td class="py-3 ps-5 align-middle d-flex gap-2">
-                          <!-- Accept Button triggers Accept Modal -->
-                          <button class="btn btn-success btn-sm px-4" data-bs-toggle="modal"
-                            data-bs-target="#acceptModal3">
-                            យល់ព្រម
-                          </button>
-                          <!-- Reject Button triggers Reject Modal -->
-                          <button class="btn btn-danger btn-sm px-4" data-bs-toggle="modal"
-                            data-bs-target="#rejectModal3">
-                            បោះបង់
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <!-- Accept Modal -->
-            <div class="modal fade" id="acceptModal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-              aria-labelledby="accept-label-1" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-bottom px-5">
-                    <div class="d-flex gap-3 align-items-center">
-                      <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                        style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                      <h6 class="mb-0 text-prime ff">Michael Phelps</h6>
-                    </div>
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <h6 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់យល់ព្រមវគ្គសិក្សា <span
-                          class="ff">“Swimming Basics”</span>?</h6>
-                      <div class="d-flex gap-2">
-                        <!-- Click Accept -> Close modal + open Success Modal -->
-                        <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal"
-                          data-bs-target="#successModal1"
-                          class="btn btn-success w-100 text-center text-white">យល់ព្រម</button>
-                        <button data-bs-dismiss="modal"
-                          class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Reject Modal -->
-            <div class="modal fade" id="rejectModal1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-              aria-labelledby="reject-label-1" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-bottom px-5">
-                    <div class="d-flex gap-3 align-items-center">
-                      <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                        style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                      <h6 class="mb-0 text-prime ff">Michael Phelps</h6>
-                    </div>
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <h6 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់បោះបង់វគ្គសិក្សា <span
-                          class="ff">“Swimming Basics”</span>?</h6>
-                      <div class="d-flex gap-2">
-                        <!-- Click Reject -> Close modal + open Success Modal -->
-                        <button data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#successModal1"
-                          class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                        <button data-bs-dismiss="modal"
-                          class="btn btn-secondary w-100 text-center text-white">ត្រឡប់ក្រោយ</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Success Modal -->
-            <div class="modal fade" id="successModal1" tabindex="-1" aria-labelledby="success-label-1"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-0 shadow-none">
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                        style="width: 100px; height: 100px;"></i>
-                      <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Accept Modal -->
-            <div class="modal fade" id="acceptModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-              aria-labelledby="accept-label-2" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-bottom px-5">
-                    <div class="d-flex gap-3 align-items-center">
-                      <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                        style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                      <h6 class="mb-0 text-prime ff">Lisa Smith</h6>
-                    </div>
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <h6 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់យល់ព្រមវគ្គសិក្សា <span
-                          class="ff">“Badminton Basics”</span>?</h6>
-                      <div class="d-flex gap-2">
-                        <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal"
-                          data-bs-target="#successModal2"
-                          class="btn btn-success w-100 text-center text-white">យល់ព្រម</button>
-                        <button data-bs-dismiss="modal"
-                          class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Reject Modal -->
-            <div class="modal fade" id="rejectModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-              aria-labelledby="reject-label-2" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-bottom px-5">
-                    <div class="d-flex gap-3 align-items-center">
-                      <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                        style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                      <h6 class="mb-0 text-prime ff">Lisa Smith</h6>
-                    </div>
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <h6 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់បោះបង់វគ្គសិក្សា <span
-                          class="ff">“Badminton Basics”</span>?</h6>
-                      <div class="d-flex gap-2">
-                        <button data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#successModal2"
-                          class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                        <button data-bs-dismiss="modal"
-                          class="btn btn-secondary w-100 text-center text-white">ត្រឡប់ក្រោយ</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Success Modal -->
-            <div class="modal fade" id="successModal2" tabindex="-1" aria-labelledby="success-label-2"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-0 shadow-none">
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                        style="width: 100px; height: 100px;"></i>
-                      <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- Accept Modal -->
-            <div class="modal fade" id="acceptModal3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-              aria-labelledby="accept-label-3" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-bottom px-5">
-                    <div class="d-flex gap-3 align-items-center">
-                      <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                        style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                      <h6 class="mb-0 text-prime ff">James Jordan</h6>
-                    </div>
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <h6 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់យល់ព្រមវគ្គសិក្សា <span
-                          class="ff">“Basketball Advanced”</span>?</h6>
-                      <div class="d-flex gap-2">
-                        <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal"
-                          data-bs-target="#successModal3"
-                          class="btn btn-success w-100 text-center text-white">យល់ព្រម</button>
-                        <button data-bs-dismiss="modal"
-                          class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Reject Modal -->
-            <div class="modal fade" id="rejectModal3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-              aria-labelledby="reject-label-3" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-bottom px-5">
-                    <div class="d-flex gap-3 align-items-center">
-                      <img src="https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg" alt=""
-                        style="width: 50px; height: 50px;" class="img-fluid object-fit-cover rounded-1">
-                      <h6 class="mb-0 text-prime ff">James Jordan</h6>
-                    </div>
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <h6 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់បោះបង់វគ្គសិក្សា <span
-                          class="ff">“Basketball Advanced”</span>?</h6>
-                      <div class="d-flex gap-2">
-                        <button data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#successModal3"
-                          class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                        <button data-bs-dismiss="modal"
-                          class="btn btn-secondary w-100 text-center text-white">ត្រឡប់ក្រោយ</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Success Modal -->
-            <div class="modal fade" id="successModal3" tabindex="-1" aria-labelledby="success-label-3"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3 bg-prime">
-                  <div class="modal-header border-0 shadow-none">
-                    <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="bi bi-x-lg fs-5 text-prime"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="card-body">
-                      <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                        style="width: 100px; height: 100px;"></i>
-                      <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
 
           <!-- Manage Coaches Tab -->
@@ -2350,7 +1999,7 @@
                           </div>
 
                           <!-- Success Delete Modal -->
-                          <div class="modal fade" id="success-delete-4" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-delete-4" tabindex="-1"
                             aria-labelledby="success-delete-label-4" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -2369,7 +2018,7 @@
                             </div>
                           </div>
                           <!-- Success edit Modal -->
-                          <div class="modal fade" id="success-edit-4" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-4" tabindex="-1"
                             aria-labelledby="success-delete-label-4" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -2592,7 +2241,7 @@
                           </div>
 
                           <!-- Success Delete Modal -->
-                          <div class="modal fade" id="success-delete-5" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-delete-5" tabindex="-1"
                             aria-labelledby="success-delete-label-5" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -2612,7 +2261,7 @@
                           </div>
 
                           <!-- Success Edit Modal -->
-                          <div class="modal fade" id="success-edit-5" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-5" tabindex="-1"
                             aria-labelledby="success-delete-label-5" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -2832,7 +2481,7 @@
                           </div>
 
                           <!-- Success Delete Modal -->
-                          <div class="modal fade" id="success-delete-6" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-delete-6" tabindex="-1"
                             aria-labelledby="success-delete-label-6" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -2852,7 +2501,7 @@
                           </div>
 
                           <!-- Success Edit Modal -->
-                          <div class="modal fade" id="success-edit-6" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-6" tabindex="-1"
                             aria-labelledby="success-delete-label-6" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -2937,7 +2586,7 @@
                     <div class="col-md-4">
                       <div class="position-relative">
                         <select class="form-select form-control ps-3 bg-prime text-prime">
-                          <option value="" disabled selected hidden>ជ្រើសរើសថ្ងៃ</option>
+                          <option value="" disabled selected hidden>ជ្រើសរើសថ្ងៃហ្វឹកហាត់</option>
                           <option>ច័ន្ទ - ព្រហស្បតិ៍</option>
                           <option>អង្គារ - សុក្រ</option>
                           <option>ពុធ - សៅរ៍</option>
@@ -3003,6 +2652,67 @@
                     </div>
                   </div>
                 </form>
+              </div>
+            </div>
+            <div class="card mb-4 border-0 shadow-xs bg-prime">
+              <div
+                class="card-header border-0 border-bottom bg-prime py-3 d-flex justify-content-between align-items-center">
+                <h4 class="mb-0 text-main">កាលវិភាគប្រចាំសប្ដាហ៍</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table mb-0 text-prime text-nowrap">
+                    <thead class="bg-third text-muted fw-bold">
+                      <tr class="border-bottom">
+                        <th class="py-3 ps-5">ម៉ោង</th>
+                        <th class="py-3 ps-5">ច័ន្ទ</th>
+                        <th class="py-3 ps-5">អង្គារ</th>
+                        <th class="py-3 ps-5">ពុធ</th>
+                        <th class="py-3 ps-5">ព្រហស្បតិ៍</th>
+                        <th class="py-3 ps-5">សុក្រ</th>
+                        <th class="py-3 ps-5">សៅរ៍</th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-prime">
+                      <tr class="border-bottom">
+                        <td class="py-3 ps-5"><span class="ff">8:00 AM - 9:00 AM</span></td>
+                        <td class="py-3 ps-5">បាល់ទាត់ (<span class="ff">Lionel</span>)</td>
+                        <td class="py-3 ps-5">រត់ប្រណាំង (<span class="ff">Usain</span>)</td>
+                        <td class="py-3 ps-5">បាល់បោះ (<span class="ff">Stephen</span>)</td>
+                        <td class="py-3 ps-5">ជិះកង់ (<span class="ff">Chris</span>)</td>
+                        <td class="py-3 ps-5">បាល់ទះ (<span class="ff">Yao</span>)</td>
+                        <td class="py-3 ps-5">ហែលទឹក (<span class="ff">Michael</span>)</td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="py-3 ps-5"><span class="ff">9:00 AM - 11:00 AM</span></td>
+                        <td class="py-3 ps-5">ការ៉ាតេ (<span class="ff">Simone</span>)</td>
+                        <td class="py-3 ps-5">វាយសី (<span class="ff">Serena</span>)</td>
+                        <td class="py-3 ps-5">បាល់ទាត់ (<span class="ff">Lionel</span>)</td>
+                        <td class="py-3 ps-5">រត់ប្រណាំង (<span class="ff">Usain</span>)</td>
+                        <td class="py-3 ps-5">បាល់បោះ (<span class="ff">Stephen</span>)</td>
+                        <td class="py-3 ps-5">ជិះកង់ (<span class="ff">Chris</span>)</td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="py-3 ps-5"><span class="ff">1:00 PM - 2:00 PM</span></td>
+                        <td class="py-3 ps-5">បាល់ទះ (<span class="ff">Yao</span>)</td>
+                        <td class="py-3 ps-5">ហែលទឹក (<span class="ff">Michael</span>)</td>
+                        <td class="py-3 ps-5">ការ៉ាតេ (<span class="ff">Simone</span>)</td>
+                        <td class="py-3 ps-5">វាយសី (<span class="ff">Serena</span>)</td>
+                        <td class="py-3 ps-5">បាល់ទាត់ (<span class="ff">Lionel</span>)</td>
+                        <td class="py-3 ps-5">រត់ប្រណាំង (<span class="ff">Usain</span>)</td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td class="py-3 ps-5"><span class="ff">2:00 PM - 4:00 PM</span></td>
+                        <td class="py-3 ps-5">បាល់បោះ (<span class="ff">Stephen</span>)</td>
+                        <td class="py-3 ps-5">ជិះកង់ (<span class="ff">Chris</span>)</td>
+                        <td class="py-3 ps-5">បាល់ទះ (<span class="ff">Yao</span>)</td>
+                        <td class="py-3 ps-5">ហែលទឹក (<span class="ff">Michael</span>)</td>
+                        <td class="py-3 ps-5">ការ៉ាតេ (<span class="ff">Simone</span>)</td>
+                        <td class="py-3 ps-5">វាយសី (<span class="ff">Serena</span>)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -3257,7 +2967,7 @@
                           </div>
 
                           <!-- Success Modal for Edit -->
-                          <div class="modal fade" id="success-edit-unique" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-unique" tabindex="-1"
                             aria-labelledby="success-edit-label-unique" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -3279,7 +2989,7 @@
                           </div>
 
                           <!-- Success Modal for Agree / យល់ព្រម -->
-                          <div class="modal fade" id="success-agree-unique" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-agree-unique" tabindex="-1"
                             aria-labelledby="success-agree-label-unique" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -3462,7 +3172,7 @@
                           </div>
 
                           <!-- Success Modal for Edit -->
-                          <div class="modal fade" id="success-edit-7" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-7" tabindex="-1"
                             aria-labelledby="success-edit-label-3" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -3484,7 +3194,7 @@
                           </div>
 
                           <!-- Success Modal for Agree / យល់ព្រម -->
-                          <div class="modal fade" id="success-agree-3" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-agree-3" tabindex="-1"
                             aria-labelledby="success-agree-label-3" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -3768,7 +3478,7 @@
                           </div>
 
                           <!-- Success Modal for Edit -->
-                          <div class="modal fade" id="success-edit-8" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-8" tabindex="-1"
                             aria-labelledby="success-edit-label-3" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -3790,7 +3500,7 @@
                           </div>
 
                           <!-- Success Modal for Agree / យល់ព្រម -->
-                          <div class="modal fade" id="success-agree-4" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-agree-4" tabindex="-1"
                             aria-labelledby="success-agree-label-3" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -3981,7 +3691,7 @@
                           </div>
 
                           <!-- Success Modal for Edit -->
-                          <div class="modal fade" id="success-edit-9" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-edit-9" tabindex="-1"
                             aria-labelledby="success-edit-label-5" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -4003,7 +3713,7 @@
                           </div>
 
                           <!-- Success Modal for Agree -->
-                          <div class="modal fade" id="success-agree-5" tabindex="-1"
+                          <div class="modal fade auto-close" id="success-agree-5" tabindex="-1"
                             aria-labelledby="success-agree-label-5" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
@@ -4859,71 +4569,6 @@
             </div>
           </div>
 
-          <!-- Schedule -->
-          <div class="tab-pane fade" id="tab-schedule">
-            <div class="card mb-4 border-0 shadow-xs bg-prime">
-              <div
-                class="card-header border-0 border-bottom bg-prime py-3 d-flex justify-content-between align-items-center">
-                <h4 class="mb-0 text-main">កាលវិភាគប្រចាំសប្ដាហ៍</h4>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table mb-0 text-prime text-nowrap">
-                    <thead class="bg-third text-muted fw-bold">
-                      <tr class="border-bottom">
-                        <th class="py-3 ps-5">ម៉ោង</th>
-                        <th class="py-3 ps-5">ច័ន្ទ</th>
-                        <th class="py-3 ps-5">អង្គារ</th>
-                        <th class="py-3 ps-5">ពុធ</th>
-                        <th class="py-3 ps-5">ព្រហស្បតិ៍</th>
-                        <th class="py-3 ps-5">សុក្រ</th>
-                        <th class="py-3 ps-5">សៅរ៍</th>
-                      </tr>
-                    </thead>
-                    <tbody class="bg-prime">
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5"><span class="ff">8:00 AM - 9:00 AM</span></td>
-                        <td class="py-3 ps-5">បាល់ទាត់ (<span class="ff">Lionel</span>)</td>
-                        <td class="py-3 ps-5">រត់ប្រណាំង (<span class="ff">Usain</span>)</td>
-                        <td class="py-3 ps-5">បាល់បោះ (<span class="ff">Stephen</span>)</td>
-                        <td class="py-3 ps-5">ជិះកង់ (<span class="ff">Chris</span>)</td>
-                        <td class="py-3 ps-5">បាល់ទះ (<span class="ff">Yao</span>)</td>
-                        <td class="py-3 ps-5">ហែលទឹក (<span class="ff">Michael</span>)</td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5"><span class="ff">9:00 AM - 11:00 AM</span></td>
-                        <td class="py-3 ps-5">ការ៉ាតេ (<span class="ff">Simone</span>)</td>
-                        <td class="py-3 ps-5">វាយសី (<span class="ff">Serena</span>)</td>
-                        <td class="py-3 ps-5">បាល់ទាត់ (<span class="ff">Lionel</span>)</td>
-                        <td class="py-3 ps-5">រត់ប្រណាំង (<span class="ff">Usain</span>)</td>
-                        <td class="py-3 ps-5">បាល់បោះ (<span class="ff">Stephen</span>)</td>
-                        <td class="py-3 ps-5">ជិះកង់ (<span class="ff">Chris</span>)</td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5"><span class="ff">1:00 PM - 2:00 PM</span></td>
-                        <td class="py-3 ps-5">បាល់ទះ (<span class="ff">Yao</span>)</td>
-                        <td class="py-3 ps-5">ហែលទឹក (<span class="ff">Michael</span>)</td>
-                        <td class="py-3 ps-5">ការ៉ាតេ (<span class="ff">Simone</span>)</td>
-                        <td class="py-3 ps-5">វាយសី (<span class="ff">Serena</span>)</td>
-                        <td class="py-3 ps-5">បាល់ទាត់ (<span class="ff">Lionel</span>)</td>
-                        <td class="py-3 ps-5">រត់ប្រណាំង (<span class="ff">Usain</span>)</td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5"><span class="ff">2:00 PM - 4:00 PM</span></td>
-                        <td class="py-3 ps-5">បាល់បោះ (<span class="ff">Stephen</span>)</td>
-                        <td class="py-3 ps-5">ជិះកង់ (<span class="ff">Chris</span>)</td>
-                        <td class="py-3 ps-5">បាល់ទះ (<span class="ff">Yao</span>)</td>
-                        <td class="py-3 ps-5">ហែលទឹក (<span class="ff">Michael</span>)</td>
-                        <td class="py-3 ps-5">ការ៉ាតេ (<span class="ff">Simone</span>)</td>
-                        <td class="py-3 ps-5">វាយសី (<span class="ff">Serena</span>)</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- edit website -->
           <div class="tab-pane fade" id="tab-edit-website">
             <div class="container p-0">
@@ -5058,7 +4703,7 @@
                         </div>
                       </div>
                       <!-- Success Delete Modal -->
-                      <div class="modal fade" id="success-create-banner" tabindex="-1"
+                      <div class="modal fade auto-close" id="success-create-banner" tabindex="-1"
                         aria-labelledby="success-delete-label-4" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content rounded-3 bg-prime">
@@ -5284,7 +4929,7 @@
                               </div>
 
                               <!-- Success Delete Banner Modal -->
-                              <div class="modal fade" id="success-delete-banner-1" tabindex="-1"
+                              <div class="modal fade auto-close" id="success-delete-banner-1" tabindex="-1"
                                 aria-labelledby="success-delete-banner-label-1" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                   <div class="modal-content rounded-3 bg-prime">
@@ -5306,7 +4951,7 @@
                               </div>
 
                               <!-- Success Edit Banner Modal -->
-                              <div class="modal fade" id="success-edit-banner-1" tabindex="-1"
+                              <div class="modal fade auto-close" id="success-edit-banner-1" tabindex="-1"
                                 aria-labelledby="success-delete-banner-label-1" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                   <div class="modal-content rounded-3 bg-prime">
@@ -5543,7 +5188,7 @@
                             </div>
 
                             <!-- Success Delete Banner Modal -->
-                            <div class="modal fade" id="success-delete-banner-2" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade auto-close" id="success-delete-banner-2" tabindex="-1" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-0 shadow-none">
@@ -5564,7 +5209,7 @@
                             </div>
 
                             <!-- Success Edit Banner Modal -->
-                            <div class="modal fade" id="success-edit-banner-2" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade auto-close" id="success-edit-banner-2" tabindex="-1" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-0 shadow-none">
@@ -5799,7 +5444,7 @@
                             </div>
 
                             <!-- Success Delete Banner Modal -->
-                            <div class="modal fade" id="success-delete-banner-3" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade auto-close" id="success-delete-banner-3" tabindex="-1" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-0 shadow-none">
@@ -5820,7 +5465,7 @@
                             </div>
 
                             <!-- Success Edit Banner Modal -->
-                            <div class="modal fade" id="success-edit-banner-3" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade auto-close" id="success-edit-banner-3" tabindex="-1" aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-0 shadow-none">
@@ -5849,120 +5494,13 @@
                 <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
                   aria-labelledby="pills-profile-tab" tabindex="0">
                   <div class="card border-0 bg-prime">
-                    <div
-                      class="card-header border-0 border-bottom py-3 bg-prime d-flex justify-content-between align-content-center">
-                      <h4 class="mb-0 text-main">កំណត់ <span class="ff">Logo</span></h4>
-                      <button type="button" class="btn btn-gold fs-nav fw-normal px-5" data-bs-toggle="modal"
-                        data-bs-target="#create-logo">
-                        <i class="bi bi-plus-lg me-1"></i> បង្កើត <span class="ff">Logo</span>
-                      </button>
-                      <!-- Change Logo Modal -->
-                      <div class="modal fade" id="create-logo" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="change-logo-label" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content rounded-3 bg-prime">
-                            <div class="modal-header border-bottom px-5">
-                              <h4 class="mb-0 text-main">បង្កើត <span class="ff">Logo</span> ថ្មី</h4>
-                              <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="bi bi-x-lg fs-5 text-prime"></i>
-                              </button>
-                            </div>
-                            <div class="modal-body d-flex flex-column">
-                              <div class="card border-0 bg-prime">
-                                <div class="card-body">
 
-                                  <!-- Tab Switch -->
-                                  <ul class="nav nav-pills mb-3 d-flex gap-2" id="pills-tab-logo" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                      <button class="nav-link active ff" id="tab-logo-url" data-bs-toggle="pill"
-                                        data-bs-target="#content-logo-url" type="button" role="tab"
-                                        aria-controls="content-logo-url" aria-selected="true">
-                                        <i class="bi bi-link-45deg"></i> URL
-                                      </button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                      <button class="nav-link ff" id="tab-logo-upload" data-bs-toggle="pill"
-                                        data-bs-target="#content-logo-upload" type="button" role="tab"
-                                        aria-controls="content-logo-upload" aria-selected="false">
-                                        <i class="bi bi-card-image"></i> Upload
-                                      </button>
-                                    </li>
-                                  </ul>
-
-                                  <!-- Tab Content -->
-                                  <div class="tab-content" id="pills-tabContent-logo">
-                                    <!-- URL Input -->
-                                    <div class="tab-pane fade show active" id="content-logo-url" role="tabpanel"
-                                      aria-labelledby="tab-logo-url" tabindex="0">
-                                      <div class="row mb-3">
-                                        <div class="col-md-12">
-                                          <div class="position-relative">
-                                            <input type="text" class="form-control bg-prime fs-text text-second ps-6 ff"
-                                              placeholder="Logo URL">
-                                            <i
-                                              class="bi bi-link-45deg position-absolute text-gold icon-input tran-y"></i>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <!-- File Upload -->
-                                    <div class="tab-pane fade" id="content-logo-upload" role="tabpanel"
-                                      aria-labelledby="tab-logo-upload" tabindex="0">
-                                      <div class="row mb-3">
-                                        <div class="col-md-12">
-                                          <input class="form-control ps-2 ff text-prime" type="file"
-                                            id="customLogoFile">
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                </div>
-
-                                <!-- Modal Buttons -->
-                                <div class="d-flex justify-content-end gap-2">
-                                  <button type="button" class="btn btn-danger text-white px-4"
-                                    data-bs-dismiss="modal">បោះបង់</button>
-                                  <button type="button" data-bs-toggle="modal" data-bs-target="#success-change-logo"
-                                    class="btn btn-primary text-white px-4">រក្សាទុក</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Success Modal -->
-                      <div class="modal fade" id="success-change-logo" tabindex="-1"
-                        aria-labelledby="success-logo-label" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content rounded-3 bg-prime">
-                            <div class="modal-header border-0 shadow-none">
-                              <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="bi bi-x-lg fs-5 text-prime"></i>
-                              </button>
-                            </div>
-                            <div class="modal-body text-center">
-                              <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                                style="width: 100px; height: 100px;"></i>
-                              <h5 class="text-prime mb-4">រួចរាល់</h5>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
                     <div class="card-body bg-third px-0">
                       <div class="row">
                         <div class="col-lg-3">
                           <div class="card border-0 bg-prime">
                             <img src="../assets/img/logo2.png" alt="" class="img-fluid w-50 mx-auto">
                             <div class="card-body pt-0">
-                              <!-- <div class="form-check form-switch">
-                                <input class="form-check-input my-0 me-2" type="checkbox" checked>
-                                <label class="form-check-label text-prime ff">Active</label>
-                              </div> -->
                               <div class="border-bottom mb-3"></div>
                               <div class="d-flex gap-3 justify-content-between align-items-center">
                                 <h6 class="fs-6 mb-0 text-end text-second"><span class="ff">17</span> តុលា <span
@@ -5974,63 +5512,6 @@
                                     <i class="bi bi-pencil text-main fs-nav"></i>
                                   </button>
 
-                                  <!-- Delete Button -->
-                                  <button class="btn p-0 text-prime bg-prime text-center" data-bs-toggle="modal"
-                                    data-bs-target="#delete-logo-1">
-                                    <i class="bi bi-trash text-danger fs-nav"></i>
-                                  </button>
-                                </div>
-
-                                <!-- Delete Banner Modal -->
-                                <div class="modal fade" id="delete-logo-1" data-bs-backdrop="static"
-                                  data-bs-keyboard="false" tabindex="-1" aria-labelledby="delete-banner-label-2"
-                                  aria-hidden="true">
-                                  <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content rounded-3 bg-prime">
-                                      <div class="modal-header border-bottom px-5">
-                                        <div class="d-flex gap-3 align-items-center">
-                                          <img src="../assets/img/logo2.png" alt="" style="width: 80px; height: 50px;"
-                                            class="img-fluid object-fit-cover rounded-1">
-                                        </div>
-                                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
-                                          aria-label="Close">
-                                          <i class="bi bi-x-lg fs-5 text-prime"></i>
-                                        </button>
-                                      </div>
-                                      <div class="modal-body">
-                                        <div class="card-body">
-                                          <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុប <span
-                                              class="ff">Logo</span> នេះឬ?</h5>
-                                          <div class="d-flex gap-2">
-                                            <button type="button" data-bs-toggle="modal"
-                                              data-bs-target="#success-delete-logo-1"
-                                              class="btn btn-primary w-100 text-center text-white">យល់ព្រម</button>
-                                            <button data-bs-dismiss="modal"
-                                              class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!-- Success Delete Banner Modal -->
-                                <div class="modal fade" id="success-delete-logo-1" tabindex="-1" aria-hidden="true">
-                                  <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content rounded-3 bg-prime">
-                                      <div class="modal-header border-0 shadow-none">
-                                        <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
-                                          aria-label="Close">
-                                          <i class="bi bi-x-lg fs-5 text-prime"></i>
-                                        </button>
-                                      </div>
-                                      <div class="modal-body text-center">
-                                        <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                                          style="width: 100px; height: 100px;"></i>
-                                        <h5 class="text-prime mb-4">រួចរាល់</h5>
-                                      </div>
-                                    </div>
-                                  </div>
                                 </div>
 
                                 <!-- Edit Banner Modal -->
@@ -6121,7 +5602,7 @@
                                 </div>
 
                                 <!-- Success Edit Banner Modal -->
-                                <div class="modal fade" id="success-edit-logo-1" tabindex="-1" aria-hidden="true">
+                                <div class="modal fade auto-close" id="success-edit-logo-1" tabindex="-1" aria-hidden="true">
                                   <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content rounded-3 bg-prime">
                                       <div class="modal-header border-0 shadow-none">
@@ -6223,6 +5704,22 @@
     document.getElementById("favoriteBtn5").addEventListener("click", () => showToast("favoriteToast5"));
     document.getElementById("favoriteBtn6").addEventListener("click", () => showToast("favoriteToast6"));
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const autoCloseModals = document.querySelectorAll(".auto-close");
+
+      autoCloseModals.forEach(modalEl => {
+        modalEl.addEventListener("shown.bs.modal", function () {
+          setTimeout(() => {
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) modal.hide();
+          }, 1500);
+        });
+      });
+    });
+  </script>
+
 
 
 </body>

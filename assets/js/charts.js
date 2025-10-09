@@ -65,7 +65,7 @@ let membershipChart = new Chart(ctxMembership, {
     labels: ["មករា", "កុម្ភៈ", "មីនា", "មេសា", "ឧសភា", "មិថុនា"],
     datasets: [
       {
-        label: "សមាជិក",
+        label: "សិស្ស",
         data: [20, 100, 180, 220, 280, 350],
         borderColor: "#0d6efd",
         backgroundColor: "rgba(13, 110, 253, 0.2)",
@@ -140,7 +140,7 @@ let sportsChart = new Chart(ctxSports, {
     ],
     datasets: [
       {
-        label: "ចំនួនសមាជិកក្នុងកីឡា",
+        label: "ចំនួនសិស្សក្នុងកីឡា",
         data: [142, 98, 125, 76, 87, 64, 92, 58],
         backgroundColor: [
           "#4cc9f0",

@@ -525,5 +525,17 @@
 <script src="../assets/plugins/aos/js/aos.js"></script>
 <!-- link js custom -->
 <script src="../assets/js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const successModal = document.getElementById("success-save-1");
+
+    successModal.addEventListener("shown.bs.modal", function () {
+      setTimeout(() => {
+        const modal = bootstrap.Modal.getInstance(successModal);
+        modal.hide();
+      }, 1500);
+    });
+  });
+</script>
 
 </html>
