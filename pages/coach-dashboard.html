@@ -163,13 +163,7 @@
         <!-- Dashboard -->
         <li class="nav-item mb-2">
           <a href="#tab-dashboard" class="nav-link text-white d-flex align-items-center active" data-bs-toggle="tab">
-            <i class="bi bi-speedometer2 me-2"></i><span>ផ្ទាំងគ្រូបង្វឹក</span>
-          </a>
-        </li>
-
-        <li class="nav-item mb-2">
-          <a href="#tab-new-course" class="nav-link text-white d-flex align-items-center" data-bs-toggle="tab">
-            <i class="bi bi-book me-2"></i><span>បង្កើតវគ្គសិក្សាថ្មី</span>
+            <i class="bi bi-speedometer2 me-2"></i><span>ផ្ទាំងគ្រប់គ្រង</span>
           </a>
         </li>
 
@@ -199,8 +193,8 @@
           <ul class="navbar-nav pe-3">
             <li class="nav-item admin position-relative">
               <a href="" class="nav-link">
-                <img src="../assets/img/sports/football-coach-1.jpg"
-                  class="img-fluid rounded-circle object-fit-cover" style="width: 30px; height: 30px;" alt="">
+                <img src="../assets/img/sports/football-coach-1.jpg" class="img-fluid rounded-circle object-fit-cover"
+                  style="width: 30px; height: 30px;" alt="">
               </a>
               <div class="dropdown position-absolute shadow-xs" style="left: -125px;">
                 <ul class="dropdown-menu bg-prime border-0 rounded-0 p-0 m-0 fs-text w-100">
@@ -232,7 +226,7 @@
       <!-- Tab Content -->
       <main class="py-3">
         <div class="tab-content">
-          <div class="tab-pane fade show active" id="tab-dashboard">
+          <div class="tab-pane fade" id="tab-dashboard">
             <div class="row g-3 mb-4">
               <!-- Coach Rating -->
               <div class="col-sm-6 col-lg-3">
@@ -316,129 +310,8 @@
 
           </div>
 
-          <!-- Create New Course -->
-          <div class="tab-pane fade" id="tab-new-course">
-            <div class="card mb-4 shadow-xs bg-prime border-0">
-              <div class="card-header py-3 border-0 border-bottom bg-prime text-main mb-2">
-                <h4>
-                  <i class="bi bi-journal-plus me-2 text-main"></i> បន្ថែមវគ្គសិក្សាថ្មី
-                </h4>
-              </div>
-              <div class="card-body">
-                <form>
-                  <div class="row g-3 mb-3">
-                    <div class="col-md-4">
-                      <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ឈ្មោះពេញ">
-                        <i class="bi bi-person position-absolute text-gold icon-input tran-y"></i>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ឈ្មោះវគ្គសិក្សា">
-                        <i class="bi bi-journal-plus position-absolute text-gold icon-input tran-y"></i>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="position-relative">
-                        <input type="text" class="form-control bg-prime fs-text text-second ps-7"
-                          placeholder="ថ្ងៃចាប់ផ្ដើម">
-                        <i class="bi bi-calendar3 position-absolute text-gold icon-input tran-y"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row g-3 mb-3">
-                    <div class="col-md-3">
-                      <div class="position-relative">
-                        <select class="form-select form-control ps-3 bg-prime text-prime">
-                          <option value="" disabled selected hidden>ជ្រើសរើសប្រភេទកីឡា</option>
-                          <option>បាល់ទាត់</option>
-                          <option>បាល់បោះ</option>
-                          <option>ហែលទឹក</option>
-                          <option>វាយសី</option>
-                        </select>
-                        <i
-                          class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
-                      </div>
-
-                    </div>
-                    <div class="col-md-3">
-                      <div class="position-relative">
-                        <select class="form-select form-control ps-3 bg-prime text-prime">
-                          <option value="" disabled selected hidden>ជ្រើសរើសថ្ងៃ</option>
-                          <option>ច័ន្ទ - ព្រហស្បតិ៍</option>
-                          <option>អង្គារ - សុក្រ</option>
-                          <option>ពុធ - សៅរ៍</option>
-                          <option>សៅរ៍ - អាទិត្យ</option>
-                          <option>ច័ន្ទ, ពុធ, សុក្រ</option>
-                          <option>អង្គារ, ព្រហស្បតិ៍, សៅរ៍</option>
-                        </select>
-                        <i
-                          class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="position-relative">
-                        <select class="form-select form-control ps-3 bg-prime text-prime">
-                          <option value="" disabled selected hidden>ជ្រើសរើសម៉ោងចាប់ផ្ដើម</option>
-                          <option>8:00AM</option>
-                          <option>9:00AM</option>
-                          <option>10:00AM</option>
-                          <option>11:00AM</option>
-                          <option>1:00PM</option>
-                          <option>2:00PM</option>
-                          <option>3:00PM</option>
-                          <option>4:00PM</option>
-                        </select>
-                        <i
-                          class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="position-relative">
-                        <select class="form-select form-control ps-3 bg-prime text-prime">
-                          <option value="" disabled selected hidden>ជ្រើសរើសម៉ោងបញ្ចប់</option>
-                          <option>8:00AM</option>
-                          <option>9:00AM</option>
-                          <option>10:00AM</option>
-                          <option>11:00AM</option>
-                          <option>1:00PM</option>
-                          <option>2:00PM</option>
-                          <option>3:00PM</option>
-                          <option>4:00PM</option>
-                        </select>
-                        <i
-                          class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">ព័ត៌មានបន្ថែម</label>
-                    <textarea class="form-control ps-2 bg-prime" rows="2" placeholder="កំណត់ចំណាំបន្ថែម"></textarea>
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-gold px-5" id="favoriteBtn1">ផ្ញើទៅកាន់ <span
-                        class="ff">admin</span></button>
-                    <div class="toast-container position-fixed" style="top: 5%; left: 47.5%;">
-                      <div id="favoriteToast1" class="toast shadow-xs border-0 rounded-2" role="alert"
-                        aria-live="assertive" aria-atomic="true">
-                        <div class="toast-body d-flex gap-3 align-items-center text-prime bg-second text-center">
-                          <i class="bi bi-check-lg text-green fs-3"></i>
-                          <p class="m-0 fs-nav">ទិន្នន័យត្រូវបានផ្ញើទៅកាន់ <span class="ff">admin</span></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-
           <!-- Members List -->
-          <div class="tab-pane fade" id="tab-members-list">
+          <div class="tab-pane fade show active" id="tab-members-list">
             <div class="card mb-4 border-0">
               <div
                 class="card-header border-0 border-bottom py-3 bg-prime text-main d-flex justify-content-between align-items-center gap-8">
@@ -454,47 +327,47 @@
                     <thead>
                       <tr class="border-bottom">
                         <th class="py-3 ps-5">អត្តលេខ</th>
-                        <th class="py-3 ps-5">ភេទ</th>
                         <th class="py-3 ps-5">ឈ្មោះសិស្ស</th>
+                        <th class="py-3 ps-5">ភេទ</th>
                         <th class="py-3 ps-5">អាយុ</th>
+                        <th class="py-3 ps-5">កីឡា</th>
                         <th class="py-3 ps-5">ថ្ងៃចូលរួម</th>
-                        <th class="py-3 ps-5">ម៉ោងសិស្ស</th>
-                        <th></th>
+                        <th class="py-3 ps-5">ម៉ោងហ្វឹកហាត់</th>
+                        <th class="py-3 ps-5">ព័ត៌មានបន្ថែម</th>
                       </tr>
                     </thead>
                     <tbody class="bg-prime">
                       <!-- Student 1 -->
                       <tr class="border-bottom">
                         <td class="py-3 ps-5 ff align-middle">001</td>
-                        <td class="py-3 ps-5 align-middle">ប្រុស</td>
                         <td class="py-3 ps-5 align-middle">
                           <div class="d-flex gap-3 align-items-center">
-                            <img src="../assets/img/profile-img/member-1.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
+                            <img src="../assets/img/profile-img/member-1.jpg" alt="" style="width: 50px; height: 50px;"
+                              class="img-fluid object-fit-cover rounded-1">
                             <h6 class="mb-0">សោម សុវណ្ណ</h6>
                           </div>
                         </td>
+                        <td class="py-3 ps-5 align-middle">ប្រុស</td>
                         <td class="py-3 ps-5 ff align-middle">25</td>
+                        <td class="py-3 ps-5 align-middle">បាល់ទាត់</td>
                         <td class="py-3 ps-5 align-middle"><span class="ff">01</span> មិថុនា <span
                             class="ff">2025</span></td>
                         <td class="py-3 ps-5 ff align-middle">08:00 AM - 10:00 AM</td>
                         <td class="py-3 ps-5 align-middle">
-                          <!-- Delete Button -->
+                          <!-- View Button -->
                           <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal"
                             data-bs-target="#delete-001">
-                            <i class="bi bi-trash text-danger"></i>
+                            <i class="bi bi-eye text-main ms-5"></i>
                           </button>
 
-                          <!-- Delete Modal -->
+                          <!-- View Modal -->
                           <div class="modal fade" id="delete-001" data-bs-backdrop="static" data-bs-keyboard="false"
                             tabindex="-1" aria-labelledby="delete-label-001" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                               <div class="modal-content rounded-3 bg-prime">
                                 <div class="modal-header border-bottom px-5">
                                   <div class="d-flex gap-3 align-items-center">
-                                    <img src="../assets/img/profile-img/member-1.jpg"
-                                      alt="" style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                                    <h6 class="mb-0 text-prime">សោម សុវណ្ណ</h6>
+                                    <h5 class="mb-0 text-main">ព័ត៌មានបន្ថែម</h5>
                                   </div>
                                   <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
                                     aria-label="Close">
@@ -503,193 +376,18 @@
                                 </div>
                                 <div class="modal-body">
                                   <div class="card-body">
+                                    <img src="../assets/img/profile-img/member-1.jpg" alt="" style="width: 70px; height: 70px;"
+                                      class="img-fluid object-fit-cover rounded-1">
                                     <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
-                                    <div class="d-flex gap-2">
-                                      <button type="button" data-bs-toggle="modal" data-bs-target="#success-delete-001"
-                                        class="btn btn-primary w-100 text-center text-white"
-                                        data-bs-dismiss="modal">យល់ព្រម</button>
-                                      <button data-bs-dismiss="modal"
-                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
 
-                          <!-- Success Modal for Delete -->
-                          <div class="modal fade" id="success-delete-001" tabindex="-1"
-                            aria-labelledby="success-delete-label-001" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content rounded-3 bg-prime">
-                                <div class="modal-header border-0 shadow-none">
-                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
-                                    aria-label="Close">
-                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <div class="card-body">
-                                    <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                                      style="width: 100px; height: 100px;"></i>
-                                    <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                         </td>
                       </tr>
 
-                      <!-- Student 2 -->
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">002</td>
-                        <td class="py-3 ps-5 align-middle">ស្រី</td>
-                        <td class="py-3 ps-5 align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="../assets/img/profile-img/member-3.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">ស៊ូ សារ៉ា</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">28</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">10</span> មិថុនា <span
-                            class="ff">2025</span></td>
-                        <td class="py-3 ps-5 ff align-middle">02:00 PM - 04:00 PM</td>
-                        <td class="py-3 ps-5 align-middle">
-                          <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal"
-                            data-bs-target="#delete-002">
-                            <i class="bi bi-trash text-danger"></i>
-                          </button>
-                          <!-- Delete Modal for 002 same structure as 001, just change IDs -->
-                          <div class="modal fade" id="delete-002" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="delete-label-002" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content rounded-3 bg-prime">
-                                <div class="modal-header border-bottom px-5">
-                                  <div class="d-flex gap-3 align-items-center">
-                                    <img src="../assets/img/profile-img/member-1.jpg"
-                                      alt="" style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                                    <h6 class="mb-0 text-prime">ស៊ូ សារ៉ា</h6>
-                                  </div>
-                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
-                                    aria-label="Close">
-                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <div class="card-body">
-                                    <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
-                                    <div class="d-flex gap-2">
-                                      <button type="button" data-bs-toggle="modal" data-bs-target="#success-delete-002"
-                                        class="btn btn-primary w-100 text-center text-white"
-                                        data-bs-dismiss="modal">យល់ព្រម</button>
-                                      <button data-bs-dismiss="modal"
-                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Success Modal for 002 -->
-                          <div class="modal fade" id="success-delete-002" tabindex="-1"
-                            aria-labelledby="success-delete-label-002" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content rounded-3 bg-prime">
-                                <div class="modal-header border-0 shadow-none">
-                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
-                                    aria-label="Close">
-                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <div class="card-body">
-                                    <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                                      style="width: 100px; height: 100px;"></i>
-                                    <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <!-- Student 3 -->
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5 ff align-middle">003</td>
-                        <td class="py-3 ps-5 align-middle">ប្រុស</td>
-                        <td class="py-3 ps-5 align-middle">
-                          <div class="d-flex gap-3 align-items-center">
-                            <img src="../assets/img/profile-img/member-5.jpg" alt=""
-                              style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                            <h6 class="mb-0">ជា សុខា</h6>
-                          </div>
-                        </td>
-                        <td class="py-3 ps-5 ff align-middle">22</td>
-                        <td class="py-3 ps-5 align-middle"><span class="ff">20</span> មិថុនា <span
-                            class="ff">2025</span></td>
-                        <td class="py-3 ps-5 ff align-middle">09:00 AM - 11:00 AM</td>
-                        <td class="py-3 ps-5 align-middle">
-                          <button type="button" class="btn p-0 fs-5" data-bs-toggle="modal"
-                            data-bs-target="#delete-003">
-                            <i class="bi bi-trash text-danger"></i>
-                          </button>
-                          <!-- Delete Modal for 003 -->
-                          <div class="modal fade" id="delete-003" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="delete-label-003" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content rounded-3 bg-prime">
-                                <div class="modal-header border-bottom px-5">
-                                  <div class="d-flex gap-3 align-items-center">
-                                    <img src="../assets/img/profile-img/member-1.jpg"
-                                      alt="" style="width: 50px;" class="img-fluid object-fit-contain rounded-1">
-                                    <h6 class="mb-0 text-prime">ជា សុខា</h6>
-                                  </div>
-                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
-                                    aria-label="Close">
-                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <div class="card-body">
-                                    <h5 class="text-prime mb-4 text-center">តើអ្នកប្រាកដថាចង់លុបទិន្នន័យនេះឬ?</h5>
-                                    <div class="d-flex gap-2">
-                                      <button type="button" data-bs-toggle="modal" data-bs-target="#success-delete-003"
-                                        class="btn btn-primary w-100 text-center text-white"
-                                        data-bs-dismiss="modal">យល់ព្រម</button>
-                                      <button data-bs-dismiss="modal"
-                                        class="btn btn-danger w-100 text-center text-white">បោះបង់</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Success Modal for 003 -->
-                          <div class="modal fade" id="success-delete-003" tabindex="-1"
-                            aria-labelledby="success-delete-label-003" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content rounded-3 bg-prime">
-                                <div class="modal-header border-0 shadow-none">
-                                  <button type="button" class="btn ms-auto p-0" data-bs-dismiss="modal"
-                                    aria-label="Close">
-                                    <i class="bi bi-x-lg fs-5 text-prime"></i>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <div class="card-body">
-                                    <i class="bi bi-check-lg text-green display-1 d-flex justify-content-center align-items-center mx-auto rounded-circle bg-third mb-5"
-                                      style="width: 100px; height: 100px;"></i>
-                                    <h5 class="text-prime mb-4 text-center">រួចរាល់</h5>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
                     </tbody>
 
                   </table>
@@ -718,43 +416,24 @@
                     </thead>
                     <tbody class="bg-prime">
                       <tr class="border-bottom">
-                        <td class="py-3 ps-5">ច័ន្ទ</td>
-                        <td class="py-3 ps-5">-</td>
-                        <td class="py-3 ps-5">-</td>
-                      </tr>
-                      <tr class="border-bottom">
                         <td class="py-3 ps-5">អង្គារ</td>
                         <td class="py-3 ps-5 ff">08:00 AM - 10:00 AM</td>
                         <td class="py-3 ps-5">ថ្នាក់បាល់ទាត់</td>
                       </tr>
                       <tr class="border-bottom">
                         <td class="py-3 ps-5">ពុធ</td>
-                        <td class="py-3 ps-5 ff">02:00 PM - 04:00 PM</td>
+                        <td class="py-3 ps-5 ff">08:00 AM - 10:00 AM</td>
                         <td class="py-3 ps-5">ថ្នាក់បាល់ទាត់</td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5">ព្រហស្បតិ៍</td>
-                        <td class="py-3 ps-5">-</td>
-                        <td class="py-3 ps-5">-</td>
                       </tr>
                       <tr class="border-bottom">
                         <td class="py-3 ps-5">សុក្រ</td>
-                        <td class="py-3 ps-5 ff">01:00 PM - 03:00 PM</td>
+                        <td class="py-3 ps-5 ff">08:00 AM - 10:00 AM</td>
                         <td class="py-3 ps-5">ថ្នាក់បាល់ទាត់</td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5">សៅរ៍</td>
-                        <td class="py-3 ps-5">-</td>
-                        <td class="py-3 ps-5">-</td>
-                      </tr>
-                      <tr class="border-bottom">
-                        <td class="py-3 ps-5">អាទិត្យ</td>
-                        <td class="py-3 ps-5">-</td>
-                        <td class="py-3 ps-5">-</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+
               </div>
             </div>
           </div>
@@ -790,21 +469,6 @@
         if (window.innerWidth < 992) sidebar.classList.add("collapsed");
       });
     });
-  </script>
-  <!-- Many Toast -->
-  <script>
-    function showToast(id) {
-      const toastEl = document.getElementById(id);
-      const toast = new bootstrap.Toast(toastEl, { delay: 2000, autohide: true }); // 2000ms = 2s
-      toast.show();
-    }
-
-    document.getElementById("favoriteBtn1").addEventListener("click", () => showToast("favoriteToast1"));
-    document.getElementById("favoriteBtn2").addEventListener("click", () => showToast("favoriteToast2"));
-    document.getElementById("favoriteBtn3").addEventListener("click", () => showToast("favoriteToast3"));
-    document.getElementById("favoriteBtn4").addEventListener("click", () => showToast("favoriteToast4"));
-    document.getElementById("favoriteBtn5").addEventListener("click", () => showToast("favoriteToast5"));
-    document.getElementById("favoriteBtn6").addEventListener("click", () => showToast("favoriteToast6"));
   </script>
 </body>
 

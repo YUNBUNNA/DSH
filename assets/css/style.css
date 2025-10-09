@@ -637,6 +637,9 @@ body {
     font-size: 1.5rem;
     border-radius: 8px;
   }
+  .form-top{
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -692,6 +695,9 @@ body {
     text-align: center;
     font-size: 1.5rem;
     border-radius: 8px;
+  }
+  .form-top{
+    margin-top: 4rem;
   }
 }
 

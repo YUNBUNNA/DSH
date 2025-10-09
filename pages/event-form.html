@@ -354,70 +354,73 @@
     </header>
 
     <!-- main -->
-    <section class="bg-third first-section pb-3">
-        <div class="container shadow-xs rounded-3 p-4 bg-prime" style="max-width: 800px;">
-            <div class="form-header text-center">
-                <h2 class="fw-bold text-main">ការចុះឈ្មោះព្រឹត្តិការណ៍កីឡា</h2>
-                <p class="lead text-prime mt-4">សូមចុះឈ្មោះសម្រាប់ព្រឹត្តិការណ៍ប្រកួតកីឡាខាងមុខនេះ!</p>
+    <main class="form-top">
+        <section class="bg-third first-section">
+            <div class="container shadow-xs rounded-3 p-4 bg-prime" style="max-width: 900px;">
+                <div class="form-header text-center">
+                    <h2 class="fw-bold text-main">ការចុះឈ្មោះព្រឹត្តិការណ៍កីឡា</h2>
+                    <p class="lead text-prime mt-4">សូមចុះឈ្មោះសម្រាប់ព្រឹត្តិការណ៍ប្រកួតកីឡាខាងមុខនេះ!</p>
+                </div>
+    
+                <form id="registration-form">
+                    <!-- Personal Information Section -->
+                    <div class="mb-3">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">ឈ្មោះពេញ</label>
+                                <input type="text" class="form-control ps-3 ff" id="firstName" placeholder="John Doe">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">តម្លៃ</label>
+                                <input type="text" class="form-control ps-3 ff bg-prime" id="lastName" value="$5.00"
+                                    disabled>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">អ៊ីមែល</label>
+                                <input type="email" class="form-control ps-3 ff" id="email"
+                                    placeholder="john.doe@example.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
+                                <input type="tel" class="form-control ps-3 ff" id="phone" placeholder="123-456-7890">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Event Selection Section -->
+                    <div class="mb-3">
+                        <label for="eventSelect" class="form-label">ជ្រើសរើសព្រឹត្តិការណ៍របស់អ្នក</label>
+                        <div class="position-relative">
+                            <select class="form-select form-control ps-3 bg-prime text-prime">
+                                <option value="" disabled selected hidden>ជ្រើសរើសព្រឹត្តិការណ៍</option>
+                                <option>ការប្រកួតបាល់ទាត់</option>
+                                <option>ការប្រកួតបាល់ទះ</option>
+                                <option>ការប្រកួតវាយសី</option>
+                            </select>
+                            <i
+                                class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
+                        </div>
+                    </div>
+    
+                    <!-- Waiver & Confirmation Section -->
+                    <div class="form-check">
+                        <input class="form-check-input me-3" type="checkbox" id="waiverCheck">
+                        <label class="form-check-label text-prime" for="waiverCheck">
+                            ខ្ញុំយល់ព្រមនឹង <a href="#" data-bs-toggle="modal" data-bs-target="#waiverModal">លក្ខខណ្ឌ</a>
+                            និងការទទួលខុសត្រូវ។
+                        </label>
+                    </div>
+    
+                    <!-- Final Registration Button with Price -->
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="../pages/payment-event.html" type="button" class="btn btn-gold">ចុះឈ្មោះឥឡូវនេះ</a>
+                    </div>
+    
+                </form>
+    
             </div>
-
-            <form id="registration-form">
-                <!-- Personal Information Section -->
-                <div class="mb-3">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="firstName" class="form-label">ឈ្មោះពេញ</label>
-                            <input type="text" class="form-control ps-3 ff" id="firstName" placeholder="John Doe">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="lastName" class="form-label">តម្លៃ</label>
-                            <input type="text" class="form-control ps-3 ff bg-prime" id="lastName" value="$5.00" disabled>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label">អ៊ីមែល</label>
-                            <input type="email" class="form-control ps-3 ff" id="email"
-                                placeholder="john.doe@example.com">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
-                            <input type="tel" class="form-control ps-3 ff" id="phone" placeholder="123-456-7890">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Selection Section -->
-                <div class="mb-3">
-                    <label for="eventSelect" class="form-label">ជ្រើសរើសព្រឹត្តិការណ៍របស់អ្នក</label>
-                    <div class="position-relative">
-                        <select class="form-select form-control ps-3 bg-prime text-prime">
-                            <option value="" disabled selected hidden>ជ្រើសរើសព្រឹត្តិការណ៍</option>
-                            <option>ការប្រកួតបាល់ទាត់</option>
-                            <option>ការប្រកួតបាល់ទះ</option>
-                            <option>ការប្រកួតវាយសី</option>
-                        </select>
-                        <i
-                            class="bi bi-chevron-down text-prime position-absolute end-0 top-50 translate-middle-y me-3"></i>
-                    </div>
-                </div>
-
-                <!-- Waiver & Confirmation Section -->
-                <div class="form-check">
-                    <input class="form-check-input me-3" type="checkbox" id="waiverCheck">
-                    <label class="form-check-label text-prime" for="waiverCheck">
-                        ខ្ញុំយល់ព្រមនឹង <a href="#" data-bs-toggle="modal" data-bs-target="#waiverModal">លក្ខខណ្ឌ</a>
-                        និងការលើកលែងការទទួលខុសត្រូវ។
-                    </label>
-                </div>
-
-                <!-- Final Registration Button with Price -->
-                <div class="d-flex justify-content-end align-items-center">
-                    <a href="../pages/payment-event.html" type="button" class="btn btn-gold">ចុះឈ្មោះឥឡូវនេះ</a>
-                </div>
-
-            </form>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
 
     <!-- link bootstrap js -->
