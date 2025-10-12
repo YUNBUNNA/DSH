@@ -195,6 +195,11 @@
       box-shadow: none;
     }
 
+    .chart-container {
+      height: 350px;
+    }
+
+
     /* Sidebar responsive rules */
     @media screen and (max-width: 991.98px) {
       #sidebar {
@@ -4147,7 +4152,7 @@
                     <h6 class="card-title text-prime mb-3">
                       <i class="bi bi-pie-chart me-2 text-main"></i> ទំនិញលក់បានច្រើន
                     </h6>
-                    <div class="d-flex justify-content-center" style="height: 350px;">
+                    <div class="chart-container d-flex justify-content-center align-items-center">
                       <canvas id="topProductsChart"></canvas>
                     </div>
                   </div>
@@ -4159,7 +4164,9 @@
                     <h6 class="card-title text-prime mb-3">
                       <i class="bi bi-graph-up-arrow me-2 text-main"></i> ការលក់ប្រចាំថ្ងៃ
                     </h6>
-                    <canvas id="dailySalesChart" style="height: 176px;"></canvas>
+                    <div class="chart-container d-flex justify-content-center align-items-center">
+                      <canvas id="dailySalesChart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4366,7 +4373,7 @@
                     <h6 class="card-title text-prime mb-3">
                       <i class="bi bi-pie-chart me-2 text-main"></i> ចំនួនអ្នកចូលរួមព្រឹត្តិការណ៍
                     </h6>
-                    <div class="d-flex justify-content-center" style="height: 350px;">
+                    <div class="chart-container d-flex justify-content-center align-items-center">
                       <canvas id="eventParticipantsChart"></canvas>
                     </div>
                   </div>
@@ -4380,7 +4387,9 @@
                     <h6 class="card-title text-prime mb-3">
                       <i class="bi bi-graph-up-arrow me-2 text-main"></i> ចំនួនអ្នកចូលរួមប្រចាំខែ
                     </h6>
-                    <canvas id="monthlyEventChart" style="height: 176px;"></canvas>
+                    <div class="chart-container d-flex justify-content-center align-items-center">
+                      <canvas id="monthlyEventChart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5188,7 +5197,8 @@
                             </div>
 
                             <!-- Success Delete Banner Modal -->
-                            <div class="modal fade auto-close" id="success-delete-banner-2" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade auto-close" id="success-delete-banner-2" tabindex="-1"
+                              aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-0 shadow-none">
@@ -5209,7 +5219,8 @@
                             </div>
 
                             <!-- Success Edit Banner Modal -->
-                            <div class="modal fade auto-close" id="success-edit-banner-2" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade auto-close" id="success-edit-banner-2" tabindex="-1"
+                              aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-0 shadow-none">
@@ -5444,7 +5455,8 @@
                             </div>
 
                             <!-- Success Delete Banner Modal -->
-                            <div class="modal fade auto-close" id="success-delete-banner-3" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade auto-close" id="success-delete-banner-3" tabindex="-1"
+                              aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-0 shadow-none">
@@ -5465,7 +5477,8 @@
                             </div>
 
                             <!-- Success Edit Banner Modal -->
-                            <div class="modal fade auto-close" id="success-edit-banner-3" tabindex="-1" aria-hidden="true">
+                            <div class="modal fade auto-close" id="success-edit-banner-3" tabindex="-1"
+                              aria-hidden="true">
                               <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content rounded-3 bg-prime">
                                   <div class="modal-header border-0 shadow-none">
@@ -5602,7 +5615,8 @@
                                 </div>
 
                                 <!-- Success Edit Banner Modal -->
-                                <div class="modal fade auto-close" id="success-edit-logo-1" tabindex="-1" aria-hidden="true">
+                                <div class="modal fade auto-close" id="success-edit-logo-1" tabindex="-1"
+                                  aria-hidden="true">
                                   <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content rounded-3 bg-prime">
                                       <div class="modal-header border-0 shadow-none">
@@ -5631,10 +5645,12 @@
               </div>
             </div>
           </div>
+
         </div>
       </main>
     </div>
   </div>
+  
   <script src="../assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/chart.umd.js"></script>
