@@ -110,7 +110,26 @@
             opacity: 1;
         }
     }
+    .btn-primary-custom {
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        color: white;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
 
+    .btn-primary-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(243, 156, 18, 0.3);
+        color: white;
+    }
     .booking-header {
         background: linear-gradient(135deg, #2c3e50, #34495e);
         color: white;
@@ -1034,7 +1053,7 @@
                             <button class="btn btn-secondary flex-fill" onclick="closeBookingModal()">
                                 <i class="bi bi-x-circle"></i> បោះបង់
                             </button>
-                            <button class="btn btn-prime text-prime flex-fill" onclick="confirmBooking()">
+                            <button class="btn btn-primary-custom flex-fill" onclick="confirmBooking()">
                                 <i class="bi bi-check-circle"></i> បញ្ជាក់ការកក់
                             </button>
                         </div>
